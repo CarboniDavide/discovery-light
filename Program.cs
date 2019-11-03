@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DiscoveryLight.UI.Forms.Main;
+using DiscoveryLight.UI.Forms;
 
 namespace DiscoveryLight
 {
+    
     static class Program
     {
         /// <summary>
@@ -17,7 +18,8 @@ namespace DiscoveryLight
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new _Main());
+            FormsCollection.SplachScreen = new UI.Forms.SplachScreen._SplachScreen();
+            Application.Run(FormsCollection.SplachScreen);
         }
     }
 }
