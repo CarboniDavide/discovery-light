@@ -10,7 +10,7 @@ namespace DiscoveryLight.UI.Forms
 {
     static class FormsCollection
     {
-        static public _Main _main;
+        static private _Main _main;
         static private _SplachScreen _splachScreen;
 
         static public _Main Main { get => _main; set => _main = value; }
