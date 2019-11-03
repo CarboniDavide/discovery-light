@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.UI.Forms;
+using DiscoveryLight.UI.Forms.SplachScreen;
+using DiscoveryLight.UI.Forms.Main;
 
 namespace DiscoveryLight
 {
@@ -18,8 +20,12 @@ namespace DiscoveryLight
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FormsCollection.SplachScreen = new UI.Forms.SplachScreen._SplachScreen();
+            // Laod and init hardware components
+            FormsCollection.SplachScreen = new _SplachScreen();
             Application.Run(FormsCollection.SplachScreen);
+            // Load main windows
+            FormsCollection.Main = new _Main();
+            Application.Run(FormsCollection.Main);
         }
     }
 }
