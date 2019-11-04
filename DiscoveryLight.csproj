@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Components.cs" />
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Core\IO.cs" />
     <Compile Include="Program.cs" />
