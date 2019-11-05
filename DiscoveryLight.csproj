@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Components.cs" />
+    <Compile Include="Core\ComponentPerformance.cs" />
+    <Compile Include="Core\ComponentData.cs" />
+    <Compile Include="Core\ComponentsUtils.cs" />
     <Compile Include="Core\Exceptions.cs" />
     <Compile Include="Core\IO.cs" />
     <Compile Include="Program.cs" />
@@ -111,6 +113,12 @@
     </Compile>
     <Compile Include="UI\HardwareComponents\_Base.Designer.cs">
       <DependentUpon>_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HardwareComponents\_BaseHardware.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\HardwareComponents\_BaseHardware.Designer.cs">
+      <DependentUpon>_BaseHardware.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\HardwareComponents\_CPU.cs">
       <SubType>UserControl</SubType>
