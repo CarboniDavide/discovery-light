@@ -48,27 +48,14 @@ namespace DiscoveryLight.Core
 
         static public ManagementObjectSearcher Classe_Find(string name)
         {
-            ManagementObjectSearcher obj = null;
-
-            ManagementObjectSearcher searcher = new ManagementObjectSearcher(PATH, "select * from meta_class");
-
-            foreach (ManagementClass wmiClass in searcher.Get())
-                foreach (QualifierData qd in wmiClass.Qualifiers)
-                    if (qd.Name.Equals("dynamic") || qd.Name.Equals("static"))
-                        if (wmiClass["__CLASS"].ToString() == name)
-                            return obj = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM " + name); // Object init with query values for the search               
-
-            return null;
-            /*
             try
             {
-                obj = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM " + name); // Object init with query values for the search       
-                return obj;
+                return new ManagementObjectSearcher("root\\CIMV2", "select * from " + name);
             }
             catch
             {
                 return null;
-            }*/
+            }
         }
 
     }
