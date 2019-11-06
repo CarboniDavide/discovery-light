@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Management;
 
@@ -126,7 +127,7 @@ namespace DiscoveryLight.Core
             public string Mode;
         }
 
-        private ManagementObjectCollection collection;
+        private List<ManagementObject> collection;
         public BLOCK[] Block;
 
         public void GetDriveInfo()
@@ -134,7 +135,7 @@ namespace DiscoveryLight.Core
             // get drive info
             collection = ComponentsUtils.GetDriveInfo("Win32_VideoController");
             // count number of drive
-            BlockNumber = (collection == null) ? collection.Count : 0;
+            BlockNumber = collection.Count;
             // initialize array to contains each drive info
             Block = new BLOCK[BlockNumber]; 
 
@@ -178,7 +179,7 @@ namespace DiscoveryLight.Core
             public string PowerManagmentSupport;
         }
 
-        private ManagementObjectCollection collection;
+        private List<ManagementObject> collection;
         public BLOCK[] Block;
 
         public void GetDriveInfo()
@@ -186,7 +187,7 @@ namespace DiscoveryLight.Core
             // get drive info
             collection = ComponentsUtils.GetDriveInfo("Win32_SoundDevice");
             // count number of drive
-            BlockNumber = (collection == null) ? collection.Count : 0;
+            BlockNumber = collection.Count;
             // initialize array to contains each drive info
             Block = new BLOCK[BlockNumber];
 
@@ -229,7 +230,7 @@ namespace DiscoveryLight.Core
             public string L3_Cache;
         }
 
-        private ManagementObjectCollection collection;
+        private List<ManagementObject> collection;
         public BLOCK[] Block;
 
         public void GetDriveInfo()
@@ -237,7 +238,7 @@ namespace DiscoveryLight.Core
             // get drive info
             collection = ComponentsUtils.GetDriveInfo("Win32_Processor");
             // count number of drive
-            BlockNumber = (collection == null) ? collection.Count : 0;
+            BlockNumber = collection.Count;
             // initialize array to contains each drive info
             Block = new BLOCK[BlockNumber];
 
@@ -288,7 +289,7 @@ namespace DiscoveryLight.Core
         public UInt64 Size;
         public int BlockNumber = 0;
         public string Type;
-        private ManagementObjectCollection collection;
+        private List<ManagementObject> collection;
         public BLOCK[] Block;
 
         public void GetDriveInfo()
@@ -296,7 +297,7 @@ namespace DiscoveryLight.Core
             // get drive info
             collection = ComponentsUtils.GetDriveInfo("Win32_PhysicalMemory");
             // count number of drive
-            BlockNumber = (collection == null) ? collection.Count : 0;
+            BlockNumber = collection.Count;
             // initialize array to contains each drive info
             Block = new BLOCK[BlockNumber];
 
@@ -359,7 +360,7 @@ namespace DiscoveryLight.Core
         }
 
         public int BlockNumber = 0;
-        private ManagementObjectCollection collection;
+        private List<ManagementObject> collection;
         public BLOCK[] Block;
 
         public void GetDriveInfo()
@@ -367,7 +368,7 @@ namespace DiscoveryLight.Core
             // get drive info
             collection = ComponentsUtils.GetDriveInfo("Win32_DiskDrive");
             // count number of drive
-            BlockNumber = (collection == null) ? collection.Count : 0;
+            BlockNumber = collection.Count;
             // initialize array to contains each drive info
             Block = new BLOCK[BlockNumber];
 
@@ -419,7 +420,7 @@ namespace DiscoveryLight.Core
         }
 
         public int BlockNumber = 0;
-        private ManagementObjectCollection collection;
+        private List<ManagementObject> collection;
         public BLOCK[] Block;
 
         public void GetDriveInfo()
@@ -427,7 +428,7 @@ namespace DiscoveryLight.Core
             // get drive info
             collection = ComponentsUtils.GetDriveInfo("Win32_NetworkAdapter");
             // count number of drive
-            BlockNumber = (collection == null) ? collection.Count : 0;
+            BlockNumber = collection.Count;
             // initialize array to contains each drive info
             Block = new BLOCK[BlockNumber];
 
