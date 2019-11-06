@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Management;
 
 namespace DiscoveryLight.Core
@@ -23,25 +24,25 @@ namespace DiscoveryLight.Core
             // get drive info
             foreach (ManagementObject mj in ComponentsUtils.GetDriveInfo("Win32_ComputerSystem"))
             {
-                this.Name = ComponentsUtils.Capture_Value("Name", mj);
-                this.Type = ComponentsUtils.Capture_Value("SystemType", mj);
-                this.Manufacturer = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                this.Model = ComponentsUtils.Capture_Value("Model", mj);
-                this.User = ComponentsUtils.Capture_Value("UserName", mj);
-                this.Domaine = ComponentsUtils.Capture_Value("Domain", mj);
+                this.Name = ComponentsUtils.GetProperty("Name", mj);
+                this.Type = ComponentsUtils.GetProperty("SystemType", mj);
+                this.Manufacturer = ComponentsUtils.GetProperty("Manufacturer", mj);
+                this.Model = ComponentsUtils.GetProperty("Model", mj);
+                this.User = ComponentsUtils.GetProperty("UserName", mj);
+                this.Domaine = ComponentsUtils.GetProperty("Domain", mj);
             }
 
             foreach (ManagementObject mj in ComponentsUtils.GetDriveInfo("Win32_OperatingSystem"))
             {
-                SystemOS = ComponentsUtils.Capture_Value("Caption", mj);
-                SystemOS_Brand = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                SystemOS_Version = ComponentsUtils.Capture_Value("BuildNumber", mj);
-                SystemOS_Architecture = ComponentsUtils.Capture_Value("OSArchitecture", mj);
+                SystemOS = ComponentsUtils.GetProperty("Caption", mj);
+                SystemOS_Brand = ComponentsUtils.GetProperty("Manufacturer", mj);
+                SystemOS_Version = ComponentsUtils.GetProperty("BuildNumber", mj);
+                SystemOS_Architecture = ComponentsUtils.GetProperty("OSArchitecture", mj);
             }
 
             foreach (ManagementObject mj in ComponentsUtils.GetDriveInfo("Win32_ComputerSystemProduct"))
             {
-                IDNumber = ComponentsUtils.Capture_Value("IdentifyingNumber", mj);
+                IDNumber = ComponentsUtils.GetProperty("IdentifyingNumber", mj);
             }
         }
 
@@ -63,10 +64,10 @@ namespace DiscoveryLight.Core
             // Get all drive info
             foreach (ManagementObject mj in ComponentsUtils.GetDriveInfo("Win32_BIOS"))
             {
-                this.Manufacturer = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                this.SerialNumber = ComponentsUtils.Capture_Value("SerialNumber", mj);
-                this.Version = ComponentsUtils.Capture_Value("Caption", mj);
-                this.ReleaseData = ComponentsUtils.Capture_Value("ReleaseDate", mj);
+                this.Manufacturer = ComponentsUtils.GetProperty("Manufacturer", mj);
+                this.SerialNumber = ComponentsUtils.GetProperty("SerialNumber", mj);
+                this.Version = ComponentsUtils.GetProperty("Caption", mj);
+                this.ReleaseData = ComponentsUtils.GetProperty("ReleaseDate", mj);
             }
         }
 
@@ -88,15 +89,15 @@ namespace DiscoveryLight.Core
         {
             foreach (ManagementObject mj in ComponentsUtils.GetDriveInfo("Win32_BaseBoard")) // Read data
             {
-                this.Manufacturer = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                this.Model = ComponentsUtils.Capture_Value("Product", mj);
-                this.Version = ComponentsUtils.Capture_Value("Version", mj);
+                this.Manufacturer = ComponentsUtils.GetProperty("Manufacturer", mj);
+                this.Model = ComponentsUtils.GetProperty("Product", mj);
+                this.Version = ComponentsUtils.GetProperty("Version", mj);
             }
 
             foreach (ManagementObject mj in ComponentsUtils.GetDriveInfo("Win32_MotherboardDevice")) // Read data
             {
-                this.PrimaryBus_Value = ComponentsUtils.Capture_Value("PrimaryBusType", mj);
-                this.SecondaryBus_Value = ComponentsUtils.Capture_Value("SecondaryBusType", mj);
+                this.PrimaryBus_Value = ComponentsUtils.GetProperty("PrimaryBusType", mj);
+                this.SecondaryBus_Value = ComponentsUtils.GetProperty("SecondaryBusType", mj);
             }
         }
 
@@ -143,18 +144,18 @@ namespace DiscoveryLight.Core
             foreach (ManagementObject mj in collection) // Read data
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Name = ComponentsUtils.Capture_Value("Name", mj);
-                this.Block[index].Manufacturer = ComponentsUtils.Capture_Value("Description", mj);
-                this.Block[index].AdpterType = ComponentsUtils.Capture_Value("AdapterCompatibility", mj);
+                this.Block[index].Name = ComponentsUtils.GetProperty("Name", mj);
+                this.Block[index].Manufacturer = ComponentsUtils.GetProperty("Description", mj);
+                this.Block[index].AdpterType = ComponentsUtils.GetProperty("AdapterCompatibility", mj);
                 this.Block[index].MemorySize = ComponentsUtils.Capture_Number("AdapterRAM", mj).ToString();
-                this.Block[index].NowBitsPerPixel = ComponentsUtils.Capture_Value("CurrentBitsPerPixel", mj);
-                this.Block[index].NowHorizResolution = ComponentsUtils.Capture_Value("CurrentHorizontalResolution", mj);
-                this.Block[index].NowVertResolution = ComponentsUtils.Capture_Value("CurrentVerticalResolution", mj);
-                this.Block[index].NowRefreshRate = ComponentsUtils.Capture_Value("CurrentRefreshRate", mj);
-                this.Block[index].MaxRefreshRate = ComponentsUtils.Capture_Value("MaxRefreshRate", mj);
-                this.Block[index].MinRefreshRate = ComponentsUtils.Capture_Value("MinRefreshRate", mj);
-                this.Block[index].NowNumberOfColors = ComponentsUtils.Capture_Value("CurrentNumberOfColors", mj);
-                this.Block[index].Mode = ComponentsUtils.Capture_Value("VideoModeDescription", mj);
+                this.Block[index].NowBitsPerPixel = ComponentsUtils.GetProperty("CurrentBitsPerPixel", mj);
+                this.Block[index].NowHorizResolution = ComponentsUtils.GetProperty("CurrentHorizontalResolution", mj);
+                this.Block[index].NowVertResolution = ComponentsUtils.GetProperty("CurrentVerticalResolution", mj);
+                this.Block[index].NowRefreshRate = ComponentsUtils.GetProperty("CurrentRefreshRate", mj);
+                this.Block[index].MaxRefreshRate = ComponentsUtils.GetProperty("MaxRefreshRate", mj);
+                this.Block[index].MinRefreshRate = ComponentsUtils.GetProperty("MinRefreshRate", mj);
+                this.Block[index].NowNumberOfColors = ComponentsUtils.GetProperty("CurrentNumberOfColors", mj);
+                this.Block[index].Mode = ComponentsUtils.GetProperty("VideoModeDescription", mj);
 
                 index++;
             }
@@ -194,9 +195,9 @@ namespace DiscoveryLight.Core
             foreach (ManagementObject mj in collection)
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Name = ComponentsUtils.Capture_Value("Caption", mj);
-                this.Block[index].Manufacturer = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                this.Block[index].PowerManagmentSupport = ComponentsUtils.Capture_Value("PowerManagementSupported", mj);
+                this.Block[index].Name = ComponentsUtils.GetProperty("Caption", mj);
+                this.Block[index].Manufacturer = ComponentsUtils.GetProperty("Manufacturer", mj);
+                this.Block[index].PowerManagmentSupport = ComponentsUtils.GetProperty("PowerManagementSupported", mj);
 
                 index++;
             }
@@ -245,18 +246,18 @@ namespace DiscoveryLight.Core
             foreach (ManagementObject mj in collection) // Read data
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Name = ComponentsUtils.Capture_Value("Name", mj);
-                this.Block[index].AddressSize = ComponentsUtils.Capture_Value("AddressWidth", mj);
-                this.Block[index].Description = ComponentsUtils.Capture_Value("Description", mj);
-                this.Block[index].Manufacturer = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                this.Block[index].Revision = ComponentsUtils.Capture_Value("Revision", mj);
-                this.Block[index].Socket = ComponentsUtils.Capture_Value("SocketDesignation", mj);
-                this.Block[index].N_Core = ComponentsUtils.Capture_Value("NumberOfCores", mj);
-                this.Block[index].N_Thread = ComponentsUtils.Capture_Value("NumberOfLogicalProcessors", mj);
-                this.Block[index].MaxSpeed = ComponentsUtils.Capture_Value("MaxClockSpeed", mj);
-                this.Block[index].L1_Cache = (Convert.ToInt16(ComponentsUtils.Capture_Value("L2CacheSize", mj)) / 4).ToString();
-                this.Block[index].L2_Cache = ComponentsUtils.Capture_Value("L2CacheSize", mj);
-                this.Block[index].L3_Cache = ComponentsUtils.Capture_Value("L3CacheSize", mj);
+                this.Block[index].Name = ComponentsUtils.GetProperty("Name", mj);
+                this.Block[index].AddressSize = ComponentsUtils.GetProperty("AddressWidth", mj);
+                this.Block[index].Description = ComponentsUtils.GetProperty("Description", mj);
+                this.Block[index].Manufacturer = ComponentsUtils.GetProperty("Manufacturer", mj);
+                this.Block[index].Revision = ComponentsUtils.GetProperty("Revision", mj);
+                this.Block[index].Socket = ComponentsUtils.GetProperty("SocketDesignation", mj);
+                this.Block[index].N_Core = ComponentsUtils.GetProperty("NumberOfCores", mj);
+                this.Block[index].N_Thread = ComponentsUtils.GetProperty("NumberOfLogicalProcessors", mj);
+                this.Block[index].MaxSpeed = ComponentsUtils.GetProperty("MaxClockSpeed", mj);
+                this.Block[index].L1_Cache = (Convert.ToInt16(ComponentsUtils.GetProperty("L2CacheSize", mj)) / 4).ToString();
+                this.Block[index].L2_Cache = ComponentsUtils.GetProperty("L2CacheSize", mj);
+                this.Block[index].L3_Cache = ComponentsUtils.GetProperty("L3CacheSize", mj);
 
                 index++;
             }
@@ -306,15 +307,15 @@ namespace DiscoveryLight.Core
             foreach (ManagementObject mj in collection)
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Value = ComponentsUtils.Capture_Value("Capacity", mj);
-                this.Block[index].Location = ComponentsUtils.Capture_Value("BankLabel", mj);
-                this.Block[index].Slot = ComponentsUtils.Capture_Value("DeviceLocator", mj);
-                this.Block[index].Manufacturer = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                this.Block[index].PartyNumber = ComponentsUtils.Capture_Value("PartNumber", mj);
-                this.Block[index].SerialNumber = ComponentsUtils.Capture_Value("SerialNumber", mj);
-                this.Block[index].Speed = ComponentsUtils.Capture_Value("ConfiguredClockSpeed", mj);
-                this.Block[index].BusSize = ComponentsUtils.Capture_Value("DataWidth", mj);
-                this.Block[index].Voltage = ComponentsUtils.Capture_Value("MinVoltage", mj);
+                this.Block[index].Value = ComponentsUtils.GetProperty("Capacity", mj);
+                this.Block[index].Location = ComponentsUtils.GetProperty("BankLabel", mj);
+                this.Block[index].Slot = ComponentsUtils.GetProperty("DeviceLocator", mj);
+                this.Block[index].Manufacturer = ComponentsUtils.GetProperty("Manufacturer", mj);
+                this.Block[index].PartyNumber = ComponentsUtils.GetProperty("PartNumber", mj);
+                this.Block[index].SerialNumber = ComponentsUtils.GetProperty("SerialNumber", mj);
+                this.Block[index].Speed = ComponentsUtils.GetProperty("ConfiguredClockSpeed", mj);
+                this.Block[index].BusSize = ComponentsUtils.GetProperty("DataWidth", mj);
+                this.Block[index].Voltage = ComponentsUtils.GetProperty("MinVoltage", mj);
 
                 index++;
             }
@@ -326,8 +327,8 @@ namespace DiscoveryLight.Core
 
             foreach (ManagementObject mj in collection) // Read data
             {
-                this.Size = Convert.ToUInt64(ComponentsUtils.Capture_Value("MaxCapacity", mj)); // Size
-                this.Type = ComponentsUtils.Capture_Value("Caption", mj); // Type
+                this.Size = Convert.ToUInt64(ComponentsUtils.GetProperty("MaxCapacity", mj)); // Size
+                this.Type = ComponentsUtils.GetProperty("Caption", mj); // Type
             }
         }
 
@@ -377,19 +378,19 @@ namespace DiscoveryLight.Core
             foreach (ManagementObject mj in collection)
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Index = ComponentsUtils.Capture_Value("Index", mj);
-                this.Block[index].Name = ComponentsUtils.Capture_Value("Caption", mj);
-                this.Block[index].MediaType = ComponentsUtils.Capture_Value("MediaType", mj);
-                this.Block[index].Intreface = ComponentsUtils.Capture_Value("InterfaceType", mj);
-                this.Block[index].Size = ComponentsUtils.Capture_Value("Size", mj);
-                this.Block[index].SerialNumber = ComponentsUtils.Capture_Value("SerialNumber", mj);
-                this.Block[index].Cylinders = ComponentsUtils.Capture_Value("TotalCylinders", mj);
-                this.Block[index].Heads = ComponentsUtils.Capture_Value("TotalHeads", mj);
-                this.Block[index].Sectors = ComponentsUtils.Capture_Value("TotalSectors", mj);
-                this.Block[index].Tracks = ComponentsUtils.Capture_Value("TotalTracks", mj);
-                this.Block[index].TracksPerCylinder = ComponentsUtils.Capture_Value("TracksPerCylinder", mj);
-                this.Block[index].BytesPerSector = ComponentsUtils.Capture_Value("BytesPerSector", mj);
-                this.Block[index].FirmwareVersion = ComponentsUtils.Capture_Value("FirmwareRevision", mj);
+                this.Block[index].Index = ComponentsUtils.GetProperty("Index", mj);
+                this.Block[index].Name = ComponentsUtils.GetProperty("Caption", mj);
+                this.Block[index].MediaType = ComponentsUtils.GetProperty("MediaType", mj);
+                this.Block[index].Intreface = ComponentsUtils.GetProperty("InterfaceType", mj);
+                this.Block[index].Size = ComponentsUtils.GetProperty("Size", mj);
+                this.Block[index].SerialNumber = ComponentsUtils.GetProperty("SerialNumber", mj);
+                this.Block[index].Cylinders = ComponentsUtils.GetProperty("TotalCylinders", mj);
+                this.Block[index].Heads = ComponentsUtils.GetProperty("TotalHeads", mj);
+                this.Block[index].Sectors = ComponentsUtils.GetProperty("TotalSectors", mj);
+                this.Block[index].Tracks = ComponentsUtils.GetProperty("TotalTracks", mj);
+                this.Block[index].TracksPerCylinder = ComponentsUtils.GetProperty("TracksPerCylinder", mj);
+                this.Block[index].BytesPerSector = ComponentsUtils.GetProperty("BytesPerSector", mj);
+                this.Block[index].FirmwareVersion = ComponentsUtils.GetProperty("FirmwareRevision", mj);
 
                 index++;
             }
@@ -437,15 +438,15 @@ namespace DiscoveryLight.Core
             foreach (ManagementObject mj in collection)
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Index = ComponentsUtils.Capture_Value("Index", mj);
-                this.Block[index].DeviceID = ComponentsUtils.Capture_Value("DeviceID", mj);
-                this.Block[index].InterfaceIndex = ComponentsUtils.Capture_Value("InterfaceIndex", mj);
-                this.Block[index].Name = ComponentsUtils.Capture_Value("Name", mj);
-                this.Block[index].Description = ComponentsUtils.Capture_Value("Description", mj);
-                this.Block[index].Type = ComponentsUtils.Capture_Value("NetConnectionID", mj);
-                this.Block[index].Manufacturer = ComponentsUtils.Capture_Value("Manufacturer", mj);
-                this.Block[index].Speed = ComponentsUtils.Capture_Value("Speed", mj);
-                this.Block[index].MACAddresse = ComponentsUtils.Capture_Value("MACAddress", mj);
+                this.Block[index].Index = ComponentsUtils.GetProperty("Index", mj);
+                this.Block[index].DeviceID = ComponentsUtils.GetProperty("DeviceID", mj);
+                this.Block[index].InterfaceIndex = ComponentsUtils.GetProperty("InterfaceIndex", mj);
+                this.Block[index].Name = ComponentsUtils.GetProperty("Name", mj);
+                this.Block[index].Description = ComponentsUtils.GetProperty("Description", mj);
+                this.Block[index].Type = ComponentsUtils.GetProperty("NetConnectionID", mj);
+                this.Block[index].Manufacturer = ComponentsUtils.GetProperty("Manufacturer", mj);
+                this.Block[index].Speed = ComponentsUtils.GetProperty("Speed", mj);
+                this.Block[index].MACAddresse = ComponentsUtils.GetProperty("MACAddress", mj);
 
                 index++;
             }

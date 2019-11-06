@@ -28,22 +28,14 @@ namespace DiscoveryLight.Core
             catch { return 0; } // return 0 found in case of error
         }
 
-        static public string Capture_Value(string property_name, ManagementObject obj)
+        static public string GetProperty(string property_name, ManagementObject obj)
         {
-            // Find Value
-
-            try
-            {
-                if (obj.Properties[property_name].Value != null)
-                {
-                    return obj.Properties[property_name].Value.ToString();
-                }
-                else
-                {
-                    return "N/A"; // return  null if the value is null
-                }
+            try{
+                return obj[property_name] != null ? obj[property_name].ToString() : "N/A";
             }
-            catch { return "Not Found"; } // return not found in case of error
+            catch { 
+                return "Not Found"; 
+            } 
         }
 
         static public List<ManagementObject> GetDriveInfo(string drive)
