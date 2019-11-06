@@ -45,7 +45,7 @@ namespace DiscoveryLight.Core
                 // get all drive informaton from a selected one
                 ManagementObjectSearcher collection;
                 List<ManagementObject> res;
-                collection = new ManagementObjectSearcher("root\\CIMV2", "select * from " + drive);
+                collection = new ManagementObjectSearcher(PATH, "select * from " + drive);
                 res = collection.Get().Cast<ManagementObject>().ToList();
                 collection.Dispose();
                 return res;
