@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Management;
+using DiscoveryLight.Logging;
 
 namespace DiscoveryLight.Core
 {
@@ -31,29 +32,37 @@ namespace DiscoveryLight.Core
         static public string GetProperty(string property_name, ManagementObject obj)
         {
             try{
-                return obj[property_name] != null ? obj[property_name].ToString() : "N/A";
+                return obj[property_name].ToString(); // return value or null if not exists
             }
-            catch { 
-                return "Not Found"; 
-            } 
+            catch (System.Management.ManagementException exception){
+                LogHelper.Log(LogTarget.File, exception.ToString());
+            }
+            catch (Exception exception){
+                LogHelper.Log(LogTarget.File, exception.ToString());
+            }
+            return null; // not found 
         }
 
         static public List<ManagementObject> GetDriveInfo(string drive)
         {
-            try
-            {
-                // get all drive informaton from a selected one
+            try{
                 ManagementObjectSearcher collection;
                 List<ManagementObject> res;
+                // get all drive informaton from a selected one
                 collection = new ManagementObjectSearcher(PATH, "select * from " + drive);
                 res = collection.Get().Cast<ManagementObject>().ToList();
                 collection.Dispose();
                 return res;
             }
-            catch
-            {
-                return new List<ManagementObject>();
+            catch (System.Management.ManagementException exception){
+                LogHelper.Log(LogTarget.File, exception.ToString());
             }
+            catch (Exception exception){
+                LogHelper.Log(LogTarget.File, exception.ToString());
+            }
+
+            // return empty list for any problems
+            return new List<ManagementObject>(); 
         }
 
     }
