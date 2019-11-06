@@ -46,16 +46,21 @@ namespace DiscoveryLight.Core
             catch { return "Not Found"; } // return not found in case of error
         }
 
-        static public ManagementObjectCollection GetDriveInfo(string drive)
+        static public List<ManagementObject> GetDriveInfo(string drive)
         {
             try
             {
                 // get all drive informaton from a selected one
-                return new ManagementObjectSearcher("root\\CIMV2", "select * from " + drive).Get();
+                ManagementObjectSearcher collection;
+                List<ManagementObject> res;
+                collection = new ManagementObjectSearcher("root\\CIMV2", "select * from " + drive);
+                res = collection.Get().Cast<ManagementObject>().ToList();
+                collection.Dispose();
+                return res;
             }
             catch
             {
-                return null;
+                return new List<ManagementObject>();
             }
         }
 
