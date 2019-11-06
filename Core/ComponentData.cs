@@ -85,6 +85,7 @@ namespace DiscoveryLight.Core
         public string Version;
         public string PrimaryBus_Value;
         public string SecondaryBus_Value;
+        public string NumberSlot;
 
         public void GetDriveInfo()
         {
@@ -100,6 +101,8 @@ namespace DiscoveryLight.Core
                 this.PrimaryBus_Value = ComponentsUtils.GetProperty("PrimaryBusType", mj);
                 this.SecondaryBus_Value = ComponentsUtils.GetProperty("SecondaryBusType", mj);
             }
+
+            NumberSlot = ComponentsUtils.GetDriveInfo("Win32_SystemSlot").Count.ToString();
         }
 
         public MAINBOARD()
