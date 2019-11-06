@@ -20,7 +20,7 @@ namespace DiscoveryLight.Logging
     
     public class FileLogger : LogBase
     {
-        public string filePath = @"Log/Log.txt";
+        public string filePath = "log.txt";
         public override void Log(string message)
         {
             lock (lockObj)
