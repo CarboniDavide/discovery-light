@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Device\Devices.cs" />
     <Compile Include="Core\Device\DevicePerformance.cs" />
     <Compile Include="Core\Device\DeviceData.cs" />
     <Compile Include="Core\Device\DeviceUtils.cs" />
