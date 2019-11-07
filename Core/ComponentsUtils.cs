@@ -16,6 +16,12 @@ namespace DiscoveryLight.Core
             String, UInt64
         }
 
+        public enum Operator
+        {
+            Egual,
+            NotEgual
+        }
+
         static public dynamic GetProperty(string property_name, ManagementObject obj, ReturnType returnAs)
         {
             try{
@@ -55,7 +61,7 @@ namespace DiscoveryLight.Core
             return new List<ManagementObject>(); 
         }
 
-        static public List<ManagementObject> GetDriveInfo(string drive, string property, string value)
+        static public List<ManagementObject> GetDriveInfo(string drive, string property, string value, Operator comp)
         {
             try
             {
@@ -64,7 +70,9 @@ namespace DiscoveryLight.Core
                 // get all drive informaton from a selected one
                 collection = new ManagementObjectSearcher(PATH, "Select * From " + drive);
                 foreach(ManagementObject mj in collection.Get().Cast<ManagementObject>().ToList()){
-                    if (mj[property].ToString().Equals(value))
+                    if ( ( comp == Operator.Egual) && (mj[property].ToString().Equals(value)) )
+                        res.Add(mj);
+                    if ( (comp == Operator.NotEgual) && !(mj[property].ToString().Equals(value)) )
                         res.Add(mj);
                 }
                 collection.Dispose();
