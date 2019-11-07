@@ -429,7 +429,7 @@ namespace DiscoveryLight.Core
         public void GetDriveInfo()
         {
             // get drive info
-            collection = ComponentsUtils.GetDriveInfo("Win32_NetworkAdapter");
+            collection = ComponentsUtils.GetDriveInfo("Win32_NetworkAdapter", "MACAddress", null, ComponentsUtils.Operator.NotEgual);
             // count number of drive
             BlockNumber = collection.Count;
             // initialize array to contains each drive info
