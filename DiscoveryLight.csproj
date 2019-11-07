@@ -37,8 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,10 +55,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\ComponentPerformance.cs" />
-    <Compile Include="Core\ComponentData.cs" />
-    <Compile Include="Core\ComponentsUtils.cs" />
-    <Compile Include="Core\Exceptions.cs" />
+    <Compile Include="Core\Device\DevicePerformance.cs" />
+    <Compile Include="Core\Device\DeviceData.cs" />
+    <Compile Include="Core\Device\DeviceUtils.cs" />
+    <Compile Include="Core\Exception\Exceptions.cs" />
     <Compile Include="Core\IO.cs" />
     <Compile Include="Logging\Looger.cs" />
     <Compile Include="Program.cs" />

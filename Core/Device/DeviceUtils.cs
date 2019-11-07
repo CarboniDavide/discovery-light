@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using System.Management;
 using DiscoveryLight.Logging;
 
-namespace DiscoveryLight.Core
+namespace DiscoveryLight.Core.Device
 {
-    static class ComponentsUtils
+    static class DeviceUtils
     {
         static public readonly String PATH = "root\\CIMV2";
         public enum ReturnType
