@@ -347,6 +347,7 @@ namespace DiscoveryLight.Core
     {
         public struct BLOCK
         {
+            public String DriveName;
             public String Index;
             public String Name;
             public String MediaType;
@@ -366,6 +367,19 @@ namespace DiscoveryLight.Core
         private List<ManagementObject> collection;
         public BLOCK[] Block;
 
+        public String FindDriveName(String index)
+        {
+            foreach (ManagementObject mj in ComponentsUtils.GetDriveInfo("Win32_PerfRawData_PerfDisk_PhysicalDisk"))
+            {
+                String currentDrive = ComponentsUtils.GetProperty("Name", mj, ComponentsUtils.ReturnType.String);
+
+                if (currentDrive.Substring(0, 1).Equals(index))
+                    return currentDrive.Substring(2, 1) + ":";
+            }
+
+            return null;
+        }
+
         public void GetDriveInfo()
         {
             // get drive info
@@ -383,6 +397,7 @@ namespace DiscoveryLight.Core
             {
                 this.Block[index] = new BLOCK();
                 this.Block[index].Index = ComponentsUtils.GetProperty("Index", mj, ComponentsUtils.ReturnType.String);
+                this.Block[index].DriveName = this.FindDriveName(this.Block[index].Index);
                 this.Block[index].Name = ComponentsUtils.GetProperty("Caption", mj, ComponentsUtils.ReturnType.String);
                 this.Block[index].MediaType = ComponentsUtils.GetProperty("MediaType", mj, ComponentsUtils.ReturnType.String);
                 this.Block[index].Intreface = ComponentsUtils.GetProperty("InterfaceType", mj, ComponentsUtils.ReturnType.String);
