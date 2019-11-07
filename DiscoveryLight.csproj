@@ -60,7 +60,6 @@
     <Compile Include="Core\Device\DeviceData.cs" />
     <Compile Include="Core\Device\DeviceUtils.cs" />
     <Compile Include="Core\Exception\Exceptions.cs" />
-    <Compile Include="Core\IO.cs" />
     <Compile Include="Logging\Looger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
