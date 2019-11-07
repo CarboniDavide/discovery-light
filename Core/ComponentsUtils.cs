@@ -10,29 +10,19 @@ namespace DiscoveryLight.Core
 {
     static class ComponentsUtils
     {
-        static readonly String PATH = "root\\CIMV2";
-        static public UInt64 Capture_Number(string property_name, ManagementObject obj)
+        static public readonly String PATH = "root\\CIMV2";
+        public enum ReturnType
         {
-            // Find Value
-
-            try
-            {
-                if (obj.Properties[property_name].Value != null)
-                {
-                    return Convert.ToUInt64(obj.Properties[property_name].Value);
-                }
-                else
-                {
-                    return 0; // return  0 if the value is null
-                }
-            }
-            catch { return 0; } // return 0 found in case of error
+            String, UInt64
         }
 
-        static public string GetProperty(string property_name, ManagementObject obj)
+        static public dynamic GetProperty(string property_name, ManagementObject obj, ReturnType returnAs)
         {
             try{
-                return obj[property_name].ToString(); // return value or null if not exists
+                if (returnAs == ReturnType.String)
+                    return obj[property_name].ToString();
+                else
+                    return Convert.ToUInt64(obj[property_name]);
             }
             catch (System.Management.ManagementException exception){
                 LogHelper.Log(LogTarget.File, exception.ToString());
