@@ -7,12 +7,23 @@ using System.Management;
 
 namespace DiscoveryLight.Core.Device.Data
 {
+    #region Interface
+    /// <summary>
+    /// Declare base class structure
+    /// </summary>
+    public interface Performance
+    {
+        void GetPerformance();
+    }
+
+    #endregion
+
     #region Score
 
     /// <summary>
     /// Get score performance
     /// </summary>
-    public class SCORE
+    public class SCORE: Performance
     {
         public UInt64? Cpu;
         public UInt64? D3D;
@@ -39,7 +50,7 @@ namespace DiscoveryLight.Core.Device.Data
     }
     #endregion
 
-    #region Cpu
+    #region Cpu: Performance
 
     /// <summary>
     /// Get usage for each selected cpu'thread
@@ -92,7 +103,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     #endregion
 
-    #region System
+    #region System: Performance
 
     /// <summary>
     /// Get Threads and Process number that are running in background
@@ -123,7 +134,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get General Pc informations as Storage size Memory used and Cpu usage
     /// </summary>
-    public class PERFORM_PC
+    public class PERFORM_PC: Performance
     {
 
         public UInt64? Per_DiskSizeFree;
@@ -157,7 +168,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get Memory Ram performance
     /// </summary>
-    public class PERFORM_RAM
+    public class PERFORM_RAM: Performance
     {
         public UInt64? CacheUsage;
         public UInt64? MaxCacheUsage;
@@ -200,7 +211,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get local storage performance
     /// </summary>
-    public class PERFORM_DISK
+    public class PERFORM_DISK: Performance
     {
         public UInt64? FreeSpace;
         public UInt64? WriteBytesPerSec;
@@ -279,7 +290,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get Network Performance
     /// </summary>
-    public class PERFORM_ETHERNET
+    public class PERFORM_ETHERNET: Performance
     {
         public UInt64? ByteReceivedPerSec;
         public UInt64? BytesSentPerSec;

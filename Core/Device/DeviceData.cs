@@ -5,7 +5,18 @@ using System.Management;
 
 namespace DiscoveryLight.Core.Device.Data
 {
-    public class PC
+    #region Interface
+
+    /// <summary>
+    /// Declare base class structure
+    /// </summary>
+    public interface Device
+    {
+       void GetDriveInfo();
+    }
+
+    #endregion
+    public class PC: Device
     {
         public String Name;
         public String Type;
@@ -20,7 +31,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String SystemOS_Architecture;
         public String RamSize;
 
-        private void GetDriveInfo()
+        public void GetDriveInfo()
         {
             // get drive info
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_ComputerSystem"))
@@ -53,7 +64,7 @@ namespace DiscoveryLight.Core.Device.Data
         }
     }
 
-    public class BIOS
+    public class BIOS: Device
     {
         public String Manufacturer;
         public String SerialNumber;
@@ -78,7 +89,7 @@ namespace DiscoveryLight.Core.Device.Data
         }
     }
 
-    public class MAINBOARD
+    public class MAINBOARD: Device
     {
         public String Manufacturer;
         public String Model;
@@ -111,7 +122,7 @@ namespace DiscoveryLight.Core.Device.Data
         }
     }
 
-    public class VIDEO
+    public class VIDEO: Device
     {
         public int BlockNumber = 0;
         public struct BLOCK
@@ -172,7 +183,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     }
 
-    public class AUDIO
+    public class AUDIO: Device
     {
         public int BlockNumber = 0;
         public struct BLOCK
@@ -213,7 +224,7 @@ namespace DiscoveryLight.Core.Device.Data
         }
     }
 
-    public class CPU
+    public class CPU: Device
     {
         public int BlockNumber = 0;
 
@@ -274,7 +285,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     }
 
-    public class RAM
+    public class RAM: Device
     {
         public struct BLOCK
         {
@@ -343,7 +354,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     }
 
-    public class DISK
+    public class DISK: Device
     {
         public struct BLOCK
         {
@@ -422,7 +433,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     }
 
-    public class ETHERNET
+    public class ETHERNET: Device
     {
         public struct BLOCK
         {
