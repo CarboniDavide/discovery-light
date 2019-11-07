@@ -65,5 +65,33 @@ namespace DiscoveryLight.Core
             return new List<ManagementObject>(); 
         }
 
+        static public List<ManagementObject> GetDriveInfo(string drive, string property, string value)
+        {
+            try
+            {
+                ManagementObjectSearcher collection;
+                List<ManagementObject> res = new List<ManagementObject>();
+                // get all drive informaton from a selected one
+                collection = new ManagementObjectSearcher(PATH, "Select * From " + drive);
+                foreach(ManagementObject mj in collection.Get().Cast<ManagementObject>().ToList()){
+                    if (mj[property].ToString().Equals(value))
+                        res.Add(mj);
+                }
+                collection.Dispose();
+                return res;
+            }
+            catch (System.Management.ManagementException exception)
+            {
+                LogHelper.Log(LogTarget.File, exception.ToString());
+            }
+            catch (Exception exception)
+            {
+                LogHelper.Log(LogTarget.File, exception.ToString());
+            }
+
+            // return empty list for any problems
+            return new List<ManagementObject>();
+        }
+
     }
 }
