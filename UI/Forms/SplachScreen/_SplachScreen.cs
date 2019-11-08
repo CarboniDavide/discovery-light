@@ -15,12 +15,23 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
 {
     public partial class _SplachScreen : Form
     {
+        Task t;
         public _SplachScreen()
         {
             InitializeComponent();
+            this.Start();
         }
         
-        private async void InitDevice()
+
+        private async void Start()
+        {
+            await this.InitDevice();
+            await this.loadDevice();
+            this.Close();
+            this.Dispose();
+        }
+
+        private async Task InitDevice()
         {
             Program.Devices = new List<Device>();
             Program.Devices.Add(new Device(new CPU()));
@@ -32,7 +43,6 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
             Program.Devices.Add(new Device(new BIOS()));
             Program.Devices.Add(new Device(new MAINBOARD()));
             Program.Devices.Add(new Device(new RAM()));
-            await this.loadDevice();
         }
 
         private async Task loadDevice()
@@ -44,17 +54,6 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
                 await Task.Run(() => device.Properties.GetDriveInfo());
                 chgBar_Devices.BarFillSize += step;
             }
-            this.Close();
-        }
-
-        private void _SplachScreen_Shown(object sender, EventArgs e)
-        {
-            InitDevice();
-        }
-
-        private void _SplachScreen_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Dispose();
         }
     }
 }
