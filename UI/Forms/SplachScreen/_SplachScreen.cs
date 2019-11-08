@@ -15,13 +15,11 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
 {
     public partial class _SplachScreen : Form
     {
-        Task t;
         public _SplachScreen()
         {
             InitializeComponent();
             this.Start();
         }
-        
 
         private async void Start()
         {
