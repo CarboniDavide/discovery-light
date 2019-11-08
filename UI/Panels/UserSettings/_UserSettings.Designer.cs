@@ -1,6 +1,6 @@
 ﻿namespace DiscoveryLight.UI.Panels.UserSettings
 {
-    partial class UserSettings
+    partial class _UserSettings
     {
         /// <summary> 
         /// Required designer variable.

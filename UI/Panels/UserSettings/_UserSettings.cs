@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.UserSettings
 {
-    public partial class UserSettings : UserControl
+    public partial class _UserSettings : UserControl
     {
-        public UserSettings()
+        public _UserSettings()
         {
             InitializeComponent();
         }
