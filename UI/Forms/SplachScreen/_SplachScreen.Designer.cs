@@ -54,9 +54,12 @@
             // 
             // picBox_Components
             // 
+            this.picBox_Components.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.picBox_Components.BackgroundImage = global::DiscoveryLight.Properties.Resources.LogoEntry;
             this.picBox_Components.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_Components.Location = new System.Drawing.Point(16, 15);
+            this.picBox_Components.Location = new System.Drawing.Point(16, 10);
             this.picBox_Components.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBox_Components.Name = "picBox_Components";
             this.picBox_Components.Size = new System.Drawing.Size(716, 385);
@@ -65,11 +68,15 @@
             // 
             // lbl_Company
             // 
+            this.lbl_Company.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Company.AutoSize = true;
+            this.lbl_Company.BackColor = System.Drawing.Color.Transparent;
             this.lbl_Company.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Company.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lbl_Company.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Company.Location = new System.Drawing.Point(407, 326);
+            this.lbl_Company.Location = new System.Drawing.Point(407, 318);
             this.lbl_Company.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Company.Name = "lbl_Company";
             this.lbl_Company.Size = new System.Drawing.Size(110, 16);
@@ -82,9 +89,9 @@
             // 
             this.lbl_LoadIDeviceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_LoadIDeviceInfo.Location = new System.Drawing.Point(0, 383);
+            this.lbl_LoadIDeviceInfo.Location = new System.Drawing.Point(12, 383);
             this.lbl_LoadIDeviceInfo.Name = "lbl_LoadIDeviceInfo";
-            this.lbl_LoadIDeviceInfo.Size = new System.Drawing.Size(748, 17);
+            this.lbl_LoadIDeviceInfo.Size = new System.Drawing.Size(720, 17);
             this.lbl_LoadIDeviceInfo.TabIndex = 4;
             this.lbl_LoadIDeviceInfo.Text = "Loading devices";
             this.lbl_LoadIDeviceInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
