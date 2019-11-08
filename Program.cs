@@ -6,12 +6,16 @@ using System.Windows.Forms;
 using DiscoveryLight.UI.Forms;
 using DiscoveryLight.UI.Forms.SplachScreen;
 using DiscoveryLight.UI.Forms.Main;
+using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Devices;
 
 namespace DiscoveryLight
 {
     
     static class Program
     {
+        static public List<Device> Devices;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
