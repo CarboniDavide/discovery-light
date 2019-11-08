@@ -44,9 +44,9 @@
             this.chgBar_Devices.BarFillColor = System.Drawing.SystemColors.Highlight;
             this.chgBar_Devices.BarFillSize = 50;
             this.chgBar_Devices.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.chgBar_Devices.Location = new System.Drawing.Point(0, 332);
+            this.chgBar_Devices.Location = new System.Drawing.Point(0, 334);
             this.chgBar_Devices.Name = "chgBar_Devices";
-            this.chgBar_Devices.Size = new System.Drawing.Size(561, 5);
+            this.chgBar_Devices.Size = new System.Drawing.Size(561, 3);
             this.chgBar_Devices.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chgBar_Devices.TabIndex = 1;
             this.chgBar_Devices.TextColor = System.Drawing.Color.White;
@@ -101,8 +101,6 @@
             this.MaximizeBox = false;
             this.Name = "_SplachScreen";
             this.Text = "Discovery";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this._SplachScreen_FormClosed);
-            this.Shown += new System.EventHandler(this._SplachScreen_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Components)).EndInit();
             this.ResumeLayout(false);
