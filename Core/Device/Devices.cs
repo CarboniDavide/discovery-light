@@ -5,18 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Data;
 
-namespace DiscoveryLight.Core.Device
+namespace DiscoveryLight.Core.Devices
 {
-    class Devices
+
+    public class Device
     {
-        public AUDIO Audio;
-        public CPU Cpu;
-        public DISK Disk;
-        public BIOS Bios;
-        public SCORE Score;
-        public RAM Ram;
-        public ETHERNET Ethernet;
-        public PC Pc;
-        public VIDEO Video;
+        private String name;
+        private DeviceData properties;
+
+        public string Name { get => name; set => name = value; }
+        public DeviceData Properties {
+            get { return properties; }
+            set { 
+                properties = value; 
+                this.Name = this.Properties.GetType().Name;
+            }
+        }
+
+        public Device(DeviceData Device)
+        {
+            this.properties = Device;
+        }
     }
 }
