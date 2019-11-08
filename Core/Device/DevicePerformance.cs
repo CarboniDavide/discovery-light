@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Management;
+using DiscoveryLight.Core.Device.Utils;
 
-namespace DiscoveryLight.Core.Device.Data
+namespace DiscoveryLight.Core.Device.Performance
 {
     #region Interface
     /// <summary>
     /// Declare base class structure
     /// </summary>
-    public interface Performance
+    public interface DevicePerformance
     {
         void GetPerformance();
     }
@@ -23,7 +24,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get score performance
     /// </summary>
-    public class SCORE: Performance
+    public class PERFORM_SCORE: DevicePerformance
     {
         public UInt64? Cpu;
         public UInt64? D3D;
@@ -43,7 +44,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public SCORE()
+        public PERFORM_SCORE()
         {
             GetPerformance();
         }
@@ -134,7 +135,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get General Pc informations as Storage size Memory used and Cpu usage
     /// </summary>
-    public class PERFORM_PC: Performance
+    public class PERFORM_PC: DevicePerformance
     {
 
         public UInt64? Per_DiskSizeFree;
@@ -168,7 +169,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get Memory Ram performance
     /// </summary>
-    public class PERFORM_RAM: Performance
+    public class PERFORM_RAM: DevicePerformance
     {
         public UInt64? CacheUsage;
         public UInt64? MaxCacheUsage;
@@ -211,7 +212,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get local storage performance
     /// </summary>
-    public class PERFORM_DISK: Performance
+    public class PERFORM_DISK: DevicePerformance
     {
         public UInt64? FreeSpace;
         public UInt64? WriteBytesPerSec;
@@ -290,7 +291,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get Network Performance
     /// </summary>
-    public class PERFORM_ETHERNET: Performance
+    public class PERFORM_ETHERNET: DevicePerformance
     {
         public UInt64? ByteReceivedPerSec;
         public UInt64? BytesSentPerSec;
