@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Management;
 using DiscoveryLight.Logging;
 
-namespace DiscoveryLight.Core.Device
+namespace DiscoveryLight.Core.Device.Utils
 {
     static class DeviceUtils
     {
