@@ -43,7 +43,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.DevicePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DevicePanel.Location = new System.Drawing.Point(40, 0);
             this.DevicePanel.Name = "DevicePanel";
-            this.DevicePanel.Size = new System.Drawing.Size(632, 360);
+            this.DevicePanel.Size = new System.Drawing.Size(630, 360);
             this.DevicePanel.TabIndex = 3;
             // 
             // FooterBar
@@ -52,7 +52,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.FooterBar.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.FooterBar.Location = new System.Drawing.Point(40, 360);
             this.FooterBar.Name = "FooterBar";
-            this.FooterBar.Size = new System.Drawing.Size(632, 40);
+            this.FooterBar.Size = new System.Drawing.Size(630, 40);
             this.FooterBar.TabIndex = 2;
             // 
             // NavigationBar
@@ -68,7 +68,7 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 400);
+            this.ClientSize = new System.Drawing.Size(670, 400);
             this.Controls.Add(this.DevicePanel);
             this.Controls.Add(this.FooterBar);
             this.Controls.Add(this.NavigationBar);
