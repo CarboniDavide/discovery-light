@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.UI.Forms;
 using DiscoveryLight.UI.Forms.SplachScreen;
 using DiscoveryLight.UI.Forms.Main;
-using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Devices;
 
 namespace DiscoveryLight
