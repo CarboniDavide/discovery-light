@@ -24,7 +24,7 @@ namespace DiscoveryLight.Core.Devices
 
         public Device(DeviceData Device)
         {
-            this.properties = Device;
+            this.Properties = Device;
         }
     }
 }
