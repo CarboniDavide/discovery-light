@@ -46,9 +46,10 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
         private async Task loadDevice()
         {
             chgBar_Devices.BarFillSize = 0;
-            int step = this.chgBar_Devices.Width / Program.Devices.Count;
+            int step = 100 / Program.Devices.Count;
             foreach (Device device in Program.Devices)
             {
+                lbl_LoadIDeviceInfo.Text = "Loading data for: " + device.Name.ToLower();
                 await Task.Run(() => device.Properties.GetDriveInfo());
                 chgBar_Devices.BarFillSize += step;
             }
