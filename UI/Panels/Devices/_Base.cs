@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DiscoveryLight.UI.HardwareComponents
+namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _MainBoard : UserControl
+    public partial class _Base : UserControl
     {
-        public _MainBoard()
+        public _Base()
         {
             InitializeComponent();
         }

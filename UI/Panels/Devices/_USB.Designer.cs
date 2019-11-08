@@ -1,6 +1,6 @@
-﻿namespace DiscoveryLight.UI.HardwareComponents
+﻿namespace DiscoveryLight.UI.Panels.Devices
 {
-    partial class _Memory
+    partial class _USB
     {
         /// <summary> 
         /// Required designer variable.

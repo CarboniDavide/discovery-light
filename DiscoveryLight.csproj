@@ -99,71 +99,71 @@
       <DependentUpon>_SplachScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\_FormsCollection.cs" />
-    <Compile Include="UI\HardwareComponents\_All.cs">
+    <Compile Include="UI\Panels\Devices\_All.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_All.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_All.Designer.cs">
       <DependentUpon>_All.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Audio.cs">
+    <Compile Include="UI\Panels\Devices\_Audio.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Audio.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_Audio.Designer.cs">
       <DependentUpon>_Audio.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Base.cs">
+    <Compile Include="UI\Panels\Devices\_Base.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Base.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_Base.Designer.cs">
       <DependentUpon>_Base.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_BaseHardware.cs">
+    <Compile Include="UI\Panels\Devices\_BaseHardware.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_BaseHardware.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_BaseHardware.Designer.cs">
       <DependentUpon>_BaseHardware.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_CPU.cs">
+    <Compile Include="UI\Panels\Devices\_CPU.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_CPU.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_CPU.Designer.cs">
       <DependentUpon>_CPU.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_HardwareComponentsCollections.cs" />
-    <Compile Include="UI\HardwareComponents\_MainBoard.cs">
+    <Compile Include="UI\Panels\Devices\_HardwareComponentsCollections.cs" />
+    <Compile Include="UI\Panels\Devices\_MainBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_MainBoard.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_MainBoard.Designer.cs">
       <DependentUpon>_MainBoard.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Memory.cs">
+    <Compile Include="UI\Panels\Devices\_Memory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Memory.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_Memory.Designer.cs">
       <DependentUpon>_Memory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Network.cs">
+    <Compile Include="UI\Panels\Devices\_Network.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Network.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_Network.Designer.cs">
       <DependentUpon>_Network.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Storage.cs">
+    <Compile Include="UI\Panels\Devices\_Storage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Storage.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_Storage.Designer.cs">
       <DependentUpon>_Storage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_USB.cs">
+    <Compile Include="UI\Panels\Devices\_USB.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_USB.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_USB.Designer.cs">
       <DependentUpon>_USB.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Video.cs">
+    <Compile Include="UI\Panels\Devices\_Video.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\HardwareComponents\_Video.Designer.cs">
+    <Compile Include="UI\Panels\Devices\_Video.Designer.cs">
       <DependentUpon>_Video.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\UserSettings\UserSettings.cs">

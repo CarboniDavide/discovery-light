@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DiscoveryLight.UI.HardwareComponents
+namespace DiscoveryLight.UI.Panels.Devices
 {
     class _HardwareComponentsCollections
     {

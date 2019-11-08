@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DiscoveryLight.UI.HardwareComponents
+namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _USB : UserControl
+    public partial class _All : UserControl
     {
-        public _USB()
+        public _All()
         {
             InitializeComponent();
         }
