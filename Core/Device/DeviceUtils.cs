@@ -72,7 +72,7 @@ namespace DiscoveryLight.Core.Device.Utils
                 foreach(ManagementObject mj in collection.Get().Cast<ManagementObject>().ToList()){
                     if ( ( comp == Operator.Egual) && (mj[property].ToString().Equals(value)) )
                         res.Add(mj);
-                    if ( (comp == Operator.NotEgual) && !(mj[property].ToString().Equals(value)) )
+                    if ( (comp == Operator.NotEgual) && (GetProperty(property, mj, ReturnType.String) != value) )
                         res.Add(mj);
                 }
                 collection.Dispose();
