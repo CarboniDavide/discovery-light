@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.UI.Panels.Devices;
 
 namespace DiscoveryLight.UI.Forms.Main
 {
@@ -15,6 +16,12 @@ namespace DiscoveryLight.UI.Forms.Main
         public _Main()
         {
             InitializeComponent();
+            this.Load();
+        }
+
+        private void Load()
+        {
+            
         }
     }
 }
