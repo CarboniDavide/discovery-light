@@ -18,6 +18,12 @@ namespace DiscoveryLight.Core.Device.Data
     }
 
     #endregion
+
+    #region PC
+
+    /// <summary>
+    /// Get base pc properties
+    /// </summary>
     public class PC: DeviceData
     {
         public String Name;
@@ -65,6 +71,12 @@ namespace DiscoveryLight.Core.Device.Data
         }
     }
 
+    #endregion
+
+    #region Bios
+    /// <summary>
+    /// Get base Bios properties
+    /// </summary>
     public class BIOS: DeviceData
     {
         public String Manufacturer;
@@ -88,6 +100,14 @@ namespace DiscoveryLight.Core.Device.Data
         {
         }
     }
+
+    #endregion
+
+    #region Mainboard
+
+    /// <summary>
+    /// Get base pc properties
+    /// </summary>
 
     public class MAINBOARD: DeviceData
     {
@@ -120,6 +140,14 @@ namespace DiscoveryLight.Core.Device.Data
         {
         }
     }
+
+    #endregion
+
+    #region Video
+
+    /// <summary>
+    /// Get base Video properties
+    /// </summary>
 
     public class VIDEO: DeviceData
     {
@@ -178,8 +206,15 @@ namespace DiscoveryLight.Core.Device.Data
         public VIDEO()
         {
         }
-
     }
+
+    #endregion
+
+    #region Audio
+
+    /// <summary>
+    /// Get base audio properties
+    /// </summary>
 
     public class AUDIO: DeviceData
     {
@@ -220,6 +255,14 @@ namespace DiscoveryLight.Core.Device.Data
         {
         }
     }
+
+    #endregion
+
+    #region CPU
+
+    /// <summary>
+    /// Get base cpu properties
+    /// </summary>
 
     public class CPU: DeviceData
     {
@@ -280,6 +323,14 @@ namespace DiscoveryLight.Core.Device.Data
         }
 
     }
+
+    #endregion
+
+    #region Memory
+
+    /// <summary>
+    /// Get base ram properties
+    /// </summary>
 
     public class RAM: DeviceData
     {
@@ -349,6 +400,13 @@ namespace DiscoveryLight.Core.Device.Data
 
     }
 
+    #endregion
+
+    #region Storage
+
+    /// <summary>
+    /// Get base storage properties for each pysical disk
+    /// </summary>
     public class DISK: DeviceData
     {
         public struct BLOCK
@@ -427,6 +485,13 @@ namespace DiscoveryLight.Core.Device.Data
 
     }
 
+    #endregion
+
+    #region Network
+
+    /// <summary>
+    /// Get base network properties for each interface
+    /// </summary>
     public class NETWORK: DeviceData
     {
         public struct BLOCK
@@ -482,10 +547,9 @@ namespace DiscoveryLight.Core.Device.Data
 
     }
 
-    //
-    // PROCESS CLASS
-    //
+    #endregion
 
+    #region Threads
     public class EXECUTE_PROCESS
     {
         public System.Threading.Thread Th;
@@ -501,5 +565,5 @@ namespace DiscoveryLight.Core.Device.Data
             this.Th.Abort();
         }
     }
-
+    #endregion
 }
