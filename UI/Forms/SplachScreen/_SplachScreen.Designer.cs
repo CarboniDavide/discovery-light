@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_SplachScreen));
-            this.chgBar_Components = new WinformComponents.ChartBar();
+            this.chgBar_Devices = new WinformComponents.ChartBar();
             this.picBox_Logo = new System.Windows.Forms.PictureBox();
             this.picBox_Components = new System.Windows.Forms.PictureBox();
             this.lbl_Company = new System.Windows.Forms.LinkLabel();
@@ -37,20 +37,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Components)).BeginInit();
             this.SuspendLayout();
             // 
-            // chgBar_Components
+            // chgBar_Devices
             // 
-            this.chgBar_Components.Activated = true;
-            this.chgBar_Components.BarBackColor = System.Drawing.Color.Transparent;
-            this.chgBar_Components.BarFillColor = System.Drawing.SystemColors.Highlight;
-            this.chgBar_Components.BarFillSize = 50;
-            this.chgBar_Components.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.chgBar_Components.Location = new System.Drawing.Point(0, 332);
-            this.chgBar_Components.Name = "chgBar_Components";
-            this.chgBar_Components.Size = new System.Drawing.Size(561, 5);
-            this.chgBar_Components.Style = WinformComponents.ChartBar.STYLE.Horizontal;
-            this.chgBar_Components.TabIndex = 1;
-            this.chgBar_Components.TextColor = System.Drawing.Color.White;
-            this.chgBar_Components.TextVisible = false;
+            this.chgBar_Devices.Activated = true;
+            this.chgBar_Devices.BarBackColor = System.Drawing.Color.Transparent;
+            this.chgBar_Devices.BarFillColor = System.Drawing.SystemColors.Highlight;
+            this.chgBar_Devices.BarFillSize = 50;
+            this.chgBar_Devices.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.chgBar_Devices.Location = new System.Drawing.Point(0, 332);
+            this.chgBar_Devices.Name = "chgBar_Devices";
+            this.chgBar_Devices.Size = new System.Drawing.Size(561, 5);
+            this.chgBar_Devices.Style = WinformComponents.ChartBar.STYLE.Horizontal;
+            this.chgBar_Devices.TabIndex = 1;
+            this.chgBar_Devices.TextColor = System.Drawing.Color.White;
+            this.chgBar_Devices.TextVisible = false;
             // 
             // picBox_Logo
             // 
@@ -93,7 +93,7 @@
             this.ClientSize = new System.Drawing.Size(561, 337);
             this.Controls.Add(this.lbl_Company);
             this.Controls.Add(this.picBox_Logo);
-            this.Controls.Add(this.chgBar_Components);
+            this.Controls.Add(this.chgBar_Devices);
             this.Controls.Add(this.picBox_Components);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -101,6 +101,8 @@
             this.MaximizeBox = false;
             this.Name = "_SplachScreen";
             this.Text = "Discovery";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this._SplachScreen_FormClosed);
+            this.Shown += new System.EventHandler(this._SplachScreen_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Components)).EndInit();
             this.ResumeLayout(false);
@@ -110,7 +112,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picBox_Components;
-        private WinformComponents.ChartBar chgBar_Components;
+        private WinformComponents.ChartBar chgBar_Devices;
         private System.Windows.Forms.PictureBox picBox_Logo;
         private System.Windows.Forms.LinkLabel lbl_Company;
     }
