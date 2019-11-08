@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Management;
+using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.Core.Device.Data
 {
@@ -10,13 +11,14 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Declare base class structure
     /// </summary>
-    public interface Device
+    /// 
+    public interface DeviceData
     {
        void GetDriveInfo();
     }
 
     #endregion
-    public class PC: Device
+    public class PC: DeviceData
     {
         public String Name;
         public String Type;
@@ -60,11 +62,10 @@ namespace DiscoveryLight.Core.Device.Data
 
         public PC()
         {
-            GetDriveInfo();
         }
     }
 
-    public class BIOS: Device
+    public class BIOS: DeviceData
     {
         public String Manufacturer;
         public String SerialNumber;
@@ -85,11 +86,10 @@ namespace DiscoveryLight.Core.Device.Data
 
         public BIOS()
         {
-            GetDriveInfo();
         }
     }
 
-    public class MAINBOARD: Device
+    public class MAINBOARD: DeviceData
     {
         public String Manufacturer;
         public String Model;
@@ -118,11 +118,10 @@ namespace DiscoveryLight.Core.Device.Data
 
         public MAINBOARD()
         {
-            GetDriveInfo();
         }
     }
 
-    public class VIDEO: Device
+    public class VIDEO: DeviceData
     {
         public int BlockNumber = 0;
         public struct BLOCK
@@ -178,12 +177,11 @@ namespace DiscoveryLight.Core.Device.Data
 
         public VIDEO()
         {
-            GetDriveInfo(); // Init componenents and searching the data
         }
 
     }
 
-    public class AUDIO: Device
+    public class AUDIO: DeviceData
     {
         public int BlockNumber = 0;
         public struct BLOCK
@@ -220,11 +218,10 @@ namespace DiscoveryLight.Core.Device.Data
 
         public AUDIO()
         {
-            GetDriveInfo(); // Init componenents and searching the data
         }
     }
 
-    public class CPU: Device
+    public class CPU: DeviceData
     {
         public int BlockNumber = 0;
 
@@ -280,12 +277,11 @@ namespace DiscoveryLight.Core.Device.Data
 
         public CPU()
         {
-            GetDriveInfo();
         }
 
     }
 
-    public class RAM: Device
+    public class RAM: DeviceData
     {
         public struct BLOCK
         {
@@ -349,12 +345,11 @@ namespace DiscoveryLight.Core.Device.Data
 
         public RAM()
         {
-            GetDriveInfo();
         }
 
     }
 
-    public class DISK: Device
+    public class DISK: DeviceData
     {
         public struct BLOCK
         {
@@ -428,12 +423,11 @@ namespace DiscoveryLight.Core.Device.Data
 
         public DISK()
         {
-            GetDriveInfo();
         }
 
     }
 
-    public class ETHERNET: Device
+    public class NETWORK: DeviceData
     {
         public struct BLOCK
         {
@@ -482,9 +476,8 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public ETHERNET()
+        public NETWORK()
         {
-            GetDriveInfo(); // Init componenents and searching the data
         }
 
     }
@@ -508,4 +501,5 @@ namespace DiscoveryLight.Core.Device.Data
             this.Th.Abort();
         }
     }
+
 }
