@@ -111,12 +111,6 @@
     <Compile Include="UI\Panels\Devices\_Audio.Designer.cs">
       <DependentUpon>_Audio.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Devices\_Base.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Devices\_Base.Designer.cs">
-      <DependentUpon>_Base.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Panels\Devices\_BaseHardware.cs">
       <SubType>UserControl</SubType>
     </Compile>
