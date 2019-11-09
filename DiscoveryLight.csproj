@@ -149,12 +149,6 @@
     <Compile Include="UI\Panels\Devices\_Storage.Designer.cs">
       <DependentUpon>_Storage.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Devices\_USB.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Devices\_USB.Designer.cs">
-      <DependentUpon>_USB.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Panels\Devices\_Video.cs">
       <SubType>UserControl</SubType>
     </Compile>
