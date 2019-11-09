@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _CPU : UserControl
+    public partial class _CPU : UserControl, Device
     {
         public _CPU()
         {

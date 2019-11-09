@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Audio : UserControl
+    public partial class _Audio : UserControl, Device
     {
         public _Audio()
         {

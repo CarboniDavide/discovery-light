@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Memory : UserControl
+    public partial class _Memory : UserControl, Device
     {
         public _Memory()
         {

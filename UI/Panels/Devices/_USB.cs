@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _USB : UserControl
+    public partial class _USB : UserControl, Device
     {
         public _USB()
         {
