@@ -123,6 +123,7 @@
     <Compile Include="UI\Panels\Devices\_CPU.Designer.cs">
       <DependentUpon>_CPU.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Panels\Devices\Device.cs" />
     <Compile Include="UI\Panels\Devices\_HardwareComponentsCollections.cs" />
     <Compile Include="UI\Panels\Devices\_MainBoard.cs">
       <SubType>UserControl</SubType>
