@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Network : UserControl, Device
+    public partial class _Network : Device
     {
-        public _Network()
+        public _Network(): base(typeof(NETWORK))
         {
             InitializeComponent();
         }
+
+        public override void LoadProperties() { }
     }
 }

@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Audio : UserControl, Device
+    public partial class _Audio : Device
     {
-        public _Audio()
+        public _Audio():base(typeof(AUDIO))
         {
             InitializeComponent();
         }
+
+        public override void LoadProperties() { }
     }
 }

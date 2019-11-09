@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _CPU : UserControl, Device
+    public partial class _CPU : Device
     {
-        public _CPU()
+        public _CPU() : base(typeof(CPU))
         {
             InitializeComponent();
         }
+
+        public override void LoadProperties() { }
     }
 }

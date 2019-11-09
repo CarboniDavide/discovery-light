@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Storage : UserControl, Device
+    public partial class _Storage : Device
     {
-        public _Storage()
+        public _Storage(): base(typeof(DISK))
         {
             InitializeComponent();
         }
+
+        public override void LoadProperties() { }
     }
 }

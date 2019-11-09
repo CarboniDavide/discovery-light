@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Memory : UserControl, Device
+    public partial class _Memory : Device
     {
-        public _Memory()
+        public _Memory(): base(typeof(RAM))
         {
             InitializeComponent();
         }
+
+        public override void LoadProperties() { }
     }
 }
