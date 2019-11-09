@@ -16,12 +16,12 @@ namespace DiscoveryLight.UI.Forms.Main
         public _Main()
         {
             InitializeComponent();
-            this.Load();
+            this.LoadFirstDevice();
         }
 
-        private void Load()
+        private void LoadFirstDevice()
         {
-            
+            this.DeviceContainer.Controls.Add(new _CPU());
         }
     }
 }
