@@ -50,7 +50,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WinformComponents">
+    <Reference Include="WinformComponents, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\WinformComponents\bin\Debug\WinformComponents.dll</HintPath>
     </Reference>
   </ItemGroup>
