@@ -53,10 +53,10 @@
             this.lbl_ChartRAM = new System.Windows.Forms.Label();
             this.lbl_ChartHD = new System.Windows.Forms.Label();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
-            this.chartHD = new WinformComponents.ChartCircle();
-            this.chartRAM = new WinformComponents.ChartCircle();
             this.lbl_ChartCPU = new System.Windows.Forms.Label();
             this.chartCPU = new WinformComponents.ChartCircle();
+            this.chartHD = new WinformComponents.ChartCircle();
+            this.chartRAM = new WinformComponents.ChartCircle();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             this.SuspendLayout();
             // 
@@ -332,6 +332,30 @@
             this.pic_Divisor_001.TabIndex = 22;
             this.pic_Divisor_001.TabStop = false;
             // 
+            // lbl_ChartCPU
+            // 
+            this.lbl_ChartCPU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbl_ChartCPU.AutoSize = true;
+            this.lbl_ChartCPU.Location = new System.Drawing.Point(527, 324);
+            this.lbl_ChartCPU.Name = "lbl_ChartCPU";
+            this.lbl_ChartCPU.Size = new System.Drawing.Size(26, 13);
+            this.lbl_ChartCPU.TabIndex = 28;
+            this.lbl_ChartCPU.Text = "Cpu";
+            // 
+            // chartCPU
+            // 
+            this.chartCPU.Activated = true;
+            this.chartCPU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.chartCPU.CircleBackColor = System.Drawing.Color.LightGray;
+            this.chartCPU.CircleFillColor = System.Drawing.Color.Orange;
+            this.chartCPU.FillSize = 25;
+            this.chartCPU.Location = new System.Drawing.Point(504, 251);
+            this.chartCPU.Name = "chartCPU";
+            this.chartCPU.Size = new System.Drawing.Size(70, 70);
+            this.chartCPU.TabIndex = 25;
+            this.chartCPU.TextVisible = true;
+            this.chartCPU.Thickness = 10;
+            // 
             // chartHD
             // 
             this.chartHD.Activated = true;
@@ -359,30 +383,6 @@
             this.chartRAM.TabIndex = 23;
             this.chartRAM.TextVisible = true;
             this.chartRAM.Thickness = 10;
-            // 
-            // lbl_ChartCPU
-            // 
-            this.lbl_ChartCPU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lbl_ChartCPU.AutoSize = true;
-            this.lbl_ChartCPU.Location = new System.Drawing.Point(527, 324);
-            this.lbl_ChartCPU.Name = "lbl_ChartCPU";
-            this.lbl_ChartCPU.Size = new System.Drawing.Size(26, 13);
-            this.lbl_ChartCPU.TabIndex = 28;
-            this.lbl_ChartCPU.Text = "Cpu";
-            // 
-            // chartCPU
-            // 
-            this.chartCPU.Activated = true;
-            this.chartCPU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.chartCPU.CircleBackColor = System.Drawing.Color.LightGray;
-            this.chartCPU.CircleFillColor = System.Drawing.Color.Orange;
-            this.chartCPU.FillSize = 25;
-            this.chartCPU.Location = new System.Drawing.Point(504, 251);
-            this.chartCPU.Name = "chartCPU";
-            this.chartCPU.Size = new System.Drawing.Size(70, 70);
-            this.chartCPU.TabIndex = 25;
-            this.chartCPU.TextVisible = true;
-            this.chartCPU.Thickness = 10;
             // 
             // _BaseHardware
             // 
