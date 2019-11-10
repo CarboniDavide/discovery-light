@@ -308,19 +308,20 @@
             this.lbl_ChartRAM.AutoSize = true;
             this.lbl_ChartRAM.Location = new System.Drawing.Point(525, 104);
             this.lbl_ChartRAM.Name = "lbl_ChartRAM";
-            this.lbl_ChartRAM.Size = new System.Drawing.Size(29, 13);
+            this.lbl_ChartRAM.Size = new System.Drawing.Size(31, 13);
             this.lbl_ChartRAM.TabIndex = 26;
-            this.lbl_ChartRAM.Text = "Ram";
+            this.lbl_ChartRAM.Text = "RAM";
             // 
             // lbl_ChartHD
             // 
             this.lbl_ChartHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_ChartHD.AutoSize = true;
-            this.lbl_ChartHD.Location = new System.Drawing.Point(516, 211);
+            this.lbl_ChartHD.Location = new System.Drawing.Point(512, 211);
             this.lbl_ChartHD.Name = "lbl_ChartHD";
-            this.lbl_ChartHD.Size = new System.Drawing.Size(47, 13);
+            this.lbl_ChartHD.Size = new System.Drawing.Size(59, 13);
             this.lbl_ChartHD.TabIndex = 27;
-            this.lbl_ChartHD.Text = "Mémoire";
+            this.lbl_ChartHD.Text = "STORAGE";
+            this.lbl_ChartHD.Click += new System.EventHandler(this.lbl_ChartHD_Click);
             // 
             // pic_Divisor_001
             // 
@@ -336,11 +337,11 @@
             // 
             this.lbl_ChartCPU.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbl_ChartCPU.AutoSize = true;
-            this.lbl_ChartCPU.Location = new System.Drawing.Point(527, 324);
+            this.lbl_ChartCPU.Location = new System.Drawing.Point(525, 324);
             this.lbl_ChartCPU.Name = "lbl_ChartCPU";
-            this.lbl_ChartCPU.Size = new System.Drawing.Size(26, 13);
+            this.lbl_ChartCPU.Size = new System.Drawing.Size(29, 13);
             this.lbl_ChartCPU.TabIndex = 28;
-            this.lbl_ChartCPU.Text = "Cpu";
+            this.lbl_ChartCPU.Text = "CPU";
             // 
             // chartCPU
             // 

@@ -46,5 +46,9 @@ namespace DiscoveryLight.UI.Panels.Devices
             chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
         }
 
+        private void lbl_ChartHD_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
