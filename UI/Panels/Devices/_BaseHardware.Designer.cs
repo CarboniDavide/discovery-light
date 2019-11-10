@@ -68,7 +68,7 @@
             this.lbl_Model.Name = "lbl_Model";
             this.lbl_Model.Size = new System.Drawing.Size(150, 25);
             this.lbl_Model.TabIndex = 0;
-            this.lbl_Model.Text = "Modèle";
+            this.lbl_Model.Text = "Model";
             this.lbl_Model.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Manufacturer
@@ -79,7 +79,7 @@
             this.lbl_Manufacturer.Name = "lbl_Manufacturer";
             this.lbl_Manufacturer.Size = new System.Drawing.Size(150, 25);
             this.lbl_Manufacturer.TabIndex = 1;
-            this.lbl_Manufacturer.Text = "Fabricant";
+            this.lbl_Manufacturer.Text = "Manufaturer";
             this.lbl_Manufacturer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Type
@@ -101,7 +101,7 @@
             this.lbl_Name.Name = "lbl_Name";
             this.lbl_Name.Size = new System.Drawing.Size(150, 25);
             this.lbl_Name.TabIndex = 3;
-            this.lbl_Name.Text = "Nom";
+            this.lbl_Name.Text = "Name";
             this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_SystemOS
@@ -112,7 +112,7 @@
             this.lbl_SystemOS.Name = "lbl_SystemOS";
             this.lbl_SystemOS.Size = new System.Drawing.Size(150, 25);
             this.lbl_SystemOS.TabIndex = 4;
-            this.lbl_SystemOS.Text = "Système d\'exploitation";
+            this.lbl_SystemOS.Text = "OS";
             this.lbl_SystemOS.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Producer
@@ -123,7 +123,7 @@
             this.lbl_Producer.Name = "lbl_Producer";
             this.lbl_Producer.Size = new System.Drawing.Size(150, 25);
             this.lbl_Producer.TabIndex = 5;
-            this.lbl_Producer.Text = "Editeur";
+            this.lbl_Producer.Text = "Producer";
             this.lbl_Producer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_NumberID
@@ -134,7 +134,7 @@
             this.lbl_NumberID.Name = "lbl_NumberID";
             this.lbl_NumberID.Size = new System.Drawing.Size(150, 25);
             this.lbl_NumberID.TabIndex = 6;
-            this.lbl_NumberID.Text = "Numéro ID";
+            this.lbl_NumberID.Text = "ID Number";
             this.lbl_NumberID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Domain
@@ -167,7 +167,7 @@
             this.lbl_Architectur.Name = "lbl_Architectur";
             this.lbl_Architectur.Size = new System.Drawing.Size(150, 25);
             this.lbl_Architectur.TabIndex = 9;
-            this.lbl_Architectur.Text = "Architecture";
+            this.lbl_Architectur.Text = "Architectur";
             this.lbl_Architectur.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_User
@@ -178,7 +178,7 @@
             this.lbl_User.Name = "lbl_User";
             this.lbl_User.Size = new System.Drawing.Size(150, 25);
             this.lbl_User.TabIndex = 10;
-            this.lbl_User.Text = "Utilisateur";
+            this.lbl_User.Text = "User";
             this.lbl_User.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Name_Value
@@ -189,7 +189,7 @@
             this.lbl_Name_Value.Name = "lbl_Name_Value";
             this.lbl_Name_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Name_Value.TabIndex = 11;
-            this.lbl_Name_Value.Text = "Nom";
+            this.lbl_Name_Value.Text = "N/A";
             this.lbl_Name_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_NumberID_Value
@@ -200,7 +200,7 @@
             this.lbl_NumberID_Value.Name = "lbl_NumberID_Value";
             this.lbl_NumberID_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_NumberID_Value.TabIndex = 12;
-            this.lbl_NumberID_Value.Text = "Nom";
+            this.lbl_NumberID_Value.Text = "N/A";
             this.lbl_NumberID_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_User_Value
@@ -211,7 +211,7 @@
             this.lbl_User_Value.Name = "lbl_User_Value";
             this.lbl_User_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_User_Value.TabIndex = 13;
-            this.lbl_User_Value.Text = "Nom";
+            this.lbl_User_Value.Text = "N/A";
             this.lbl_User_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Domain_Value
@@ -222,7 +222,7 @@
             this.lbl_Domain_Value.Name = "lbl_Domain_Value";
             this.lbl_Domain_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Domain_Value.TabIndex = 14;
-            this.lbl_Domain_Value.Text = "Nom";
+            this.lbl_Domain_Value.Text = "N/A";
             this.lbl_Domain_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Version_Value
@@ -233,7 +233,7 @@
             this.lbl_Version_Value.Name = "lbl_Version_Value";
             this.lbl_Version_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Version_Value.TabIndex = 15;
-            this.lbl_Version_Value.Text = "Nom";
+            this.lbl_Version_Value.Text = "N/A";
             this.lbl_Version_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Architectur_Value
@@ -244,7 +244,7 @@
             this.lbl_Architectur_Value.Name = "lbl_Architectur_Value";
             this.lbl_Architectur_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Architectur_Value.TabIndex = 16;
-            this.lbl_Architectur_Value.Text = "Nom";
+            this.lbl_Architectur_Value.Text = "N/A";
             this.lbl_Architectur_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Model_Value
@@ -255,7 +255,7 @@
             this.lbl_Model_Value.Name = "lbl_Model_Value";
             this.lbl_Model_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Model_Value.TabIndex = 17;
-            this.lbl_Model_Value.Text = "Nom";
+            this.lbl_Model_Value.Text = "N/A";
             this.lbl_Model_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Manufaturer_Value
@@ -266,7 +266,7 @@
             this.lbl_Manufaturer_Value.Name = "lbl_Manufaturer_Value";
             this.lbl_Manufaturer_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Manufaturer_Value.TabIndex = 18;
-            this.lbl_Manufaturer_Value.Text = "Nom";
+            this.lbl_Manufaturer_Value.Text = "N/A";
             this.lbl_Manufaturer_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Type_Value
@@ -277,7 +277,7 @@
             this.lbl_Type_Value.Name = "lbl_Type_Value";
             this.lbl_Type_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Type_Value.TabIndex = 19;
-            this.lbl_Type_Value.Text = "Nom";
+            this.lbl_Type_Value.Text = "N/A";
             this.lbl_Type_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_SystemOS_Value
@@ -288,7 +288,7 @@
             this.lbl_SystemOS_Value.Name = "lbl_SystemOS_Value";
             this.lbl_SystemOS_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_SystemOS_Value.TabIndex = 20;
-            this.lbl_SystemOS_Value.Text = "Nom";
+            this.lbl_SystemOS_Value.Text = "N/A";
             this.lbl_SystemOS_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Producer_Value
@@ -299,7 +299,7 @@
             this.lbl_Producer_Value.Name = "lbl_Producer_Value";
             this.lbl_Producer_Value.Size = new System.Drawing.Size(250, 25);
             this.lbl_Producer_Value.TabIndex = 21;
-            this.lbl_Producer_Value.Text = "Nom";
+            this.lbl_Producer_Value.Text = "N/A";
             this.lbl_Producer_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_ChartRAM
