@@ -11,13 +11,11 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Video : Device
+    public partial class _Video : DevicePanel
     {
-        public _Video(): base(typeof(VIDEO))
+        public _Video(): base()
         {
             InitializeComponent();
         }
-
-        public override void LoadProperties() { }
     }
 }

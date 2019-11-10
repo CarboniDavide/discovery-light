@@ -8,19 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Device.Performance;
+using System.Threading;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _BaseHardware : Device
+    public partial class _BaseHardware : DevicePanel
     {
-        public _BaseHardware(): base(typeof(PC))
+        public _BaseHardware()
         {
             InitializeComponent();
-            this.LoadProperties();
+            this.InitProperties(typeof(PC));
+            this.InitPerformance(typeof(PERFORM_PC));
+            this.LoadPerformance();
         }
         
         public override void LoadProperties() {
-            var CurrentDevice = (DiscoveryLight.Core.Device.Data.PC)this.CurrentDevice;
+            var CurrentDevice = (PC)this.CurrentDevice;
             lbl_Name_Value.Text = CurrentDevice.Name;
             lbl_Type_Value.Text = CurrentDevice.Type;
             lbl_Manufaturer_Value.Text = CurrentDevice.Manufacturer;
@@ -32,6 +36,18 @@ namespace DiscoveryLight.UI.Panels.Devices
             lbl_SystemOS_Value.Text = CurrentDevice.SystemOS;
             lbl_Producer_Value.Text = CurrentDevice.SystemOS_Brand;
             lbl_Architectur_Value.Text = CurrentDevice.SystemOS_Architecture;
+        }
+
+        public override async void LoadPerformance()
+        {
+            var CurrentPerformance = (PERFORM_PC)this.CurrentPerformance;
+            while (true)
+            {
+                await Task.Run(() => CurrentPerformance.GetPerformance());
+                chartRAM.FillSize = (int)CurrentPerformance.Per_RamSizeUsed;
+                chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);
+                chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
+            }
         }
 
     }

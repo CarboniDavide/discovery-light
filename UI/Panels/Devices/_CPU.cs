@@ -11,13 +11,11 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _CPU : Device
+    public partial class _CPU : DevicePanel
     {
-        public _CPU() : base(typeof(CPU))
+        public _CPU() : base()
         {
             InitializeComponent();
         }
-
-        public override void LoadProperties() { }
     }
 }

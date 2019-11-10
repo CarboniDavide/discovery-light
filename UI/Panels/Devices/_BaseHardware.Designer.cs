@@ -351,7 +351,7 @@
             this.chartRAM.Activated = true;
             this.chartRAM.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.chartRAM.CircleBackColor = System.Drawing.Color.LightGray;
-            this.chartRAM.CircleFillColor = System.Drawing.Color.Blue;
+            this.chartRAM.CircleFillColor = System.Drawing.Color.RoyalBlue;
             this.chartRAM.FillSize = 25;
             this.chartRAM.Location = new System.Drawing.Point(504, 30);
             this.chartRAM.Name = "chartRAM";
@@ -384,7 +384,7 @@
             this.chartCPU.TextVisible = true;
             this.chartCPU.Thickness = 10;
             // 
-            // Panel_Pc
+            // _BaseHardware
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -417,12 +417,12 @@
             this.Controls.Add(this.lbl_Type);
             this.Controls.Add(this.lbl_Manufacturer);
             this.Controls.Add(this.lbl_Model);
-            this.Name = "Panel_Pc";
+            this.Name = "_BaseHardware";
             this.Size = new System.Drawing.Size(630, 360);
-            
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

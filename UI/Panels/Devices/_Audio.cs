@@ -11,13 +11,11 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Audio : Device
+    public partial class _Audio : DevicePanel
     {
-        public _Audio():base(typeof(AUDIO))
+        public _Audio():base()
         {
             InitializeComponent();
         }
-
-        public override void LoadProperties() { }
     }
 }

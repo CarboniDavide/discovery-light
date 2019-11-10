@@ -11,13 +11,11 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Storage : Device
+    public partial class _Storage : DevicePanel
     {
-        public _Storage(): base(typeof(DISK))
+        public _Storage(): base()
         {
             InitializeComponent();
         }
-
-        public override void LoadProperties() { }
     }
 }

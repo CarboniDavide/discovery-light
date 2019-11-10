@@ -11,13 +11,11 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Memory : Device
+    public partial class _Memory : DevicePanel
     {
-        public _Memory(): base(typeof(RAM))
+        public _Memory(): base()
         {
             InitializeComponent();
         }
-
-        public override void LoadProperties() { }
     }
 }
