@@ -44,10 +44,7 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_SCORE()
-        {
-            GetPerformance();
-        }
+        public PERFORM_SCORE() {}
     }
     #endregion
 
@@ -56,7 +53,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get usage for each selected cpu'thread
     /// </summary>
-    public class PERFORM_CPU
+    public class PERFORM_CPU: DevicePerformance
     {
         public struct Thread
         {
@@ -70,6 +67,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public void GetPerformance()
         {
+            if (this.selectedCpu == null) return;
             // create a list of thread for the selected cpu
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Counters_ProcessorInformation")){
 
@@ -98,8 +96,9 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             this.selectedCpu = cpu;
             this.Cpu = new List<Thread>();
-            GetPerformance();
         }
+
+        public PERFORM_CPU(){}
     }
 
     #endregion
@@ -109,7 +108,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get Threads and Process number that are running in background
     /// </summary>
-    public class PERFORM_SYSTEM
+    public class PERFORM_SYSTEM: DevicePerformance
     {
         public String Threads;
         public String Processes;
@@ -122,10 +121,7 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_SYSTEM()
-        {
-            GetPerformance();
-        }
+        public PERFORM_SYSTEM() {}
     }
 
     #endregion
@@ -157,10 +153,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 this.Per_CpuUsage = DeviceUtils.GetProperty("DPCRate", mj, DeviceUtils.ReturnType.UInt64);
         }
 
-        public PERFORM_PC()
-        {
-            this.GetPerformance();
-        }
+        public PERFORM_PC() {}
     }
 
     #endregion
@@ -198,10 +191,7 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_RAM()
-        {
-            this.GetPerformance();
-        }
+        public PERFORM_RAM() {}
 
     }
 
@@ -225,10 +215,10 @@ namespace DiscoveryLight.Core.Device.Performance
         public UInt64? Percent_DiskTime;
         public UInt64? Percent_IdleTime;
 
-        private int _driveIndex;
+        private int? _driveIndex;
         private string _driveName;
 
-        public int DriveIndex {
+        public int? DriveIndex {
             get { return _driveIndex; }
             set { _driveIndex = value; this.FindDrive(); }
         }
@@ -248,6 +238,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public void GetPerformance()
         {
+            if (this.DriveIndex == null) return;
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_PerfDisk_LogicalDisk"))
             {
                 String currentDriveName = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
@@ -269,19 +260,14 @@ namespace DiscoveryLight.Core.Device.Performance
         public PERFORM_DISK(int index)
         {
             this.DriveIndex = index;
-            this.GetPerformance();
         }
 
         public PERFORM_DISK(string driveName)
         {
             this._driveName = driveName;
-            this.GetPerformance();
         }
 
-        public PERFORM_DISK()
-        {
-            this.GetPerformance();
-        }
+        public PERFORM_DISK() {}
     }
 
     #endregion
@@ -291,7 +277,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get Network Performance
     /// </summary>
-    public class PERFORM_ETHERNET: DevicePerformance
+    public class PERFORM_NETWORK: DevicePerformance
     {
         public UInt64? ByteReceivedPerSec;
         public UInt64? BytesSentPerSec;
@@ -309,6 +295,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public void GetPerformance()
         {
+            if (this.selectedNetwork == null) return;
             UInt64? Den;
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Tcpip_NetworkAdapter", "Name", this.selectedNetwork, DeviceUtils.Operator.Egual))
             {
@@ -352,11 +339,12 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
         
-        public PERFORM_ETHERNET(string NetworkName)
+        public PERFORM_NETWORK(string NetworkName)
         {
                 this.selectedNetwork = NetworkName;
-                this.GetPerformance();
         }
+
+        public PERFORM_NETWORK() {}
 
     }
 
