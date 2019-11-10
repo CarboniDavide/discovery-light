@@ -55,10 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Device\Devices.cs" />
+    <Compile Include="Core\Device\Device.cs" />
     <Compile Include="Core\Device\DevicePerformance.cs" />
     <Compile Include="Core\Device\DeviceData.cs" />
     <Compile Include="Core\Device\DeviceUtils.cs" />
+    <Compile Include="Core\Device\PerformanceBase.cs" />
     <Compile Include="Core\Exception\Exceptions.cs" />
     <Compile Include="Logging\Looger.cs" />
     <Compile Include="Program.cs" />
@@ -123,8 +124,9 @@
     <Compile Include="UI\Panels\Devices\_CPU.Designer.cs">
       <DependentUpon>_CPU.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Devices\Device.cs" />
-    <Compile Include="UI\Panels\Devices\_HardwareComponentsCollections.cs" />
+    <Compile Include="UI\Panels\Devices\DevicePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI\Panels\Devices\_MainBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\SplachScreen\_SplachScreen.resx">
       <DependentUpon>_SplachScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_BaseHardware.resx">
+      <DependentUpon>_BaseHardware.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

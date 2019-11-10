@@ -4,7 +4,8 @@ using System.Windows.Forms;
 using DiscoveryLight.UI.Forms;
 using DiscoveryLight.UI.Forms.SplachScreen;
 using DiscoveryLight.UI.Forms.Main;
-using DiscoveryLight.Core.Devices;
+using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Device.Performance;
 
 namespace DiscoveryLight
 {
@@ -12,6 +13,7 @@ namespace DiscoveryLight
     static class Program
     {
         static public List<Device> Devices;
+        static public List<Performance> Performances;
 
         /// <summary>
         /// The main entry point for the application.

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight;
 using DiscoveryLight.Core.Device.Data;
-using DiscoveryLight.Core.Devices;
+using DiscoveryLight.Core.Device.Performance;
 
 namespace DiscoveryLight.UI.Forms.SplachScreen
 {
@@ -32,6 +32,7 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
         private async Task InitDevice()
         {
             Program.Devices = new List<Device>();
+            Program.Performances = new List<Performance>();
             Program.Devices.Add(new Device(new CPU()));
             Program.Devices.Add(new Device(new DISK()));
             Program.Devices.Add(new Device(new NETWORK()));
@@ -41,6 +42,13 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
             Program.Devices.Add(new Device(new BIOS()));
             Program.Devices.Add(new Device(new MAINBOARD()));
             Program.Devices.Add(new Device(new RAM()));
+            Program.Performances.Add(new Performance(new PERFORM_CPU(null)));
+            Program.Performances.Add(new Performance(new PERFORM_DISK()));
+            Program.Performances.Add(new Performance(new PERFORM_NETWORK(null)));
+            Program.Performances.Add(new Performance(new PERFORM_PC()));
+            Program.Performances.Add(new Performance(new PERFORM_RAM()));
+            Program.Performances.Add(new Performance(new PERFORM_SCORE()));
+            Program.Performances.Add(new Performance(new PERFORM_SYSTEM()));
         }
 
         private async Task loadDevice()
@@ -56,3 +64,4 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
         }
     }
 }
+
