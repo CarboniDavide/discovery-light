@@ -20,10 +20,10 @@ namespace DiscoveryLight.UI.Panels.Devices
             InitializeComponent();
             this.InitProperties(typeof(PC));
             this.InitPerformance(typeof(PERFORM_PC));
-            this.LoadPerformance();
+            this.Start();
         }
         
-        public override void LoadProperties() {
+        public override void ShowProperties() {
             var CurrentDevice = (PC)this.CurrentDevice;
             lbl_Name_Value.Text = CurrentDevice.Name;
             lbl_Type_Value.Text = CurrentDevice.Type;
@@ -38,16 +38,12 @@ namespace DiscoveryLight.UI.Panels.Devices
             lbl_Architectur_Value.Text = CurrentDevice.SystemOS_Architecture;
         }
 
-        public override async void LoadPerformance()
+        public override void ShowPerformance()
         {
             var CurrentPerformance = (PERFORM_PC)this.CurrentPerformance;
-            while (true)
-            {
-                await Task.Run(() => CurrentPerformance.GetPerformance());
-                chartRAM.FillSize = (int)CurrentPerformance.Per_RamSizeUsed;
-                chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);
-                chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
-            }
+            chartRAM.FillSize = (int)CurrentPerformance.Per_RamSizeUsed;
+            chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);
+            chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
         }
 
     }
