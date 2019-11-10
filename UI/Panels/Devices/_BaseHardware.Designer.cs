@@ -321,7 +321,6 @@
             this.lbl_ChartHD.Size = new System.Drawing.Size(59, 13);
             this.lbl_ChartHD.TabIndex = 27;
             this.lbl_ChartHD.Text = "STORAGE";
-            this.lbl_ChartHD.Click += new System.EventHandler(this.lbl_ChartHD_Click);
             // 
             // pic_Divisor_001
             // 

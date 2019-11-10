@@ -45,10 +45,5 @@ namespace DiscoveryLight.UI.Panels.Devices
             chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);
             chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
         }
-
-        private void lbl_ChartHD_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
