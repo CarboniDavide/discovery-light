@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Data;
 
-namespace DiscoveryLight.Core.Devices
+namespace DiscoveryLight.Core.Device.Data
 {
 
     public class Device
