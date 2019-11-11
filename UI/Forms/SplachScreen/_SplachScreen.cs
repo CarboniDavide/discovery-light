@@ -42,7 +42,7 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
             Program.Devices.Add(new Device(new BIOS()));
             Program.Devices.Add(new Device(new MAINBOARD()));
             Program.Devices.Add(new Device(new RAM()));
-            Program.Performances.Add(new Performance(new PERFORM_CPU(null)));
+            Program.Performances.Add(new Performance(new PERFORM_CPU(null, null)));
             Program.Performances.Add(new Performance(new PERFORM_DISK()));
             Program.Performances.Add(new Performance(new PERFORM_NETWORK(null)));
             Program.Performances.Add(new Performance(new PERFORM_PC()));
