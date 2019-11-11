@@ -189,6 +189,9 @@
     <EmbeddedResource Include="UI\Panels\Devices\_BaseHardware.resx">
       <DependentUpon>_BaseHardware.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_CPU.resx">
+      <DependentUpon>_CPU.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
