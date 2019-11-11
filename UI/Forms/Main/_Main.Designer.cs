@@ -72,6 +72,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.Controls.Add(this.DeviceContainer);
             this.Controls.Add(this.FooterBar);
             this.Controls.Add(this.NavigationBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "_Main";
