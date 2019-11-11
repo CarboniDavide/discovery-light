@@ -155,7 +155,6 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
-            if (CurrentSubDevice == null) return;
             this.ChargeListOfSubDevicesInit();
             this.cmb_Blocks.SelectedIndex = 0;
         }
