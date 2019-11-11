@@ -46,6 +46,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         }
         public override void InitProperties(Type DeviceType) {
             this.CurrentDevice = this.GetDevice(DeviceType);
+            if (this.CurrentDevice.Blocks.Count == 0) return;
             this.CurrentSubDevice = this.CurrentDevice.Blocks.First();
         }
         public override void InitPerformance(List<Type> PerformancesTypes) {
