@@ -19,7 +19,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.InitProperties(typeof(PC));
-            this.InitPerformance(typeof(PERFORM_PC));
+            this.InitPerformance(new List<Type>() { typeof(PERFORM_PC) });
             this.Start();
         }
         
@@ -40,7 +40,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         public override void ShowPerformance()
         {
-            var CurrentPerformance = (PERFORM_PC)this.CurrentPerformance;
+            var CurrentPerformance = (PERFORM_PC)this.CurrentPerformances[0];
             chartRAM.FillSize = (int)CurrentPerformance.Per_RamSizeUsed;
             chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);
             chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
