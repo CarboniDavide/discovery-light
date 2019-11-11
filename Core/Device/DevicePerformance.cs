@@ -57,45 +57,49 @@ namespace DiscoveryLight.Core.Device.Performance
     {
         public struct Thread
         {
-            public UInt64? DPCRate;
+            public String DPCRate;
             public String Name;
-            public UInt64? Frequency;
+            public String Frequency;
         }
 
-        public List<Thread> Cpu;                 // Cpu list of thread
-        private string selectedCpu;       
+        public List<Thread> Cpu = new List<Thread>();                 // Cpu list of thread
+        private string selectedCpu;
+        private string selectedThread;
 
+        public string SelectedCpu
+        {
+            get { return selectedCpu; }
+            set { selectedCpu = value; this.MakeName(); }
+        }
+        public string SelectedThread {
+            get { return selectedThread; }
+            set { selectedThread = value; this.MakeName(); }
+        }
+
+        public string MakeName() {
+            return (this.selectedCpu != null && this.selectedThread != null) ? this.selectedCpu + "," + this.selectedThread : null;
+        }
         public void GetPerformance()
         {
             if (this.selectedCpu == null) return;
+            this.Cpu = new List<Thread>();
             // create a list of thread for the selected cpu
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Counters_ProcessorInformation")){
-
-                // get cpu thread values
-                if (DeviceUtils.GetProperty("Timestamp_Object", mj, DeviceUtils.ReturnType.String)[0].Equals(this.selectedCpu)){
-                    Thread t = new Thread();                                             // create a new Thread
+                if (DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String).Substring(0, 1).Equals(this.selectedCpu))
+                {
+                    Thread t = new Thread();                                                                        // create a new Thread
                     t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);                    // get thread name
-                    t.DPCRate = DeviceUtils.GetProperty("DPCRate", mj, DeviceUtils.ReturnType.UInt64);              // get thread dpcreate value 
-                    t.Frequency = DeviceUtils.GetProperty("ProcessorFrequency", mj, DeviceUtils.ReturnType.UInt64); // get speed
-                    this.Cpu.Add(t);                                                     // add in list
-                }
-
-                // get total cpu values
-                if (DeviceUtils.GetProperty("Timestamp_Object", mj, DeviceUtils.ReturnType.String).Equals("_Total") && this.selectedCpu.Equals("Total")) {
-                    Thread t = new Thread();                                             // create a new Thread
-                    t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);                    // get thread name
-                    t.DPCRate = DeviceUtils.GetProperty("DPCRate", mj, DeviceUtils.ReturnType.UInt64);              // get thread dpcreate value 
+                    t.DPCRate = DeviceUtils.GetProperty("DPCRate", mj, DeviceUtils.ReturnType.String);              // get thread dpcreate value 
                     t.Frequency = DeviceUtils.GetProperty("ProcessorFrequency", mj, DeviceUtils.ReturnType.String); // get speed
-                    this.Cpu.Add(t);                                                     // add in list
+                    this.Cpu.Add(t);
                 }
             }
-
         }
 
-        public PERFORM_CPU(string cpu)
+        public PERFORM_CPU(string cpu, string thread)
         {
-            this.selectedCpu = cpu;
-            this.Cpu = new List<Thread>();
+            this.SelectedCpu = cpu;
+            this.SelectedThread = thread;
         }
 
         public PERFORM_CPU(){}
@@ -117,7 +121,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_System")){
                 this.Threads = DeviceUtils.GetProperty("Threads", mj, DeviceUtils.ReturnType.String);
-                this.Threads = DeviceUtils.GetProperty("Processes", mj, DeviceUtils.ReturnType.String);
+                this.Processes = DeviceUtils.GetProperty("Processes", mj, DeviceUtils.ReturnType.String);
             }
         }
 
