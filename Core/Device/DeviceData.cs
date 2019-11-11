@@ -304,7 +304,7 @@ namespace DiscoveryLight.Core.Device.Data
             {
                 this.Block[index] = new BLOCK();
                 this.Block[index].ProcessorID = DeviceUtils.GetProperty("ProcessorId", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String);
+                this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String).Substring(3, 1); ;
                 this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].AddressSize = DeviceUtils.GetProperty("AddressWidth", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Description = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
