@@ -12,9 +12,14 @@ namespace DiscoveryLight.Core.Device.Data
     /// Declare base class structure
     /// </summary>
     /// 
-    public interface DeviceData
+    public abstract class DeviceData
     {
-       void GetDriveInfo();
+        public class _Block
+        {
+            public String DeviceID;
+            public String Name;
+        }
+        public abstract void GetDriveInfo();
     }
 
     #endregion
@@ -39,7 +44,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String SystemOS_Architecture;
         public String RamSize;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // get drive info
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_ComputerSystem"))
@@ -84,7 +89,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String Version;
         public String ReleaseData;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // Get all drive info
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_BIOS"))
@@ -118,7 +123,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String SecondaryBus_Value;
         public String NumberSlot;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_BaseBoard")) // Read data
             {
@@ -152,7 +157,7 @@ namespace DiscoveryLight.Core.Device.Data
     public class VIDEO: DeviceData
     {
         public int BlockNumber = 0;
-        public struct BLOCK
+        public class BLOCK: _Block
         {
             public String Name;
             public String Manufacturer;
@@ -171,7 +176,7 @@ namespace DiscoveryLight.Core.Device.Data
         private List<ManagementObject> collection;
         public BLOCK[] Block;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // get drive info
             collection = DeviceUtils.GetDriveInfo("Win32_VideoController");
@@ -219,7 +224,7 @@ namespace DiscoveryLight.Core.Device.Data
     public class AUDIO: DeviceData
     {
         public int BlockNumber = 0;
-        public struct BLOCK
+        public class BLOCK: _Block
         {
             public String Name;
             public String Manufacturer;
@@ -229,7 +234,7 @@ namespace DiscoveryLight.Core.Device.Data
         private List<ManagementObject> collection;
         public BLOCK[] Block;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // get drive info
             collection = DeviceUtils.GetDriveInfo("Win32_SoundDevice");
@@ -268,11 +273,9 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public int BlockNumber = 0;
 
-        public struct BLOCK
+        public class BLOCK: _Block
         {
-            public String DeviceID;
             public String ProcessorID;
-            public String Name;
             public String AddressSize;
             public String Description;
             public String Manufacturer;
@@ -289,7 +292,7 @@ namespace DiscoveryLight.Core.Device.Data
         private List<ManagementObject> collection;
         public BLOCK[] Block;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // get drive info
             collection = DeviceUtils.GetDriveInfo("Win32_Processor");
@@ -304,7 +307,7 @@ namespace DiscoveryLight.Core.Device.Data
             {
                 this.Block[index] = new BLOCK();
                 this.Block[index].ProcessorID = DeviceUtils.GetProperty("ProcessorId", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String).Substring(3, 1); ;
+                this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String).Substring(3, 1);
                 this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].AddressSize = DeviceUtils.GetProperty("AddressWidth", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Description = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
@@ -338,7 +341,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class RAM: DeviceData
     {
-        public struct BLOCK
+        public class BLOCK: _Block
         {
             public String Value;
             public String Location;
@@ -357,7 +360,7 @@ namespace DiscoveryLight.Core.Device.Data
         private List<ManagementObject> collection;
         public BLOCK[] Block;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // get drive info
             collection = DeviceUtils.GetDriveInfo("Win32_PhysicalMemory");
@@ -373,6 +376,8 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (ManagementObject mj in collection)
             {
                 this.Block[index] = new BLOCK();
+                this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                this.Block[index].DeviceID = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String).Substring(5,1);
                 this.Block[index].Value = DeviceUtils.GetProperty("Capacity", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Location = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Slot = DeviceUtils.GetProperty("DeviceLocator", mj, DeviceUtils.ReturnType.String);
@@ -413,11 +418,9 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class DISK: DeviceData
     {
-        public struct BLOCK
+        public class BLOCK: _Block
         {
             public String DriveName;
-            public String Index;
-            public String Name;
             public String MediaType;
             public String Intreface;
             public String Size;
@@ -448,7 +451,7 @@ namespace DiscoveryLight.Core.Device.Data
             return null;
         }
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // get drive info
             collection = DeviceUtils.GetDriveInfo("Win32_DiskDrive");
@@ -464,8 +467,8 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (ManagementObject mj in collection)
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Index = DeviceUtils.GetProperty("Index", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].DriveName = this.FindDriveName(this.Block[index].Index);
+                this.Block[index].DeviceID = DeviceUtils.GetProperty("Index", mj, DeviceUtils.ReturnType.String);
+                this.Block[index].DriveName = this.FindDriveName(this.Block[index].DeviceID);
                 this.Block[index].Name = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].MediaType = DeviceUtils.GetProperty("MediaType", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Intreface = DeviceUtils.GetProperty("InterfaceType", mj, DeviceUtils.ReturnType.String);
@@ -498,12 +501,9 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class NETWORK: DeviceData
     {
-        public struct BLOCK
+        public class BLOCK: _Block
         {
-            public String Index;
-            public String DeviceID;
             public String InterfaceIndex;
-            public String Name;
             public String Description;
             public String Type;
             public String Manufacturer;
@@ -515,7 +515,7 @@ namespace DiscoveryLight.Core.Device.Data
         private List<ManagementObject> collection;
         public BLOCK[] Block;
 
-        public void GetDriveInfo()
+        public override void GetDriveInfo()
         {
             // get drive info
             collection = DeviceUtils.GetDriveInfo("Win32_NetworkAdapter", "MACAddress", null, DeviceUtils.Operator.NotEgual);
@@ -531,7 +531,6 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (ManagementObject mj in collection)
             {
                 this.Block[index] = new BLOCK();
-                this.Block[index].Index = DeviceUtils.GetProperty("Index", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].InterfaceIndex = DeviceUtils.GetProperty("InterfaceIndex", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
