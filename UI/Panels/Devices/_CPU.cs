@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Performance;
+using WinformComponents;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
@@ -22,9 +23,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             this.InitSubDevicesID();
             this.Start();
         }
-
-        WinformComponents.ChartBar[] Charts;
-        Label[] CpuId;
 
         public override void ShowProperties()
         {
@@ -55,9 +53,12 @@ namespace DiscoveryLight.UI.Panels.Devices
             lbl_CpuUsage_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.MakeName()).First().Frequency + " Mhz";
             //Graphique ronde
             chartCpuUsage.FillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.MakeName()).First().DPCRate);
-            var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
-            for (int i = 0; i < Convert.ToUInt16(CurrentSubDevice.N_Thread); i++)
-                Charts[i].BarFillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + i).First().DPCRate);
+            int i = 0;
+            foreach (WinformComponents.ChartBar ctrl in pnl_Threads.Controls.Find(typeof(WinformComponents.ChartBar).ToString(), false))
+            {
+                ctrl.BarFillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + i).First().DPCRate);
+                i++;
+            }
         }
 
         private void GraphComponents_Add()
@@ -70,16 +71,11 @@ namespace DiscoveryLight.UI.Panels.Devices
             var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
             // Création et insertion des élements grapique 
 
-            // Tableau des grapiques rondes
-            Charts = new WinformComponents.ChartBar[Convert.ToInt16(CurrentSubDevice.N_Thread)];
-            // Tableau des graphique à barre
-            CpuId = new Label[Convert.ToInt16(CurrentSubDevice.N_Thread)];
-
             // Calcul de l'épessuer entré les graphique à barre
-            Step = 160 / (Convert.ToInt16(CurrentSubDevice.N_Thread));
+            Step = pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.N_Thread));
 
             // Calcul de l'hauteur du caques graphique à barre
-            BarSize = Convert.ToInt16(160 / (Convert.ToInt16(CurrentSubDevice.N_Thread)) / 1.6);
+            BarSize = Convert.ToInt16(pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.N_Thread)) / 1.6);
 
             TextSize = BarSize / 2;
 
@@ -87,36 +83,33 @@ namespace DiscoveryLight.UI.Panels.Devices
                 TextSize = 14;
 
             // Poistion de départ
-            BarPosition = 190;
+            BarPosition = 0;
 
             for (int i = 0; i < Convert.ToInt16(CurrentSubDevice.N_Thread); i++)
             {
-                // Création du graphique à barre 
-                Charts[i] = new WinformComponents.ChartBar();
-                // Création du label
-                CpuId[i] = new Label();
+                WinformComponents.ChartBar chart = new WinformComponents.ChartBar();
+                Label label = new Label();
 
-                // Réglges du graphique
-                Charts[i].Activated = true;
-                Charts[i].BarBackColor = System.Drawing.Color.LightGray;
-                Charts[i].BarFillColor = System.Drawing.Color.LightSeaGreen;
-                Charts[i].BarFillSize = 25;
-                Charts[i].Location = new System.Drawing.Point(370, BarPosition);
-                Charts[i].Size = new System.Drawing.Size(190, BarSize);
-                Charts[i].Style = WinformComponents.ChartBar.STYLE.Horizontal;
-                Charts[i].TextColor = System.Drawing.Color.White;
-                Charts[i].TextVisible = true;
-                // Régalges du label
-                //LabelPosition = 190 + ()
-                CpuId[i].Font = new System.Drawing.Font("Microsoft Sans Serif", TextSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                CpuId[i].Location = new System.Drawing.Point(370 + Charts[i].Width + 3, BarPosition);
-                CpuId[i].Size = new System.Drawing.Size(100, BarSize);
-                CpuId[i].Text = "TH " + i;
-                CpuId[i].TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+                chart.Activated = true;
+                chart.BarBackColor = System.Drawing.Color.LightGray;
+                chart.BarFillColor = System.Drawing.Color.LightSeaGreen;
+                chart.BarFillSize = 25;
+                chart.Location = new System.Drawing.Point(10, BarPosition);
+                chart.Size = new System.Drawing.Size(190, BarSize);
+                chart.Style = WinformComponents.ChartBar.STYLE.Horizontal;
+                chart.TextColor = System.Drawing.Color.White;
+                chart.TextVisible = true;
+                chart.Name = typeof(WinformComponents.ChartBar).ToString();
+
+                label.Font = new System.Drawing.Font("Microsoft Sans Serif", TextSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                label.Location = new System.Drawing.Point(chart.Width + 15, BarPosition);
+                label.Size = new System.Drawing.Size(100, BarSize);
+                label.Text = "TH " + i;
+                label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
                 // Insertion dans le panneau
-                this.Controls.Add(Charts[i]);
-                this.Controls.Add(CpuId[i]);
+                this.pnl_Threads.Controls.Add(chart);
+                this.pnl_Threads.Controls.Add(label);
 
                 //Mis à jour de la position
                 BarPosition = BarPosition + Step;
@@ -125,17 +118,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void Clear()
         {
-            // Suppression des élements graphique et des label dans le panneau
-
-            var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
-            for (int i = 0; i < Convert.ToInt16(CurrentSubDevice.N_Thread); i++)
-            {
-                if (Charts != null && CpuId != null)
-                {
-                    this.Controls.Remove(Charts[i]);
-                    this.Controls.Remove(CpuId[i]);
-                }
-            }
+            this.pnl_Threads.Controls.Clear();
         }
 
         private void ChargeListOfSubDevicesInit()

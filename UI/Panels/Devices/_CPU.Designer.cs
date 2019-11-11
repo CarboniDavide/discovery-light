@@ -61,6 +61,7 @@
             this.lbl_Threads_Value = new System.Windows.Forms.Label();
             this.lbl_CpuUsage_Value = new System.Windows.Forms.Label();
             this.lbl_CpuUsage = new System.Windows.Forms.Label();
+            this.pnl_Threads = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             this.SuspendLayout();
@@ -423,10 +424,18 @@
             this.lbl_CpuUsage.TabIndex = 74;
             this.lbl_CpuUsage.Text = "Utilisée";
             // 
+            // pnl_Threads
+            // 
+            this.pnl_Threads.Location = new System.Drawing.Point(356, 191);
+            this.pnl_Threads.Name = "pnl_Threads";
+            this.pnl_Threads.Size = new System.Drawing.Size(267, 160);
+            this.pnl_Threads.TabIndex = 79;
+            // 
             // _CPU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pnl_Threads);
             this.Controls.Add(this.lbl_CpuUsage_Value);
             this.Controls.Add(this.lbl_Threads_Value);
             this.Controls.Add(this.lbl_Process_Value);
@@ -504,5 +513,6 @@
         private System.Windows.Forms.Label lbl_Threads_Value;
         private System.Windows.Forms.Label lbl_CpuUsage_Value;
         private System.Windows.Forms.Label lbl_CpuUsage;
+        private System.Windows.Forms.Panel pnl_Threads;
     }
 }
