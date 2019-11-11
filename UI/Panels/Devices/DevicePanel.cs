@@ -25,12 +25,16 @@ namespace DiscoveryLight.UI.Panels.Devices
         private CancellationTokenSource tokenSource;
         private CancellationToken token;
         private TimeSpan period;
-        
+        private String currentSubDeviceName;
+        private Int32 currentSubDeviceID;
+
         public DeviceData CurrentDevice { get => currentDevice; set => currentDevice = value; }
         public List<DevicePerformance> CurrentPerformances { get => currentPerformances; set => currentPerformances = value; }
         public CancellationTokenSource TokenSource { get => tokenSource; set => tokenSource = value; }
         public CancellationToken Token { get => token; set => token = value; }
         public TimeSpan Period { get => period; set => period = value; }
+        public String CurrentSubDeviceName { get => currentSubDeviceName; set => currentSubDeviceName = value; }
+        public Int32 CurrentSubDeviceID { get => currentSubDeviceID; set => currentSubDeviceID = value; }
 
         public DeviceData GetDevice(Type type){
             return Program.Devices.Where(d => d.Properties.GetType() == type).First().Properties;
