@@ -270,6 +270,8 @@ namespace DiscoveryLight.Core.Device.Data
 
         public struct BLOCK
         {
+            public String DeviceID;
+            public String ProcessorID;
             public String Name;
             public String AddressSize;
             public String Description;
@@ -301,6 +303,8 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (ManagementObject mj in collection) // Read data
             {
                 this.Block[index] = new BLOCK();
+                this.Block[index].ProcessorID = DeviceUtils.GetProperty("ProcessorId", mj, DeviceUtils.ReturnType.String);
+                this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].AddressSize = DeviceUtils.GetProperty("AddressWidth", mj, DeviceUtils.ReturnType.String);
                 this.Block[index].Description = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
