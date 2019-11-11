@@ -20,7 +20,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String Name;
         }
 
-        public List<_Block> Blocks;
+        public List<_Block> Blocks = new List<_Block>();
         public int BlockNumber = 0;
         public abstract void GetDriveInfo();
     }
