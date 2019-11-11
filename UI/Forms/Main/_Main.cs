@@ -21,7 +21,7 @@ namespace DiscoveryLight.UI.Forms.Main
 
         private void LoadFirstDevice()
         {
-            this.DeviceContainer.Controls.Add(new _BaseHardware());
+            this.DeviceContainer.Controls.Add(new _CPU());
         }
     }
 }
