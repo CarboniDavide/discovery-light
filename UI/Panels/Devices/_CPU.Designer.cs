@@ -307,6 +307,7 @@
             this.cmb_Blocks.Name = "cmb_Blocks";
             this.cmb_Blocks.Size = new System.Drawing.Size(252, 21);
             this.cmb_Blocks.TabIndex = 67;
+            this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             // 
             // lbl_L1CacheSize
             // 
@@ -422,7 +423,7 @@
             this.lbl_CpuUsage.TabIndex = 74;
             this.lbl_CpuUsage.Text = "Utilisée";
             // 
-            // Panel_Cpu
+            // _CPU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -459,12 +460,13 @@
             this.Controls.Add(this.lbl_Producteur);
             this.Controls.Add(this.lbl_Description);
             this.Controls.Add(this.lbl_Size);
-            this.Name = "Panel_Cpu";
+            this.Name = "_CPU";
             this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
