@@ -25,16 +25,14 @@ namespace DiscoveryLight.UI.Panels.Devices
         private CancellationTokenSource tokenSource;
         private CancellationToken token;
         private TimeSpan period;
-        private String currentSubDeviceName;
-        private Int32 currentSubDeviceID;
+        private DeviceData. _Block currentSubDevice;
 
         public DeviceData CurrentDevice { get => currentDevice; set => currentDevice = value; }
         public List<DevicePerformance> CurrentPerformances { get => currentPerformances; set => currentPerformances = value; }
         public CancellationTokenSource TokenSource { get => tokenSource; set => tokenSource = value; }
         public CancellationToken Token { get => token; set => token = value; }
         public TimeSpan Period { get => period; set => period = value; }
-        public String CurrentSubDeviceName { get => currentSubDeviceName; set => currentSubDeviceName = value; }
-        public Int32 CurrentSubDeviceID { get => currentSubDeviceID; set => currentSubDeviceID = value; }
+        public DeviceData._Block CurrentSubDevice { get => currentSubDevice; set => currentSubDevice = value; }
 
         public DeviceData GetDevice(Type type){
             return Program.Devices.Where(d => d.Properties.GetType() == type).First().Properties;
@@ -46,8 +44,9 @@ namespace DiscoveryLight.UI.Panels.Devices
                 mm.Add(Program.Performances.Where(d => d.Properties.GetType() == deviceType).First().Properties);
             return mm;
         }
-        public override void InitProperties(Type type) {
-            this.CurrentDevice = this.GetDevice(type);
+        public override void InitProperties(Type DeviceType) {
+            this.CurrentDevice = this.GetDevice(DeviceType);
+            this.CurrentSubDevice = this.CurrentDevice.Blocks.First();
         }
         public override void InitPerformance(List<Type> PerformancesTypes) {
             this.CurrentPerformances = this.GetPerformance(PerformancesTypes);

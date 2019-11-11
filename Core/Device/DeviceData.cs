@@ -19,6 +19,9 @@ namespace DiscoveryLight.Core.Device.Data
             public String DeviceID;
             public String Name;
         }
+
+        public List<_Block> Blocks;
+        public int BlockNumber = 0;
         public abstract void GetDriveInfo();
     }
 
@@ -156,10 +159,8 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class VIDEO: DeviceData
     {
-        public int BlockNumber = 0;
-        public class BLOCK: _Block
+        public class Block: _Block
         {
-            public String Name;
             public String Manufacturer;
             public String AdpterType;
             public String MemorySize;
@@ -174,7 +175,6 @@ namespace DiscoveryLight.Core.Device.Data
         }
 
         private List<ManagementObject> collection;
-        public BLOCK[] Block;
 
         public override void GetDriveInfo()
         {
@@ -183,28 +183,26 @@ namespace DiscoveryLight.Core.Device.Data
             // count number of drive
             BlockNumber = collection.Count;
             // initialize array to contains each drive info
-            Block = new BLOCK[BlockNumber]; 
-
-            int index = 0;
+            Blocks = new List<_Block>();
 
             // get and write values
             foreach (ManagementObject mj in collection) // Read data
             {
-                this.Block[index] = new BLOCK();
-                this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Manufacturer = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].AdpterType = DeviceUtils.GetProperty("AdapterCompatibility", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].MemorySize = DeviceUtils.GetProperty("AdapterRAM", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].NowBitsPerPixel = DeviceUtils.GetProperty("CurrentBitsPerPixel", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].NowHorizResolution = DeviceUtils.GetProperty("CurrentHorizontalResolution", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].NowVertResolution = DeviceUtils.GetProperty("CurrentVerticalResolution", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].NowRefreshRate = DeviceUtils.GetProperty("CurrentRefreshRate", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].MaxRefreshRate = DeviceUtils.GetProperty("MaxRefreshRate", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].MinRefreshRate = DeviceUtils.GetProperty("MinRefreshRate", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].NowNumberOfColors = DeviceUtils.GetProperty("CurrentNumberOfColors", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Mode = DeviceUtils.GetProperty("VideoModeDescription", mj, DeviceUtils.ReturnType.String);
+                var t = new Block();
+                t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                t.Manufacturer = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
+                t.AdpterType = DeviceUtils.GetProperty("AdapterCompatibility", mj, DeviceUtils.ReturnType.String);
+                t.MemorySize = DeviceUtils.GetProperty("AdapterRAM", mj, DeviceUtils.ReturnType.String);
+                t.NowBitsPerPixel = DeviceUtils.GetProperty("CurrentBitsPerPixel", mj, DeviceUtils.ReturnType.String);
+                t.NowHorizResolution = DeviceUtils.GetProperty("CurrentHorizontalResolution", mj, DeviceUtils.ReturnType.String);
+                t.NowVertResolution = DeviceUtils.GetProperty("CurrentVerticalResolution", mj, DeviceUtils.ReturnType.String);
+                t.NowRefreshRate = DeviceUtils.GetProperty("CurrentRefreshRate", mj, DeviceUtils.ReturnType.String);
+                t.MaxRefreshRate = DeviceUtils.GetProperty("MaxRefreshRate", mj, DeviceUtils.ReturnType.String);
+                t.MinRefreshRate = DeviceUtils.GetProperty("MinRefreshRate", mj, DeviceUtils.ReturnType.String);
+                t.NowNumberOfColors = DeviceUtils.GetProperty("CurrentNumberOfColors", mj, DeviceUtils.ReturnType.String);
+                t.Mode = DeviceUtils.GetProperty("VideoModeDescription", mj, DeviceUtils.ReturnType.String);
 
-                index++;
+                Blocks.Add(t);
             }
         }
 
@@ -223,16 +221,13 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class AUDIO: DeviceData
     {
-        public int BlockNumber = 0;
-        public class BLOCK: _Block
+        public class Block: _Block
         {
-            public String Name;
             public String Manufacturer;
             public String PowerManagmentSupport;
         }
 
         private List<ManagementObject> collection;
-        public BLOCK[] Block;
 
         public override void GetDriveInfo()
         {
@@ -241,18 +236,15 @@ namespace DiscoveryLight.Core.Device.Data
             // count number of drive
             BlockNumber = collection.Count;
             // initialize array to contains each drive info
-            Block = new BLOCK[BlockNumber];
-
-            int index = 0;
+            Blocks = new List<_Block>();
 
             foreach (ManagementObject mj in collection)
             {
-                this.Block[index] = new BLOCK();
-                this.Block[index].Name = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].PowerManagmentSupport = DeviceUtils.GetProperty("PowerManagementSupported", mj, DeviceUtils.ReturnType.String);
-
-                index++;
+                var t = new Block();
+                t.Name = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
+                t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
+                t.PowerManagmentSupport = DeviceUtils.GetProperty("PowerManagementSupported", mj, DeviceUtils.ReturnType.String);
+                Blocks.Add(t);
             }
         }
 
@@ -271,9 +263,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class CPU: DeviceData
     {
-        public int BlockNumber = 0;
-
-        public class BLOCK: _Block
+        public class Block: _Block
         {
             public String ProcessorID;
             public String AddressSize;
@@ -290,8 +280,6 @@ namespace DiscoveryLight.Core.Device.Data
         }
 
         private List<ManagementObject> collection;
-        public BLOCK[] Block;
-
         public override void GetDriveInfo()
         {
             // get drive info
@@ -299,29 +287,27 @@ namespace DiscoveryLight.Core.Device.Data
             // count number of drive
             BlockNumber = collection.Count;
             // initialize array to contains each drive info
-            Block = new BLOCK[BlockNumber];
-
-            int index = 0;
+            Blocks = new List<_Block>();
 
             foreach (ManagementObject mj in collection) // Read data
             {
-                this.Block[index] = new BLOCK();
-                this.Block[index].ProcessorID = DeviceUtils.GetProperty("ProcessorId", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String).Substring(3, 1);
-                this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].AddressSize = DeviceUtils.GetProperty("AddressWidth", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Description = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Revision = DeviceUtils.GetProperty("Revision", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Socket = DeviceUtils.GetProperty("SocketDesignation", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].N_Core = DeviceUtils.GetProperty("NumberOfCores", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].N_Thread = DeviceUtils.GetProperty("NumberOfLogicalProcessors", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].MaxSpeed = DeviceUtils.GetProperty("MaxClockSpeed", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].L1_Cache = (Convert.ToInt16(DeviceUtils.GetProperty("L2CacheSize", mj, DeviceUtils.ReturnType.String)) / 4).ToString();
-                this.Block[index].L2_Cache = DeviceUtils.GetProperty("L2CacheSize", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].L3_Cache = DeviceUtils.GetProperty("L3CacheSize", mj, DeviceUtils.ReturnType.String);
+                var t = new Block();
+                t.ProcessorID = DeviceUtils.GetProperty("ProcessorId", mj, DeviceUtils.ReturnType.String);
+                t.DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String).Substring(3, 1);
+                t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                t.AddressSize = DeviceUtils.GetProperty("AddressWidth", mj, DeviceUtils.ReturnType.String);
+                t.Description = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
+                t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
+                t.Revision = DeviceUtils.GetProperty("Revision", mj, DeviceUtils.ReturnType.String);
+                t.Socket = DeviceUtils.GetProperty("SocketDesignation", mj, DeviceUtils.ReturnType.String);
+                t.N_Core = DeviceUtils.GetProperty("NumberOfCores", mj, DeviceUtils.ReturnType.String);
+                t.N_Thread = DeviceUtils.GetProperty("NumberOfLogicalProcessors", mj, DeviceUtils.ReturnType.String);
+                t.MaxSpeed = DeviceUtils.GetProperty("MaxClockSpeed", mj, DeviceUtils.ReturnType.String);
+                t.L1_Cache = (Convert.ToInt16(DeviceUtils.GetProperty("L2CacheSize", mj, DeviceUtils.ReturnType.String)) / 4).ToString();
+                t.L2_Cache = DeviceUtils.GetProperty("L2CacheSize", mj, DeviceUtils.ReturnType.String);
+                t.L3_Cache = DeviceUtils.GetProperty("L3CacheSize", mj, DeviceUtils.ReturnType.String);
 
-                index++;
+                Blocks.Add(t);
             }
         }
 
@@ -341,7 +327,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class RAM: DeviceData
     {
-        public class BLOCK: _Block
+        public class Block: _Block
         {
             public String Value;
             public String Location;
@@ -355,10 +341,8 @@ namespace DiscoveryLight.Core.Device.Data
         }
 
         public UInt64 Size;
-        public int BlockNumber = 0;
         public String Type;
         private List<ManagementObject> collection;
-        public BLOCK[] Block;
 
         public override void GetDriveInfo()
         {
@@ -367,28 +351,25 @@ namespace DiscoveryLight.Core.Device.Data
             // count number of drive
             BlockNumber = collection.Count;
             // initialize array to contains each drive info
-            Block = new BLOCK[BlockNumber];
-
-            int index = 0;
+            Blocks = new List<_Block>();
 
             // search et write values
-
             foreach (ManagementObject mj in collection)
             {
-                this.Block[index] = new BLOCK();
-                this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].DeviceID = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String).Substring(5,1);
-                this.Block[index].Value = DeviceUtils.GetProperty("Capacity", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Location = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Slot = DeviceUtils.GetProperty("DeviceLocator", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].PartyNumber = DeviceUtils.GetProperty("PartNumber", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].SerialNumber = DeviceUtils.GetProperty("SerialNumber", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Speed = DeviceUtils.GetProperty("ConfiguredClockSpeed", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].BusSize = DeviceUtils.GetProperty("DataWidth", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Voltage = DeviceUtils.GetProperty("MinVoltage", mj, DeviceUtils.ReturnType.String);
+                var t = new Block();
+                t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                t.DeviceID = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String).Substring(5,1);
+                t.Value = DeviceUtils.GetProperty("Capacity", mj, DeviceUtils.ReturnType.String);
+                t.Location = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String);
+                t.Slot = DeviceUtils.GetProperty("DeviceLocator", mj, DeviceUtils.ReturnType.String);
+                t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
+                t.PartyNumber = DeviceUtils.GetProperty("PartNumber", mj, DeviceUtils.ReturnType.String);
+                t.SerialNumber = DeviceUtils.GetProperty("SerialNumber", mj, DeviceUtils.ReturnType.String);
+                t.Speed = DeviceUtils.GetProperty("ConfiguredClockSpeed", mj, DeviceUtils.ReturnType.String);
+                t.BusSize = DeviceUtils.GetProperty("DataWidth", mj, DeviceUtils.ReturnType.String);
+                t.Voltage = DeviceUtils.GetProperty("MinVoltage", mj, DeviceUtils.ReturnType.String);
 
-                index++;
+                Blocks.Add(t);
             }
 
             // Serach for Size and Type
@@ -418,7 +399,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class DISK: DeviceData
     {
-        public class BLOCK: _Block
+        public class Block: _Block
         {
             public String DriveName;
             public String MediaType;
@@ -434,9 +415,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String FirmwareVersion;
         }
 
-        public int BlockNumber = 0;
         private List<ManagementObject> collection;
-        public BLOCK[] Block;
 
         public String FindDriveName(String index)
         {
@@ -458,31 +437,28 @@ namespace DiscoveryLight.Core.Device.Data
             // count number of drive
             BlockNumber = collection.Count;
             // initialize array to contains each drive info
-            Block = new BLOCK[BlockNumber];
-
-            int index = 0;
+            Blocks = new List<_Block>();  
 
             // search et write values
-
             foreach (ManagementObject mj in collection)
             {
-                this.Block[index] = new BLOCK();
-                this.Block[index].DeviceID = DeviceUtils.GetProperty("Index", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].DriveName = this.FindDriveName(this.Block[index].DeviceID);
-                this.Block[index].Name = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].MediaType = DeviceUtils.GetProperty("MediaType", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Intreface = DeviceUtils.GetProperty("InterfaceType", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Size = DeviceUtils.GetProperty("Size", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].SerialNumber = DeviceUtils.GetProperty("SerialNumber", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Cylinders = DeviceUtils.GetProperty("TotalCylinders", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Heads = DeviceUtils.GetProperty("TotalHeads", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Sectors = DeviceUtils.GetProperty("TotalSectors", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Tracks = DeviceUtils.GetProperty("TotalTracks", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].TracksPerCylinder = DeviceUtils.GetProperty("TracksPerCylinder", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].BytesPerSector = DeviceUtils.GetProperty("BytesPerSector", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].FirmwareVersion = DeviceUtils.GetProperty("FirmwareRevision", mj, DeviceUtils.ReturnType.String);
+                var t = new Block();
+                t.DeviceID = DeviceUtils.GetProperty("Index", mj, DeviceUtils.ReturnType.String);
+                t.DriveName = this.FindDriveName(t.DeviceID);
+                t.Name = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
+                t.MediaType = DeviceUtils.GetProperty("MediaType", mj, DeviceUtils.ReturnType.String);
+                t.Intreface = DeviceUtils.GetProperty("InterfaceType", mj, DeviceUtils.ReturnType.String);
+                t.Size = DeviceUtils.GetProperty("Size", mj, DeviceUtils.ReturnType.String);
+                t.SerialNumber = DeviceUtils.GetProperty("SerialNumber", mj, DeviceUtils.ReturnType.String);
+                t.Cylinders = DeviceUtils.GetProperty("TotalCylinders", mj, DeviceUtils.ReturnType.String);
+                t.Heads = DeviceUtils.GetProperty("TotalHeads", mj, DeviceUtils.ReturnType.String);
+                t.Sectors = DeviceUtils.GetProperty("TotalSectors", mj, DeviceUtils.ReturnType.String);
+                t.Tracks = DeviceUtils.GetProperty("TotalTracks", mj, DeviceUtils.ReturnType.String);
+                t.TracksPerCylinder = DeviceUtils.GetProperty("TracksPerCylinder", mj, DeviceUtils.ReturnType.String);
+                t.BytesPerSector = DeviceUtils.GetProperty("BytesPerSector", mj, DeviceUtils.ReturnType.String);
+                t.FirmwareVersion = DeviceUtils.GetProperty("FirmwareRevision", mj, DeviceUtils.ReturnType.String);
 
-                index++;
+                Blocks.Add(t);
             }
         }
 
@@ -501,7 +477,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class NETWORK: DeviceData
     {
-        public class BLOCK: _Block
+        public class Block: _Block
         {
             public String InterfaceIndex;
             public String Description;
@@ -511,9 +487,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String MACAddresse;
         }
 
-        public int BlockNumber = 0;
         private List<ManagementObject> collection;
-        public BLOCK[] Block;
 
         public override void GetDriveInfo()
         {
@@ -522,25 +496,22 @@ namespace DiscoveryLight.Core.Device.Data
             // count number of drive
             BlockNumber = collection.Count;
             // initialize array to contains each drive info
-            Block = new BLOCK[BlockNumber];
-
-            int index = 0;
+            Blocks = new List<_Block>();
 
             // search et write values
-
             foreach (ManagementObject mj in collection)
             {
-                this.Block[index] = new BLOCK();
-                this.Block[index].DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].InterfaceIndex = DeviceUtils.GetProperty("InterfaceIndex", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Description = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Type = DeviceUtils.GetProperty("NetConnectionID", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].Speed = DeviceUtils.GetProperty("Speed", mj, DeviceUtils.ReturnType.String);
-                this.Block[index].MACAddresse = DeviceUtils.GetProperty("MACAddress", mj, DeviceUtils.ReturnType.String);
+                var t = new Block();
+                t.DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String);
+                t.InterfaceIndex = DeviceUtils.GetProperty("InterfaceIndex", mj, DeviceUtils.ReturnType.String);
+                t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                t.Description = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
+                t.Type = DeviceUtils.GetProperty("NetConnectionID", mj, DeviceUtils.ReturnType.String);
+                t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
+                t.Speed = DeviceUtils.GetProperty("Speed", mj, DeviceUtils.ReturnType.String);
+                t.MACAddresse = DeviceUtils.GetProperty("MACAddress", mj, DeviceUtils.ReturnType.String);
 
-                index++;
+                Blocks.Add(t);
             }
         }
 

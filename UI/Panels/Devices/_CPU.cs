@@ -28,20 +28,19 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         public override void ShowProperties()
         {
-            var CurrentDevice = (CPU)this.CurrentDevice;
-            int cpu_number = 0;
-            lbl_Name_Value.Text = CurrentDevice.Block[cpu_number].Name;
-            lbl_Size_Value.Text = CurrentDevice.Block[cpu_number].AddressSize;
-            lbl_Description_Value.Text = CurrentDevice.Block[cpu_number].Description;
-            lbl_Producteur_Value.Text = CurrentDevice.Block[cpu_number].Manufacturer;
-            lbl_Revision_Value.Text = CurrentDevice.Block[cpu_number].Revision;
-            lbl_Socket_Value.Text = CurrentDevice.Block[cpu_number].Socket;
-            lbl_Core_Value.Text = CurrentDevice.Block[cpu_number].N_Core;
-            lbl_Thread_Value.Text = CurrentDevice.Block[cpu_number].N_Thread;
-            lbl_MaxSpeed_Value.Text = CurrentDevice.Block[cpu_number].MaxSpeed + " Mhz";
-            lbl_L1CacheSize_Value.Text = CurrentDevice.Block[cpu_number].L1_Cache + " Kb";
-            lbl_L2CacheSize_Value.Text = CurrentDevice.Block[cpu_number].L2_Cache + " Kb";
-            lbl_L3CacheSize_Value.Text = CurrentDevice.Block[cpu_number].L3_Cache + " Kb";
+            var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
+            lbl_Name_Value.Text = CurrentSubDevice.Name;
+            lbl_Size_Value.Text = CurrentSubDevice.AddressSize;
+            lbl_Description_Value.Text = CurrentSubDevice.Description;
+            lbl_Producteur_Value.Text = CurrentSubDevice.Manufacturer;
+            lbl_Revision_Value.Text = CurrentSubDevice.Revision;
+            lbl_Socket_Value.Text = CurrentSubDevice.Socket;
+            lbl_Core_Value.Text = CurrentSubDevice.N_Core;
+            lbl_Thread_Value.Text = CurrentSubDevice.N_Thread;
+            lbl_MaxSpeed_Value.Text = CurrentSubDevice.MaxSpeed + " Mhz";
+            lbl_L1CacheSize_Value.Text = CurrentSubDevice.L1_Cache + " Kb";
+            lbl_L2CacheSize_Value.Text = CurrentSubDevice.L2_Cache + " Kb";
+            lbl_L3CacheSize_Value.Text = CurrentSubDevice.L3_Cache + " Kb";
         }
 
         public override void ShowPerformance()
@@ -50,14 +49,14 @@ namespace DiscoveryLight.UI.Panels.Devices
             lbl_Threads_Value.Text = CurrentPerformanceSystem.Threads;
             lbl_Process_Value.Text = CurrentPerformanceSystem.Processes;
             var CurrentPerformanceCPU = (PERFORM_CPU)CurrentPerformances.Where(d => d.GetType() == typeof(PERFORM_CPU)).First();
-            CurrentPerformanceCPU.SelectedCpu = this.CurrentSubDeviceID.ToString();
+            CurrentPerformanceCPU.SelectedCpu = this.CurrentSubDevice.DeviceID;
             CurrentPerformanceCPU.SelectedThread = "_Total";
             if (CurrentPerformanceCPU.Cpu.Count == 0) return;
             lbl_CpuUsage_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.MakeName()).First().Frequency + " Mhz";
             //Graphique ronde
             chartCpuUsage.FillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.MakeName()).First().DPCRate);
-            var CurrentDevice = (CPU)this.CurrentDevice;
-            for (int i = 0; i < Convert.ToUInt16(CurrentDevice.Block[this.CurrentSubDeviceID].N_Thread); i++)
+            var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
+            for (int i = 0; i < Convert.ToUInt16(CurrentSubDevice.N_Thread); i++)
                 Charts[i].BarFillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + i).First().DPCRate);
         }
 
@@ -68,19 +67,19 @@ namespace DiscoveryLight.UI.Panels.Devices
             int BarSize;
             int TextSize;
 
-            var CurrentDevice = (CPU)this.CurrentDevice;
+            var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
             // Création et insertion des élements grapique 
 
             // Tableau des grapiques rondes
-            Charts = new WinformComponents.ChartBar[Convert.ToInt16(CurrentDevice.Block[this.CurrentSubDeviceID].N_Thread)];
+            Charts = new WinformComponents.ChartBar[Convert.ToInt16(CurrentSubDevice.N_Thread)];
             // Tableau des graphique à barre
-            CpuId = new Label[Convert.ToInt16(CurrentDevice.Block[this.CurrentSubDeviceID].N_Thread)];
+            CpuId = new Label[Convert.ToInt16(CurrentSubDevice.N_Thread)];
 
             // Calcul de l'épessuer entré les graphique à barre
-            Step = 160 / (Convert.ToInt16(CurrentDevice.Block[this.CurrentSubDeviceID].N_Thread));
+            Step = 160 / (Convert.ToInt16(CurrentSubDevice.N_Thread));
 
             // Calcul de l'hauteur du caques graphique à barre
-            BarSize = Convert.ToInt16(160 / (Convert.ToInt16(CurrentDevice.Block[this.CurrentSubDeviceID].N_Thread)) / 1.6);
+            BarSize = Convert.ToInt16(160 / (Convert.ToInt16(CurrentSubDevice.N_Thread)) / 1.6);
 
             TextSize = BarSize / 2;
 
@@ -90,7 +89,7 @@ namespace DiscoveryLight.UI.Panels.Devices
             // Poistion de départ
             BarPosition = 190;
 
-            for (int i = 0; i < Convert.ToInt16(CurrentDevice.Block[this.CurrentSubDeviceID].N_Thread); i++)
+            for (int i = 0; i < Convert.ToInt16(CurrentSubDevice.N_Thread); i++)
             {
                 // Création du graphique à barre 
                 Charts[i] = new WinformComponents.ChartBar();
@@ -128,8 +127,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             // Suppression des élements graphique et des label dans le panneau
 
-            var CurrentDevice = (CPU)this.CurrentDevice;
-            for (int i = 0; i < Convert.ToInt16(CurrentDevice.Block[this.CurrentSubDeviceID].N_Thread); i++)
+            var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
+            for (int i = 0; i < Convert.ToInt16(CurrentSubDevice.N_Thread); i++)
             {
                 if (Charts != null && CpuId != null)
                 {
@@ -142,23 +141,21 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChargeListOfSubDevicesInit()
         {
             var CurrentDevice = (CPU)this.CurrentDevice;
-            foreach (CPU.BLOCK block in CurrentDevice.Block)
+            foreach (CPU.Block block in CurrentDevice.Blocks)
                 this.cmb_Blocks.Items.Add(block.DeviceID + " - " + block.Name);
         }
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             this.Clear();
-            var CurrentDevice = (CPU)this.CurrentDevice;
-            this.CurrentSubDeviceID = this.cmb_Blocks.SelectedIndex;
-            this.CurrentSubDeviceName = CurrentDevice.Block[this.CurrentSubDeviceID].Name;
+            this.CurrentSubDevice = this.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).First();
             this.GraphComponents_Add();
         }
 
         private void InitSubDevicesID()
         {
-            var CurrentDevice = (CPU)this.CurrentDevice;
-            if (CurrentDevice.Block.Length == 0) return;
+            var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
+            if (CurrentSubDevice == null) return;
             this.ChargeListOfSubDevicesInit();
             this.cmb_Blocks.SelectedIndex = 0;
         }
