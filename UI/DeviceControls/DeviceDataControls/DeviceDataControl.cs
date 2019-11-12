@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Data;
 
-namespace DiscoveryLight.UI.Controls.DeviceDataControls
+namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
     public abstract class AbstractDeviceDataControl : System.Windows.Forms.UserControl
     {
@@ -40,9 +40,6 @@ namespace DiscoveryLight.UI.Controls.DeviceDataControls
         }
         public override void ShowData() { }
 
-        public DeviceDataControl(DeviceData Device)
-        {
-            InitData(Device);
-        }
+        public DeviceDataControl() { }
     }
 }

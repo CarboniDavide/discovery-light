@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Performance;
 
-namespace DiscoveryLight.UI.Controls.DevicePerformanceControls
+namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public abstract class AbstractDevicePerformanceControl : System.Windows.Forms.UserControl
     {
@@ -16,7 +16,7 @@ namespace DiscoveryLight.UI.Controls.DevicePerformanceControls
         public abstract void StopPerformance();
     }
 
-    class DevicePerformanceControl: AbstractDevicePerformanceControl
+    public class DevicePerformanceControl: AbstractDevicePerformanceControl
     {
         private DevicePerformance currentPerformance;
         private int currentSubDevice;
@@ -78,9 +78,6 @@ namespace DiscoveryLight.UI.Controls.DevicePerformanceControls
                 tokenSource.Cancel();
         }
 
-        public DevicePerformanceControl(DevicePerformance Device)
-        {
-            InitPerformace(Device);
-        }
+        public DevicePerformanceControl() {}
     }
 }
