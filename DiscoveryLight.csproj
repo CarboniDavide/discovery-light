@@ -70,6 +70,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UI\Controls\DeviceDataControls\DeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\DevicePerformanceControls\DevicePerformanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI\Forms\Main\_Footer.cs">
       <SubType>UserControl</SubType>
     </Compile>
