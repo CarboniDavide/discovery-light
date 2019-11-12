@@ -32,6 +32,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             get { return currentPerformance; }
             set
             {
+                if (value == null) return;
                 currentPerformance = value;
                 deviceType = currentPerformance.GetType();
                 deviceName = deviceType.ToString();
@@ -46,6 +47,10 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public override void InitPerformace(DevicePerformance Performance)
         {
             CurrentPerformance = Performance;
+            RunPerformance();
+        }
+        private void SetToken()
+        {
             tokenSource = new CancellationTokenSource();
             token = TokenSource.Token;
             period = TimeSpan.FromMilliseconds(500);
@@ -55,6 +60,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public override async void RunPerformance()
         {
             StopPerformance();
+            SetToken();
             await Run();
         }
 
@@ -74,7 +80,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 
         public override void StopPerformance()
         {
-            if (token != null)
+            if (token != null && tokenSource != null)
                 tokenSource.Cancel();
         }
 
