@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.UI.Panels.Devices;
+using DiscoveryLight.UI.Panels;
 
 namespace DiscoveryLight.UI.Forms.Main
 {
@@ -21,7 +22,7 @@ namespace DiscoveryLight.UI.Forms.Main
 
         private void LoadFirstDevice()
         {
-            this.DeviceContainer.Controls.Add(new _CPU());
+            this.DeviceContainer.Controls.Add(new Panels.Devices._BaseHardware());
         }
     }
 }
