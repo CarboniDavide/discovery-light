@@ -16,8 +16,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public _BasePcDevicePerformanceControl(): base()
         {
             InitializeComponent();
-            if (Program.Performances != null)
-                InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_PC)).First().Properties);
+            if (Program.Performances == null) return;
+            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_PC)).First().Properties);
         }
 
 
