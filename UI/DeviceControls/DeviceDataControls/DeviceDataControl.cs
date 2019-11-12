@@ -24,6 +24,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             get { return currentDevice; }
             set
             {
+                if (value == null) return;
                 currentDevice = value;
                 deviceType = currentDevice.GetType();
                 deviceName = currentDevice.ToString();
@@ -37,6 +38,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             CurrentDevice = Device;
             CurrentSubDevice = (CurrentDevice.Blocks.Count != 0) ? CurrentDevice.Blocks.First() : new DeviceData._Block();
+            ShowData();
         }
         public override void ShowData() { }
 
