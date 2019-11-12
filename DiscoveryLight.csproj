@@ -73,8 +73,20 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\DeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.Designer.cs">
+      <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\DevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.Designer.cs">
+      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\Main\_Footer.cs">
       <SubType>UserControl</SubType>
@@ -180,6 +192,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.resx">
+      <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.resx">
+      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Main\_Footer.resx">
       <DependentUpon>_Footer.cs</DependentUpon>
     </EmbeddedResource>
