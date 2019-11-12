@@ -47,12 +47,8 @@ namespace DiscoveryLight.UI.Panels.Devices
             lbl_Threads_Value.Text = CurrentPerformanceSystem.Threads;
             lbl_Process_Value.Text = CurrentPerformanceSystem.Processes;
             var CurrentPerformanceCPU = (PERFORM_CPU)CurrentPerformances.Where(d => d.GetType() == typeof(PERFORM_CPU)).First();
-            CurrentPerformanceCPU.SelectedCpu = this.CurrentSubDevice.DeviceID;
-            CurrentPerformanceCPU.SelectedThread = "_Total";
-            if (CurrentPerformanceCPU.Cpu.Count == 0) return;
-            lbl_CpuUsage_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.MakeName()).First().Frequency + " Mhz";
-            //Graphique ronde
-            chartCpuUsage.FillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.MakeName()).First().DPCRate);
+            lbl_CpuUsage_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Frequency + " Mhz";
+            chartCpuUsage.FillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().DPCRate);
             int i = 0;
             foreach (WinformComponents.ChartBar ctrl in pnl_Threads.Controls.Find(typeof(WinformComponents.ChartBar).ToString(), false))
             {
@@ -132,6 +128,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             this.Clear();
             this.CurrentSubDevice = this.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).First();
+            var CurrentPerformanceCPU = (PERFORM_CPU)CurrentPerformances.Where(d => d.GetType() == typeof(PERFORM_CPU)).First();
+            CurrentPerformanceCPU.SelectedCpu = this.CurrentSubDevice.DeviceID;
             this.GraphComponents_Add();
         }
 
