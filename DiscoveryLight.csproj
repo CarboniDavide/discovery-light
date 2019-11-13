@@ -70,6 +70,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_BiosDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_BiosDeviceDataControl.Designer.cs">
+      <DependentUpon>_BiosDeviceDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\DeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,6 +90,12 @@
     </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.Designer.cs">
       <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.Designer.cs">
+      <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\DevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
@@ -105,6 +117,12 @@
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.Designer.cs">
       <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_WindowsScoreDevicePerformanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_WindowsScoreDevicePerformanceControl.Designer.cs">
+      <DependentUpon>_WindowsScoreDevicePerformanceControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\Main\_Footer.cs">
       <SubType>UserControl</SubType>
@@ -207,11 +225,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BiosDeviceDataControl.resx">
+      <DependentUpon>_BiosDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_CpuDeviceDataControl.resx">
       <DependentUpon>_CpuDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.resx">
       <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.resx">
+      <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.resx">
       <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
@@ -221,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.resx">
       <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_WindowsScoreDevicePerformanceControl.resx">
+      <DependentUpon>_WindowsScoreDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Main\_Footer.resx">
       <DependentUpon>_Footer.cs</DependentUpon>
@@ -239,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_CPU.resx">
       <DependentUpon>_CPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.resx">
+      <DependentUpon>_MainBoard.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
