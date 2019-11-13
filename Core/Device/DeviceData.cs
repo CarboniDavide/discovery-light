@@ -329,7 +329,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Block: _Block
         {
-            public String Value;
+            public String Capacity;
             public String Location;
             public String Slot;
             public String Manufacturer;
@@ -359,7 +359,7 @@ namespace DiscoveryLight.Core.Device.Data
                 var t = new Block();
                 t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
                 t.DeviceID = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String).Substring(5,1);
-                t.Value = DeviceUtils.GetProperty("Capacity", mj, DeviceUtils.ReturnType.String);
+                t.Capacity = DeviceUtils.GetProperty("Capacity", mj, DeviceUtils.ReturnType.String);
                 t.Location = DeviceUtils.GetProperty("BankLabel", mj, DeviceUtils.ReturnType.String);
                 t.Slot = DeviceUtils.GetProperty("DeviceLocator", mj, DeviceUtils.ReturnType.String);
                 t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);

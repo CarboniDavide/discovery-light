@@ -168,6 +168,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// </summary>
     public class PERFORM_RAM: DevicePerformance
     {
+        public UInt64? PerUsage;
         public UInt64? CacheUsage;
         public UInt64? MaxCacheUsage;
         public UInt64? Free;
@@ -192,6 +193,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 this.PageWrite = DeviceUtils.GetProperty("PageWritesPersec", mj, DeviceUtils.ReturnType.UInt64);
                 this.PageRead = DeviceUtils.GetProperty("PageReadsPersec", mj, DeviceUtils.ReturnType.UInt64);
                 this.PagePerSec = DeviceUtils.GetProperty("PagesPersec", mj, DeviceUtils.ReturnType.UInt64);
+                this.PerUsage = (DeviceUtils.GetProperty("AvailableBytes", mj, DeviceUtils.ReturnType.UInt64) / (DeviceUtils.GetProperty("CommitLimit", mj, DeviceUtils.ReturnType.UInt64) / 100));
             }
         }
 
