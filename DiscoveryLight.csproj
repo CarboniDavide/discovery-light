@@ -70,6 +70,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_AudioDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_AudioDeviceDataControl.Designer.cs">
+      <DependentUpon>_AudioDeviceDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_BiosDeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -243,6 +249,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_AudioDeviceDataControl.resx">
+      <DependentUpon>_AudioDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BiosDeviceDataControl.resx">
       <DependentUpon>_BiosDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\SplachScreen\_SplachScreen.resx">
       <DependentUpon>_SplachScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Audio.resx">
+      <DependentUpon>_Audio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_BaseHardware.resx">
       <DependentUpon>_BaseHardware.cs</DependentUpon>

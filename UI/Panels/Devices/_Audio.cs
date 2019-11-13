@@ -16,6 +16,26 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Audio()
         {
             InitializeComponent();
+            InitSubDevicesID();
+        }
+
+        private void ChargeListOfSubDevicesInit()
+        {
+            var CurrentDevice = (AUDIO)this.AudioDeviceDataControl.CurrentDevice;
+            if (CurrentDevice == null) return;
+            foreach (AUDIO.Block block in CurrentDevice.Blocks)
+                this.cmb_Blocks.Items.Add(block.Name);
+        }
+
+        private void ChangeSubDevice(object sender, EventArgs e)
+        {
+            this.AudioDeviceDataControl.CurrentSubDevice = this.AudioDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(this.cmb_Blocks.SelectedItem)).FirstOrDefault();
+        }
+
+        private void InitSubDevicesID()
+        {
+            this.ChargeListOfSubDevicesInit();
+            this.cmb_Blocks.SelectedIndex = 0;
         }
     }
 }
