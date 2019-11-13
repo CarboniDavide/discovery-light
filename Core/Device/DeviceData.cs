@@ -242,6 +242,7 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (ManagementObject mj in collection)
             {
                 var t = new Block();
+                t.DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String);
                 t.Name = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
                 t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
                 t.PowerManagmentSupport = DeviceUtils.GetProperty("PowerManagementSupported", mj, DeviceUtils.ReturnType.String);
