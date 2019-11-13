@@ -60,10 +60,10 @@
             // 
             this.CpuDevicePerformanceControl.CurrentPerformance = null;
             this.CpuDevicePerformanceControl.CurrentSubDevice = 0;
-            this.CpuDevicePerformanceControl.Location = new System.Drawing.Point(349, 71);
+            this.CpuDevicePerformanceControl.Location = new System.Drawing.Point(349, 56);
             this.CpuDevicePerformanceControl.Name = "CpuDevicePerformanceControl";
             this.CpuDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
-            this.CpuDevicePerformanceControl.Size = new System.Drawing.Size(281, 286);
+            this.CpuDevicePerformanceControl.Size = new System.Drawing.Size(281, 301);
             this.CpuDevicePerformanceControl.TabIndex = 69;
             this.CpuDevicePerformanceControl.TokenSource = null;
             // 

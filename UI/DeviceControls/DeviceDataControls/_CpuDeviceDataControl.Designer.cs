@@ -86,7 +86,7 @@
             this.lbl_Revision.Name = "lbl_Revision";
             this.lbl_Revision.Size = new System.Drawing.Size(131, 25);
             this.lbl_Revision.TabIndex = 37;
-            this.lbl_Revision.Text = "Révision";
+            this.lbl_Revision.Text = "Revision";
             this.lbl_Revision.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_L3CacheSize
@@ -206,7 +206,7 @@
             this.lbl_Producteur.Name = "lbl_Producteur";
             this.lbl_Producteur.Size = new System.Drawing.Size(131, 25);
             this.lbl_Producteur.TabIndex = 25;
-            this.lbl_Producteur.Text = "Producteur";
+            this.lbl_Producteur.Text = "Producer";
             this.lbl_Producteur.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Description
@@ -230,7 +230,7 @@
             this.lbl_Size.Name = "lbl_Size";
             this.lbl_Size.Size = new System.Drawing.Size(131, 25);
             this.lbl_Size.TabIndex = 23;
-            this.lbl_Size.Text = "Taille";
+            this.lbl_Size.Text = "Size";
             this.lbl_Size.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Core
@@ -254,7 +254,7 @@
             this.lbl_Thread.Name = "lbl_Thread";
             this.lbl_Thread.Size = new System.Drawing.Size(131, 25);
             this.lbl_Thread.TabIndex = 43;
-            this.lbl_Thread.Text = "Thread";
+            this.lbl_Thread.Text = "Threads";
             this.lbl_Thread.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Socket_Value
@@ -314,7 +314,7 @@
             this.lbl_MaxSpeed.Name = "lbl_MaxSpeed";
             this.lbl_MaxSpeed.Size = new System.Drawing.Size(131, 25);
             this.lbl_MaxSpeed.TabIndex = 70;
-            this.lbl_MaxSpeed.Text = "Max Vitesse";
+            this.lbl_MaxSpeed.Text = "Max Speed";
             this.lbl_MaxSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_MaxSpeed_Value
@@ -329,7 +329,7 @@
             this.lbl_MaxSpeed_Value.Text = "N/A";
             this.lbl_MaxSpeed_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // _BaseCpuDeviceDataControl
+            // _CpuDeviceDataControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -356,7 +356,7 @@
             this.Controls.Add(this.lbl_Producteur);
             this.Controls.Add(this.lbl_Description);
             this.Controls.Add(this.lbl_Size);
-            this.Name = "_BaseCpuDeviceDataControl";
+            this.Name = "_CpuDeviceDataControl";
             this.Size = new System.Drawing.Size(403, 360);
             this.ResumeLayout(false);
 

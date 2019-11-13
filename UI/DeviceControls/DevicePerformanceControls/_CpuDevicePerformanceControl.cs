@@ -23,7 +23,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.ShowPerformance();
             var CurrentPerformanceCPU = (PERFORM_CPU)this.CurrentPerformance;
-            lbl_CpuUsage_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Frequency + " Mhz";
+            lbl_CpuSpeed_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Frequency + " Mhz";
             chartCpuUsage.FillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().DPCRate);
             int i = 0;
             foreach (WinformComponents.ChartBar ctrl in pnl_Threads.Controls.Find(typeof(WinformComponents.ChartBar).ToString(), false))
@@ -72,7 +72,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 
                 chart.Activated = true;
                 chart.BarBackColor = System.Drawing.Color.LightGray;
-                chart.BarFillColor = System.Drawing.Color.LightSeaGreen;
+                chart.BarFillColor = System.Drawing.Color.Coral;
                 chart.BarFillSize = 25;
                 chart.Location = new System.Drawing.Point(10, BarPosition);
                 chart.Size = new System.Drawing.Size(190, BarSize);

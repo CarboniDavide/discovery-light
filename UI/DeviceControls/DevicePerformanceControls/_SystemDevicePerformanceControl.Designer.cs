@@ -40,9 +40,9 @@
             this.lbl_Process.AutoSize = true;
             this.lbl_Process.Location = new System.Drawing.Point(-1, 4);
             this.lbl_Process.Name = "lbl_Process";
-            this.lbl_Process.Size = new System.Drawing.Size(56, 13);
+            this.lbl_Process.Size = new System.Drawing.Size(45, 13);
             this.lbl_Process.TabIndex = 72;
-            this.lbl_Process.Text = "Processus";
+            this.lbl_Process.Text = "Process";
             // 
             // lbl_Thread
             // 
