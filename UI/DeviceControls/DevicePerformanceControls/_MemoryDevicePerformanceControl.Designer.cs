@@ -99,9 +99,9 @@
             this.lbl_PageOut.AutoSize = true;
             this.lbl_PageOut.Location = new System.Drawing.Point(14, 258);
             this.lbl_PageOut.Name = "lbl_PageOut";
-            this.lbl_PageOut.Size = new System.Drawing.Size(48, 13);
+            this.lbl_PageOut.Size = new System.Drawing.Size(55, 13);
             this.lbl_PageOut.TabIndex = 80;
-            this.lbl_PageOut.Text = "Pages in";
+            this.lbl_PageOut.Text = "Pages out";
             // 
             // lbl_PageRead
             // 
