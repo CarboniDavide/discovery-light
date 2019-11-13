@@ -15,7 +15,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 {
     public partial class _CPU : UserControl
     {
-        public _CPU() : base()
+        public _CPU()
         {
             InitializeComponent();
             
