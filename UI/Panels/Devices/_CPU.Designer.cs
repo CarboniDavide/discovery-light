@@ -88,6 +88,7 @@
             this.Controls.Add(this.pic_Divisor_001);
             this.Name = "_CPU";
             this.Size = new System.Drawing.Size(630, 360);
+            this.Load += new System.EventHandler(this._CPU_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);
 

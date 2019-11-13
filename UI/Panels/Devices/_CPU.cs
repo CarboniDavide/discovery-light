@@ -18,7 +18,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _CPU() : base()
         {
             InitializeComponent();
-            InitSubDevicesID();
+            
         }
         private void ChargeListOfSubDevicesInit()
         {
@@ -42,6 +42,11 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             this.ChargeListOfSubDevicesInit();
             this.cmb_Blocks.SelectedIndex = 0;
+        }
+
+        private void _CPU_Load(object sender, EventArgs e)
+        {
+            InitSubDevicesID();
         }
     }
 }
