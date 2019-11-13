@@ -50,8 +50,7 @@
             // chartDiskFree
             // 
             this.chartDiskFree.Activated = true;
-            this.chartDiskFree.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartDiskFree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chartDiskFree.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartDiskFree.CircleFillColor = System.Drawing.Color.MediumSeaGreen;
             this.chartDiskFree.FillSize = 25;
@@ -64,30 +63,27 @@
             // 
             // lbl_Read
             // 
-            this.lbl_Read.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Read.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Read.AutoSize = true;
             this.lbl_Read.Location = new System.Drawing.Point(3, 149);
             this.lbl_Read.Name = "lbl_Read";
-            this.lbl_Read.Size = new System.Drawing.Size(60, 13);
+            this.lbl_Read.Size = new System.Drawing.Size(43, 13);
             this.lbl_Read.TabIndex = 124;
-            this.lbl_Read.Text = "Read KB/s";
+            this.lbl_Read.Text = "Read/s";
             // 
             // lbl_Write
             // 
-            this.lbl_Write.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Write.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Write.AutoSize = true;
             this.lbl_Write.Location = new System.Drawing.Point(3, 133);
             this.lbl_Write.Name = "lbl_Write";
-            this.lbl_Write.Size = new System.Drawing.Size(59, 13);
+            this.lbl_Write.Size = new System.Drawing.Size(42, 13);
             this.lbl_Write.TabIndex = 125;
-            this.lbl_Write.Text = "Write KB/s";
+            this.lbl_Write.Text = "Write/s";
             // 
             // lbl_Transfer
             // 
-            this.lbl_Transfer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Transfer.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Transfer.AutoSize = true;
             this.lbl_Transfer.Location = new System.Drawing.Point(3, 165);
             this.lbl_Transfer.Name = "lbl_Transfer";
@@ -97,51 +93,54 @@
             // 
             // lbl_Read_Value
             // 
+            this.lbl_Read_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_Read_Value.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_Read_Value.Location = new System.Drawing.Point(116, 149);
+            this.lbl_Read_Value.Location = new System.Drawing.Point(77, 149);
             this.lbl_Read_Value.Name = "lbl_Read_Value";
-            this.lbl_Read_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_Read_Value.Size = new System.Drawing.Size(63, 13);
             this.lbl_Read_Value.TabIndex = 132;
             this.lbl_Read_Value.Text = "n/a";
             this.lbl_Read_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Write_Value
             // 
+            this.lbl_Write_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_Write_Value.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_Write_Value.Location = new System.Drawing.Point(116, 133);
+            this.lbl_Write_Value.Location = new System.Drawing.Point(77, 133);
             this.lbl_Write_Value.Name = "lbl_Write_Value";
-            this.lbl_Write_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_Write_Value.Size = new System.Drawing.Size(63, 13);
             this.lbl_Write_Value.TabIndex = 137;
             this.lbl_Write_Value.Text = "n/a";
             this.lbl_Write_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Transfer_Value
             // 
+            this.lbl_Transfer_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_Transfer_Value.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_Transfer_Value.Location = new System.Drawing.Point(116, 165);
+            this.lbl_Transfer_Value.Location = new System.Drawing.Point(77, 165);
             this.lbl_Transfer_Value.Name = "lbl_Transfer_Value";
-            this.lbl_Transfer_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_Transfer_Value.Size = new System.Drawing.Size(63, 13);
             this.lbl_Transfer_Value.TabIndex = 138;
             this.lbl_Transfer_Value.Text = "n/a";
             this.lbl_Transfer_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Free
             // 
-            this.lbl_Free.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Free.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Free.AutoSize = true;
             this.lbl_Free.Location = new System.Drawing.Point(3, 117);
             this.lbl_Free.Name = "lbl_Free";
-            this.lbl_Free.Size = new System.Drawing.Size(68, 13);
+            this.lbl_Free.Size = new System.Drawing.Size(50, 13);
             this.lbl_Free.TabIndex = 140;
-            this.lbl_Free.Text = "Available GB";
+            this.lbl_Free.Text = "Available";
             // 
             // lbl_Free_Value
             // 
+            this.lbl_Free_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_Free_Value.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_Free_Value.Location = new System.Drawing.Point(116, 117);
+            this.lbl_Free_Value.Location = new System.Drawing.Point(77, 117);
             this.lbl_Free_Value.Name = "lbl_Free_Value";
-            this.lbl_Free_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_Free_Value.Size = new System.Drawing.Size(63, 13);
             this.lbl_Free_Value.TabIndex = 141;
             this.lbl_Free_Value.Text = "n/a";
             this.lbl_Free_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -149,8 +148,7 @@
             // chartReadTime
             // 
             this.chartReadTime.Activated = true;
-            this.chartReadTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartReadTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartReadTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartReadTime.BarFillColor = System.Drawing.Color.LightSalmon;
             this.chartReadTime.BarFillSize = 25;
@@ -165,8 +163,7 @@
             // chartIdleTime
             // 
             this.chartIdleTime.Activated = true;
-            this.chartIdleTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartIdleTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartIdleTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartIdleTime.BarFillColor = System.Drawing.Color.LightSeaGreen;
             this.chartIdleTime.BarFillSize = 25;
@@ -181,8 +178,7 @@
             // chartDiskTime
             // 
             this.chartDiskTime.Activated = true;
-            this.chartDiskTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartDiskTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartDiskTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartDiskTime.BarFillColor = System.Drawing.Color.DarkSeaGreen;
             this.chartDiskTime.BarFillSize = 25;
@@ -197,8 +193,7 @@
             // chartWriteTime
             // 
             this.chartWriteTime.Activated = true;
-            this.chartWriteTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartWriteTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartWriteTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartWriteTime.BarFillColor = System.Drawing.Color.DodgerBlue;
             this.chartWriteTime.BarFillSize = 25;
@@ -212,8 +207,7 @@
             // 
             // lbl_Title_Chart_Read
             // 
-            this.lbl_Title_Chart_Read.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Chart_Read.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Title_Chart_Read.AutoSize = true;
             this.lbl_Title_Chart_Read.Location = new System.Drawing.Point(3, 191);
             this.lbl_Title_Chart_Read.Name = "lbl_Title_Chart_Read";
@@ -223,8 +217,7 @@
             // 
             // lbl_Title_Chart_Write
             // 
-            this.lbl_Title_Chart_Write.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Chart_Write.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Title_Chart_Write.AutoSize = true;
             this.lbl_Title_Chart_Write.Location = new System.Drawing.Point(3, 234);
             this.lbl_Title_Chart_Write.Name = "lbl_Title_Chart_Write";
@@ -234,8 +227,7 @@
             // 
             // lbl_Title_Chart_Disk
             // 
-            this.lbl_Title_Chart_Disk.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Chart_Disk.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Title_Chart_Disk.AutoSize = true;
             this.lbl_Title_Chart_Disk.Location = new System.Drawing.Point(3, 275);
             this.lbl_Title_Chart_Disk.Name = "lbl_Title_Chart_Disk";
@@ -245,8 +237,7 @@
             // 
             // lbl_Title_Chart_Idle
             // 
-            this.lbl_Title_Chart_Idle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Title_Chart_Idle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Title_Chart_Idle.AutoSize = true;
             this.lbl_Title_Chart_Idle.Location = new System.Drawing.Point(4, 317);
             this.lbl_Title_Chart_Idle.Name = "lbl_Title_Chart_Idle";

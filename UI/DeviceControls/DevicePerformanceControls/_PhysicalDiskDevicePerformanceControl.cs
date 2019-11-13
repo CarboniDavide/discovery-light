@@ -22,9 +22,9 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             var CurrentPerformance = (PERFORM_DISK)this.CurrentPerformance;
             chartDiskFree.FillSize = Convert.ToInt16(100 - CurrentPerformance.Percent_FreeSpace);
-            lbl_Free_Value.Text = (Convert.ToInt64(CurrentPerformance.FreeSpace) / 1024).ToString();
-            lbl_Write_Value.Text = (Convert.ToUInt64(CurrentPerformance.WriteBytesPerSec) / 1024).ToString();
-            lbl_Read_Value.Text = (Convert.ToUInt64(CurrentPerformance.ReadBytesPerSec) / 1024).ToString();
+            lbl_Free_Value.Text = (Convert.ToInt64(CurrentPerformance.FreeSpace) / 1024).ToString() + " GB";
+            lbl_Write_Value.Text = (Convert.ToUInt64(CurrentPerformance.WriteBytesPerSec) / 1024).ToString() + " KB";
+            lbl_Read_Value.Text = (Convert.ToUInt64(CurrentPerformance.ReadBytesPerSec) / 1024).ToString() + " KB";
             lbl_Transfer_Value.Text = CurrentPerformance.TransferPerSec.ToString();
             chartReadTime.BarFillSize = Convert.ToInt16(CurrentPerformance.Percent_ReadTime);
             chartWriteTime.BarFillSize = Convert.ToInt16(CurrentPerformance.Percent_WriteTime);

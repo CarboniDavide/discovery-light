@@ -54,12 +54,13 @@
             // lbl_CpuSpeed_Value
             // 
             this.lbl_CpuSpeed_Value.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbl_CpuSpeed_Value.AutoSize = true;
-            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(195, 93);
+            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(203, 93);
             this.lbl_CpuSpeed_Value.Name = "lbl_CpuSpeed_Value";
-            this.lbl_CpuSpeed_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_CpuSpeed_Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_CpuSpeed_Value.Size = new System.Drawing.Size(52, 13);
             this.lbl_CpuSpeed_Value.TabIndex = 78;
             this.lbl_CpuSpeed_Value.Text = "n/a";
+            this.lbl_CpuSpeed_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_CpuSpeed
             // 
@@ -76,7 +77,7 @@
             this.pnl_Threads.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pnl_Threads.Location = new System.Drawing.Point(9, 142);
             this.pnl_Threads.Name = "pnl_Threads";
-            this.pnl_Threads.Size = new System.Drawing.Size(262, 160);
+            this.pnl_Threads.Size = new System.Drawing.Size(269, 160);
             this.pnl_Threads.TabIndex = 79;
             // 
             // pic_Divisor_002
@@ -98,7 +99,7 @@
             this._SystemDevicePerformanceControl1.Location = new System.Drawing.Point(141, 39);
             this._SystemDevicePerformanceControl1.Name = "_SystemDevicePerformanceControl1";
             this._SystemDevicePerformanceControl1.Period = System.TimeSpan.Parse("00:00:00");
-            this._SystemDevicePerformanceControl1.Size = new System.Drawing.Size(140, 48);
+            this._SystemDevicePerformanceControl1.Size = new System.Drawing.Size(115, 48);
             this._SystemDevicePerformanceControl1.TabIndex = 80;
             this._SystemDevicePerformanceControl1.TokenSource = null;
             // 

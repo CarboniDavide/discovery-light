@@ -84,7 +84,7 @@
             // 
             this.PhysicalDiskDevicePerformanceControl.CurrentPerformance = null;
             this.PhysicalDiskDevicePerformanceControl.CurrentSubDevice = 0;
-            this.PhysicalDiskDevicePerformanceControl.Location = new System.Drawing.Point(474, 3);
+            this.PhysicalDiskDevicePerformanceControl.Location = new System.Drawing.Point(477, 3);
             this.PhysicalDiskDevicePerformanceControl.Name = "PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
             this.PhysicalDiskDevicePerformanceControl.Size = new System.Drawing.Size(153, 357);

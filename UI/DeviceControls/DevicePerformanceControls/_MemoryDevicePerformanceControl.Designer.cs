@@ -52,7 +52,7 @@
             // chartRamUsage
             // 
             this.chartRamUsage.Activated = true;
-            this.chartRamUsage.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.chartRamUsage.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chartRamUsage.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartRamUsage.CircleFillColor = System.Drawing.Color.MediumOrchid;
             this.chartRamUsage.FillSize = 25;
@@ -145,83 +145,83 @@
             // 
             // lbl_CacheUsage_Value
             // 
-            this.lbl_CacheUsage_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_CacheUsage_Value.AutoSize = true;
+            this.lbl_CacheUsage_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_CacheUsage_Value.Location = new System.Drawing.Point(92, 183);
             this.lbl_CacheUsage_Value.Name = "lbl_CacheUsage_Value";
-            this.lbl_CacheUsage_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_CacheUsage_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_CacheUsage_Value.TabIndex = 85;
             this.lbl_CacheUsage_Value.Text = "n/a";
+            this.lbl_CacheUsage_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_PageWrite_Value
             // 
-            this.lbl_PageWrite_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PageWrite_Value.AutoSize = true;
+            this.lbl_PageWrite_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_PageWrite_Value.Location = new System.Drawing.Point(92, 308);
             this.lbl_PageWrite_Value.Name = "lbl_PageWrite_Value";
-            this.lbl_PageWrite_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_PageWrite_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_PageWrite_Value.TabIndex = 86;
             this.lbl_PageWrite_Value.Text = "n/a";
+            this.lbl_PageWrite_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_PageRead_Value
             // 
-            this.lbl_PageRead_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PageRead_Value.AutoSize = true;
+            this.lbl_PageRead_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_PageRead_Value.Location = new System.Drawing.Point(92, 283);
             this.lbl_PageRead_Value.Name = "lbl_PageRead_Value";
-            this.lbl_PageRead_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_PageRead_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_PageRead_Value.TabIndex = 87;
             this.lbl_PageRead_Value.Text = "n/a";
+            this.lbl_PageRead_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_PageOut_Value
             // 
-            this.lbl_PageOut_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PageOut_Value.AutoSize = true;
+            this.lbl_PageOut_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_PageOut_Value.Location = new System.Drawing.Point(92, 258);
             this.lbl_PageOut_Value.Name = "lbl_PageOut_Value";
-            this.lbl_PageOut_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_PageOut_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_PageOut_Value.TabIndex = 88;
             this.lbl_PageOut_Value.Text = "n/a";
+            this.lbl_PageOut_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_PageIn_Value
             // 
-            this.lbl_PageIn_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PageIn_Value.AutoSize = true;
+            this.lbl_PageIn_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_PageIn_Value.Location = new System.Drawing.Point(92, 233);
             this.lbl_PageIn_Value.Name = "lbl_PageIn_Value";
-            this.lbl_PageIn_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_PageIn_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_PageIn_Value.TabIndex = 89;
             this.lbl_PageIn_Value.Text = "n/a";
+            this.lbl_PageIn_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_RamOut_Value
             // 
-            this.lbl_RamOut_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_RamOut_Value.AutoSize = true;
+            this.lbl_RamOut_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_RamOut_Value.Location = new System.Drawing.Point(92, 158);
             this.lbl_RamOut_Value.Name = "lbl_RamOut_Value";
-            this.lbl_RamOut_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_RamOut_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_RamOut_Value.TabIndex = 90;
             this.lbl_RamOut_Value.Text = "n/a";
+            this.lbl_RamOut_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_CacheUsageMax_Value
             // 
-            this.lbl_CacheUsageMax_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_CacheUsageMax_Value.AutoSize = true;
+            this.lbl_CacheUsageMax_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_CacheUsageMax_Value.Location = new System.Drawing.Point(92, 208);
             this.lbl_CacheUsageMax_Value.Name = "lbl_CacheUsageMax_Value";
-            this.lbl_CacheUsageMax_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_CacheUsageMax_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_CacheUsageMax_Value.TabIndex = 91;
             this.lbl_CacheUsageMax_Value.Text = "n/a";
+            this.lbl_CacheUsageMax_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_PagePersec_Value
             // 
-            this.lbl_PagePersec_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PagePersec_Value.AutoSize = true;
+            this.lbl_PagePersec_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_PagePersec_Value.Location = new System.Drawing.Point(92, 333);
             this.lbl_PagePersec_Value.Name = "lbl_PagePersec_Value";
-            this.lbl_PagePersec_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_PagePersec_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_PagePersec_Value.TabIndex = 92;
             this.lbl_PagePersec_Value.Text = "n/a";
+            this.lbl_PagePersec_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Free
             // 
@@ -235,13 +235,13 @@
             // 
             // lbl_Free_Value
             // 
-            this.lbl_Free_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Free_Value.AutoSize = true;
+            this.lbl_Free_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lbl_Free_Value.Location = new System.Drawing.Point(92, 133);
             this.lbl_Free_Value.Name = "lbl_Free_Value";
-            this.lbl_Free_Value.Size = new System.Drawing.Size(24, 13);
+            this.lbl_Free_Value.Size = new System.Drawing.Size(67, 13);
             this.lbl_Free_Value.TabIndex = 94;
             this.lbl_Free_Value.Text = "n/a";
+            this.lbl_Free_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // _MemoryDevicePerformanceControl
             // 
