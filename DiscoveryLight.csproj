@@ -97,6 +97,12 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.Designer.cs">
       <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_DiskDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_DiskDeviceDataControl.Designer.cs">
+      <DependentUpon>_DiskDeviceDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +135,12 @@
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.Designer.cs">
       <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_DiskDevicePerformanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_DiskDevicePerformanceControl.Designer.cs">
+      <DependentUpon>_DiskDevicePerformanceControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
