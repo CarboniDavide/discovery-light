@@ -189,9 +189,10 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (ManagementObject mj in collection) // Read data
             {
                 var t = new Block();
+                t.DeviceID = DeviceUtils.GetProperty("DeviceID", mj, DeviceUtils.ReturnType.String).Substring(15,1);
                 t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
-                t.Manufacturer = DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String);
-                t.AdpterType = DeviceUtils.GetProperty("AdapterCompatibility", mj, DeviceUtils.ReturnType.String);
+                t.Manufacturer = DeviceUtils.GetProperty("AdapterCompatibility", mj, DeviceUtils.ReturnType.String);
+                t.AdpterType = DeviceUtils.GetProperty("AdapterDACType", mj, DeviceUtils.ReturnType.String);
                 t.MemorySize = DeviceUtils.GetProperty("AdapterRAM", mj, DeviceUtils.ReturnType.String);
                 t.NowBitsPerPixel = DeviceUtils.GetProperty("CurrentBitsPerPixel", mj, DeviceUtils.ReturnType.String);
                 t.NowHorizResolution = DeviceUtils.GetProperty("CurrentHorizontalResolution", mj, DeviceUtils.ReturnType.String);
