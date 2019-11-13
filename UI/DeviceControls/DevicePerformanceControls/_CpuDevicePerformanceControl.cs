@@ -35,15 +35,20 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 
         public void GraphComponents_Add()
         {
-            Clear();
+            CPU cpu = new CPU();
+            cpu.GetDriveInfo();
+            GraphComponents_Add((CPU.Block)cpu.Blocks.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
+        }
+
+        public void GraphComponents_Add(DeviceData._Block Device)
+        {
+            GraphComponents_Clear();
             int BarPosition;
             int Step;
             int BarSize;
             int TextSize;
-
-            CPU cpu= new CPU();
-            cpu.GetDriveInfo();
-            var CurrentSubDevice = (CPU.Block)cpu.Blocks.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault();
+            
+            var CurrentSubDevice = (CPU.Block)Device;
             // Création et insertion des élements grapique
 
             // Calcul de l'épessuer entré les graphique à barre
@@ -91,7 +96,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             }
         }
 
-        private void Clear()
+        private void GraphComponents_Clear()
         {
             this.pnl_Threads.Controls.Clear();
         }

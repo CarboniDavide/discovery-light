@@ -35,7 +35,8 @@ namespace DiscoveryLight.UI.Panels.Devices
 
             var CurrentPerformanceCPU = (PERFORM_CPU)this.CpuDevicePerformanceControl.CurrentPerformance;
             CurrentPerformanceCPU.SelectedCpu = CpuDeviceDataControl.CurrentSubDevice.DeviceID;
-            this.CpuDevicePerformanceControl.GraphComponents_Add();
+            var CurrentDevice = this.CpuDeviceDataControl.CurrentSubDevice;
+            this.CpuDevicePerformanceControl.GraphComponents_Add(CurrentDevice);
         }
 
         private void InitSubDevicesID()
