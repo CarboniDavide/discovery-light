@@ -97,11 +97,11 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.Designer.cs">
       <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhisicalDiskDeviceDataControl.cs">
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalDiskDeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhisicalDiskDeviceDataControl.Designer.cs">
-      <DependentUpon>_PhisicalDiskDeviceDataControl.cs</DependentUpon>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalDiskDeviceDataControl.Designer.cs">
+      <DependentUpon>_PhysicalDiskDeviceDataControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.cs">
       <SubType>UserControl</SubType>
@@ -233,11 +233,11 @@
     <Compile Include="UI\Panels\Devices\_Network.Designer.cs">
       <DependentUpon>_Network.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Devices\_Storage.cs">
+    <Compile Include="UI\Panels\Devices\_PhysicalDisk.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Devices\_Storage.Designer.cs">
-      <DependentUpon>_Storage.cs</DependentUpon>
+    <Compile Include="UI\Panels\Devices\_PhysicalDisk.Designer.cs">
+      <DependentUpon>_PhysicalDisk.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Devices\_Video.cs">
       <SubType>UserControl</SubType>

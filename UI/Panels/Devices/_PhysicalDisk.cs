@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.Core.Device.Data;
 
-namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
+namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _PhisicalDiskDeviceDataControl : DeviceDataControl
+    public partial class _PhysicalDisk : UserControl
     {
-        public _PhisicalDiskDeviceDataControl()
+        public _PhysicalDisk()
         {
             InitializeComponent();
         }

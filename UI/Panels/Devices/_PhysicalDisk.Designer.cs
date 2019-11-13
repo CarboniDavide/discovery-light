@@ -1,6 +1,6 @@
-﻿namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
+﻿namespace DiscoveryLight.UI.Panels.Devices
 {
-    partial class _PhisicalDiskDeviceDataControl
+    partial class _PhysicalDisk
     {
         /// <summary> 
         /// Required designer variable.
