@@ -11,9 +11,9 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Audio : DevicePanel
+    public partial class _Audio : UserControl
     {
-        public _Audio():base()
+        public _Audio()
         {
             InitializeComponent();
         }

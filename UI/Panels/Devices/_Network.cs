@@ -11,9 +11,9 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Network : DevicePanel
+    public partial class _Network : UserControl
     {
-        public _Network(): base()
+        public _Network()
         {
             InitializeComponent();
         }

@@ -11,9 +11,9 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Memory : DevicePanel
+    public partial class _Memory : UserControl
     {
-        public _Memory(): base()
+        public _Memory()
         {
             InitializeComponent();
         }

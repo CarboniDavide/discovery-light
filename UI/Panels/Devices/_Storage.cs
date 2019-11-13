@@ -11,9 +11,9 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Storage : DevicePanel
+    public partial class _Storage : UserControl
     {
-        public _Storage(): base()
+        public _Storage()
         {
             InitializeComponent();
         }
