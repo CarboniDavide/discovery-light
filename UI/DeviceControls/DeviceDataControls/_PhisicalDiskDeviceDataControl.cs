@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _DiskDeviceDataControl : UserControl
+    public partial class _PhisicalDiskDeviceDataControl : DeviceDataControl
     {
-        public _DiskDeviceDataControl()
+        public _PhisicalDiskDeviceDataControl()
         {
             InitializeComponent();
         }

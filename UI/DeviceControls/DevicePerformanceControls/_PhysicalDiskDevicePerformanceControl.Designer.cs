@@ -1,6 +1,6 @@
 ﻿namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    partial class _DiskDevicePerformanceControl
+    partial class _PhysicalDiskDevicePerformanceControl
     {
         /// <summary> 
         /// Required designer variable.

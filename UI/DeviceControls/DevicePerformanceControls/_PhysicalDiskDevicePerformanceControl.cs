@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _DiskDevicePerformanceControl : UserControl
+    public partial class _PhysicalDiskDevicePerformanceControl : DevicePerformanceControl
     {
-        public _DiskDevicePerformanceControl()
+        public _PhysicalDiskDevicePerformanceControl()
         {
             InitializeComponent();
         }
