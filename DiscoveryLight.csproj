@@ -97,6 +97,12 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.Designer.cs">
       <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.Designer.cs">
+      <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\DevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.Designer.cs">
       <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.Designer.cs">
+      <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
@@ -237,11 +249,17 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.resx">
       <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.resx">
+      <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.resx">
       <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.resx">
       <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.resx">
+      <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.resx">
       <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
@@ -269,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.resx">
       <DependentUpon>_MainBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Memory.resx">
+      <DependentUpon>_Memory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

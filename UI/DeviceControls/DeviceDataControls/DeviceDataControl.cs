@@ -30,7 +30,14 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
                 deviceName = currentDevice.ToString();
             }
         }
-        public DeviceData._Block CurrentSubDevice { get => currentSubDevice; set => currentSubDevice = value; }
+        public DeviceData._Block CurrentSubDevice
+        {
+            get { return currentSubDevice; }
+            set { 
+                currentSubDevice = value; 
+                if (value != null) ShowData(); 
+            } 
+        }
         public Type DeviceType { get => deviceType; set => deviceType = value; }
         public string DeviceName { get => deviceName; set => deviceName = value; }
 
