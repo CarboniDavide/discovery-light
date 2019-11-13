@@ -22,7 +22,7 @@ namespace DiscoveryLight.UI.Forms.Main
 
         private void LoadFirstDevice()
         {
-            this.DeviceContainer.Controls.Add(new Panels.Devices._Audio());
+            this.DeviceContainer.Controls.Add(new Panels.Devices._PhysicalDisk());
         }
     }
 }

@@ -279,6 +279,9 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.resx">
       <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalDiskDeviceDataControl.resx">
+      <DependentUpon>_PhysicalDiskDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.resx">
       <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.resx">
       <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_PhysicalDiskDevicePerformanceControl.resx">
+      <DependentUpon>_PhysicalDiskDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.resx">
       <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
@@ -323,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Memory.resx">
       <DependentUpon>_Memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.resx">
+      <DependentUpon>_PhysicalDisk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Video.resx">
       <DependentUpon>_Video.cs</DependentUpon>
