@@ -44,6 +44,7 @@
             this.cmb_Blocks.Name = "cmb_Blocks";
             this.cmb_Blocks.Size = new System.Drawing.Size(405, 21);
             this.cmb_Blocks.TabIndex = 121;
+            this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             // 
             // lbl_TitleComboBox
             // 

@@ -23,13 +23,23 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             var CurrentDevice = (AUDIO)this.AudioDeviceDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
+            int index = 0; // use number in list
             foreach (AUDIO.Block block in CurrentDevice.Blocks)
-                this.cmb_Blocks.Items.Add(block.Name);
+            {
+                this.cmb_Blocks.Items.Add(index.ToString() + "-" + block.Name);
+                this.cmb_Blocks.Items.Add(index.ToString() + "-" + block.Name);
+                index++;
+            }
         }
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
-            this.AudioDeviceDataControl.CurrentSubDevice = this.AudioDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(this.cmb_Blocks.SelectedItem)).FirstOrDefault();
+            // get name from selected
+            int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
+            string selected = this.cmb_Blocks.SelectedItem.ToString();
+            int l = selected.Length - indexSize + 1;
+            string name = selected.Substring( indexSize + 1, selected.Length-indexSize-1);
+            this.AudioDeviceDataControl.CurrentSubDevice = this.AudioDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(name)).FirstOrDefault();
         }
 
         private void InitSubDevicesID()
