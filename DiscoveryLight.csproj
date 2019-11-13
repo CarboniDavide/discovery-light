@@ -103,6 +103,12 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.Designer.cs">
       <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.Designer.cs">
+      <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\DevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.resx">
       <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.resx">
+      <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.resx">
       <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Memory.resx">
       <DependentUpon>_Memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Video.resx">
+      <DependentUpon>_Video.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

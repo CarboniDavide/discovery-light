@@ -28,6 +28,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
                 currentDevice = value;
                 deviceType = currentDevice.GetType();
                 deviceName = currentDevice.ToString();
+                CurrentSubDevice = (CurrentDevice.Blocks.Count != 0) ? CurrentDevice.Blocks.First() : new DeviceData._Block();
             }
         }
         public DeviceData._Block CurrentSubDevice

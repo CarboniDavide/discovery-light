@@ -16,6 +16,26 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Video()
         {
             InitializeComponent();
+            InitSubDevicesID();
+        }
+
+        private void ChargeListOfSubDevicesInit()
+        {
+            var CurrentDevice = (VIDEO)this.VideoDeviceDataControl.CurrentDevice;
+            if (CurrentDevice == null) return;
+            foreach (VIDEO.Block block in CurrentDevice.Blocks)
+                this.cmb_Blocks.Items.Add(block.DeviceID + " - " + block.Name);
+        }
+
+        private void ChangeSubDevice(object sender, EventArgs e)
+        {
+            this.VideoDeviceDataControl.CurrentSubDevice = this.VideoDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString() + 1)).FirstOrDefault();
+        }
+
+        private void InitSubDevicesID()
+        {
+            this.ChargeListOfSubDevicesInit();
+            this.cmb_Blocks.SelectedIndex = 0;
         }
     }
 }
