@@ -50,9 +50,10 @@
             // 
             this.lbl_PacketsReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_PacketsReceived.AutoSize = true;
+            this.lbl_PacketsReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PacketsReceived.Location = new System.Drawing.Point(6, 85);
             this.lbl_PacketsReceived.Name = "lbl_PacketsReceived";
-            this.lbl_PacketsReceived.Size = new System.Drawing.Size(103, 13);
+            this.lbl_PacketsReceived.Size = new System.Drawing.Size(100, 13);
             this.lbl_PacketsReceived.TabIndex = 182;
             this.lbl_PacketsReceived.Text = "Packets received /s";
             // 
@@ -60,6 +61,7 @@
             // 
             this.lbl_BytesSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_BytesSent.AutoSize = true;
+            this.lbl_BytesSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BytesSent.Location = new System.Drawing.Point(6, 45);
             this.lbl_BytesSent.Name = "lbl_BytesSent";
             this.lbl_BytesSent.Size = new System.Drawing.Size(66, 13);
@@ -70,9 +72,10 @@
             // 
             this.lbl_PacketsSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_PacketsSent.AutoSize = true;
+            this.lbl_PacketsSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PacketsSent.Location = new System.Drawing.Point(6, 125);
             this.lbl_PacketsSent.Name = "lbl_PacketsSent";
-            this.lbl_PacketsSent.Size = new System.Drawing.Size(82, 13);
+            this.lbl_PacketsSent.Size = new System.Drawing.Size(80, 13);
             this.lbl_PacketsSent.TabIndex = 184;
             this.lbl_PacketsSent.Text = "Packets sent /s";
             // 
@@ -80,9 +83,10 @@
             // 
             this.lbl_PacketsReceived_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_PacketsReceived_Value.AutoSize = true;
+            this.lbl_PacketsReceived_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PacketsReceived_Value.Location = new System.Drawing.Point(6, 100);
             this.lbl_PacketsReceived_Value.Name = "lbl_PacketsReceived_Value";
-            this.lbl_PacketsReceived_Value.Size = new System.Drawing.Size(27, 13);
+            this.lbl_PacketsReceived_Value.Size = new System.Drawing.Size(25, 13);
             this.lbl_PacketsReceived_Value.TabIndex = 185;
             this.lbl_PacketsReceived_Value.Text = "N/A";
             // 
@@ -90,9 +94,10 @@
             // 
             this.lbl_BytesSent_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_BytesSent_Value.AutoSize = true;
+            this.lbl_BytesSent_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BytesSent_Value.Location = new System.Drawing.Point(6, 60);
             this.lbl_BytesSent_Value.Name = "lbl_BytesSent_Value";
-            this.lbl_BytesSent_Value.Size = new System.Drawing.Size(27, 13);
+            this.lbl_BytesSent_Value.Size = new System.Drawing.Size(25, 13);
             this.lbl_BytesSent_Value.TabIndex = 186;
             this.lbl_BytesSent_Value.Text = "N/A";
             // 
@@ -100,9 +105,10 @@
             // 
             this.lbl_PacketsSent_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_PacketsSent_Value.AutoSize = true;
+            this.lbl_PacketsSent_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PacketsSent_Value.Location = new System.Drawing.Point(6, 140);
             this.lbl_PacketsSent_Value.Name = "lbl_PacketsSent_Value";
-            this.lbl_PacketsSent_Value.Size = new System.Drawing.Size(27, 13);
+            this.lbl_PacketsSent_Value.Size = new System.Drawing.Size(25, 13);
             this.lbl_PacketsSent_Value.TabIndex = 187;
             this.lbl_PacketsSent_Value.Text = "N/A";
             // 
@@ -110,6 +116,7 @@
             // 
             this.lbl_BytesReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_BytesReceived.AutoSize = true;
+            this.lbl_BytesReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BytesReceived.Location = new System.Drawing.Point(6, 5);
             this.lbl_BytesReceived.Name = "lbl_BytesReceived";
             this.lbl_BytesReceived.Size = new System.Drawing.Size(85, 13);
@@ -120,9 +127,10 @@
             // 
             this.lbl_BytesReceived_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_BytesReceived_Value.AutoSize = true;
+            this.lbl_BytesReceived_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_BytesReceived_Value.Location = new System.Drawing.Point(6, 20);
             this.lbl_BytesReceived_Value.Name = "lbl_BytesReceived_Value";
-            this.lbl_BytesReceived_Value.Size = new System.Drawing.Size(27, 13);
+            this.lbl_BytesReceived_Value.Size = new System.Drawing.Size(25, 13);
             this.lbl_BytesReceived_Value.TabIndex = 189;
             this.lbl_BytesReceived_Value.Text = "N/A";
             // 
@@ -190,9 +198,10 @@
             // 
             this.lbl_Titre_Chart_BytesReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Titre_Chart_BytesReceived.AutoSize = true;
+            this.lbl_Titre_Chart_BytesReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titre_Chart_BytesReceived.Location = new System.Drawing.Point(6, 165);
             this.lbl_Titre_Chart_BytesReceived.Name = "lbl_Titre_Chart_BytesReceived";
-            this.lbl_Titre_Chart_BytesReceived.Size = new System.Drawing.Size(72, 13);
+            this.lbl_Titre_Chart_BytesReceived.Size = new System.Drawing.Size(73, 13);
             this.lbl_Titre_Chart_BytesReceived.TabIndex = 222;
             this.lbl_Titre_Chart_BytesReceived.Text = "Byte received";
             // 
@@ -200,9 +209,10 @@
             // 
             this.lbl_Titre_Chart_BytesSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Titre_Chart_BytesSent.AutoSize = true;
+            this.lbl_Titre_Chart_BytesSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titre_Chart_BytesSent.Location = new System.Drawing.Point(6, 208);
             this.lbl_Titre_Chart_BytesSent.Name = "lbl_Titre_Chart_BytesSent";
-            this.lbl_Titre_Chart_BytesSent.Size = new System.Drawing.Size(56, 13);
+            this.lbl_Titre_Chart_BytesSent.Size = new System.Drawing.Size(58, 13);
             this.lbl_Titre_Chart_BytesSent.TabIndex = 223;
             this.lbl_Titre_Chart_BytesSent.Text = "Bytes sent";
             // 
@@ -210,9 +220,10 @@
             // 
             this.lbl_Titre_Chart_PacketsReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Titre_Chart_PacketsReceived.AutoSize = true;
+            this.lbl_Titre_Chart_PacketsReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titre_Chart_PacketsReceived.Location = new System.Drawing.Point(6, 252);
             this.lbl_Titre_Chart_PacketsReceived.Name = "lbl_Titre_Chart_PacketsReceived";
-            this.lbl_Titre_Chart_PacketsReceived.Size = new System.Drawing.Size(90, 13);
+            this.lbl_Titre_Chart_PacketsReceived.Size = new System.Drawing.Size(88, 13);
             this.lbl_Titre_Chart_PacketsReceived.TabIndex = 224;
             this.lbl_Titre_Chart_PacketsReceived.Text = "Packets received";
             // 
@@ -220,9 +231,10 @@
             // 
             this.lbl_Titre_Chart_PacketsSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbl_Titre_Chart_PacketsSent.AutoSize = true;
+            this.lbl_Titre_Chart_PacketsSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Titre_Chart_PacketsSent.Location = new System.Drawing.Point(6, 294);
             this.lbl_Titre_Chart_PacketsSent.Name = "lbl_Titre_Chart_PacketsSent";
-            this.lbl_Titre_Chart_PacketsSent.Size = new System.Drawing.Size(69, 13);
+            this.lbl_Titre_Chart_PacketsSent.Size = new System.Drawing.Size(68, 13);
             this.lbl_Titre_Chart_PacketsSent.TabIndex = 225;
             this.lbl_Titre_Chart_PacketsSent.Text = "Packets sent";
             // 
