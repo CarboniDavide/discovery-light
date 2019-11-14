@@ -11,7 +11,7 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Audio : UserControl
+    public partial class _Audio : DevicePanel
     {
         public _Audio()
         {

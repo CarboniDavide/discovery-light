@@ -12,7 +12,7 @@ using DiscoveryLight.Core.Device.Performance;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Memory : UserControl
+    public partial class _Memory : DevicePanel
     {
         public _Memory()
         {

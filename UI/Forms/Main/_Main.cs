@@ -17,12 +17,6 @@ namespace DiscoveryLight.UI.Forms.Main
         public _Main()
         {
             InitializeComponent();
-            this.LoadFirstDevice();
-        }
-
-        private void LoadFirstDevice()
-        {
-            this.DeviceContainer.Controls.Add(new Panels.Devices._Network());
         }
     }
 }

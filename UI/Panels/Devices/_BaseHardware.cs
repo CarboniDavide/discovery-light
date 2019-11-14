@@ -13,7 +13,7 @@ using System.Threading;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _BaseHardware : UserControl
+    public partial class _BaseHardware : DevicePanel
     {
         public _BaseHardware()
         {

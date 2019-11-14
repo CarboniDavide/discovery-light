@@ -11,7 +11,7 @@ using DiscoveryLight.Core.Device.Data;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Video: UserControl
+    public partial class _Video: DevicePanel
     {
         public _Video()
         {

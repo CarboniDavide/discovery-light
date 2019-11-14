@@ -32,19 +32,19 @@ namespace DiscoveryLight.UI.Forms.Main
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Main));
-            this.DeviceContainer = new System.Windows.Forms.Panel();
+            this.DevicePanelContainer = new System.Windows.Forms.Panel();
             this.FooterBar = new DiscoveryLight.UI.Forms.Main._Footer();
             this.NavigationBar = new DiscoveryLight.UI.Forms.Main._Navigation();
             this.SuspendLayout();
             // 
-            // DeviceContainer
+            // DevicePanelContainer
             // 
-            this.DeviceContainer.AutoSize = true;
-            this.DeviceContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DeviceContainer.Location = new System.Drawing.Point(40, 0);
-            this.DeviceContainer.Name = "DeviceContainer";
-            this.DeviceContainer.Size = new System.Drawing.Size(630, 360);
-            this.DeviceContainer.TabIndex = 3;
+            this.DevicePanelContainer.AutoSize = true;
+            this.DevicePanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DevicePanelContainer.Location = new System.Drawing.Point(40, 0);
+            this.DevicePanelContainer.Name = "DevicePanelContainer";
+            this.DevicePanelContainer.Size = new System.Drawing.Size(630, 360);
+            this.DevicePanelContainer.TabIndex = 3;
             // 
             // FooterBar
             // 
@@ -69,7 +69,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 400);
-            this.Controls.Add(this.DeviceContainer);
+            this.Controls.Add(this.DevicePanelContainer);
             this.Controls.Add(this.FooterBar);
             this.Controls.Add(this.NavigationBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -86,6 +86,6 @@ namespace DiscoveryLight.UI.Forms.Main
         public _Footer FooterBar;
         public _Navigation NavigationBar;
         public _UserSettings UserSettings;
-        public System.Windows.Forms.Panel DeviceContainer;
+        public System.Windows.Forms.Panel DevicePanelContainer;
     }
 }

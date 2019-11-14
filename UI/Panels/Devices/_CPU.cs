@@ -13,7 +13,7 @@ using WinformComponents;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _CPU : UserControl
+    public partial class _CPU : DevicePanel
     {
         public _CPU()
         {

@@ -12,7 +12,7 @@ using DiscoveryLight.Core.Device.Performance;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _Network : UserControl
+    public partial class _Network : DevicePanel
     {
         public _Network()
         {

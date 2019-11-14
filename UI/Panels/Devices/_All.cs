@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public partial class _All : UserControl
+    public partial class _All : DevicePanel
     {
         public _All()
         {
