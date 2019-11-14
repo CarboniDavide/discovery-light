@@ -97,6 +97,12 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.Designer.cs">
       <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_NetworkDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_NetworkDeviceDataControl.Designer.cs">
+      <DependentUpon>_NetworkDeviceDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalDiskDeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.Designer.cs">
       <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_NetworkDevicePerformanceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_NetworkDevicePerformanceControl.Designer.cs">
+      <DependentUpon>_NetworkDevicePerformanceControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_PhysicalDiskDevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
@@ -279,6 +291,9 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.resx">
       <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_NetworkDeviceDataControl.resx">
+      <DependentUpon>_NetworkDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalDiskDeviceDataControl.resx">
       <DependentUpon>_PhysicalDiskDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -293,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.resx">
       <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_NetworkDevicePerformanceControl.resx">
+      <DependentUpon>_NetworkDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_PhysicalDiskDevicePerformanceControl.resx">
       <DependentUpon>_PhysicalDiskDevicePerformanceControl.cs</DependentUpon>
@@ -329,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Memory.resx">
       <DependentUpon>_Memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Network.resx">
+      <DependentUpon>_Network.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.resx">
       <DependentUpon>_PhysicalDisk.cs</DependentUpon>
