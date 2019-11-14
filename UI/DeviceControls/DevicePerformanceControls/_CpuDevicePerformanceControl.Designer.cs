@@ -53,11 +53,12 @@
             // 
             // lbl_CpuSpeed_Value
             // 
-            this.lbl_CpuSpeed_Value.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(203, 93);
+            this.lbl_CpuSpeed_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_CpuSpeed_Value.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(184, 93);
             this.lbl_CpuSpeed_Value.Name = "lbl_CpuSpeed_Value";
             this.lbl_CpuSpeed_Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_CpuSpeed_Value.Size = new System.Drawing.Size(52, 13);
+            this.lbl_CpuSpeed_Value.Size = new System.Drawing.Size(71, 13);
             this.lbl_CpuSpeed_Value.TabIndex = 78;
             this.lbl_CpuSpeed_Value.Text = "n/a";
             this.lbl_CpuSpeed_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
