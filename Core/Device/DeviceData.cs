@@ -487,6 +487,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String Manufacturer;
             public String Speed;
             public String MACAddresse;
+            public String AdapterType;
         }
 
         private List<ManagementObject> collection;
@@ -512,6 +513,7 @@ namespace DiscoveryLight.Core.Device.Data
                 t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
                 t.Speed = DeviceUtils.GetProperty("Speed", mj, DeviceUtils.ReturnType.String);
                 t.MACAddresse = DeviceUtils.GetProperty("MACAddress", mj, DeviceUtils.ReturnType.String);
+                t.AdapterType = DeviceUtils.GetProperty("AdapterType", mj, DeviceUtils.ReturnType.String);
 
                 Blocks.Add(t);
             }
