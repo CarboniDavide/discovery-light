@@ -299,6 +299,8 @@ namespace DiscoveryLight.Core.Device.Performance
 
         private string selectedNetwork;
 
+        public string SelectedNetwork { get => selectedNetwork; set => selectedNetwork = value; }
+
         public void GetPerformance()
         {
             if (this.selectedNetwork == null) return;
