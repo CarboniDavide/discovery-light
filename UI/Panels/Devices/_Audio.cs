@@ -37,7 +37,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             // get name from selected
             int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
             string selected = this.cmb_Blocks.SelectedItem.ToString();
-            int l = selected.Length - indexSize + 1;
             string name = selected.Substring( indexSize + 1, selected.Length-indexSize-1);
             this.AudioDeviceDataControl.CurrentSubDevice = this.AudioDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(name)).FirstOrDefault();
         }
