@@ -61,7 +61,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             StopPerformance();
             SetToken();
-            await Run();
+            Run();
         }
 
         public async Task Run()
