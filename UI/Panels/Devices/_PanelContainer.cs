@@ -32,7 +32,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         public void RemovePanel()
         {
             if (this.Controls.Count == 0) return;
-            this.CurrentPanel.StopLoadedPerformance();
+            this.CurrentPanel.StopLoadedTask();
             this.Controls.Clear();
         }
     }
