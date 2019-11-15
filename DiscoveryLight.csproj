@@ -206,14 +206,14 @@
       <DependentUpon>_SplachScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\_FormsCollection.cs" />
-    <Compile Include="UI\Panels\Details\BasePanel.cs">
+    <Compile Include="UI\Panels\Details\BaseSubPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Container.cs">
+    <Compile Include="UI\Panels\Details\_Details.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Container.Designer.cs">
-      <DependentUpon>_Container.cs</DependentUpon>
+    <Compile Include="UI\Panels\Details\_Details.Designer.cs">
+      <DependentUpon>_Details.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Details\_Classes.cs">
       <SubType>UserControl</SubType>
@@ -221,11 +221,17 @@
     <Compile Include="UI\Panels\Details\_Classes.Designer.cs">
       <DependentUpon>_Classes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Details.cs">
+    <Compile Include="UI\Panels\Details\_ClassDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Details.Designer.cs">
-      <DependentUpon>_Details.cs</DependentUpon>
+    <Compile Include="UI\Panels\Details\_ClassDetails.Designer.cs">
+      <DependentUpon>_ClassDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Container.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Container.Designer.cs">
+      <DependentUpon>_Container.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Details\_NameSpace.cs">
       <SubType>UserControl</SubType>
@@ -379,8 +385,14 @@
     <EmbeddedResource Include="UI\Panels\Details\_Details.resx">
       <DependentUpon>_Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_ClassDetails.resx">
+      <DependentUpon>_ClassDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_NameSpace.resx">
       <DependentUpon>_NameSpace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_Navigation.resx">
+      <DependentUpon>_Navigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Audio.resx">
       <DependentUpon>_Audio.cs</DependentUpon>
