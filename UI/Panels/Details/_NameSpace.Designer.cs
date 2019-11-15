@@ -39,7 +39,7 @@
             this.lst_NameSpace.FormattingEnabled = true;
             this.lst_NameSpace.Location = new System.Drawing.Point(0, 0);
             this.lst_NameSpace.Name = "lst_NameSpace";
-            this.lst_NameSpace.Size = new System.Drawing.Size(630, 360);
+            this.lst_NameSpace.Size = new System.Drawing.Size(630, 327);
             this.lst_NameSpace.TabIndex = 0;
             // 
             // _NameSpace
@@ -48,7 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lst_NameSpace);
             this.Name = "_NameSpace";
-            this.Size = new System.Drawing.Size(630, 360);
+            this.Size = new System.Drawing.Size(630, 327);
             this.ResumeLayout(false);
 
         }
