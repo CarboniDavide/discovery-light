@@ -10,12 +10,17 @@ using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public class DevicePanel: UserControl
+
+    public abstract class AbstractDevicePanel: UserControl
+    {
+        public abstract void StopLoadedTask();
+
+    }
+    public class DevicePanel: AbstractDevicePanel
     {
         public List<DevicePerformance> LoadedPerformance;
-        
 
-        public void StopLoadedPerformance()
+        public override void StopLoadedTask()
         {
             foreach (Control c in this.Controls)
             {
