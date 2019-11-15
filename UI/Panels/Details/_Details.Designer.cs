@@ -28,25 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lst_Details = new System.Windows.Forms.ListBox();
+            this.Navigation = new DiscoveryLight.UI.Panels.Details._Navigation();
+            this.Container = new DiscoveryLight.UI.Panels.Details._Container();
             this.SuspendLayout();
             // 
-            // lst_Details
+            // Navigation
             // 
-            this.lst_Details.BackColor = System.Drawing.SystemColors.Control;
-            this.lst_Details.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lst_Details.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lst_Details.FormattingEnabled = true;
-            this.lst_Details.Location = new System.Drawing.Point(0, 0);
-            this.lst_Details.Name = "lst_Details";
-            this.lst_Details.Size = new System.Drawing.Size(630, 360);
-            this.lst_Details.TabIndex = 0;
+            this.Navigation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Navigation.Location = new System.Drawing.Point(0, 0);
+            this.Navigation.Name = "Navigation";
+            this.Navigation.Size = new System.Drawing.Size(630, 33);
+            this.Navigation.TabIndex = 0;
+            // 
+            // Container
+            // 
+            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Container.Location = new System.Drawing.Point(0, 33);
+            this.Container.Name = "Container";
+            this.Container.Size = new System.Drawing.Size(630, 327);
+            this.Container.TabIndex = 1;
             // 
             // _Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lst_Details);
+            this.Controls.Add(this.Container);
+            this.Controls.Add(this.Navigation);
             this.Name = "_Details";
             this.Size = new System.Drawing.Size(630, 360);
             this.ResumeLayout(false);
@@ -55,6 +62,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox lst_Details;
+        private _Navigation Navigation;
+        private _Container Container;
     }
 }
