@@ -40,7 +40,7 @@
             // chartCpuUsage
             // 
             this.chartCpuUsage.Activated = true;
-            this.chartCpuUsage.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.chartCpuUsage.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.chartCpuUsage.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartCpuUsage.CircleFillColor = System.Drawing.Color.DeepSkyBlue;
             this.chartCpuUsage.FillSize = 25;
@@ -53,9 +53,9 @@
             // 
             // lbl_CpuSpeed_Value
             // 
-            this.lbl_CpuSpeed_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.lbl_CpuSpeed_Value.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CpuSpeed_Value.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(184, 93);
+            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(184, 92);
             this.lbl_CpuSpeed_Value.Name = "lbl_CpuSpeed_Value";
             this.lbl_CpuSpeed_Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_CpuSpeed_Value.Size = new System.Drawing.Size(71, 13);
@@ -65,7 +65,7 @@
             // 
             // lbl_CpuSpeed
             // 
-            this.lbl_CpuSpeed.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbl_CpuSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CpuSpeed.AutoSize = true;
             this.lbl_CpuSpeed.Location = new System.Drawing.Point(140, 93);
             this.lbl_CpuSpeed.Name = "lbl_CpuSpeed";
@@ -75,7 +75,8 @@
             // 
             // pnl_Threads
             // 
-            this.pnl_Threads.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pnl_Threads.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_Threads.Location = new System.Drawing.Point(9, 142);
             this.pnl_Threads.Name = "pnl_Threads";
             this.pnl_Threads.Size = new System.Drawing.Size(269, 160);
@@ -83,7 +84,7 @@
             // 
             // pic_Divisor_002
             // 
-            this.pic_Divisor_002.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pic_Divisor_002.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_Divisor_002.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.pic_Divisor_002.Location = new System.Drawing.Point(135, 43);
             this.pic_Divisor_002.Name = "pic_Divisor_002";
@@ -93,7 +94,7 @@
             // 
             // _SystemDevicePerformanceControl1
             // 
-            this._SystemDevicePerformanceControl1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this._SystemDevicePerformanceControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this._SystemDevicePerformanceControl1.BackColor = System.Drawing.Color.Transparent;
             this._SystemDevicePerformanceControl1.CurrentPerformance = null;
             this._SystemDevicePerformanceControl1.CurrentSubDevice = 0;
