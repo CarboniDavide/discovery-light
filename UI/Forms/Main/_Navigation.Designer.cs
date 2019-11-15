@@ -72,6 +72,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Settings.Size = new System.Drawing.Size(40, 40);
             this.cmd_Settings.TabIndex = 13;
             this.cmd_Settings.ToolDescription = this.toolTip_Description;
+            this.toolTip_Description.SetToolTip(this.cmd_Settings, "Settings");
             this.cmd_Settings.UseVisualStyleBackColor = false;
             // 
             // cmd_Connectivite
@@ -90,6 +91,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Connectivite.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Connectivite, "All WMI Class");
             this.cmd_Connectivite.UseVisualStyleBackColor = true;
+            this.cmd_Connectivite.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Reseau
             // 
