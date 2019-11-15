@@ -12,7 +12,7 @@ using DiscoveryLight.Logging;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
-    public partial class _Classes : BasePanel
+    public partial class _Classes : BaseSubPanel
     {
         public _Classes()
         {
