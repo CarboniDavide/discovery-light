@@ -4,7 +4,7 @@ Discovery allows you to review all kinds of detailed data about various areas of
 <table>
   <tr>
     <td>
-      <img src="/img/Screenshot.PNG" height="450px" border="1px solid black">
+      <img src="/Img/Screenshot.PNG" height="450px" border="1px solid black">
     </td>
   </tr>
 </table>
