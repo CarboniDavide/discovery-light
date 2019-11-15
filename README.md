@@ -9,7 +9,6 @@ Discovery allows you to review all kinds of detailed data about various areas of
   </tr>
 </table>
 
-More information in documentation (french).
 ## Author
 Davide Carboni
 ## System requirements
