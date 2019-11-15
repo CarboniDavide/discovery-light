@@ -9,20 +9,17 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
-    public abstract class AbstractBasePanel : DevicePanel
+    public abstract class AbstractBaseSubPanel : UserControl
     {
         protected ListBox ListBoxValues;
 
         public abstract void InitAndRun(ListBox ListBoxValues);
         public abstract void FillInListBox();
         public abstract IEnumerable<String> Get();
-        public override void StopLoadedTask()
-        {
-            base.StopLoadedTask();
-        }
+        public abstract void StopLoadedSubTask();
     }
 
-    public class BasePanel: AbstractBasePanel
+    public class BaseSubPanel: AbstractBaseSubPanel
     {
         private CancellationTokenSource tokenSource;
         private CancellationToken token;
@@ -46,9 +43,8 @@ namespace DiscoveryLight.UI.Panels.Details
             return null;
         }
 
-        public override void StopLoadedTask()
+        public override void StopLoadedSubTask()
         {
-            base.StopLoadedTask();
             if (token != null && tokenSource != null)
                 tokenSource.Cancel();
         }
@@ -63,12 +59,12 @@ namespace DiscoveryLight.UI.Panels.Details
         public override void InitAndRun(ListBox ListBoxValues)
         {
             this.ListBoxValues = ListBoxValues;
-            StopLoadedTask();
+            StopLoadedSubTask();
             SetToken();
             FillInListBox();
         }
 
-        public BasePanel()
+        public BaseSubPanel()
         {
             SetToken();
         }
