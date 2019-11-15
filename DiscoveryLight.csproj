@@ -252,6 +252,12 @@
     <Compile Include="UI\Panels\Devices\_Network.Designer.cs">
       <DependentUpon>_Network.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Panels\Devices\_PanelContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Devices\_PanelContainer.Designer.cs">
+      <DependentUpon>_PanelContainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\Devices\_PhysicalDisk.cs">
       <SubType>UserControl</SubType>
     </Compile>
