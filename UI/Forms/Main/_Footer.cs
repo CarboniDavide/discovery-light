@@ -16,5 +16,10 @@ namespace DiscoveryLight.UI.Forms.Main
         {
             InitializeComponent();
         }
+
+        public void ChangeTitle(string title)
+        {
+            this.lbl_DeviceName.Text = title;
+        }
     }
 }
