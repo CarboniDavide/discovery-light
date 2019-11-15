@@ -209,12 +209,6 @@
     <Compile Include="UI\Panels\Details\BaseSubPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Details.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Details\_Details.Designer.cs">
-      <DependentUpon>_Details.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Panels\Details\_Classes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -381,9 +375,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_Classes.resx">
       <DependentUpon>_Classes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Details\_Details.resx">
-      <DependentUpon>_Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_ClassDetails.resx">
       <DependentUpon>_ClassDetails.cs</DependentUpon>
