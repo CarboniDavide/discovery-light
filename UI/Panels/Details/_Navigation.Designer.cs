@@ -53,12 +53,13 @@
             this.cmd_NameSpace.BackColor = System.Drawing.Color.LimeGreen;
             this.cmd_NameSpace.FlatAppearance.BorderSize = 0;
             this.cmd_NameSpace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmd_NameSpace.Location = new System.Drawing.Point(0, 0);
+            this.cmd_NameSpace.Location = new System.Drawing.Point(3, 3);
             this.cmd_NameSpace.Name = "cmd_NameSpace";
-            this.cmd_NameSpace.Size = new System.Drawing.Size(99, 30);
+            this.cmd_NameSpace.Size = new System.Drawing.Size(99, 27);
             this.cmd_NameSpace.TabIndex = 220;
             this.cmd_NameSpace.Text = "Name Space";
             this.cmd_NameSpace.UseVisualStyleBackColor = false;
+            this.cmd_NameSpace.Click += new System.EventHandler(this.cmd_NameSpace_Click);
             // 
             // cmd_Classe
             // 
@@ -68,12 +69,13 @@
             this.cmd_Classe.BackColor = System.Drawing.Color.LimeGreen;
             this.cmd_Classe.FlatAppearance.BorderSize = 0;
             this.cmd_Classe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmd_Classe.Location = new System.Drawing.Point(102, 0);
+            this.cmd_Classe.Location = new System.Drawing.Point(105, 3);
             this.cmd_Classe.Name = "cmd_Classe";
-            this.cmd_Classe.Size = new System.Drawing.Size(79, 30);
+            this.cmd_Classe.Size = new System.Drawing.Size(79, 27);
             this.cmd_Classe.TabIndex = 221;
             this.cmd_Classe.Text = "Classes";
             this.cmd_Classe.UseVisualStyleBackColor = false;
+            this.cmd_Classe.Click += new System.EventHandler(this.cmd_Classe_Click);
             // 
             // cmd_Details
             // 
@@ -83,9 +85,9 @@
             this.cmd_Details.BackColor = System.Drawing.Color.LimeGreen;
             this.cmd_Details.FlatAppearance.BorderSize = 0;
             this.cmd_Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmd_Details.Location = new System.Drawing.Point(184, 0);
+            this.cmd_Details.Location = new System.Drawing.Point(187, 3);
             this.cmd_Details.Name = "cmd_Details";
-            this.cmd_Details.Size = new System.Drawing.Size(79, 30);
+            this.cmd_Details.Size = new System.Drawing.Size(79, 27);
             this.cmd_Details.TabIndex = 222;
             this.cmd_Details.Text = "Details";
             this.cmd_Details.UseVisualStyleBackColor = false;
@@ -100,6 +102,7 @@
             this.Controls.Add(this.pic_Divisor_001);
             this.Name = "_Navigation";
             this.Size = new System.Drawing.Size(426, 33);
+            this.Load += new System.EventHandler(this._Navigation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
