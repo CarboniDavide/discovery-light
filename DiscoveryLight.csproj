@@ -403,5 +403,8 @@
     <None Include="Resources\Connexion.png" />
     <None Include="Resources\Pc.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Img\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
