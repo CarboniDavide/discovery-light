@@ -28,10 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
+            this.cmd_NameSpace = new System.Windows.Forms.Button();
+            this.cmd_Classe = new System.Windows.Forms.Button();
+            this.cmd_Details = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pic_Divisor_001
+            // 
+            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pic_Divisor_001.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pic_Divisor_001.Location = new System.Drawing.Point(0, 32);
+            this.pic_Divisor_001.Name = "pic_Divisor_001";
+            this.pic_Divisor_001.Size = new System.Drawing.Size(426, 1);
+            this.pic_Divisor_001.TabIndex = 219;
+            this.pic_Divisor_001.TabStop = false;
+            // 
+            // cmd_NameSpace
+            // 
+            this.cmd_NameSpace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmd_NameSpace.AutoSize = true;
+            this.cmd_NameSpace.BackColor = System.Drawing.Color.LimeGreen;
+            this.cmd_NameSpace.FlatAppearance.BorderSize = 0;
+            this.cmd_NameSpace.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmd_NameSpace.Location = new System.Drawing.Point(0, 0);
+            this.cmd_NameSpace.Name = "cmd_NameSpace";
+            this.cmd_NameSpace.Size = new System.Drawing.Size(99, 30);
+            this.cmd_NameSpace.TabIndex = 220;
+            this.cmd_NameSpace.Text = "Name Space";
+            this.cmd_NameSpace.UseVisualStyleBackColor = false;
+            // 
+            // cmd_Classe
+            // 
+            this.cmd_Classe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmd_Classe.AutoSize = true;
+            this.cmd_Classe.BackColor = System.Drawing.Color.LimeGreen;
+            this.cmd_Classe.FlatAppearance.BorderSize = 0;
+            this.cmd_Classe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmd_Classe.Location = new System.Drawing.Point(102, 0);
+            this.cmd_Classe.Name = "cmd_Classe";
+            this.cmd_Classe.Size = new System.Drawing.Size(79, 30);
+            this.cmd_Classe.TabIndex = 221;
+            this.cmd_Classe.Text = "Classes";
+            this.cmd_Classe.UseVisualStyleBackColor = false;
+            // 
+            // cmd_Details
+            // 
+            this.cmd_Details.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmd_Details.AutoSize = true;
+            this.cmd_Details.BackColor = System.Drawing.Color.LimeGreen;
+            this.cmd_Details.FlatAppearance.BorderSize = 0;
+            this.cmd_Details.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmd_Details.Location = new System.Drawing.Point(184, 0);
+            this.cmd_Details.Name = "cmd_Details";
+            this.cmd_Details.Size = new System.Drawing.Size(79, 30);
+            this.cmd_Details.TabIndex = 222;
+            this.cmd_Details.Text = "Details";
+            this.cmd_Details.UseVisualStyleBackColor = false;
+            // 
+            // _Navigation
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmd_Details);
+            this.Controls.Add(this.cmd_Classe);
+            this.Controls.Add(this.cmd_NameSpace);
+            this.Controls.Add(this.pic_Divisor_001);
+            this.Name = "_Navigation";
+            this.Size = new System.Drawing.Size(426, 33);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pic_Divisor_001;
+        public System.Windows.Forms.Button cmd_NameSpace;
+        public System.Windows.Forms.Button cmd_Classe;
+        public System.Windows.Forms.Button cmd_Details;
     }
 }
