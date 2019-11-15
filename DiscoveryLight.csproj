@@ -227,11 +227,11 @@
     <Compile Include="UI\Panels\Details\_ClassDetails.Designer.cs">
       <DependentUpon>_ClassDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Container.cs">
+    <Compile Include="UI\Panels\Details\_SubPanelContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Container.Designer.cs">
-      <DependentUpon>_Container.cs</DependentUpon>
+    <Compile Include="UI\Panels\Details\_SubPanelContainer.Designer.cs">
+      <DependentUpon>_SubPanelContainer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Details\_NameSpace.cs">
       <SubType>UserControl</SubType>
