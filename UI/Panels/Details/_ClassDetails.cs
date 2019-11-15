@@ -14,9 +14,14 @@ namespace DiscoveryLight.UI.Panels.Details
 {
     public partial class _ClassDetails : BaseSubPanel
     {
-        public _ClassDetails()
+        private String nameSpace;
+        private String wmiClass;
+
+        public _ClassDetails(String nameSpace, String wmiClass)
         {
             InitializeComponent();
+            this.nameSpace = nameSpace;
+            this.wmiClass = wmiClass;
             InitAndRun(this.lst_Details);
         }
 
@@ -28,7 +33,7 @@ namespace DiscoveryLight.UI.Panels.Details
 
             try
             {
-                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\CIMV2"), new WqlObjectQuery("select * from CIM_ProcessExecutable"), null);
+                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + this.nameSpace), new WqlObjectQuery("select * from "+ this.wmiClass), null);
             }
             catch (ManagementException e)
             {

@@ -39,16 +39,16 @@
             this.lst_Details.FormattingEnabled = true;
             this.lst_Details.Location = new System.Drawing.Point(0, 0);
             this.lst_Details.Name = "lst_Details";
-            this.lst_Details.Size = new System.Drawing.Size(630, 360);
+            this.lst_Details.Size = new System.Drawing.Size(630, 327);
             this.lst_Details.TabIndex = 0;
             // 
-            // _Details
+            // _ClassDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lst_Details);
-            this.Name = "_Details";
-            this.Size = new System.Drawing.Size(630, 360);
+            this.Name = "_ClassDetails";
+            this.Size = new System.Drawing.Size(630, 327);
             this.ResumeLayout(false);
 
         }
