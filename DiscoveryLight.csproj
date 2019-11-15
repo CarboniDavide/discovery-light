@@ -206,16 +206,43 @@
       <DependentUpon>_SplachScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\_FormsCollection.cs" />
+    <Compile Include="UI\Panels\Details\BasePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Container.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Container.Designer.cs">
+      <DependentUpon>_Container.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Classes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Classes.Designer.cs">
+      <DependentUpon>_Classes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Details.Designer.cs">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_NameSpace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_NameSpace.Designer.cs">
+      <DependentUpon>_NameSpace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Navigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Navigation.Designer.cs">
+      <DependentUpon>_Navigation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\Devices\DevicePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Panels\Devices\PanelCollection.cs" />
-    <Compile Include="UI\Panels\Devices\_All.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Devices\_All.Designer.cs">
-      <DependentUpon>_All.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Panels\Devices\_Audio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -345,6 +372,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\SplachScreen\_SplachScreen.resx">
       <DependentUpon>_SplachScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_Classes.resx">
+      <DependentUpon>_Classes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_Details.resx">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_NameSpace.resx">
+      <DependentUpon>_NameSpace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Audio.resx">
       <DependentUpon>_Audio.cs</DependentUpon>
