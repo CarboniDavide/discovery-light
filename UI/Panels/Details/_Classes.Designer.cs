@@ -39,7 +39,7 @@
             this.lst_Classe.FormattingEnabled = true;
             this.lst_Classe.Location = new System.Drawing.Point(0, 0);
             this.lst_Classe.Name = "lst_Classe";
-            this.lst_Classe.Size = new System.Drawing.Size(630, 360);
+            this.lst_Classe.Size = new System.Drawing.Size(630, 327);
             this.lst_Classe.TabIndex = 0;
             // 
             // _Classes
@@ -48,7 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lst_Classe);
             this.Name = "_Classes";
-            this.Size = new System.Drawing.Size(630, 360);
+            this.Size = new System.Drawing.Size(630, 327);
             this.ResumeLayout(false);
 
         }
