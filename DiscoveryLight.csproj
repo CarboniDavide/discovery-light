@@ -388,6 +388,7 @@
     <None Include="Resources\CS.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
     <None Include="Resources\Performancs.png" />
     <None Include="Resources\SaveToText_bis.png" />
@@ -403,8 +404,6 @@
     <None Include="Resources\Connexion.png" />
     <None Include="Resources\Pc.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Img\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
