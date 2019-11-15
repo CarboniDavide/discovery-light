@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Navigation = new DiscoveryLight.UI.Panels.Details._Navigation();
-            this.Container = new DiscoveryLight.UI.Panels.Details._SubPanelContainer();
+            this.SubPanelContainer = new DiscoveryLight.UI.Panels.Details._SubPanelContainer();
             this.SuspendLayout();
             // 
             // Navigation
@@ -42,17 +42,17 @@
             // 
             // Container
             // 
-            this.Container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Container.Location = new System.Drawing.Point(0, 33);
-            this.Container.Name = "Container";
-            this.Container.Size = new System.Drawing.Size(630, 327);
-            this.Container.TabIndex = 1;
+            this.SubPanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SubPanelContainer.Location = new System.Drawing.Point(0, 33);
+            this.SubPanelContainer.Name = "Container";
+            this.SubPanelContainer.Size = new System.Drawing.Size(630, 327);
+            this.SubPanelContainer.TabIndex = 1;
             // 
             // _Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.Container);
+            this.Controls.Add(this.SubPanelContainer);
             this.Controls.Add(this.Navigation);
             this.Name = "_Details";
             this.Size = new System.Drawing.Size(630, 360);
@@ -63,6 +63,6 @@
         #endregion
 
         private _Navigation Navigation;
-        private _SubPanelContainer Container;
+        private _SubPanelContainer SubPanelContainer;
     }
 }

@@ -21,7 +21,7 @@ namespace DiscoveryLight.UI.Panels.Details
         {
             base.StopLoadedTask();
          
-            foreach (Control c in this.Container.Controls)
+            foreach (Control c in this.SubPanelContainer.Controls)
             {
                 if (c.GetType().BaseType.FullName == typeof(BaseSubPanel).ToString())
                 {

@@ -30,7 +30,6 @@ namespace DiscoveryLight.UI.Panels.Details
 
         private void _Navigation_Load(object sender, EventArgs e)
         {
-            subPanelContainer.LoadSubPanel(new _NameSpace());
         }
     }
 }
