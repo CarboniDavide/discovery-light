@@ -42,11 +42,9 @@ namespace DiscoveryLight.Core.Device.Utils
         static public List<ManagementObject> GetDriveInfo(string drive)
         {
             try{
-                ManagementObjectSearcher collection;
-                List<ManagementObject> res;
                 // get all drive informaton from a selected one
-                collection = new ManagementObjectSearcher(PATH, "select * from " + drive);
-                res = collection.Get().Cast<ManagementObject>().ToList();
+                var collection = new ManagementObjectSearcher(PATH, "select * from " + drive);
+                var res = collection.Get().Cast<ManagementObject>().ToList();
                 collection.Dispose();
                 return res;
             }
@@ -65,10 +63,9 @@ namespace DiscoveryLight.Core.Device.Utils
         {
             try
             {
-                ManagementObjectSearcher collection;
-                List<ManagementObject> res = new List<ManagementObject>();
-                // get all drive informaton from a selected one
-                collection = new ManagementObjectSearcher(PATH, "Select * From " + drive);
+                var res = new List<ManagementObject>();
+                var collection = new ManagementObjectSearcher(PATH, "Select * From " + drive);
+
                 foreach(ManagementObject mj in collection.Get().Cast<ManagementObject>().ToList()){
                     if ( ( comp == Operator.Egual) && (mj[property].ToString().Equals(value)) )
                         res.Add(mj);
