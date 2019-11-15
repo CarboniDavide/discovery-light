@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Navigation = new DiscoveryLight.UI.Panels.Details._Navigation();
-            this.Container = new DiscoveryLight.UI.Panels.Details._Container();
+            this.Container = new DiscoveryLight.UI.Panels.Details._SubPanelContainer();
             this.SuspendLayout();
             // 
             // Navigation
@@ -63,6 +63,6 @@
         #endregion
 
         private _Navigation Navigation;
-        private _Container Container;
+        private _SubPanelContainer Container;
     }
 }
