@@ -1,6 +1,6 @@
 ﻿namespace DiscoveryLight.UI.Panels.Details
 {
-    partial class _Navigation
+    partial class _SubNavigation
     {
         /// <summary> 
         /// Required designer variable.
