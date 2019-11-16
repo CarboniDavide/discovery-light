@@ -221,6 +221,12 @@
     <Compile Include="UI\Panels\Details\_ClassDetails.Designer.cs">
       <DependentUpon>_ClassDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Panels\Details\_Details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_Details.Designer.cs">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\Details\_SubPanelContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -233,11 +239,11 @@
     <Compile Include="UI\Panels\Details\_NameSpace.Designer.cs">
       <DependentUpon>_NameSpace.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Navigation.cs">
+    <Compile Include="UI\Panels\Details\_SubNavigation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Navigation.Designer.cs">
-      <DependentUpon>_Navigation.cs</DependentUpon>
+    <Compile Include="UI\Panels\Details\_SubNavigation.Designer.cs">
+      <DependentUpon>_SubNavigation.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Devices\DevicePanel.cs">
       <SubType>UserControl</SubType>
@@ -379,11 +385,14 @@
     <EmbeddedResource Include="UI\Panels\Details\_ClassDetails.resx">
       <DependentUpon>_ClassDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_Details.resx">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_NameSpace.resx">
       <DependentUpon>_NameSpace.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Details\_Navigation.resx">
-      <DependentUpon>_Navigation.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Panels\Details\_SubNavigation.resx">
+      <DependentUpon>_SubNavigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Audio.resx">
       <DependentUpon>_Audio.cs</DependentUpon>
