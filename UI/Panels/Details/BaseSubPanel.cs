@@ -41,7 +41,6 @@ namespace DiscoveryLight.UI.Panels.Details
                         }));
                 }
             });
-            ListBoxValues.Sorted = true;
         }
 
         public override IEnumerable<String> Get() {

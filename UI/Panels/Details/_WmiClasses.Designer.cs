@@ -40,15 +40,16 @@
             this.lst_Classe.Location = new System.Drawing.Point(0, 0);
             this.lst_Classe.Name = "lst_Classe";
             this.lst_Classe.Size = new System.Drawing.Size(630, 327);
+            this.lst_Classe.Sorted = true;
             this.lst_Classe.TabIndex = 0;
             this.lst_Classe.Click += new System.EventHandler(this.lst_Classe_Click);
             // 
-            // _WMIClasses
+            // _WmiClasses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lst_Classe);
-            this.Name = "_WMIClasses";
+            this.Name = "_WmiClasses";
             this.Size = new System.Drawing.Size(630, 327);
             this.ResumeLayout(false);
 
