@@ -32,11 +32,16 @@ namespace DiscoveryLight.UI.Panels.Details
         public async override void FillInListBox() {
             await Task.Run(() => {
                 foreach (String ns in this.Get())
+                {
+                    if (token.IsCancellationRequested) break;
+
                     this.Invoke((System.Action)(() =>
-                    {
-                        ListBoxValues.Items.Add(ns);
-                    }));
-            }, token);
+                        {
+                            ListBoxValues.Items.Add(ns);
+                        }));
+                }
+            });
+            ListBoxValues.Sorted = true;
         }
 
         public override IEnumerable<String> Get() {
@@ -59,6 +64,7 @@ namespace DiscoveryLight.UI.Panels.Details
         public override void InitAndRun(ListBox ListBoxValues)
         {
             this.ListBoxValues = ListBoxValues;
+            this.ListBoxValues.Items.Clear();
             StopLoadedSubTask();
             SetToken();
             FillInListBox();
