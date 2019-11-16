@@ -12,10 +12,10 @@ using DiscoveryLight.Logging;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
-    public partial class _Classes : BaseSubPanel
+    public partial class _WmiClasses : BaseSubPanel
     {
         private String nameSpace;
-        public _Classes(String nameSpace)
+        public _WmiClasses(String nameSpace)
         {
             InitializeComponent();
             this.nameSpace = nameSpace;
@@ -46,6 +46,16 @@ namespace DiscoveryLight.UI.Panels.Details
                     // Si la classe est dynamique, ajoute les valeurs dans la liste.
                     if (qd.Name.Equals("dynamic") || qd.Name.Equals("static"))
                         yield return wmiClass["__CLASS"].ToString();
+
+            nsClass.Dispose();
+        }
+
+        private void lst_Classe_Click(object sender, EventArgs e)
+        {
+            // get subpanel container
+            var subPanelContainer = this.Parent.Parent.Controls.Cast<Control>().Where(d => d.GetType().FullName.Equals(typeof(_SubPanelContainer).FullName)).FirstOrDefault() as _SubPanelContainer;
+            // load first subpanel in container
+            subPanelContainer.LoadSubPanel(new _WmiDetails(this.nameSpace, this.lst_Classe.SelectedItem.ToString()));
         }
     }
 }

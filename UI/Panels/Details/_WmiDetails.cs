@@ -12,12 +12,12 @@ using DiscoveryLight.Logging;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
-    public partial class _ClassDetails : BaseSubPanel
+    public partial class _WmiDetails : BaseSubPanel
     {
         private String nameSpace;
         private String wmiClass;
 
-        public _ClassDetails(String nameSpace, String wmiClass)
+        public _WmiDetails(String nameSpace, String wmiClass)
         {
             InitializeComponent();
             this.nameSpace = nameSpace;
@@ -69,6 +69,7 @@ namespace DiscoveryLight.UI.Panels.Details
                 }
                 yield return " ";
             }
+            nsClass.Dispose();
         }
     }
 }

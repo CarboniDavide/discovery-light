@@ -1,6 +1,6 @@
 ﻿namespace DiscoveryLight.UI.Panels.Details
 {
-    partial class _ClassDetails
+    partial class _WmiDetails
     {
         /// <summary> 
         /// Required designer variable.

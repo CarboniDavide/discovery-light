@@ -209,17 +209,17 @@
     <Compile Include="UI\Panels\Details\BaseSubPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Classes.cs">
+    <Compile Include="UI\Panels\Details\_WmiClasses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Classes.Designer.cs">
-      <DependentUpon>_Classes.cs</DependentUpon>
+    <Compile Include="UI\Panels\Details\_WmiClasses.Designer.cs">
+      <DependentUpon>_WmiClasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Details\_ClassDetails.cs">
+    <Compile Include="UI\Panels\Details\_WmiDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_ClassDetails.Designer.cs">
-      <DependentUpon>_ClassDetails.cs</DependentUpon>
+    <Compile Include="UI\Panels\Details\_WmiDetails.Designer.cs">
+      <DependentUpon>_WmiDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Details\_Details.cs">
       <SubType>UserControl</SubType>
@@ -233,11 +233,11 @@
     <Compile Include="UI\Panels\Details\_SubPanelContainer.Designer.cs">
       <DependentUpon>_SubPanelContainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Details\_NameSpace.cs">
+    <Compile Include="UI\Panels\Details\_WmiNameSpace.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Details\_NameSpace.Designer.cs">
-      <DependentUpon>_NameSpace.cs</DependentUpon>
+    <Compile Include="UI\Panels\Details\_WmiNameSpace.Designer.cs">
+      <DependentUpon>_WmiNameSpace.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Details\_SubNavigation.cs">
       <SubType>UserControl</SubType>
@@ -379,17 +379,17 @@
     <EmbeddedResource Include="UI\Forms\SplachScreen\_SplachScreen.resx">
       <DependentUpon>_SplachScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Details\_Classes.resx">
-      <DependentUpon>_Classes.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Panels\Details\_WmiClasses.resx">
+      <DependentUpon>_WmiClasses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Details\_ClassDetails.resx">
-      <DependentUpon>_ClassDetails.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Panels\Details\_WmiDetails.resx">
+      <DependentUpon>_WmiDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_Details.resx">
       <DependentUpon>_Details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Details\_NameSpace.resx">
-      <DependentUpon>_NameSpace.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Panels\Details\_WmiNameSpace.resx">
+      <DependentUpon>_WmiNameSpace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_SubNavigation.resx">
       <DependentUpon>_SubNavigation.cs</DependentUpon>

@@ -12,9 +12,9 @@ using DiscoveryLight.Logging;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
-    public partial class _NameSpace : BaseSubPanel
+    public partial class _WmiNameSpace : BaseSubPanel
     {
-        public _NameSpace()
+        public _WmiNameSpace()
         {
             InitializeComponent();
             InitAndRun(this.lst_NameSpace);
@@ -40,7 +40,17 @@ namespace DiscoveryLight.UI.Panels.Details
 
             foreach (ManagementObject ns in nsClass.GetInstances())
                     yield return ns["Name"].ToString().ToUpper();
+
+            nsClass.Dispose();
             
+        }
+
+        private void lst_NameSpace_Click(object sender, EventArgs e)
+        {
+            // get subpanel container
+            var subPanelContainer = this.Parent.Parent.Controls.Cast<Control>().Where(d => d.GetType().FullName.Equals(typeof(_SubPanelContainer).FullName)).FirstOrDefault() as _SubPanelContainer;
+            // load first subpanel in container
+            subPanelContainer.LoadSubPanel(new _WmiClasses(this.lst_NameSpace.SelectedItem.ToString()));
         }
     }
 }
