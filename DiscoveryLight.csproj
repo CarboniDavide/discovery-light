@@ -444,6 +444,7 @@
   <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
+    <None Include="Resources\Sound2.png" />
     <None Include="Resources\Performancs.png" />
     <None Include="Resources\SaveToText_bis.png" />
     <None Include="Resources\SaveToText.png" />

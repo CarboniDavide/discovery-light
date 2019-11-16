@@ -149,7 +149,7 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_Son
             // 
-            this.cmd_Son.BackgroundImage = global::DiscoveryLight.Properties.Resources.Sound;
+            this.cmd_Son.BackgroundImage = global::DiscoveryLight.Properties.Resources.Sound2;
             this.cmd_Son.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.cmd_Son.ButtonFor = "_Audio";
             this.cmd_Son.Device = "Sound";
