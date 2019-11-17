@@ -5,7 +5,6 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DiscoveryLight.UI.Panels.Details;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
@@ -32,7 +31,7 @@ namespace DiscoveryLight.UI.Panels.Devices
                 case "_CPU":
                     return new _CPU();
                 case "_All":
-                    return new _Details();
+                    return new _WmiDetails();
                 default:
                     return new _BaseHardware();
             }

@@ -303,6 +303,12 @@
     <Compile Include="UI\Panels\Devices\_Video.Designer.cs">
       <DependentUpon>_Video.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Panels\Devices\_WmiDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Devices\_WmiDetails.Designer.cs">
+      <DependentUpon>_WmiDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\UserSettings\_UserSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -417,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Video.resx">
       <DependentUpon>_Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_WmiDetails.resx">
+      <DependentUpon>_WmiDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
