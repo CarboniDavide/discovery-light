@@ -221,29 +221,11 @@
     <Compile Include="UI\Panels\Details\_WmiDetails.Designer.cs">
       <DependentUpon>_WmiDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Details\_Details.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Details\_Details.Designer.cs">
-      <DependentUpon>_Details.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Panels\Details\_SubPanelContainer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Details\_SubPanelContainer.Designer.cs">
-      <DependentUpon>_SubPanelContainer.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Panels\Details\_WmiNameSpace.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Panels\Details\_WmiNameSpace.Designer.cs">
       <DependentUpon>_WmiNameSpace.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Panels\Details\_SubNavigation.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Details\_SubNavigation.Designer.cs">
-      <DependentUpon>_SubNavigation.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\Devices\DevicePanel.cs">
       <SubType>UserControl</SubType>
@@ -303,11 +285,11 @@
     <Compile Include="UI\Panels\Devices\_Video.Designer.cs">
       <DependentUpon>_Video.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Panels\Devices\_WmiDetails.cs">
+    <Compile Include="UI\Panels\Devices\_Details.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Panels\Devices\_WmiDetails.Designer.cs">
-      <DependentUpon>_WmiDetails.cs</DependentUpon>
+    <Compile Include="UI\Panels\Devices\_Details.Designer.cs">
+      <DependentUpon>_Details.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\UserSettings\_UserSettings.cs">
       <SubType>UserControl</SubType>
@@ -391,14 +373,8 @@
     <EmbeddedResource Include="UI\Panels\Details\_WmiDetails.resx">
       <DependentUpon>_WmiDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Details\_Details.resx">
-      <DependentUpon>_Details.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_WmiNameSpace.resx">
       <DependentUpon>_WmiNameSpace.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Details\_SubNavigation.resx">
-      <DependentUpon>_SubNavigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Audio.resx">
       <DependentUpon>_Audio.cs</DependentUpon>
@@ -424,8 +400,8 @@
     <EmbeddedResource Include="UI\Panels\Devices\_Video.resx">
       <DependentUpon>_Video.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Devices\_WmiDetails.resx">
-      <DependentUpon>_WmiDetails.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Panels\Devices\_Details.resx">
+      <DependentUpon>_Details.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

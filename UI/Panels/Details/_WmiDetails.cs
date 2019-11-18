@@ -14,26 +14,32 @@ namespace DiscoveryLight.UI.Panels.Details
 {
     public partial class _WmiDetails : BaseSubPanel
     {
-        private String nameSpace;
-        private String wmiClass;
-
-        public _WmiDetails(String nameSpace, String wmiClass)
+        public String NameSpace;
+        public String WmiClassName;
+        public _WmiDetails()
         {
             InitializeComponent();
-            this.nameSpace = nameSpace;
-            this.wmiClass = wmiClass;
-            InitAndRun(this.lst_Details);
+        }
+
+        public override void Init()
+        {
+            base.Init();
+            this.ListValues = this.lst_Details;
+            this.Load();
         }
 
         public override IEnumerable<String> Get()
         {
             base.Get();
 
-            ManagementObjectSearcher nsClass;
+            ManagementObjectSearcher nsClass = null;
+            ManagementObjectCollection collection = null;
 
             try
             {
-                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + this.nameSpace), new WqlObjectQuery("select * from "+ this.wmiClass), null);
+                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + this.NameSpace), new WqlObjectQuery("select * from " + this.WmiClassName), null);
+                collection = nsClass.Get();
+                if (collection.Count == 0) nsClass = null;
             }
             catch (ManagementException e)
             {
@@ -41,35 +47,41 @@ namespace DiscoveryLight.UI.Panels.Details
                 nsClass = null;
             }
 
-            if (nsClass == null) yield return null;
 
-            int count = 0;
-            foreach (ManagementObject wmiObject in nsClass.Get())
+            if (nsClass == null)
+                yield return ("Not Found");
+            else
             {
-                count++;
-                yield return " [" + count.ToString() + "]";
-
-                foreach (PropertyData property in wmiObject.Properties)
+                int count = 0;
+                foreach (ManagementObject wmiObject in collection)
                 {
-                    if (property.Value != null)
+                    count++;
+                    yield return (" [" + count.ToString() + "]");
+
+                    foreach (PropertyData property in wmiObject.Properties)
                     {
-                        if (property.IsArray)
+                        if (property.Value != null)
                         {
-                            yield return (" " + property.Name + ":");
-                            if (property.Type.ToString().Equals("String"))
+                            if (property.IsArray)
                             {
-                                String[] arrConfigOptions = (String[])(wmiObject[property.Name]);
-                                foreach (String arrValue in arrConfigOptions)
-                                    yield return ("    - " + arrValue);
+                                yield return (" " + property.Name + ":");
+                                if (property.Type.ToString().Equals("String"))
+                                {
+                                    String[] arrConfigOptions = (String[])(wmiObject[property.Name]);
+                                    foreach (String arrValue in arrConfigOptions)
+                                        yield return ("    - " + arrValue);
+                                }
                             }
+                            else
+                                yield return (" " + property.Name + " = " + property.Value);
                         }
-                        else
-                            yield return (" " + property.Name + " = " + property.Value);
                     }
+                    yield return (" ");
                 }
-                yield return " ";
+                if (count == 0) yield return ("Not Found");
+                nsClass.Dispose();
+
             }
-            nsClass.Dispose();
         }
     }
 }

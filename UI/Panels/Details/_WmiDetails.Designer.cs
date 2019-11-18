@@ -33,22 +33,22 @@
             // 
             // lst_Details
             // 
-            this.lst_Details.BackColor = System.Drawing.SystemColors.Control;
+            this.lst_Details.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lst_Details.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lst_Details.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lst_Details.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lst_Details.FormattingEnabled = true;
-            this.lst_Details.Location = new System.Drawing.Point(0, 0);
+            this.lst_Details.Location = new System.Drawing.Point(0, 13);
             this.lst_Details.Name = "lst_Details";
-            this.lst_Details.Size = new System.Drawing.Size(630, 327);
+            this.lst_Details.Size = new System.Drawing.Size(630, 247);
             this.lst_Details.TabIndex = 0;
             // 
-            // _ClassDetails
+            // _WmiDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lst_Details);
-            this.Name = "_ClassDetails";
-            this.Size = new System.Drawing.Size(630, 327);
+            this.Name = "_WmiDetails";
+            this.Size = new System.Drawing.Size(630, 260);
             this.ResumeLayout(false);
 
         }

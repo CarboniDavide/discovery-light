@@ -28,34 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lst_NameSpace = new System.Windows.Forms.ListBox();
+            this.lst_NameSpaces = new System.Windows.Forms.ComboBox();
+            this.lbl_Namespace = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lst_NameSpace
+            // lst_NameSpaces
             // 
-            this.lst_NameSpace.BackColor = System.Drawing.SystemColors.Control;
-            this.lst_NameSpace.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lst_NameSpace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lst_NameSpace.FormattingEnabled = true;
-            this.lst_NameSpace.Location = new System.Drawing.Point(0, 0);
-            this.lst_NameSpace.Name = "lst_NameSpace";
-            this.lst_NameSpace.Size = new System.Drawing.Size(630, 327);
-            this.lst_NameSpace.TabIndex = 0;
-            this.lst_NameSpace.Click += new System.EventHandler(this.lst_NameSpace_Click);
+            this.lst_NameSpaces.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lst_NameSpaces.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.lst_NameSpaces.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.lst_NameSpaces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lst_NameSpaces.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lst_NameSpaces.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lst_NameSpaces.FormattingEnabled = true;
+            this.lst_NameSpaces.Location = new System.Drawing.Point(85, 14);
+            this.lst_NameSpaces.Name = "lst_NameSpaces";
+            this.lst_NameSpaces.Size = new System.Drawing.Size(531, 21);
+            this.lst_NameSpaces.TabIndex = 6;
+            this.lst_NameSpaces.SelectedIndexChanged += new System.EventHandler(this.lst_NameSpace_Click);
             // 
-            // _NameSpace
+            // lbl_Namespace
+            // 
+            this.lbl_Namespace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_Namespace.AutoSize = true;
+            this.lbl_Namespace.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Namespace.Location = new System.Drawing.Point(13, 17);
+            this.lbl_Namespace.Name = "lbl_Namespace";
+            this.lbl_Namespace.Size = new System.Drawing.Size(67, 13);
+            this.lbl_Namespace.TabIndex = 5;
+            this.lbl_Namespace.Text = "Namespcace";
+            // 
+            // _WmiNameSpace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lst_NameSpace);
-            this.Name = "_NameSpace";
-            this.Size = new System.Drawing.Size(630, 327);
+            this.Controls.Add(this.lst_NameSpaces);
+            this.Controls.Add(this.lbl_Namespace);
+            this.Name = "_WmiNameSpace";
+            this.Size = new System.Drawing.Size(630, 50);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox lst_NameSpace;
+        private System.Windows.Forms.Label lbl_Namespace;
+        public System.Windows.Forms.ComboBox lst_NameSpaces;
     }
 }
