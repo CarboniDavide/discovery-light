@@ -31,7 +31,7 @@ namespace DiscoveryLight.UI.Panels.Devices
                 case "_CPU":
                     return new _CPU();
                 case "_All":
-                    return new _WmiDetails();
+                    return new _Details();
                 default:
                     return new _BaseHardware();
             }
