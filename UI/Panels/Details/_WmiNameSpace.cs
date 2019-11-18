@@ -51,9 +51,8 @@ namespace DiscoveryLight.UI.Panels.Details
             {
                 foreach (ManagementObject ns in collection)
                     yield return (ns["Name"].ToString().ToUpper());
+                nsClass.Dispose();
             }
-
-            nsClass.Dispose();
         }
 
         private void lst_NameSpace_Click(object sender, EventArgs e)

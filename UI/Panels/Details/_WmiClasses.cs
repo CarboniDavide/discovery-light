@@ -57,8 +57,8 @@ namespace DiscoveryLight.UI.Panels.Details
                         // Si la classe est dynamique, ajoute les valeurs dans la liste.
                         if (qd.Name.Equals("dynamic") || qd.Name.Equals("static"))
                             yield return (wmiClass["__CLASS"].ToString());
+                nsClass.Dispose();
             }
-            nsClass.Dispose();
         }
 
         private void lst_Classe_Click(object sender, EventArgs e)

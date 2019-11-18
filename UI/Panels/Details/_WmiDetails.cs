@@ -77,9 +77,10 @@ namespace DiscoveryLight.UI.Panels.Details
                         }
                     }
                     yield return (" ");
+                    nsClass.Dispose();
                 }
                 if (count == 0) yield return ("Not Found");
-                nsClass.Dispose();
+                
 
             }
         }
