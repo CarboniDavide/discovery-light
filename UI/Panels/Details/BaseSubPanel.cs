@@ -15,38 +15,51 @@ namespace DiscoveryLight.UI.Panels.Details
         public abstract void Load();
         public abstract IEnumerable<String> Get();
         public abstract void StopLoadedSubTask();
+        public abstract void OnChangeIndex(object sender, EventArgs e);
     }
-
     public class BaseSubPanel: AbstractBaseSubPanel
     {
         private dynamic listValues;
         private Thread t;
+        private _Details subPanelContainer;
         public dynamic ListValues { get => listValues; set => listValues = value; }
         public Thread T { get => t; set => t = value; }
+        public _Details SubPanelContainer { get => subPanelContainer; set => subPanelContainer = value; }
 
-        public void FillInListBox() {
-            
-            if (ListValues != null) this.Invoke((System.Action)(() => { ListValues.Items.Clear(); }));
+        public void FillInListBox()
+        {
+            this.Invoke((System.Action)(() => {listPrepare();}));
             foreach (String ns in Get())
                 this.Invoke((System.Action)(() => { this.ListValues.Items.Add(ns); }));
         }
 
+        public override void OnChangeIndex(object sender, EventArgs e)
+        {
+            subPanelContainer = this.Parent as _Details;
+            
+        }
+
         public override IEnumerable<String> Get() { return null; }
 
-        public override void Init() {
-            
-            SetThread();
+        public void listPrepare()
+        {
+            if (ListValues != null) ListValues.Items.Clear();
+            if (ListValues.GetType().FullName == typeof(ComboBox).FullName.ToString())
+            {
+                this.ListValues.Items.Add("-- Select --");
+                this.ListValues.SelectedItem = "-- Select --";
+            }
+        }
+
+        public override void Init() 
+        {
+            StopLoadedSubTask();
+            t = new Thread(FillInListBox);
         }
 
         public override void StopLoadedSubTask()
         {
             if (t != null) t.Abort();
-        }
-
-        private void SetThread()
-        {
-            StopLoadedSubTask();
-            t = new Thread(FillInListBox);
         }
 
         public override void Load()

@@ -55,12 +55,13 @@ namespace DiscoveryLight.UI.Panels.Details
             }
         }
 
-        private void lst_NameSpace_Click(object sender, EventArgs e)
+        public override void OnChangeIndex(object sender, EventArgs e)
         {
+            base.OnChangeIndex(sender, e);
             // get subpanel container
-            var subPanelContainer = this.Parent as _Details;
-            subPanelContainer.WmiClasses.NameSpace = this.lst_NameSpaces.SelectedItem.ToString();
-            subPanelContainer.WmiClasses.Init();
+            if (ListValues.SelectedItem == "-- Select --") return;
+            SubPanelContainer.WmiClasses.NameSpace = this.lst_NameSpaces.SelectedItem.ToString();
+            SubPanelContainer.WmiClasses.Init();
         }
     }
 }

@@ -46,7 +46,7 @@
             this.lst_NameSpaces.Name = "lst_NameSpaces";
             this.lst_NameSpaces.Size = new System.Drawing.Size(531, 21);
             this.lst_NameSpaces.TabIndex = 6;
-            this.lst_NameSpaces.SelectedIndexChanged += new System.EventHandler(this.lst_NameSpace_Click);
+            this.lst_NameSpaces.SelectedIndexChanged += new System.EventHandler(this.OnChangeIndex);
             // 
             // lbl_Namespace
             // 

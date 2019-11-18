@@ -45,7 +45,7 @@
             this.lst_WmiClassName.Size = new System.Drawing.Size(531, 21);
             this.lst_WmiClassName.Sorted = true;
             this.lst_WmiClassName.TabIndex = 7;
-            this.lst_WmiClassName.SelectedIndexChanged += new System.EventHandler(this.lst_Classe_Click);
+            this.lst_WmiClassName.SelectedIndexChanged += new System.EventHandler(this.OnChangeIndex);
             // 
             // lbl_WmiClassName
             // 
