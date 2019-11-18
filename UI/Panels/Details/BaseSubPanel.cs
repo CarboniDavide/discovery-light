@@ -11,67 +11,65 @@ namespace DiscoveryLight.UI.Panels.Details
 {
     public abstract class AbstractBaseSubPanel : UserControl
     {
-        protected ListBox ListBoxValues;
-
-        public abstract void InitAndRun(ListBox ListBoxValues);
-        public abstract void FillInListBox();
+        public abstract void Init();
+        public abstract void Load();
         public abstract IEnumerable<String> Get();
         public abstract void StopLoadedSubTask();
     }
 
     public class BaseSubPanel: AbstractBaseSubPanel
     {
+        private dynamic listValues;
         private CancellationTokenSource tokenSource;
         private CancellationToken token;
-        private TimeSpan period;
-
         public CancellationTokenSource TokenSource { get => tokenSource; set => tokenSource = value; }
         public CancellationToken Token { get => token; set => token = value; }
-        public TimeSpan Period { get => period; set => period = value; }
+        public dynamic ListValues { get => listValues; set => listValues = value; }
 
-        public async override void FillInListBox() {
+        public async void FillInListBox() {
+
             await Task.Run(() => {
-                foreach (String ns in this.Get())
+                foreach (String ns in Get())
                 {
-                    if (token.IsCancellationRequested) break;
+                    Console.WriteLine(Token.IsCancellationRequested);
+
+                    if (Token.IsCancellationRequested) 
+                        break;
 
                     this.Invoke((System.Action)(() =>
                         {
-                            ListBoxValues.Items.Add(ns);
+                            this.ListValues.Items.Add(ns);
                         }));
                 }
             });
         }
 
-        public override IEnumerable<String> Get() {
-            return null;
+        public override IEnumerable<String> Get() { return null; }
+
+        public override void Init() {
+            this.StopLoadedSubTask();
+            if (ListValues != null) ListValues.Items.Clear();
         }
 
         public override void StopLoadedSubTask()
         {
-            if (token != null && tokenSource != null)
-                tokenSource.Cancel();
+            if (this.token != null && this.tokenSource != null)
+                this.tokenSource.Cancel();
         }
 
         private void SetToken()
         {
-            tokenSource = new CancellationTokenSource();
-            token = TokenSource.Token;
-            period = TimeSpan.FromMilliseconds(0);
+            this.tokenSource = new CancellationTokenSource();
+            this.token = TokenSource.Token;
         }
 
-        public override void InitAndRun(ListBox ListBoxValues)
+        public override void Load()
         {
-            this.ListBoxValues = ListBoxValues;
-            this.ListBoxValues.Items.Clear();
-            StopLoadedSubTask();
-            SetToken();
             FillInListBox();
         }
 
-        public BaseSubPanel()
-        {
-            SetToken();
+        public BaseSubPanel() {
+            this.SetToken();
         }
     }
 }
