@@ -20,56 +20,40 @@ namespace DiscoveryLight.UI.Panels.Details
     public class BaseSubPanel: AbstractBaseSubPanel
     {
         private dynamic listValues;
-        private CancellationTokenSource tokenSource;
-        private CancellationToken token;
-        public CancellationTokenSource TokenSource { get => tokenSource; set => tokenSource = value; }
-        public CancellationToken Token { get => token; set => token = value; }
+        private Thread t;
         public dynamic ListValues { get => listValues; set => listValues = value; }
+        public Thread T { get => t; set => t = value; }
 
-        public async void FillInListBox() {
-
-            await Task.Run(() => {
-                foreach (String ns in Get())
-                {
-                    Console.WriteLine(Token.IsCancellationRequested);
-
-                    if (Token.IsCancellationRequested) 
-                        break;
-
-                    this.Invoke((System.Action)(() =>
-                        {
-                            this.ListValues.Items.Add(ns);
-                        }));
-                }
-            });
+        public void FillInListBox() {
+            
+            if (ListValues != null) this.Invoke((System.Action)(() => { ListValues.Items.Clear(); }));
+            foreach (String ns in Get())
+                this.Invoke((System.Action)(() => { this.ListValues.Items.Add(ns); }));
         }
 
         public override IEnumerable<String> Get() { return null; }
 
         public override void Init() {
-            this.StopLoadedSubTask();
-            if (ListValues != null) ListValues.Items.Clear();
+            
+            SetThread();
         }
 
         public override void StopLoadedSubTask()
         {
-            if (this.token != null && this.tokenSource != null)
-                this.tokenSource.Cancel();
+            if (t != null) t.Abort();
         }
 
-        private void SetToken()
+        private void SetThread()
         {
-            this.tokenSource = new CancellationTokenSource();
-            this.token = TokenSource.Token;
+            StopLoadedSubTask();
+            t = new Thread(FillInListBox);
         }
 
         public override void Load()
         {
-            FillInListBox();
+            t.Start();
         }
 
-        public BaseSubPanel() {
-            this.SetToken();
-        }
+        public BaseSubPanel() { }
     }
 }

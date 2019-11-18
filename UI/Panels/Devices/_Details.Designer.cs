@@ -39,29 +39,29 @@
             // WmiNameSpace
             // 
             this.WmiNameSpace.Dock = System.Windows.Forms.DockStyle.Top;
+            this.WmiNameSpace.ListValues = null;
             this.WmiNameSpace.Location = new System.Drawing.Point(0, 0);
             this.WmiNameSpace.Name = "WmiNameSpace";
             this.WmiNameSpace.Size = new System.Drawing.Size(630, 50);
             this.WmiNameSpace.TabIndex = 0;
-            this.WmiNameSpace.TokenSource = cancellationTokenSource1;
             // 
             // WmiClasses
             // 
             this.WmiClasses.Dock = System.Windows.Forms.DockStyle.Top;
+            this.WmiClasses.ListValues = null;
             this.WmiClasses.Location = new System.Drawing.Point(0, 50);
             this.WmiClasses.Name = "WmiClasses";
             this.WmiClasses.Size = new System.Drawing.Size(630, 50);
             this.WmiClasses.TabIndex = 1;
-            this.WmiClasses.TokenSource = cancellationTokenSource2;
             // 
             // WmiDetails
             // 
             this.WmiDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            this.WmiDetails.ListValues = null;
             this.WmiDetails.Location = new System.Drawing.Point(0, 100);
             this.WmiDetails.Name = "WmiDetails";
             this.WmiDetails.Size = new System.Drawing.Size(630, 260);
             this.WmiDetails.TabIndex = 2;
-            this.WmiDetails.TokenSource = cancellationTokenSource3;
             // 
             // _Details
             // 
