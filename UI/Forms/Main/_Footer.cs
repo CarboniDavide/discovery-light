@@ -19,7 +19,8 @@ namespace DiscoveryLight.UI.Forms.Main
 
         public void ChangeTitle(string title)
         {
-            this.lbl_DeviceName.Text = title;
+            this.chartBar.CustomText = title;
+            this.chartBar.BarFillSize = 0;
         }
     }
 }

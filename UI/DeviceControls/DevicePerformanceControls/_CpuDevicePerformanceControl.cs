@@ -78,7 +78,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
                 chart.Size = new System.Drawing.Size(190, BarSize);
                 chart.Style = WinformComponents.ChartBar.STYLE.Horizontal;
                 chart.TextColor = System.Drawing.Color.White;
-                chart.TextVisible = true;
                 chart.Name = typeof(WinformComponents.ChartBar).ToString();
 
                 label.Font = new System.Drawing.Font("Microsoft Sans Serif", TextSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

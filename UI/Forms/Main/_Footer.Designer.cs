@@ -28,29 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_DeviceName = new System.Windows.Forms.Label();
+            this.chartBar = new WinformComponents.ChartBar();
             this.SuspendLayout();
             // 
-            // lbl_DeviceName
+            // chartBar
             // 
-            this.lbl_DeviceName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_DeviceName.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.lbl_DeviceName.ForeColor = System.Drawing.Color.Salmon;
-            this.lbl_DeviceName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_DeviceName.Location = new System.Drawing.Point(227, 0);
-            this.lbl_DeviceName.Name = "lbl_DeviceName";
-            this.lbl_DeviceName.Size = new System.Drawing.Size(333, 40);
-            this.lbl_DeviceName.TabIndex = 5;
-            this.lbl_DeviceName.Text = "N/A";
-            this.lbl_DeviceName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chartBar.Activated = true;
+            this.chartBar.Alignment = System.Drawing.ContentAlignment.MiddleRight;
+            this.chartBar.BarBackColor = System.Drawing.Color.Transparent;
+            this.chartBar.BarFillColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.chartBar.BarFillSize = 0;
+            this.chartBar.ChartText = WinformComponents.ChartBar.ContentType.CustomText;
+            this.chartBar.CustomText = "N/A";
+            this.chartBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartBar.Location = new System.Drawing.Point(0, 0);
+            this.chartBar.Name = "chartBar";
+            this.chartBar.Padding = new System.Windows.Forms.Padding(10);
+            this.chartBar.Size = new System.Drawing.Size(560, 40);
+            this.chartBar.Style = WinformComponents.ChartBar.STYLE.Horizontal;
+            this.chartBar.TabIndex = 0;
+            this.chartBar.TextColor = System.Drawing.Color.Crimson;
+            this.chartBar.TextFont = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // _Footer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Controls.Add(this.lbl_DeviceName);
+            this.Controls.Add(this.chartBar);
             this.Name = "_Footer";
             this.Size = new System.Drawing.Size(560, 40);
             this.ResumeLayout(false);
@@ -59,6 +64,6 @@
 
         #endregion
 
-        public System.Windows.Forms.Label lbl_DeviceName;
+        private WinformComponents.ChartBar chartBar;
     }
 }
