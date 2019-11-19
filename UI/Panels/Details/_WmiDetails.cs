@@ -38,9 +38,11 @@ namespace DiscoveryLight.UI.Panels.Details
 
             try
             {
+                this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = "Wait one moment ..."; }));
                 nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + this.NameSpace), new WqlObjectQuery("select * from " + this.WmiClassName), null);
                 collection = nsClass.Get();
                 if (collection.Count == 0) nsClass = null;
+                this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = Footer.FooterTittleName; }));
             }
             catch (ManagementException e)
             {
