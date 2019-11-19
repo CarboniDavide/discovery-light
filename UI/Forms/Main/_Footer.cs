@@ -19,8 +19,8 @@ namespace DiscoveryLight.UI.Forms.Main
 
         public void ChangeTitle(string title)
         {
-            this.chartBar.CustomText = title;
-            this.chartBar.BarFillSize = 0;
+            this.ChartBar.CustomText = title;
+            this.ChartBar.BarFillSize = 0;
         }
     }
 }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Management;
 using DiscoveryLight.Logging;
+using DiscoveryLight.UI.Forms.Main;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
@@ -53,8 +54,12 @@ namespace DiscoveryLight.UI.Panels.Details
             else
             {
                 int count = 0;
+                double step = (double)Decimal.Divide(100, collection.Count);
+                double barSize = 0;
+
                 foreach (ManagementObject wmiObject in collection)
                 {
+                   
                     count++;
                     yield return (" [" + count.ToString() + "]");
 
@@ -77,11 +82,12 @@ namespace DiscoveryLight.UI.Panels.Details
                         }
                     }
                     yield return (" ");
-                    nsClass.Dispose();
+                    barSize += step;
+                    this.Invoke((System.Action)(() => { Footer.ChartBar.BarFillSize = (int)barSize; }));
                 }
                 if (count == 0) yield return ("Not Found");
-                
-
+                nsClass.Dispose();
+                this.Invoke((System.Action)(() => { Footer.ChartBar.BarFillSize = 0; }));
             }
         }
     }

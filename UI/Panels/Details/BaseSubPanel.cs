@@ -1,4 +1,5 @@
-﻿using DiscoveryLight.UI.Panels.Devices;
+﻿using DiscoveryLight.UI.Forms.Main;
+using DiscoveryLight.UI.Panels.Devices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +20,14 @@ namespace DiscoveryLight.UI.Panels.Details
     }
     public class BaseSubPanel: AbstractBaseSubPanel
     {
+        private _Footer _footer;
         private dynamic listValues;
         private Thread t;
         private _Details subPanelContainer;
         public dynamic ListValues { get => listValues; set => listValues = value; }
         public Thread T { get => t; set => t = value; }
         public _Details SubPanelContainer { get => subPanelContainer; set => subPanelContainer = value; }
+        public _Footer Footer { get => _footer; set => _footer = value; }
 
         public void FillInListBox()
         {
@@ -54,6 +57,8 @@ namespace DiscoveryLight.UI.Panels.Details
         public override void Init() 
         {
             StopLoadedSubTask();
+            Footer = this.Parent.Parent.Parent.Controls.Cast<Control>().Where(d => d.GetType().FullName.Equals(typeof(_Footer).FullName)).FirstOrDefault() as _Footer;
+            if (Footer != null) Footer.ChartBar.BarFillSize = 0;
             t = new Thread(FillInListBox);
         }
 
