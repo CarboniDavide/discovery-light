@@ -27,7 +27,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             foreach (AUDIO.Block block in CurrentDevice.Blocks)
             {
                 this.cmb_Blocks.Items.Add(index.ToString() + "-" + block.Name);
-                this.cmb_Blocks.Items.Add(index.ToString() + "-" + block.Name);
                 index++;
             }
         }
