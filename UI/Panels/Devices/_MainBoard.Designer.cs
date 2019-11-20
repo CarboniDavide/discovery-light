@@ -113,6 +113,7 @@
             this.Controls.Add(this.pic_Divisor_001);
             this.Controls.Add(this.lbl_Bios_Titre);
             this.Name = "_MainBoard";
+            this.PanelIndex = 1;
             this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();

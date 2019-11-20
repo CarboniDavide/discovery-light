@@ -87,6 +87,7 @@
             this.Controls.Add(this.cmb_Blocks);
             this.Controls.Add(this.pic_Divisor_001);
             this.Name = "_CPU";
+            this.PanelIndex = 2;
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._CPU_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();

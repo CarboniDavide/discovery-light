@@ -87,6 +87,7 @@
             this.Controls.Add(this.cmb_Blocks);
             this.Controls.Add(this.lbl_TitleComboBox);
             this.Name = "_Video";
+            this.PanelIndex = 5;
             this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor)).EndInit();
             this.ResumeLayout(false);
