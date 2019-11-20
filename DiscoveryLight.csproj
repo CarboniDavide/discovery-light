@@ -291,6 +291,12 @@
     <Compile Include="UI\Panels\Devices\_Details.Designer.cs">
       <DependentUpon>_Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Panels\Slider\_Slider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Slider\_Slider.Designer.cs">
+      <DependentUpon>_Slider.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\UserSettings\_UserSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -397,6 +403,9 @@
     <EmbeddedResource Include="UI\Panels\Devices\_Network.resx">
       <DependentUpon>_Network.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_PanelContainer.resx">
+      <DependentUpon>_PanelContainer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.resx">
       <DependentUpon>_PhysicalDisk.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Details.resx">
       <DependentUpon>_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Slider\_Slider.resx">
+      <DependentUpon>_Slider.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
