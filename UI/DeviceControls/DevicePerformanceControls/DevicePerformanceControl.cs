@@ -47,7 +47,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public override void InitPerformace(DevicePerformance Performance)
         {
             CurrentPerformance = Performance;
-            RunPerformance();
         }
         private void SetToken()
         {
