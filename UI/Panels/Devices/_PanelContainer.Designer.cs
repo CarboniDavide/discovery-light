@@ -28,10 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.Slider = new DiscoveryLight.UI.Panels.Slider._Slider();
+            this.SuspendLayout();
+            // 
+            // Slider
+            // 
+            this.Slider.Location = new System.Drawing.Point(0, 0);
+            this.Slider.Name = "Slider";
+            this.Slider.Size = new System.Drawing.Size(630, 360);
+            this.Slider.TabIndex = 0;
+            // 
+            // _PanelContainer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.Slider);
+            this.Name = "_PanelContainer";
+            this.Size = new System.Drawing.Size(630, 360);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Slider._Slider Slider;
     }
 }

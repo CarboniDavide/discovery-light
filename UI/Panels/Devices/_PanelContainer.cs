@@ -20,20 +20,11 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
         }
-
         
         public void LoadPanel(string name)
         {
-            this.RemovePanel();
             this.CurrentPanel = PanelCollection.PanelFactory(name);
-            this.Controls.Add(CurrentPanel);
-        }
-
-        public void RemovePanel()
-        {
-            if (this.Controls.Count == 0) return;
-            this.CurrentPanel.StopLoadedTask();
-            this.Controls.Clear();
+            this.Slider.AddSlide(CurrentPanel);
         }
     }
 }
