@@ -260,7 +260,6 @@
             this.Controls.Add(this.lbl_PacketsReceived);
             this.Name = "_NetworkDevicePerformanceControl";
             this.Size = new System.Drawing.Size(118, 338);
-            this.Load += new System.EventHandler(this._NetworkDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

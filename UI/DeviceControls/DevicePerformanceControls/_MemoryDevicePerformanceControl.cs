@@ -16,6 +16,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public _MemoryDevicePerformanceControl()
         {
             InitializeComponent();
+            if (Program.Performances == null) return;
+            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_RAM)).First().Properties);
         }
 
         public override void ShowPerformance()
@@ -31,12 +33,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             lbl_PageRead_Value.Text = CurrentPerformanceCPU.PageRead.ToString();
             lbl_PagePersec_Value.Text = CurrentPerformanceCPU.PagePerSec.ToString();
             chartRamUsage.FillSize = (int)(100 - CurrentPerformanceCPU.PerUsage);
-        }
-
-        private void _MemoryDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_RAM)).First().Properties);
         }
     }
 }

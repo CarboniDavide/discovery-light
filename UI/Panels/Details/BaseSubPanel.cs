@@ -57,7 +57,7 @@ namespace DiscoveryLight.UI.Panels.Details
         public override void Init() 
         {
             StopLoadedSubTask();
-            Footer = this.Parent.Parent.Parent.Controls.Cast<Control>().Where(d => d.GetType().FullName.Equals(typeof(_Footer).FullName)).FirstOrDefault() as _Footer;
+            Footer = this.Parent.Parent.Parent.Parent.Controls.Cast<Control>().Where(d => d.GetType().FullName.Equals(typeof(_Footer).FullName)).FirstOrDefault() as _Footer;
             if (Footer != null) Footer.ChartBar.BarFillSize = 0;
             t = new Thread(FillInListBox);
         }

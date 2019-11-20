@@ -17,6 +17,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public _CpuDevicePerformanceControl(): base()
         {
             InitializeComponent();
+            if (Program.Performances == null) return;
+            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_CPU)).First().Properties);
         }
 
         public override void ShowPerformance()
@@ -98,12 +100,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         private void GraphComponents_Clear()
         {
             this.pnl_Threads.Controls.Clear();
-        }
-
-        private void _CpuDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_CPU)).First().Properties);
         }
     }
 }

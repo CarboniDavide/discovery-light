@@ -16,6 +16,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public _PhysicalDiskDevicePerformanceControl()
         {
             InitializeComponent();
+            if (Program.Performances == null) return;
+            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_DISK)).First().Properties);
         }
 
         public override void ShowPerformance()
@@ -30,12 +32,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             chartWriteTime.BarFillSize = Convert.ToInt16(CurrentPerformance.Percent_WriteTime);
             chartDiskTime.BarFillSize = Convert.ToInt16(CurrentPerformance.Percent_DiskTime);
             chartIdleTime.BarFillSize = Convert.ToInt16(CurrentPerformance.Percent_IdleTime);
-        }
-
-        private void _PhysicalDiskDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_DISK)).First().Properties);
         }
     }
 }

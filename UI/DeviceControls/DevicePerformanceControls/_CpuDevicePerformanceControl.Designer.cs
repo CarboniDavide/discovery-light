@@ -117,7 +117,6 @@
             this.Controls.Add(this.chartCpuUsage);
             this.Name = "_CpuDevicePerformanceControl";
             this.Size = new System.Drawing.Size(281, 308);
-            this.Load += new System.EventHandler(this._CpuDevicePerformanceControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

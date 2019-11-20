@@ -200,7 +200,6 @@
             this.Controls.Add(this.chartBar_Cpu);
             this.Name = "_WindowsScoreDevicePerformanceControl";
             this.Size = new System.Drawing.Size(155, 360);
-            this.Load += new System.EventHandler(this._WindowsScoreDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

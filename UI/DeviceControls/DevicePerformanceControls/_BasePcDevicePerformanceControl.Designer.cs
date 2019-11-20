@@ -126,7 +126,6 @@
             this.Controls.Add(this.chartRAM);
             this.Name = "_BasePcDevicePerformanceControl";
             this.Size = new System.Drawing.Size(127, 360);
-            this.Load += new System.EventHandler(this._BasePcDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

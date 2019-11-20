@@ -264,7 +264,6 @@
             this.Controls.Add(this.chartDiskFree);
             this.Name = "_PhysicalDiskDevicePerformanceControl";
             this.Size = new System.Drawing.Size(153, 360);
-            this.Load += new System.EventHandler(this._PhysicalDiskDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

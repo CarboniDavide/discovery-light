@@ -85,7 +85,6 @@
             this.Controls.Add(this.lbl_Process);
             this.Name = "_SystemDevicePerformanceControl";
             this.Size = new System.Drawing.Size(140, 48);
-            this.Load += new System.EventHandler(this._SystemDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
