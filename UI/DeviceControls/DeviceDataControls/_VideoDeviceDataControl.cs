@@ -13,11 +13,19 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
     public partial class _VideoDeviceDataControl : DeviceDataControl
     {
-        public _VideoDeviceDataControl()
+        public _VideoDeviceDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
-            if (Program.Devices != null)
-                InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(VIDEO)).First().Properties);
+        }
+
+        public _VideoDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        {
+            InitializeComponent();
+        }
+
+        public _VideoDeviceDataControl() : base()
+        {
+            InitializeComponent();
         }
 
         public override void ShowData()

@@ -31,8 +31,8 @@
             this.lbl_Bios_Titre = new System.Windows.Forms.Label();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
-            this._MainBoardDeviceDataControl1 = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl();
-            this._BiosDeviceDataControl1 = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl();
+            this.MainBoardDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl();
+            this.BiosDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl();
             this.WindowsScoreDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._WindowsScoreDevicePerformanceControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
@@ -69,27 +69,27 @@
             this.pic_Divisor_001.TabIndex = 11;
             this.pic_Divisor_001.TabStop = false;
             // 
-            // _MainBoardDeviceDataControl1
+            // MainBoardDeviceDataControl
             // 
-            this._MainBoardDeviceDataControl1.CurrentDevice = null;
-            this._MainBoardDeviceDataControl1.CurrentSubDevice = null;
-            this._MainBoardDeviceDataControl1.DeviceName = null;
-            this._MainBoardDeviceDataControl1.DeviceType = null;
-            this._MainBoardDeviceDataControl1.Location = new System.Drawing.Point(92, 27);
-            this._MainBoardDeviceDataControl1.Name = "_MainBoardDeviceDataControl1";
-            this._MainBoardDeviceDataControl1.Size = new System.Drawing.Size(333, 153);
-            this._MainBoardDeviceDataControl1.TabIndex = 30;
+            this.MainBoardDeviceDataControl.CurrentDevice = null;
+            this.MainBoardDeviceDataControl.CurrentSubDevice = null;
+            this.MainBoardDeviceDataControl.DeviceName = null;
+            this.MainBoardDeviceDataControl.DeviceType = null;
+            this.MainBoardDeviceDataControl.Location = new System.Drawing.Point(92, 27);
+            this.MainBoardDeviceDataControl.Name = "MainBoardDeviceDataControl";
+            this.MainBoardDeviceDataControl.Size = new System.Drawing.Size(333, 153);
+            this.MainBoardDeviceDataControl.TabIndex = 30;
             // 
-            // _BiosDeviceDataControl1
+            // BiosDeviceDataControl
             // 
-            this._BiosDeviceDataControl1.CurrentDevice = null;
-            this._BiosDeviceDataControl1.CurrentSubDevice = null;
-            this._BiosDeviceDataControl1.DeviceName = null;
-            this._BiosDeviceDataControl1.DeviceType = null;
-            this._BiosDeviceDataControl1.Location = new System.Drawing.Point(92, 216);
-            this._BiosDeviceDataControl1.Name = "_BiosDeviceDataControl1";
-            this._BiosDeviceDataControl1.Size = new System.Drawing.Size(333, 99);
-            this._BiosDeviceDataControl1.TabIndex = 29;
+            this.BiosDeviceDataControl.CurrentDevice = null;
+            this.BiosDeviceDataControl.CurrentSubDevice = null;
+            this.BiosDeviceDataControl.DeviceName = null;
+            this.BiosDeviceDataControl.DeviceType = null;
+            this.BiosDeviceDataControl.Location = new System.Drawing.Point(92, 216);
+            this.BiosDeviceDataControl.Name = "BiosDeviceDataControl";
+            this.BiosDeviceDataControl.Size = new System.Drawing.Size(333, 99);
+            this.BiosDeviceDataControl.TabIndex = 29;
             // 
             // WindowsScoreDevicePerformanceControl
             // 
@@ -106,8 +106,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this._MainBoardDeviceDataControl1);
-            this.Controls.Add(this._BiosDeviceDataControl1);
+            this.Controls.Add(this.MainBoardDeviceDataControl);
+            this.Controls.Add(this.BiosDeviceDataControl);
             this.Controls.Add(this.WindowsScoreDevicePerformanceControl);
             this.Controls.Add(this.pic_Divisor_002);
             this.Controls.Add(this.pic_Divisor_001);
@@ -128,7 +128,7 @@
         private System.Windows.Forms.PictureBox pic_Divisor_001;
         private System.Windows.Forms.Label lbl_Bios_Titre;
         private DeviceControls.DevicePerformanceControls._WindowsScoreDevicePerformanceControl WindowsScoreDevicePerformanceControl;
-        private DeviceControls.DeviceDataControls._BiosDeviceDataControl _BiosDeviceDataControl1;
-        private DeviceControls.DeviceDataControls._MainBoardDeviceDataControl _MainBoardDeviceDataControl1;
+        private DeviceControls.DeviceDataControls._BiosDeviceDataControl BiosDeviceDataControl;
+        private DeviceControls.DeviceDataControls._MainBoardDeviceDataControl MainBoardDeviceDataControl;
     }
 }

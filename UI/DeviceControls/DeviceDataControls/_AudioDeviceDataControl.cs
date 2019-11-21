@@ -13,11 +13,19 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
     public partial class _AudioDeviceDataControl : DeviceDataControl
     {
-        public _AudioDeviceDataControl()
+        public _AudioDeviceDataControl(DeviceData Device) :base(Device)
         {
             InitializeComponent();
-            if (Program.Devices != null)
-                InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(AUDIO)).First().Properties);
+        }
+
+        public _AudioDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        {
+            InitializeComponent();
+        }
+
+        public _AudioDeviceDataControl() : base()
+        {
+            InitializeComponent();
         }
 
         public override void ShowData()

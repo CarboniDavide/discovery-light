@@ -16,6 +16,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Audio()
         {
             InitializeComponent();
+            this.AudioDeviceDataControl.InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(AUDIO)).First().Properties);
             InitSubDevicesID();
         }
 

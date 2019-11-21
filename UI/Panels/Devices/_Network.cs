@@ -18,6 +18,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.NetworkDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_NETWORK)).First().Properties);
+            this.NetworkDeviceDataControl.InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(NETWORK)).First().Properties);
         }
 
         private void ChargeListOfSubDevicesInit()

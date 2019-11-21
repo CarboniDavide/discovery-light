@@ -50,6 +50,18 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         }
         public override void ShowData() { }
 
+        public DeviceDataControl(DeviceData Device) 
+        {
+            InitData(Device);
+        }
+
+        public DeviceDataControl(DeviceData Device, Boolean GetDriveInfo)
+        {
+            if (GetDriveInfo)
+                Device.GetDriveInfo();
+            InitData(Device);
+        }
+
         public DeviceDataControl() { }
     }
 }

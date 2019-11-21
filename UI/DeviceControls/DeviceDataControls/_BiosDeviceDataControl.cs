@@ -13,11 +13,19 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
     public partial class _BiosDeviceDataControl : DeviceDataControl
     {
-        public _BiosDeviceDataControl()
+        public _BiosDeviceDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
-            if (Program.Devices != null)
-                InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(BIOS)).First().Properties);
+        }
+
+        public _BiosDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        {
+            InitializeComponent();
+        }
+
+        public _BiosDeviceDataControl() : base()
+        {
+            InitializeComponent();
         }
 
         public override void ShowData()

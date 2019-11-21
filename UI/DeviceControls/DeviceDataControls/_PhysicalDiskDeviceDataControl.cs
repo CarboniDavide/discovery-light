@@ -13,11 +13,19 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
     public partial class _PhysicalDiskDeviceDataControl : DeviceDataControl
     {
-        public _PhysicalDiskDeviceDataControl()
+        public _PhysicalDiskDeviceDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
-            if (Program.Devices != null)
-                InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(DISK)).First().Properties);
+        }
+
+        public _PhysicalDiskDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        {
+            InitializeComponent();
+        }
+
+        public _PhysicalDiskDeviceDataControl() : base()
+        {
+            InitializeComponent();
         }
 
         public override void ShowData()
