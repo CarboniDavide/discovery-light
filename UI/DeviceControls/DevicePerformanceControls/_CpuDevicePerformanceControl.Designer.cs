@@ -33,7 +33,6 @@
             this.lbl_CpuSpeed = new System.Windows.Forms.Label();
             this.pnl_Threads = new System.Windows.Forms.Panel();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
-            this._SystemDevicePerformanceControl1 = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._SystemDevicePerformanceControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +54,7 @@
             // 
             this.lbl_CpuSpeed_Value.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_CpuSpeed_Value.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(184, 92);
+            this.lbl_CpuSpeed_Value.Location = new System.Drawing.Point(186, 92);
             this.lbl_CpuSpeed_Value.Name = "lbl_CpuSpeed_Value";
             this.lbl_CpuSpeed_Value.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_CpuSpeed_Value.Size = new System.Drawing.Size(71, 13);
@@ -92,24 +91,10 @@
             this.pic_Divisor_002.TabIndex = 75;
             this.pic_Divisor_002.TabStop = false;
             // 
-            // _SystemDevicePerformanceControl1
-            // 
-            this._SystemDevicePerformanceControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this._SystemDevicePerformanceControl1.BackColor = System.Drawing.Color.Transparent;
-            this._SystemDevicePerformanceControl1.CurrentPerformance = null;
-            this._SystemDevicePerformanceControl1.CurrentSubDevice = 0;
-            this._SystemDevicePerformanceControl1.Location = new System.Drawing.Point(141, 39);
-            this._SystemDevicePerformanceControl1.Name = "_SystemDevicePerformanceControl1";
-            this._SystemDevicePerformanceControl1.Period = System.TimeSpan.Parse("00:00:00");
-            this._SystemDevicePerformanceControl1.Size = new System.Drawing.Size(115, 48);
-            this._SystemDevicePerformanceControl1.TabIndex = 80;
-            this._SystemDevicePerformanceControl1.TokenSource = null;
-            // 
             // _CpuDevicePerformanceControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this._SystemDevicePerformanceControl1);
             this.Controls.Add(this.pnl_Threads);
             this.Controls.Add(this.lbl_CpuSpeed_Value);
             this.Controls.Add(this.pic_Divisor_002);
@@ -130,6 +115,5 @@
         private System.Windows.Forms.Label lbl_CpuSpeed_Value;
         private System.Windows.Forms.Label lbl_CpuSpeed;
         private System.Windows.Forms.Panel pnl_Threads;
-        private _SystemDevicePerformanceControl _SystemDevicePerformanceControl1;
     }
 }

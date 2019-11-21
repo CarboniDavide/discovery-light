@@ -32,6 +32,7 @@
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.CpuDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._CpuDevicePerformanceControl();
             this.CpuDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._CpuDeviceDataControl();
+            this.SystemDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._SystemDevicePerformanceControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,10 +79,23 @@
             this.CpuDeviceDataControl.Size = new System.Drawing.Size(341, 360);
             this.CpuDeviceDataControl.TabIndex = 68;
             // 
+            // SystemDevicePerformanceControl
+            // 
+            this.SystemDevicePerformanceControl.BackColor = System.Drawing.Color.Transparent;
+            this.SystemDevicePerformanceControl.CurrentPerformance = null;
+            this.SystemDevicePerformanceControl.CurrentSubDevice = 0;
+            this.SystemDevicePerformanceControl.Location = new System.Drawing.Point(489, 95);
+            this.SystemDevicePerformanceControl.Name = "SystemDevicePerformanceControl";
+            this.SystemDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.SystemDevicePerformanceControl.Size = new System.Drawing.Size(117, 48);
+            this.SystemDevicePerformanceControl.TabIndex = 70;
+            this.SystemDevicePerformanceControl.TokenSource = null;
+            // 
             // _CPU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.SystemDevicePerformanceControl);
             this.Controls.Add(this.CpuDevicePerformanceControl);
             this.Controls.Add(this.CpuDeviceDataControl);
             this.Controls.Add(this.cmb_Blocks);
@@ -100,5 +114,6 @@
         private System.Windows.Forms.ComboBox cmb_Blocks;
         private DeviceControls.DeviceDataControls._CpuDeviceDataControl CpuDeviceDataControl;
         private DeviceControls.DevicePerformanceControls._CpuDevicePerformanceControl CpuDevicePerformanceControl;
+        private DeviceControls.DevicePerformanceControls._SystemDevicePerformanceControl SystemDevicePerformanceControl;
     }
 }

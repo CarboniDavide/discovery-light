@@ -57,9 +57,9 @@
             // lbl_Process_Value
             // 
             this.lbl_Process_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbl_Process_Value.Location = new System.Drawing.Point(54, 4);
+            this.lbl_Process_Value.Location = new System.Drawing.Point(69, 4);
             this.lbl_Process_Value.Name = "lbl_Process_Value";
-            this.lbl_Process_Value.Size = new System.Drawing.Size(86, 13);
+            this.lbl_Process_Value.Size = new System.Drawing.Size(71, 13);
             this.lbl_Process_Value.TabIndex = 76;
             this.lbl_Process_Value.Text = "n/a";
             this.lbl_Process_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -67,9 +67,9 @@
             // lbl_Threads_Value
             // 
             this.lbl_Threads_Value.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbl_Threads_Value.Location = new System.Drawing.Point(54, 29);
+            this.lbl_Threads_Value.Location = new System.Drawing.Point(72, 29);
             this.lbl_Threads_Value.Name = "lbl_Threads_Value";
-            this.lbl_Threads_Value.Size = new System.Drawing.Size(86, 13);
+            this.lbl_Threads_Value.Size = new System.Drawing.Size(68, 13);
             this.lbl_Threads_Value.TabIndex = 77;
             this.lbl_Threads_Value.Text = "n/a";
             this.lbl_Threads_Value.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

@@ -13,11 +13,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _MemoryDevicePerformanceControl : DevicePerformanceControl
     {
-        public _MemoryDevicePerformanceControl()
+        public _MemoryDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
             InitializeComponent();
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_RAM)).First().Properties);
+        }
+
+        public _MemoryDevicePerformanceControl() : base() 
+        {
+            InitializeComponent();
         }
 
         public override void ShowPerformance()

@@ -13,12 +13,16 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _PhysicalDiskDevicePerformanceControl : DevicePerformanceControl
     {
-        public _PhysicalDiskDevicePerformanceControl()
+        public _PhysicalDiskDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
             InitializeComponent();
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_DISK)).First().Properties);
         }
+
+        public _PhysicalDiskDevicePerformanceControl() : base() 
+        {
+            InitializeComponent();
+        }
+
 
         public override void ShowPerformance()
         {

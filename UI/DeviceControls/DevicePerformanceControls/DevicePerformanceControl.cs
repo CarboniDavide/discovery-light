@@ -83,6 +83,13 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
                 tokenSource.Cancel();
         }
 
-        public DevicePerformanceControl() {}
+        public DevicePerformanceControl(DevicePerformance Performance) {
+            if (Performance == null) return;
+            InitPerformace(Performance);
+        }
+
+        public DevicePerformanceControl()
+        {
+        }
     }
 }

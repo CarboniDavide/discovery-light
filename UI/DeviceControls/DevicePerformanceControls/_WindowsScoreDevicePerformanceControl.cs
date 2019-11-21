@@ -13,11 +13,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _WindowsScoreDevicePerformanceControl : DevicePerformanceControl
     {
-        public _WindowsScoreDevicePerformanceControl()
+        public _WindowsScoreDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
             InitializeComponent();
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_SCORE)).First().Properties);
+        }
+
+        public _WindowsScoreDevicePerformanceControl() : base() 
+        {
+            InitializeComponent();
         }
 
         public override void ShowPerformance()
