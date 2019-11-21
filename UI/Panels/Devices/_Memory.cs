@@ -17,6 +17,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Memory()
         {
             InitializeComponent();
+            this.MemoryDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_RAM)).First().Properties);
+            this.MemoryDeviceDataControl.InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(RAM)).First().Properties);
         }
 
         private void ChargeListOfSubDevicesInit()

@@ -203,6 +203,16 @@ namespace DiscoveryLight.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Sound2 {
+            get {
+                object obj = ResourceManager.GetObject("Sound2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Video {
             get {
                 object obj = ResourceManager.GetObject("Video", resourceCulture);

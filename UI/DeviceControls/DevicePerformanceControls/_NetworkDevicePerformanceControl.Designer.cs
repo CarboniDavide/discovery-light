@@ -137,6 +137,7 @@
             // chartBytesReceived
             // 
             this.chartBytesReceived.Activated = true;
+            this.chartBytesReceived.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.chartBytesReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartBytesReceived.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBytesReceived.BarFillColor = System.Drawing.Color.LightSalmon;
@@ -147,11 +148,11 @@
             this.chartBytesReceived.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartBytesReceived.TabIndex = 217;
             this.chartBytesReceived.TextColor = System.Drawing.Color.White;
-            this.chartBytesReceived.TextVisible = true;
             // 
             // chartPacketsSent
             // 
             this.chartPacketsSent.Activated = true;
+            this.chartPacketsSent.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.chartPacketsSent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartPacketsSent.BarBackColor = System.Drawing.Color.LightGray;
             this.chartPacketsSent.BarFillColor = System.Drawing.Color.LightSeaGreen;
@@ -162,11 +163,11 @@
             this.chartPacketsSent.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartPacketsSent.TabIndex = 219;
             this.chartPacketsSent.TextColor = System.Drawing.Color.White;
-            this.chartPacketsSent.TextVisible = true;
             // 
             // chartPacketsReceived
             // 
             this.chartPacketsReceived.Activated = true;
+            this.chartPacketsReceived.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.chartPacketsReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartPacketsReceived.BarBackColor = System.Drawing.Color.LightGray;
             this.chartPacketsReceived.BarFillColor = System.Drawing.Color.DodgerBlue;
@@ -177,11 +178,11 @@
             this.chartPacketsReceived.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartPacketsReceived.TabIndex = 220;
             this.chartPacketsReceived.TextColor = System.Drawing.Color.White;
-            this.chartPacketsReceived.TextVisible = true;
             // 
             // chartBytesSent
             // 
             this.chartBytesSent.Activated = true;
+            this.chartBytesSent.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.chartBytesSent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.chartBytesSent.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBytesSent.BarFillColor = System.Drawing.Color.DarkKhaki;
@@ -192,7 +193,6 @@
             this.chartBytesSent.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartBytesSent.TabIndex = 221;
             this.chartBytesSent.TextColor = System.Drawing.Color.White;
-            this.chartBytesSent.TextVisible = true;
             // 
             // lbl_Titre_Chart_BytesReceived
             // 
@@ -260,7 +260,6 @@
             this.Controls.Add(this.lbl_PacketsReceived);
             this.Name = "_NetworkDevicePerformanceControl";
             this.Size = new System.Drawing.Size(118, 338);
-            this.Load += new System.EventHandler(this._NetworkDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

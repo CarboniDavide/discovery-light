@@ -50,7 +50,6 @@
             this.chgBar_Devices.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chgBar_Devices.TabIndex = 1;
             this.chgBar_Devices.TextColor = System.Drawing.Color.White;
-            this.chgBar_Devices.TextVisible = false;
             // 
             // picBox_Components
             // 

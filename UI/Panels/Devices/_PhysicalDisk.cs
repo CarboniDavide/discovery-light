@@ -17,6 +17,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _PhysicalDisk()
         {
             InitializeComponent();
+            this.PhysicalDiskDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_DISK)).First().Properties);
+            this.PhysicalDiskDeviceDataControl.InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(DISK)).First().Properties);
         }
 
         private void ChargeListOfSubDevicesInit()

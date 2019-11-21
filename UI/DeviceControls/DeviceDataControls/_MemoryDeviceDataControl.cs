@@ -13,11 +13,19 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
     public partial class _MemoryDeviceDataControl : DeviceDataControl
     {
-        public _MemoryDeviceDataControl()
+        public _MemoryDeviceDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
-            if (Program.Devices != null)
-                InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(RAM)).First().Properties);
+        }
+
+        public _MemoryDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        {
+            InitializeComponent();
+        }
+
+        public _MemoryDeviceDataControl() : base()
+        {
+            InitializeComponent();
         }
 
         public override void ShowData()

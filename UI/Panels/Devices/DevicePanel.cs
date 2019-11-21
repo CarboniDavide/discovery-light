@@ -6,33 +6,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.UI.BaseUserControl;
 using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-    public class DevicePanel: UserControl
+
+    public abstract class AbstractDevicePanel: _BaseUserControl
     {
-        public List<DevicePerformance> LoadedPerformance;
-        
+    }
+    public class DevicePanel: AbstractDevicePanel
+    {
+        private int panelIndex;
 
-        public void StopLoadedPerformance()
-        {
-            foreach (Control c in this.Controls)
-            {
-                var res = c.GetType().BaseType.FullName;
-                var res2 = typeof(DevicePerformanceControl).ToString();
-                if (c.GetType().BaseType.FullName == typeof(DevicePerformanceControl).ToString())
-                {
-                    var t = (DevicePerformanceControl)c;
-                    t.StopPerformance();
-                }
-            }
-        }
-
-        public DevicePanel()
-        {
-            LoadedPerformance = new List<DevicePerformance>();
-            
-        }
+        public int PanelIndex { get => panelIndex; set => panelIndex = value; }
+        public DevicePanel() { }
     }
 }

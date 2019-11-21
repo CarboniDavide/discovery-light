@@ -113,6 +113,7 @@
             this.Controls.Add(this.lbl_TitleComboBock);
             this.Controls.Add(this.pic_Divisor_002);
             this.Name = "_Network";
+            this.PanelIndex = 7;
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._Network_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();

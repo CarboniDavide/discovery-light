@@ -32,19 +32,10 @@ namespace DiscoveryLight.UI.Forms.Main
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Main));
-            this.DevicePanelContainer = new System.Windows.Forms.Panel();
             this.FooterBar = new DiscoveryLight.UI.Forms.Main._Footer();
             this.NavigationBar = new DiscoveryLight.UI.Forms.Main._Navigation();
+            this.PanelContainer = new DiscoveryLight.UI.Panels.Devices._PanelContainer();
             this.SuspendLayout();
-            // 
-            // DevicePanelContainer
-            // 
-            this.DevicePanelContainer.AutoSize = true;
-            this.DevicePanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DevicePanelContainer.Location = new System.Drawing.Point(40, 0);
-            this.DevicePanelContainer.Name = "DevicePanelContainer";
-            this.DevicePanelContainer.Size = new System.Drawing.Size(630, 360);
-            this.DevicePanelContainer.TabIndex = 3;
             // 
             // FooterBar
             // 
@@ -64,21 +55,30 @@ namespace DiscoveryLight.UI.Forms.Main
             this.NavigationBar.Size = new System.Drawing.Size(40, 400);
             this.NavigationBar.TabIndex = 1;
             // 
+            // PanelContainer
+            // 
+            this.PanelContainer.CurrentPanel = null;
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(40, 0);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(630, 360);
+            this.PanelContainer.TabIndex = 3;
+            // 
             // _Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 400);
-            this.Controls.Add(this.DevicePanelContainer);
+            this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.FooterBar);
             this.Controls.Add(this.NavigationBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Discovery";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -86,6 +86,6 @@ namespace DiscoveryLight.UI.Forms.Main
         public _Footer FooterBar;
         public _Navigation NavigationBar;
         public _UserSettings UserSettings;
-        public System.Windows.Forms.Panel DevicePanelContainer;
+        public _PanelContainer PanelContainer;
     }
 }

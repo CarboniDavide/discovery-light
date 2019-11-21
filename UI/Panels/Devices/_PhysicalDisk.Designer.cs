@@ -113,6 +113,7 @@
             this.Controls.Add(this.lbl_TilteComboBox);
             this.Controls.Add(this.pictureBox1);
             this.Name = "_PhysicalDisk";
+            this.PanelIndex = 6;
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._PhysicalDisk_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

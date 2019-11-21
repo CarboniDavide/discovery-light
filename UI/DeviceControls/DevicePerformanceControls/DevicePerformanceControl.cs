@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.UI.BaseUserControl;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public abstract class AbstractDevicePerformanceControl : System.Windows.Forms.UserControl
+    public abstract class AbstractDevicePerformanceControl :_BaseUserControl
     {
         public abstract void InitPerformace(DevicePerformance Device);
         public abstract void ShowPerformance();
@@ -47,7 +48,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public override void InitPerformace(DevicePerformance Performance)
         {
             CurrentPerformance = Performance;
-            RunPerformance();
         }
         private void SetToken()
         {
@@ -84,6 +84,23 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
                 tokenSource.Cancel();
         }
 
-        public DevicePerformanceControl() {}
+        public override void onLoad(object sender, EventArgs e)
+        {
+            RunPerformance();
+        }
+
+        public override void onDispose(object sender, EventArgs e)
+        {
+            StopPerformance();
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        public DevicePerformanceControl(DevicePerformance Performance) {
+            if (Performance == null) return;
+            InitPerformace(Performance);
+        }
+
+        public DevicePerformanceControl() { }
     }
 }

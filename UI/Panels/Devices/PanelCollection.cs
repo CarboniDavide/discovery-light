@@ -30,6 +30,8 @@ namespace DiscoveryLight.UI.Panels.Devices
                     return new _Video();
                 case "_CPU":
                     return new _CPU();
+                case "_All":
+                    return new _Details();
                 default:
                     return new _BaseHardware();
             }

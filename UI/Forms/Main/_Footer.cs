@@ -16,5 +16,14 @@ namespace DiscoveryLight.UI.Forms.Main
         {
             InitializeComponent();
         }
+
+        public String FooterTittleName;
+
+        public void ChangeTitle(string title)
+        {
+            this.ChartBar.CustomText = title;
+            this.ChartBar.BarFillSize = 0;
+            this.FooterTittleName = title;
+        }
     }
 }

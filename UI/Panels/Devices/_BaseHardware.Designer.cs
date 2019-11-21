@@ -61,7 +61,7 @@
             this.BasePcDeviceDataControl.CurrentSubDevice = null;
             this.BasePcDeviceDataControl.DeviceName = null;
             this.BasePcDeviceDataControl.DeviceType = null;
-            this.BasePcDeviceDataControl.Location = new System.Drawing.Point(19, 0);
+            this.BasePcDeviceDataControl.Location = new System.Drawing.Point(31, 0);
             this.BasePcDeviceDataControl.Name = "BasePcDeviceDataControl";
             this.BasePcDeviceDataControl.Size = new System.Drawing.Size(416, 360);
             this.BasePcDeviceDataControl.TabIndex = 23;

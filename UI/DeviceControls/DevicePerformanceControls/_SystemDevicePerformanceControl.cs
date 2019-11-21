@@ -13,7 +13,12 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _SystemDevicePerformanceControl : DevicePerformanceControl
     {
-        public _SystemDevicePerformanceControl(): base()
+        public _SystemDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
+        {
+            InitializeComponent();
+        }
+
+        public _SystemDevicePerformanceControl() : base() 
         {
             InitializeComponent();
         }
@@ -24,12 +29,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             var CurrentPerformance = (PERFORM_SYSTEM)this.CurrentPerformance;
             lbl_Threads_Value.Text = CurrentPerformance.Threads;
             lbl_Process_Value.Text = CurrentPerformance.Processes;
-        }
-
-        private void _SystemDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_SYSTEM)).First().Properties);
         }
     }
 }

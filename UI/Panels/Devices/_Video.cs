@@ -16,6 +16,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Video()
         {
             InitializeComponent();
+            this.VideoDeviceDataControl.InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(VIDEO)).First().Properties);
             InitSubDevicesID();
         }
 

@@ -70,6 +70,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UI\BaseUserControl\_AbstractBaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI\Buttons\PanelLinkButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -206,16 +209,31 @@
       <DependentUpon>_SplachScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\_FormsCollection.cs" />
+    <Compile Include="UI\Panels\Details\BaseSubPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_WmiClasses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_WmiClasses.Designer.cs">
+      <DependentUpon>_WmiClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_WmiDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_WmiDetails.Designer.cs">
+      <DependentUpon>_WmiDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_WmiNameSpace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_WmiNameSpace.Designer.cs">
+      <DependentUpon>_WmiNameSpace.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\Devices\DevicePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Panels\Devices\PanelCollection.cs" />
-    <Compile Include="UI\Panels\Devices\_All.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Panels\Devices\_All.Designer.cs">
-      <DependentUpon>_All.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Panels\Devices\_Audio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -252,6 +270,12 @@
     <Compile Include="UI\Panels\Devices\_Network.Designer.cs">
       <DependentUpon>_Network.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Panels\Devices\_PanelContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Devices\_PanelContainer.Designer.cs">
+      <DependentUpon>_PanelContainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\Devices\_PhysicalDisk.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +287,18 @@
     </Compile>
     <Compile Include="UI\Panels\Devices\_Video.Designer.cs">
       <DependentUpon>_Video.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Devices\_Details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Devices\_Details.Designer.cs">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Panels\Slider\_Slider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Slider\_Slider.Designer.cs">
+      <DependentUpon>_Slider.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Panels\UserSettings\_UserSettings.cs">
       <SubType>UserControl</SubType>
@@ -331,6 +367,9 @@
     <EmbeddedResource Include="UI\Forms\Main\_Footer.resx">
       <DependentUpon>_Footer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Main\_Header.resx">
+      <DependentUpon>_Header.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Main\_Main.resx">
       <DependentUpon>_Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -339,6 +378,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\SplachScreen\_SplachScreen.resx">
       <DependentUpon>_SplachScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_WmiClasses.resx">
+      <DependentUpon>_WmiClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_WmiDetails.resx">
+      <DependentUpon>_WmiDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_WmiNameSpace.resx">
+      <DependentUpon>_WmiNameSpace.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Audio.resx">
       <DependentUpon>_Audio.cs</DependentUpon>
@@ -358,11 +406,20 @@
     <EmbeddedResource Include="UI\Panels\Devices\_Network.resx">
       <DependentUpon>_Network.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_PanelContainer.resx">
+      <DependentUpon>_PanelContainer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.resx">
       <DependentUpon>_PhysicalDisk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Video.resx">
       <DependentUpon>_Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Details.resx">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Slider\_Slider.resx">
+      <DependentUpon>_Slider.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -390,6 +447,7 @@
   <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
+    <None Include="Resources\Sound2.png" />
     <None Include="Resources\Performancs.png" />
     <None Include="Resources\SaveToText_bis.png" />
     <None Include="Resources\SaveToText.png" />

@@ -158,7 +158,6 @@
             this.chartReadTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartReadTime.TabIndex = 170;
             this.chartReadTime.TextColor = System.Drawing.Color.White;
-            this.chartReadTime.TextVisible = true;
             // 
             // chartIdleTime
             // 
@@ -173,7 +172,6 @@
             this.chartIdleTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartIdleTime.TabIndex = 172;
             this.chartIdleTime.TextColor = System.Drawing.Color.White;
-            this.chartIdleTime.TextVisible = true;
             // 
             // chartDiskTime
             // 
@@ -188,7 +186,6 @@
             this.chartDiskTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartDiskTime.TabIndex = 173;
             this.chartDiskTime.TextColor = System.Drawing.Color.White;
-            this.chartDiskTime.TextVisible = true;
             // 
             // chartWriteTime
             // 
@@ -203,7 +200,6 @@
             this.chartWriteTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartWriteTime.TabIndex = 174;
             this.chartWriteTime.TextColor = System.Drawing.Color.White;
-            this.chartWriteTime.TextVisible = true;
             // 
             // lbl_Title_Chart_Read
             // 
@@ -268,7 +264,6 @@
             this.Controls.Add(this.chartDiskFree);
             this.Name = "_PhysicalDiskDevicePerformanceControl";
             this.Size = new System.Drawing.Size(153, 360);
-            this.Load += new System.EventHandler(this._PhysicalDiskDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

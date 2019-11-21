@@ -268,7 +268,6 @@
             this.Controls.Add(this.chartRamUsage);
             this.Name = "_MemoryDevicePerformanceControl";
             this.Size = new System.Drawing.Size(174, 360);
-            this.Load += new System.EventHandler(this._MemoryDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -113,6 +113,7 @@
             this.Controls.Add(this.lbl_TitleComboBox);
             this.Controls.Add(this.pic_Divisor_003);
             this.Name = "_Memory";
+            this.PanelIndex = 3;
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._Memory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).EndInit();

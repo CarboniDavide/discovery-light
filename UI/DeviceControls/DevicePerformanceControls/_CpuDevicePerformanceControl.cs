@@ -14,7 +14,12 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _CpuDevicePerformanceControl : DevicePerformanceControl
     {
-        public _CpuDevicePerformanceControl(): base()
+        public _CpuDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
+        {
+            InitializeComponent();
+        }
+
+        public _CpuDevicePerformanceControl() : base() 
         {
             InitializeComponent();
         }
@@ -78,7 +83,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
                 chart.Size = new System.Drawing.Size(190, BarSize);
                 chart.Style = WinformComponents.ChartBar.STYLE.Horizontal;
                 chart.TextColor = System.Drawing.Color.White;
-                chart.TextVisible = true;
                 chart.Name = typeof(WinformComponents.ChartBar).ToString();
 
                 label.Font = new System.Drawing.Font("Microsoft Sans Serif", TextSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,12 +103,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         private void GraphComponents_Clear()
         {
             this.pnl_Threads.Controls.Clear();
-        }
-
-        private void _CpuDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_CPU)).First().Properties);
         }
     }
 }

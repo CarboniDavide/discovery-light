@@ -55,7 +55,6 @@
             this.chartBar_Cpu.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartBar_Cpu.TabIndex = 22;
             this.chartBar_Cpu.TextColor = System.Drawing.Color.White;
-            this.chartBar_Cpu.TextVisible = true;
             // 
             // chartBar_Ram
             // 
@@ -71,7 +70,6 @@
             this.chartBar_Ram.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartBar_Ram.TabIndex = 23;
             this.chartBar_Ram.TextColor = System.Drawing.Color.White;
-            this.chartBar_Ram.TextVisible = true;
             // 
             // chartBar_Graph
             // 
@@ -87,7 +85,6 @@
             this.chartBar_Graph.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartBar_Graph.TabIndex = 24;
             this.chartBar_Graph.TextColor = System.Drawing.Color.White;
-            this.chartBar_Graph.TextVisible = true;
             // 
             // chartBar_Hd
             // 
@@ -103,7 +100,6 @@
             this.chartBar_Hd.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartBar_Hd.TabIndex = 25;
             this.chartBar_Hd.TextColor = System.Drawing.Color.White;
-            this.chartBar_Hd.TextVisible = true;
             // 
             // chartBar_D3D
             // 
@@ -119,7 +115,6 @@
             this.chartBar_D3D.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartBar_D3D.TabIndex = 26;
             this.chartBar_D3D.TextColor = System.Drawing.Color.White;
-            this.chartBar_D3D.TextVisible = true;
             // 
             // lbl_Score_Titre
             // 
@@ -205,7 +200,6 @@
             this.Controls.Add(this.chartBar_Cpu);
             this.Name = "_WindowsScoreDevicePerformanceControl";
             this.Size = new System.Drawing.Size(155, 360);
-            this.Load += new System.EventHandler(this._WindowsScoreDevicePerformanceControl_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

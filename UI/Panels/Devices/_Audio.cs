@@ -16,6 +16,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Audio()
         {
             InitializeComponent();
+            this.AudioDeviceDataControl.InitData(Program.Devices.Where(d => d.Properties.GetType() == typeof(AUDIO)).First().Properties);
             InitSubDevicesID();
         }
 
@@ -26,7 +27,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             int index = 0; // use number in list
             foreach (AUDIO.Block block in CurrentDevice.Blocks)
             {
-                this.cmb_Blocks.Items.Add(index.ToString() + "-" + block.Name);
                 this.cmb_Blocks.Items.Add(index.ToString() + "-" + block.Name);
                 index++;
             }

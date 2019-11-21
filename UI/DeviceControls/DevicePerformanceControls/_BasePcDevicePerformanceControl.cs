@@ -13,11 +13,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _BasePcDevicePerformanceControl : DevicePerformanceControl
     {
-        public _BasePcDevicePerformanceControl(): base()
+        public _BasePcDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
             InitializeComponent();
         }
 
+        public _BasePcDevicePerformanceControl() : base() {
+            InitializeComponent();
+        }
 
         public override void ShowPerformance()
         {
@@ -26,12 +29,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             chartRAM.FillSize = (int)CurrentPerformance.Per_RamSizeUsed;
             chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);
             chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
-        }
-
-        private void _BasePcDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_PC)).First().Properties);
         }
     }
 }

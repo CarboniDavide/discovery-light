@@ -13,7 +13,12 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _NetworkDevicePerformanceControl : DevicePerformanceControl
     {
-        public _NetworkDevicePerformanceControl()
+        public _NetworkDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
+        {
+            InitializeComponent();
+        }
+
+        public _NetworkDevicePerformanceControl() : base() 
         {
             InitializeComponent();
         }
@@ -29,12 +34,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             chartBytesSent.BarFillSize = Convert.ToInt16(CurrentPerformance.PercentBytesSent);
             chartPacketsReceived.BarFillSize = Convert.ToInt16(CurrentPerformance.PercentPacketsReceived);
             chartPacketsSent.BarFillSize = Convert.ToInt16(CurrentPerformance.PercentPacketsSents);
-        }
-
-        private void _NetworkDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_NETWORK)).First().Properties);
         }
     }
 }

@@ -13,7 +13,12 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
     public partial class _WindowsScoreDevicePerformanceControl : DevicePerformanceControl
     {
-        public _WindowsScoreDevicePerformanceControl()
+        public _WindowsScoreDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
+        {
+            InitializeComponent();
+        }
+
+        public _WindowsScoreDevicePerformanceControl() : base() 
         {
             InitializeComponent();
         }
@@ -28,12 +33,6 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             chartBar_Graph.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Graph) * 10);
             chartBar_Ram.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Ram) * 10);
             StopPerformance();
-        }
-
-        private void _WindowsScoreDevicePerformanceControl_Load(object sender, EventArgs e)
-        {
-            if (Program.Performances == null) return;
-            InitPerformace(Program.Performances.Where(d => d.Properties.GetType() == typeof(PERFORM_SCORE)).First().Properties);
         }
     }
 }
