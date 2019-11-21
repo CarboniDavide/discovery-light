@@ -1,4 +1,5 @@
-﻿using DiscoveryLight.UI.Forms.Main;
+﻿using DiscoveryLight.UI.BaseUserControl;
+using DiscoveryLight.UI.Forms.Main;
 using DiscoveryLight.UI.Panels.Devices;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
-    public abstract class AbstractBaseSubPanel : UserControl
+    public abstract class AbstractBaseSubPanel : _BaseUserControl
     {
         public abstract void Init();
         public abstract void Load();
@@ -70,6 +71,13 @@ namespace DiscoveryLight.UI.Panels.Details
         public override void Load()
         {
             t.Start();
+        }
+
+        public override void onDispose(object sender, EventArgs e)
+        {
+            StopLoadedSubTask();
+            this.Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         public BaseSubPanel() { }

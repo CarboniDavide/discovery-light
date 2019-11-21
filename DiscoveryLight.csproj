@@ -70,6 +70,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="UI\BaseUserControl\_AbstractBaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI\Buttons\PanelLinkButton.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -21,10 +21,8 @@ namespace DiscoveryLight.UI.Panels.Devices
             InitializeComponent();
         }
 
-        public override void StopLoadedTask()
+        public void StopLoadedTask()
         {
-            base.StopLoadedTask();
-
             foreach (Control c in this.Controls)
             {
                 if (c.GetType().BaseType.FullName == typeof(BaseSubPanel).ToString())

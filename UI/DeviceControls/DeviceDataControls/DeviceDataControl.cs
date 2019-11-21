@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.UI.BaseUserControl;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public abstract class AbstractDeviceDataControl : System.Windows.Forms.UserControl
+    public abstract class AbstractDeviceDataControl : _BaseUserControl
     {
         public abstract void InitData(DeviceData Device);
         public abstract void ShowData();
