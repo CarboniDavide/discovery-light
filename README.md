@@ -17,3 +17,6 @@ OS MS Windows 7, 8 and 10
 # Required
 Framework 4.5.2
 
+# Dependecies
+WinformComponents
+
