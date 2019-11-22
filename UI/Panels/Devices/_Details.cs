@@ -36,6 +36,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void _Details_Load(object sender, EventArgs e)
         {
             this.WmiNameSpace.Init();
+            this.WmiNameSpace.Load();
         }
     }
 }

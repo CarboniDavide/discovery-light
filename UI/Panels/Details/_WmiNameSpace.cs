@@ -22,9 +22,8 @@ namespace DiscoveryLight.UI.Panels.Details
 
         public override void Init()
         {
-            base.Init();
-            this.ListValues = lst_NameSpaces;
-            this.Load();
+            base.Init(lst_NameSpaces);
+            SubPanelContainer.WmiClasses.Init();
         }
 
         public override IEnumerable<String> Get()
@@ -54,14 +53,13 @@ namespace DiscoveryLight.UI.Panels.Details
                 nsClass.Dispose();
             }
         }
-
         public override void OnChangeIndex(object sender, EventArgs e)
         {
             base.OnChangeIndex(sender, e);
-            // get subpanel container
             if (ListValues.SelectedItem == "-- Select --") return;
-            SubPanelContainer.WmiClasses.NameSpace = this.lst_NameSpaces.SelectedItem.ToString();
-            SubPanelContainer.WmiClasses.Init();
+            Sender["NameSpace"] = this.ListValues.SelectedItem.ToString();
+            SubPanelContainer.WmiClasses.Load();
+            
         }
     }
 }

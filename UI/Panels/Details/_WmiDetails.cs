@@ -15,8 +15,6 @@ namespace DiscoveryLight.UI.Panels.Details
 {
     public partial class _WmiDetails : BaseSubPanel
     {
-        public String NameSpace;
-        public String WmiClassName;
         public _WmiDetails()
         {
             InitializeComponent();
@@ -24,9 +22,7 @@ namespace DiscoveryLight.UI.Panels.Details
 
         public override void Init()
         {
-            base.Init();
-            this.ListValues = this.lst_Details;
-            this.Load();
+            base.Init(lst_Details);
         }
 
         public override IEnumerable<String> Get()
@@ -39,7 +35,7 @@ namespace DiscoveryLight.UI.Panels.Details
             try
             {
                 this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = "Wait one moment ..."; }));
-                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + this.NameSpace), new WqlObjectQuery("select * from " + this.WmiClassName), null);
+                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + Sender["NameSpace"]), new WqlObjectQuery("select * from " + Sender["WmiClassName"]), null);
                 collection = nsClass.Get();
                 if (collection.Count == 0) nsClass = null;
                 this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = Footer.FooterTittleName; }));

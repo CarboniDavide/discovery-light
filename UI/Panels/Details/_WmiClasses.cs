@@ -15,7 +15,7 @@ namespace DiscoveryLight.UI.Panels.Details
 {
     public partial class _WmiClasses : BaseSubPanel
     {
-        public String NameSpace;
+        
         public _WmiClasses()
         {
             InitializeComponent();
@@ -23,9 +23,8 @@ namespace DiscoveryLight.UI.Panels.Details
 
         public override void Init()
         {
-            base.Init();
-            this.ListValues = this.lst_WmiClassName;
-            this.Load();
+            base.Init(lst_WmiClassName);
+            SubPanelContainer.WmiDetails.Init();
         }
 
         public override IEnumerable<String> Get()
@@ -38,7 +37,7 @@ namespace DiscoveryLight.UI.Panels.Details
             try
             {
                 // __namespace WMI class.
-                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + this.NameSpace), new WqlObjectQuery("select * from meta_class"), null);
+                nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + Sender["NameSpace"]), new WqlObjectQuery("select * from meta_class"), null);
                 collection = nsClass.Get();
                 if (collection.Count == 0) nsClass = null;
             }
@@ -65,9 +64,8 @@ namespace DiscoveryLight.UI.Panels.Details
         {
             base.OnChangeIndex(sender, e);
             if (ListValues.SelectedItem == "-- Select --") return;
-            SubPanelContainer.WmiDetails.NameSpace = this.NameSpace;
-            SubPanelContainer.WmiDetails.WmiClassName = this.lst_WmiClassName.SelectedItem.ToString();
-            SubPanelContainer.WmiDetails.Init();
+            Sender["WmiClassName"] = this.ListValues.SelectedItem.ToString();
+            SubPanelContainer.WmiDetails.Load();
         }
     }
 }

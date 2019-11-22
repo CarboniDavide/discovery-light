@@ -73,8 +73,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox lst_WmiClassName;
         private System.Windows.Forms.Label lbl_WmiClassName;
+        public System.Windows.Forms.ComboBox lst_WmiClassName;
     }
 }
