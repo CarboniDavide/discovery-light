@@ -515,26 +515,7 @@ namespace DiscoveryLight.Core.Device.Data
         public NETWORK()
         {
         }
-
     }
 
-    #endregion
-
-    #region Threads
-    public class EXECUTE_PROCESS
-    {
-        public System.Threading.Thread Th;
-
-        public void Start(System.Threading.ParameterizedThreadStart th)
-        {
-            this.Th = new System.Threading.Thread(th);
-            this.Th.Start();
-        }
-
-        public void Stop()
-        {
-            this.Th.Abort();
-        }
-    }
     #endregion
 }
