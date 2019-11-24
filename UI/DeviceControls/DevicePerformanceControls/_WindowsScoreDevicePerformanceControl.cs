@@ -23,16 +23,22 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             InitializeComponent();
         }
 
-        public override void ShowPerformance()
+        protected override void update()
         {
-            base.ShowPerformance();
+            base.update();
+            CurrentPerformance.GetPerformance();
+        }
+
+        protected override void show()
+        {
+            base.show();
             var CurrentPerformance = (PERFORM_SCORE)this.CurrentPerformance;
             chartBar_Cpu.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Cpu) * 10);
             chartBar_D3D.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.D3D) * 10);
             chartBar_Hd.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Hd) * 10);
             chartBar_Graph.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Graph) * 10);
             chartBar_Ram.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Ram) * 10);
-            StopPerformance();
+            abort();
         }
     }
 }

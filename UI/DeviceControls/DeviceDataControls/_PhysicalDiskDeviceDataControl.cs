@@ -28,9 +28,15 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             InitializeComponent();
         }
 
-        public override void ShowData()
+        protected override void update()
         {
-            base.ShowData();
+            base.update();
+            CurrentDevice.GetDriveInfo();
+        }
+
+        protected override void show()
+        {
+            base.show();
             var CurrentSubDevice = (DISK.Block)this.CurrentSubDevice;
             lbl_Name_Value.Text = CurrentSubDevice.Name;
             lbl_Tipology_Value.Text = CurrentSubDevice.MediaType;

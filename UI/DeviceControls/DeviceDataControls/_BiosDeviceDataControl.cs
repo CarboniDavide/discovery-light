@@ -28,9 +28,14 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             InitializeComponent();
         }
 
-        public override void ShowData()
+        protected override void update()
         {
-            base.ShowData();
+            base.update();
+            CurrentDevice.GetDriveInfo();
+        }
+        protected override void show()
+        {
+            base.show();
             var CurrentDevice = (BIOS)this.CurrentDevice;
             lbl_BiosManufacturer_Value.Text = CurrentDevice.Manufacturer;
             lbl_BiosSerialNumber_Value.Text = CurrentDevice.SerialNumber;

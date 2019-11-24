@@ -8,10 +8,9 @@ using DiscoveryLight.UI.BaseUserControl;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public abstract class AbstractDeviceDataControl : _BaseUserControl
+    public abstract class AbstractDeviceDataControl : DeviceControl
     {
         public abstract void InitData(DeviceData Device);
-        public abstract void ShowData();
     }
     public class DeviceDataControl: AbstractDeviceDataControl
     {
@@ -37,7 +36,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             get { return currentSubDevice; }
             set { 
                 currentSubDevice = value; 
-                if (value != null) ShowData(); 
+                if (value != null) show(); 
             } 
         }
         public Type DeviceType { get => deviceType; set => deviceType = value; }
@@ -47,9 +46,8 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             CurrentDevice = Device;
             CurrentSubDevice = (CurrentDevice.Blocks.Count != 0) ? CurrentDevice.Blocks.First() : new DeviceData._Block();
-            ShowData();
+            show();
         }
-        public override void ShowData() { }
 
         public DeviceDataControl(DeviceData Device) 
         {

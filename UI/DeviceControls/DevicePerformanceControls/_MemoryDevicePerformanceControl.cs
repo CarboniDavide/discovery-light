@@ -23,8 +23,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             InitializeComponent();
         }
 
-        public override void ShowPerformance()
+        protected override void update()
         {
+            base.update();
+            CurrentPerformance.GetPerformance();
+        }
+        protected override void show()
+        {
+            base.show();
             var CurrentPerformanceCPU = (PERFORM_RAM)this.CurrentPerformance;
             lbl_CacheUsage_Value.Text = (Convert.ToUInt64(CurrentPerformanceCPU.CacheUsage) / 1048576).ToString() + " MB";
             lbl_CacheUsageMax_Value.Text = (Convert.ToUInt64(CurrentPerformanceCPU.MaxCacheUsage) / 1048576).ToString() + " MB";

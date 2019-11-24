@@ -28,9 +28,15 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             InitializeComponent();
         }
 
-        public override void ShowData()
+        protected override void update()
         {
-            base.ShowData();
+            base.update();
+            CurrentDevice.GetDriveInfo();
+        }
+
+        protected override void show()
+        {
+            base.show();
             var CurrentDevice = (RAM)this.CurrentDevice;
             lbl_Size_Value.Text = CurrentDevice.Size.ToString() + " Kbytes";
             lbl_Block_Value.Text = CurrentDevice.BlockNumber.ToString();

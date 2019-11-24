@@ -24,9 +24,16 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             InitializeComponent();
         }
 
-        public override void ShowPerformance()
+
+        protected override void update()
         {
-            base.ShowPerformance();
+            base.update();
+            CurrentPerformance.GetPerformance();
+        }
+
+        protected override void show()
+        {
+            base.show();
             var CurrentPerformanceCPU = (PERFORM_CPU)this.CurrentPerformance;
             lbl_CpuSpeed_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Frequency + " Mhz";
             chartCpuUsage.FillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().DPCRate);

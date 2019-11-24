@@ -23,9 +23,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             InitializeComponent();
         }
 
-        public override void ShowPerformance()
+        protected override void update()
         {
-            base.ShowPerformance();
+            base.update();
+            CurrentPerformance.GetPerformance();
+        }
+        protected override void show()
+        {
+            base.show();
             var CurrentPerformance = (PERFORM_SYSTEM)this.CurrentPerformance;
             lbl_Threads_Value.Text = CurrentPerformance.Threads;
             lbl_Process_Value.Text = CurrentPerformance.Processes;

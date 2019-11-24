@@ -22,9 +22,15 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             InitializeComponent();
         }
 
-        public override void ShowPerformance()
+        protected override void update()
         {
-            base.ShowPerformance();
+            base.update();
+            CurrentPerformance.GetPerformance();
+        }
+
+        protected override void show()
+        {
+            base.show();
             var CurrentPerformance = (PERFORM_PC)this.CurrentPerformance;
             chartRAM.FillSize = (int)CurrentPerformance.Per_RamSizeUsed;
             chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);

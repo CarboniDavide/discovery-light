@@ -23,8 +23,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             InitializeComponent();
         }
 
-        public override void ShowPerformance()
+        protected override void update()
         {
+            base.update();
+            CurrentPerformance.GetPerformance();
+        }
+        protected override void show()
+        {
+            base.show();
             var CurrentPerformance = (PERFORM_NETWORK)this.CurrentPerformance;
             lbl_BytesReceived_Value.Text = CurrentPerformance.ByteReceivedPerSec.ToString();
             lbl_BytesSent_Value.Text = CurrentPerformance.BytesSentPerSec.ToString();

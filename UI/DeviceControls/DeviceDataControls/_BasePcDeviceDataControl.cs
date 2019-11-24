@@ -28,9 +28,15 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             InitializeComponent();
         }
 
-        public override void ShowData()
+        protected override void update()
         {
-            base.ShowData();
+            base.update();
+            CurrentDevice.GetDriveInfo();
+        }
+
+        protected override void show()
+        {
+            base.show();
             var CurrentDevice = (PC)this.CurrentDevice;
             lbl_Name_Value.Text = CurrentDevice.Name;
             lbl_Type_Value.Text = CurrentDevice.Type;

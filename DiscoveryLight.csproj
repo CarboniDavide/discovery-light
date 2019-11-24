@@ -74,6 +74,9 @@
     <Compile Include="UI\Buttons\PanelLinkButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_AudioDeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

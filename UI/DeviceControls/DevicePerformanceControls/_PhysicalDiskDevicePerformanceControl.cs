@@ -23,9 +23,15 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             InitializeComponent();
         }
 
-
-        public override void ShowPerformance()
+        protected override void update()
         {
+            base.update();
+            CurrentPerformance.GetPerformance();
+        }
+
+        protected override void show()
+        {
+            base.show();
             var CurrentPerformance = (PERFORM_DISK)this.CurrentPerformance;
             chartDiskFree.FillSize = Convert.ToInt16(100 - CurrentPerformance.Percent_FreeSpace);
             lbl_Free_Value.Text = (Convert.ToInt64(CurrentPerformance.FreeSpace) / 1024).ToString() + " GB";
