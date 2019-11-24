@@ -12,8 +12,8 @@ namespace DiscoveryLight
     
     static class Program
     {
-        static public List<Device> Devices;
-        static public List<Performance> Performances;
+        static public List<DeviceData> Devices;
+        static public List<DevicePerformance> Performances;
 
         /// <summary>
         /// The main entry point for the application.

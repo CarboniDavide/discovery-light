@@ -56,11 +56,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Device\Device.cs" />
     <Compile Include="Core\Device\DevicePerformance.cs" />
     <Compile Include="Core\Device\DeviceData.cs" />
     <Compile Include="Core\Device\DeviceUtils.cs" />
-    <Compile Include="Core\Device\PerformanceBase.cs" />
     <Compile Include="Core\Exception\Exceptions.cs" />
     <Compile Include="Logging\Looger.cs" />
     <Compile Include="Program.cs" />

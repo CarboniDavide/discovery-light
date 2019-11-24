@@ -31,34 +31,34 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
 
         private async Task InitDevice()
         {
-            Program.Devices = new List<Device>();
-            Program.Performances = new List<Performance>();
-            Program.Devices.Add(new Device(new CPU()));
-            Program.Devices.Add(new Device(new DISK()));
-            Program.Devices.Add(new Device(new NETWORK()));
-            Program.Devices.Add(new Device(new PC()));
-            Program.Devices.Add(new Device(new VIDEO()));
-            Program.Devices.Add(new Device(new AUDIO()));
-            Program.Devices.Add(new Device(new BIOS()));
-            Program.Devices.Add(new Device(new MAINBOARD()));
-            Program.Devices.Add(new Device(new RAM()));
-            Program.Performances.Add(new Performance(new PERFORM_CPU(null, null)));
-            Program.Performances.Add(new Performance(new PERFORM_DISK()));
-            Program.Performances.Add(new Performance(new PERFORM_NETWORK(null)));
-            Program.Performances.Add(new Performance(new PERFORM_PC()));
-            Program.Performances.Add(new Performance(new PERFORM_RAM()));
-            Program.Performances.Add(new Performance(new PERFORM_SCORE()));
-            Program.Performances.Add(new Performance(new PERFORM_SYSTEM()));
+            Program.Devices = new List<DeviceData>();
+            Program.Performances = new List<DevicePerformance>();
+            Program.Devices.Add(new CPU());
+            Program.Devices.Add(new DISK());
+            Program.Devices.Add(new NETWORK());
+            Program.Devices.Add(new PC());
+            Program.Devices.Add(new VIDEO());
+            Program.Devices.Add(new AUDIO());
+            Program.Devices.Add(new BIOS());
+            Program.Devices.Add(new MAINBOARD());
+            Program.Devices.Add(new RAM());
+            Program.Performances.Add(new PERFORM_CPU(null, null));
+            Program.Performances.Add(new PERFORM_DISK());
+            Program.Performances.Add(new PERFORM_NETWORK(null));
+            Program.Performances.Add(new PERFORM_PC());
+            Program.Performances.Add(new PERFORM_RAM());
+            Program.Performances.Add(new PERFORM_SCORE());
+            Program.Performances.Add(new PERFORM_SYSTEM());
         }
 
         private async Task loadDevice()
         {
             chgBar_Devices.BarFillSize = 0;
             int step = 100 / Program.Devices.Count;
-            foreach (Device device in Program.Devices)
+            foreach (DeviceData device in Program.Devices)
             {
-                lbl_LoadIDeviceInfo.Text = "Loading data for: " + device.Name.ToLower();
-                await Task.Run(() => device.Properties.GetDriveInfo());
+                lbl_LoadIDeviceInfo.Text = "Loading data for: " + device.ClassName.ToLower();
+                await Task.Run(() => device.GetDriveInfo());
                 chgBar_Devices.BarFillSize += step;
             }
         }
