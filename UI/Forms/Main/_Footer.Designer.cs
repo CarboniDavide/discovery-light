@@ -43,7 +43,7 @@
             this.ChartBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ChartBar.Location = new System.Drawing.Point(0, 0);
             this.ChartBar.Name = "ChartBar";
-            this.ChartBar.Padding = new System.Windows.Forms.Padding(10);
+            this.ChartBar.Padding = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.ChartBar.Size = new System.Drawing.Size(560, 40);
             this.ChartBar.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.ChartBar.TabIndex = 0;
