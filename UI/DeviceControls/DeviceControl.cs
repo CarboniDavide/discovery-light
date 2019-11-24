@@ -15,6 +15,35 @@ namespace DiscoveryLight.UI.DeviceControls
         protected abstract void show();
         protected abstract void start();
 
+        public event EventHandler OnStart;
+        public event EventHandler OnAbort;
+        public event EventHandler OnUpdate;
+        public event EventHandler OnShow;
+
+        protected virtual void onUpdate(EventArgs e)
+        {
+            EventHandler handler = OnUpdate;
+            handler?.Invoke(this, e);
+        }
+
+        protected virtual void onStart(EventArgs e)
+        {
+            EventHandler handler = OnStart;
+            handler?.Invoke(this, e);
+        }
+
+        protected virtual void onShow(EventArgs e)
+        {
+            EventHandler handler = OnShow;
+            handler?.Invoke(this, e);
+        }
+
+        protected virtual void onAbort(EventArgs e)
+        {
+            EventHandler handler = OnAbort;
+            handler?.Invoke(this, e);
+        }
+
     }
 
     public class DeviceControl: AbstractDeviceControl
@@ -49,17 +78,23 @@ namespace DiscoveryLight.UI.DeviceControls
 
         protected override void start()
         {
+            onStart(EventArgs.Empty);
             abort();
             setToken();
             run();
         }
         protected override void abort()
         {
+            onAbort(EventArgs.Empty);
             if (token != null && tokenSource != null)
                 tokenSource.Cancel();
         }
-        protected override void update() { }
-        protected override void show() { }
+        protected override void update() {
+            onUpdate(EventArgs.Empty);
+        }
+        protected override void show() {
+            onShow(EventArgs.Empty);
+        }
 
         public override void onLoad(object sender, EventArgs e)
         {
