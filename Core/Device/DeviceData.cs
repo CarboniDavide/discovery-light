@@ -14,12 +14,12 @@ namespace DiscoveryLight.Core.Device.Data
     /// 
     public abstract class DeviceData
     {
-        private string deviceName;
+        protected readonly string deviceName;
         private int blockNumber = 0;
         private List<_Block> blocks = new List<_Block>();
         private List<ManagementObject> collection;
 
-        public string DeviceName { get => deviceName; set => deviceName = value; }
+        public string DeviceName { get => deviceName; }
         public int BlockNumber { get => blockNumber; set => blockNumber = value; }
         public List<_Block> Blocks { get => blocks; set => blocks = value; }
         public List<ManagementObject> Collection
@@ -37,6 +37,11 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public String DeviceID;
             public String Name;
+        }
+
+        public DeviceData(string deviceName)
+        {
+            this.deviceName = deviceName;
         }
     }
 
@@ -89,9 +94,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public PC()
-        {
-        }
+        public PC():base("Pc") { }
     }
 
     #endregion
@@ -119,9 +122,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public BIOS()
-        {
-        }
+        public BIOS():base("Bios") { }
     }
 
     #endregion
@@ -159,9 +160,7 @@ namespace DiscoveryLight.Core.Device.Data
             NumberSlot = DeviceUtils.GetDriveInfo("Win32_SystemSlot").Count.ToString();
         }
 
-        public MAINBOARD()
-        {
-        }
+        public MAINBOARD():base("Mainboard") { }
     }
 
     #endregion
@@ -218,9 +217,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public VIDEO()
-        {
-        }
+        public VIDEO():base("Video") { }
     }
 
     #endregion
@@ -257,9 +254,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public AUDIO()
-        {
-        }
+        public AUDIO(): base("Audio") { }
     }
 
     #endregion
@@ -317,9 +312,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public CPU()
-        {
-        }
+        public CPU(): base("Cpu") { }
 
     }
 
@@ -387,10 +380,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public RAM()
-        {
-        }
-
+        public RAM(): base("Memory") { }
     }
 
     #endregion
@@ -461,10 +451,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public DISK()
-        {
-        }
-
+        public DISK(): base("Storage") { }
     }
 
     #endregion
@@ -512,9 +499,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public NETWORK()
-        {
-        }
+        public NETWORK():base("Network") { }
     }
 
     #endregion
