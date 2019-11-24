@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_Bios_Titre = new System.Windows.Forms.Label();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
@@ -97,10 +98,10 @@
             this.WindowsScoreDevicePerformanceControl.CurrentSubDevice = 0;
             this.WindowsScoreDevicePerformanceControl.Location = new System.Drawing.Point(465, 0);
             this.WindowsScoreDevicePerformanceControl.Name = "WindowsScoreDevicePerformanceControl";
-            this.WindowsScoreDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.WindowsScoreDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.WindowsScoreDevicePerformanceControl.Size = new System.Drawing.Size(155, 360);
             this.WindowsScoreDevicePerformanceControl.TabIndex = 28;
-            this.WindowsScoreDevicePerformanceControl.TokenSource = null;
+            this.WindowsScoreDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // _MainBoard
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.lbl_Bios_Titre);
             this.Name = "_MainBoard";
             this.PanelIndex = 1;
+            this.PanelName = "Motherboard";
             this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();

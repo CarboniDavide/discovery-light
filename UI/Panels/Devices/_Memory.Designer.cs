@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.pic_Divisor_003 = new System.Windows.Forms.PictureBox();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
@@ -97,10 +98,10 @@
             this.MemoryDevicePerformanceControl.CurrentSubDevice = 0;
             this.MemoryDevicePerformanceControl.Location = new System.Drawing.Point(453, 0);
             this.MemoryDevicePerformanceControl.Name = "MemoryDevicePerformanceControl";
-            this.MemoryDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.MemoryDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.MemoryDevicePerformanceControl.Size = new System.Drawing.Size(174, 360);
             this.MemoryDevicePerformanceControl.TabIndex = 219;
-            this.MemoryDevicePerformanceControl.TokenSource = null;
+            this.MemoryDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // _Memory
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.pic_Divisor_003);
             this.Name = "_Memory";
             this.PanelIndex = 3;
+            this.PanelName = "Memory";
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._Memory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).EndInit();

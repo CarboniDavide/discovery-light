@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.lbl_TitleComboBock = new System.Windows.Forms.Label();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
@@ -86,10 +87,10 @@
             this.NetworkDevicePerformanceControl.CurrentSubDevice = 0;
             this.NetworkDevicePerformanceControl.Location = new System.Drawing.Point(486, 10);
             this.NetworkDevicePerformanceControl.Name = "NetworkDevicePerformanceControl";
-            this.NetworkDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.NetworkDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.NetworkDevicePerformanceControl.Size = new System.Drawing.Size(139, 338);
             this.NetworkDevicePerformanceControl.TabIndex = 218;
-            this.NetworkDevicePerformanceControl.TokenSource = null;
+            this.NetworkDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // NetworkDeviceDataControl
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.pic_Divisor_002);
             this.Name = "_Network";
             this.PanelIndex = 7;
+            this.PanelName = "Network";
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._Network_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();

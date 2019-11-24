@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.BasePcDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._BasePcDevicePerformanceControl();
             this.BasePcDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._BasePcDeviceDataControl();
@@ -50,10 +51,10 @@
             this.BasePcDevicePerformanceControl.CurrentSubDevice = 0;
             this.BasePcDevicePerformanceControl.Location = new System.Drawing.Point(476, 0);
             this.BasePcDevicePerformanceControl.Name = "BasePcDevicePerformanceControl";
-            this.BasePcDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.BasePcDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.BasePcDevicePerformanceControl.Size = new System.Drawing.Size(127, 360);
             this.BasePcDevicePerformanceControl.TabIndex = 24;
-            this.BasePcDevicePerformanceControl.TokenSource = null;
+            this.BasePcDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // BasePcDeviceDataControl
             // 
@@ -74,6 +75,7 @@
             this.Controls.Add(this.BasePcDeviceDataControl);
             this.Controls.Add(this.pic_Divisor_001);
             this.Name = "_BaseHardware";
+            this.PanelName = "Base Pc Information";
             this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
+            System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.CpuDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._CpuDevicePerformanceControl();
@@ -63,10 +65,10 @@
             this.CpuDevicePerformanceControl.CurrentSubDevice = 0;
             this.CpuDevicePerformanceControl.Location = new System.Drawing.Point(349, 56);
             this.CpuDevicePerformanceControl.Name = "CpuDevicePerformanceControl";
-            this.CpuDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.CpuDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.CpuDevicePerformanceControl.Size = new System.Drawing.Size(281, 301);
             this.CpuDevicePerformanceControl.TabIndex = 69;
-            this.CpuDevicePerformanceControl.TokenSource = null;
+            this.CpuDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // CpuDeviceDataControl
             // 
@@ -86,10 +88,10 @@
             this.SystemDevicePerformanceControl.CurrentSubDevice = 0;
             this.SystemDevicePerformanceControl.Location = new System.Drawing.Point(489, 95);
             this.SystemDevicePerformanceControl.Name = "SystemDevicePerformanceControl";
-            this.SystemDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.SystemDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.SystemDevicePerformanceControl.Size = new System.Drawing.Size(117, 48);
             this.SystemDevicePerformanceControl.TabIndex = 70;
-            this.SystemDevicePerformanceControl.TokenSource = null;
+            this.SystemDevicePerformanceControl.TokenSource = cancellationTokenSource2;
             // 
             // _CPU
             // 
@@ -102,6 +104,7 @@
             this.Controls.Add(this.pic_Divisor_001);
             this.Name = "_CPU";
             this.PanelIndex = 2;
+            this.PanelName = "Cpu";
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._CPU_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();

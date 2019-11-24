@@ -79,6 +79,7 @@
             this.Controls.Add(this.WmiNameSpace);
             this.Name = "_Details";
             this.PanelIndex = 8;
+            this.PanelName = "All Wmi Details";
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._Details_Load);
             this.ResumeLayout(false);

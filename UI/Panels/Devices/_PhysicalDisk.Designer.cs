@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
@@ -86,10 +87,10 @@
             this.PhysicalDiskDevicePerformanceControl.CurrentSubDevice = 0;
             this.PhysicalDiskDevicePerformanceControl.Location = new System.Drawing.Point(477, 3);
             this.PhysicalDiskDevicePerformanceControl.Name = "PhysicalDiskDevicePerformanceControl";
-            this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00");
+            this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.PhysicalDiskDevicePerformanceControl.Size = new System.Drawing.Size(153, 357);
             this.PhysicalDiskDevicePerformanceControl.TabIndex = 171;
-            this.PhysicalDiskDevicePerformanceControl.TokenSource = null;
+            this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // PhysicalDiskDeviceDataControl
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "_PhysicalDisk";
             this.PanelIndex = 6;
+            this.PanelName = "Local Storage";
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._PhysicalDisk_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

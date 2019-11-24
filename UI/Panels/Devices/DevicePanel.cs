@@ -18,8 +18,11 @@ namespace DiscoveryLight.UI.Panels.Devices
     public class DevicePanel: AbstractDevicePanel
     {
         private int panelIndex;
+        private string panelName;
 
         public int PanelIndex { get => panelIndex; set => panelIndex = value; }
+        public string PanelName { get => panelName; set => panelName = value; }
+
         public DevicePanel() { }
     }
 }
