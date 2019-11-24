@@ -41,6 +41,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_BiosSerialNumber_Value.Text = CurrentDevice.SerialNumber;
             lbl_BiosVersion_Value.Text = CurrentDevice.Version;
             lbl_BiosReleaseDate_Value.Text = CurrentDevice.ReleaseData.Substring(0, 4) + " - " + CurrentDevice.ReleaseData.Substring(4, 2) + " - " + CurrentDevice.ReleaseData.Substring(6, 2);
+            abort();
         }
     }
 }

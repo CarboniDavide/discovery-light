@@ -50,6 +50,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_L1CacheSize_Value.Text = CurrentSubDevice.L1_Cache + " Kb";
             lbl_L2CacheSize_Value.Text = CurrentSubDevice.L2_Cache + " Kb";
             lbl_L3CacheSize_Value.Text = CurrentSubDevice.L3_Cache + " Kb";
+            abort();
         }
     }
 }

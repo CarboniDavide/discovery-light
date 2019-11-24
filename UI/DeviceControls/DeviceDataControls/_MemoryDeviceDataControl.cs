@@ -52,6 +52,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_BlockSpeed_Value.Text = CurrentSubDevice.Speed + " Mhz";
             lbl_BlockBusSize_Value.Text = CurrentSubDevice.BusSize + " Bytes";
             lbl_BlockVoltage_Value.Text = CurrentSubDevice.Voltage + " mV";
+            abort();
         }
     }
 }

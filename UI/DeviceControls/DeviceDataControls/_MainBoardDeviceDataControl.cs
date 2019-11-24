@@ -44,6 +44,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_PrimaryBus_Value.Text = CurrentDevice.PrimaryBus_Value;
             lbl_SecondaryBus_Value.Text = CurrentDevice.SecondaryBus_Value;
             lbl_SlotNumber_Value.Text = CurrentDevice.NumberSlot;
+            abort();
         }
     }
 }

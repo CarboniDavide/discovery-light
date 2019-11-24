@@ -59,7 +59,7 @@ namespace DiscoveryLight.UI.DeviceControls
         private void setToken()
         {
             tokenSource = new CancellationTokenSource();
-            token = TokenSource.Token;
+            token = tokenSource.Token;
             period = TimeSpan.FromMilliseconds(500);
         }
         private async Task run()

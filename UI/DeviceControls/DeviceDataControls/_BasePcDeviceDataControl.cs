@@ -49,6 +49,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_SystemOS_Value.Text = CurrentDevice.SystemOS;
             lbl_Producer_Value.Text = CurrentDevice.SystemOS_Brand;
             lbl_Architectur_Value.Text = CurrentDevice.SystemOS_Architecture;
+            abort();
         }
     }
 }
