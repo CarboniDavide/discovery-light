@@ -51,6 +51,6 @@
 
         #endregion
 
-        private Slider._Slider Slider;
+        public Slider._Slider Slider;
     }
 }
