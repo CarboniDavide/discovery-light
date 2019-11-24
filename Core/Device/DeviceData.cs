@@ -14,12 +14,12 @@ namespace DiscoveryLight.Core.Device.Data
     /// 
     public abstract class DeviceData
     {
-        protected readonly string name;
+        protected readonly string deviceName;
         private int blockNumber = 0;
         private List<_Block> blocks = new List<_Block>();
         private List<ManagementObject> collection;
 
-        public string Name { get => name; }
+        public string DeviceName { get => deviceName; }
         public int BlockNumber { get => blockNumber; set => blockNumber = value; }
         public List<_Block> Blocks { get => blocks; set => blocks = value; }
         public List<ManagementObject> Collection
@@ -39,9 +39,9 @@ namespace DiscoveryLight.Core.Device.Data
             public String Name;
         }
 
-        public DeviceData(string Name)
+        public DeviceData(string deviceName)
         {
-            this.name = Name;
+            this.deviceName = deviceName;
         }
     }
 
