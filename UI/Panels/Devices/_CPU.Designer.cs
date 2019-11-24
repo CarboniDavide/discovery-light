@@ -104,7 +104,7 @@
             this.Controls.Add(this.pic_Divisor_001);
             this.Name = "_CPU";
             this.PanelIndex = 2;
-            this.PanelName = "Cpu";
+            this.PanelName = "Processor";
             this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._CPU_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();

@@ -88,7 +88,7 @@
             this.Controls.Add(this.lbl_TitleComboBox);
             this.Name = "_Audio";
             this.PanelIndex = 4;
-            this.PanelName = "Video";
+            this.PanelName = "Audio";
             this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor)).EndInit();
             this.ResumeLayout(false);
