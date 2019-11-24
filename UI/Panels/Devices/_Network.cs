@@ -23,10 +23,28 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void ChargeListOfSubDevicesInit()
         {
+            List<String> devices = new List<string>();
             var CurrentDevice = (NETWORK)this.NetworkDeviceDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
             foreach (NETWORK.Block block in CurrentDevice.Blocks)
-                this.cmb_Blocks.Items.Add(block.DeviceID + " - " + block.Name);
+                devices.Add(block.DeviceID + " - " + block.Name);
+
+            if (devices.SequenceEqual(cmb_Blocks.Items.Cast<String>().ToList())) return;
+
+            if (cmb_Blocks.Items.Count != 0) {
+                string currentSelected = cmb_Blocks.SelectedItem.ToString();
+                cmb_Blocks.Items.Clear();
+                cmb_Blocks.Items.AddRange(devices.ToArray());
+                if (cmb_Blocks.Items.Contains(currentSelected))
+                    cmb_Blocks.SelectedIndex = cmb_Blocks.Items.IndexOf(currentSelected);
+                else
+                    cmb_Blocks.SelectedIndex = 0;
+            }
+            else
+            {
+                cmb_Blocks.Items.AddRange(devices.ToArray());
+                cmb_Blocks.SelectedIndex = 0;
+            }
         }
 
         private void ChangeSubDevice(object sender, EventArgs e)
@@ -43,7 +61,12 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             this.ChargeListOfSubDevicesInit();
-            this.cmb_Blocks.SelectedIndex = 0;
+            this.NetworkDeviceDataControl.OnUpdate += new EventHandler(OnDeviceUpdate);
+        }
+
+        private void OnDeviceUpdate(object sender, EventArgs e)
+        {
+            this.Invoke((System.Action)(() => { ChargeListOfSubDevicesInit(); }));
         }
 
         private void _Network_Load(object sender, EventArgs e)
