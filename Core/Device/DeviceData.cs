@@ -14,15 +14,22 @@ namespace DiscoveryLight.Core.Device.Data
     /// 
     public abstract class DeviceData
     {
+        private string deviceName;
+        private int blockNumber = 0;
+        private List<_Block> blocks = new List<_Block>();
+
+
+        public string DeviceName { get => deviceName; set => deviceName = value; }
+        public int BlockNumber { get => blockNumber; set => blockNumber = value; }
+        public List<_Block> Blocks { get => blocks; set => blocks = value; }
+
+        public abstract void GetDriveInfo();
+
         public class _Block
         {
             public String DeviceID;
             public String Name;
         }
-
-        public List<_Block> Blocks = new List<_Block>();
-        public int BlockNumber = 0;
-        public abstract void GetDriveInfo();
     }
 
     #endregion
