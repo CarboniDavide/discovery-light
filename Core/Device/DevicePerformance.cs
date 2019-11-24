@@ -12,9 +12,9 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Declare base class structure
     /// </summary>
-    public interface DevicePerformance
+    public abstract class DevicePerformance
     {
-        void GetPerformance();
+        public abstract void GetPerformance();
     }
 
     #endregion
@@ -32,7 +32,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public UInt64? Graph;
         public UInt64? Ram;
 
-        public void GetPerformance()
+        public override void GetPerformance()
         {
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_WinSAT"))
             {
@@ -79,7 +79,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public string MakeName() {
             return (this.selectedCpu != null && this.selectedThread != null) ? this.selectedCpu + "," + this.selectedThread : null;
         }
-        public void GetPerformance()
+        public override void GetPerformance()
         {
             if (this.selectedCpu == null) return;
             this.Cpu = new List<Thread>();
@@ -117,7 +117,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public String Threads;
         public String Processes;
 
-        public void GetPerformance()
+        public override void GetPerformance()
         {
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_System")){
                 this.Threads = DeviceUtils.GetProperty("Threads", mj, DeviceUtils.ReturnType.String);
@@ -142,7 +142,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public UInt64? Per_CpuUsage;
         public UInt64? Per_RamSizeUsed;
 
-        public void GetPerformance()
+        public override void GetPerformance()
         {
             // Storage
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_PerfDisk_LogicalDisk", "Name", "_Total", DeviceUtils.Operator.Egual))
@@ -179,7 +179,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public UInt64? PageWrite;
         public UInt64? PageRead;
 
-        public void GetPerformance()
+        public override void GetPerformance()
         {
 
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_Memory"))
@@ -242,7 +242,7 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public void GetPerformance()
+        public override void GetPerformance()
         {
             if (this.DriveIndex == null) return;
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_PerfDisk_LogicalDisk"))
@@ -301,7 +301,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public string SelectedNetwork { get => selectedNetwork; set => selectedNetwork = value; }
 
-        public void GetPerformance()
+        public override void GetPerformance()
         {
             if (this.selectedNetwork == null) return;
             UInt64? Den;
