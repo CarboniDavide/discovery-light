@@ -14,7 +14,14 @@ namespace DiscoveryLight.Core.Device.Performance
     /// </summary>
     public abstract class DevicePerformance
     {
+        protected readonly string name;
+        public string Name { get => name; }
         public abstract void GetPerformance();
+
+        public DevicePerformance(string Name)
+        {
+            name = Name;
+        }
     }
 
     #endregion
@@ -44,7 +51,7 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_SCORE() {}
+        public PERFORM_SCORE(): base("Score Performance") {}
     }
     #endregion
 
@@ -96,13 +103,13 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_CPU(string cpu, string thread)
+        public PERFORM_CPU(string cpu, string thread): base("Cpu Performance")
         {
             this.SelectedCpu = cpu;
             this.SelectedThread = thread;
         }
 
-        public PERFORM_CPU(){}
+        public PERFORM_CPU(): base("Cpu Performance") { }
     }
 
     #endregion
@@ -125,7 +132,7 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_SYSTEM() {}
+        public PERFORM_SYSTEM(): base("System Base Performance") {}
     }
 
     #endregion
@@ -157,7 +164,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 this.Per_CpuUsage = DeviceUtils.GetProperty("DPCRate", mj, DeviceUtils.ReturnType.UInt64);
         }
 
-        public PERFORM_PC() {}
+        public PERFORM_PC(): base("Pc Base Performance") {}
     }
 
     #endregion
@@ -197,7 +204,7 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_RAM() {}
+        public PERFORM_RAM(): base("Memory Performance") {}
 
     }
 
@@ -263,17 +270,17 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public PERFORM_DISK(int index)
+        public PERFORM_DISK(int index): base("Storage Performance")
         {
             this.DriveIndex = index;
         }
 
-        public PERFORM_DISK(string driveName)
+        public PERFORM_DISK(string driveName): base("Storage Performance")
         {
             this._driveName = driveName;
         }
 
-        public PERFORM_DISK() {}
+        public PERFORM_DISK(): base("Storage Performance") { }
     }
 
     #endregion
@@ -347,12 +354,12 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
         
-        public PERFORM_NETWORK(string NetworkName)
+        public PERFORM_NETWORK(string NetworkName): base("Network Performance")
         {
                 this.selectedNetwork = NetworkName;
         }
 
-        public PERFORM_NETWORK() {}
+        public PERFORM_NETWORK(): base("Network Performance") { }
 
     }
 
