@@ -15,12 +15,17 @@ namespace DiscoveryLight.Core.Device.Performance
     public abstract class DevicePerformance
     {
         protected readonly string name;
+        protected readonly string className;
+        protected readonly Type classType;
         public string Name { get => name; }
+        public string ClassName { get => className; }
+        public Type ClassType { get => classType; }
         public abstract void GetPerformance();
-
         public DevicePerformance(string Name)
         {
             name = Name;
+            this.className = this.GetType().Name;
+            this.classType = this.GetType();
         }
     }
 
