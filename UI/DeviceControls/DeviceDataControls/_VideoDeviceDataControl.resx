@@ -117,4 +117,817 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_ModalitySupported_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_VerticalResolution.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_HorizontalResolution_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_FreqMax_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="lbl_ColorsNumber.Size" type="System.Drawing.Size, System.Drawing">
+    <value>279, 25</value>
+  </data>
+  <data name="lbl_FreqNow.Text" xml:space="preserve">
+    <value>Video frequency</value>
+  </data>
+  <data name="lbl_FreqMin.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 239</value>
+  </data>
+  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 14</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution_Value.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ColorsNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 264</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 39</value>
+  </data>
+  <data name="lbl_Manufacturer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Name.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Name" xml:space="preserve">
+    <value>lbl_Manufacturer</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_HorizontalResolution_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_VerticalResolution_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ColorsNumber.Text" xml:space="preserve">
+    <value>Colors</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported_Value.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbl_ColorsNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_VerticalResolution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="lbl_HorizontalResolution.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution.Name" xml:space="preserve">
+    <value>lbl_HorizontalResolution</value>
+  </data>
+  <data name="lbl_BitsPixel_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel_Value.Name" xml:space="preserve">
+    <value>lbl_BitsPixel_Value</value>
+  </data>
+  <data name="lbl_ColorsNumber_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_FreqNow.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="lbl_Memory.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_ModalitySupported_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution_Value.Name" xml:space="preserve">
+    <value>lbl_VerticalResolution_Value</value>
+  </data>
+  <data name="lbl_FreqMin_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_Adapter_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Name.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 14</value>
+  </data>
+  <data name="lbl_Memory_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Manufacturer.Text" xml:space="preserve">
+    <value>Producer</value>
+  </data>
+  <data name="lbl_FreqNow.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ColorsNumber_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_FreqMax_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_ModalitySupported.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Adapter_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution_Value.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lbl_Manufacturer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="lbl_BitsPixel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 114</value>
+  </data>
+  <data name="lbl_FreqMax.Text" xml:space="preserve">
+    <value>Max frequency</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory_Value.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lbl_FreqMin_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 239</value>
+  </data>
+  <data name="lbl_FreqNow.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported_Value.Name" xml:space="preserve">
+    <value>lbl_ModalitySupported_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow_Value.Name" xml:space="preserve">
+    <value>lbl_FreqNow_Value</value>
+  </data>
+  <data name="lbl_VerticalResolution_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 164</value>
+  </data>
+  <data name="lbl_ModalitySupported.Text" xml:space="preserve">
+    <value>Max resolution</value>
+  </data>
+  <data name="lbl_VerticalResolution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 164</value>
+  </data>
+  <data name="lbl_HorizontalResolution.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 139</value>
+  </data>
+  <data name="lbl_Manufacturer.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="lbl_Adapter_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 64</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_HorizontalResolution.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow.Name" xml:space="preserve">
+    <value>lbl_FreqNow</value>
+  </data>
+  <data name="lbl_ModalitySupported.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 289</value>
+  </data>
+  <data name="lbl_Adapter.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_FreqMin_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_Manufacturer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 39</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin_Value.Name" xml:space="preserve">
+    <value>lbl_FreqMin_Value</value>
+  </data>
+  <data name="lbl_ModalitySupported.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="lbl_HorizontalResolution_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Memory_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_VerticalResolution.Text" xml:space="preserve">
+    <value>Vertical resolution</value>
+  </data>
+  <data name="lbl_VerticalResolution.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_ColorsNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="lbl_FreqNow_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Adapter_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution_Value.Name" xml:space="preserve">
+    <value>lbl_HorizontalResolution_Value</value>
+  </data>
+  <data name="lbl_FreqMax_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_ModalitySupported_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="lbl_Memory_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_Adapter_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_BitsPixel_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_FreqNow_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_FreqNow.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_FreqMax.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Memory_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_VideoDeviceDataControl</value>
+  </data>
+  <data name="lbl_FreqMin.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter_Value.Name" xml:space="preserve">
+    <value>lbl_Adapter_Value</value>
+  </data>
+  <data name="lbl_FreqNow_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_FreqNow_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 189</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported.Name" xml:space="preserve">
+    <value>lbl_ModalitySupported</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_HorizontalResolution_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lbl_Name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_ModalitySupported.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="lbl_Manufacturer.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbl_HorizontalResolution_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="lbl_BitsPixel_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ColorsNumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_FreqMax_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_Memory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="lbl_Name.TabIndex" type="System.Int32, mscorlib">
+    <value>95</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
+    <value>lbl_Name_Value</value>
+  </data>
+  <data name="lbl_Adapter.Text" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="lbl_FreqNow_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_ColorsNumber_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="lbl_ColorsNumber_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 264</value>
+  </data>
+  <data name="lbl_VerticalResolution_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_Manufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_HorizontalResolution_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_FreqMin.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_FreqMax.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 214</value>
+  </data>
+  <data name="lbl_VerticalResolution_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lbl_ModalitySupported_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 289</value>
+  </data>
+  <data name="lbl_HorizontalResolution_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 139</value>
+  </data>
+  <data name="lbl_ModalitySupported_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_ModalitySupported_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_VerticalResolution.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_FreqMin_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_BitsPixel.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="lbl_BitsPixel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_BitsPixel_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Memory_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 89</value>
+  </data>
+  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_BitsPixel_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin_Value.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Memory.Text" xml:space="preserve">
+    <value>Memory</value>
+  </data>
+  <data name="lbl_VerticalResolution_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Name.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_ModalitySupported.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_FreqMax.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_FreqMax.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="lbl_Memory.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_FreqMax.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Adapter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 64</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_BitsPixel_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_FreqMin_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 317</value>
+  </data>
+  <data name="lbl_FreqMax_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_FreqNow_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name.Name" xml:space="preserve">
+    <value>lbl_Name</value>
+  </data>
+  <data name="lbl_FreqMin_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>341, 25</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Adapter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_FreqMin.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="lbl_ModalitySupported_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_ModalitySupported.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_FreqNow.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_BitsPixel.Text" xml:space="preserve">
+    <value>Bytes per Pixel</value>
+  </data>
+  <data name="lbl_HorizontalResolution.Text" xml:space="preserve">
+    <value>Horizontal resolution</value>
+  </data>
+  <data name="lbl_BitsPixel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ColorsNumber.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_ModalitySupported.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory.Name" xml:space="preserve">
+    <value>lbl_Memory</value>
+  </data>
+  <data name="lbl_ColorsNumber_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_VerticalResolution_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_Memory_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_VerticalResolution.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_FreqMin.Text" xml:space="preserve">
+    <value>Min frequency</value>
+  </data>
+  <data name="lbl_Memory_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter_Value.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lbl_HorizontalResolution.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Name" xml:space="preserve">
+    <value>lbl_Manufacturer_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_HorizontalResolution_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_VerticalResolution_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax_Value.Name" xml:space="preserve">
+    <value>lbl_FreqMax_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_Adapter.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="lbl_HorizontalResolution.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Memory.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbl_ColorsNumber_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Memory.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="lbl_Name.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Memory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 89</value>
+  </data>
+  <data name="lbl_BitsPixel_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 114</value>
+  </data>
+  <data name="lbl_BitsPixel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_HorizontalResolution.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_Name.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="lbl_FreqMin_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_FreqMax_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel.Name" xml:space="preserve">
+    <value>lbl_BitsPixel</value>
+  </data>
+  <data name="lbl_ColorsNumber_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber_Value.Name" xml:space="preserve">
+    <value>lbl_ColorsNumber_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel_Value.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber_Value.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbl_Name_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_BitsPixel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_FreqMin.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="lbl_Adapter.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Memory_Value.Name" xml:space="preserve">
+    <value>lbl_Memory_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_FreqNow.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 189</value>
+  </data>
+  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin.Name" xml:space="preserve">
+    <value>lbl_FreqMin</value>
+  </data>
+  <data name="&gt;&gt;lbl_BitsPixel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_VerticalResolution.Name" xml:space="preserve">
+    <value>lbl_VerticalResolution</value>
+  </data>
+  <data name="lbl_Adapter_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="lbl_FreqMax.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax_Value.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lbl_Adapter_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_FreqMax_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 214</value>
+  </data>
+  <data name="lbl_FreqNow_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMin.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lbl_ColorsNumber.Name" xml:space="preserve">
+    <value>lbl_ColorsNumber</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqNow_Value.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbl_Adapter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_Adapter.Name" xml:space="preserve">
+    <value>lbl_Adapter</value>
+  </data>
+  <data name="lbl_FreqMin.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_FreqMax.Name" xml:space="preserve">
+    <value>lbl_FreqMax</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de</value>
+  </metadata>
 </root>

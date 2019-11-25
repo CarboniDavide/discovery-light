@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_AudioDeviceDataControl));
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Manufacturer = new System.Windows.Forms.Label();
             this.lbl_PowerManagment = new System.Windows.Forms.Label();
@@ -38,73 +40,37 @@
             // 
             // lbl_Name
             // 
-            this.lbl_Name.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name.Location = new System.Drawing.Point(25, 116);
+            resources.ApplyResources(this.lbl_Name, "lbl_Name");
             this.lbl_Name.Name = "lbl_Name";
-            this.lbl_Name.Size = new System.Drawing.Size(254, 25);
-            this.lbl_Name.TabIndex = 95;
-            this.lbl_Name.Text = "Name";
-            this.lbl_Name.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Manufacturer
             // 
-            this.lbl_Manufacturer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Manufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Manufacturer.Location = new System.Drawing.Point(21, 141);
+            resources.ApplyResources(this.lbl_Manufacturer, "lbl_Manufacturer");
             this.lbl_Manufacturer.Name = "lbl_Manufacturer";
-            this.lbl_Manufacturer.Size = new System.Drawing.Size(258, 25);
-            this.lbl_Manufacturer.TabIndex = 96;
-            this.lbl_Manufacturer.Text = "Producer";
-            this.lbl_Manufacturer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_PowerManagment
             // 
-            this.lbl_PowerManagment.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_PowerManagment.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PowerManagment.Location = new System.Drawing.Point(17, 166);
+            resources.ApplyResources(this.lbl_PowerManagment, "lbl_PowerManagment");
             this.lbl_PowerManagment.Name = "lbl_PowerManagment";
-            this.lbl_PowerManagment.Size = new System.Drawing.Size(262, 25);
-            this.lbl_PowerManagment.TabIndex = 97;
-            this.lbl_PowerManagment.Text = "Power managment";
-            this.lbl_PowerManagment.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Name_Value
             // 
-            this.lbl_Name_Value.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Name_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name_Value.Location = new System.Drawing.Point(285, 116);
+            resources.ApplyResources(this.lbl_Name_Value, "lbl_Name_Value");
             this.lbl_Name_Value.Name = "lbl_Name_Value";
-            this.lbl_Name_Value.Size = new System.Drawing.Size(321, 25);
-            this.lbl_Name_Value.TabIndex = 100;
-            this.lbl_Name_Value.Text = "N/A";
-            this.lbl_Name_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Manufacturer_Value
             // 
-            this.lbl_Manufacturer_Value.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_Manufacturer_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Manufacturer_Value.Location = new System.Drawing.Point(285, 141);
+            resources.ApplyResources(this.lbl_Manufacturer_Value, "lbl_Manufacturer_Value");
             this.lbl_Manufacturer_Value.Name = "lbl_Manufacturer_Value";
-            this.lbl_Manufacturer_Value.Size = new System.Drawing.Size(321, 25);
-            this.lbl_Manufacturer_Value.TabIndex = 101;
-            this.lbl_Manufacturer_Value.Text = "N/A";
-            this.lbl_Manufacturer_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_PowerManagment_Value
             // 
-            this.lbl_PowerManagment_Value.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lbl_PowerManagment_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PowerManagment_Value.Location = new System.Drawing.Point(285, 166);
+            resources.ApplyResources(this.lbl_PowerManagment_Value, "lbl_PowerManagment_Value");
             this.lbl_PowerManagment_Value.Name = "lbl_PowerManagment_Value";
-            this.lbl_PowerManagment_Value.Size = new System.Drawing.Size(321, 25);
-            this.lbl_PowerManagment_Value.TabIndex = 102;
-            this.lbl_PowerManagment_Value.Text = "N/A";
-            this.lbl_PowerManagment_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _AudioDeviceDataControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lbl_PowerManagment_Value);
             this.Controls.Add(this.lbl_Manufacturer_Value);
@@ -113,7 +79,8 @@
             this.Controls.Add(this.lbl_Manufacturer);
             this.Controls.Add(this.lbl_Name);
             this.Name = "_AudioDeviceDataControl";
-            this.Size = new System.Drawing.Size(630, 234);
+            this.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.TokenSource = cancellationTokenSource1;
             this.ResumeLayout(false);
 
         }

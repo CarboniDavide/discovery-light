@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_CpuDeviceDataControl));
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_L3CacheSize_Value = new System.Windows.Forms.Label();
             this.lbl_L2CacheSize_Value = new System.Windows.Forms.Label();
             this.lbl_Revision = new System.Windows.Forms.Label();
@@ -55,283 +57,122 @@
             // 
             // lbl_L3CacheSize_Value
             // 
-            this.lbl_L3CacheSize_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_L3CacheSize_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_L3CacheSize_Value.Location = new System.Drawing.Point(147, 290);
+            resources.ApplyResources(this.lbl_L3CacheSize_Value, "lbl_L3CacheSize_Value");
             this.lbl_L3CacheSize_Value.Name = "lbl_L3CacheSize_Value";
-            this.lbl_L3CacheSize_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_L3CacheSize_Value.TabIndex = 40;
-            this.lbl_L3CacheSize_Value.Text = "N/A";
-            this.lbl_L3CacheSize_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_L2CacheSize_Value
             // 
-            this.lbl_L2CacheSize_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_L2CacheSize_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_L2CacheSize_Value.Location = new System.Drawing.Point(147, 265);
+            resources.ApplyResources(this.lbl_L2CacheSize_Value, "lbl_L2CacheSize_Value");
             this.lbl_L2CacheSize_Value.Name = "lbl_L2CacheSize_Value";
-            this.lbl_L2CacheSize_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_L2CacheSize_Value.TabIndex = 39;
-            this.lbl_L2CacheSize_Value.Text = "N/A";
-            this.lbl_L2CacheSize_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Revision
             // 
-            this.lbl_Revision.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Revision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Revision.Location = new System.Drawing.Point(10, 140);
+            resources.ApplyResources(this.lbl_Revision, "lbl_Revision");
             this.lbl_Revision.Name = "lbl_Revision";
-            this.lbl_Revision.Size = new System.Drawing.Size(131, 25);
-            this.lbl_Revision.TabIndex = 37;
-            this.lbl_Revision.Text = "Revision";
-            this.lbl_Revision.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_L3CacheSize
             // 
-            this.lbl_L3CacheSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_L3CacheSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_L3CacheSize.Location = new System.Drawing.Point(10, 290);
+            resources.ApplyResources(this.lbl_L3CacheSize, "lbl_L3CacheSize");
             this.lbl_L3CacheSize.Name = "lbl_L3CacheSize";
-            this.lbl_L3CacheSize.Size = new System.Drawing.Size(131, 25);
-            this.lbl_L3CacheSize.TabIndex = 36;
-            this.lbl_L3CacheSize.Text = "L3 Cache";
-            this.lbl_L3CacheSize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Thread_Value
             // 
-            this.lbl_Thread_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Thread_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Thread_Value.Location = new System.Drawing.Point(147, 215);
+            resources.ApplyResources(this.lbl_Thread_Value, "lbl_Thread_Value");
             this.lbl_Thread_Value.Name = "lbl_Thread_Value";
-            this.lbl_Thread_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_Thread_Value.TabIndex = 35;
-            this.lbl_Thread_Value.Text = "N/A";
-            this.lbl_Thread_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_L2CacheSize
             // 
-            this.lbl_L2CacheSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_L2CacheSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_L2CacheSize.Location = new System.Drawing.Point(10, 265);
+            resources.ApplyResources(this.lbl_L2CacheSize, "lbl_L2CacheSize");
             this.lbl_L2CacheSize.Name = "lbl_L2CacheSize";
-            this.lbl_L2CacheSize.Size = new System.Drawing.Size(131, 25);
-            this.lbl_L2CacheSize.TabIndex = 34;
-            this.lbl_L2CacheSize.Text = "L2 Cache";
-            this.lbl_L2CacheSize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Revision_Value
             // 
-            this.lbl_Revision_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Revision_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Revision_Value.Location = new System.Drawing.Point(147, 140);
+            resources.ApplyResources(this.lbl_Revision_Value, "lbl_Revision_Value");
             this.lbl_Revision_Value.Name = "lbl_Revision_Value";
-            this.lbl_Revision_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_Revision_Value.TabIndex = 32;
-            this.lbl_Revision_Value.Text = "N/A";
-            this.lbl_Revision_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Producteur_Value
             // 
-            this.lbl_Producteur_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Producteur_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Producteur_Value.Location = new System.Drawing.Point(147, 115);
+            resources.ApplyResources(this.lbl_Producteur_Value, "lbl_Producteur_Value");
             this.lbl_Producteur_Value.Name = "lbl_Producteur_Value";
-            this.lbl_Producteur_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_Producteur_Value.TabIndex = 31;
-            this.lbl_Producteur_Value.Text = "N/A";
-            this.lbl_Producteur_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Description_Value
             // 
-            this.lbl_Description_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Description_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Description_Value.Location = new System.Drawing.Point(3, 65);
+            resources.ApplyResources(this.lbl_Description_Value, "lbl_Description_Value");
             this.lbl_Description_Value.Name = "lbl_Description_Value";
-            this.lbl_Description_Value.Size = new System.Drawing.Size(336, 25);
-            this.lbl_Description_Value.TabIndex = 30;
-            this.lbl_Description_Value.Text = "Description_Value";
-            this.lbl_Description_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Size_Value
             // 
-            this.lbl_Size_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Size_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Size_Value.Location = new System.Drawing.Point(147, 90);
+            resources.ApplyResources(this.lbl_Size_Value, "lbl_Size_Value");
             this.lbl_Size_Value.Name = "lbl_Size_Value";
-            this.lbl_Size_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_Size_Value.TabIndex = 29;
-            this.lbl_Size_Value.Text = "N/A";
-            this.lbl_Size_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Name_Value
             // 
-            this.lbl_Name_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Name_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Name_Value.Location = new System.Drawing.Point(5, 16);
+            resources.ApplyResources(this.lbl_Name_Value, "lbl_Name_Value");
             this.lbl_Name_Value.Name = "lbl_Name_Value";
-            this.lbl_Name_Value.Size = new System.Drawing.Size(336, 25);
-            this.lbl_Name_Value.TabIndex = 28;
-            this.lbl_Name_Value.Text = "Name_Value";
-            this.lbl_Name_Value.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Socket
             // 
-            this.lbl_Socket.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Socket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Socket.Location = new System.Drawing.Point(10, 165);
+            resources.ApplyResources(this.lbl_Socket, "lbl_Socket");
             this.lbl_Socket.Name = "lbl_Socket";
-            this.lbl_Socket.Size = new System.Drawing.Size(131, 25);
-            this.lbl_Socket.TabIndex = 26;
-            this.lbl_Socket.Text = "Socket";
-            this.lbl_Socket.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Producteur
             // 
-            this.lbl_Producteur.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Producteur.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Producteur.Location = new System.Drawing.Point(10, 115);
+            resources.ApplyResources(this.lbl_Producteur, "lbl_Producteur");
             this.lbl_Producteur.Name = "lbl_Producteur";
-            this.lbl_Producteur.Size = new System.Drawing.Size(131, 25);
-            this.lbl_Producteur.TabIndex = 25;
-            this.lbl_Producteur.Text = "Producer";
-            this.lbl_Producteur.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Description
             // 
-            this.lbl_Description.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Description.Location = new System.Drawing.Point(7, 40);
+            resources.ApplyResources(this.lbl_Description, "lbl_Description");
             this.lbl_Description.Name = "lbl_Description";
-            this.lbl_Description.Size = new System.Drawing.Size(334, 25);
-            this.lbl_Description.TabIndex = 24;
-            this.lbl_Description.Text = "Description";
-            this.lbl_Description.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_Size
             // 
-            this.lbl_Size.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Size.Location = new System.Drawing.Point(10, 90);
+            resources.ApplyResources(this.lbl_Size, "lbl_Size");
             this.lbl_Size.Name = "lbl_Size";
-            this.lbl_Size.Size = new System.Drawing.Size(131, 25);
-            this.lbl_Size.TabIndex = 23;
-            this.lbl_Size.Text = "Size";
-            this.lbl_Size.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Core
             // 
-            this.lbl_Core.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Core.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Core.Location = new System.Drawing.Point(10, 190);
+            resources.ApplyResources(this.lbl_Core, "lbl_Core");
             this.lbl_Core.Name = "lbl_Core";
-            this.lbl_Core.Size = new System.Drawing.Size(131, 25);
-            this.lbl_Core.TabIndex = 42;
-            this.lbl_Core.Text = "Cores";
-            this.lbl_Core.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Thread
             // 
-            this.lbl_Thread.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Thread.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Thread.Location = new System.Drawing.Point(10, 215);
+            resources.ApplyResources(this.lbl_Thread, "lbl_Thread");
             this.lbl_Thread.Name = "lbl_Thread";
-            this.lbl_Thread.Size = new System.Drawing.Size(131, 25);
-            this.lbl_Thread.TabIndex = 43;
-            this.lbl_Thread.Text = "Threads";
-            this.lbl_Thread.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Socket_Value
             // 
-            this.lbl_Socket_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Socket_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Socket_Value.Location = new System.Drawing.Point(147, 165);
+            resources.ApplyResources(this.lbl_Socket_Value, "lbl_Socket_Value");
             this.lbl_Socket_Value.Name = "lbl_Socket_Value";
-            this.lbl_Socket_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_Socket_Value.TabIndex = 44;
-            this.lbl_Socket_Value.Text = "N/A";
-            this.lbl_Socket_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Core_Value
             // 
-            this.lbl_Core_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_Core_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Core_Value.Location = new System.Drawing.Point(147, 190);
+            resources.ApplyResources(this.lbl_Core_Value, "lbl_Core_Value");
             this.lbl_Core_Value.Name = "lbl_Core_Value";
-            this.lbl_Core_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_Core_Value.TabIndex = 45;
-            this.lbl_Core_Value.Text = "N/A";
-            this.lbl_Core_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_L1CacheSize
             // 
-            this.lbl_L1CacheSize.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_L1CacheSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_L1CacheSize.Location = new System.Drawing.Point(10, 240);
+            resources.ApplyResources(this.lbl_L1CacheSize, "lbl_L1CacheSize");
             this.lbl_L1CacheSize.Name = "lbl_L1CacheSize";
-            this.lbl_L1CacheSize.Size = new System.Drawing.Size(131, 25);
-            this.lbl_L1CacheSize.TabIndex = 68;
-            this.lbl_L1CacheSize.Text = "L1 Cache";
-            this.lbl_L1CacheSize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_L1CacheSize_Value
             // 
-            this.lbl_L1CacheSize_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_L1CacheSize_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_L1CacheSize_Value.Location = new System.Drawing.Point(149, 240);
+            resources.ApplyResources(this.lbl_L1CacheSize_Value, "lbl_L1CacheSize_Value");
             this.lbl_L1CacheSize_Value.Name = "lbl_L1CacheSize_Value";
-            this.lbl_L1CacheSize_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_L1CacheSize_Value.TabIndex = 69;
-            this.lbl_L1CacheSize_Value.Text = "N/A";
-            this.lbl_L1CacheSize_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_MaxSpeed
             // 
-            this.lbl_MaxSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_MaxSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaxSpeed.Location = new System.Drawing.Point(10, 315);
+            resources.ApplyResources(this.lbl_MaxSpeed, "lbl_MaxSpeed");
             this.lbl_MaxSpeed.Name = "lbl_MaxSpeed";
-            this.lbl_MaxSpeed.Size = new System.Drawing.Size(131, 25);
-            this.lbl_MaxSpeed.TabIndex = 70;
-            this.lbl_MaxSpeed.Text = "Max Speed";
-            this.lbl_MaxSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_MaxSpeed_Value
             // 
-            this.lbl_MaxSpeed_Value.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_MaxSpeed_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaxSpeed_Value.Location = new System.Drawing.Point(147, 315);
+            resources.ApplyResources(this.lbl_MaxSpeed_Value, "lbl_MaxSpeed_Value");
             this.lbl_MaxSpeed_Value.Name = "lbl_MaxSpeed_Value";
-            this.lbl_MaxSpeed_Value.Size = new System.Drawing.Size(192, 25);
-            this.lbl_MaxSpeed_Value.TabIndex = 71;
-            this.lbl_MaxSpeed_Value.Text = "N/A";
-            this.lbl_MaxSpeed_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // _CpuDeviceDataControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lbl_MaxSpeed_Value);
             this.Controls.Add(this.lbl_MaxSpeed);
@@ -357,7 +198,8 @@
             this.Controls.Add(this.lbl_Description);
             this.Controls.Add(this.lbl_Size);
             this.Name = "_CpuDeviceDataControl";
-            this.Size = new System.Drawing.Size(403, 360);
+            this.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.TokenSource = cancellationTokenSource1;
             this.ResumeLayout(false);
 
         }

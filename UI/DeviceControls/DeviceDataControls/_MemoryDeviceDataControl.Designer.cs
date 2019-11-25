@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_MemoryDeviceDataControl));
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_BlockNumberParty_Value = new System.Windows.Forms.Label();
             this.lbl_BlockManufacturer_Value = new System.Windows.Forms.Label();
             this.lbl_BlockSerial = new System.Windows.Forms.Label();
@@ -58,256 +60,134 @@
             // 
             // lbl_BlockNumberParty_Value
             // 
-            this.lbl_BlockNumberParty_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockNumberParty_Value.Location = new System.Drawing.Point(192, 199);
+            resources.ApplyResources(this.lbl_BlockNumberParty_Value, "lbl_BlockNumberParty_Value");
             this.lbl_BlockNumberParty_Value.Name = "lbl_BlockNumberParty_Value";
-            this.lbl_BlockNumberParty_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockNumberParty_Value.TabIndex = 65;
-            this.lbl_BlockNumberParty_Value.Text = "N/A";
-            this.lbl_BlockNumberParty_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockManufacturer_Value
             // 
-            this.lbl_BlockManufacturer_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockManufacturer_Value.Location = new System.Drawing.Point(192, 174);
+            resources.ApplyResources(this.lbl_BlockManufacturer_Value, "lbl_BlockManufacturer_Value");
             this.lbl_BlockManufacturer_Value.Name = "lbl_BlockManufacturer_Value";
-            this.lbl_BlockManufacturer_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockManufacturer_Value.TabIndex = 64;
-            this.lbl_BlockManufacturer_Value.Text = "N/A";
-            this.lbl_BlockManufacturer_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockSerial
             // 
-            this.lbl_BlockSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSerial.Location = new System.Drawing.Point(35, 224);
+            resources.ApplyResources(this.lbl_BlockSerial, "lbl_BlockSerial");
             this.lbl_BlockSerial.Name = "lbl_BlockSerial";
-            this.lbl_BlockSerial.Size = new System.Drawing.Size(151, 25);
-            this.lbl_BlockSerial.TabIndex = 63;
-            this.lbl_BlockSerial.Text = "Serail number";
-            this.lbl_BlockSerial.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockNumberParty
             // 
-            this.lbl_BlockNumberParty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockNumberParty.Location = new System.Drawing.Point(35, 199);
+            resources.ApplyResources(this.lbl_BlockNumberParty, "lbl_BlockNumberParty");
             this.lbl_BlockNumberParty.Name = "lbl_BlockNumberParty";
-            this.lbl_BlockNumberParty.Size = new System.Drawing.Size(151, 25);
-            this.lbl_BlockNumberParty.TabIndex = 62;
-            this.lbl_BlockNumberParty.Text = "Party number";
-            this.lbl_BlockNumberParty.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockBusSize_Value
             // 
-            this.lbl_BlockBusSize_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockBusSize_Value.Location = new System.Drawing.Point(192, 274);
+            resources.ApplyResources(this.lbl_BlockBusSize_Value, "lbl_BlockBusSize_Value");
             this.lbl_BlockBusSize_Value.Name = "lbl_BlockBusSize_Value";
-            this.lbl_BlockBusSize_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockBusSize_Value.TabIndex = 61;
-            this.lbl_BlockBusSize_Value.Text = "N/A";
-            this.lbl_BlockBusSize_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockSpeed_Value
             // 
-            this.lbl_BlockSpeed_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSpeed_Value.Location = new System.Drawing.Point(192, 249);
+            resources.ApplyResources(this.lbl_BlockSpeed_Value, "lbl_BlockSpeed_Value");
             this.lbl_BlockSpeed_Value.Name = "lbl_BlockSpeed_Value";
-            this.lbl_BlockSpeed_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockSpeed_Value.TabIndex = 60;
-            this.lbl_BlockSpeed_Value.Text = "N/A";
-            this.lbl_BlockSpeed_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockLocation
             // 
-            this.lbl_BlockLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockLocation.Location = new System.Drawing.Point(43, 149);
+            resources.ApplyResources(this.lbl_BlockLocation, "lbl_BlockLocation");
             this.lbl_BlockLocation.Name = "lbl_BlockLocation";
-            this.lbl_BlockLocation.Size = new System.Drawing.Size(143, 25);
-            this.lbl_BlockLocation.TabIndex = 59;
-            this.lbl_BlockLocation.Text = "Location";
-            this.lbl_BlockLocation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockBusSize
             // 
-            this.lbl_BlockBusSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockBusSize.Location = new System.Drawing.Point(47, 274);
+            resources.ApplyResources(this.lbl_BlockBusSize, "lbl_BlockBusSize");
             this.lbl_BlockBusSize.Name = "lbl_BlockBusSize";
-            this.lbl_BlockBusSize.Size = new System.Drawing.Size(139, 25);
-            this.lbl_BlockBusSize.TabIndex = 58;
-            this.lbl_BlockBusSize.Text = "Bus size";
-            this.lbl_BlockBusSize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockSerial_Value
             // 
-            this.lbl_BlockSerial_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSerial_Value.Location = new System.Drawing.Point(192, 224);
+            resources.ApplyResources(this.lbl_BlockSerial_Value, "lbl_BlockSerial_Value");
             this.lbl_BlockSerial_Value.Name = "lbl_BlockSerial_Value";
-            this.lbl_BlockSerial_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockSerial_Value.TabIndex = 57;
-            this.lbl_BlockSerial_Value.Text = "N/A";
-            this.lbl_BlockSerial_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockSpeed
             // 
-            this.lbl_BlockSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSpeed.Location = new System.Drawing.Point(47, 249);
+            resources.ApplyResources(this.lbl_BlockSpeed, "lbl_BlockSpeed");
             this.lbl_BlockSpeed.Name = "lbl_BlockSpeed";
-            this.lbl_BlockSpeed.Size = new System.Drawing.Size(139, 25);
-            this.lbl_BlockSpeed.TabIndex = 56;
-            this.lbl_BlockSpeed.Text = "Speed";
-            this.lbl_BlockSpeed.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockLocation_Value
             // 
-            this.lbl_BlockLocation_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockLocation_Value.Location = new System.Drawing.Point(192, 149);
+            resources.ApplyResources(this.lbl_BlockLocation_Value, "lbl_BlockLocation_Value");
             this.lbl_BlockLocation_Value.Name = "lbl_BlockLocation_Value";
-            this.lbl_BlockLocation_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockLocation_Value.TabIndex = 55;
-            this.lbl_BlockLocation_Value.Text = "N/A";
-            this.lbl_BlockLocation_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockSize_Value
             // 
-            this.lbl_BlockSize_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSize_Value.Location = new System.Drawing.Point(192, 99);
+            resources.ApplyResources(this.lbl_BlockSize_Value, "lbl_BlockSize_Value");
             this.lbl_BlockSize_Value.Name = "lbl_BlockSize_Value";
-            this.lbl_BlockSize_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockSize_Value.TabIndex = 54;
-            this.lbl_BlockSize_Value.Text = "N/A";
-            this.lbl_BlockSize_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Type_Value
             // 
-            this.lbl_Type_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Type_Value.Location = new System.Drawing.Point(192, 69);
+            resources.ApplyResources(this.lbl_Type_Value, "lbl_Type_Value");
             this.lbl_Type_Value.Name = "lbl_Type_Value";
-            this.lbl_Type_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_Type_Value.TabIndex = 53;
-            this.lbl_Type_Value.Text = "N/A";
-            this.lbl_Type_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Block_Value
             // 
-            this.lbl_Block_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Block_Value.Location = new System.Drawing.Point(192, 44);
+            resources.ApplyResources(this.lbl_Block_Value, "lbl_Block_Value");
             this.lbl_Block_Value.Name = "lbl_Block_Value";
-            this.lbl_Block_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_Block_Value.TabIndex = 52;
-            this.lbl_Block_Value.Text = "N/A";
-            this.lbl_Block_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_Size_Value
             // 
-            this.lbl_Size_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Size_Value.Location = new System.Drawing.Point(192, 19);
+            resources.ApplyResources(this.lbl_Size_Value, "lbl_Size_Value");
             this.lbl_Size_Value.Name = "lbl_Size_Value";
-            this.lbl_Size_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_Size_Value.TabIndex = 51;
-            this.lbl_Size_Value.Text = "N/A";
-            this.lbl_Size_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockManufacturer
             // 
-            this.lbl_BlockManufacturer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockManufacturer.Location = new System.Drawing.Point(35, 174);
+            resources.ApplyResources(this.lbl_BlockManufacturer, "lbl_BlockManufacturer");
             this.lbl_BlockManufacturer.Name = "lbl_BlockManufacturer";
-            this.lbl_BlockManufacturer.Size = new System.Drawing.Size(151, 25);
-            this.lbl_BlockManufacturer.TabIndex = 50;
-            this.lbl_BlockManufacturer.Text = "Producer";
-            this.lbl_BlockManufacturer.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockSize
             // 
-            this.lbl_BlockSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSize.Location = new System.Drawing.Point(33, 99);
+            resources.ApplyResources(this.lbl_BlockSize, "lbl_BlockSize");
             this.lbl_BlockSize.Name = "lbl_BlockSize";
-            this.lbl_BlockSize.Size = new System.Drawing.Size(153, 25);
-            this.lbl_BlockSize.TabIndex = 49;
-            this.lbl_BlockSize.Text = "Block size";
-            this.lbl_BlockSize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Type
             // 
-            this.lbl_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Type.Location = new System.Drawing.Point(29, 69);
+            resources.ApplyResources(this.lbl_Type, "lbl_Type");
             this.lbl_Type.Name = "lbl_Type";
-            this.lbl_Type.Size = new System.Drawing.Size(157, 25);
-            this.lbl_Type.TabIndex = 48;
-            this.lbl_Type.Text = "Type";
-            this.lbl_Type.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Block
             // 
-            this.lbl_Block.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Block.Location = new System.Drawing.Point(29, 44);
+            resources.ApplyResources(this.lbl_Block, "lbl_Block");
             this.lbl_Block.Name = "lbl_Block";
-            this.lbl_Block.Size = new System.Drawing.Size(157, 25);
-            this.lbl_Block.TabIndex = 47;
-            this.lbl_Block.Text = "Bloks";
-            this.lbl_Block.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_Size
             // 
-            this.lbl_Size.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Size.Location = new System.Drawing.Point(29, 19);
+            resources.ApplyResources(this.lbl_Size, "lbl_Size");
             this.lbl_Size.Name = "lbl_Size";
-            this.lbl_Size.Size = new System.Drawing.Size(157, 25);
-            this.lbl_Size.TabIndex = 46;
-            this.lbl_Size.Text = "Size";
-            this.lbl_Size.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockVoltage
             // 
-            this.lbl_BlockVoltage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockVoltage.Location = new System.Drawing.Point(43, 299);
+            resources.ApplyResources(this.lbl_BlockVoltage, "lbl_BlockVoltage");
             this.lbl_BlockVoltage.Name = "lbl_BlockVoltage";
-            this.lbl_BlockVoltage.Size = new System.Drawing.Size(143, 25);
-            this.lbl_BlockVoltage.TabIndex = 69;
-            this.lbl_BlockVoltage.Text = "Min voltage";
-            this.lbl_BlockVoltage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockVoltage_Value
             // 
-            this.lbl_BlockVoltage_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockVoltage_Value.Location = new System.Drawing.Point(192, 299);
+            resources.ApplyResources(this.lbl_BlockVoltage_Value, "lbl_BlockVoltage_Value");
             this.lbl_BlockVoltage_Value.Name = "lbl_BlockVoltage_Value";
-            this.lbl_BlockVoltage_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockVoltage_Value.TabIndex = 70;
-            this.lbl_BlockVoltage_Value.Text = "N/A";
-            this.lbl_BlockVoltage_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbl_BlockSlotPosition
             // 
-            this.lbl_BlockSlotPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSlotPosition.Location = new System.Drawing.Point(39, 124);
+            resources.ApplyResources(this.lbl_BlockSlotPosition, "lbl_BlockSlotPosition");
             this.lbl_BlockSlotPosition.Name = "lbl_BlockSlotPosition";
-            this.lbl_BlockSlotPosition.Size = new System.Drawing.Size(147, 25);
-            this.lbl_BlockSlotPosition.TabIndex = 75;
-            this.lbl_BlockSlotPosition.Text = "Slot";
-            this.lbl_BlockSlotPosition.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_BlockSlotPosition_Value
             // 
-            this.lbl_BlockSlotPosition_Value.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BlockSlotPosition_Value.Location = new System.Drawing.Point(192, 124);
+            resources.ApplyResources(this.lbl_BlockSlotPosition_Value, "lbl_BlockSlotPosition_Value");
             this.lbl_BlockSlotPosition_Value.Name = "lbl_BlockSlotPosition_Value";
-            this.lbl_BlockSlotPosition_Value.Size = new System.Drawing.Size(252, 25);
-            this.lbl_BlockSlotPosition_Value.TabIndex = 76;
-            this.lbl_BlockSlotPosition_Value.Text = "N/A";
-            this.lbl_BlockSlotPosition_Value.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pic_Divisor_001
             // 
+            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
             this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pic_Divisor_001.Location = new System.Drawing.Point(20, 96);
             this.pic_Divisor_001.Name = "pic_Divisor_001";
-            this.pic_Divisor_001.Size = new System.Drawing.Size(400, 1);
-            this.pic_Divisor_001.TabIndex = 218;
             this.pic_Divisor_001.TabStop = false;
             // 
             // _MemoryDeviceDataControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pic_Divisor_001);
             this.Controls.Add(this.lbl_BlockSlotPosition_Value);
@@ -335,7 +215,8 @@
             this.Controls.Add(this.lbl_Block);
             this.Controls.Add(this.lbl_Size);
             this.Name = "_MemoryDeviceDataControl";
-            this.Size = new System.Drawing.Size(478, 360);
+            this.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.TokenSource = cancellationTokenSource1;
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);
 

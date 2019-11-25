@@ -117,4 +117,517 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_InterfaceID_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_InterfaceID_Value.Multiline" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 20</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 96</value>
+  </data>
+  <data name="lbl_Tipology_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="lbl_Manufacturer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Multiline" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbl_AdapterType_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 121</value>
+  </data>
+  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress_Value.Name" xml:space="preserve">
+    <value>lbl_MACAddress_Value</value>
+  </data>
+  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>236</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lbl_InterfaceID_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed_Value.Name" xml:space="preserve">
+    <value>lbl_Speed_Value</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>228</value>
+  </data>
+  <data name="lbl_AdapterType_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_AdapterType.TabIndex" type="System.Int32, mscorlib">
+    <value>214</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_Tipology.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_Speed.TabIndex" type="System.Int32, mscorlib">
+    <value>206</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology_Value.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_DeviceID_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>235</value>
+  </data>
+  <data name="lbl_AdapterType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 25</value>
+  </data>
+  <data name="lbl_DeviceID_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_Tipology_Value.Multiline" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbl_Tipology.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology_Value.Name" xml:space="preserve">
+    <value>lbl_Tipology_Value</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType_Value.Name" xml:space="preserve">
+    <value>lbl_AdapterType_Value</value>
+  </data>
+  <data name="lbl_Speed_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 195</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID_Value.Name" xml:space="preserve">
+    <value>lbl_InterfaceID_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Manufacturer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 25</value>
+  </data>
+  <data name="lbl_Tipology.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 66</value>
+  </data>
+  <data name="lbl_MACAddress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_DeviceID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 141</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lbl_MACAddress.Text" xml:space="preserve">
+    <value>MAC Address:</value>
+  </data>
+  <data name="lbl_Tipology_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 70</value>
+  </data>
+  <data name="lbl_Speed_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Speed.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_DeviceID_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_MACAddress_Value.Multiline" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_AdapterType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 116</value>
+  </data>
+  <data name="lbl_Manufacturer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 91</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_MACAddress_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_InterfaceID_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 170</value>
+  </data>
+  <data name="lbl_InterfaceID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 166</value>
+  </data>
+  <data name="lbl_DeviceID_Value.Multiline" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbl_DeviceID_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="lbl_AdapterType.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_AdapterType_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>234</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID.Name" xml:space="preserve">
+    <value>lbl_InterfaceID</value>
+  </data>
+  <data name="lbl_AdapterType.Text" xml:space="preserve">
+    <value>Adapter:</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_NetworkDeviceDataControl</value>
+  </data>
+  <data name="lbl_InterfaceID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_InterfaceID.TabIndex" type="System.Int32, mscorlib">
+    <value>194</value>
+  </data>
+  <data name="lbl_Tipology.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 25</value>
+  </data>
+  <data name="lbl_Tipology_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>229</value>
+  </data>
+  <data name="lbl_DeviceID.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_Manufacturer.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_MACAddress.TabIndex" type="System.Int32, mscorlib">
+    <value>207</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbl_MACAddress_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_MACAddress.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
+    <value>lbl_Name_Value</value>
+  </data>
+  <data name="lbl_Speed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType.Name" xml:space="preserve">
+    <value>lbl_AdapterType</value>
+  </data>
+  <data name="lbl_Speed_Value.Multiline" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbl_MACAddress.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 216</value>
+  </data>
+  <data name="lbl_Manufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_Speed_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>232</value>
+  </data>
+  <data name="lbl_Tipology_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Speed_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Speed_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbl_Speed.Text" xml:space="preserve">
+    <value>Speed:</value>
+  </data>
+  <data name="lbl_InterfaceID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology.Name" xml:space="preserve">
+    <value>lbl_Tipology</value>
+  </data>
+  <data name="lbl_InterfaceID.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_Tipology_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_AdapterType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_DeviceID_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 146</value>
+  </data>
+  <data name="lbl_MACAddress.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_AdapterType_Value.Multiline" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed.Name" xml:space="preserve">
+    <value>lbl_Speed</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 273</value>
+  </data>
+  <data name="lbl_MACAddress_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 220</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_MACAddress_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>233</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Name" xml:space="preserve">
+    <value>lbl_Manufacturer_Value</value>
+  </data>
+  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>477, 25</value>
+  </data>
+  <data name="lbl_InterfaceID_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>231</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lbl_MACAddress_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lbl_InterfaceID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 25</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType_Value.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed_Value.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Name" xml:space="preserve">
+    <value>lbl_Manufacturer</value>
+  </data>
+  <data name="lbl_Speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 191</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress_Value.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_DeviceID_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_DeviceID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_Tipology_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_DeviceID.Text" xml:space="preserve">
+    <value>Device ID:</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbl_Tipology.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_Speed_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID.Name" xml:space="preserve">
+    <value>lbl_DeviceID</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID_Value.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl_Speed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lbl_InterfaceID_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_MACAddress.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 25</value>
+  </data>
+  <data name="lbl_Manufacturer.Text" xml:space="preserve">
+    <value>Produceur:</value>
+  </data>
+  <data name="lbl_InterfaceID_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_DeviceID.TabIndex" type="System.Int32, mscorlib">
+    <value>203</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID_Value.Name" xml:space="preserve">
+    <value>lbl_DeviceID_Value</value>
+  </data>
+  <data name="lbl_Tipology.TabIndex" type="System.Int32, mscorlib">
+    <value>192</value>
+  </data>
+  <data name="lbl_Manufacturer.TabIndex" type="System.Int32, mscorlib">
+    <value>193</value>
+  </data>
+  <data name="lbl_Speed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_AdapterType_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Name_Value.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lbl_InterfaceID_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="lbl_MACAddress_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="&gt;&gt;lbl_Speed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_DeviceID_Value.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_AdapterType_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.5pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_MACAddress.Name" xml:space="preserve">
+    <value>lbl_MACAddress</value>
+  </data>
+  <data name="lbl_AdapterType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_DeviceID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 25</value>
+  </data>
+  <data name="lbl_Tipology.Text" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="lbl_AdapterType_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>291, 20</value>
+  </data>
+  <data name="lbl_AdapterType_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_InterfaceID.Text" xml:space="preserve">
+    <value>Interface ID:</value>
+  </data>
+  <data name="lbl_DeviceID.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
