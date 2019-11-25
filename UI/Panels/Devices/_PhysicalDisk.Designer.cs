@@ -96,8 +96,6 @@
             // 
             this.PhysicalDiskDeviceDataControl.CurrentDevice = null;
             this.PhysicalDiskDeviceDataControl.CurrentSubDevice = null;
-            this.PhysicalDiskDeviceDataControl.DeviceName = null;
-            this.PhysicalDiskDeviceDataControl.DeviceType = null;
             this.PhysicalDiskDeviceDataControl.Location = new System.Drawing.Point(3, 7);
             this.PhysicalDiskDeviceDataControl.Name = "PhysicalDiskDeviceDataControl";
             this.PhysicalDiskDeviceDataControl.Size = new System.Drawing.Size(465, 303);

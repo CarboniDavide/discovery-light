@@ -16,9 +16,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
     {
         private DeviceData currentDevice;
         private DeviceData._Block currentSubDevice;
-        private Type deviceType;
-        private String deviceName;
-
+        
         public DeviceData CurrentDevice
         {
             get { return currentDevice; }
@@ -26,8 +24,6 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             {
                 if (value == null) return;
                 currentDevice = value;
-                deviceType = currentDevice.GetType();
-                deviceName = currentDevice.ToString();
                 CurrentSubDevice = (CurrentDevice.Blocks.Count != 0) ? CurrentDevice.Blocks.First() : new DeviceData._Block();
             }
         }
@@ -39,8 +35,6 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
                 if (value != null) show(); 
             } 
         }
-        public Type DeviceType { get => deviceType; set => deviceType = value; }
-        public string DeviceName { get => deviceName; set => deviceName = value; }
 
         public override void InitData(DeviceData Device)
         {

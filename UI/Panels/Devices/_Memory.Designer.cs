@@ -85,8 +85,6 @@
             // 
             this.MemoryDeviceDataControl.CurrentDevice = null;
             this.MemoryDeviceDataControl.CurrentSubDevice = null;
-            this.MemoryDeviceDataControl.DeviceName = null;
-            this.MemoryDeviceDataControl.DeviceType = null;
             this.MemoryDeviceDataControl.Location = new System.Drawing.Point(0, 0);
             this.MemoryDeviceDataControl.Name = "MemoryDeviceDataControl";
             this.MemoryDeviceDataControl.Size = new System.Drawing.Size(444, 324);

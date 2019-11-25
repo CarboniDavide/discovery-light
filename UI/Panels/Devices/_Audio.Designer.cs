@@ -71,8 +71,6 @@
             // 
             this.AudioDeviceDataControl.CurrentDevice = null;
             this.AudioDeviceDataControl.CurrentSubDevice = null;
-            this.AudioDeviceDataControl.DeviceName = null;
-            this.AudioDeviceDataControl.DeviceType = null;
             this.AudioDeviceDataControl.Location = new System.Drawing.Point(0, 3);
             this.AudioDeviceDataControl.Name = "AudioDeviceDataControl";
             this.AudioDeviceDataControl.Size = new System.Drawing.Size(630, 234);

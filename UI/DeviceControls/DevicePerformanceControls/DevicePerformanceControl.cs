@@ -18,26 +18,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
     {
         private DevicePerformance currentPerformance;
         private int currentSubDevice;
-        private Type deviceType;
-        private String deviceName;
 
-        public DevicePerformance CurrentPerformance
-        {
-            get { return currentPerformance; }
-            set
-            {
-                if (value == null) return;
-                currentPerformance = value;
-                deviceType = currentPerformance.GetType();
-                deviceName = deviceType.ToString();
-                currentSubDevice = 0;
-            }
-        }
         public int CurrentSubDevice { get => currentSubDevice; set => currentSubDevice = value; }
+        public DevicePerformance CurrentPerformance { get => currentPerformance; set => currentPerformance = value; }
 
         public override void InitPerformace(DevicePerformance Performance)
         {
             CurrentPerformance = Performance;
+            currentSubDevice = 0;
         }
 
         public DevicePerformanceControl(DevicePerformance Performance) {

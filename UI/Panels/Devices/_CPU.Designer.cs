@@ -74,8 +74,6 @@
             // 
             this.CpuDeviceDataControl.CurrentDevice = null;
             this.CpuDeviceDataControl.CurrentSubDevice = null;
-            this.CpuDeviceDataControl.DeviceName = null;
-            this.CpuDeviceDataControl.DeviceType = null;
             this.CpuDeviceDataControl.Location = new System.Drawing.Point(0, 0);
             this.CpuDeviceDataControl.Name = "CpuDeviceDataControl";
             this.CpuDeviceDataControl.Size = new System.Drawing.Size(341, 360);

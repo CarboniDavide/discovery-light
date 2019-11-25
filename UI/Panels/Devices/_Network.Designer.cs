@@ -96,8 +96,6 @@
             // 
             this.NetworkDeviceDataControl.CurrentDevice = null;
             this.NetworkDeviceDataControl.CurrentSubDevice = null;
-            this.NetworkDeviceDataControl.DeviceName = null;
-            this.NetworkDeviceDataControl.DeviceType = null;
             this.NetworkDeviceDataControl.Location = new System.Drawing.Point(0, 25);
             this.NetworkDeviceDataControl.Name = "NetworkDeviceDataControl";
             this.NetworkDeviceDataControl.Size = new System.Drawing.Size(480, 260);

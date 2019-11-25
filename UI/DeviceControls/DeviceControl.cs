@@ -43,7 +43,6 @@ namespace DiscoveryLight.UI.DeviceControls
             EventHandler handler = OnAbort;
             handler?.Invoke(this, e);
         }
-
     }
 
     public class DeviceControl: AbstractDeviceControl
@@ -51,7 +50,11 @@ namespace DiscoveryLight.UI.DeviceControls
         private CancellationTokenSource tokenSource;
         private CancellationToken token;
         private TimeSpan period;
+        private string className;
+        private Type classType;
 
+        public string ClassName { get => className; set => className = value; }
+        public Type ClassType { get => classType; set => classType = value; }
         public CancellationTokenSource TokenSource { get => tokenSource; set => tokenSource = value; }
         public CancellationToken Token { get => token; set => token = value; }
         public TimeSpan Period { get => period; set => period = value; }
@@ -107,6 +110,9 @@ namespace DiscoveryLight.UI.DeviceControls
             GC.SuppressFinalize(this);
         }
 
-        public DeviceControl() { }
+        public DeviceControl() {
+            this.className = this.GetType().Name;
+            this.classType = this.GetType();
+        }
     }
 }

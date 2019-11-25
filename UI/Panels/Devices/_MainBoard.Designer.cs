@@ -74,8 +74,6 @@
             // 
             this.MainBoardDeviceDataControl.CurrentDevice = null;
             this.MainBoardDeviceDataControl.CurrentSubDevice = null;
-            this.MainBoardDeviceDataControl.DeviceName = null;
-            this.MainBoardDeviceDataControl.DeviceType = null;
             this.MainBoardDeviceDataControl.Location = new System.Drawing.Point(92, 27);
             this.MainBoardDeviceDataControl.Name = "MainBoardDeviceDataControl";
             this.MainBoardDeviceDataControl.Size = new System.Drawing.Size(333, 153);
@@ -85,8 +83,6 @@
             // 
             this.BiosDeviceDataControl.CurrentDevice = null;
             this.BiosDeviceDataControl.CurrentSubDevice = null;
-            this.BiosDeviceDataControl.DeviceName = null;
-            this.BiosDeviceDataControl.DeviceType = null;
             this.BiosDeviceDataControl.Location = new System.Drawing.Point(92, 216);
             this.BiosDeviceDataControl.Name = "BiosDeviceDataControl";
             this.BiosDeviceDataControl.Size = new System.Drawing.Size(333, 99);

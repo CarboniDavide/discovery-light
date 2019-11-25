@@ -71,8 +71,6 @@
             // 
             this.VideoDeviceDataControl.CurrentDevice = null;
             this.VideoDeviceDataControl.CurrentSubDevice = null;
-            this.VideoDeviceDataControl.DeviceName = null;
-            this.VideoDeviceDataControl.DeviceType = null;
             this.VideoDeviceDataControl.Location = new System.Drawing.Point(0, 0);
             this.VideoDeviceDataControl.Name = "VideoDeviceDataControl";
             this.VideoDeviceDataControl.Size = new System.Drawing.Size(630, 317);
