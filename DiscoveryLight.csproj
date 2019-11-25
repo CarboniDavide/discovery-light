@@ -78,6 +78,11 @@
     <Compile Include="Logging\Looger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Settings\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -336,14 +341,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_AudioDeviceDataControl.resx">
       <DependentUpon>_AudioDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -470,24 +470,17 @@
     <None Include="Resources\LogoEntry.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CS.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
-    <None Include="Resources\Sound2.png" />
+    <None Include="Resources\Sound.png" />
     <None Include="Resources\Performancs.png" />
-    <None Include="Resources\SaveToText_bis.png" />
-    <None Include="Resources\SaveToText.png" />
     <None Include="Resources\Réglages.png" />
     <None Include="Resources\Video.png" />
-    <None Include="Resources\Sound.png" />
     <None Include="Resources\Ram.png" />
     <None Include="Resources\MainBoard.png" />
     <None Include="Resources\HardDisk.png" />
     <None Include="Resources\Ethernet.png" />
     <None Include="Resources\Cpu.png" />
-    <None Include="Resources\Connexion.png" />
     <None Include="Resources\Pc.png" />
   </ItemGroup>
   <ItemGroup />
