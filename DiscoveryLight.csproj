@@ -60,6 +60,21 @@
     <Compile Include="Core\Device\DeviceData.cs" />
     <Compile Include="Core\Device\DeviceUtils.cs" />
     <Compile Include="Core\Exception\Exceptions.cs" />
+    <Compile Include="Language\en_EN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en_EN.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language\fr_FR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fr_FR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language\it_IT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>it_IT.resx</DependentUpon>
+    </Compile>
     <Compile Include="Logging\Looger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -307,6 +322,18 @@
     <Compile Include="UI\Panels\UserSettings\_UserSettings.Designer.cs">
       <DependentUpon>_UserSettings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Language\en_EN.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en_EN.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\fr_FR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>fr_FR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\it_IT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>it_IT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
