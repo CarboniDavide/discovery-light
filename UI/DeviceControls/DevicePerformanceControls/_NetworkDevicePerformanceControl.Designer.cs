@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_NetworkDevicePerformanceControl));
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_PacketsReceived = new System.Windows.Forms.Label();
             this.lbl_BytesSent = new System.Windows.Forms.Label();
             this.lbl_PacketsSent = new System.Windows.Forms.Label();
@@ -48,199 +50,127 @@
             // 
             // lbl_PacketsReceived
             // 
-            this.lbl_PacketsReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PacketsReceived.AutoSize = true;
-            this.lbl_PacketsReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PacketsReceived.Location = new System.Drawing.Point(6, 85);
+            resources.ApplyResources(this.lbl_PacketsReceived, "lbl_PacketsReceived");
             this.lbl_PacketsReceived.Name = "lbl_PacketsReceived";
-            this.lbl_PacketsReceived.Size = new System.Drawing.Size(100, 13);
-            this.lbl_PacketsReceived.TabIndex = 182;
-            this.lbl_PacketsReceived.Text = "Packets received /s";
             // 
             // lbl_BytesSent
             // 
-            this.lbl_BytesSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_BytesSent.AutoSize = true;
-            this.lbl_BytesSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BytesSent.Location = new System.Drawing.Point(6, 45);
+            resources.ApplyResources(this.lbl_BytesSent, "lbl_BytesSent");
             this.lbl_BytesSent.Name = "lbl_BytesSent";
-            this.lbl_BytesSent.Size = new System.Drawing.Size(66, 13);
-            this.lbl_BytesSent.TabIndex = 183;
-            this.lbl_BytesSent.Text = "Bites sent /s";
             // 
             // lbl_PacketsSent
             // 
-            this.lbl_PacketsSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PacketsSent.AutoSize = true;
-            this.lbl_PacketsSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PacketsSent.Location = new System.Drawing.Point(6, 125);
+            resources.ApplyResources(this.lbl_PacketsSent, "lbl_PacketsSent");
             this.lbl_PacketsSent.Name = "lbl_PacketsSent";
-            this.lbl_PacketsSent.Size = new System.Drawing.Size(80, 13);
-            this.lbl_PacketsSent.TabIndex = 184;
-            this.lbl_PacketsSent.Text = "Packets sent /s";
             // 
             // lbl_PacketsReceived_Value
             // 
-            this.lbl_PacketsReceived_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PacketsReceived_Value.AutoSize = true;
-            this.lbl_PacketsReceived_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PacketsReceived_Value.Location = new System.Drawing.Point(6, 100);
+            resources.ApplyResources(this.lbl_PacketsReceived_Value, "lbl_PacketsReceived_Value");
             this.lbl_PacketsReceived_Value.Name = "lbl_PacketsReceived_Value";
-            this.lbl_PacketsReceived_Value.Size = new System.Drawing.Size(25, 13);
-            this.lbl_PacketsReceived_Value.TabIndex = 185;
-            this.lbl_PacketsReceived_Value.Text = "N/A";
             // 
             // lbl_BytesSent_Value
             // 
-            this.lbl_BytesSent_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_BytesSent_Value.AutoSize = true;
-            this.lbl_BytesSent_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BytesSent_Value.Location = new System.Drawing.Point(6, 60);
+            resources.ApplyResources(this.lbl_BytesSent_Value, "lbl_BytesSent_Value");
             this.lbl_BytesSent_Value.Name = "lbl_BytesSent_Value";
-            this.lbl_BytesSent_Value.Size = new System.Drawing.Size(25, 13);
-            this.lbl_BytesSent_Value.TabIndex = 186;
-            this.lbl_BytesSent_Value.Text = "N/A";
             // 
             // lbl_PacketsSent_Value
             // 
-            this.lbl_PacketsSent_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_PacketsSent_Value.AutoSize = true;
-            this.lbl_PacketsSent_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PacketsSent_Value.Location = new System.Drawing.Point(6, 140);
+            resources.ApplyResources(this.lbl_PacketsSent_Value, "lbl_PacketsSent_Value");
             this.lbl_PacketsSent_Value.Name = "lbl_PacketsSent_Value";
-            this.lbl_PacketsSent_Value.Size = new System.Drawing.Size(25, 13);
-            this.lbl_PacketsSent_Value.TabIndex = 187;
-            this.lbl_PacketsSent_Value.Text = "N/A";
             // 
             // lbl_BytesReceived
             // 
-            this.lbl_BytesReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_BytesReceived.AutoSize = true;
-            this.lbl_BytesReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BytesReceived.Location = new System.Drawing.Point(6, 5);
+            resources.ApplyResources(this.lbl_BytesReceived, "lbl_BytesReceived");
             this.lbl_BytesReceived.Name = "lbl_BytesReceived";
-            this.lbl_BytesReceived.Size = new System.Drawing.Size(85, 13);
-            this.lbl_BytesReceived.TabIndex = 188;
-            this.lbl_BytesReceived.Text = "Byte received /s";
             // 
             // lbl_BytesReceived_Value
             // 
-            this.lbl_BytesReceived_Value.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_BytesReceived_Value.AutoSize = true;
-            this.lbl_BytesReceived_Value.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_BytesReceived_Value.Location = new System.Drawing.Point(6, 20);
+            resources.ApplyResources(this.lbl_BytesReceived_Value, "lbl_BytesReceived_Value");
             this.lbl_BytesReceived_Value.Name = "lbl_BytesReceived_Value";
-            this.lbl_BytesReceived_Value.Size = new System.Drawing.Size(25, 13);
-            this.lbl_BytesReceived_Value.TabIndex = 189;
-            this.lbl_BytesReceived_Value.Text = "N/A";
             // 
             // chartBytesReceived
             // 
             this.chartBytesReceived.Activated = true;
             this.chartBytesReceived.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chartBytesReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.chartBytesReceived, "chartBytesReceived");
             this.chartBytesReceived.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBytesReceived.BarFillColor = System.Drawing.Color.LightSalmon;
             this.chartBytesReceived.BarFillSize = 25;
-            this.chartBytesReceived.Location = new System.Drawing.Point(6, 181);
+            this.chartBytesReceived.ChartText = WinformComponents.ChartBar.ContentType.FillSize;
+            this.chartBytesReceived.CustomText = null;
             this.chartBytesReceived.Name = "chartBytesReceived";
-            this.chartBytesReceived.Size = new System.Drawing.Size(105, 24);
             this.chartBytesReceived.Style = WinformComponents.ChartBar.STYLE.Horizontal;
-            this.chartBytesReceived.TabIndex = 217;
             this.chartBytesReceived.TextColor = System.Drawing.Color.White;
+            this.chartBytesReceived.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // chartPacketsSent
             // 
             this.chartPacketsSent.Activated = true;
             this.chartPacketsSent.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chartPacketsSent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.chartPacketsSent, "chartPacketsSent");
             this.chartPacketsSent.BarBackColor = System.Drawing.Color.LightGray;
             this.chartPacketsSent.BarFillColor = System.Drawing.Color.LightSeaGreen;
             this.chartPacketsSent.BarFillSize = 25;
-            this.chartPacketsSent.Location = new System.Drawing.Point(6, 309);
+            this.chartPacketsSent.ChartText = WinformComponents.ChartBar.ContentType.FillSize;
+            this.chartPacketsSent.CustomText = null;
             this.chartPacketsSent.Name = "chartPacketsSent";
-            this.chartPacketsSent.Size = new System.Drawing.Size(105, 24);
             this.chartPacketsSent.Style = WinformComponents.ChartBar.STYLE.Horizontal;
-            this.chartPacketsSent.TabIndex = 219;
             this.chartPacketsSent.TextColor = System.Drawing.Color.White;
+            this.chartPacketsSent.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // chartPacketsReceived
             // 
             this.chartPacketsReceived.Activated = true;
             this.chartPacketsReceived.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chartPacketsReceived.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.chartPacketsReceived, "chartPacketsReceived");
             this.chartPacketsReceived.BarBackColor = System.Drawing.Color.LightGray;
             this.chartPacketsReceived.BarFillColor = System.Drawing.Color.DodgerBlue;
             this.chartPacketsReceived.BarFillSize = 25;
-            this.chartPacketsReceived.Location = new System.Drawing.Point(6, 266);
+            this.chartPacketsReceived.ChartText = WinformComponents.ChartBar.ContentType.FillSize;
+            this.chartPacketsReceived.CustomText = null;
             this.chartPacketsReceived.Name = "chartPacketsReceived";
-            this.chartPacketsReceived.Size = new System.Drawing.Size(105, 24);
             this.chartPacketsReceived.Style = WinformComponents.ChartBar.STYLE.Horizontal;
-            this.chartPacketsReceived.TabIndex = 220;
             this.chartPacketsReceived.TextColor = System.Drawing.Color.White;
+            this.chartPacketsReceived.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // chartBytesSent
             // 
             this.chartBytesSent.Activated = true;
             this.chartBytesSent.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.chartBytesSent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.chartBytesSent, "chartBytesSent");
             this.chartBytesSent.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBytesSent.BarFillColor = System.Drawing.Color.DarkKhaki;
             this.chartBytesSent.BarFillSize = 25;
-            this.chartBytesSent.Location = new System.Drawing.Point(6, 224);
+            this.chartBytesSent.ChartText = WinformComponents.ChartBar.ContentType.FillSize;
+            this.chartBytesSent.CustomText = null;
             this.chartBytesSent.Name = "chartBytesSent";
-            this.chartBytesSent.Size = new System.Drawing.Size(105, 24);
             this.chartBytesSent.Style = WinformComponents.ChartBar.STYLE.Horizontal;
-            this.chartBytesSent.TabIndex = 221;
             this.chartBytesSent.TextColor = System.Drawing.Color.White;
+            this.chartBytesSent.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // lbl_Titre_Chart_BytesReceived
             // 
-            this.lbl_Titre_Chart_BytesReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Titre_Chart_BytesReceived.AutoSize = true;
-            this.lbl_Titre_Chart_BytesReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titre_Chart_BytesReceived.Location = new System.Drawing.Point(6, 165);
+            resources.ApplyResources(this.lbl_Titre_Chart_BytesReceived, "lbl_Titre_Chart_BytesReceived");
             this.lbl_Titre_Chart_BytesReceived.Name = "lbl_Titre_Chart_BytesReceived";
-            this.lbl_Titre_Chart_BytesReceived.Size = new System.Drawing.Size(73, 13);
-            this.lbl_Titre_Chart_BytesReceived.TabIndex = 222;
-            this.lbl_Titre_Chart_BytesReceived.Text = "Byte received";
             // 
             // lbl_Titre_Chart_BytesSent
             // 
-            this.lbl_Titre_Chart_BytesSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Titre_Chart_BytesSent.AutoSize = true;
-            this.lbl_Titre_Chart_BytesSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titre_Chart_BytesSent.Location = new System.Drawing.Point(6, 208);
+            resources.ApplyResources(this.lbl_Titre_Chart_BytesSent, "lbl_Titre_Chart_BytesSent");
             this.lbl_Titre_Chart_BytesSent.Name = "lbl_Titre_Chart_BytesSent";
-            this.lbl_Titre_Chart_BytesSent.Size = new System.Drawing.Size(58, 13);
-            this.lbl_Titre_Chart_BytesSent.TabIndex = 223;
-            this.lbl_Titre_Chart_BytesSent.Text = "Bytes sent";
             // 
             // lbl_Titre_Chart_PacketsReceived
             // 
-            this.lbl_Titre_Chart_PacketsReceived.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Titre_Chart_PacketsReceived.AutoSize = true;
-            this.lbl_Titre_Chart_PacketsReceived.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titre_Chart_PacketsReceived.Location = new System.Drawing.Point(6, 252);
+            resources.ApplyResources(this.lbl_Titre_Chart_PacketsReceived, "lbl_Titre_Chart_PacketsReceived");
             this.lbl_Titre_Chart_PacketsReceived.Name = "lbl_Titre_Chart_PacketsReceived";
-            this.lbl_Titre_Chart_PacketsReceived.Size = new System.Drawing.Size(88, 13);
-            this.lbl_Titre_Chart_PacketsReceived.TabIndex = 224;
-            this.lbl_Titre_Chart_PacketsReceived.Text = "Packets received";
             // 
             // lbl_Titre_Chart_PacketsSent
             // 
-            this.lbl_Titre_Chart_PacketsSent.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbl_Titre_Chart_PacketsSent.AutoSize = true;
-            this.lbl_Titre_Chart_PacketsSent.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titre_Chart_PacketsSent.Location = new System.Drawing.Point(6, 294);
+            resources.ApplyResources(this.lbl_Titre_Chart_PacketsSent, "lbl_Titre_Chart_PacketsSent");
             this.lbl_Titre_Chart_PacketsSent.Name = "lbl_Titre_Chart_PacketsSent";
-            this.lbl_Titre_Chart_PacketsSent.Size = new System.Drawing.Size(68, 13);
-            this.lbl_Titre_Chart_PacketsSent.TabIndex = 225;
-            this.lbl_Titre_Chart_PacketsSent.Text = "Packets sent";
             // 
             // _NetworkDevicePerformanceControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lbl_Titre_Chart_PacketsSent);
             this.Controls.Add(this.lbl_Titre_Chart_PacketsReceived);
@@ -259,7 +189,8 @@
             this.Controls.Add(this.lbl_BytesSent);
             this.Controls.Add(this.lbl_PacketsReceived);
             this.Name = "_NetworkDevicePerformanceControl";
-            this.Size = new System.Drawing.Size(118, 338);
+            this.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.TokenSource = cancellationTokenSource1;
             this.ResumeLayout(false);
             this.PerformLayout();
 

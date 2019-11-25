@@ -117,4 +117,313 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_ScoreHd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 13</value>
+  </data>
+  <data name="chartBar_Graph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 33</value>
+  </data>
+  <data name="lbl_ScoreD3D.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 103</value>
+  </data>
+  <data name="chartBar_Ram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 299</value>
+  </data>
+  <data name="lbl_ScoreD3D.Text" xml:space="preserve">
+    <value>D3D</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chartBar_Hd.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="lbl_Score_Titre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 20</value>
+  </data>
+  <data name="lbl_Score_Titre.Text" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="lbl_Score_Titre.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreGraph.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Graph.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ScoreGraph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 223</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_WindowsScoreDevicePerformanceControl</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_ScoreHd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="chartBar_Cpu.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Hd.Name" xml:space="preserve">
+    <value>chartBar_Hd</value>
+  </data>
+  <data name="&gt;&gt;lbl_Score_Titre.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Ram.Name" xml:space="preserve">
+    <value>chartBar_Ram</value>
+  </data>
+  <data name="lbl_ScoreD3D.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Cpu.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreHd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ScoreD3D.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 13</value>
+  </data>
+  <data name="chartBar_Cpu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_ScoreGraph.Text" xml:space="preserve">
+    <value>Graph</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreCpu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Score_Titre.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="lbl_ScoreGraph.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Cpu.Name" xml:space="preserve">
+    <value>chartBar_Cpu</value>
+  </data>
+  <data name="&gt;&gt;chartBar_D3D.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbl_ScoreCpu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 49</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Cpu.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Cpu.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chartBar_Hd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 33</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreHd.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbl_Score_Titre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 18</value>
+  </data>
+  <data name="chartBar_Cpu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 33</value>
+  </data>
+  <data name="chartBar_Ram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 33</value>
+  </data>
+  <data name="chartBar_Hd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="chartBar_Graph.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 239</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Hd.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Ram.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Score_Titre.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="lbl_ScoreGraph.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="lbl_ScoreHd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 163</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreRam.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_ScoreCpu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreD3D.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chartBar_Ram.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;chartBar_D3D.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="chartBar_Graph.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="lbl_ScoreHd.Text" xml:space="preserve">
+    <value>Disk</value>
+  </data>
+  <data name="lbl_ScoreRam.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="lbl_ScoreRam.Text" xml:space="preserve">
+    <value>Ram</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreRam.Name" xml:space="preserve">
+    <value>lbl_ScoreRam</value>
+  </data>
+  <data name="lbl_ScoreCpu.Text" xml:space="preserve">
+    <value>Cpu</value>
+  </data>
+  <data name="chartBar_Cpu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 65</value>
+  </data>
+  <data name="&gt;&gt;chartBar_D3D.Name" xml:space="preserve">
+    <value>chartBar_D3D</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Graph.Name" xml:space="preserve">
+    <value>chartBar_Graph</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreD3D.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreCpu.Name" xml:space="preserve">
+    <value>lbl_ScoreCpu</value>
+  </data>
+  <data name="chartBar_Ram.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreD3D.Name" xml:space="preserve">
+    <value>lbl_ScoreD3D</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreRam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_ScoreD3D.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="lbl_ScoreHd.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="lbl_ScoreRam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 283</value>
+  </data>
+  <data name="chartBar_D3D.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 33</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Hd.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Score_Titre.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Ram.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreHd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Score_Titre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Score_Titre.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_ScoreRam.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="chartBar_D3D.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Graph.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_ScoreCpu.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 360</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreRam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreCpu.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreCpu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Graph.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreGraph.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreHd.Name" xml:space="preserve">
+    <value>lbl_ScoreHd</value>
+  </data>
+  <data name="lbl_ScoreGraph.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 13</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreGraph.Name" xml:space="preserve">
+    <value>lbl_ScoreGraph</value>
+  </data>
+  <data name="chartBar_D3D.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Hd.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chartBar_Ram.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_ScoreRam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>135, 13</value>
+  </data>
+  <data name="chartBar_Hd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 179</value>
+  </data>
+  <data name="lbl_ScoreCpu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 13</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreD3D.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls.DevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="chartBar_D3D.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 119</value>
+  </data>
+  <data name="&gt;&gt;lbl_Score_Titre.Name" xml:space="preserve">
+    <value>lbl_Score_Titre</value>
+  </data>
+  <data name="&gt;&gt;chartBar_D3D.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_ScoreGraph.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chartBar_Graph.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de</value>
+  </metadata>
 </root>

@@ -452,23 +452,86 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.resx">
       <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.de.resx">
+      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.fr.resx">
+      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.it.resx">
+      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.resx">
       <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.de.resx">
+      <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.fr.resx">
+      <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.it.resx">
+      <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.resx">
       <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.de.resx">
+      <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.fr.resx">
+      <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.it.resx">
+      <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_MemoryDevicePerformanceControl.resx">
       <DependentUpon>_MemoryDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_NetworkDevicePerformanceControl.de.resx">
+      <DependentUpon>_NetworkDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_NetworkDevicePerformanceControl.fr.resx">
+      <DependentUpon>_NetworkDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_NetworkDevicePerformanceControl.it.resx">
+      <DependentUpon>_NetworkDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_NetworkDevicePerformanceControl.resx">
       <DependentUpon>_NetworkDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_PhysicalDiskDevicePerformanceControl.de.resx">
+      <DependentUpon>_PhysicalDiskDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_PhysicalDiskDevicePerformanceControl.fr.resx">
+      <DependentUpon>_PhysicalDiskDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_PhysicalDiskDevicePerformanceControl.it.resx">
+      <DependentUpon>_PhysicalDiskDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_PhysicalDiskDevicePerformanceControl.resx">
       <DependentUpon>_PhysicalDiskDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.de.resx">
+      <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.fr.resx">
+      <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.it.resx">
+      <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_SystemDevicePerformanceControl.resx">
       <DependentUpon>_SystemDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_WindowsScoreDevicePerformanceControl.de.resx">
+      <DependentUpon>_WindowsScoreDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_WindowsScoreDevicePerformanceControl.fr.resx">
+      <DependentUpon>_WindowsScoreDevicePerformanceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_WindowsScoreDevicePerformanceControl.it.resx">
+      <DependentUpon>_WindowsScoreDevicePerformanceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_WindowsScoreDevicePerformanceControl.resx">
       <DependentUpon>_WindowsScoreDevicePerformanceControl.cs</DependentUpon>
