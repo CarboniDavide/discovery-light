@@ -28,82 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Memory));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
-            this.pic_Divisor_003 = new System.Windows.Forms.PictureBox();
+            System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
-            this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.MemoryDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl();
             this.MemoryDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).BeginInit();
+            this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
+            this.pic_Divisor_003 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pic_Divisor_003
-            // 
-            this.pic_Divisor_003.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pic_Divisor_003.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pic_Divisor_003.Location = new System.Drawing.Point(450, 0);
-            this.pic_Divisor_003.Name = "pic_Divisor_003";
-            this.pic_Divisor_003.Size = new System.Drawing.Size(2, 360);
-            this.pic_Divisor_003.TabIndex = 71;
-            this.pic_Divisor_003.TabStop = false;
             // 
             // cmb_Blocks
             // 
-            this.cmb_Blocks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmb_Blocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
             this.cmb_Blocks.FormattingEnabled = true;
-            this.cmb_Blocks.Location = new System.Drawing.Point(377, 333);
             this.cmb_Blocks.Name = "cmb_Blocks";
-            this.cmb_Blocks.Size = new System.Drawing.Size(43, 21);
-            this.cmb_Blocks.TabIndex = 74;
             this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             // 
             // lbl_TitleComboBox
             // 
-            this.lbl_TitleComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lbl_TitleComboBox.AutoSize = true;
-            this.lbl_TitleComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TitleComboBox.Location = new System.Drawing.Point(320, 334);
+            resources.ApplyResources(this.lbl_TitleComboBox, "lbl_TitleComboBox");
             this.lbl_TitleComboBox.Name = "lbl_TitleComboBox";
-            this.lbl_TitleComboBox.Size = new System.Drawing.Size(40, 20);
-            this.lbl_TitleComboBox.TabIndex = 72;
-            this.lbl_TitleComboBox.Text = "Bloc";
-            // 
-            // pic_Divisor_002
-            // 
-            this.pic_Divisor_002.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pic_Divisor_002.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pic_Divisor_002.Location = new System.Drawing.Point(20, 326);
-            this.pic_Divisor_002.Name = "pic_Divisor_002";
-            this.pic_Divisor_002.Size = new System.Drawing.Size(400, 1);
-            this.pic_Divisor_002.TabIndex = 217;
-            this.pic_Divisor_002.TabStop = false;
             // 
             // MemoryDeviceDataControl
             // 
+            resources.ApplyResources(this.MemoryDeviceDataControl, "MemoryDeviceDataControl");
+            this.MemoryDeviceDataControl.ClassName = "_MemoryDeviceDataControl";
+            this.MemoryDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl);
             this.MemoryDeviceDataControl.CurrentDevice = null;
             this.MemoryDeviceDataControl.CurrentSubDevice = null;
-            this.MemoryDeviceDataControl.Location = new System.Drawing.Point(0, 0);
             this.MemoryDeviceDataControl.Name = "MemoryDeviceDataControl";
-            this.MemoryDeviceDataControl.Size = new System.Drawing.Size(444, 324);
-            this.MemoryDeviceDataControl.TabIndex = 218;
+            this.MemoryDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.MemoryDeviceDataControl.TokenSource = cancellationTokenSource1;
             // 
             // MemoryDevicePerformanceControl
             // 
+            resources.ApplyResources(this.MemoryDevicePerformanceControl, "MemoryDevicePerformanceControl");
+            this.MemoryDevicePerformanceControl.ClassName = "_MemoryDevicePerformanceControl";
+            this.MemoryDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl);
             this.MemoryDevicePerformanceControl.CurrentPerformance = null;
             this.MemoryDevicePerformanceControl.CurrentSubDevice = 0;
-            this.MemoryDevicePerformanceControl.Location = new System.Drawing.Point(453, 0);
             this.MemoryDevicePerformanceControl.Name = "MemoryDevicePerformanceControl";
             this.MemoryDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.MemoryDevicePerformanceControl.Size = new System.Drawing.Size(174, 360);
-            this.MemoryDevicePerformanceControl.TabIndex = 219;
-            this.MemoryDevicePerformanceControl.TokenSource = cancellationTokenSource1;
+            this.MemoryDevicePerformanceControl.TokenSource = cancellationTokenSource2;
+            // 
+            // pic_Divisor_002
+            // 
+            resources.ApplyResources(this.pic_Divisor_002, "pic_Divisor_002");
+            this.pic_Divisor_002.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pic_Divisor_002.Name = "pic_Divisor_002";
+            this.pic_Divisor_002.TabStop = false;
+            // 
+            // pic_Divisor_003
+            // 
+            resources.ApplyResources(this.pic_Divisor_003, "pic_Divisor_003");
+            this.pic_Divisor_003.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pic_Divisor_003.Name = "pic_Divisor_003";
+            this.pic_Divisor_003.TabStop = false;
             // 
             // _Memory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.MemoryDevicePerformanceControl);
             this.Controls.Add(this.MemoryDeviceDataControl);
@@ -113,13 +101,10 @@
             this.Controls.Add(this.pic_Divisor_003);
             this.Name = "_Memory";
             this.PanelIndex = 3;
-            this.PanelName = "Memory";
-            this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._Memory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

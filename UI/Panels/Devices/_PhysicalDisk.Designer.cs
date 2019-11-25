@@ -28,82 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_PhysicalDisk));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
+            System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TilteComboBox = new System.Windows.Forms.Label();
             this.PhysicalDiskDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl();
             this.PhysicalDiskDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pictureBox1.Location = new System.Drawing.Point(470, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(2, 360);
-            this.pictureBox1.TabIndex = 118;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pic_Divisor_001
-            // 
-            this.pic_Divisor_001.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pic_Divisor_001.Location = new System.Drawing.Point(11, 317);
-            this.pic_Divisor_001.Name = "pic_Divisor_001";
-            this.pic_Divisor_001.Size = new System.Drawing.Size(450, 1);
-            this.pic_Divisor_001.TabIndex = 169;
-            this.pic_Divisor_001.TabStop = false;
             // 
             // cmb_Blocks
             // 
-            this.cmb_Blocks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmb_Blocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
             this.cmb_Blocks.FormattingEnabled = true;
-            this.cmb_Blocks.Location = new System.Drawing.Point(76, 327);
             this.cmb_Blocks.Name = "cmb_Blocks";
-            this.cmb_Blocks.Size = new System.Drawing.Size(385, 21);
-            this.cmb_Blocks.TabIndex = 166;
             this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             // 
             // lbl_TilteComboBox
             // 
-            this.lbl_TilteComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lbl_TilteComboBox.AutoSize = true;
-            this.lbl_TilteComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TilteComboBox.Location = new System.Drawing.Point(11, 327);
+            resources.ApplyResources(this.lbl_TilteComboBox, "lbl_TilteComboBox");
             this.lbl_TilteComboBox.Name = "lbl_TilteComboBox";
-            this.lbl_TilteComboBox.Size = new System.Drawing.Size(57, 20);
-            this.lbl_TilteComboBox.TabIndex = 165;
-            this.lbl_TilteComboBox.Text = "Device";
             // 
             // PhysicalDiskDevicePerformanceControl
             // 
+            resources.ApplyResources(this.PhysicalDiskDevicePerformanceControl, "PhysicalDiskDevicePerformanceControl");
+            this.PhysicalDiskDevicePerformanceControl.ClassName = "_PhysicalDiskDevicePerformanceControl";
+            this.PhysicalDiskDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl);
             this.PhysicalDiskDevicePerformanceControl.CurrentPerformance = null;
             this.PhysicalDiskDevicePerformanceControl.CurrentSubDevice = 0;
-            this.PhysicalDiskDevicePerformanceControl.Location = new System.Drawing.Point(477, 3);
             this.PhysicalDiskDevicePerformanceControl.Name = "PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.PhysicalDiskDevicePerformanceControl.Size = new System.Drawing.Size(153, 357);
-            this.PhysicalDiskDevicePerformanceControl.TabIndex = 171;
             this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // PhysicalDiskDeviceDataControl
             // 
+            resources.ApplyResources(this.PhysicalDiskDeviceDataControl, "PhysicalDiskDeviceDataControl");
+            this.PhysicalDiskDeviceDataControl.ClassName = "_PhysicalDiskDeviceDataControl";
+            this.PhysicalDiskDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl);
             this.PhysicalDiskDeviceDataControl.CurrentDevice = null;
             this.PhysicalDiskDeviceDataControl.CurrentSubDevice = null;
-            this.PhysicalDiskDeviceDataControl.Location = new System.Drawing.Point(3, 7);
             this.PhysicalDiskDeviceDataControl.Name = "PhysicalDiskDeviceDataControl";
-            this.PhysicalDiskDeviceDataControl.Size = new System.Drawing.Size(465, 303);
-            this.PhysicalDiskDeviceDataControl.TabIndex = 170;
+            this.PhysicalDiskDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.PhysicalDiskDeviceDataControl.TokenSource = cancellationTokenSource2;
+            // 
+            // pic_Divisor_001
+            // 
+            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
+            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pic_Divisor_001.Name = "pic_Divisor_001";
+            this.pic_Divisor_001.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // _PhysicalDisk
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.PhysicalDiskDevicePerformanceControl);
             this.Controls.Add(this.PhysicalDiskDeviceDataControl);
@@ -113,13 +101,10 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "_PhysicalDisk";
             this.PanelIndex = 6;
-            this.PanelName = "Local Storage";
-            this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._PhysicalDisk_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

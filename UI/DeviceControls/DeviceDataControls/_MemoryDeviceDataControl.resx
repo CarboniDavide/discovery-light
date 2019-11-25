@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_BlockManufacturer_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lbl_BlockVoltage_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
@@ -170,9 +170,6 @@
   </data>
   <data name="lbl_BlockSpeed.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 249</value>
-  </data>
-  <data name="lbl_BlockSerial.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="&gt;&gt;lbl_Size_Value.Name" xml:space="preserve">
     <value>lbl_Size_Value</value>
@@ -249,6 +246,9 @@
   <data name="&gt;&gt;lbl_Type_Value.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
+  <data name="&gt;&gt;lbl_BlockSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="pic_Divisor_001.TabIndex" type="System.Int32, mscorlib">
     <value>218</value>
   </data>
@@ -276,11 +276,8 @@
   <data name="&gt;&gt;lbl_Block.Name" xml:space="preserve">
     <value>lbl_Block</value>
   </data>
-  <data name="lbl_BlockLocation_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;lbl_BlockSerial.Name" xml:space="preserve">
-    <value>lbl_BlockSerial</value>
+  <data name="&gt;&gt;lbl_Block_Value.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="lbl_BlockSize.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -300,8 +297,8 @@
   <data name="&gt;&gt;lbl_BlockManufacturer_Value.Name" xml:space="preserve">
     <value>lbl_BlockManufacturer_Value</value>
   </data>
-  <data name="lbl_BlockSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="lbl_BlockManufacturer_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lbl_BlockSerial_Value.ZOrder" xml:space="preserve">
     <value>13</value>
@@ -312,8 +309,8 @@
   <data name="lbl_BlockSerial_Value.TabIndex" type="System.Int32, mscorlib">
     <value>57</value>
   </data>
-  <data name="lbl_BlockSize_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 99</value>
+  <data name="lbl_BlockSize_Value.Text" xml:space="preserve">
+    <value>N/A</value>
   </data>
   <data name="lbl_BlockSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 25</value>
@@ -323,6 +320,9 @@
   </data>
   <data name="lbl_Block.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 44</value>
+  </data>
+  <data name="lbl_BlockNumberParty_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 25</value>
   </data>
   <data name="lbl_BlockSlotPosition.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -336,11 +336,11 @@
   <data name="&gt;&gt;lbl_Type.Name" xml:space="preserve">
     <value>lbl_Type</value>
   </data>
+  <data name="lbl_BlockSerial_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 25</value>
+  </data>
   <data name="&gt;&gt;lbl_BlockSize.Name" xml:space="preserve">
     <value>lbl_BlockSize</value>
-  </data>
-  <data name="lbl_BlockManufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
   </data>
   <data name="&gt;&gt;lbl_Type.ZOrder" xml:space="preserve">
     <value>22</value>
@@ -351,10 +351,7 @@
   <data name="lbl_Block.TabIndex" type="System.Int32, mscorlib">
     <value>47</value>
   </data>
-  <data name="lbl_BlockBusSize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_BlockSlotPosition.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_BlockNumberParty.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 25</value>
   </data>
   <data name="lbl_Block_Value.Font" type="System.Drawing.Font, System.Drawing">
@@ -383,6 +380,9 @@
   </data>
   <data name="&gt;&gt;pic_Divisor_001.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_BlockBusSize_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbl_BlockSpeed.ZOrder" xml:space="preserve">
     <value>14</value>
@@ -420,8 +420,8 @@
   <data name="&gt;&gt;lbl_BlockSize_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_BlockLocation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="lbl_BlockSpeed.Text" xml:space="preserve">
+    <value>Speed</value>
   </data>
   <data name="&gt;&gt;lbl_BlockSpeed.Name" xml:space="preserve">
     <value>lbl_BlockSpeed</value>
@@ -444,6 +444,9 @@
   <data name="&gt;&gt;lbl_BlockManufacturer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="lbl_BlockNumberParty.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
   <data name="lbl_BlockLocation_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 149</value>
   </data>
@@ -453,8 +456,8 @@
   <data name="lbl_BlockSpeed.TabIndex" type="System.Int32, mscorlib">
     <value>56</value>
   </data>
-  <data name="lbl_BlockSize_Value.Text" xml:space="preserve">
-    <value>N/A</value>
+  <data name="&gt;&gt;lbl_Block_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lbl_Block.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -528,11 +531,8 @@
   <data name="&gt;&gt;lbl_BlockSpeed_Value.Name" xml:space="preserve">
     <value>lbl_BlockSpeed_Value</value>
   </data>
-  <data name="lbl_BlockVoltage_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Block_Value.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;lbl_BlockSerial.Name" xml:space="preserve">
+    <value>lbl_BlockSerial</value>
   </data>
   <data name="lbl_Type_Value.Text" xml:space="preserve">
     <value>N/A</value>
@@ -561,8 +561,8 @@
   <data name="lbl_BlockSerial_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="lbl_BlockSerial_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 25</value>
+  <data name="lbl_BlockSize_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 99</value>
   </data>
   <data name="&gt;&gt;lbl_BlockBusSize.Name" xml:space="preserve">
     <value>lbl_BlockBusSize</value>
@@ -606,6 +606,9 @@
   <data name="lbl_BlockSize.Text" xml:space="preserve">
     <value>Block size</value>
   </data>
+  <data name="lbl_BlockSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="lbl_BlockManufacturer_Value.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
   </data>
@@ -639,14 +642,11 @@
   <data name="lbl_BlockSlotPosition_Value.TabIndex" type="System.Int32, mscorlib">
     <value>76</value>
   </data>
-  <data name="lbl_BlockSize_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 25</value>
-  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>478, 360</value>
   </data>
-  <data name="lbl_BlockNumberParty_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 25</value>
+  <data name="lbl_Type.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="lbl_Block.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -657,8 +657,8 @@
   <data name="lbl_Type.Text" xml:space="preserve">
     <value>Type</value>
   </data>
-  <data name="lbl_BlockSpeed.Text" xml:space="preserve">
-    <value>Speed</value>
+  <data name="lbl_BlockVoltage_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 25</value>
   </data>
   <data name="&gt;&gt;lbl_Block.Parent" xml:space="preserve">
     <value>$this</value>
@@ -687,9 +687,6 @@
   <data name="lbl_Size.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;lbl_BlockVoltage_Value.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="lbl_BlockSpeed_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
@@ -708,8 +705,8 @@
   <data name="lbl_BlockManufacturer.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 25</value>
   </data>
-  <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 96</value>
+  <data name="lbl_BlockSlotPosition_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lbl_BlockBusSize.Parent" xml:space="preserve">
     <value>$this</value>
@@ -720,14 +717,8 @@
   <data name="lbl_Type_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 69</value>
   </data>
-  <data name="lbl_BlockSize_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>54</value>
-  </data>
   <data name="lbl_BlockBusSize_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_BlockBusSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 25</value>
   </data>
   <data name="lbl_BlockLocation.TabIndex" type="System.Int32, mscorlib">
     <value>59</value>
@@ -747,14 +738,17 @@
   <data name="lbl_BlockSpeed_Value.Text" xml:space="preserve">
     <value>N/A</value>
   </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_MemoryDeviceDataControl</value>
+  </data>
   <data name="lbl_BlockNumberParty_Value.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
   <data name="lbl_BlockVoltage_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbl_BlockSlotPosition_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="lbl_BlockVoltage_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 299</value>
   </data>
   <data name="&gt;&gt;lbl_BlockSerial.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -777,8 +771,8 @@
   <data name="lbl_BlockSpeed_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 249</value>
   </data>
-  <data name="&gt;&gt;lbl_BlockBusSize_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_BlockManufacturer.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
   </data>
   <data name="lbl_BlockLocation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -795,8 +789,8 @@
   <data name="lbl_Block_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>270, 25</value>
   </data>
-  <data name="lbl_BlockNumberParty.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="lbl_BlockSize_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
   </data>
   <data name="lbl_BlockManufacturer.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -804,8 +798,8 @@
   <data name="&gt;&gt;lbl_BlockSize_Value.Name" xml:space="preserve">
     <value>lbl_BlockSize_Value</value>
   </data>
-  <data name="&gt;&gt;lbl_Block_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_BlockSize_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>270, 25</value>
   </data>
   <data name="lbl_BlockSerial_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -816,6 +810,9 @@
   <data name="lbl_BlockSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
+  <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 96</value>
+  </data>
   <data name="&gt;&gt;lbl_BlockSpeed_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -825,8 +822,8 @@
   <data name="lbl_BlockSize.TabIndex" type="System.Int32, mscorlib">
     <value>49</value>
   </data>
-  <data name="lbl_BlockNumberParty.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 25</value>
+  <data name="lbl_BlockLocation.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="lbl_Size.Size" type="System.Drawing.Size, System.Drawing">
     <value>202, 25</value>
@@ -834,8 +831,8 @@
   <data name="lbl_BlockSize_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="lbl_BlockVoltage_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 299</value>
+  <data name="lbl_BlockSerial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="lbl_BlockNumberParty_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -849,8 +846,8 @@
   <data name="lbl_BlockNumberParty_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 199</value>
   </data>
-  <data name="lbl_BlockManufacturer.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
+  <data name="&gt;&gt;lbl_BlockVoltage_Value.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;lbl_BlockSlotPosition_Value.Name" xml:space="preserve">
     <value>lbl_BlockSlotPosition_Value</value>
@@ -858,8 +855,11 @@
   <data name="lbl_BlockLocation_Value.TabIndex" type="System.Int32, mscorlib">
     <value>55</value>
   </data>
-  <data name="lbl_Type.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbl_BlockBusSize.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_BlockBusSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 25</value>
   </data>
   <data name="&gt;&gt;lbl_Size.Parent" xml:space="preserve">
     <value>$this</value>
@@ -903,8 +903,8 @@
   <data name="&gt;&gt;lbl_BlockBusSize_Value.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>_MemoryDeviceDataControl</value>
+  <data name="lbl_BlockLocation_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="lbl_BlockNumberParty.TabIndex" type="System.Int32, mscorlib">
     <value>62</value>
@@ -915,8 +915,8 @@
   <data name="&gt;&gt;lbl_Block.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_BlockVoltage_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>270, 25</value>
+  <data name="lbl_BlockSlotPosition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 25</value>
   </data>
   <data name="lbl_Block_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>208, 44</value>
@@ -927,8 +927,8 @@
   <data name="lbl_Block.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;lbl_BlockSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_BlockManufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>

@@ -28,53 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_BaseHardware));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
-            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
+            System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             this.BasePcDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._BasePcDevicePerformanceControl();
             this.BasePcDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._BasePcDeviceDataControl();
+            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             this.SuspendLayout();
             // 
-            // pic_Divisor_001
-            // 
-            this.pic_Divisor_001.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pic_Divisor_001.Location = new System.Drawing.Point(450, 0);
-            this.pic_Divisor_001.Name = "pic_Divisor_001";
-            this.pic_Divisor_001.Size = new System.Drawing.Size(2, 360);
-            this.pic_Divisor_001.TabIndex = 22;
-            this.pic_Divisor_001.TabStop = false;
-            // 
             // BasePcDevicePerformanceControl
             // 
+            resources.ApplyResources(this.BasePcDevicePerformanceControl, "BasePcDevicePerformanceControl");
+            this.BasePcDevicePerformanceControl.ClassName = "_BasePcDevicePerformanceControl";
+            this.BasePcDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._BasePcDevicePerformanceControl);
             this.BasePcDevicePerformanceControl.CurrentPerformance = null;
             this.BasePcDevicePerformanceControl.CurrentSubDevice = 0;
-            this.BasePcDevicePerformanceControl.Location = new System.Drawing.Point(476, 0);
             this.BasePcDevicePerformanceControl.Name = "BasePcDevicePerformanceControl";
             this.BasePcDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.BasePcDevicePerformanceControl.Size = new System.Drawing.Size(127, 360);
-            this.BasePcDevicePerformanceControl.TabIndex = 24;
             this.BasePcDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // BasePcDeviceDataControl
             // 
+            resources.ApplyResources(this.BasePcDeviceDataControl, "BasePcDeviceDataControl");
+            this.BasePcDeviceDataControl.ClassName = "_BasePcDeviceDataControl";
+            this.BasePcDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._BasePcDeviceDataControl);
             this.BasePcDeviceDataControl.CurrentDevice = null;
             this.BasePcDeviceDataControl.CurrentSubDevice = null;
-            this.BasePcDeviceDataControl.Location = new System.Drawing.Point(31, 0);
             this.BasePcDeviceDataControl.Name = "BasePcDeviceDataControl";
-            this.BasePcDeviceDataControl.Size = new System.Drawing.Size(416, 360);
-            this.BasePcDeviceDataControl.TabIndex = 23;
+            this.BasePcDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.BasePcDeviceDataControl.TokenSource = cancellationTokenSource2;
+            // 
+            // pic_Divisor_001
+            // 
+            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
+            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pic_Divisor_001.Name = "pic_Divisor_001";
+            this.pic_Divisor_001.TabStop = false;
             // 
             // _BaseHardware
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.BasePcDevicePerformanceControl);
             this.Controls.Add(this.BasePcDeviceDataControl);
             this.Controls.Add(this.pic_Divisor_001);
             this.Name = "_BaseHardware";
-            this.PanelName = "Base Pc Information";
-            this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);
 

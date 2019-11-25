@@ -545,6 +545,15 @@
     <EmbeddedResource Include="UI\Forms\Main\_Main.resx">
       <DependentUpon>_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Main\_Navigation.de.resx">
+      <DependentUpon>_Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Main\_Navigation.fr.resx">
+      <DependentUpon>_Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Main\_Navigation.it.resx">
+      <DependentUpon>_Navigation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Main\_Navigation.resx">
       <DependentUpon>_Navigation.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,20 +569,83 @@
     <EmbeddedResource Include="UI\Panels\Details\_WmiNameSpace.resx">
       <DependentUpon>_WmiNameSpace.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Audio.de.resx">
+      <DependentUpon>_Audio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Audio.fr.resx">
+      <DependentUpon>_Audio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Audio.it.resx">
+      <DependentUpon>_Audio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Audio.resx">
       <DependentUpon>_Audio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_BaseHardware.de.resx">
+      <DependentUpon>_BaseHardware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_BaseHardware.fr.resx">
+      <DependentUpon>_BaseHardware.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_BaseHardware.it.resx">
+      <DependentUpon>_BaseHardware.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_BaseHardware.resx">
       <DependentUpon>_BaseHardware.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_CPU.de.resx">
+      <DependentUpon>_CPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_CPU.fr.resx">
+      <DependentUpon>_CPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_CPU.it.resx">
+      <DependentUpon>_CPU.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_CPU.resx">
       <DependentUpon>_CPU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Details.de.resx">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Details.fr.resx">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Details.it.resx">
+      <DependentUpon>_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.de.resx">
+      <DependentUpon>_MainBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.fr.resx">
+      <DependentUpon>_MainBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.it.resx">
+      <DependentUpon>_MainBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.resx">
       <DependentUpon>_MainBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Memory.de.resx">
+      <DependentUpon>_Memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Memory.fr.resx">
+      <DependentUpon>_Memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Memory.it.resx">
+      <DependentUpon>_Memory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Memory.resx">
       <DependentUpon>_Memory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Network.de.resx">
+      <DependentUpon>_Network.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Network.fr.resx">
+      <DependentUpon>_Network.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Network.it.resx">
+      <DependentUpon>_Network.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Network.resx">
       <DependentUpon>_Network.cs</DependentUpon>
@@ -581,8 +653,26 @@
     <EmbeddedResource Include="UI\Panels\Devices\_PanelContainer.resx">
       <DependentUpon>_PanelContainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.de.resx">
+      <DependentUpon>_PhysicalDisk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.fr.resx">
+      <DependentUpon>_PhysicalDisk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.it.resx">
+      <DependentUpon>_PhysicalDisk.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_PhysicalDisk.resx">
       <DependentUpon>_PhysicalDisk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Video.de.resx">
+      <DependentUpon>_Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Video.fr.resx">
+      <DependentUpon>_Video.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_Video.it.resx">
+      <DependentUpon>_Video.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_Video.resx">
       <DependentUpon>_Video.cs</DependentUpon>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Details));
             this.WmiNameSpace = new DiscoveryLight.UI.Panels.Details._WmiNameSpace();
             this.WmiClasses = new DiscoveryLight.UI.Panels.Details._WmiClasses();
             this.WmiDetails = new DiscoveryLight.UI.Panels.Details._WmiDetails();
@@ -35,43 +36,34 @@
             // 
             // WmiNameSpace
             // 
-            this.WmiNameSpace.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.WmiNameSpace, "WmiNameSpace");
             this.WmiNameSpace.Footer = null;
             this.WmiNameSpace.ListValues = null;
-            this.WmiNameSpace.Location = new System.Drawing.Point(0, 0);
             this.WmiNameSpace.Name = "WmiNameSpace";
-            this.WmiNameSpace.Size = new System.Drawing.Size(630, 50);
             this.WmiNameSpace.SubPanelContainer = null;
             this.WmiNameSpace.T = null;
-            this.WmiNameSpace.TabIndex = 0;
             // 
             // WmiClasses
             // 
-            this.WmiClasses.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.WmiClasses, "WmiClasses");
             this.WmiClasses.Footer = null;
             this.WmiClasses.ListValues = null;
-            this.WmiClasses.Location = new System.Drawing.Point(0, 50);
             this.WmiClasses.Name = "WmiClasses";
-            this.WmiClasses.Size = new System.Drawing.Size(630, 50);
             this.WmiClasses.SubPanelContainer = null;
             this.WmiClasses.T = null;
-            this.WmiClasses.TabIndex = 1;
             // 
             // WmiDetails
             // 
-            this.WmiDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            resources.ApplyResources(this.WmiDetails, "WmiDetails");
             this.WmiDetails.Footer = null;
             this.WmiDetails.ListValues = null;
-            this.WmiDetails.Location = new System.Drawing.Point(0, 100);
             this.WmiDetails.Name = "WmiDetails";
-            this.WmiDetails.Size = new System.Drawing.Size(630, 260);
             this.WmiDetails.SubPanelContainer = null;
             this.WmiDetails.T = null;
-            this.WmiDetails.TabIndex = 2;
             // 
             // _Details
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.WmiDetails);
@@ -79,8 +71,6 @@
             this.Controls.Add(this.WmiNameSpace);
             this.Name = "_Details";
             this.PanelIndex = 8;
-            this.PanelName = "All Wmi Details";
-            this.Size = new System.Drawing.Size(630, 360);
             this.Load += new System.EventHandler(this._Details_Load);
             this.ResumeLayout(false);
 

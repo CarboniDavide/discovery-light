@@ -28,57 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Audio));
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
-            this.pic_Divisor = new System.Windows.Forms.PictureBox();
             this.AudioDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._AudioDeviceDataControl();
+            this.pic_Divisor = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor)).BeginInit();
             this.SuspendLayout();
             // 
             // cmb_Blocks
             // 
-            this.cmb_Blocks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cmb_Blocks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
             this.cmb_Blocks.FormattingEnabled = true;
-            this.cmb_Blocks.Location = new System.Drawing.Point(126, 327);
             this.cmb_Blocks.Name = "cmb_Blocks";
-            this.cmb_Blocks.Size = new System.Drawing.Size(405, 21);
-            this.cmb_Blocks.TabIndex = 121;
             this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             // 
             // lbl_TitleComboBox
             // 
-            this.lbl_TitleComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.lbl_TitleComboBox.AutoSize = true;
-            this.lbl_TitleComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TitleComboBox.Location = new System.Drawing.Point(77, 326);
+            resources.ApplyResources(this.lbl_TitleComboBox, "lbl_TitleComboBox");
             this.lbl_TitleComboBox.Name = "lbl_TitleComboBox";
-            this.lbl_TitleComboBox.Size = new System.Drawing.Size(50, 20);
-            this.lbl_TitleComboBox.TabIndex = 119;
-            this.lbl_TitleComboBox.Text = "Audio";
-            // 
-            // pic_Divisor
-            // 
-            this.pic_Divisor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.pic_Divisor.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pic_Divisor.Location = new System.Drawing.Point(81, 311);
-            this.pic_Divisor.Name = "pic_Divisor";
-            this.pic_Divisor.Size = new System.Drawing.Size(450, 1);
-            this.pic_Divisor.TabIndex = 143;
-            this.pic_Divisor.TabStop = false;
             // 
             // AudioDeviceDataControl
             // 
+            resources.ApplyResources(this.AudioDeviceDataControl, "AudioDeviceDataControl");
+            this.AudioDeviceDataControl.ClassName = "_AudioDeviceDataControl";
+            this.AudioDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._AudioDeviceDataControl);
             this.AudioDeviceDataControl.CurrentDevice = null;
             this.AudioDeviceDataControl.CurrentSubDevice = null;
-            this.AudioDeviceDataControl.Location = new System.Drawing.Point(0, 3);
             this.AudioDeviceDataControl.Name = "AudioDeviceDataControl";
-            this.AudioDeviceDataControl.Size = new System.Drawing.Size(630, 234);
-            this.AudioDeviceDataControl.TabIndex = 144;
+            this.AudioDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.AudioDeviceDataControl.TokenSource = cancellationTokenSource1;
+            // 
+            // pic_Divisor
+            // 
+            resources.ApplyResources(this.pic_Divisor, "pic_Divisor");
+            this.pic_Divisor.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pic_Divisor.Name = "pic_Divisor";
+            this.pic_Divisor.TabStop = false;
             // 
             // _Audio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.AudioDeviceDataControl);
             this.Controls.Add(this.pic_Divisor);
@@ -87,10 +78,8 @@
             this.Name = "_Audio";
             this.PanelIndex = 4;
             this.PanelName = "Audio";
-            this.Size = new System.Drawing.Size(630, 360);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

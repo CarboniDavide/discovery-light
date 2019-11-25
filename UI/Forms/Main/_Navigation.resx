@@ -117,6 +117,399 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;toolTip_Description.Name" xml:space="preserve">
+    <value>toolTip_Description</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmd_Connectivite.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmd_CarteMere.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;cmd_Reseau.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cmd_CarteMere.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;cmd_MemoireRam.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmd_Ordinateur.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;cmd_CarteMere.Name" xml:space="preserve">
+    <value>cmd_CarteMere</value>
+  </data>
+  <data name="cmd_Reseau.ToolTip" xml:space="preserve">
+    <value>Network Adapter</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmd_CarteMere.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="&gt;&gt;cmd_Connectivite.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmd_Ordinateur.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmd_Disque.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 240</value>
+  </data>
+  <data name="cmd_Son.ToolTip" xml:space="preserve">
+    <value>Sound</value>
+  </data>
+  <data name="&gt;&gt;cmd_Ordinateur.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AnimationLine_Navigation.Type" xml:space="preserve">
+    <value>WinformComponents.AnimationLine, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmd_Son.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="&gt;&gt;cmd_Connectivite.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmd_MemoireRam.Name" xml:space="preserve">
+    <value>cmd_MemoireRam</value>
+  </data>
+  <data name="cmd_Reseau.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cmd_Ordinateur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="cmd_Ordinateur.ToolTip" xml:space="preserve">
+    <value>Base Pc Informations</value>
+  </data>
+  <data name="cmd_Disque.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmd_Video.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="cmd_MemoireRam.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cmd_CarteMere.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 40</value>
+  </data>
+  <data name="cmd_Disque.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cmd_Settings.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;cmd_Processeur.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmd_Ordinateur.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cmd_Disque.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="cmd_Connectivite.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="cmd_Video.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cmd_MemoireRam.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="cmd_Video.ToolTip" xml:space="preserve">
+    <value>Video</value>
+  </data>
+  <data name="&gt;&gt;cmd_Video.Name" xml:space="preserve">
+    <value>cmd_Video</value>
+  </data>
+  <data name="cmd_Settings.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmd_Connectivite.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cmd_CarteMere.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="AnimationLine_Navigation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;cmd_Processeur.Name" xml:space="preserve">
+    <value>cmd_Processeur</value>
+  </data>
+  <data name="cmd_Ordinateur.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cmd_Son.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmd_Video.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cmd_Reseau.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmd_Connectivite.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="cmd_Connectivite.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 320</value>
+  </data>
+  <data name="&gt;&gt;cmd_Disque.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmd_Settings.Name" xml:space="preserve">
+    <value>cmd_Settings</value>
+  </data>
+  <data name="&gt;&gt;cmd_Ordinateur.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;AnimationLine_Navigation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmd_Settings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 360</value>
+  </data>
+  <data name="&gt;&gt;cmd_Connectivite.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmd_Settings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmd_MemoireRam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 120</value>
+  </data>
+  <data name="cmd_Processeur.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cmd_Ordinateur.Name" xml:space="preserve">
+    <value>cmd_Ordinateur</value>
+  </data>
+  <data name="cmd_Son.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cmd_Video.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 200</value>
+  </data>
+  <data name="cmd_Disque.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmd_MemoireRam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="&gt;&gt;cmd_CarteMere.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmd_Reseau.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmd_Reseau.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="cmd_Connectivite.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;cmd_Reseau.Name" xml:space="preserve">
+    <value>cmd_Reseau</value>
+  </data>
+  <data name="cmd_Son.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;toolTip_Description.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmd_Reseau.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;cmd_Son.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmd_Settings.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;cmd_Video.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;cmd_Son.Name" xml:space="preserve">
+    <value>cmd_Son</value>
+  </data>
+  <data name="&gt;&gt;cmd_Son.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cmd_Disque.Name" xml:space="preserve">
+    <value>cmd_Disque</value>
+  </data>
+  <data name="&gt;&gt;cmd_Settings.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Buttons.PanelLinkButton, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="cmd_CarteMere.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cmd_Ordinateur.AccessibleName" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmd_Reseau.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 280</value>
+  </data>
+  <data name="cmd_Settings.ToolTip" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="&gt;&gt;cmd_Video.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cmd_CarteMere.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmd_Video.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="cmd_MemoireRam.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;cmd_Processeur.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cmd_MemoireRam.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="AnimationLine_Navigation.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Left, Right</value>
+  </data>
+  <data name="cmd_Settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="cmd_Son.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_Navigation</value>
+  </data>
+  <data name="AnimationLine_Navigation.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 400</value>
+  </data>
+  <data name="cmd_Son.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 160</value>
+  </data>
+  <data name="cmd_Processeur.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;cmd_Disque.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cmd_CarteMere.ToolTip" xml:space="preserve">
+    <value>Mainboard</value>
+  </data>
+  <data name="cmd_Reseau.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="AnimationLine_Navigation.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;cmd_Video.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmd_Video.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="AnimationLine_Navigation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>3, 40</value>
+  </data>
+  <data name="&gt;&gt;cmd_MemoireRam.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cmd_Connectivite.Name" xml:space="preserve">
+    <value>cmd_Connectivite</value>
+  </data>
+  <data name="&gt;&gt;cmd_Reseau.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="cmd_Processeur.ToolTip" xml:space="preserve">
+    <value>Processor</value>
+  </data>
+  <data name="&gt;&gt;cmd_Processeur.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AnimationLine_Navigation.Name" xml:space="preserve">
+    <value>AnimationLine_Navigation</value>
+  </data>
+  <data name="cmd_Disque.ToolTip" xml:space="preserve">
+    <value>Physical Disk</value>
+  </data>
+  <data name="cmd_CarteMere.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmd_Son.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="cmd_Connectivite.ToolTip" xml:space="preserve">
+    <value>All WMI Class</value>
+  </data>
+  <data name="cmd_Ordinateur.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmd_Settings.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="cmd_Processeur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="cmd_MemoireRam.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="cmd_Processeur.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;cmd_Disque.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.UserControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cmd_Ordinateur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="cmd_Processeur.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="cmd_Processeur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="&gt;&gt;cmd_Settings.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cmd_Disque.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 40</value>
+  </data>
+  <data name="cmd_MemoireRam.ToolTip" xml:space="preserve">
+    <value>Memory</value>
+  </data>
+  <data name="cmd_Ordinateur.AccessibleDescription" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;AnimationLine_Navigation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>it</value>
+  </metadata>
   <metadata name="toolTip_Description.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

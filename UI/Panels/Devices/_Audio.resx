@@ -117,4 +117,130 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_TitleComboBox.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="cmb_Blocks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>391, 21</value>
+  </data>
+  <data name="&gt;&gt;AudioDeviceDataControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmb_Blocks.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="lbl_TitleComboBox.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;cmb_Blocks.Name" xml:space="preserve">
+    <value>cmb_Blocks</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Panels.Devices.DevicePanel, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cmb_Blocks.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_Audio</value>
+  </data>
+  <data name="lbl_TitleComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pic_Divisor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 311</value>
+  </data>
+  <data name="pic_Divisor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="lbl_TitleComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 327</value>
+  </data>
+  <data name="AudioDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="&gt;&gt;lbl_TitleComboBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="AudioDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 234</value>
+  </data>
+  <data name="lbl_TitleComboBox.Text" xml:space="preserve">
+    <value>Device</value>
+  </data>
+  <data name="&gt;&gt;lbl_TitleComboBox.Name" xml:space="preserve">
+    <value>lbl_TitleComboBox</value>
+  </data>
+  <data name="lbl_TitleComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor.Name" xml:space="preserve">
+    <value>pic_Divisor</value>
+  </data>
+  <data name="&gt;&gt;cmb_Blocks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmb_Blocks.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pic_Divisor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 1</value>
+  </data>
+  <data name="&gt;&gt;cmb_Blocks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AudioDeviceDataControl.Name" xml:space="preserve">
+    <value>AudioDeviceDataControl</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;AudioDeviceDataControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_TitleComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="AudioDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
+  </data>
+  <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_TitleComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 326</value>
+  </data>
+  <data name="&gt;&gt;lbl_TitleComboBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pic_Divisor.TabIndex" type="System.Int32, mscorlib">
+    <value>143</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 360</value>
+  </data>
+  <data name="&gt;&gt;AudioDeviceDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._AudioDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>de</value>
+  </metadata>
 </root>
