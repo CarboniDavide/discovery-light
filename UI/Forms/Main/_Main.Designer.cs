@@ -35,6 +35,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.FooterBar = new DiscoveryLight.UI.Forms.Main._Footer();
             this.NavigationBar = new DiscoveryLight.UI.Forms.Main._Navigation();
             this.PanelContainer = new DiscoveryLight.UI.Panels.Devices._PanelContainer();
+            this.UserSettings = new DiscoveryLight.UI.Panels.UserSettings._UserSettings();
             this.SuspendLayout();
             // 
             // FooterBar
@@ -64,11 +65,21 @@ namespace DiscoveryLight.UI.Forms.Main
             this.PanelContainer.Size = new System.Drawing.Size(630, 360);
             this.PanelContainer.TabIndex = 3;
             // 
+            // UserSettings
+            // 
+            this.UserSettings.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.UserSettings.Dock = System.Windows.Forms.DockStyle.Right;
+            this.UserSettings.Location = new System.Drawing.Point(670, 0);
+            this.UserSettings.Name = "UserSettings";
+            this.UserSettings.Size = new System.Drawing.Size(0, 360);
+            this.UserSettings.TabIndex = 4;
+            // 
             // _Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 400);
+            this.Controls.Add(this.UserSettings);
             this.Controls.Add(this.PanelContainer);
             this.Controls.Add(this.FooterBar);
             this.Controls.Add(this.NavigationBar);
@@ -85,7 +96,7 @@ namespace DiscoveryLight.UI.Forms.Main
         #endregion
         public _Footer FooterBar;
         public _Navigation NavigationBar;
-        public _UserSettings UserSettings;
         public _PanelContainer PanelContainer;
+        public _UserSettings UserSettings;
     }
 }

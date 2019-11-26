@@ -91,6 +91,9 @@
     <Compile Include="UI\BaseUserControl\_AbstractBaseUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\Buttons\LanguageLinkRadio.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Buttons\PanelLinkButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -682,6 +685,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Slider\_Slider.resx">
       <DependentUpon>_Slider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\UserSettings\_UserSettings.de.resx">
+      <DependentUpon>_UserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\UserSettings\_UserSettings.fr.resx">
+      <DependentUpon>_UserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\UserSettings\_UserSettings.it.resx">
+      <DependentUpon>_UserSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\UserSettings\_UserSettings.resx">
+      <DependentUpon>_UserSettings.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -52,13 +52,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.AnimationLine_Navigation.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.AnimationLine_Navigation.Interval = 1;
             this.AnimationLine_Navigation.Name = "AnimationLine_Navigation";
-            this.toolTip_Description.SetToolTip(this.AnimationLine_Navigation, resources.GetString("AnimationLine_Navigation.ToolTip"));
             this.AnimationLine_Navigation.Type = WinformComponents.AnimationLine.TYPE.Vertical;
             // 
             // cmd_Connectivite
             // 
-            resources.ApplyResources(this.cmd_Connectivite, "cmd_Connectivite");
             this.cmd_Connectivite.BackgroundImage = global::DiscoveryLight.Properties.Resources.Réglages;
+            resources.ApplyResources(this.cmd_Connectivite, "cmd_Connectivite");
             this.cmd_Connectivite.ButtonFor = "_All";
             this.cmd_Connectivite.Device = "All WMI Class";
             this.cmd_Connectivite.FlatAppearance.BorderSize = 0;
@@ -70,8 +69,8 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_Reseau
             // 
-            resources.ApplyResources(this.cmd_Reseau, "cmd_Reseau");
             this.cmd_Reseau.BackgroundImage = global::DiscoveryLight.Properties.Resources.Ethernet;
+            resources.ApplyResources(this.cmd_Reseau, "cmd_Reseau");
             this.cmd_Reseau.ButtonFor = "_Network";
             this.cmd_Reseau.Device = "Network Adapter";
             this.cmd_Reseau.FlatAppearance.BorderSize = 0;
@@ -83,8 +82,8 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_Disque
             // 
-            resources.ApplyResources(this.cmd_Disque, "cmd_Disque");
             this.cmd_Disque.BackgroundImage = global::DiscoveryLight.Properties.Resources.HardDisk;
+            resources.ApplyResources(this.cmd_Disque, "cmd_Disque");
             this.cmd_Disque.ButtonFor = "_PhysicalDisk";
             this.cmd_Disque.Device = "Physical Disk";
             this.cmd_Disque.FlatAppearance.BorderSize = 0;
@@ -96,8 +95,8 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_Video
             // 
-            resources.ApplyResources(this.cmd_Video, "cmd_Video");
             this.cmd_Video.BackgroundImage = global::DiscoveryLight.Properties.Resources.Video;
+            resources.ApplyResources(this.cmd_Video, "cmd_Video");
             this.cmd_Video.ButtonFor = "_Video";
             this.cmd_Video.Device = "Video";
             this.cmd_Video.FlatAppearance.BorderSize = 0;
@@ -109,8 +108,8 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_Son
             // 
-            resources.ApplyResources(this.cmd_Son, "cmd_Son");
             this.cmd_Son.BackgroundImage = global::DiscoveryLight.Properties.Resources.Sound;
+            resources.ApplyResources(this.cmd_Son, "cmd_Son");
             this.cmd_Son.ButtonFor = "_Audio";
             this.cmd_Son.Device = "Sound";
             this.cmd_Son.FlatAppearance.BorderSize = 0;
@@ -122,8 +121,8 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_MemoireRam
             // 
-            resources.ApplyResources(this.cmd_MemoireRam, "cmd_MemoireRam");
             this.cmd_MemoireRam.BackgroundImage = global::DiscoveryLight.Properties.Resources.Ram;
+            resources.ApplyResources(this.cmd_MemoireRam, "cmd_MemoireRam");
             this.cmd_MemoireRam.ButtonFor = "_Memory";
             this.cmd_MemoireRam.Device = "Memory";
             this.cmd_MemoireRam.FlatAppearance.BorderSize = 0;
@@ -135,8 +134,8 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_Processeur
             // 
-            resources.ApplyResources(this.cmd_Processeur, "cmd_Processeur");
             this.cmd_Processeur.BackgroundImage = global::DiscoveryLight.Properties.Resources.Cpu;
+            resources.ApplyResources(this.cmd_Processeur, "cmd_Processeur");
             this.cmd_Processeur.ButtonFor = "_CPU";
             this.cmd_Processeur.Device = "Processor";
             this.cmd_Processeur.FlatAppearance.BorderSize = 0;
@@ -148,8 +147,8 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_CarteMere
             // 
-            resources.ApplyResources(this.cmd_CarteMere, "cmd_CarteMere");
             this.cmd_CarteMere.BackgroundImage = global::DiscoveryLight.Properties.Resources.MainBoard;
+            resources.ApplyResources(this.cmd_CarteMere, "cmd_CarteMere");
             this.cmd_CarteMere.ButtonFor = "_MainBoard";
             this.cmd_CarteMere.Device = "Mainboard";
             this.cmd_CarteMere.FlatAppearance.BorderSize = 0;
@@ -177,13 +176,14 @@ namespace DiscoveryLight.UI.Forms.Main
             resources.ApplyResources(this.cmd_Settings, "cmd_Settings");
             this.cmd_Settings.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.cmd_Settings.BackgroundImage = global::DiscoveryLight.Properties.Resources.Performancs;
-            this.cmd_Settings.ButtonFor = "";
+            this.cmd_Settings.ButtonFor = "Settings";
             this.cmd_Settings.Device = "Settings";
             this.cmd_Settings.FlatAppearance.BorderSize = 0;
             this.cmd_Settings.Name = "cmd_Settings";
             this.cmd_Settings.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Settings, resources.GetString("cmd_Settings.ToolTip"));
             this.cmd_Settings.UseVisualStyleBackColor = false;
+            this.cmd_Settings.Click += new System.EventHandler(this.ButtonClick);
             // 
             // _Navigation
             // 
@@ -202,7 +202,6 @@ namespace DiscoveryLight.UI.Forms.Main
             this.Controls.Add(this.cmd_Ordinateur);
             this.Controls.Add(this.cmd_Settings);
             this.Name = "_Navigation";
-            this.toolTip_Description.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this._Navigation_Load);
             this.ResumeLayout(false);
 

@@ -19,7 +19,10 @@ namespace DiscoveryLight.UI.Forms.Main
         {
             String requestedPanelName = (sender as PanelLinkButton).ButtonFor.ToString();
             Point currentPointToMOve = (sender as Button).Location;
-            PanelContainer.LoadPanel(requestedPanelName);
+            if (requestedPanelName == "Settings")
+                FormsCollection.Main.UserSettings.anm_PanelSet.OpenPanel();
+            else
+                PanelContainer.LoadPanel(requestedPanelName);
             AnimationLine_Navigation.MoveLine(currentPointToMOve);
         }
 
