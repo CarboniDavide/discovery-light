@@ -580,7 +580,7 @@
     <value>0, 0</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 409</value>
+    <value>2, 400</value>
   </data>
   <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
     <value>227</value>
@@ -646,7 +646,7 @@
     <value>17</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>265, 409</value>
+    <value>265, 400</value>
   </data>
   <data name="&gt;&gt;anm_PanelSet.Name" xml:space="preserve">
     <value>anm_PanelSet</value>
