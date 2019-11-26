@@ -19,21 +19,13 @@ namespace DiscoveryLight.UI.Forms.Main
             InitializeComponent();
         }
 
-        private _Slider Slider;
-        private _PanelContainer PanelContainer;
         public String FooterTittleName;
 
         public void ChangeTitle(object sender, EventArgs e)
         {
-            this.ChartBar.CustomText = PanelContainer.CurrentPanel.PanelName;
+            this.ChartBar.CustomText = FormsCollection.Main.PanelContainer.CurrentPanel.PanelName;
             this.ChartBar.BarFillSize = 0;
-            this.FooterTittleName = PanelContainer.CurrentPanel.PanelName;         }
-
-        private void ChartBar_Load(object sender, EventArgs e)
-        {
-            Slider = FormsCollection.Main.PanelContainer.Slider;
-            PanelContainer = FormsCollection.Main.PanelContainer;
-            Slider.ControlAdded += new ControlEventHandler(ChangeTitle);
+            this.FooterTittleName = FormsCollection.Main.PanelContainer.CurrentPanel.PanelName;
         }
     }
 }

@@ -49,7 +49,6 @@
             this.ChartBar.TabIndex = 0;
             this.ChartBar.TextColor = System.Drawing.Color.Crimson;
             this.ChartBar.TextFont = new System.Drawing.Font("Tahoma", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChartBar.Load += new System.EventHandler(this.ChartBar_Load);
             // 
             // _Footer
             // 
