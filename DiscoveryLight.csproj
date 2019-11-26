@@ -208,12 +208,6 @@
     <Compile Include="UI\Forms\Main\_Footer.Designer.cs">
       <DependentUpon>_Footer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\Main\_Header.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Forms\Main\_Header.Designer.cs">
-      <DependentUpon>_Header.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Forms\Main\_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -541,9 +535,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Main\_Footer.resx">
       <DependentUpon>_Footer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\Main\_Header.resx">
-      <DependentUpon>_Header.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Main\_Main.resx">
       <DependentUpon>_Main.cs</DependentUpon>
