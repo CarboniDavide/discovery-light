@@ -72,6 +72,7 @@ namespace DiscoveryLight.UI.Panels.Details
         public override void StopLoadedSubTask()
         {
             if (t != null) t.Abort();
+            if (Footer != null) Footer.ChartBar.BarFillSize = 0;
         }
 
         public override void Load()
