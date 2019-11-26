@@ -8,8 +8,6 @@ namespace DiscoveryLight.UI.Forms.Main
 {
     public partial class _Navigation : UserControl
     {
-        _PanelContainer PanelContainer;
-
         public _Navigation()
         {
             InitializeComponent();
@@ -22,14 +20,8 @@ namespace DiscoveryLight.UI.Forms.Main
             if (requestedPanelName == "Settings")
                 FormsCollection.Main.UserSettings.anm_PanelSet.OpenPanel();
             else
-                PanelContainer.LoadPanel(requestedPanelName);
+                FormsCollection.Main.PanelContainer.LoadPanel(requestedPanelName);
             AnimationLine_Navigation.MoveLine(currentPointToMOve);
-        }
-
-        private void _Navigation_Load(object sender, EventArgs e)
-        {
-            PanelContainer = FormsCollection.Main.PanelContainer;
-            PanelContainer.LoadPanel("");
         }
     }
 }

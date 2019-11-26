@@ -202,7 +202,6 @@ namespace DiscoveryLight.UI.Forms.Main
             this.Controls.Add(this.cmd_Ordinateur);
             this.Controls.Add(this.cmd_Settings);
             this.Name = "_Navigation";
-            this.Load += new System.EventHandler(this._Navigation_Load);
             this.ResumeLayout(false);
 
         }

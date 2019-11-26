@@ -64,6 +64,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Size = new System.Drawing.Size(630, 360);
             this.PanelContainer.TabIndex = 3;
+            this.PanelContainer.Load += new System.EventHandler(this.PanelContainer_Load);
             // 
             // UserSettings
             // 

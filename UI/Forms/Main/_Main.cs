@@ -35,5 +35,10 @@ namespace DiscoveryLight.UI.Forms.Main
             Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture.Name);
             Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(culture.Name);
         }
+
+        private void PanelContainer_Load(object sender, EventArgs e)
+        {
+            PanelContainer.LoadPanel("");
+        }
     }
 }
