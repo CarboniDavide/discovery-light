@@ -63,7 +63,7 @@ namespace DiscoveryLight.UI.DeviceControls
         {
             tokenSource = new CancellationTokenSource();
             token = tokenSource.Token;
-            period = TimeSpan.FromMilliseconds(500);
+            period = TimeSpan.FromMilliseconds(Convert.ToInt32(Settings.Settings.Default.Frequency));
         }
         private async Task run()
         {
