@@ -59,18 +59,11 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             this.ChargeListOfSubDevicesInit();
             this.PhysicalDiskDeviceDataControl.OnUpdateFinish += new EventHandler(OnDeviceUpdateFinish);
-            this.PhysicalDiskDeviceDataControl.OnUpdateStart += new EventHandler(OnDeviceUpdateStart);
         }
 
         private void OnDeviceUpdateFinish(object sender, EventArgs e)
         {
-            cmb_Blocks.SelectedIndexChanged += new EventHandler(ChangeSubDevice);
             this.Invoke((System.Action)(() => { ChargeListOfSubDevicesInit(); }));
-        }
-
-        private void OnDeviceUpdateStart(object sender, EventArgs e)
-        {
-            cmb_Blocks.SelectedIndexChanged -= ChangeSubDevice;
         }
 
         private void _PhysicalDisk_Load(object sender, EventArgs e)
