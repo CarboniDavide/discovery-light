@@ -153,17 +153,17 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             // anm_PanelSet
             // 
             this.anm_PanelSet.Animation = WinformComponents.AnimationComponents.ANIMATION.Dinamic;
-            this.anm_PanelSet.CloseBearingSize = 10;
+            this.anm_PanelSet.CloseBearingSize = 5;
             this.anm_PanelSet.CloseSpeed = 10;
-            this.anm_PanelSet.CloseStep = 20;
+            this.anm_PanelSet.CloseStep = 25;
             this.anm_PanelSet.Is_Opened = false;
             this.anm_PanelSet.Is_Operating = false;
             this.anm_PanelSet.Magnetic = false;
             this.anm_PanelSet.Object = this;
             this.anm_PanelSet.OnLoad = WinformComponents.AnimationComponents.ON_LOAD.Is_Closed;
-            this.anm_PanelSet.OpenBearingSize = 10;
+            this.anm_PanelSet.OpenBearingSize = 5;
             this.anm_PanelSet.OpenSpeed = 10;
-            this.anm_PanelSet.OpenStep = 15;
+            this.anm_PanelSet.OpenStep = 20;
             this.anm_PanelSet.Position = WinformComponents.AnimationComponents.POSITION.In_The_Left;
             this.anm_PanelSet.Size = 265;
             // 
