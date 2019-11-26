@@ -22,25 +22,20 @@ namespace DiscoveryLight.Core.Device.Data
         private List<_Block> blocks = new List<_Block>();
         private List<ManagementObject> collection;
 
+        private void updateInfo(List<_Block> newListOfValues)
+        {
+            if (newListOfValues.SequenceEqual(Blocks)) return;
+            blocks = new List<_Block>();
+            blocks = newListOfValues;
+            blockNumber = blocks.Count();
+        }
+
         public string DeviceName { get => deviceName; }
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
-
-
-
+        public List<ManagementObject> Collection { get => collection; set => collection = value; }
         public int BlockNumber { get => blockNumber; set => blockNumber = value; }
-        public List<_Block> Blocks { get => blocks; set => blocks = value; }
-        public List<ManagementObject> Collection
-        {
-            get { return collection; }
-            set { 
-                collection = value;
-                if (collection == null)
-                    blockNumber = 0;
-                else
-                    blockNumber = collection.Count;
-            }
-        }
+        public List<_Block> Blocks { get => blocks; set => updateInfo(value); }
 
         public abstract void GetDriveInfo();
         public class _Block
@@ -205,7 +200,7 @@ namespace DiscoveryLight.Core.Device.Data
             // get drive info
             Collection = DeviceUtils.GetDriveInfo("Win32_VideoController");
             // initialize array to contains each drive info
-            Blocks = new List<_Block>();
+            List<_Block> mmBlocks = new List<_Block>();
 
             // get and write values
             foreach (ManagementObject mj in Collection) // Read data
@@ -225,8 +220,11 @@ namespace DiscoveryLight.Core.Device.Data
                 t.NowNumberOfColors = DeviceUtils.GetProperty("CurrentNumberOfColors", mj, DeviceUtils.ReturnType.String);
                 t.Mode = DeviceUtils.GetProperty("VideoModeDescription", mj, DeviceUtils.ReturnType.String);
 
-                Blocks.Add(t);
+                mmBlocks.Add(t);
             }
+
+            // update values for each subdevice if change occured
+            Blocks = mmBlocks;
         }
 
         public VIDEO():base("Video") { }
@@ -253,7 +251,7 @@ namespace DiscoveryLight.Core.Device.Data
             // get drive info
             Collection = DeviceUtils.GetDriveInfo("Win32_SoundDevice");
             // initialize array to contains each drive info
-            Blocks = new List<_Block>();
+            List<_Block> mmBlocks = new List<_Block>();
 
             foreach (ManagementObject mj in Collection)
             {
@@ -262,8 +260,11 @@ namespace DiscoveryLight.Core.Device.Data
                 t.Name = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
                 t.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
                 t.PowerManagmentSupport = DeviceUtils.GetProperty("PowerManagementSupported", mj, DeviceUtils.ReturnType.String);
-                Blocks.Add(t);
+                mmBlocks.Add(t);
             }
+
+            // update values for each subdevice if change occured
+            Blocks = mmBlocks;
         }
 
         public AUDIO(): base("Audio") { }
@@ -359,7 +360,7 @@ namespace DiscoveryLight.Core.Device.Data
             // get drive info
             Collection = DeviceUtils.GetDriveInfo("Win32_PhysicalMemory");
             // initialize array to contains each drive info
-            Blocks = new List<_Block>();
+            List<_Block> mmBlocks = new List<_Block>();
 
             // search et write values
             foreach (ManagementObject mj in Collection)
@@ -377,10 +378,11 @@ namespace DiscoveryLight.Core.Device.Data
                 t.BusSize = DeviceUtils.GetProperty("DataWidth", mj, DeviceUtils.ReturnType.String);
                 t.Voltage = DeviceUtils.GetProperty("MinVoltage", mj, DeviceUtils.ReturnType.String);
 
-                Blocks.Add(t);
+                mmBlocks.Add(t);
             }
 
-            // Serach for Size and Type
+            // update values for each subdevice if change occured
+            Blocks = mmBlocks;
 
             // get drive info
             var a_collection = DeviceUtils.GetDriveInfo("Win32_PhysicalMemoryArray");
@@ -438,7 +440,7 @@ namespace DiscoveryLight.Core.Device.Data
             // get drive info
             Collection = DeviceUtils.GetDriveInfo("Win32_DiskDrive");
             // initialize array to contains each drive info
-            Blocks = new List<_Block>();  
+            List<_Block> mmBlocks = new List<_Block>();  
 
             // search et write values
             foreach (ManagementObject mj in Collection)
@@ -459,8 +461,11 @@ namespace DiscoveryLight.Core.Device.Data
                 t.BytesPerSector = DeviceUtils.GetProperty("BytesPerSector", mj, DeviceUtils.ReturnType.String);
                 t.FirmwareVersion = DeviceUtils.GetProperty("FirmwareRevision", mj, DeviceUtils.ReturnType.String);
 
-                Blocks.Add(t);
+                mmBlocks.Add(t);
             }
+
+            // update values for each subdevice if change occured
+            Blocks = mmBlocks;
         }
 
         public DISK(): base("Storage") { }
@@ -491,7 +496,7 @@ namespace DiscoveryLight.Core.Device.Data
             // get drive info
             Collection = DeviceUtils.GetDriveInfo("Win32_NetworkAdapter", "MACAddress", null, DeviceUtils.Operator.NotEgual);
             // initialize array to contains each drive info
-            Blocks = new List<_Block>();
+            List<_Block> mmBlocks = new List<_Block>();
 
             // search et write values
             foreach (ManagementObject mj in Collection)
@@ -507,8 +512,11 @@ namespace DiscoveryLight.Core.Device.Data
                 t.MACAddresse = DeviceUtils.GetProperty("MACAddress", mj, DeviceUtils.ReturnType.String);
                 t.AdapterType = DeviceUtils.GetProperty("AdapterType", mj, DeviceUtils.ReturnType.String);
 
-                Blocks.Add(t);
+                mmBlocks.Add(t);
             }
+
+            // update values for each subdevice if change occured
+            Blocks = mmBlocks;
         }
 
         public NETWORK():base("Network") { }
