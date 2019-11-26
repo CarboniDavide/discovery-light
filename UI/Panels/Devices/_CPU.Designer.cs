@@ -49,34 +49,34 @@
             // 
             // CpuDevicePerformanceControl
             // 
-            resources.ApplyResources(this.CpuDevicePerformanceControl, "CpuDevicePerformanceControl");
             this.CpuDevicePerformanceControl.ClassName = "_CpuDevicePerformanceControl";
             this.CpuDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._CpuDevicePerformanceControl);
             this.CpuDevicePerformanceControl.CurrentPerformance = null;
             this.CpuDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.CpuDevicePerformanceControl, "CpuDevicePerformanceControl");
             this.CpuDevicePerformanceControl.Name = "CpuDevicePerformanceControl";
             this.CpuDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.CpuDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // CpuDeviceDataControl
             // 
-            resources.ApplyResources(this.CpuDeviceDataControl, "CpuDeviceDataControl");
             this.CpuDeviceDataControl.ClassName = "_CpuDeviceDataControl";
             this.CpuDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._CpuDeviceDataControl);
             this.CpuDeviceDataControl.CurrentDevice = null;
             this.CpuDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.CpuDeviceDataControl, "CpuDeviceDataControl");
             this.CpuDeviceDataControl.Name = "CpuDeviceDataControl";
             this.CpuDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.CpuDeviceDataControl.TokenSource = cancellationTokenSource2;
             // 
             // SystemDevicePerformanceControl
             // 
-            resources.ApplyResources(this.SystemDevicePerformanceControl, "SystemDevicePerformanceControl");
             this.SystemDevicePerformanceControl.BackColor = System.Drawing.Color.Transparent;
             this.SystemDevicePerformanceControl.ClassName = "_SystemDevicePerformanceControl";
             this.SystemDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._SystemDevicePerformanceControl);
             this.SystemDevicePerformanceControl.CurrentPerformance = null;
             this.SystemDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.SystemDevicePerformanceControl, "SystemDevicePerformanceControl");
             this.SystemDevicePerformanceControl.Name = "SystemDevicePerformanceControl";
             this.SystemDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.SystemDevicePerformanceControl.TokenSource = cancellationTokenSource3;

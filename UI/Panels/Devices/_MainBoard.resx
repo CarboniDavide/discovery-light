@@ -136,6 +136,9 @@
   <data name="pic_Divisor_002.Location" type="System.Drawing.Point, System.Drawing">
     <value>450, 0</value>
   </data>
+  <data name="&gt;&gt;pic_Divisor_002.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;lbl_Bios_Titre.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -161,9 +164,6 @@
   <data name="&gt;&gt;WindowsScoreDevicePerformanceControl.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;BiosDeviceDataControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="pic_Divisor_002.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 360</value>
   </data>
@@ -186,14 +186,14 @@
   <data name="&gt;&gt;BiosDeviceDataControl.Type" xml:space="preserve">
     <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 198</value>
-  </data>
   <data name="MainBoardDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>333, 153</value>
   </data>
   <data name="&gt;&gt;MainBoardDeviceDataControl.Name" xml:space="preserve">
     <value>MainBoardDeviceDataControl</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 360</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_002.Name" xml:space="preserve">
     <value>pic_Divisor_002</value>
@@ -222,14 +222,14 @@
   <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
-  </data>
   <data name="WindowsScoreDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
-  <data name="&gt;&gt;pic_Divisor_002.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="MainBoardDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
   </data>
   <data name="&gt;&gt;MainBoardDeviceDataControl.Parent" xml:space="preserve">
     <value>$this</value>
@@ -255,8 +255,8 @@
   <data name="BiosDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
   </data>
-  <data name="MainBoardDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
+  <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 198</value>
   </data>
   <data name="lbl_Bios_Titre.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 187</value>
@@ -270,16 +270,13 @@
   <data name="&gt;&gt;BiosDeviceDataControl.Name" xml:space="preserve">
     <value>BiosDeviceDataControl</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 360</value>
+  <data name="&gt;&gt;BiosDeviceDataControl.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="BiosDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>92, 216</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>aa</value>
   </metadata>
 </root>

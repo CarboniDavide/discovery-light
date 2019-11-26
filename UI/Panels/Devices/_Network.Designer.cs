@@ -55,22 +55,22 @@
             // 
             // NetworkDevicePerformanceControl
             // 
-            resources.ApplyResources(this.NetworkDevicePerformanceControl, "NetworkDevicePerformanceControl");
             this.NetworkDevicePerformanceControl.ClassName = "_NetworkDevicePerformanceControl";
             this.NetworkDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl);
             this.NetworkDevicePerformanceControl.CurrentPerformance = null;
             this.NetworkDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.NetworkDevicePerformanceControl, "NetworkDevicePerformanceControl");
             this.NetworkDevicePerformanceControl.Name = "NetworkDevicePerformanceControl";
             this.NetworkDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.NetworkDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // NetworkDeviceDataControl
             // 
-            resources.ApplyResources(this.NetworkDeviceDataControl, "NetworkDeviceDataControl");
             this.NetworkDeviceDataControl.ClassName = "_NetworkDeviceDataControl";
             this.NetworkDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl);
             this.NetworkDeviceDataControl.CurrentDevice = null;
             this.NetworkDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.NetworkDeviceDataControl, "NetworkDeviceDataControl");
             this.NetworkDeviceDataControl.Name = "NetworkDeviceDataControl";
             this.NetworkDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.NetworkDeviceDataControl.TokenSource = cancellationTokenSource2;

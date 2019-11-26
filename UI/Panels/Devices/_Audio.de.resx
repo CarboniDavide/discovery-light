@@ -120,4 +120,7 @@
   <data name="lbl_TitleComboBox.Text" xml:space="preserve">
     <value>Gerät</value>
   </data>
+  <data name="$this.PanelName" xml:space="preserve">
+    <value>Audio</value>
+  </data>
 </root>

@@ -168,11 +168,11 @@
   <data name="&gt;&gt;WmiNameSpace.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;WmiDetails.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Panels.Details._WmiDetails, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="WmiNameSpace.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 360</value>
   </data>
   <data name="WmiDetails.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -201,16 +201,13 @@
   <data name="WmiClasses.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 360</value>
+  <data name="&gt;&gt;WmiDetails.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Panels.Details._WmiDetails, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;WmiClasses.Name" xml:space="preserve">
     <value>WmiClasses</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
   </metadata>
 </root>

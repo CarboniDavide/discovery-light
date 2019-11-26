@@ -85,7 +85,7 @@
             // lbl_Manufacturer_Value
             // 
             resources.ApplyResources(this.lbl_Manufacturer_Value, "lbl_Manufacturer_Value");
-            this.lbl_Manufacturer_Value.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_Manufacturer_Value.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_Manufacturer_Value.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbl_Manufacturer_Value.Name = "lbl_Manufacturer_Value";
             this.lbl_Manufacturer_Value.ReadOnly = true;
@@ -93,7 +93,7 @@
             // lbl_Tipology_Value
             // 
             resources.ApplyResources(this.lbl_Tipology_Value, "lbl_Tipology_Value");
-            this.lbl_Tipology_Value.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_Tipology_Value.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_Tipology_Value.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbl_Tipology_Value.Name = "lbl_Tipology_Value";
             this.lbl_Tipology_Value.ReadOnly = true;
@@ -101,7 +101,7 @@
             // lbl_InterfaceID_Value
             // 
             resources.ApplyResources(this.lbl_InterfaceID_Value, "lbl_InterfaceID_Value");
-            this.lbl_InterfaceID_Value.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_InterfaceID_Value.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_InterfaceID_Value.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbl_InterfaceID_Value.Name = "lbl_InterfaceID_Value";
             this.lbl_InterfaceID_Value.ReadOnly = true;
@@ -109,7 +109,7 @@
             // lbl_Speed_Value
             // 
             resources.ApplyResources(this.lbl_Speed_Value, "lbl_Speed_Value");
-            this.lbl_Speed_Value.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_Speed_Value.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_Speed_Value.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbl_Speed_Value.Name = "lbl_Speed_Value";
             this.lbl_Speed_Value.ReadOnly = true;
@@ -117,7 +117,7 @@
             // lbl_MACAddress_Value
             // 
             resources.ApplyResources(this.lbl_MACAddress_Value, "lbl_MACAddress_Value");
-            this.lbl_MACAddress_Value.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_MACAddress_Value.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_MACAddress_Value.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbl_MACAddress_Value.Name = "lbl_MACAddress_Value";
             this.lbl_MACAddress_Value.ReadOnly = true;
@@ -125,7 +125,7 @@
             // lbl_AdapterType_Value
             // 
             resources.ApplyResources(this.lbl_AdapterType_Value, "lbl_AdapterType_Value");
-            this.lbl_AdapterType_Value.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_AdapterType_Value.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_AdapterType_Value.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbl_AdapterType_Value.Name = "lbl_AdapterType_Value";
             this.lbl_AdapterType_Value.ReadOnly = true;
@@ -133,7 +133,7 @@
             // lbl_DeviceID_Value
             // 
             resources.ApplyResources(this.lbl_DeviceID_Value, "lbl_DeviceID_Value");
-            this.lbl_DeviceID_Value.BackColor = System.Drawing.SystemColors.Control;
+            this.lbl_DeviceID_Value.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbl_DeviceID_Value.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbl_DeviceID_Value.Name = "lbl_DeviceID_Value";
             this.lbl_DeviceID_Value.ReadOnly = true;

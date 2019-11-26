@@ -55,22 +55,22 @@
             // 
             // MemoryDeviceDataControl
             // 
-            resources.ApplyResources(this.MemoryDeviceDataControl, "MemoryDeviceDataControl");
             this.MemoryDeviceDataControl.ClassName = "_MemoryDeviceDataControl";
             this.MemoryDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl);
             this.MemoryDeviceDataControl.CurrentDevice = null;
             this.MemoryDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.MemoryDeviceDataControl, "MemoryDeviceDataControl");
             this.MemoryDeviceDataControl.Name = "MemoryDeviceDataControl";
             this.MemoryDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.MemoryDeviceDataControl.TokenSource = cancellationTokenSource1;
             // 
             // MemoryDevicePerformanceControl
             // 
-            resources.ApplyResources(this.MemoryDevicePerformanceControl, "MemoryDevicePerformanceControl");
             this.MemoryDevicePerformanceControl.ClassName = "_MemoryDevicePerformanceControl";
             this.MemoryDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl);
             this.MemoryDevicePerformanceControl.CurrentPerformance = null;
             this.MemoryDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.MemoryDevicePerformanceControl, "MemoryDevicePerformanceControl");
             this.MemoryDevicePerformanceControl.Name = "MemoryDevicePerformanceControl";
             this.MemoryDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.MemoryDevicePerformanceControl.TokenSource = cancellationTokenSource2;

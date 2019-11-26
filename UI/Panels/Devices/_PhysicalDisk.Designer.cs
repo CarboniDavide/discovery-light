@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_PhysicalDisk));
-            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
-            System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
+            System.Threading.CancellationTokenSource cancellationTokenSource3 = new System.Threading.CancellationTokenSource();
+            System.Threading.CancellationTokenSource cancellationTokenSource4 = new System.Threading.CancellationTokenSource();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TilteComboBox = new System.Windows.Forms.Label();
             this.PhysicalDiskDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl();
@@ -55,25 +55,25 @@
             // 
             // PhysicalDiskDevicePerformanceControl
             // 
-            resources.ApplyResources(this.PhysicalDiskDevicePerformanceControl, "PhysicalDiskDevicePerformanceControl");
             this.PhysicalDiskDevicePerformanceControl.ClassName = "_PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl);
             this.PhysicalDiskDevicePerformanceControl.CurrentPerformance = null;
             this.PhysicalDiskDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.PhysicalDiskDevicePerformanceControl, "PhysicalDiskDevicePerformanceControl");
             this.PhysicalDiskDevicePerformanceControl.Name = "PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource1;
+            this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource3;
             // 
             // PhysicalDiskDeviceDataControl
             // 
-            resources.ApplyResources(this.PhysicalDiskDeviceDataControl, "PhysicalDiskDeviceDataControl");
             this.PhysicalDiskDeviceDataControl.ClassName = "_PhysicalDiskDeviceDataControl";
             this.PhysicalDiskDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl);
             this.PhysicalDiskDeviceDataControl.CurrentDevice = null;
             this.PhysicalDiskDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.PhysicalDiskDeviceDataControl, "PhysicalDiskDeviceDataControl");
             this.PhysicalDiskDeviceDataControl.Name = "PhysicalDiskDeviceDataControl";
             this.PhysicalDiskDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.PhysicalDiskDeviceDataControl.TokenSource = cancellationTokenSource2;
+            this.PhysicalDiskDeviceDataControl.TokenSource = cancellationTokenSource4;
             // 
             // pic_Divisor_001
             // 

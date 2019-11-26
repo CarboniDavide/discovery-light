@@ -51,11 +51,11 @@
             // 
             // VideoDeviceDataControl
             // 
-            resources.ApplyResources(this.VideoDeviceDataControl, "VideoDeviceDataControl");
             this.VideoDeviceDataControl.ClassName = "_VideoDeviceDataControl";
             this.VideoDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl);
             this.VideoDeviceDataControl.CurrentDevice = null;
             this.VideoDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.VideoDeviceDataControl, "VideoDeviceDataControl");
             this.VideoDeviceDataControl.Name = "VideoDeviceDataControl";
             this.VideoDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.VideoDeviceDataControl.TokenSource = cancellationTokenSource1;

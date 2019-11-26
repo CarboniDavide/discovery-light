@@ -120,13 +120,13 @@
   <data name="&gt;&gt;pic_Divisor_001.Name" xml:space="preserve">
     <value>pic_Divisor_001</value>
   </data>
-  <data name="&gt;&gt;BasePcDeviceDataControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._BasePcDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="&gt;&gt;BasePcDevicePerformanceControl.Name" xml:space="preserve">
     <value>BasePcDevicePerformanceControl</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="BasePcDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>416, 360</value>
   </data>
@@ -180,11 +180,11 @@
   <data name="BasePcDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>476, 0</value>
   </data>
+  <data name="&gt;&gt;BasePcDeviceDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._BasePcDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
   <data name="$this.PanelName" xml:space="preserve">
     <value>Base Pc Informations</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
   </data>
   <data name="pic_Divisor_001.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 360</value>
@@ -203,8 +203,5 @@
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
   </metadata>
 </root>

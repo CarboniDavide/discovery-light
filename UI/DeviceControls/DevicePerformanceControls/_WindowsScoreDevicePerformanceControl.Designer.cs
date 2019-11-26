@@ -45,9 +45,9 @@
             // 
             // chartBar_Cpu
             // 
-            resources.ApplyResources(this.chartBar_Cpu, "chartBar_Cpu");
             this.chartBar_Cpu.Activated = true;
             this.chartBar_Cpu.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartBar_Cpu, "chartBar_Cpu");
             this.chartBar_Cpu.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBar_Cpu.BarFillColor = System.Drawing.Color.LightSalmon;
             this.chartBar_Cpu.BarFillSize = 25;
@@ -60,9 +60,9 @@
             // 
             // chartBar_Ram
             // 
-            resources.ApplyResources(this.chartBar_Ram, "chartBar_Ram");
             this.chartBar_Ram.Activated = true;
             this.chartBar_Ram.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartBar_Ram, "chartBar_Ram");
             this.chartBar_Ram.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBar_Ram.BarFillColor = System.Drawing.Color.LightSeaGreen;
             this.chartBar_Ram.BarFillSize = 25;
@@ -75,9 +75,9 @@
             // 
             // chartBar_Graph
             // 
-            resources.ApplyResources(this.chartBar_Graph, "chartBar_Graph");
             this.chartBar_Graph.Activated = true;
             this.chartBar_Graph.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartBar_Graph, "chartBar_Graph");
             this.chartBar_Graph.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBar_Graph.BarFillColor = System.Drawing.Color.MediumSlateBlue;
             this.chartBar_Graph.BarFillSize = 25;
@@ -90,9 +90,9 @@
             // 
             // chartBar_Hd
             // 
-            resources.ApplyResources(this.chartBar_Hd, "chartBar_Hd");
             this.chartBar_Hd.Activated = true;
             this.chartBar_Hd.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartBar_Hd, "chartBar_Hd");
             this.chartBar_Hd.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBar_Hd.BarFillColor = System.Drawing.Color.Orchid;
             this.chartBar_Hd.BarFillSize = 25;
@@ -105,9 +105,9 @@
             // 
             // chartBar_D3D
             // 
-            resources.ApplyResources(this.chartBar_D3D, "chartBar_D3D");
             this.chartBar_D3D.Activated = true;
             this.chartBar_D3D.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartBar_D3D, "chartBar_D3D");
             this.chartBar_D3D.BarBackColor = System.Drawing.Color.LightGray;
             this.chartBar_D3D.BarFillColor = System.Drawing.Color.Olive;
             this.chartBar_D3D.BarFillSize = 25;
