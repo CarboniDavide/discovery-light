@@ -18,8 +18,8 @@ namespace DiscoveryLight.UI.Forms.Main
     {
         public _Main()
         {
-            InitializeComponent();
             LoadLanguage();
+            InitializeComponent();
         }
 
         public string lang;
