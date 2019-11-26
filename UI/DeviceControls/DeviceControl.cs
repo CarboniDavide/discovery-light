@@ -29,7 +29,7 @@ namespace DiscoveryLight.UI.DeviceControls
 
         protected virtual void onUpdateFinish(EventArgs e)
         {
-            EventHandler handler = OnUpdateStart;
+            EventHandler handler = OnUpdateFinish;
             handler?.Invoke(this, e);
         }
 
