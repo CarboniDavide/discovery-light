@@ -51,8 +51,6 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             this.PhysicalDiskDeviceDataControl.CurrentSubDevice = (DISK.Block)this.PhysicalDiskDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedItem.ToString().Substring(0,1))).FirstOrDefault();
-            this.PhysicalDiskDevicePerformanceControl.CurrentSubDevice = Convert.ToInt32(this.PhysicalDiskDeviceDataControl.CurrentSubDevice.DeviceID);
-
             var CurrentPerformance = (PERFORM_DISK)this.PhysicalDiskDevicePerformanceControl.CurrentPerformance;
             CurrentPerformance.DriveIndex = Convert.ToInt32(this.PhysicalDiskDeviceDataControl.CurrentSubDevice.DeviceID);
         }
@@ -60,12 +58,19 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             this.ChargeListOfSubDevicesInit();
-            this.PhysicalDiskDeviceDataControl.OnUpdateFinish += new EventHandler(OnDeviceUpdate);
+            this.PhysicalDiskDeviceDataControl.OnUpdateFinish += new EventHandler(OnDeviceUpdateFinish);
+            this.PhysicalDiskDeviceDataControl.OnUpdateStart += new EventHandler(OnDeviceUpdateStart);
         }
 
-        private void OnDeviceUpdate(object sender, EventArgs e)
+        private void OnDeviceUpdateFinish(object sender, EventArgs e)
         {
+            cmb_Blocks.SelectedIndexChanged += new EventHandler(ChangeSubDevice);
             this.Invoke((System.Action)(() => { ChargeListOfSubDevicesInit(); }));
+        }
+
+        private void OnDeviceUpdateStart(object sender, EventArgs e)
+        {
+            cmb_Blocks.SelectedIndexChanged -= ChangeSubDevice;
         }
 
         private void _PhysicalDisk_Load(object sender, EventArgs e)
