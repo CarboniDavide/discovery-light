@@ -17,12 +17,19 @@ namespace DiscoveryLight.UI.DeviceControls
 
         public event EventHandler OnStart;
         public event EventHandler OnAbort;
-        public event EventHandler OnUpdate;
+        public event EventHandler OnUpdateStart;
+        public event EventHandler OnUpdateFinish;
         public event EventHandler OnShow;
 
-        protected virtual void onUpdate(EventArgs e)
+        protected virtual void onUpdateStart(EventArgs e)
         {
-            EventHandler handler = OnUpdate;
+            EventHandler handler = OnUpdateStart;
+            handler?.Invoke(this, e);
+        }
+
+        protected virtual void onUpdateFinish(EventArgs e)
+        {
+            EventHandler handler = OnUpdateStart;
             handler?.Invoke(this, e);
         }
 
@@ -74,6 +81,7 @@ namespace DiscoveryLight.UI.DeviceControls
                 if (!token.IsCancellationRequested)
                 {
                     await Task.Run(() => update());
+                    onUpdateFinish(EventArgs.Empty);
                     show();
                 }
             }
@@ -93,7 +101,7 @@ namespace DiscoveryLight.UI.DeviceControls
                 tokenSource.Cancel();
         }
         protected override void update() {
-            onUpdate(EventArgs.Empty);
+            onUpdateStart(EventArgs.Empty);
         }
         protected override void show() {
             onShow(EventArgs.Empty);
