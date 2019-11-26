@@ -56,6 +56,7 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // cmd_Connectivite
             // 
+            this.cmd_Connectivite.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_Connectivite.BackgroundImage = global::DiscoveryLight.Properties.Resources.Réglages;
             resources.ApplyResources(this.cmd_Connectivite, "cmd_Connectivite");
             this.cmd_Connectivite.ButtonFor = "_All";
@@ -64,11 +65,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Connectivite.Name = "cmd_Connectivite";
             this.cmd_Connectivite.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Connectivite, resources.GetString("cmd_Connectivite.ToolTip"));
-            this.cmd_Connectivite.UseVisualStyleBackColor = true;
+            this.cmd_Connectivite.UseVisualStyleBackColor = false;
             this.cmd_Connectivite.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Reseau
             // 
+            this.cmd_Reseau.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_Reseau.BackgroundImage = global::DiscoveryLight.Properties.Resources.Ethernet;
             resources.ApplyResources(this.cmd_Reseau, "cmd_Reseau");
             this.cmd_Reseau.ButtonFor = "_Network";
@@ -77,11 +79,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Reseau.Name = "cmd_Reseau";
             this.cmd_Reseau.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Reseau, resources.GetString("cmd_Reseau.ToolTip"));
-            this.cmd_Reseau.UseVisualStyleBackColor = true;
+            this.cmd_Reseau.UseVisualStyleBackColor = false;
             this.cmd_Reseau.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Disque
             // 
+            this.cmd_Disque.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_Disque.BackgroundImage = global::DiscoveryLight.Properties.Resources.HardDisk;
             resources.ApplyResources(this.cmd_Disque, "cmd_Disque");
             this.cmd_Disque.ButtonFor = "_PhysicalDisk";
@@ -90,11 +93,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Disque.Name = "cmd_Disque";
             this.cmd_Disque.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Disque, resources.GetString("cmd_Disque.ToolTip"));
-            this.cmd_Disque.UseVisualStyleBackColor = true;
+            this.cmd_Disque.UseVisualStyleBackColor = false;
             this.cmd_Disque.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Video
             // 
+            this.cmd_Video.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_Video.BackgroundImage = global::DiscoveryLight.Properties.Resources.Video;
             resources.ApplyResources(this.cmd_Video, "cmd_Video");
             this.cmd_Video.ButtonFor = "_Video";
@@ -103,11 +107,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Video.Name = "cmd_Video";
             this.cmd_Video.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Video, resources.GetString("cmd_Video.ToolTip"));
-            this.cmd_Video.UseVisualStyleBackColor = true;
+            this.cmd_Video.UseVisualStyleBackColor = false;
             this.cmd_Video.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Son
             // 
+            this.cmd_Son.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_Son.BackgroundImage = global::DiscoveryLight.Properties.Resources.Sound;
             resources.ApplyResources(this.cmd_Son, "cmd_Son");
             this.cmd_Son.ButtonFor = "_Audio";
@@ -116,11 +121,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Son.Name = "cmd_Son";
             this.cmd_Son.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Son, resources.GetString("cmd_Son.ToolTip"));
-            this.cmd_Son.UseVisualStyleBackColor = true;
+            this.cmd_Son.UseVisualStyleBackColor = false;
             this.cmd_Son.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_MemoireRam
             // 
+            this.cmd_MemoireRam.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_MemoireRam.BackgroundImage = global::DiscoveryLight.Properties.Resources.Ram;
             resources.ApplyResources(this.cmd_MemoireRam, "cmd_MemoireRam");
             this.cmd_MemoireRam.ButtonFor = "_Memory";
@@ -129,11 +135,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_MemoireRam.Name = "cmd_MemoireRam";
             this.cmd_MemoireRam.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_MemoireRam, resources.GetString("cmd_MemoireRam.ToolTip"));
-            this.cmd_MemoireRam.UseVisualStyleBackColor = true;
+            this.cmd_MemoireRam.UseVisualStyleBackColor = false;
             this.cmd_MemoireRam.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Processeur
             // 
+            this.cmd_Processeur.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_Processeur.BackgroundImage = global::DiscoveryLight.Properties.Resources.Cpu;
             resources.ApplyResources(this.cmd_Processeur, "cmd_Processeur");
             this.cmd_Processeur.ButtonFor = "_CPU";
@@ -142,11 +149,12 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Processeur.Name = "cmd_Processeur";
             this.cmd_Processeur.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Processeur, resources.GetString("cmd_Processeur.ToolTip"));
-            this.cmd_Processeur.UseVisualStyleBackColor = true;
+            this.cmd_Processeur.UseVisualStyleBackColor = false;
             this.cmd_Processeur.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_CarteMere
             // 
+            this.cmd_CarteMere.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_CarteMere.BackgroundImage = global::DiscoveryLight.Properties.Resources.MainBoard;
             resources.ApplyResources(this.cmd_CarteMere, "cmd_CarteMere");
             this.cmd_CarteMere.ButtonFor = "_MainBoard";
@@ -155,12 +163,13 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_CarteMere.Name = "cmd_CarteMere";
             this.cmd_CarteMere.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_CarteMere, resources.GetString("cmd_CarteMere.ToolTip"));
-            this.cmd_CarteMere.UseVisualStyleBackColor = true;
+            this.cmd_CarteMere.UseVisualStyleBackColor = false;
             this.cmd_CarteMere.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Ordinateur
             // 
             resources.ApplyResources(this.cmd_Ordinateur, "cmd_Ordinateur");
+            this.cmd_Ordinateur.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.cmd_Ordinateur.BackgroundImage = global::DiscoveryLight.Properties.Resources.Pc;
             this.cmd_Ordinateur.ButtonFor = "_BaseHardware";
             this.cmd_Ordinateur.Device = "Base Pc Informations";
@@ -168,7 +177,7 @@ namespace DiscoveryLight.UI.Forms.Main
             this.cmd_Ordinateur.Name = "cmd_Ordinateur";
             this.cmd_Ordinateur.ToolDescription = this.toolTip_Description;
             this.toolTip_Description.SetToolTip(this.cmd_Ordinateur, resources.GetString("cmd_Ordinateur.ToolTip"));
-            this.cmd_Ordinateur.UseVisualStyleBackColor = true;
+            this.cmd_Ordinateur.UseVisualStyleBackColor = false;
             this.cmd_Ordinateur.Click += new System.EventHandler(this.ButtonClick);
             // 
             // cmd_Settings

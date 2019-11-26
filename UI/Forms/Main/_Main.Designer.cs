@@ -32,42 +32,13 @@ namespace DiscoveryLight.UI.Forms.Main
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Main));
+            this.UserSettings = new DiscoveryLight.UI.Panels.UserSettings._UserSettings();
             this.Navigation = new DiscoveryLight.UI.Forms.Main._Navigation();
             this.Footer = new DiscoveryLight.UI.Forms.Main._Footer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelContainer = new DiscoveryLight.UI.Panels.Devices._PanelContainer();
-            this.UserSettings = new DiscoveryLight.UI.Panels.UserSettings._UserSettings();
-            this.pic_Line = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Line)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Navigation
-            // 
-            this.Navigation.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Navigation.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Navigation.Location = new System.Drawing.Point(0, 1);
-            this.Navigation.Name = "Navigation";
-            this.Navigation.Size = new System.Drawing.Size(40, 399);
-            this.Navigation.TabIndex = 1;
-            // 
-            // Footer
-            // 
-            this.Footer.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Footer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Footer.Location = new System.Drawing.Point(40, 361);
-            this.Footer.Name = "Footer";
-            this.Footer.Size = new System.Drawing.Size(630, 39);
-            this.Footer.TabIndex = 3;
-            // 
-            // PanelContainer
-            // 
-            this.PanelContainer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PanelContainer.CurrentPanel = null;
-            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelContainer.Location = new System.Drawing.Point(40, 1);
-            this.PanelContainer.Name = "PanelContainer";
-            this.PanelContainer.Size = new System.Drawing.Size(630, 360);
-            this.PanelContainer.TabIndex = 4;
-            this.PanelContainer.Load += new System.EventHandler(this.PanelContainer_Load);
             // 
             // UserSettings
             // 
@@ -77,15 +48,44 @@ namespace DiscoveryLight.UI.Forms.Main
             this.UserSettings.Size = new System.Drawing.Size(0, 400);
             this.UserSettings.TabIndex = 5;
             // 
-            // pic_Line
+            // Navigation
             // 
-            this.pic_Line.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.pic_Line.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pic_Line.Location = new System.Drawing.Point(0, 0);
-            this.pic_Line.Name = "pic_Line";
-            this.pic_Line.Size = new System.Drawing.Size(670, 1);
-            this.pic_Line.TabIndex = 0;
-            this.pic_Line.TabStop = false;
+            this.Navigation.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.Navigation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Navigation.Location = new System.Drawing.Point(0, 0);
+            this.Navigation.Name = "Navigation";
+            this.Navigation.Size = new System.Drawing.Size(40, 400);
+            this.Navigation.TabIndex = 6;
+            // 
+            // Footer
+            // 
+            this.Footer.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Footer.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Footer.Location = new System.Drawing.Point(40, 360);
+            this.Footer.Name = "Footer";
+            this.Footer.Size = new System.Drawing.Size(630, 40);
+            this.Footer.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Location = new System.Drawing.Point(40, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(630, 1);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PanelContainer
+            // 
+            this.PanelContainer.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.PanelContainer.CurrentPanel = null;
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(40, 1);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(630, 359);
+            this.PanelContainer.TabIndex = 9;
+            this.PanelContainer.Load += new System.EventHandler(this.PanelContainer_Load);
             // 
             // _Main
             // 
@@ -94,25 +94,25 @@ namespace DiscoveryLight.UI.Forms.Main
             this.ClientSize = new System.Drawing.Size(670, 400);
             this.Controls.Add(this.UserSettings);
             this.Controls.Add(this.PanelContainer);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Footer);
             this.Controls.Add(this.Navigation);
-            this.Controls.Add(this.pic_Line);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Discovery";
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Line)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+        public _UserSettings UserSettings;
         public _Navigation Navigation;
         public _Footer Footer;
+        private System.Windows.Forms.PictureBox pictureBox1;
         public _PanelContainer PanelContainer;
-        public _UserSettings UserSettings;
-        private System.Windows.Forms.PictureBox pic_Line;
     }
 }
