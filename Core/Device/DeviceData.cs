@@ -35,8 +35,10 @@ namespace DiscoveryLight.Core.Device.Data
             get { return collection; }
             set { 
                 collection = value;
-                if (collection == null) return;
-                blockNumber = collection.Count;
+                if (collection == null)
+                    blockNumber = 0;
+                else
+                    blockNumber = collection.Count;
             }
         }
 
