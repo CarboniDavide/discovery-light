@@ -133,14 +133,17 @@
   <data name="cmd_Close.Text" xml:space="preserve">
     <value>Schließen</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="lbl_InfoRestart.Text" xml:space="preserve">
+    <value>Ein Neustart ist erforderlich</value>
   </data>
+  <data name="cmd_Apply.Text" xml:space="preserve">
+    <value>Sich bewerben</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1, 360</value>
+    <value>1, 409</value>
   </data>
 </root>

@@ -22,5 +22,29 @@ namespace DiscoveryLight.Settings {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("en-EN")]
+        public string UserLanguage {
+            get {
+                return ((string)(this["UserLanguage"]));
+            }
+            set {
+                this["UserLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public string Frequency {
+            get {
+                return ((string)(this["Frequency"]));
+            }
+            set {
+                this["Frequency"] = value;
+            }
+        }
     }
 }

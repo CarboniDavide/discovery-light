@@ -139,4 +139,10 @@
   <data name="cmd_Close.Text" xml:space="preserve">
     <value>Chiudi</value>
   </data>
+  <data name="lbl_InfoRestart.Text" xml:space="preserve">
+    <value>L'applicazione verra riavviata</value>
+  </data>
+  <data name="cmd_Apply.Text" xml:space="preserve">
+    <value>Applica</value>
+  </data>
 </root>

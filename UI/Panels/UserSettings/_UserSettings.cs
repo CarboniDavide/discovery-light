@@ -20,6 +20,10 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             InitializeComponent();
         }
 
+        private Boolean needRestart = false;
+        private String oldLAnguage;
+        private String newLAnguage;
+
         private void cmd_Close_Click(object sender, EventArgs e)
         {
             anm_PanelSet.ClosePanel();
@@ -28,15 +32,47 @@ namespace DiscoveryLight.UI.Panels.UserSettings
         private void ChangeLanguage(object sender, EventArgs e)
         {
             String lang = (sender as LanguageLinkRadio).Language.ToString();
+            newLAnguage = lang;
+            Settings.Settings.Default.UserLanguage = lang;
+            needRestart = (oldLAnguage != newLAnguage);
+            lbl_InfoRestart.Visible = needRestart;
+        }
+       
+        private void cmd_Apply_Click(object sender, EventArgs e)
+        {
+            Settings.Settings.Default.Save();
+            if (needRestart) Application.Restart();
+        }
 
-            CultureInfo culture = new CultureInfo(lang);
-            Application.CurrentCulture = culture;
-            CultureInfo.DefaultThreadCurrentCulture = culture;
-            CultureInfo.DefaultThreadCurrentUICulture = culture;
+        private void nmr_Freq_ValueChanged(object sender, EventArgs e)
+        {
+            Settings.Settings.Default.Frequency = nmr_Freq.Value.ToString();
+        }
 
-            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture.Name);
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(culture.Name);
+        private void _UserSettings_Load(object sender, EventArgs e)
+        {
+            loadSettings();
+        }
 
+        private void loadSettings()
+        {
+            nmr_Freq.Value = Convert.ToDecimal(Settings.Settings.Default.Frequency);
+            oldLAnguage = Settings.Settings.Default.UserLanguage;
+            switch (oldLAnguage)
+            {
+                case "en-EN":
+                    rdb_Eng.Select();
+                    break;
+                case "it-IT":
+                    rdb_It.Select();
+                    break;
+                case "fr-FR":
+                    rdb_Fr.Select();
+                    break;
+                case "de-DE":
+                    rdb_Germ.Select();
+                    break;
+            }
         }
     }
 }

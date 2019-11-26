@@ -48,6 +48,8 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmd_Apply = new System.Windows.Forms.Button();
+            this.lbl_InfoRestart = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nmr_Freq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
@@ -131,9 +133,15 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             // 
             // nmr_Freq
             // 
-            resources.ApplyResources(this.nmr_Freq, "nmr_Freq");
             this.nmr_Freq.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.nmr_Freq, "nmr_Freq");
+            this.nmr_Freq.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
             this.nmr_Freq.Name = "nmr_Freq";
+            this.nmr_Freq.ValueChanged += new System.EventHandler(this.nmr_Freq_ValueChanged);
             // 
             // cmd_Close
             // 
@@ -161,15 +169,15 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             // 
             // pic_Divisor_002
             // 
-            resources.ApplyResources(this.pic_Divisor_002, "pic_Divisor_002");
             this.pic_Divisor_002.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            resources.ApplyResources(this.pic_Divisor_002, "pic_Divisor_002");
             this.pic_Divisor_002.Name = "pic_Divisor_002";
             this.pic_Divisor_002.TabStop = false;
             // 
             // pic_Divisor_001
             // 
-            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
             this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
             this.pic_Divisor_001.Name = "pic_Divisor_001";
             this.pic_Divisor_001.TabStop = false;
             // 
@@ -180,11 +188,26 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // cmd_Apply
+            // 
+            resources.ApplyResources(this.cmd_Apply, "cmd_Apply");
+            this.cmd_Apply.Name = "cmd_Apply";
+            this.cmd_Apply.UseVisualStyleBackColor = true;
+            this.cmd_Apply.Click += new System.EventHandler(this.cmd_Apply_Click);
+            // 
+            // lbl_InfoRestart
+            // 
+            this.lbl_InfoRestart.BackColor = System.Drawing.Color.Bisque;
+            resources.ApplyResources(this.lbl_InfoRestart, "lbl_InfoRestart");
+            this.lbl_InfoRestart.Name = "lbl_InfoRestart";
+            // 
             // _UserSettings
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.Controls.Add(this.lbl_InfoRestart);
+            this.Controls.Add(this.cmd_Apply);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_TitleDivers);
             this.Controls.Add(this.cmd_Close);
@@ -203,6 +226,7 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             this.Controls.Add(this.pic_Divisor_001);
             this.DoubleBuffered = true;
             this.Name = "_UserSettings";
+            this.Load += new System.EventHandler(this._UserSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmr_Freq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
@@ -231,5 +255,7 @@ namespace DiscoveryLight.UI.Panels.UserSettings
         private System.Windows.Forms.Button cmd_Close;
         public WinformComponents.AnimationComponents anm_PanelSet;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button cmd_Apply;
+        private System.Windows.Forms.Label lbl_InfoRestart;
     }
 }

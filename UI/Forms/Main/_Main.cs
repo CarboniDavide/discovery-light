@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.UI.Panels.Devices;
 using DiscoveryLight.UI.Panels;
+using System.Globalization;
+using System.Threading;
 
 namespace DiscoveryLight.UI.Forms.Main
 {
@@ -17,6 +19,21 @@ namespace DiscoveryLight.UI.Forms.Main
         public _Main()
         {
             InitializeComponent();
+            LoadLanguage();
+        }
+
+        public string lang;
+
+        private void LoadLanguage()
+        {
+            lang = Settings.Settings.Default.UserLanguage;
+            CultureInfo culture = new CultureInfo(lang);
+            Application.CurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture.Name);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(culture.Name);
         }
     }
 }

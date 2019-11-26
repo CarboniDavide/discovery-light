@@ -617,6 +617,9 @@
     <EmbeddedResource Include="UI\Panels\Devices\_Details.it.resx">
       <DependentUpon>_Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.aa.resx">
+      <DependentUpon>_MainBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.de.resx">
       <DependentUpon>_MainBoard.cs</DependentUpon>
     </EmbeddedResource>

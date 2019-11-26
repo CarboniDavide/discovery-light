@@ -68,10 +68,9 @@ namespace DiscoveryLight.UI.Forms.Main
             // UserSettings
             // 
             this.UserSettings.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.UserSettings.Dock = System.Windows.Forms.DockStyle.Right;
             this.UserSettings.Location = new System.Drawing.Point(670, 0);
             this.UserSettings.Name = "UserSettings";
-            this.UserSettings.Size = new System.Drawing.Size(0, 360);
+            this.UserSettings.Size = new System.Drawing.Size(0, 400);
             this.UserSettings.TabIndex = 4;
             // 
             // _Main
