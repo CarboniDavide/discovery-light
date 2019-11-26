@@ -715,10 +715,10 @@
   <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
+    <None Include="Resources\Video.png" />
     <None Include="Resources\Sound.png" />
     <None Include="Resources\Performancs.png" />
     <None Include="Resources\Réglages.png" />
-    <None Include="Resources\Video.png" />
     <None Include="Resources\Ram.png" />
     <None Include="Resources\MainBoard.png" />
     <None Include="Resources\HardDisk.png" />
