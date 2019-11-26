@@ -60,7 +60,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             this.ChargeListOfSubDevicesInit();
-            this.PhysicalDiskDeviceDataControl.OnUpdate += new EventHandler(OnDeviceUpdate);
+            this.PhysicalDiskDeviceDataControl.OnUpdateFinish += new EventHandler(OnDeviceUpdate);
         }
 
         private void OnDeviceUpdate(object sender, EventArgs e)

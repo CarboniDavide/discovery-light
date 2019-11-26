@@ -61,7 +61,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             this.ChargeListOfSubDevicesInit();
-            this.NetworkDeviceDataControl.OnUpdate += new EventHandler(OnDeviceUpdate);
+            this.NetworkDeviceDataControl.OnUpdateFinish += new EventHandler(OnDeviceUpdate);
         }
 
         private void OnDeviceUpdate(object sender, EventArgs e)
