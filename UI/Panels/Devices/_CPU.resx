@@ -168,11 +168,11 @@
   <data name="SystemDevicePerformanceControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 48</value>
   </data>
-  <data name="$this.PanelName" xml:space="preserve">
-    <value>Processor</value>
-  </data>
   <data name="pic_Divisor_001.TabIndex" type="System.Int32, mscorlib">
     <value>46</value>
+  </data>
+  <data name="SystemDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
   </data>
   <data name="cmb_Blocks.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -228,8 +228,8 @@
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
     <value>364, 20</value>
   </data>
-  <data name="SystemDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
+  <data name="$this.PanelName" xml:space="preserve">
+    <value>Processor</value>
   </data>
   <data name="&gt;&gt;SystemDevicePerformanceControl.Parent" xml:space="preserve">
     <value>$this</value>

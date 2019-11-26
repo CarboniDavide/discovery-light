@@ -121,15 +121,14 @@
     <value>MemoryDeviceDataControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pic_Divisor_003.Location" type="System.Drawing.Point, System.Drawing">
+    <value>450, 0</value>
+  </data>
   <data name="lbl_TitleComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
   </data>
   <data name="cmb_Blocks.Size" type="System.Drawing.Size, System.Drawing">
     <value>43, 21</value>
@@ -138,6 +137,10 @@
   <data name="pic_Divisor_003.TabIndex" type="System.Int32, mscorlib">
     <value>71</value>
   </data>
+  <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmb_Blocks.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -147,8 +150,8 @@
   <data name="&gt;&gt;pic_Divisor_003.Name" xml:space="preserve">
     <value>pic_Divisor_003</value>
   </data>
-  <data name="&gt;&gt;MemoryDevicePerformanceControl.Name" xml:space="preserve">
-    <value>MemoryDevicePerformanceControl</value>
+  <data name="&gt;&gt;pic_Divisor_002.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;cmb_Blocks.Name" xml:space="preserve">
     <value>cmb_Blocks</value>
@@ -162,11 +165,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>_Memory</value>
   </data>
-  <data name="&gt;&gt;lbl_TitleComboBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbl_TitleComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 20</value>
+  <data name="&gt;&gt;MemoryDevicePerformanceControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="lbl_TitleComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -195,17 +195,17 @@
   <data name="&gt;&gt;lbl_TitleComboBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lbl_TitleComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 334</value>
-  </data>
   <data name="lbl_TitleComboBox.Text" xml:space="preserve">
     <value>Block</value>
   </data>
   <data name="&gt;&gt;lbl_TitleComboBox.Name" xml:space="preserve">
     <value>lbl_TitleComboBox</value>
   </data>
-  <data name="pic_Divisor_003.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 360</value>
+  <data name="&gt;&gt;pic_Divisor_003.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl_TitleComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>351, 20</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_002.Name" xml:space="preserve">
     <value>pic_Divisor_002</value>
@@ -216,17 +216,17 @@
   <data name="&gt;&gt;pic_Divisor_003.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="MemoryDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
-    <value>218</value>
-  </data>
-  <data name="MemoryDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
-    <value>219</value>
-  </data>
   <data name="&gt;&gt;cmb_Blocks.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
   <data name="&gt;&gt;MemoryDeviceDataControl.Type" xml:space="preserve">
     <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;MemoryDevicePerformanceControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="MemoryDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>453, 0</value>
@@ -243,26 +243,26 @@
   <data name="&gt;&gt;MemoryDeviceDataControl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;pic_Divisor_002.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_002.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+  <data name="&gt;&gt;lbl_TitleComboBox.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;pic_Divisor_003.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="pic_Divisor_003.Size" type="System.Drawing.Size, System.Drawing">
+    <value>2, 360</value>
   </data>
   <data name="pic_Divisor_002.TabIndex" type="System.Int32, mscorlib">
     <value>217</value>
   </data>
-  <data name="&gt;&gt;MemoryDevicePerformanceControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="lbl_TitleComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 334</value>
   </data>
-  <data name="pic_Divisor_003.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 0</value>
+  <data name="&gt;&gt;MemoryDevicePerformanceControl.Name" xml:space="preserve">
+    <value>MemoryDevicePerformanceControl</value>
   </data>
   <data name="MemoryDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>444, 324</value>
@@ -273,8 +273,8 @@
   <data name="pic_Divisor_002.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 326</value>
   </data>
-  <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="MemoryDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
+    <value>219</value>
   </data>
   <data name="&gt;&gt;MemoryDeviceDataControl.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -282,8 +282,8 @@
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>630, 360</value>
   </data>
-  <data name="&gt;&gt;MemoryDevicePerformanceControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="MemoryDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>218</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
