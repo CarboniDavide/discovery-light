@@ -9,7 +9,10 @@ namespace DiscoveryLight.Core.Device.Data
     #region Interface
 
     /// <summary>
-    /// Declare base class structure
+    /// Device Data main class.
+    /// Device Data represents a installed device type. Each device is a collection of subdevice(blocks).
+    /// PC can have more subdevices of the same type installed. For example we can have more physical disks mounted. Each of then is a Physical Disk drive.
+    /// So Physical Disk is the main drive, and each of them is a subdevice(block)
     /// </summary>
     /// 
     public abstract class DeviceData
@@ -23,7 +26,7 @@ namespace DiscoveryLight.Core.Device.Data
         private List<ManagementObject> collection;               // drive collection - each collection contains one or more block, one to each installed drive type
 
         /// <summary>
-        /// Override all blocks values is new changes occurred
+        /// Override all blocks values if new changes occurred
         /// </summary>
         /// <param name="newListOfValues"></param>
         private void updateInfo(List<_Block> newListOfValues)

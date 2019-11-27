@@ -11,15 +11,22 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
+    /// <summary>
+    /// Abstract BaseSub Panel.
+    /// Manage all wmi details using a dynamic list performed in background mode
+    /// </summary>
     public abstract class AbstractBaseSubPanel : _BaseUserControl
     {
-        public abstract void Init(dynamic ListOfValues);
+        private dynamic listValues;
+        public dynamic ListValues { get => listValues; set => listValues = value; }
+        public abstract void Init(dynamic ListOfValues);                      // init list of values 
         public abstract void Init();
-        public abstract void Load();
-        public abstract IEnumerable<String> Get();
-        public abstract void StopLoadedSubTask();
-        public abstract void OnChangeIndex(object sender, EventArgs e);
+        public abstract void Load();                                          // prepare thread and start Get method in baground              
+        public abstract IEnumerable<String> Get();                            // get all values to fill the list of values                  
+        public abstract void StopLoadedSubTask();                             // abort loaded thread
+        public abstract void OnChangeIndex(object sender, EventArgs e);       // action to execute when a value in list is selected
     }
+
     public class BaseSubPanel: AbstractBaseSubPanel
     {
         static private Dictionary<string, string> sender = new Dictionary<string, string>()
@@ -28,10 +35,9 @@ namespace DiscoveryLight.UI.Panels.Details
             {"WmiClassName",""}
         };
         private _Footer _footer;
-        private dynamic listValues;
+        
         private Thread t;
         private _Details subPanelContainer;
-        public dynamic ListValues { get => listValues; set => listValues = value; }
         public Thread T { get => t; set => t = value; }
         public _Details SubPanelContainer { get => subPanelContainer; set => subPanelContainer = value; }
         public _Footer Footer { get => _footer; set => _footer = value; }
@@ -39,23 +45,24 @@ namespace DiscoveryLight.UI.Panels.Details
 
         public void FillInListBox()
         {
-            this.Invoke((System.Action)(() => {ListPrepare();}));
-            foreach (String ns in Get())
+            this.Invoke((System.Action)(() => {ListPrepare();}));                               // initialize list before
+            foreach (String ns in Get())                                                        // get each values and fill list in the same time
                 this.Invoke((System.Action)(() => { this.ListValues.Items.Add(ns); }));
         }
 
         public override void OnChangeIndex(object sender, EventArgs e) {
-            if (Footer != null) Footer.ChartBar.BarFillSize = 0;
+            if (Footer != null) Footer.ChartBar.BarFillSize = 0;             // reset chargin bar
         }
 
         public override IEnumerable<String> Get() { return null; }
 
+        
         public void ListPrepare()
         {
             if (ListValues != null) ListValues.Items.Clear();
-            if (ListValues.GetType().FullName == typeof(ComboBox).FullName.ToString())
+            if (ListValues.GetType().FullName == typeof(ComboBox).FullName.ToString()) // use only comboBox control
             {
-                this.ListValues.Items.Add("-- Select --");
+                this.ListValues.Items.Add("-- Select --");             // initialize list with the first item "-- Select --"
                 this.ListValues.SelectedItem = "-- Select --";
             }
         }
@@ -77,9 +84,9 @@ namespace DiscoveryLight.UI.Panels.Details
 
         public override void Load()
         {
-            StopLoadedSubTask();
-            t = new Thread(FillInListBox);
-            t.Start();
+            StopLoadedSubTask();             // stop all loaded thread
+            t = new Thread(FillInListBox);   // create a new one
+            t.Start();                       // start to get values       
         }
 
         public override void onDispose(object sender, EventArgs e)

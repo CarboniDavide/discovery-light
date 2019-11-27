@@ -27,6 +27,11 @@ namespace DiscoveryLight.UI.Panels.Details
             SubPanelContainer.WmiDetails.Init();
         }
 
+        /// <summary>
+        /// Get all classes for a selected namespace.
+        /// Use Yeld to return each values in real time.
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<String> Get()
         {
             base.Get();
@@ -36,7 +41,6 @@ namespace DiscoveryLight.UI.Panels.Details
 
             try
             {
-                // __namespace WMI class.
                 nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + Sender["NameSpace"]), new WqlObjectQuery("select * from meta_class"), null);
                 collection = nsClass.Get();
                 if (collection.Count == 0) nsClass = null;
@@ -53,13 +57,13 @@ namespace DiscoveryLight.UI.Panels.Details
             {
                 foreach (ManagementClass wmiClass in collection)
                     foreach (QualifierData qd in wmiClass.Qualifiers)
-                        // Si la classe est dynamique, ajoute les valeurs dans la liste.
+                        //use only static and dynamic
                         if (qd.Name.Equals("dynamic") || qd.Name.Equals("static"))
                             yield return (wmiClass["__CLASS"].ToString());
                 nsClass.Dispose();
             }
         }
-
+       
         public override void OnChangeIndex(object sender, EventArgs e)
         {
             base.OnChangeIndex(sender, e);

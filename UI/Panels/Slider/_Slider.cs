@@ -13,7 +13,8 @@ using DiscoveryLight.UI.Forms.Main;
 namespace DiscoveryLight.UI.Panels.Slider
 {
     /// <summary>
-    /// Slider images
+    /// Slider images.
+    /// Manage animation when a new panel is required.
     /// </summary>
     public partial class _Slider : UserControl
     {

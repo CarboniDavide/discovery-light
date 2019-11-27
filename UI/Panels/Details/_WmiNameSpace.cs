@@ -26,6 +26,11 @@ namespace DiscoveryLight.UI.Panels.Details
             SubPanelContainer.WmiClasses.Init();
         }
 
+        /// <summary>
+        /// Read all namespace available in the wmi managment class.
+        /// Use Yeld to return each values in real time.
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<String> Get()
         {
             base.Get();
@@ -56,9 +61,9 @@ namespace DiscoveryLight.UI.Panels.Details
         public override void OnChangeIndex(object sender, EventArgs e)
         {
             base.OnChangeIndex(sender, e);
-            if (ListValues.SelectedItem == "-- Select --") return;
-            Sender["NameSpace"] = this.ListValues.SelectedItem.ToString();
-            SubPanelContainer.WmiClasses.Load();
+            if (ListValues.SelectedItem == "-- Select --") return;              // don't perform  default value
+            Sender["NameSpace"] = this.ListValues.SelectedItem.ToString();      // update the current select namespace
+            SubPanelContainer.WmiClasses.Load();                                // load all wmi classes for a selected namespace
             
         }
     }

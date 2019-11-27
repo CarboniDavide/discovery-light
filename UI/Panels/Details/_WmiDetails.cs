@@ -25,6 +25,11 @@ namespace DiscoveryLight.UI.Panels.Details
             base.Init(lst_Details);
         }
 
+        /// <summary>
+        /// Get all details for a selected wmi class.
+        /// Use Yeld to return each values in real time.
+        /// </summary>
+        /// <returns></returns>
         public override IEnumerable<String> Get()
         {
             base.Get();
@@ -34,10 +39,12 @@ namespace DiscoveryLight.UI.Panels.Details
 
             try
             {
+                // change message in main footer 
                 this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = "Wait one moment ..."; }));
                 nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + Sender["NameSpace"]), new WqlObjectQuery("select * from " + Sender["WmiClassName"]), null);
                 collection = nsClass.Get();
                 if (collection.Count == 0) nsClass = null;
+                // restore old messagae in main footer
                 this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = Footer.FooterTittleName; }));
             }
             catch (ManagementException e)
@@ -55,13 +62,13 @@ namespace DiscoveryLight.UI.Panels.Details
                 double step = (double)Decimal.Divide(100, collection.Count);
                 double barSize = 0;
 
-                foreach (ManagementObject wmiObject in collection)
+                foreach (ManagementObject wmiObject in collection)                          // read all subdrive info
                 {
                    
                     count++;
                     yield return (" [" + count.ToString() + "]");
 
-                    foreach (PropertyData property in wmiObject.Properties)
+                    foreach (PropertyData property in wmiObject.Properties)                // read all sub property for each sub drive 
                     {
                         if (property.Value != null)
                         {

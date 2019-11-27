@@ -49,33 +49,33 @@
             // 
             // MainBoardDeviceDataControl
             // 
-            resources.ApplyResources(this.MainBoardDeviceDataControl, "MainBoardDeviceDataControl");
             this.MainBoardDeviceDataControl.ClassName = "_MainBoardDeviceDataControl";
             this.MainBoardDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl);
             this.MainBoardDeviceDataControl.CurrentDevice = null;
             this.MainBoardDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.MainBoardDeviceDataControl, "MainBoardDeviceDataControl");
             this.MainBoardDeviceDataControl.Name = "MainBoardDeviceDataControl";
             this.MainBoardDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.MainBoardDeviceDataControl.TokenSource = cancellationTokenSource1;
             // 
             // BiosDeviceDataControl
             // 
-            resources.ApplyResources(this.BiosDeviceDataControl, "BiosDeviceDataControl");
             this.BiosDeviceDataControl.ClassName = "_BiosDeviceDataControl";
             this.BiosDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl);
             this.BiosDeviceDataControl.CurrentDevice = null;
             this.BiosDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.BiosDeviceDataControl, "BiosDeviceDataControl");
             this.BiosDeviceDataControl.Name = "BiosDeviceDataControl";
             this.BiosDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.BiosDeviceDataControl.TokenSource = cancellationTokenSource2;
             // 
             // WindowsScoreDevicePerformanceControl
             // 
-            resources.ApplyResources(this.WindowsScoreDevicePerformanceControl, "WindowsScoreDevicePerformanceControl");
             this.WindowsScoreDevicePerformanceControl.ClassName = "_WindowsScoreDevicePerformanceControl";
             this.WindowsScoreDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._WindowsScoreDevicePerformanceControl);
             this.WindowsScoreDevicePerformanceControl.CurrentPerformance = null;
             this.WindowsScoreDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.WindowsScoreDevicePerformanceControl, "WindowsScoreDevicePerformanceControl");
             this.WindowsScoreDevicePerformanceControl.Name = "WindowsScoreDevicePerformanceControl";
             this.WindowsScoreDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.WindowsScoreDevicePerformanceControl.TokenSource = cancellationTokenSource3;

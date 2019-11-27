@@ -12,12 +12,10 @@ using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
-
-    public abstract class AbstractDevicePanel: _BaseUserControl
-    {
-    }
-
-    public class DevicePanel: AbstractDevicePanel
+    /// <summary>
+    /// Device Panel. Extend BaseUserControl with new fields to get more information about all device's panel.
+    /// </summary>
+    public class DevicePanel: _BaseUserControl
     {
         private int panelIndex;            // define order between each panel
         private string panelName;          // panel name to be used in footer bar 

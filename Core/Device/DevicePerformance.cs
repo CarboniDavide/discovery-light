@@ -10,8 +10,13 @@ namespace DiscoveryLight.Core.Device.Performance
 {
     #region Interface
     /// <summary>
-    /// Declare base class structure
+    /// Device Performance main class.
+    /// Device Performance represents a installed device type. Each device can have more childs or subdevices(collection)
+    /// PC can have more subdevices of the same type installed. For example we can have more physical disks mounted. Each of then is a Physical Disk drive.
+    /// So Physical Disk is the main drive, and each of them is a subdevice.
+    /// Device Performance read all performance values for all subdevice for a selected device(drive)
     /// </summary>
+    /// 
     public abstract class DevicePerformance
     {
         protected readonly string deviceName;

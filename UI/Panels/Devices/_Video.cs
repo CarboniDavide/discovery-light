@@ -27,24 +27,26 @@ namespace DiscoveryLight.UI.Panels.Devices
             int index = 0;
             foreach (VIDEO.Block block in CurrentDevice.Blocks)
             {
-                this.cmb_Blocks.Items.Add(index + "-" + block.Name);
+                this.cmb_Blocks.Items.Add(index + "-" + block.Name);      // add a index to each subdevice name
                 index++;
             }
         }
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
-            // get name from selected
+            // get name from selection
             int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
             string selected = this.cmb_Blocks.SelectedItem.ToString();
+            // remove index to get subdevice name
             string name = selected.Substring(indexSize + 1, selected.Length - indexSize - 1);
+            // load the selected subdevice values from source
             this.VideoDeviceDataControl.CurrentSubDevice = this.VideoDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(name)).FirstOrDefault();
         }
 
         private void InitSubDevicesID()
         {
-            this.ChargeListOfSubDevicesInit();
-            this.cmb_Blocks.SelectedIndex = 0;
+            this.ChargeListOfSubDevicesInit();      // fill the list of subdevices
+            this.cmb_Blocks.SelectedIndex = 0;      // use the first items as default
         }
     }
 }

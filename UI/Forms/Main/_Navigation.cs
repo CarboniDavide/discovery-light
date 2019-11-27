@@ -15,13 +15,13 @@ namespace DiscoveryLight.UI.Forms.Main
 
         private void ButtonClick(object sender, EventArgs e)
         {
-            String requestedPanelName = (sender as PanelLinkButton).ButtonFor.ToString();
-            Point currentPointToMOve = (sender as Button).Location;
-            if (requestedPanelName == "Settings")
+            String requestedPanelName = (sender as PanelLinkButton).ButtonFor.ToString();  // get request panel name from the "ButtomFor" field
+            Point currentPointToMOve = (sender as Button).Location;                        // get current button position
+            if (requestedPanelName == "Settings")                                          // settings panel use not panel container 
                 FormsCollection.Main.UserSettings.anm_PanelSet.OpenPanel();
             else
-                FormsCollection.Main.PanelContainer.LoadPanel(requestedPanelName);
-            AnimationLine_Navigation.MoveLine(currentPointToMOve);
+                FormsCollection.Main.PanelContainer.LoadPanel(requestedPanelName);         // load panel directly in PanelContainer
+            AnimationLine_Navigation.MoveLine(currentPointToMOve);                         // change buttom line indicator
         }
     }
 }

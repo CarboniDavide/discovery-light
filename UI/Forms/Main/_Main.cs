@@ -18,8 +18,8 @@ namespace DiscoveryLight.UI.Forms.Main
     {
         public _Main()
         {
-            LoadLanguage();
-            InitializeComponent();
+            LoadLanguage();                // load selected language first
+            InitializeComponent();         // then initialize all form's components 
         }
 
         public string lang;
@@ -38,7 +38,7 @@ namespace DiscoveryLight.UI.Forms.Main
 
         private void PanelContainer_Load(object sender, EventArgs e)
         {
-            PanelContainer.LoadPanel("");
+            PanelContainer.LoadPanel("");           // load first panel
         }
     }
 }

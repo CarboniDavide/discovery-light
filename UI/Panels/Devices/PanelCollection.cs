@@ -14,7 +14,7 @@ namespace DiscoveryLight.UI.Panels.Devices
     class PanelCollection
     {
         /// <summary>
-        /// Return a nenw instance for the required panel
+        /// Return a new instance for a required panel
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
