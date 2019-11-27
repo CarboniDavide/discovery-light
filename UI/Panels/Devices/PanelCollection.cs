@@ -8,8 +8,16 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
+    /// <summary>
+    /// Panel Factory
+    /// </summary>
     class PanelCollection
     {
+        /// <summary>
+        /// Return a nenw instance for the required panel
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public static DevicePanel PanelFactory(String name)
         {
             switch (name)
@@ -37,6 +45,12 @@ namespace DiscoveryLight.UI.Panels.Devices
             }
         }
         
+        /// <summary>
+        /// Get type using assembly and namespace
+        /// </summary>
+        /// <param name="assembly"></param>
+        /// <param name="nameSpace"></param>
+        /// <returns></returns>
         public Type[] GetTypesInNamespace(Assembly assembly, string nameSpace)
         {
             return

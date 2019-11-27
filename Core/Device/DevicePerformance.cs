@@ -20,6 +20,9 @@ namespace DiscoveryLight.Core.Device.Performance
         public string DeviceName { get => deviceName; }
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
+        /// <summary>
+        /// Get properties performance for each installed drive
+        /// </summary>
         public abstract void GetPerformance();
         public DevicePerformance(string DeviceName)
         {
@@ -46,6 +49,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
+            // get all properties for each installed drive
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_WinSAT"))
             {
                 this.Cpu = DeviceUtils.GetProperty("CPUScore", mj, DeviceUtils.ReturnType.UInt64);           // cpu 
@@ -131,6 +135,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
+            // get thread and process loaded
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_System")){
                 this.Threads = DeviceUtils.GetProperty("Threads", mj, DeviceUtils.ReturnType.String);
                 this.Processes = DeviceUtils.GetProperty("Processes", mj, DeviceUtils.ReturnType.String);
@@ -193,7 +198,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
-
+            // get all memory ram properties from the collection
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_Memory"))
             {
                 this.CacheUsage = DeviceUtils.GetProperty("CacheBytes", mj, DeviceUtils.ReturnType.UInt64);
@@ -243,6 +248,9 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public string DriveName { get => _driveName; set => _driveName = value; }
 
+        /// <summary>
+        /// Get the selected physical disk from all collection using index
+        /// </summary>
         public void FindDrive()
         {
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfDisk_PhysicalDisk"))
@@ -260,6 +268,7 @@ namespace DiscoveryLight.Core.Device.Performance
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_PerfDisk_LogicalDisk"))
             {
                 String currentDriveName = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                // get only properties from selected drive
                 if (currentDriveName.Equals(this.DriveName))
                 {
                     this.FreeSpace = DeviceUtils.GetProperty("FreeMegabytes", mj, DeviceUtils.ReturnType.UInt64);
@@ -317,6 +326,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             if (this.selectedNetwork == null) return;
             UInt64? Den;
+            // get properties from the selected network adapter
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Tcpip_NetworkAdapter", "Name", this.selectedNetwork, DeviceUtils.Operator.Egual))
             {
                 this.ByteReceivedPerSec = DeviceUtils.GetProperty("BytesReceivedPersec", mj, DeviceUtils.ReturnType.UInt64);
@@ -326,6 +336,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 this.PacketsSentPerSec = DeviceUtils.GetProperty("PacketsSentPersec", mj, DeviceUtils.ReturnType.UInt64);
                 this.PacketsTotalPerSec = DeviceUtils.GetProperty("PacketsPersec", mj, DeviceUtils.ReturnType.UInt64);
 
+                // convert values
                 if (BytesTotalPerSec != null)
                 {
                     Den = (BytesTotalPerSec / 100);

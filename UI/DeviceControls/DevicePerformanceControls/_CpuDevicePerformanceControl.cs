@@ -45,6 +45,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             }
         }
 
+        // perform cpu threads chart bar dynamically
         public void GraphComponents_Add()
         {
             CPU cpu = new CPU();
@@ -52,6 +53,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             GraphComponents_Add((CPU.Block)cpu.Blocks.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
         }
 
+        // perform cpu threads chart bar dynamically
         public void GraphComponents_Add(DeviceData._Block Device)
         {
             GraphComponents_Clear();
@@ -61,12 +63,11 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             int TextSize;
             
             var CurrentSubDevice = (CPU.Block)Device;
-            // Création et insertion des élements grapique
 
-            // Calcul de l'épessuer entré les graphique à barre
+            // define height between each chart bar
             Step = pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.N_Thread));
 
-            // Calcul de l'hauteur du caques graphique à barre
+            // define each char bar height
             BarSize = Convert.ToInt16(pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.N_Thread)) / 1.6);
 
             TextSize = BarSize / 2;
@@ -74,14 +75,16 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             if (TextSize > 14)
                 TextSize = 14;
 
-            // Poistion de départ
+            // Start location
             BarPosition = 0;
 
+            // make all thread
             for (int i = 0; i < Convert.ToInt16(CurrentSubDevice.N_Thread); i++)
             {
                 WinformComponents.ChartBar chart = new WinformComponents.ChartBar();
                 Label label = new Label();
 
+                // chart bar component
                 chart.Activated = true;
                 chart.BarBackColor = System.Drawing.Color.LightGray;
                 chart.BarFillColor = System.Drawing.Color.Coral;
@@ -92,24 +95,25 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
                 chart.TextColor = System.Drawing.Color.White;
                 chart.Name = typeof(WinformComponents.ChartBar).ToString();
 
+                // label component
                 label.Font = new System.Drawing.Font("Microsoft Sans Serif", TextSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 label.Location = new System.Drawing.Point(chart.Width + 15, BarPosition);
                 label.Size = new System.Drawing.Size(100, BarSize);
                 label.Text = "TH " + i;
                 label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
-                // Insertion dans le panneau
+                // add the new components in control
                 this.pnl_Threads.Controls.Add(chart);
                 this.pnl_Threads.Controls.Add(label);
 
-                //Mis à jour de la position
+                // update position to the next chart bar
                 BarPosition = BarPosition + Step;
             }
         }
 
         private void GraphComponents_Clear()
         {
-            this.pnl_Threads.Controls.Clear();
+            this.pnl_Threads.Controls.Clear(); // remove all thread from control
         }
     }
 }

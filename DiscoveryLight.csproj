@@ -608,9 +608,6 @@
     <EmbeddedResource Include="UI\Panels\Devices\_Details.it.resx">
       <DependentUpon>_Details.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.aa.resx">
-      <DependentUpon>_MainBoard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Devices\_MainBoard.de.resx">
       <DependentUpon>_MainBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -715,6 +712,7 @@
   <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
+    <None Include="Resources\log.txt" />
     <None Include="Resources\Video.png" />
     <None Include="Resources\Sound.png" />
     <None Include="Resources\Performancs.png" />

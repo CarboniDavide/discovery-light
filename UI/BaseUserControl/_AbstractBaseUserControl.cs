@@ -7,6 +7,9 @@ using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.BaseUserControl
 {
+    /// <summary>
+    /// Main project class. Define what appened when control is loaded and closed
+    /// </summary>
     public abstract class _AbstractBaseUserControl : UserControl
     {
         public abstract void onLoad(object sender, EventArgs e);

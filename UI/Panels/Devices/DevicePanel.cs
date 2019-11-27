@@ -19,8 +19,8 @@ namespace DiscoveryLight.UI.Panels.Devices
 
     public class DevicePanel: AbstractDevicePanel
     {
-        private int panelIndex;
-        private string panelName;
+        private int panelIndex;            // define order between each panel
+        private string panelName;          // panel name to be used in footer bar 
 
         public int PanelIndex { get => panelIndex; set => panelIndex = value; }
 

@@ -8,13 +8,18 @@ using System.Threading.Tasks;
 
 namespace DiscoveryLight.UI.DeviceControls
 {
+    /// <summary>
+    /// Extended user control. Define the main class for each custom device control.
+    /// Class define four base core methods: update, start, show e abort. Each af them provide a rendering engine in background mode.
+    /// </summary>
     public abstract class AbstractDeviceControl : _BaseUserControl
     {
-        protected abstract void update();
-        protected abstract void abort();
-        protected abstract void show();
-        protected abstract void start();
+        protected abstract void update();       // define action to run periodically
+        protected abstract void abort();        // abort loaded task
+        protected abstract void show();         // define action to show results in update
+        protected abstract void start();        // load task in background then update and show until abort request
 
+        // event handler associated to each methods. Each of them is raised when a method is called
         public event EventHandler OnStart;
         public event EventHandler OnAbort;
         public event EventHandler OnUpdateStart;
@@ -67,9 +72,11 @@ namespace DiscoveryLight.UI.DeviceControls
         public TimeSpan Period { get => period; set => period = value; }
 
         private void setToken()
-        {
+        {   
+            // create a new token for the next task
             tokenSource = new CancellationTokenSource();
             token = tokenSource.Token;
+            // get interval from user settings
             period = TimeSpan.FromMilliseconds(Convert.ToInt32(Settings.Settings.Default.Frequency));
         }
         private async Task run()
@@ -89,33 +96,33 @@ namespace DiscoveryLight.UI.DeviceControls
 
         protected override void start()
         {
-            onStart(EventArgs.Empty);
-            abort();
-            setToken();
-            run();
+            onStart(EventArgs.Empty);       // raise the associated event
+            abort();                        // abort all before                                                              
+            setToken();                     // create a new token for the new task
+            run();                          // run task until a abort request is raised
         }
         protected override void abort()
         {
-            onAbort(EventArgs.Empty);
-            if (token != null && tokenSource != null)
+            onAbort(EventArgs.Empty);                               // raise the associated event
+            if (token != null && tokenSource != null)               // stop the task
                 tokenSource.Cancel();
         }
         protected override void update() {
-            onUpdateStart(EventArgs.Empty);
+            onUpdateStart(EventArgs.Empty);           // raise the associated event
         }
         protected override void show() {
-            onShow(EventArgs.Empty);
+            onShow(EventArgs.Empty);     // raise the associated event
         }
 
         public override void onLoad(object sender, EventArgs e)
         {
-            start();
+            start();             // load automatically when control is ready
         }
         public override void onDispose(object sender, EventArgs e)
         {
-            abort();
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
+            abort();                    // abort loaded task when a dispose method is raised    
+            this.Dispose(true);         // dispose all
+            GC.SuppressFinalize(this);  // finalize and close
         }
 
         public DeviceControl() {

@@ -9,11 +9,14 @@ using DiscoveryLight.UI.Panels.Devices;
 
 namespace DiscoveryLight.UI.Buttons
 {
-    class PanelLinkButton: Button
+    /// <summary>
+    /// Extend base button control with new custom fields
+    /// </summary>
+    class PanelLinkButton : Button
     {
-        private String buttonFor;
-        private String device;
-        private ToolTip toolDescription;
+        private String buttonFor;           // identify the purpose for this button
+        private String device;              // set the device name linked at this button
+        private ToolTip toolDescription;    // use a common tooltip using the device name as description
         /// <summary>
         /// Select de panel to link a this button
         /// </summary>

@@ -14,14 +14,18 @@ namespace DiscoveryLight.Core.Device.Data
     /// 
     public abstract class DeviceData
     {
-        protected readonly string deviceName;
-        protected readonly string className;
-        protected readonly Type classType;
+        protected readonly string deviceName;       
+        protected readonly string className;        
+        protected readonly Type classType;          
 
-        private int blockNumber = 0;
-        private List<_Block> blocks = new List<_Block>();
-        private List<ManagementObject> collection;
+        private int blockNumber = 0;                             // number of blocks for the same drive( a pc can have one or more cpu, drive audio etc.)
+        private List<_Block> blocks = new List<_Block>();        // List of properties for each block           
+        private List<ManagementObject> collection;               // drive collection - each collection contains one or more block, one to each installed drive type
 
+        /// <summary>
+        /// Override all blocks values is new changes occurred
+        /// </summary>
+        /// <param name="newListOfValues"></param>
         private void updateInfo(List<_Block> newListOfValues)
         {
             if (newListOfValues.SequenceEqual(Blocks)) return;
@@ -37,6 +41,9 @@ namespace DiscoveryLight.Core.Device.Data
         public int BlockNumber { get => blockNumber; set => blockNumber = value; }
         public List<_Block> Blocks { get => blocks; set => updateInfo(value); }
 
+        /// <summary>
+        /// Get all properties for all installed drive
+        /// </summary>
         public abstract void GetDriveInfo();
         public class _Block
         {
@@ -76,7 +83,7 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
-            // get drive info
+            // get pc base informations
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_ComputerSystem"))
             {
                 this.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
@@ -87,6 +94,7 @@ namespace DiscoveryLight.Core.Device.Data
                 this.Domaine = DeviceUtils.GetProperty("Domain", mj, DeviceUtils.ReturnType.String);
             }
 
+            // get os base informations
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_OperatingSystem"))
             {
                 SystemOS = DeviceUtils.GetProperty("Caption", mj, DeviceUtils.ReturnType.String);
@@ -95,6 +103,7 @@ namespace DiscoveryLight.Core.Device.Data
                 SystemOS_Architecture = DeviceUtils.GetProperty("OSArchitecture", mj, DeviceUtils.ReturnType.String);
             }
 
+            // get pc base product informations
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_ComputerSystemProduct"))
             {
                 IDNumber = DeviceUtils.GetProperty("IdentifyingNumber", mj, DeviceUtils.ReturnType.String);
@@ -151,6 +160,7 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
+            // get motherboard chip properties
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_BaseBoard")) // Read data
             {
                 this.Manufacturer = DeviceUtils.GetProperty("Manufacturer", mj, DeviceUtils.ReturnType.String);
@@ -158,6 +168,7 @@ namespace DiscoveryLight.Core.Device.Data
                 this.Version = DeviceUtils.GetProperty("Version", mj, DeviceUtils.ReturnType.String);
             }
 
+            // get motherboard bus properties
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_MotherboardDevice")) // Read data
             {
                 this.PrimaryBus_Value = DeviceUtils.GetProperty("PrimaryBusType", mj, DeviceUtils.ReturnType.String);
@@ -197,12 +208,12 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
-            // get drive info
+            // get drive info collection
             Collection = DeviceUtils.GetDriveInfo("Win32_VideoController");
             // initialize array to contains each drive info
             List<_Block> mmBlocks = new List<_Block>();
 
-            // get and write values
+            // get all properties for each installed drive
             foreach (ManagementObject mj in Collection) // Read data
             {
                 var t = new Block();
@@ -248,11 +259,12 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
-            // get drive info
+            // get drive info collection
             Collection = DeviceUtils.GetDriveInfo("Win32_SoundDevice");
             // initialize array to contains each drive info
             List<_Block> mmBlocks = new List<_Block>();
 
+            // get all properties for each installed drive
             foreach (ManagementObject mj in Collection)
             {
                 var t = new Block();
@@ -298,11 +310,12 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
-            // get drive info
+            // get drive info collection
             Collection = DeviceUtils.GetDriveInfo("Win32_Processor");
             // initialize array to contains each drive info
             Blocks = new List<_Block>();
 
+            // get all properties for each installed drive
             foreach (ManagementObject mj in Collection) // Read data
             {
                 var t = new Block();
@@ -357,12 +370,12 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
-            // get drive info
+            // get drive info collection
             Collection = DeviceUtils.GetDriveInfo("Win32_PhysicalMemory");
             // initialize array to contains each drive info
             List<_Block> mmBlocks = new List<_Block>();
 
-            // search et write values
+            // get all properties for each installed drive
             foreach (ManagementObject mj in Collection)
             {
                 var t = new Block();
@@ -422,8 +435,14 @@ namespace DiscoveryLight.Core.Device.Data
             public String FirmwareVersion;
         }
 
+        /// <summary>
+        /// Get drive name using index value
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
         public String FindDriveName(String index)
         {
+            // get all properties for each installed drive
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfDisk_PhysicalDisk"))
             {
                 String currentDrive = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
@@ -437,12 +456,12 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
-            // get drive info
+            // get drive info collection
             Collection = DeviceUtils.GetDriveInfo("Win32_DiskDrive");
             // initialize array to contains each drive info
-            List<_Block> mmBlocks = new List<_Block>();  
+            List<_Block> mmBlocks = new List<_Block>();
 
-            // search et write values
+            // get all properties for each installed drive
             foreach (ManagementObject mj in Collection)
             {
                 var t = new Block();
@@ -493,12 +512,12 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
-            // get drive info
+            // get drive info collection
             Collection = DeviceUtils.GetDriveInfo("Win32_NetworkAdapter", "MACAddress", null, DeviceUtils.Operator.NotEgual);
             // initialize array to contains each drive info
             List<_Block> mmBlocks = new List<_Block>();
 
-            // search et write values
+            // get all properties for each installed drive
             foreach (ManagementObject mj in Collection)
             {
                 var t = new Block();

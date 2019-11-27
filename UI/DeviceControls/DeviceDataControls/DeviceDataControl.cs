@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.UI.BaseUserControl;
 
+
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
+    /// <summary>
+    /// Extend Device Control.
+    /// </summary>
     public abstract class AbstractDeviceDataControl : DeviceControl
     {
         public abstract void InitData(DeviceData Device);
     }
     public class DeviceDataControl: AbstractDeviceDataControl
     {
-        private DeviceData currentDevice;
-        private DeviceData._Block currentSubDevice;
+        private DeviceData currentDevice;               // main device type
+        private DeviceData._Block currentSubDevice;     // a child for the current device    
         
         public DeviceData CurrentDevice
         {
@@ -32,7 +36,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             get { return currentSubDevice; }
             set { 
                 currentSubDevice = value; 
-                if (value != null) show(); 
+                if (value != null) show();  // upadate UI when a new subdevice is selected
             } 
         }
 

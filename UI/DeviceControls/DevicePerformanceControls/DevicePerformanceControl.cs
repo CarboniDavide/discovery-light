@@ -9,6 +9,9 @@ using DiscoveryLight.UI.BaseUserControl;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
+    /// <summary>
+    /// Extend Class Device Control
+    /// </summary>
     public abstract class AbstractDevicePerformanceControl :DeviceControl
     {
         public abstract void InitPerformace(DevicePerformance Device);
@@ -16,8 +19,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 
     public class DevicePerformanceControl: AbstractDevicePerformanceControl
     {
-        private DevicePerformance currentPerformance;
-        private int currentSubDevice;
+        private DevicePerformance currentPerformance;  // current main device performance type
+        private int currentSubDevice;                  // a child for the current performance             
 
         public int CurrentSubDevice { get => currentSubDevice; set => currentSubDevice = value; }
         public DevicePerformance CurrentPerformance { get => currentPerformance; set => currentPerformance = value; }

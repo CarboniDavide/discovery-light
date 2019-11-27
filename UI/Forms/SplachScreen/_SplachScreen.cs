@@ -17,14 +17,14 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
     {
         public _SplachScreen()
         {
-            InitializeComponent();
+            InitializeComponent();     // load all device device data and performance
             this.Start();
         }
 
         private async void Start()
         {
-            await this.InitDevice();
-            await this.loadDevice();
+            await this.InitDevice();      // first init all device
+            await this.loadDevice();      // second load properties for each device and performance  
             this.Close();
             this.Dispose();
         }
@@ -58,8 +58,8 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
             foreach (DeviceData device in Program.Devices)
             {
                 lbl_LoadIDeviceInfo.Text = "Loading data for: " + device.ClassName.ToLower();
-                await Task.Run(() => device.GetDriveInfo());
-                chgBar_Devices.BarFillSize += step;
+                await Task.Run(() => device.GetDriveInfo());     // get device data info
+                chgBar_Devices.BarFillSize += step;              // updata loading charging bar
             }
         }
     }
