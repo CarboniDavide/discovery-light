@@ -536,6 +536,15 @@
     <EmbeddedResource Include="UI\Forms\Main\_Footer.resx">
       <DependentUpon>_Footer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Main\_Main.de.resx">
+      <DependentUpon>_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Main\_Main.fr.resx">
+      <DependentUpon>_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\Main\_Main.it.resx">
+      <DependentUpon>_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\Main\_Main.resx">
       <DependentUpon>_Main.cs</DependentUpon>
     </EmbeddedResource>

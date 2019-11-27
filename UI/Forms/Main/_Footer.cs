@@ -21,6 +21,16 @@ namespace DiscoveryLight.UI.Forms.Main
 
         public String FooterTittleName;
 
+        private String waitMessage;
+        private String loadMessage;
+
+
+        [Localizable(true)]
+        public string WaitMessage { get => waitMessage; set => waitMessage = value; }
+        [Localizable(true)]
+        public string LoadMessage { get => loadMessage; set => loadMessage = value; }
+
+
         /// <summary>
         /// Change title values in footer bar
         /// </summary>
