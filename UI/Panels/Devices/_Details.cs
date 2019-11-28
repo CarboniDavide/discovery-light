@@ -21,22 +21,9 @@ namespace DiscoveryLight.UI.Panels.Devices
             InitializeComponent();
         }
 
-        public void StopLoadedTask()
-        {
-            foreach (Control c in this.Controls)
-            {
-                if (c.GetType().BaseType.FullName == typeof(BaseSubPanel).ToString())
-                {
-                    var t = (BaseSubPanel)c;
-                    t.StopLoadedSubTask();
-                }
-            }
-        }
-
         private void _Details_Load(object sender, EventArgs e)
         {
-            this.WmiNameSpace.Init();
-            this.WmiNameSpace.Load();
+            this.WmiNameSpace.Start();
         }
     }
 }
