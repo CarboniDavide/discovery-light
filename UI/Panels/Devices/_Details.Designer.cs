@@ -38,28 +38,22 @@
             // 
             resources.ApplyResources(this.WmiNameSpace, "WmiNameSpace");
             this.WmiNameSpace.Footer = null;
-            this.WmiNameSpace.ListValues = null;
             this.WmiNameSpace.Name = "WmiNameSpace";
             this.WmiNameSpace.SubPanelContainer = null;
-            this.WmiNameSpace.T = null;
             // 
             // WmiClasses
             // 
             resources.ApplyResources(this.WmiClasses, "WmiClasses");
             this.WmiClasses.Footer = null;
-            this.WmiClasses.ListValues = null;
             this.WmiClasses.Name = "WmiClasses";
             this.WmiClasses.SubPanelContainer = null;
-            this.WmiClasses.T = null;
             // 
             // WmiDetails
             // 
             resources.ApplyResources(this.WmiDetails, "WmiDetails");
             this.WmiDetails.Footer = null;
-            this.WmiDetails.ListValues = null;
             this.WmiDetails.Name = "WmiDetails";
             this.WmiDetails.SubPanelContainer = null;
-            this.WmiDetails.T = null;
             // 
             // _Details
             // 
