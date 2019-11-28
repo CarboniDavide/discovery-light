@@ -20,18 +20,18 @@ namespace DiscoveryLight.UI.Panels.Details
             InitializeComponent();
         }
 
-        public override void Init()
-        {
-            base.Init(lst_NameSpaces);
-            SubPanelContainer.WmiClasses.Init();
-        }
-
         /// <summary>
         /// Read all namespace available in the wmi managment class.
         /// Use Yeld to return each values in real time.
         /// </summary>
         /// <returns></returns>
-        public override IEnumerable<String> Get()
+        /// 
+        protected override void Set(dynamic list)
+        {
+            base.Set(lst_NameSpaces);
+        }
+
+        protected override IEnumerable<String> Get()
         {
             base.Get();
             ManagementClass nsClass = null;
@@ -39,6 +39,7 @@ namespace DiscoveryLight.UI.Panels.Details
 
             try
             {
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.pause, null));
                 // __namespace WMI class.
                 nsClass = new ManagementClass(new ManagementScope("root"), new ManagementPath("__namespace"), null);
                 collection = nsClass.GetInstances();
@@ -47,24 +48,34 @@ namespace DiscoveryLight.UI.Panels.Details
             catch (ManagementException e)
             {
                 LogHelper.Log(LogTarget.File, e.ToString());
+                nsClass = null;
             }
 
             if (nsClass == null)
+            {
                 yield return "Not Found";
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
+            }
             else
             {
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.init, collection.Count));
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.start, null));
                 foreach (ManagementObject ns in collection)
+                {
                     yield return (ns["Name"].ToString().ToUpper());
+                    onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.next, null));
+                }
+
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
                 nsClass.Dispose();
             }
         }
-        public override void OnChangeIndex(object sender, EventArgs e)
+        public void OnChangeIndex(object sender, EventArgs e)
         {
-            base.OnChangeIndex(sender, e);
-            if (ListValues.SelectedItem == "-- Select --") return;              // don't perform  default value
-            Sender["NameSpace"] = this.ListValues.SelectedItem.ToString();      // update the current select namespace
-            SubPanelContainer.WmiClasses.Load();                                // load all wmi classes for a selected namespace
-            
+            if (lst_NameSpaces.SelectedItem.Equals("-- Select --")) return;              // don't perform  default value
+            Sender["NameSpace"] = this.lst_NameSpaces.SelectedItem.ToString();           // update the current select namespace
+            SubPanelContainer.WmiClasses.Start();                                        // load all wmi classes for a selected namespace
+            SubPanelContainer.WmiDetails.Abort();                                        // Abort eventually thread loaded in details               
         }
     }
 }

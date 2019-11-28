@@ -21,18 +21,18 @@ namespace DiscoveryLight.UI.Panels.Details
             InitializeComponent();
         }
 
-        public override void Init()
-        {
-            base.Init(lst_WmiClassName);
-            SubPanelContainer.WmiDetails.Init();
-        }
-
         /// <summary>
         /// Get all classes for a selected namespace.
         /// Use Yeld to return each values in real time.
         /// </summary>
         /// <returns></returns>
-        public override IEnumerable<String> Get()
+        /// 
+        protected override void Set(dynamic list)
+        {
+            base.Set(lst_WmiClassName);
+        }
+
+        protected override IEnumerable<String> Get()
         {
             base.Get();
 
@@ -41,6 +41,7 @@ namespace DiscoveryLight.UI.Panels.Details
 
             try
             {
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.pause, null));
                 nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + Sender["NameSpace"]), new WqlObjectQuery("select * from meta_class"), null);
                 collection = nsClass.Get();
                 if (collection.Count == 0) nsClass = null;
@@ -51,25 +52,32 @@ namespace DiscoveryLight.UI.Panels.Details
                 nsClass = null;
             }
 
-            if (nsClass == null)
-                yield return ("Not Found");
+            if (nsClass == null) {
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
+            }
             else
             {
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.init, collection.Count));
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.start, null));
                 foreach (ManagementClass wmiClass in collection)
                     foreach (QualifierData qd in wmiClass.Qualifiers)
                         //use only static and dynamic
                         if (qd.Name.Equals("dynamic") || qd.Name.Equals("static"))
+                        {
                             yield return (wmiClass["__CLASS"].ToString());
+                            onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.next, null));
+                        }
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
                 nsClass.Dispose();
             }
         }
        
-        public override void OnChangeIndex(object sender, EventArgs e)
+        public void OnChangeIndex(object sender, EventArgs e)
         {
-            base.OnChangeIndex(sender, e);
-            if (ListValues.SelectedItem == "-- Select --") return;
-            Sender["WmiClassName"] = this.ListValues.SelectedItem.ToString();
-            SubPanelContainer.WmiDetails.Load();
+            if (lst_WmiClassName.SelectedItem.Equals("-- Select --")) return;
+            Sender["WmiClassName"] = this.lst_WmiClassName.SelectedItem.ToString();
+            SubPanelContainer.WmiDetails.Start();
+            onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
         }
     }
 }

@@ -20,9 +20,9 @@ namespace DiscoveryLight.UI.Panels.Details
             InitializeComponent();
         }
 
-        public override void Init()
+        protected override void Set(dynamic list)
         {
-            base.Init(lst_Details);
+            base.Set(lst_Details);
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace DiscoveryLight.UI.Panels.Details
         /// Use Yeld to return each values in real time.
         /// </summary>
         /// <returns></returns>
-        public override IEnumerable<String> Get()
+        protected override IEnumerable<String> Get()
         {
             base.Get();
 
@@ -39,13 +39,10 @@ namespace DiscoveryLight.UI.Panels.Details
 
             try
             {
-                // change message in main footer 
-                this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = "Wait one moment ..."; }));
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.pause, null));
                 nsClass = new ManagementObjectSearcher(new ManagementScope("root\\" + Sender["NameSpace"]), new WqlObjectQuery("select * from " + Sender["WmiClassName"]), null);
                 collection = nsClass.Get();
                 if (collection.Count == 0) nsClass = null;
-                // restore old messagae in main footer
-                this.Invoke((System.Action)(() => { Footer.ChartBar.CustomText = Footer.FooterTittleName; }));
             }
             catch (ManagementException e)
             {
@@ -55,16 +52,19 @@ namespace DiscoveryLight.UI.Panels.Details
 
 
             if (nsClass == null)
+            {
                 yield return ("Not Found");
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
+            }
             else
             {
                 int count = 0;
-                double step = (double)Decimal.Divide(100, collection.Count);
-                double barSize = 0;
-
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.init, collection.Count));
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.start, null));
+                
                 foreach (ManagementObject wmiObject in collection)                          // read all subdrive info
                 {
-                   
+
                     count++;
                     yield return (" [" + count.ToString() + "]");
 
@@ -87,12 +87,11 @@ namespace DiscoveryLight.UI.Panels.Details
                         }
                     }
                     yield return (" ");
-                    barSize += step;
-                    this.Invoke((System.Action)(() => { Footer.ChartBar.BarFillSize = (int)barSize; }));
+                    onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.next, null));
                 }
                 if (count == 0) yield return ("Not Found");
+                onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
                 nsClass.Dispose();
-                this.Invoke((System.Action)(() => { Footer.ChartBar.BarFillSize = 0; }));
             }
         }
     }
