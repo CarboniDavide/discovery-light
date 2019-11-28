@@ -117,12 +117,18 @@ namespace DiscoveryLight.UI.Panels.Slider
             RemoveSlide();
         }
 
+        public void SetMainTitle(object sender, EventArgs e)
+        {
+            _Footer Footer = this.Parent.Parent.Controls.Cast<Control>().Where(d => d.GetType().FullName.Equals(typeof(_Footer).FullName)).FirstOrDefault() as _Footer;
+            if (Footer == null) return;
+            Footer.SetMainTitle();
+        }
+
         private void _Slider_Load(object sender, EventArgs e)
         {
             this.MoveOBject.OnFinishMoving += OnFinish;
-            _Footer Footer = this.Parent.Parent.Controls.Cast<Control>().Where(d => d.GetType().FullName.Equals(typeof(_Footer).FullName)).FirstOrDefault() as _Footer;
-            if (Footer == null) return;
-            this.ControlAdded += new ControlEventHandler(Footer.ChangeTitle);
+            
+            this.ControlAdded += new ControlEventHandler(SetMainTitle);
         }
     }
 }
