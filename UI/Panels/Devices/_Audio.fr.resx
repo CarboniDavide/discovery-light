@@ -127,4 +127,7 @@
   <data name="pic_Divisor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="$this.PanelName" xml:space="preserve">
+    <value>Audio</value>
+  </data>
 </root>

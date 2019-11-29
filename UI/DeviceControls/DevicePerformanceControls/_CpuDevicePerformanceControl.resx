@@ -117,163 +117,166 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_CpuSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 93</value>
-  </data>
-  <data name="&gt;&gt;lbl_CpuSpeed.Name" xml:space="preserve">
-    <value>lbl_CpuSpeed</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_CpuSpeed_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="chartCpuUsage.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="lbl_CpuSpeed_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>186, 92</value>
-  </data>
-  <data name="pnl_Threads.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 160</value>
-  </data>
-  <data name="&gt;&gt;chartCpuUsage.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pnl_Threads.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left, Right</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chartCpuUsage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>21, 17</value>
   </data>
   <data name="chartCpuUsage.Size" type="System.Drawing.Size, System.Drawing">
     <value>90, 90</value>
   </data>
-  <data name="&gt;&gt;pic_Divisor_002.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls.DevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pnl_Threads.Name" xml:space="preserve">
-    <value>pnl_Threads</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>_CpuDevicePerformanceControl</value>
-  </data>
-  <data name="chartCpuUsage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 17</value>
-  </data>
-  <data name="lbl_CpuSpeed_Value.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>No</value>
-  </data>
-  <data name="pnl_Threads.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 142</value>
-  </data>
-  <data name="&gt;&gt;lbl_CpuSpeed_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="pic_Divisor_002.Size" type="System.Drawing.Size, System.Drawing">
-    <value>5, 63</value>
-  </data>
-  <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="&gt;&gt;lbl_CpuSpeed_Value.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl_CpuSpeed.Text" xml:space="preserve">
-    <value>Speed</value>
-  </data>
-  <data name="&gt;&gt;lbl_CpuSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnl_Threads.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_CpuSpeed_Value.Text" xml:space="preserve">
-    <value>n/a</value>
-  </data>
-  <data name="lbl_CpuSpeed.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="chartCpuUsage.TabIndex" type="System.Int32, mscorlib">
     <value>64</value>
   </data>
-  <data name="lbl_CpuSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;chartCpuUsage.Name" xml:space="preserve">
+    <value>chartCpuUsage</value>
   </data>
-  <data name="&gt;&gt;pic_Divisor_002.Name" xml:space="preserve">
-    <value>pic_Divisor_002</value>
+  <data name="&gt;&gt;chartCpuUsage.Type" xml:space="preserve">
+    <value>WinformComponents.ChartCircle, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;chartCpuUsage.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;chartCpuUsage.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="lbl_CpuSpeed_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="lbl_CpuSpeed_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_CpuSpeed_Value.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_CpuSpeed_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 92</value>
+  </data>
+  <data name="lbl_CpuSpeed_Value.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="lbl_CpuSpeed_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 13</value>
+  </data>
+  <data name="lbl_CpuSpeed_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="lbl_CpuSpeed_Value.Text" xml:space="preserve">
+    <value>n/a</value>
+  </data>
+  <data name="lbl_CpuSpeed_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lbl_CpuSpeed_Value.Name" xml:space="preserve">
     <value>lbl_CpuSpeed_Value</value>
   </data>
-  <data name="pic_Divisor_002.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 43</value>
-  </data>
-  <data name="&gt;&gt;chartCpuUsage.Type" xml:space="preserve">
-    <value>WinformComponents.ChartCircle, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="pnl_Threads.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="&gt;&gt;chartCpuUsage.Name" xml:space="preserve">
-    <value>chartCpuUsage</value>
-  </data>
-  <data name="&gt;&gt;chartCpuUsage.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="&gt;&gt;lbl_CpuSpeed_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;pic_Divisor_002.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pnl_Threads.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_CpuSpeed_Value.Parent" xml:space="preserve">
     <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_CpuSpeed_Value.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_CpuSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lbl_CpuSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_CpuSpeed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_CpuSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 93</value>
+  </data>
+  <data name="lbl_CpuSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 13</value>
   </data>
   <data name="lbl_CpuSpeed.TabIndex" type="System.Int32, mscorlib">
     <value>74</value>
   </data>
-  <data name="pic_Divisor_002.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
+  <data name="lbl_CpuSpeed.Text" xml:space="preserve">
+    <value>Speed</value>
   </data>
-  <data name="lbl_CpuSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
+  <data name="&gt;&gt;lbl_CpuSpeed.Name" xml:space="preserve">
+    <value>lbl_CpuSpeed</value>
   </data>
-  <data name="lbl_CpuSpeed_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_CpuSpeed.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;pnl_Threads.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbl_CpuSpeed_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 13</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 308</value>
+  <data name="&gt;&gt;lbl_CpuSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbl_CpuSpeed.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;lbl_CpuSpeed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pnl_Threads.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="pnl_Threads.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 142</value>
+  </data>
+  <data name="pnl_Threads.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 160</value>
+  </data>
+  <data name="pnl_Threads.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;pnl_Threads.Name" xml:space="preserve">
+    <value>pnl_Threads</value>
+  </data>
+  <data name="&gt;&gt;pnl_Threads.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnl_Threads.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnl_Threads.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="pic_Divisor_002.Location" type="System.Drawing.Point, System.Drawing">
+    <value>131, 43</value>
+  </data>
+  <data name="pic_Divisor_002.Size" type="System.Drawing.Size, System.Drawing">
+    <value>3, 63</value>
+  </data>
+  <data name="pic_Divisor_002.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.Name" xml:space="preserve">
+    <value>pic_Divisor_002</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 308</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_CpuDevicePerformanceControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls.DevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

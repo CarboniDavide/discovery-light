@@ -34,9 +34,9 @@
             this.lbl_TitleComboBock = new System.Windows.Forms.Label();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.NetworkDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl();
-            this.NetworkDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
+            this.NetworkDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             this.SuspendLayout();
@@ -64,17 +64,6 @@
             this.NetworkDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.NetworkDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
-            // NetworkDeviceDataControl
-            // 
-            this.NetworkDeviceDataControl.ClassName = "_NetworkDeviceDataControl";
-            this.NetworkDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl);
-            this.NetworkDeviceDataControl.CurrentDevice = null;
-            this.NetworkDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.NetworkDeviceDataControl, "NetworkDeviceDataControl");
-            this.NetworkDeviceDataControl.Name = "NetworkDeviceDataControl";
-            this.NetworkDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.NetworkDeviceDataControl.TokenSource = cancellationTokenSource2;
-            // 
             // pic_Divisor_001
             // 
             resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
@@ -88,6 +77,17 @@
             this.pic_Divisor_002.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.pic_Divisor_002.Name = "pic_Divisor_002";
             this.pic_Divisor_002.TabStop = false;
+            // 
+            // NetworkDeviceDataControl
+            // 
+            this.NetworkDeviceDataControl.ClassName = "_NetworkDeviceDataControl";
+            this.NetworkDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl);
+            this.NetworkDeviceDataControl.CurrentDevice = null;
+            this.NetworkDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.NetworkDeviceDataControl, "NetworkDeviceDataControl");
+            this.NetworkDeviceDataControl.Name = "NetworkDeviceDataControl";
+            this.NetworkDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.NetworkDeviceDataControl.TokenSource = cancellationTokenSource2;
             // 
             // _Network
             // 

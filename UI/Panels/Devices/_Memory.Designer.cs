@@ -33,10 +33,10 @@
             System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
-            this.MemoryDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl();
             this.MemoryDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_003 = new System.Windows.Forms.PictureBox();
+            this.MemoryDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).BeginInit();
             this.SuspendLayout();
@@ -53,17 +53,6 @@
             resources.ApplyResources(this.lbl_TitleComboBox, "lbl_TitleComboBox");
             this.lbl_TitleComboBox.Name = "lbl_TitleComboBox";
             // 
-            // MemoryDeviceDataControl
-            // 
-            this.MemoryDeviceDataControl.ClassName = "_MemoryDeviceDataControl";
-            this.MemoryDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl);
-            this.MemoryDeviceDataControl.CurrentDevice = null;
-            this.MemoryDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.MemoryDeviceDataControl, "MemoryDeviceDataControl");
-            this.MemoryDeviceDataControl.Name = "MemoryDeviceDataControl";
-            this.MemoryDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.MemoryDeviceDataControl.TokenSource = cancellationTokenSource1;
-            // 
             // MemoryDevicePerformanceControl
             // 
             this.MemoryDevicePerformanceControl.ClassName = "_MemoryDevicePerformanceControl";
@@ -73,7 +62,7 @@
             resources.ApplyResources(this.MemoryDevicePerformanceControl, "MemoryDevicePerformanceControl");
             this.MemoryDevicePerformanceControl.Name = "MemoryDevicePerformanceControl";
             this.MemoryDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.MemoryDevicePerformanceControl.TokenSource = cancellationTokenSource2;
+            this.MemoryDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // pic_Divisor_002
             // 
@@ -89,16 +78,27 @@
             this.pic_Divisor_003.Name = "pic_Divisor_003";
             this.pic_Divisor_003.TabStop = false;
             // 
+            // MemoryDeviceDataControl
+            // 
+            this.MemoryDeviceDataControl.ClassName = "_MemoryDeviceDataControl";
+            this.MemoryDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl);
+            this.MemoryDeviceDataControl.CurrentDevice = null;
+            this.MemoryDeviceDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.MemoryDeviceDataControl, "MemoryDeviceDataControl");
+            this.MemoryDeviceDataControl.Name = "MemoryDeviceDataControl";
+            this.MemoryDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.MemoryDeviceDataControl.TokenSource = cancellationTokenSource2;
+            // 
             // _Memory
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.MemoryDevicePerformanceControl);
-            this.Controls.Add(this.MemoryDeviceDataControl);
             this.Controls.Add(this.pic_Divisor_002);
             this.Controls.Add(this.cmb_Blocks);
             this.Controls.Add(this.lbl_TitleComboBox);
             this.Controls.Add(this.pic_Divisor_003);
+            this.Controls.Add(this.MemoryDeviceDataControl);
             this.Name = "_Memory";
             this.PanelIndex = 3;
             this.Load += new System.EventHandler(this._Memory_Load);
@@ -114,7 +114,7 @@
         private System.Windows.Forms.ComboBox cmb_Blocks;
         private System.Windows.Forms.Label lbl_TitleComboBox;
         private System.Windows.Forms.PictureBox pic_Divisor_002;
-        private DeviceControls.DeviceDataControls._MemoryDeviceDataControl MemoryDeviceDataControl;
         private DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl MemoryDevicePerformanceControl;
+        private DeviceControls.DeviceDataControls._MemoryDeviceDataControl MemoryDeviceDataControl;
     }
 }

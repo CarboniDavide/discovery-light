@@ -117,129 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_Tipology.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_Tipology.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 25</value>
-  </data>
   <data name="lbl_Tipology.Text" xml:space="preserve">
-    <value>Art:</value>
-  </data>
-  <data name="lbl_Manufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Manufacturer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 25</value>
+    <value>Art</value>
   </data>
   <data name="lbl_Manufacturer.Text" xml:space="preserve">
     <value>Produzent</value>
   </data>
-  <data name="lbl_InterfaceID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_InterfaceID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 25</value>
-  </data>
-  <data name="lbl_InterfaceID.Text" xml:space="preserve">
-    <value>Schnittstellen ID:</value>
-  </data>
-  <data name="lbl_DeviceID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_DeviceID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 25</value>
-  </data>
-  <data name="lbl_DeviceID.Text" xml:space="preserve">
-    <value>Geräte ID:</value>
-  </data>
-  <data name="lbl_Speed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Speed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 25</value>
-  </data>
   <data name="lbl_Speed.Text" xml:space="preserve">
-    <value>Geschwindigkeit:</value>
-  </data>
-  <data name="lbl_MACAddress.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_MACAddress.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 25</value>
+    <value>Geschwindigkeit</value>
   </data>
   <data name="lbl_MACAddress.Text" xml:space="preserve">
-    <value>MAC-Adresse:</value>
+    <value>MAC-Adresse</value>
   </data>
-  <data name="lbl_AdapterType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="lbl_IPAddress.Text" xml:space="preserve">
+    <value>IP Addresse</value>
   </data>
-  <data name="lbl_AdapterType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 25</value>
+  <data name="lbl_PrimaryDNS.Text" xml:space="preserve">
+    <value>Bevorzugter DNS-Server</value>
   </data>
-  <data name="lbl_Manufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="lbl_SecondaryDNS.Text" xml:space="preserve">
+    <value>Alternativer DNS-Server</value>
   </data>
-  <data name="lbl_Manufacturer_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 96</value>
+  <data name="lbl_SubnetMask.Text" xml:space="preserve">
+    <value>Subnetmaske</value>
   </data>
-  <data name="lbl_Manufacturer_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 20</value>
-  </data>
-  <data name="lbl_Tipology_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Tipology_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 70</value>
-  </data>
-  <data name="lbl_Tipology_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 20</value>
-  </data>
-  <data name="lbl_InterfaceID_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_InterfaceID_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 170</value>
-  </data>
-  <data name="lbl_InterfaceID_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 20</value>
-  </data>
-  <data name="lbl_Speed_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Speed_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 195</value>
-  </data>
-  <data name="lbl_Speed_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 20</value>
-  </data>
-  <data name="lbl_MACAddress_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_MACAddress_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 220</value>
-  </data>
-  <data name="lbl_MACAddress_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 20</value>
-  </data>
-  <data name="lbl_AdapterType_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_AdapterType_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 121</value>
-  </data>
-  <data name="lbl_AdapterType_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 20</value>
-  </data>
-  <data name="lbl_DeviceID_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_DeviceID_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>175, 146</value>
-  </data>
-  <data name="lbl_DeviceID_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 20</value>
+  <data name="lbl_DeviceID.Text" xml:space="preserve">
+    <value>Geräte ID</value>
   </data>
 </root>

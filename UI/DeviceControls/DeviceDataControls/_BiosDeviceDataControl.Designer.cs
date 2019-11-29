@@ -48,6 +48,7 @@
             // lbl_BiosManufacturer_Value
             // 
             resources.ApplyResources(this.lbl_BiosManufacturer_Value, "lbl_BiosManufacturer_Value");
+            this.lbl_BiosManufacturer_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BiosManufacturer_Value.Name = "lbl_BiosManufacturer_Value";
             // 
             // lbl_BiosSerialNumber
@@ -68,16 +69,19 @@
             // lbl_BiosSerialNumber_Value
             // 
             resources.ApplyResources(this.lbl_BiosSerialNumber_Value, "lbl_BiosSerialNumber_Value");
+            this.lbl_BiosSerialNumber_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BiosSerialNumber_Value.Name = "lbl_BiosSerialNumber_Value";
             // 
             // lbl_BiosVersion_Value
             // 
             resources.ApplyResources(this.lbl_BiosVersion_Value, "lbl_BiosVersion_Value");
+            this.lbl_BiosVersion_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BiosVersion_Value.Name = "lbl_BiosVersion_Value";
             // 
             // lbl_BiosReleaseDate_Value
             // 
             resources.ApplyResources(this.lbl_BiosReleaseDate_Value, "lbl_BiosReleaseDate_Value");
+            this.lbl_BiosReleaseDate_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BiosReleaseDate_Value.Name = "lbl_BiosReleaseDate_Value";
             // 
             // _BiosDeviceDataControl

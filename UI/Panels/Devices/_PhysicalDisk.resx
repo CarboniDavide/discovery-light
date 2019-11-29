@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 327</value>
+    <value>76, 331</value>
   </data>
   <data name="cmb_Blocks.Size" type="System.Drawing.Size, System.Drawing">
     <value>385, 21</value>
@@ -151,7 +151,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="lbl_TilteComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 325</value>
+    <value>3, 330</value>
   </data>
   <data name="lbl_TilteComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -199,10 +199,10 @@
     <value>0</value>
   </data>
   <data name="PhysicalDiskDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 7</value>
+    <value>3, 4</value>
   </data>
   <data name="PhysicalDiskDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 303</value>
+    <value>465, 313</value>
   </data>
   <data name="PhysicalDiskDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
     <value>170</value>
@@ -223,7 +223,7 @@
     <value>Top, Bottom</value>
   </data>
   <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 317</value>
+    <value>11, 323</value>
   </data>
   <data name="pic_Divisor_001.Size" type="System.Drawing.Size, System.Drawing">
     <value>450, 1</value>

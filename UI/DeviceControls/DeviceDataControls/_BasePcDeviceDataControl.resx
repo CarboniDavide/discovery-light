@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbl_Model.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Model.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -154,13 +154,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Model.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>23</value>
   </data>
   <data name="lbl_Manufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Manufacturer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Manufacturer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -190,13 +190,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Manufacturer.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>22</value>
   </data>
   <data name="lbl_Type.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Type.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Type.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -226,13 +226,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Type.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>21</value>
   </data>
   <data name="lbl_Name.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -262,13 +262,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Name.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>20</value>
   </data>
   <data name="lbl_SystemOS.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_SystemOS.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_SystemOS.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -298,13 +298,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_SystemOS.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>19</value>
   </data>
   <data name="lbl_Producer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Producer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Producer.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -334,13 +334,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Producer.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>18</value>
   </data>
   <data name="lbl_NumberID.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_NumberID.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_NumberID.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -370,13 +370,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_NumberID.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>17</value>
   </data>
   <data name="lbl_Domain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Domain.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Domain.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -406,13 +406,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Domain.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="lbl_Version.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Version.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Version.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -442,13 +442,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Version.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="lbl_Architectur.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Architectur.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Architectur.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -478,13 +478,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Architectur.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>14</value>
   </data>
   <data name="lbl_User.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_User.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_User.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -514,13 +514,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_User.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Name_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -550,13 +550,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="lbl_NumberID_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_NumberID_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_NumberID_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -586,13 +586,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_NumberID_Value.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="lbl_User_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_User_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_User_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -622,13 +622,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_User_Value.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="lbl_Domain_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Domain_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Domain_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -658,13 +658,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Domain_Value.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="lbl_Version_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Version_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Version_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -694,13 +694,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Version_Value.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="lbl_Architectur_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Architectur_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Architectur_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -730,13 +730,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Architectur_Value.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="lbl_Model_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Model_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Model_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -766,13 +766,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Model_Value.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="lbl_Manufaturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Manufaturer_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Manufaturer_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -802,13 +802,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Manufaturer_Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="lbl_Type_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Type_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Type_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -838,13 +838,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Type_Value.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="lbl_SystemOS_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_SystemOS_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_SystemOS_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -874,13 +874,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_SystemOS_Value.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="lbl_Producer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
   <data name="lbl_Producer_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Producer_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -910,6 +910,60 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Producer_Value.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pic_Divisor_001.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 166</value>
+  </data>
+  <data name="pic_Divisor_001.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 1</value>
+  </data>
+  <data name="pic_Divisor_001.TabIndex" type="System.Int32, mscorlib">
+    <value>219</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.Name" xml:space="preserve">
+    <value>pic_Divisor_001</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 227</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>350, 1</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>220</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

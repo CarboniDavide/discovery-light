@@ -118,24 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lbl_Tipology.Text" xml:space="preserve">
-    <value>Tipo:</value>
+    <value>Tipo</value>
   </data>
   <data name="lbl_Manufacturer.Text" xml:space="preserve">
-    <value>Produttore:</value>
-  </data>
-  <data name="lbl_InterfaceID.Text" xml:space="preserve">
-    <value>ID Interfaccia:</value>
-  </data>
-  <data name="lbl_DeviceID.Text" xml:space="preserve">
-    <value>ID Dispositivo:</value>
+    <value>Produttore</value>
   </data>
   <data name="lbl_Speed.Text" xml:space="preserve">
-    <value>Velocità:</value>
+    <value>Velocità</value>
   </data>
   <data name="lbl_MACAddress.Text" xml:space="preserve">
-    <value>Indirizzo MAC:</value>
+    <value>Indirizzo MAC</value>
   </data>
   <data name="lbl_AdapterType.Text" xml:space="preserve">
-    <value>Adatattore:</value>
+    <value>Adatattore</value>
+  </data>
+  <data name="lbl_IPAddress.Text" xml:space="preserve">
+    <value>Indirizzo IP</value>
+  </data>
+  <data name="lbl_PrimaryDNS.Text" xml:space="preserve">
+    <value>DNS Primario</value>
+  </data>
+  <data name="lbl_SecondaryDNS.Text" xml:space="preserve">
+    <value>DNS Secondario</value>
+  </data>
+  <data name="lbl_SubnetMask.Text" xml:space="preserve">
+    <value>Maschera di rete</value>
+  </data>
+  <data name="lbl_DeviceID.Text" xml:space="preserve">
+    <value>ID Dispositivo</value>
   </data>
 </root>

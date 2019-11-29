@@ -32,8 +32,8 @@
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
-            this.VideoDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl();
             this.pic_Divisor = new System.Windows.Forms.PictureBox();
+            this.VideoDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,23 +49,23 @@
             resources.ApplyResources(this.lbl_TitleComboBox, "lbl_TitleComboBox");
             this.lbl_TitleComboBox.Name = "lbl_TitleComboBox";
             // 
-            // VideoDeviceDataControl
-            // 
-            this.VideoDeviceDataControl.ClassName = "_VideoDeviceDataControl";
-            this.VideoDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl);
-            this.VideoDeviceDataControl.CurrentDevice = null;
-            this.VideoDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.VideoDeviceDataControl, "VideoDeviceDataControl");
-            this.VideoDeviceDataControl.Name = "VideoDeviceDataControl";
-            this.VideoDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.VideoDeviceDataControl.TokenSource = cancellationTokenSource1;
-            // 
             // pic_Divisor
             // 
             resources.ApplyResources(this.pic_Divisor, "pic_Divisor");
             this.pic_Divisor.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pic_Divisor.Name = "pic_Divisor";
             this.pic_Divisor.TabStop = false;
+            // 
+            // VideoDeviceDataControl
+            // 
+            resources.ApplyResources(this.VideoDeviceDataControl, "VideoDeviceDataControl");
+            this.VideoDeviceDataControl.ClassName = "_VideoDeviceDataControl";
+            this.VideoDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl);
+            this.VideoDeviceDataControl.CurrentDevice = null;
+            this.VideoDeviceDataControl.CurrentSubDevice = null;
+            this.VideoDeviceDataControl.Name = "VideoDeviceDataControl";
+            this.VideoDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.VideoDeviceDataControl.TokenSource = cancellationTokenSource1;
             // 
             // _Video
             // 

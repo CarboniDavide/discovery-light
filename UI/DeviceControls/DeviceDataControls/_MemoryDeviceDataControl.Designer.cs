@@ -61,11 +61,13 @@
             // lbl_BlockNumberParty_Value
             // 
             resources.ApplyResources(this.lbl_BlockNumberParty_Value, "lbl_BlockNumberParty_Value");
+            this.lbl_BlockNumberParty_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockNumberParty_Value.Name = "lbl_BlockNumberParty_Value";
             // 
             // lbl_BlockManufacturer_Value
             // 
             resources.ApplyResources(this.lbl_BlockManufacturer_Value, "lbl_BlockManufacturer_Value");
+            this.lbl_BlockManufacturer_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockManufacturer_Value.Name = "lbl_BlockManufacturer_Value";
             // 
             // lbl_BlockSerial
@@ -81,11 +83,13 @@
             // lbl_BlockBusSize_Value
             // 
             resources.ApplyResources(this.lbl_BlockBusSize_Value, "lbl_BlockBusSize_Value");
+            this.lbl_BlockBusSize_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockBusSize_Value.Name = "lbl_BlockBusSize_Value";
             // 
             // lbl_BlockSpeed_Value
             // 
             resources.ApplyResources(this.lbl_BlockSpeed_Value, "lbl_BlockSpeed_Value");
+            this.lbl_BlockSpeed_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockSpeed_Value.Name = "lbl_BlockSpeed_Value";
             // 
             // lbl_BlockLocation
@@ -101,6 +105,7 @@
             // lbl_BlockSerial_Value
             // 
             resources.ApplyResources(this.lbl_BlockSerial_Value, "lbl_BlockSerial_Value");
+            this.lbl_BlockSerial_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockSerial_Value.Name = "lbl_BlockSerial_Value";
             // 
             // lbl_BlockSpeed
@@ -111,26 +116,31 @@
             // lbl_BlockLocation_Value
             // 
             resources.ApplyResources(this.lbl_BlockLocation_Value, "lbl_BlockLocation_Value");
+            this.lbl_BlockLocation_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockLocation_Value.Name = "lbl_BlockLocation_Value";
             // 
             // lbl_BlockSize_Value
             // 
             resources.ApplyResources(this.lbl_BlockSize_Value, "lbl_BlockSize_Value");
+            this.lbl_BlockSize_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockSize_Value.Name = "lbl_BlockSize_Value";
             // 
             // lbl_Type_Value
             // 
             resources.ApplyResources(this.lbl_Type_Value, "lbl_Type_Value");
+            this.lbl_Type_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Type_Value.Name = "lbl_Type_Value";
             // 
             // lbl_Block_Value
             // 
             resources.ApplyResources(this.lbl_Block_Value, "lbl_Block_Value");
+            this.lbl_Block_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Block_Value.Name = "lbl_Block_Value";
             // 
             // lbl_Size_Value
             // 
             resources.ApplyResources(this.lbl_Size_Value, "lbl_Size_Value");
+            this.lbl_Size_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Size_Value.Name = "lbl_Size_Value";
             // 
             // lbl_BlockManufacturer
@@ -166,6 +176,7 @@
             // lbl_BlockVoltage_Value
             // 
             resources.ApplyResources(this.lbl_BlockVoltage_Value, "lbl_BlockVoltage_Value");
+            this.lbl_BlockVoltage_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockVoltage_Value.Name = "lbl_BlockVoltage_Value";
             // 
             // lbl_BlockSlotPosition
@@ -176,6 +187,7 @@
             // lbl_BlockSlotPosition_Value
             // 
             resources.ApplyResources(this.lbl_BlockSlotPosition_Value, "lbl_BlockSlotPosition_Value");
+            this.lbl_BlockSlotPosition_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockSlotPosition_Value.Name = "lbl_BlockSlotPosition_Value";
             // 
             // pic_Divisor_001

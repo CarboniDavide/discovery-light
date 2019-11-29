@@ -198,27 +198,6 @@
   <data name="&gt;&gt;NetworkDevicePerformanceControl.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="NetworkDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
-  </data>
-  <data name="NetworkDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>480, 260</value>
-  </data>
-  <data name="NetworkDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
-    <value>219</value>
-  </data>
-  <data name="&gt;&gt;NetworkDeviceDataControl.Name" xml:space="preserve">
-    <value>NetworkDeviceDataControl</value>
-  </data>
-  <data name="&gt;&gt;NetworkDeviceDataControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;NetworkDeviceDataControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;NetworkDeviceDataControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
@@ -266,6 +245,27 @@
   </data>
   <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="NetworkDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 3</value>
+  </data>
+  <data name="NetworkDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>483, 310</value>
+  </data>
+  <data name="NetworkDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>219</value>
+  </data>
+  <data name="&gt;&gt;NetworkDeviceDataControl.Name" xml:space="preserve">
+    <value>NetworkDeviceDataControl</value>
+  </data>
+  <data name="&gt;&gt;NetworkDeviceDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;NetworkDeviceDataControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NetworkDeviceDataControl.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

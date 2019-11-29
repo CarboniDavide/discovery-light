@@ -185,9 +185,6 @@
   <data name="lbl_CacheUsageMax.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lbl_PageOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 13</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbl_PageWrite.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Left</value>
@@ -210,9 +207,6 @@
   <data name="lbl_PageRead_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;lbl_CacheUsageMax_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="lbl_PageOut_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>100, 258</value>
   </data>
@@ -227,6 +221,9 @@
   </data>
   <data name="lbl_Free.TabIndex" type="System.Int32, mscorlib">
     <value>93</value>
+  </data>
+  <data name="lbl_CacheUsage.Text" xml:space="preserve">
+    <value>Cache</value>
   </data>
   <data name="lbl_PageRead_Value.TabIndex" type="System.Int32, mscorlib">
     <value>87</value>
@@ -366,6 +363,9 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>_MemoryDevicePerformanceControl</value>
   </data>
+  <data name="lbl_PageRead.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
   <data name="&gt;&gt;lbl_PagePersec.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -378,8 +378,8 @@
   <data name="lbl_PageRead.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;lbl_PagePersec_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="chartRamUsage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 90</value>
   </data>
   <data name="lbl_PageIn_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>67, 13</value>
@@ -486,6 +486,9 @@
   <data name="&gt;&gt;lbl_PageRead.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="&gt;&gt;lbl_PagePersec_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;lbl_RamOut_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -521,9 +524,6 @@
   </data>
   <data name="lbl_PageRead_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Right</value>
-  </data>
-  <data name="chartRamUsage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>90, 90</value>
   </data>
   <data name="lbl_PageWrite_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -564,8 +564,8 @@
   <data name="&gt;&gt;lbl_PageWrite_Value.Name" xml:space="preserve">
     <value>lbl_PageWrite_Value</value>
   </data>
-  <data name="lbl_CacheUsage.Text" xml:space="preserve">
-    <value>Cache</value>
+  <data name="&gt;&gt;lbl_CacheUsageMax_Value.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_PageIn_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -669,8 +669,8 @@
   <data name="lbl_PageOut.TabIndex" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="lbl_PageRead.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 13</value>
+  <data name="lbl_PageOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 13</value>
   </data>
   <data name="&gt;&gt;lbl_RamOut.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

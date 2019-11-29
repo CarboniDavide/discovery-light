@@ -52,6 +52,10 @@
             this.lbl_Type_Value = new System.Windows.Forms.Label();
             this.lbl_SystemOS_Value = new System.Windows.Forms.Label();
             this.lbl_Producer_Value = new System.Windows.Forms.Label();
+            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Model
@@ -112,62 +116,89 @@
             // lbl_Name_Value
             // 
             resources.ApplyResources(this.lbl_Name_Value, "lbl_Name_Value");
+            this.lbl_Name_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Name_Value.Name = "lbl_Name_Value";
             // 
             // lbl_NumberID_Value
             // 
             resources.ApplyResources(this.lbl_NumberID_Value, "lbl_NumberID_Value");
+            this.lbl_NumberID_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_NumberID_Value.Name = "lbl_NumberID_Value";
             // 
             // lbl_User_Value
             // 
             resources.ApplyResources(this.lbl_User_Value, "lbl_User_Value");
+            this.lbl_User_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_User_Value.Name = "lbl_User_Value";
             // 
             // lbl_Domain_Value
             // 
             resources.ApplyResources(this.lbl_Domain_Value, "lbl_Domain_Value");
+            this.lbl_Domain_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Domain_Value.Name = "lbl_Domain_Value";
             // 
             // lbl_Version_Value
             // 
             resources.ApplyResources(this.lbl_Version_Value, "lbl_Version_Value");
+            this.lbl_Version_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Version_Value.Name = "lbl_Version_Value";
             // 
             // lbl_Architectur_Value
             // 
             resources.ApplyResources(this.lbl_Architectur_Value, "lbl_Architectur_Value");
+            this.lbl_Architectur_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Architectur_Value.Name = "lbl_Architectur_Value";
             // 
             // lbl_Model_Value
             // 
             resources.ApplyResources(this.lbl_Model_Value, "lbl_Model_Value");
+            this.lbl_Model_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Model_Value.Name = "lbl_Model_Value";
             // 
             // lbl_Manufaturer_Value
             // 
             resources.ApplyResources(this.lbl_Manufaturer_Value, "lbl_Manufaturer_Value");
+            this.lbl_Manufaturer_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Manufaturer_Value.Name = "lbl_Manufaturer_Value";
             // 
             // lbl_Type_Value
             // 
             resources.ApplyResources(this.lbl_Type_Value, "lbl_Type_Value");
+            this.lbl_Type_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Type_Value.Name = "lbl_Type_Value";
             // 
             // lbl_SystemOS_Value
             // 
             resources.ApplyResources(this.lbl_SystemOS_Value, "lbl_SystemOS_Value");
+            this.lbl_SystemOS_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_SystemOS_Value.Name = "lbl_SystemOS_Value";
             // 
             // lbl_Producer_Value
             // 
             resources.ApplyResources(this.lbl_Producer_Value, "lbl_Producer_Value");
+            this.lbl_Producer_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Producer_Value.Name = "lbl_Producer_Value";
+            // 
+            // pic_Divisor_001
+            // 
+            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
+            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pic_Divisor_001.Name = "pic_Divisor_001";
+            this.pic_Divisor_001.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
             // 
             // _BasePcDeviceDataControl
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic_Divisor_001);
             this.Controls.Add(this.lbl_Producer_Value);
             this.Controls.Add(this.lbl_SystemOS_Value);
             this.Controls.Add(this.lbl_Type_Value);
@@ -193,6 +224,8 @@
             this.Name = "_BasePcDeviceDataControl";
             this.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.TokenSource = cancellationTokenSource1;
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,5 +254,7 @@
         private System.Windows.Forms.Label lbl_Type_Value;
         private System.Windows.Forms.Label lbl_SystemOS_Value;
         private System.Windows.Forms.Label lbl_Producer_Value;
+        private System.Windows.Forms.PictureBox pic_Divisor_001;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

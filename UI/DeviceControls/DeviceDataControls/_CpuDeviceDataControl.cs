@@ -39,7 +39,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             base.show();
             var CurrentSubDevice = (CPU.Block)this.CurrentSubDevice;
             lbl_Name_Value.Text = CurrentSubDevice.Name;
-            lbl_Size_Value.Text = CurrentSubDevice.AddressSize;
+            lbl_Size_Value.Text = CurrentSubDevice.AddressSize + " bit";
             lbl_Description_Value.Text = CurrentSubDevice.Description;
             lbl_Producteur_Value.Text = CurrentSubDevice.Manufacturer;
             lbl_Revision_Value.Text = CurrentSubDevice.Revision;

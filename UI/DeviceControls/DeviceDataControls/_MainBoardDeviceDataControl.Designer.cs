@@ -72,26 +72,31 @@
             // lbl_Manufacturer_Value
             // 
             resources.ApplyResources(this.lbl_Manufacturer_Value, "lbl_Manufacturer_Value");
+            this.lbl_Manufacturer_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Manufacturer_Value.Name = "lbl_Manufacturer_Value";
             // 
             // lbl_Model_Value
             // 
             resources.ApplyResources(this.lbl_Model_Value, "lbl_Model_Value");
+            this.lbl_Model_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Model_Value.Name = "lbl_Model_Value";
             // 
             // lbl_Version_Value
             // 
             resources.ApplyResources(this.lbl_Version_Value, "lbl_Version_Value");
+            this.lbl_Version_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Version_Value.Name = "lbl_Version_Value";
             // 
             // lbl_PrimaryBus_Value
             // 
             resources.ApplyResources(this.lbl_PrimaryBus_Value, "lbl_PrimaryBus_Value");
+            this.lbl_PrimaryBus_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_PrimaryBus_Value.Name = "lbl_PrimaryBus_Value";
             // 
             // lbl_SecondaryBus_Value
             // 
             resources.ApplyResources(this.lbl_SecondaryBus_Value, "lbl_SecondaryBus_Value");
+            this.lbl_SecondaryBus_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_SecondaryBus_Value.Name = "lbl_SecondaryBus_Value";
             // 
             // lbl_SlotNumber
@@ -102,6 +107,7 @@
             // lbl_SlotNumber_Value
             // 
             resources.ApplyResources(this.lbl_SlotNumber_Value, "lbl_SlotNumber_Value");
+            this.lbl_SlotNumber_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_SlotNumber_Value.Name = "lbl_SlotNumber_Value";
             // 
             // _MainBoardDeviceDataControl

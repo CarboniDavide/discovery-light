@@ -55,36 +55,36 @@
             // 
             // chartCPU
             // 
-            resources.ApplyResources(this.chartCPU, "chartCPU");
             this.chartCPU.Activated = true;
+            resources.ApplyResources(this.chartCPU, "chartCPU");
             this.chartCPU.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartCPU.CircleFillColor = System.Drawing.Color.Orange;
             this.chartCPU.FillSize = 25;
             this.chartCPU.Name = "chartCPU";
             this.chartCPU.TextVisible = true;
-            this.chartCPU.Thickness = 10;
+            this.chartCPU.Thickness = 12;
             // 
             // chartHD
             // 
-            resources.ApplyResources(this.chartHD, "chartHD");
             this.chartHD.Activated = true;
+            resources.ApplyResources(this.chartHD, "chartHD");
             this.chartHD.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartHD.CircleFillColor = System.Drawing.Color.SeaGreen;
             this.chartHD.FillSize = 25;
             this.chartHD.Name = "chartHD";
             this.chartHD.TextVisible = true;
-            this.chartHD.Thickness = 10;
+            this.chartHD.Thickness = 12;
             // 
             // chartRAM
             // 
-            resources.ApplyResources(this.chartRAM, "chartRAM");
             this.chartRAM.Activated = true;
+            resources.ApplyResources(this.chartRAM, "chartRAM");
             this.chartRAM.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartRAM.CircleFillColor = System.Drawing.Color.RoyalBlue;
             this.chartRAM.FillSize = 25;
             this.chartRAM.Name = "chartRAM";
             this.chartRAM.TextVisible = true;
-            this.chartRAM.Thickness = 10;
+            this.chartRAM.Thickness = 12;
             // 
             // _BasePcDevicePerformanceControl
             // 

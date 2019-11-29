@@ -60,7 +60,7 @@
             this.chartRamUsage.FillSize = 25;
             this.chartRamUsage.Name = "chartRamUsage";
             this.chartRamUsage.TextVisible = true;
-            this.chartRamUsage.Thickness = 10;
+            this.chartRamUsage.Thickness = 12;
             // 
             // lbl_CacheUsage
             // 

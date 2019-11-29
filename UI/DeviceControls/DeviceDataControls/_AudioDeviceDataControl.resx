@@ -118,219 +118,189 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_Name.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_Name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 116</value>
-  </data>
-  <data name="lbl_Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>279, 25</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_Name.TabIndex" type="System.Int32, mscorlib">
-    <value>95</value>
-  </data>
-  <data name="lbl_Name.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="lbl_Name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Name" xml:space="preserve">
-    <value>lbl_Name</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbl_Manufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Manufacturer.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Manufacturer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 141</value>
-  </data>
-  <data name="lbl_Manufacturer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 25</value>
-  </data>
-  <data name="lbl_Manufacturer.TabIndex" type="System.Int32, mscorlib">
-    <value>96</value>
-  </data>
-  <data name="lbl_Manufacturer.Text" xml:space="preserve">
-    <value>Producer</value>
-  </data>
-  <data name="lbl_Manufacturer.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer.Name" xml:space="preserve">
-    <value>lbl_Manufacturer</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="lbl_PowerManagment.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbl_PowerManagment.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 25</value>
   </data>
-  <data name="lbl_PowerManagment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 166</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_PowerManagment.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
   </data>
   <data name="lbl_PowerManagment.Size" type="System.Drawing.Size, System.Drawing">
     <value>279, 25</value>
   </data>
-  <data name="lbl_PowerManagment.TabIndex" type="System.Int32, mscorlib">
-    <value>97</value>
-  </data>
-  <data name="lbl_PowerManagment.Text" xml:space="preserve">
-    <value>Power managment</value>
-  </data>
   <data name="lbl_PowerManagment.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_PowerManagment.Name" xml:space="preserve">
-    <value>lbl_PowerManagment</value>
-  </data>
-  <data name="&gt;&gt;lbl_PowerManagment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PowerManagment.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_PowerManagment.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 116</value>
-  </data>
-  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 25</value>
-  </data>
-  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="lbl_Name_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
-    <value>lbl_Name_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_Manufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Manufacturer_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Manufacturer_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 141</value>
-  </data>
   <data name="lbl_Manufacturer_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>345, 25</value>
   </data>
-  <data name="lbl_Manufacturer_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="lbl_Manufacturer_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Manufacturer_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer_Value.Name" xml:space="preserve">
-    <value>lbl_Manufacturer_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Manufacturer_Value.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl_PowerManagment_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_Manufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="lbl_PowerManagment_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_PowerManagment_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>285, 166</value>
-  </data>
-  <data name="lbl_PowerManagment_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>345, 25</value>
-  </data>
-  <data name="lbl_PowerManagment_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="lbl_PowerManagment_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_PowerManagment_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_PowerManagment_Value.Name" xml:space="preserve">
-    <value>lbl_PowerManagment_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_PowerManagment_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PowerManagment_Value.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_PowerManagment_Value.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 234</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>_AudioDeviceDataControl</value>
+  <data name="lbl_Manufacturer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 85</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Name" xml:space="preserve">
+    <value>lbl_Manufacturer_Value</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_PowerManagment_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Manufacturer.TabIndex" type="System.Int32, mscorlib">
+    <value>96</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Name" xml:space="preserve">
+    <value>lbl_Manufacturer</value>
+  </data>
+  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt, style=Bold</value>
+  </data>
+  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_PowerManagment_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_PowerManagment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 166</value>
+  </data>
+  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="lbl_PowerManagment_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_Manufacturer.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbl_PowerManagment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Manufacturer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 25</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="lbl_PowerManagment_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_PowerManagment_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Manufacturer.Text" xml:space="preserve">
+    <value>Producer</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_AudioDeviceDataControl</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="lbl_PowerManagment_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 25</value>
+  </data>
+  <data name="lbl_PowerManagment_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 141</value>
+  </data>
+  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_Manufacturer_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Name_Value.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_PowerManagment.Text" xml:space="preserve">
+    <value>Power managment</value>
+  </data>
+  <data name="lbl_PowerManagment_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_PowerManagment.Name" xml:space="preserve">
+    <value>lbl_PowerManagment</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbl_Manufacturer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 141</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
+    <value>lbl_Name_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_PowerManagment.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_PowerManagment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 12pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="&gt;&gt;lbl_PowerManagment_Value.Name" xml:space="preserve">
+    <value>lbl_PowerManagment_Value</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 234</value>
+  </data>
+  <data name="lbl_PowerManagment_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 166</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>it</value>
+  </metadata>
 </root>

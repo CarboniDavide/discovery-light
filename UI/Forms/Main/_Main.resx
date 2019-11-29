@@ -117,19 +117,140 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Discovery</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="UserSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>670, 1</value>
+  </data>
+  <data name="UserSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 400</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="UserSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="&gt;&gt;UserSettings.Name" xml:space="preserve">
+    <value>UserSettings</value>
+  </data>
+  <data name="&gt;&gt;UserSettings.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Panels.UserSettings._UserSettings, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;UserSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;UserSettings.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Navigation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
   <data name="Navigation.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="Navigation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 400</value>
+  </data>
+  <data name="Navigation.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Navigation.Name" xml:space="preserve">
+    <value>Navigation</value>
+  </data>
+  <data name="&gt;&gt;Navigation.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Forms.Main._Navigation, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Navigation.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Navigation.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Footer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="Footer.LoadMessage" xml:space="preserve">
+    <value>Loading ...</value>
+  </data>
+  <data name="Footer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 360</value>
+  </data>
+  <data name="Footer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 40</value>
+  </data>
+  <data name="Footer.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="Footer.WaitMessage" xml:space="preserve">
+    <value>One Moment ...</value>
+  </data>
+  <data name="&gt;&gt;Footer.Name" xml:space="preserve">
+    <value>Footer</value>
+  </data>
+  <data name="&gt;&gt;Footer.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Forms.Main._Footer, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Footer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;Footer.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="PanelContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="PanelContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 1</value>
+  </data>
+  <data name="PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 359</value>
+  </data>
+  <data name="PanelContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;PanelContainer.Name" xml:space="preserve">
+    <value>PanelContainer</value>
+  </data>
+  <data name="&gt;&gt;PanelContainer.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.Panels.Devices._PanelContainer, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PanelContainer.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PanelContainer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 0</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>630, 1</value>
+  </data>
+  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
+    <value>pictureBox1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>670, 400</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -658,140 +779,16 @@
         FovFMhD4/zhC7Ely6lyoAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Navigation.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Navigation.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;PanelContainer.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Panels.Devices._PanelContainer, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="PanelContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 1</value>
-  </data>
-  <data name="Footer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 40</value>
-  </data>
-  <data name="&gt;&gt;Footer.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;UserSettings.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PanelContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;Footer.Name" xml:space="preserve">
-    <value>Footer</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>670, 400</value>
-  </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>Manual</value>
   </data>
-  <data name="Footer.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;Navigation.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Forms.Main._Navigation, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="Footer.LoadMessage" xml:space="preserve">
-    <value>Loading ...</value>
-  </data>
-  <data name="&gt;&gt;Navigation.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;Navigation.Name" xml:space="preserve">
-    <value>Navigation</value>
-  </data>
-  <data name="&gt;&gt;Footer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;UserSettings.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Panels.UserSettings._UserSettings, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;PanelContainer.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Discovery</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>_Main</value>
   </data>
-  <data name="Navigation.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="UserSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>670, 1</value>
-  </data>
-  <data name="&gt;&gt;UserSettings.Name" xml:space="preserve">
-    <value>UserSettings</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 0</value>
-  </data>
-  <data name="&gt;&gt;PanelContainer.Name" xml:space="preserve">
-    <value>PanelContainer</value>
-  </data>
-  <data name="&gt;&gt;PanelContainer.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="Footer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;UserSettings.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="UserSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="PanelContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>630, 359</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="Footer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 360</value>
-  </data>
-  <data name="pictureBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="Footer.WaitMessage" xml:space="preserve">
-    <value>One Moment ...</value>
-  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="PanelContainer.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="UserSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 400</value>
-  </data>
-  <data name="Navigation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 400</value>
-  </data>
-  <data name="&gt;&gt;Footer.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Forms.Main._Footer, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
-  </metadata>
 </root>

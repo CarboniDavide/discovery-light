@@ -43,7 +43,6 @@
             this.lbl_Name_Value = new System.Windows.Forms.Label();
             this.lbl_Socket = new System.Windows.Forms.Label();
             this.lbl_Producteur = new System.Windows.Forms.Label();
-            this.lbl_Description = new System.Windows.Forms.Label();
             this.lbl_Size = new System.Windows.Forms.Label();
             this.lbl_Core = new System.Windows.Forms.Label();
             this.lbl_Thread = new System.Windows.Forms.Label();
@@ -58,11 +57,13 @@
             // lbl_L3CacheSize_Value
             // 
             resources.ApplyResources(this.lbl_L3CacheSize_Value, "lbl_L3CacheSize_Value");
+            this.lbl_L3CacheSize_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_L3CacheSize_Value.Name = "lbl_L3CacheSize_Value";
             // 
             // lbl_L2CacheSize_Value
             // 
             resources.ApplyResources(this.lbl_L2CacheSize_Value, "lbl_L2CacheSize_Value");
+            this.lbl_L2CacheSize_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_L2CacheSize_Value.Name = "lbl_L2CacheSize_Value";
             // 
             // lbl_Revision
@@ -78,6 +79,7 @@
             // lbl_Thread_Value
             // 
             resources.ApplyResources(this.lbl_Thread_Value, "lbl_Thread_Value");
+            this.lbl_Thread_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Thread_Value.Name = "lbl_Thread_Value";
             // 
             // lbl_L2CacheSize
@@ -88,26 +90,31 @@
             // lbl_Revision_Value
             // 
             resources.ApplyResources(this.lbl_Revision_Value, "lbl_Revision_Value");
+            this.lbl_Revision_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Revision_Value.Name = "lbl_Revision_Value";
             // 
             // lbl_Producteur_Value
             // 
             resources.ApplyResources(this.lbl_Producteur_Value, "lbl_Producteur_Value");
+            this.lbl_Producteur_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Producteur_Value.Name = "lbl_Producteur_Value";
             // 
             // lbl_Description_Value
             // 
             resources.ApplyResources(this.lbl_Description_Value, "lbl_Description_Value");
+            this.lbl_Description_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Description_Value.Name = "lbl_Description_Value";
             // 
             // lbl_Size_Value
             // 
             resources.ApplyResources(this.lbl_Size_Value, "lbl_Size_Value");
+            this.lbl_Size_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Size_Value.Name = "lbl_Size_Value";
             // 
             // lbl_Name_Value
             // 
             resources.ApplyResources(this.lbl_Name_Value, "lbl_Name_Value");
+            this.lbl_Name_Value.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbl_Name_Value.Name = "lbl_Name_Value";
             // 
             // lbl_Socket
@@ -119,11 +126,6 @@
             // 
             resources.ApplyResources(this.lbl_Producteur, "lbl_Producteur");
             this.lbl_Producteur.Name = "lbl_Producteur";
-            // 
-            // lbl_Description
-            // 
-            resources.ApplyResources(this.lbl_Description, "lbl_Description");
-            this.lbl_Description.Name = "lbl_Description";
             // 
             // lbl_Size
             // 
@@ -143,11 +145,13 @@
             // lbl_Socket_Value
             // 
             resources.ApplyResources(this.lbl_Socket_Value, "lbl_Socket_Value");
+            this.lbl_Socket_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Socket_Value.Name = "lbl_Socket_Value";
             // 
             // lbl_Core_Value
             // 
             resources.ApplyResources(this.lbl_Core_Value, "lbl_Core_Value");
+            this.lbl_Core_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Core_Value.Name = "lbl_Core_Value";
             // 
             // lbl_L1CacheSize
@@ -158,6 +162,7 @@
             // lbl_L1CacheSize_Value
             // 
             resources.ApplyResources(this.lbl_L1CacheSize_Value, "lbl_L1CacheSize_Value");
+            this.lbl_L1CacheSize_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_L1CacheSize_Value.Name = "lbl_L1CacheSize_Value";
             // 
             // lbl_MaxSpeed
@@ -168,6 +173,7 @@
             // lbl_MaxSpeed_Value
             // 
             resources.ApplyResources(this.lbl_MaxSpeed_Value, "lbl_MaxSpeed_Value");
+            this.lbl_MaxSpeed_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_MaxSpeed_Value.Name = "lbl_MaxSpeed_Value";
             // 
             // _CpuDeviceDataControl
@@ -195,7 +201,6 @@
             this.Controls.Add(this.lbl_Name_Value);
             this.Controls.Add(this.lbl_Socket);
             this.Controls.Add(this.lbl_Producteur);
-            this.Controls.Add(this.lbl_Description);
             this.Controls.Add(this.lbl_Size);
             this.Name = "_CpuDeviceDataControl";
             this.Period = System.TimeSpan.Parse("00:00:00.5000000");
@@ -219,7 +224,6 @@
         private System.Windows.Forms.Label lbl_Name_Value;
         private System.Windows.Forms.Label lbl_Socket;
         private System.Windows.Forms.Label lbl_Producteur;
-        private System.Windows.Forms.Label lbl_Description;
         private System.Windows.Forms.Label lbl_Size;
         private System.Windows.Forms.Label lbl_Core;
         private System.Windows.Forms.Label lbl_Thread;

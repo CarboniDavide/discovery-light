@@ -118,52 +118,106 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_CacheUsage.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_CacheUsage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
+    <value>91, 13</value>
   </data>
   <data name="lbl_CacheUsage.Text" xml:space="preserve">
     <value>Zwischenspeicher</value>
   </data>
+  <data name="lbl_RamOut.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_RamOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 13</value>
+    <value>40, 13</value>
   </data>
   <data name="lbl_RamOut.Text" xml:space="preserve">
     <value>Dürfen</value>
   </data>
+  <data name="lbl_PageIn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_PageIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 13</value>
+    <value>50, 13</value>
   </data>
   <data name="lbl_PageIn.Text" xml:space="preserve">
     <value>Seiten In</value>
   </data>
+  <data name="lbl_PageOut.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_PageOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="lbl_PageOut.Text" xml:space="preserve">
     <value>Seiten Out</value>
   </data>
+  <data name="lbl_PageRead.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_PageRead.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 13</value>
+    <value>65, 13</value>
   </data>
   <data name="lbl_PageRead.Text" xml:space="preserve">
     <value>Seiten Read</value>
   </data>
+  <data name="lbl_PageWrite.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_PageWrite.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
+    <value>66, 13</value>
   </data>
   <data name="lbl_PageWrite.Text" xml:space="preserve">
     <value>Seiten Write</value>
   </data>
+  <data name="lbl_PagePersec.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_PagePersec.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 13</value>
+    <value>58, 13</value>
   </data>
   <data name="lbl_PagePersec.Text" xml:space="preserve">
     <value>Seiten  p/s</value>
   </data>
+  <data name="lbl_CacheUsageMax.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_CacheUsageMax.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
+    <value>92, 13</value>
   </data>
   <data name="lbl_CacheUsageMax.Text" xml:space="preserve">
     <value>Zwischensp. Peak</value>
+  </data>
+  <data name="lbl_CacheUsage_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_PageWrite_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_PageRead_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_PageOut_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_PageIn_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_RamOut_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_CacheUsageMax_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_PagePersec_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_Free.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_Free_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
   </data>
 </root>

@@ -42,34 +42,38 @@ namespace DiscoveryLight.UI.Forms.Main
             // 
             // UserSettings
             // 
-            resources.ApplyResources(this.UserSettings, "UserSettings");
             this.UserSettings.BackColor = System.Drawing.SystemColors.HighlightText;
+            resources.ApplyResources(this.UserSettings, "UserSettings");
             this.UserSettings.Name = "UserSettings";
             // 
             // Navigation
             // 
-            resources.ApplyResources(this.Navigation, "Navigation");
             this.Navigation.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            resources.ApplyResources(this.Navigation, "Navigation");
             this.Navigation.Name = "Navigation";
             // 
             // Footer
             // 
-            resources.ApplyResources(this.Footer, "Footer");
             this.Footer.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.Footer.ChartBarSize = 0D;
+            this.Footer.ChartBarStep = 0D;
+            this.Footer.CurrentTitle = null;
+            resources.ApplyResources(this.Footer, "Footer");
+            this.Footer.MainTitle = null;
             this.Footer.Name = "Footer";
             // 
             // PanelContainer
             // 
-            resources.ApplyResources(this.PanelContainer, "PanelContainer");
             this.PanelContainer.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.PanelContainer.CurrentPanel = null;
+            resources.ApplyResources(this.PanelContainer, "PanelContainer");
             this.PanelContainer.Name = "PanelContainer";
             this.PanelContainer.Load += new System.EventHandler(this.PanelContainer_Load);
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 

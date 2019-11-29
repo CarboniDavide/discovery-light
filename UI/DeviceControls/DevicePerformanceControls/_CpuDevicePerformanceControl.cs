@@ -96,7 +96,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
                 chart.Name = typeof(WinformComponents.ChartBar).ToString();
 
                 // label component
-                label.Font = new System.Drawing.Font("Microsoft Sans Serif", TextSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                label.Font = new System.Drawing.Font("Tahoma", TextSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 label.Location = new System.Drawing.Point(chart.Width + 15, BarPosition);
                 label.Size = new System.Drawing.Size(100, BarSize);
                 label.Text = "TH " + i;

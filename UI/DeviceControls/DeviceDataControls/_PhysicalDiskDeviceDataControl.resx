@@ -117,817 +117,781 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbl_Sectors_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_BytesPerSector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_Tipology.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
-  </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_Tracks_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
-  </data>
-  <data name="&gt;&gt;lbl_SerialNumber.Name" xml:space="preserve">
-    <value>lbl_SerialNumber</value>
-  </data>
-  <data name="lbl_Cylinders_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 128</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;lbl_ConnectionType_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Size.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Cylinders_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_TracksPerCylinder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 228</value>
-  </data>
-  <data name="lbl_Firmware.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_TracksPerCylinder_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>157</value>
-  </data>
-  <data name="lbl_Tipology_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
-  </data>
-  <data name="lbl_ConnectionType_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Tracks_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Sectors_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
+  <data name="lbl_Tipology.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
   </data>
   <data name="lbl_Tipology.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 28</value>
+    <value>6, 37</value>
   </data>
-  <data name="&gt;&gt;lbl_Sectors_Value.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lbl_Tipology.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
   </data>
-  <data name="lbl_ConnectionType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 53</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_Tipology.TabIndex" type="System.Int32, mscorlib">
+    <value>144</value>
   </data>
-  <data name="&gt;&gt;lbl_Cylinders_Value.Type" xml:space="preserve">
+  <data name="lbl_Tipology.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="lbl_Tipology.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology.Name" xml:space="preserve">
+    <value>lbl_Tipology</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size_Value.Name" xml:space="preserve">
-    <value>lbl_Size_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesPerSector_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Tipology_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 28</value>
   </data>
   <data name="&gt;&gt;lbl_Tipology.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lbl_SerialNumber.TabIndex" type="System.Int32, mscorlib">
-    <value>167</value>
+  <data name="&gt;&gt;lbl_Tipology.ZOrder" xml:space="preserve">
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;lbl_BytesPerSector.Parent" xml:space="preserve">
+  <data name="lbl_ConnectionType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_ConnectionType.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_ConnectionType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 62</value>
+  </data>
+  <data name="lbl_ConnectionType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_ConnectionType.TabIndex" type="System.Int32, mscorlib">
+    <value>145</value>
+  </data>
+  <data name="lbl_ConnectionType.Text" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="lbl_ConnectionType.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_ConnectionType.Name" xml:space="preserve">
+    <value>lbl_ConnectionType</value>
+  </data>
+  <data name="&gt;&gt;lbl_ConnectionType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_ConnectionType.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_ConnectionType.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="lbl_Size.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Size.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Size.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 87</value>
+  </data>
+  <data name="lbl_Size.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_Size.TabIndex" type="System.Int32, mscorlib">
+    <value>146</value>
+  </data>
+  <data name="lbl_Size.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="lbl_Size.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size.Name" xml:space="preserve">
+    <value>lbl_Size</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="lbl_Heads.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Heads.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Heads.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 162</value>
+  </data>
+  <data name="lbl_Heads.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_Heads.TabIndex" type="System.Int32, mscorlib">
+    <value>147</value>
+  </data>
+  <data name="lbl_Heads.Text" xml:space="preserve">
+    <value>Heads</value>
+  </data>
+  <data name="lbl_Heads.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads.Name" xml:space="preserve">
+    <value>lbl_Heads</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt, style=Bold</value>
+  </data>
+  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 5</value>
+  </data>
+  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 25</value>
+  </data>
+  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>148</value>
+  </data>
+  <data name="lbl_Name_Value.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
+    <value>lbl_Name_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lbl_Tipology_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Tipology_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Tipology_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 37</value>
+  </data>
+  <data name="lbl_Tipology_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
+  </data>
+  <data name="lbl_Tipology_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>149</value>
+  </data>
+  <data name="lbl_Tipology_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Tipology_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology_Value.Name" xml:space="preserve">
+    <value>lbl_Tipology_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tipology_Value.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Tipology_Value.ZOrder" xml:space="preserve">
     <value>17</value>
   </data>
-  <data name="lbl_Size.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 78</value>
-  </data>
-  <data name="lbl_Firmware.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Tracks.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Heads.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks_Value.Name" xml:space="preserve">
-    <value>lbl_Tracks_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Sectors_Value.Name" xml:space="preserve">
-    <value>lbl_Sectors_Value</value>
-  </data>
-  <data name="lbl_SerialNumber_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size_Value.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;lbl_SerialNumber_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="lbl_Tipology.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Tracks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 203</value>
-  </data>
-  <data name="&gt;&gt;lbl_SerialNumber_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Firmware_Value.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_Heads.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Cylinders.Text" xml:space="preserve">
-    <value>Cylindre</value>
-  </data>
-  <data name="lbl_SerialNumber_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 3</value>
-  </data>
-  <data name="lbl_Tipology.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks_Value.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lbl_Firmware_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
-  </data>
-  <data name="lbl_Tracks_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
   <data name="lbl_ConnectionType_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;lbl_Tipology_Value.Name" xml:space="preserve">
-    <value>lbl_Tipology_Value</value>
+  <data name="lbl_ConnectionType_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="&gt;&gt;lbl_Heads.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Cylinders_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
-  </data>
-  <data name="lbl_Heads.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_SerialNumber_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Heads.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 153</value>
-  </data>
-  <data name="&gt;&gt;lbl_SerialNumber.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_BytesPerSector_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_ConnectionType.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_Cylinders.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder.Name" xml:space="preserve">
-    <value>lbl_TracksPerCylinder</value>
+  <data name="lbl_ConnectionType_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 62</value>
   </data>
   <data name="lbl_ConnectionType_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 25</value>
   </data>
-  <data name="lbl_Sectors.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="lbl_ConnectionType_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>150</value>
   </data>
-  <data name="lbl_Tracks_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.Name" xml:space="preserve">
-    <value>lbl_Size</value>
-  </data>
-  <data name="&gt;&gt;lbl_ConnectionType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Heads_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_Tracks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Size_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tipology_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Cylinders.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 128</value>
+  <data name="lbl_ConnectionType_Value.Text" xml:space="preserve">
+    <value>N/A</value>
   </data>
   <data name="lbl_ConnectionType_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="lbl_Cylinders.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="&gt;&gt;lbl_ConnectionType_Value.Name" xml:space="preserve">
+    <value>lbl_ConnectionType_Value</value>
   </data>
-  <data name="lbl_TracksPerCylinder_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 228</value>
-  </data>
-  <data name="lbl_Cylinders_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Sectors.Text" xml:space="preserve">
-    <value>Sectors</value>
-  </data>
-  <data name="lbl_ConnectionType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="lbl_BytesPerSector.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Sectors.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_BytesPerSector.Text" xml:space="preserve">
-    <value>Bytes per Sector</value>
-  </data>
-  <data name="&gt;&gt;lbl_Heads_Value.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_ConnectionType_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_SerialNumber_Value.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;lbl_ConnectionType_Value.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lbl_BytesPerSector_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Size_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_TracksPerCylinder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="lbl_ConnectionType.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_Heads_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>161</value>
-  </data>
-  <data name="lbl_BytesPerSector.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 253</value>
-  </data>
-  <data name="lbl_Sectors.TabIndex" type="System.Int32, mscorlib">
-    <value>159</value>
-  </data>
-  <data name="lbl_Heads_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 153</value>
-  </data>
-  <data name="lbl_Cylinders_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_BytesPerSector.TabIndex" type="System.Int32, mscorlib">
-    <value>155</value>
-  </data>
-  <data name="&gt;&gt;lbl_SerialNumber_Value.Name" xml:space="preserve">
-    <value>lbl_SerialNumber_Value</value>
-  </data>
-  <data name="lbl_SerialNumber_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;lbl_ConnectionType_Value.ZOrder" xml:space="preserve">
+    <value>16</value>
   </data>
   <data name="lbl_Size_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>_PhysicalDiskDeviceDataControl</value>
+  <data name="lbl_Size_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="lbl_Heads_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="lbl_Size_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 87</value>
   </data>
-  <data name="&gt;&gt;lbl_SerialNumber.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_Heads_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Firmware_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Tipology.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="lbl_BytesPerSector_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_TracksPerCylinder.Text" xml:space="preserve">
-    <value>Tracks per Cylinder</value>
-  </data>
-  <data name="&gt;&gt;lbl_Cylinders_Value.Name" xml:space="preserve">
-    <value>lbl_Cylinders_Value</value>
-  </data>
-  <data name="lbl_Heads.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesPerSector.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbl_Firmware_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Size_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="lbl_Name.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_Name.TabIndex" type="System.Int32, mscorlib">
-    <value>143</value>
-  </data>
-  <data name="&gt;&gt;lbl_Firmware_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Tracks_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>154</value>
-  </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
-    <value>lbl_Name_Value</value>
-  </data>
-  <data name="lbl_TracksPerCylinder_Value.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_Size_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 25</value>
   </data>
   <data name="lbl_Size_Value.TabIndex" type="System.Int32, mscorlib">
     <value>151</value>
   </data>
-  <data name="&gt;&gt;lbl_BytesPerSector.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_Size_Value.Text" xml:space="preserve">
+    <value>N/A</value>
   </data>
-  <data name="lbl_Firmware.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
+  <data name="lbl_Size_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size_Value.Name" xml:space="preserve">
+    <value>lbl_Size_Value</value>
   </data>
   <data name="&gt;&gt;lbl_Size_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_TracksPerCylinder_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="&gt;&gt;lbl_Size_Value.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lbl_TracksPerCylinder_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="&gt;&gt;lbl_Size_Value.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="lbl_SerialNumber.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="lbl_Cylinders_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
-  <data name="&gt;&gt;lbl_Cylinders.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_Cylinders_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="lbl_Size.TabIndex" type="System.Int32, mscorlib">
-    <value>146</value>
+  <data name="lbl_Cylinders_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 137</value>
   </data>
   <data name="lbl_Cylinders_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 25</value>
   </data>
-  <data name="&gt;&gt;lbl_ConnectionType.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="lbl_Tipology_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_TracksPerCylinder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Size_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 78</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="lbl_Heads.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="lbl_Cylinders.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="lbl_SerialNumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;lbl_Firmware.Name" xml:space="preserve">
-    <value>lbl_Firmware</value>
-  </data>
-  <data name="lbl_Firmware_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_TracksPerCylinder.TabIndex" type="System.Int32, mscorlib">
-    <value>153</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tipology.Name" xml:space="preserve">
-    <value>lbl_Tipology</value>
-  </data>
-  <data name="lbl_Firmware.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_Cylinders.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Heads.Text" xml:space="preserve">
-    <value>Heads</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="lbl_Cylinders_Value.TabIndex" type="System.Int32, mscorlib">
     <value>152</value>
   </data>
-  <data name="lbl_Sectors_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Tracks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="lbl_BytesPerSector.Size" type="System.Drawing.Size, System.Drawing">
-    <value>202, 25</value>
-  </data>
-  <data name="&gt;&gt;lbl_SerialNumber.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Firmware.TabIndex" type="System.Int32, mscorlib">
-    <value>163</value>
-  </data>
-  <data name="lbl_Size_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Firmware.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 278</value>
-  </data>
-  <data name="lbl_Name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Sectors_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="lbl_BytesPerSector_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>158</value>
-  </data>
-  <data name="lbl_Size.Text" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="&gt;&gt;lbl_Sectors.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_Heads_Value.Text" xml:space="preserve">
+  <data name="lbl_Cylinders_Value.Text" xml:space="preserve">
     <value>N/A</value>
-  </data>
-  <data name="&gt;&gt;lbl_Firmware.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_SerialNumber_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>168</value>
-  </data>
-  <data name="lbl_Firmware_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 278</value>
-  </data>
-  <data name="lbl_Firmware.Text" xml:space="preserve">
-    <value>Firmware</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 303</value>
-  </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.Name" xml:space="preserve">
-    <value>lbl_TracksPerCylinder_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Cylinders_Value.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name.Name" xml:space="preserve">
-    <value>lbl_Name</value>
-  </data>
-  <data name="lbl_BytesPerSector_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>252, 25</value>
-  </data>
-  <data name="lbl_TracksPerCylinder.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tipology.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Cylinders.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;lbl_Sectors_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Sectors_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_BytesPerSector.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_SerialNumber.Text" xml:space="preserve">
-    <value>Serial number</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tipology.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;lbl_Sectors.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>148</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="lbl_Size.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_SerialNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="&gt;&gt;lbl_ConnectionType_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 3</value>
-  </data>
-  <data name="&gt;&gt;lbl_Firmware.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_Tipology.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_ConnectionType_Value.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="lbl_Tipology_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Cylinders.TabIndex" type="System.Int32, mscorlib">
-    <value>156</value>
-  </data>
-  <data name="lbl_TracksPerCylinder.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_Tracks.TabIndex" type="System.Int32, mscorlib">
-    <value>160</value>
-  </data>
-  <data name="lbl_ConnectionType_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>150</value>
-  </data>
-  <data name="lbl_Tipology_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesPerSector_Value.Name" xml:space="preserve">
-    <value>lbl_BytesPerSector_Value</value>
   </data>
   <data name="lbl_Cylinders_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="&gt;&gt;lbl_Cylinders_Value.Name" xml:space="preserve">
+    <value>lbl_Cylinders_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cylinders_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cylinders_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cylinders_Value.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lbl_TracksPerCylinder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_TracksPerCylinder.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_TracksPerCylinder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 237</value>
+  </data>
+  <data name="lbl_TracksPerCylinder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_TracksPerCylinder.TabIndex" type="System.Int32, mscorlib">
+    <value>153</value>
+  </data>
+  <data name="lbl_TracksPerCylinder.Text" xml:space="preserve">
+    <value>Tracks per Cylinder</value>
+  </data>
+  <data name="lbl_TracksPerCylinder.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_TracksPerCylinder.Name" xml:space="preserve">
+    <value>lbl_TracksPerCylinder</value>
+  </data>
+  <data name="&gt;&gt;lbl_TracksPerCylinder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_TracksPerCylinder.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_TracksPerCylinder.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbl_Tracks_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Tracks_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Tracks_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 212</value>
+  </data>
+  <data name="lbl_Tracks_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
+  </data>
+  <data name="lbl_Tracks_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>154</value>
+  </data>
+  <data name="lbl_Tracks_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Tracks_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks_Value.Name" xml:space="preserve">
+    <value>lbl_Tracks_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks_Value.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lbl_BytesPerSector.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_BytesPerSector.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_BytesPerSector.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 262</value>
+  </data>
+  <data name="lbl_BytesPerSector.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 25</value>
+  </data>
+  <data name="lbl_BytesPerSector.TabIndex" type="System.Int32, mscorlib">
+    <value>155</value>
+  </data>
+  <data name="lbl_BytesPerSector.Text" xml:space="preserve">
+    <value>Bytes per Sector</value>
+  </data>
+  <data name="lbl_BytesPerSector.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector.Name" xml:space="preserve">
+    <value>lbl_BytesPerSector</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lbl_Cylinders.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Cylinders.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Cylinders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 137</value>
+  </data>
+  <data name="lbl_Cylinders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_Cylinders.TabIndex" type="System.Int32, mscorlib">
+    <value>156</value>
+  </data>
+  <data name="lbl_Cylinders.Text" xml:space="preserve">
+    <value>Cylindre</value>
+  </data>
+  <data name="lbl_Cylinders.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cylinders.Name" xml:space="preserve">
+    <value>lbl_Cylinders</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cylinders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cylinders.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Cylinders.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbl_TracksPerCylinder_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_TracksPerCylinder_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_TracksPerCylinder_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 237</value>
+  </data>
+  <data name="lbl_TracksPerCylinder_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
+  </data>
+  <data name="lbl_TracksPerCylinder_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>157</value>
+  </data>
   <data name="lbl_TracksPerCylinder_Value.Text" xml:space="preserve">
     <value>N/A</value>
   </data>
-  <data name="&gt;&gt;lbl_Heads.Parent" xml:space="preserve">
+  <data name="lbl_TracksPerCylinder_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.Name" xml:space="preserve">
+    <value>lbl_TracksPerCylinder_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lbl_SerialNumber_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbl_BytesPerSector_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_BytesPerSector_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_BytesPerSector_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 262</value>
+  </data>
+  <data name="lbl_BytesPerSector_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
+  </data>
+  <data name="lbl_BytesPerSector_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>158</value>
+  </data>
+  <data name="lbl_BytesPerSector_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_BytesPerSector_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector_Value.Name" xml:space="preserve">
+    <value>lbl_BytesPerSector_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesPerSector_Value.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbl_Sectors.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Sectors.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Sectors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 187</value>
+  </data>
+  <data name="lbl_Sectors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_Sectors.TabIndex" type="System.Int32, mscorlib">
+    <value>159</value>
+  </data>
+  <data name="lbl_Sectors.Text" xml:space="preserve">
+    <value>Sectors</value>
+  </data>
+  <data name="lbl_Sectors.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors.Name" xml:space="preserve">
+    <value>lbl_Sectors</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbl_Tracks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Tracks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Tracks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 212</value>
+  </data>
+  <data name="lbl_Tracks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_Tracks.TabIndex" type="System.Int32, mscorlib">
+    <value>160</value>
+  </data>
+  <data name="lbl_Tracks.Text" xml:space="preserve">
+    <value>Tracks</value>
+  </data>
+  <data name="lbl_Tracks.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks.Name" xml:space="preserve">
+    <value>lbl_Tracks</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Tracks.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbl_Heads_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Heads_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Heads_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 162</value>
   </data>
   <data name="lbl_Heads_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 25</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="lbl_Heads_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>161</value>
   </data>
-  <data name="lbl_Size.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="lbl_Heads_Value.Text" xml:space="preserve">
+    <value>N/A</value>
   </data>
-  <data name="&gt;&gt;lbl_Firmware_Value.Parent" xml:space="preserve">
+  <data name="lbl_Heads_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads_Value.Name" xml:space="preserve">
+    <value>lbl_Heads_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Heads_Value.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl_Sectors_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Sectors_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Sectors_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 187</value>
+  </data>
+  <data name="lbl_Sectors_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
+  </data>
+  <data name="lbl_Sectors_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>162</value>
+  </data>
+  <data name="lbl_Sectors_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Sectors_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors_Value.Name" xml:space="preserve">
+    <value>lbl_Sectors_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Sectors_Value.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbl_Firmware.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Firmware.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Firmware.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 287</value>
+  </data>
+  <data name="lbl_Firmware.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 25</value>
+  </data>
+  <data name="lbl_Firmware.TabIndex" type="System.Int32, mscorlib">
+    <value>163</value>
+  </data>
+  <data name="lbl_Firmware.Text" xml:space="preserve">
+    <value>Firmware</value>
+  </data>
+  <data name="lbl_Firmware.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Firmware.Name" xml:space="preserve">
+    <value>lbl_Firmware</value>
+  </data>
+  <data name="&gt;&gt;lbl_Firmware.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Firmware.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Firmware.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;lbl_Heads_Value.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbl_ConnectionType_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 53</value>
-  </data>
-  <data name="lbl_Name.Text" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="lbl_Sectors.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 178</value>
-  </data>
-  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_Firmware_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;lbl_ConnectionType_Value.Name" xml:space="preserve">
-    <value>lbl_ConnectionType_Value</value>
+  <data name="lbl_Firmware_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="lbl_Heads_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="lbl_Firmware_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 287</value>
   </data>
-  <data name="lbl_Name.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Tracks_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 203</value>
-  </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tipology_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
-  </data>
-  <data name="lbl_BytesPerSector_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 253</value>
-  </data>
-  <data name="&gt;&gt;lbl_Firmware_Value.Name" xml:space="preserve">
-    <value>lbl_Firmware_Value</value>
-  </data>
-  <data name="lbl_Tipology.TabIndex" type="System.Int32, mscorlib">
-    <value>144</value>
-  </data>
-  <data name="&gt;&gt;lbl_Sectors_Value.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbl_ConnectionType.Text" xml:space="preserve">
-    <value>Connection</value>
-  </data>
-  <data name="&gt;&gt;lbl_Tracks.Name" xml:space="preserve">
-    <value>lbl_Tracks</value>
-  </data>
-  <data name="lbl_SerialNumber.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_Firmware_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Sectors_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 178</value>
+  <data name="lbl_Firmware_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
   </data>
   <data name="lbl_Firmware_Value.TabIndex" type="System.Int32, mscorlib">
     <value>164</value>
   </data>
-  <data name="lbl_Tipology_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="lbl_Name_Value.Text" xml:space="preserve">
+  <data name="lbl_Firmware_Value.Text" xml:space="preserve">
     <value>N/A</value>
   </data>
-  <data name="lbl_Sectors.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_SerialNumber_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 103</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesPerSector.Name" xml:space="preserve">
-    <value>lbl_BytesPerSector</value>
-  </data>
-  <data name="lbl_ConnectionType.TabIndex" type="System.Int32, mscorlib">
-    <value>145</value>
-  </data>
-  <data name="lbl_Tracks_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_Sectors.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbl_Tracks.Text" xml:space="preserve">
-    <value>Tracks</value>
-  </data>
-  <data name="&gt;&gt;lbl_ConnectionType.Name" xml:space="preserve">
-    <value>lbl_ConnectionType</value>
-  </data>
-  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_Cylinders.Name" xml:space="preserve">
-    <value>lbl_Cylinders</value>
-  </data>
-  <data name="lbl_ConnectionType.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesPerSector_Value.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lbl_ConnectionType_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_SerialNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 103</value>
-  </data>
-  <data name="lbl_Tracks.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lbl_BytesPerSector_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+  <data name="lbl_Firmware_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;lbl_BytesPerSector_Value.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_Firmware_Value.Name" xml:space="preserve">
+    <value>lbl_Firmware_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Firmware_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_TracksPerCylinder_Value.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;lbl_Heads.Name" xml:space="preserve">
-    <value>lbl_Heads</value>
-  </data>
-  <data name="lbl_Tipology.Text" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="lbl_ConnectionType.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="&gt;&gt;lbl_Cylinders.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_Firmware_Value.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lbl_TracksPerCylinder_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="&gt;&gt;lbl_Firmware_Value.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbl_SerialNumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;lbl_Heads_Value.Name" xml:space="preserve">
-    <value>lbl_Heads_Value</value>
+  <data name="lbl_SerialNumber.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="&gt;&gt;lbl_Sectors.Name" xml:space="preserve">
-    <value>lbl_Sectors</value>
+  <data name="lbl_SerialNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 112</value>
   </data>
-  <data name="lbl_Size.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_SerialNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>203, 25</value>
   </data>
-  <data name="lbl_Sectors.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 25</value>
+  <data name="lbl_SerialNumber.TabIndex" type="System.Int32, mscorlib">
+    <value>167</value>
   </data>
-  <data name="lbl_Tipology_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>149</value>
+  <data name="lbl_SerialNumber.Text" xml:space="preserve">
+    <value>Serial number</value>
   </data>
-  <data name="lbl_Sectors_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>162</value>
+  <data name="lbl_SerialNumber.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
-  <data name="lbl_Heads.TabIndex" type="System.Int32, mscorlib">
-    <value>147</value>
+  <data name="&gt;&gt;lbl_SerialNumber.Name" xml:space="preserve">
+    <value>lbl_SerialNumber</value>
+  </data>
+  <data name="&gt;&gt;lbl_SerialNumber.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_SerialNumber.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_SerialNumber.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_SerialNumber_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_SerialNumber_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_SerialNumber_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>215, 112</value>
+  </data>
+  <data name="lbl_SerialNumber_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>252, 25</value>
+  </data>
+  <data name="lbl_SerialNumber_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>168</value>
+  </data>
+  <data name="lbl_SerialNumber_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_SerialNumber_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_SerialNumber_Value.Name" xml:space="preserve">
+    <value>lbl_SerialNumber_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_SerialNumber_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_SerialNumber_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_SerialNumber_Value.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>de</value>
-  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>465, 321</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_PhysicalDiskDeviceDataControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
 </root>

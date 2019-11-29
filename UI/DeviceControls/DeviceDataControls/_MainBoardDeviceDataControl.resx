@@ -143,6 +143,9 @@
   <data name="lbl_Manufacturer_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>171, 0</value>
   </data>
+  <data name="&gt;&gt;lbl_Version.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
   <data name="&gt;&gt;lbl_Manufacturer.Name" xml:space="preserve">
     <value>lbl_Manufacturer</value>
   </data>
@@ -195,9 +198,6 @@
   <data name="lbl_Model_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;lbl_SlotNumber_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;lbl_Version_Value.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
@@ -237,6 +237,9 @@
   <data name="lbl_Manufacturer_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
   </data>
+  <data name="lbl_Version.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="lbl_Manufacturer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -246,8 +249,8 @@
   <data name="lbl_Manufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="&gt;&gt;lbl_PrimaryBus_Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="lbl_Version.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="lbl_SecondaryBus_Value.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -285,14 +288,8 @@
   <data name="lbl_Manufacturer.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="lbl_SecondaryBus_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="&gt;&gt;lbl_SecondaryBus_Value.Name" xml:space="preserve">
-    <value>lbl_SecondaryBus_Value</value>
-  </data>
-  <data name="lbl_SecondaryBus_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="lbl_SlotNumber.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 125</value>
   </data>
   <data name="lbl_PrimaryBus_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -306,14 +303,14 @@
   <data name="lbl_Manufacturer.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 25</value>
   </data>
+  <data name="lbl_Version.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
   <data name="lbl_PrimaryBus.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbl_SlotNumber_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 125</value>
-  </data>
-  <data name="lbl_SlotNumber_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
+  <data name="lbl_SlotNumber_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;lbl_Model.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -342,8 +339,8 @@
   <data name="&gt;&gt;lbl_PrimaryBus_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_PrimaryBus.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="lbl_Model_Value.Text" xml:space="preserve">
+    <value>N/A</value>
   </data>
   <data name="lbl_Model.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 25</value>
@@ -357,11 +354,14 @@
   <data name="lbl_Manufacturer_Value.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="lbl_Version.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="lbl_SecondaryBus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 25</value>
   </data>
   <data name="lbl_Version.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 50</value>
+  </data>
+  <data name="&gt;&gt;lbl_Manufacturer.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="&gt;&gt;lbl_Manufacturer.Parent" xml:space="preserve">
     <value>$this</value>
@@ -372,23 +372,26 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="&gt;&gt;lbl_SlotNumber_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="lbl_Version_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_SecondaryBus_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_SlotNumber_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbl_SecondaryBus_Value.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="lbl_Version.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lbl_SecondaryBus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 25</value>
+  <data name="&gt;&gt;lbl_PrimaryBus_Value.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;lbl_PrimaryBus.Name" xml:space="preserve">
     <value>lbl_PrimaryBus</value>
+  </data>
+  <data name="lbl_SlotNumber_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="lbl_SecondaryBus.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
@@ -408,20 +411,17 @@
   <data name="&gt;&gt;lbl_Model_Value.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="lbl_PrimaryBus_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="lbl_SlotNumber_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 125</value>
   </data>
   <data name="lbl_SlotNumber.TabIndex" type="System.Int32, mscorlib">
     <value>34</value>
   </data>
-  <data name="&gt;&gt;lbl_Version.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="lbl_PrimaryBus_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;lbl_SlotNumber.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="lbl_SlotNumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -429,14 +429,11 @@
   <data name="lbl_Version_Value.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="&gt;&gt;lbl_Version_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
   <data name="&gt;&gt;lbl_PrimaryBus.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lbl_SlotNumber_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+  <data name="&gt;&gt;lbl_SlotNumber_Value.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>371, 153</value>
@@ -456,14 +453,17 @@
   <data name="lbl_PrimaryBus_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="&gt;&gt;lbl_SlotNumber.Name" xml:space="preserve">
-    <value>lbl_SlotNumber</value>
-  </data>
   <data name="&gt;&gt;lbl_SlotNumber_Value.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;lbl_SecondaryBus_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;lbl_Model_Value.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_MainBoardDeviceDataControl</value>
   </data>
   <data name="lbl_Model_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -483,38 +483,38 @@
   <data name="lbl_SlotNumber.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="lbl_SlotNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 125</value>
+  <data name="lbl_SecondaryBus_Value.Text" xml:space="preserve">
+    <value>N/A</value>
   </data>
-  <data name="&gt;&gt;lbl_SecondaryBus_Value.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lbl_SlotNumber_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
   </data>
   <data name="&gt;&gt;lbl_Manufacturer_Value.Name" xml:space="preserve">
     <value>lbl_Manufacturer_Value</value>
   </data>
-  <data name="lbl_Model_Value.Text" xml:space="preserve">
-    <value>N/A</value>
+  <data name="&gt;&gt;lbl_Version_Value.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Model.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl_Manufacturer.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;lbl_SecondaryBus_Value.Name" xml:space="preserve">
+    <value>lbl_SecondaryBus_Value</value>
   </data>
   <data name="&gt;&gt;lbl_Version.Name" xml:space="preserve">
     <value>lbl_Version</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>_MainBoardDeviceDataControl</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="lbl_Version.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
-  <data name="lbl_Version.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;lbl_SlotNumber.Name" xml:space="preserve">
+    <value>lbl_SlotNumber</value>
   </data>
-  <data name="lbl_SlotNumber_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="lbl_PrimaryBus.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="lbl_Manufacturer.Text" xml:space="preserve">
     <value>Producer</value>

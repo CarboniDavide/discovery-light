@@ -132,6 +132,10 @@
   <data name="lbl_VerticalResolution.Text" xml:space="preserve">
     <value>Vertikale Auflösung</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_Name_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lbl_FreqMin.Text" xml:space="preserve">
     <value>Min Frequenz</value>
   </data>
@@ -149,5 +153,8 @@
   </data>
   <data name="lbl_BitsPixel.Text" xml:space="preserve">
     <value>Bytes pro Pixel</value>
+  </data>
+  <data name="lbl_Name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
 </root>

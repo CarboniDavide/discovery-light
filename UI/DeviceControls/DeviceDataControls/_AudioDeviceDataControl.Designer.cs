@@ -30,18 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_AudioDeviceDataControl));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
-            this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Manufacturer = new System.Windows.Forms.Label();
             this.lbl_PowerManagment = new System.Windows.Forms.Label();
             this.lbl_Name_Value = new System.Windows.Forms.Label();
             this.lbl_Manufacturer_Value = new System.Windows.Forms.Label();
             this.lbl_PowerManagment_Value = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // lbl_Name
-            // 
-            resources.ApplyResources(this.lbl_Name, "lbl_Name");
-            this.lbl_Name.Name = "lbl_Name";
             // 
             // lbl_Manufacturer
             // 
@@ -56,6 +50,7 @@
             // lbl_Name_Value
             // 
             resources.ApplyResources(this.lbl_Name_Value, "lbl_Name_Value");
+            this.lbl_Name_Value.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbl_Name_Value.Name = "lbl_Name_Value";
             // 
             // lbl_Manufacturer_Value
@@ -77,7 +72,6 @@
             this.Controls.Add(this.lbl_Name_Value);
             this.Controls.Add(this.lbl_PowerManagment);
             this.Controls.Add(this.lbl_Manufacturer);
-            this.Controls.Add(this.lbl_Name);
             this.Name = "_AudioDeviceDataControl";
             this.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.TokenSource = cancellationTokenSource1;
@@ -86,8 +80,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Manufacturer;
         private System.Windows.Forms.Label lbl_PowerManagment;
         private System.Windows.Forms.Label lbl_Name_Value;

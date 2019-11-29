@@ -39,11 +39,11 @@
             // 
             // BasePcDevicePerformanceControl
             // 
-            resources.ApplyResources(this.BasePcDevicePerformanceControl, "BasePcDevicePerformanceControl");
             this.BasePcDevicePerformanceControl.ClassName = "_BasePcDevicePerformanceControl";
             this.BasePcDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._BasePcDevicePerformanceControl);
             this.BasePcDevicePerformanceControl.CurrentPerformance = null;
             this.BasePcDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.BasePcDevicePerformanceControl, "BasePcDevicePerformanceControl");
             this.BasePcDevicePerformanceControl.Name = "BasePcDevicePerformanceControl";
             this.BasePcDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.BasePcDevicePerformanceControl.TokenSource = cancellationTokenSource1;

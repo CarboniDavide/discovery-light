@@ -51,14 +51,14 @@
             // 
             // chartDiskFree
             // 
-            resources.ApplyResources(this.chartDiskFree, "chartDiskFree");
             this.chartDiskFree.Activated = true;
+            resources.ApplyResources(this.chartDiskFree, "chartDiskFree");
             this.chartDiskFree.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartDiskFree.CircleFillColor = System.Drawing.Color.MediumSeaGreen;
             this.chartDiskFree.FillSize = 25;
             this.chartDiskFree.Name = "chartDiskFree";
             this.chartDiskFree.TextVisible = true;
-            this.chartDiskFree.Thickness = 10;
+            this.chartDiskFree.Thickness = 12;
             // 
             // lbl_Read
             // 
@@ -102,9 +102,9 @@
             // 
             // chartReadTime
             // 
-            resources.ApplyResources(this.chartReadTime, "chartReadTime");
             this.chartReadTime.Activated = true;
             this.chartReadTime.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartReadTime, "chartReadTime");
             this.chartReadTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartReadTime.BarFillColor = System.Drawing.Color.LightSalmon;
             this.chartReadTime.BarFillSize = 25;
@@ -113,13 +113,13 @@
             this.chartReadTime.Name = "chartReadTime";
             this.chartReadTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartReadTime.TextColor = System.Drawing.Color.White;
-            this.chartReadTime.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartReadTime.TextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // chartIdleTime
             // 
-            resources.ApplyResources(this.chartIdleTime, "chartIdleTime");
             this.chartIdleTime.Activated = true;
             this.chartIdleTime.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartIdleTime, "chartIdleTime");
             this.chartIdleTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartIdleTime.BarFillColor = System.Drawing.Color.LightSeaGreen;
             this.chartIdleTime.BarFillSize = 25;
@@ -128,13 +128,13 @@
             this.chartIdleTime.Name = "chartIdleTime";
             this.chartIdleTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartIdleTime.TextColor = System.Drawing.Color.White;
-            this.chartIdleTime.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartIdleTime.TextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // chartDiskTime
             // 
-            resources.ApplyResources(this.chartDiskTime, "chartDiskTime");
             this.chartDiskTime.Activated = true;
             this.chartDiskTime.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartDiskTime, "chartDiskTime");
             this.chartDiskTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartDiskTime.BarFillColor = System.Drawing.Color.DarkSeaGreen;
             this.chartDiskTime.BarFillSize = 25;
@@ -143,13 +143,13 @@
             this.chartDiskTime.Name = "chartDiskTime";
             this.chartDiskTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartDiskTime.TextColor = System.Drawing.Color.White;
-            this.chartDiskTime.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartDiskTime.TextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // chartWriteTime
             // 
-            resources.ApplyResources(this.chartWriteTime, "chartWriteTime");
             this.chartWriteTime.Activated = true;
             this.chartWriteTime.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            resources.ApplyResources(this.chartWriteTime, "chartWriteTime");
             this.chartWriteTime.BarBackColor = System.Drawing.Color.LightGray;
             this.chartWriteTime.BarFillColor = System.Drawing.Color.DodgerBlue;
             this.chartWriteTime.BarFillSize = 25;
@@ -158,7 +158,7 @@
             this.chartWriteTime.Name = "chartWriteTime";
             this.chartWriteTime.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chartWriteTime.TextColor = System.Drawing.Color.White;
-            this.chartWriteTime.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chartWriteTime.TextFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // lbl_Title_Chart_Read
             // 

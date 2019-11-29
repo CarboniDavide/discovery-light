@@ -122,6 +122,9 @@
     <value>Top, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chartBar_Cpu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="chartBar_Cpu.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 73</value>
   </data>
@@ -147,6 +150,9 @@
   <data name="chartBar_Ram.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="chartBar_Ram.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="chartBar_Ram.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 307</value>
   </data>
@@ -170,6 +176,9 @@
   </data>
   <data name="chartBar_Graph.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="chartBar_Graph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
   </data>
   <data name="chartBar_Graph.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 247</value>
@@ -195,6 +204,9 @@
   <data name="chartBar_Hd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
+  <data name="chartBar_Hd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="chartBar_Hd.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 187</value>
   </data>
@@ -218,6 +230,9 @@
   </data>
   <data name="chartBar_D3D.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
+  </data>
+  <data name="chartBar_D3D.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
   </data>
   <data name="chartBar_D3D.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 127</value>
@@ -244,7 +259,7 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="lbl_Score_Titre.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
+    <value>Tahoma, 12pt</value>
   </data>
   <data name="lbl_Score_Titre.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 18</value>
@@ -276,6 +291,9 @@
   <data name="lbl_ScoreCpu.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
+  <data name="lbl_ScoreCpu.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_ScoreCpu.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 57</value>
   </data>
@@ -302,6 +320,9 @@
   </data>
   <data name="lbl_ScoreD3D.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
+  </data>
+  <data name="lbl_ScoreD3D.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
   </data>
   <data name="lbl_ScoreD3D.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 111</value>
@@ -330,6 +351,9 @@
   <data name="lbl_ScoreHd.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
+  <data name="lbl_ScoreHd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_ScoreHd.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 171</value>
   </data>
@@ -357,6 +381,9 @@
   <data name="lbl_ScoreGraph.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
   </data>
+  <data name="lbl_ScoreGraph.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
   <data name="lbl_ScoreGraph.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 231</value>
   </data>
@@ -383,6 +410,9 @@
   </data>
   <data name="lbl_ScoreRam.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left</value>
+  </data>
+  <data name="lbl_ScoreRam.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
   </data>
   <data name="lbl_ScoreRam.Location" type="System.Drawing.Point, System.Drawing">
     <value>9, 291</value>

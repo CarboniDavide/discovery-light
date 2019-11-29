@@ -40,14 +40,14 @@
             // 
             // chartCpuUsage
             // 
-            resources.ApplyResources(this.chartCpuUsage, "chartCpuUsage");
             this.chartCpuUsage.Activated = true;
+            resources.ApplyResources(this.chartCpuUsage, "chartCpuUsage");
             this.chartCpuUsage.CircleBackColor = System.Drawing.Color.LightGray;
             this.chartCpuUsage.CircleFillColor = System.Drawing.Color.DeepSkyBlue;
             this.chartCpuUsage.FillSize = 25;
             this.chartCpuUsage.Name = "chartCpuUsage";
             this.chartCpuUsage.TextVisible = true;
-            this.chartCpuUsage.Thickness = 10;
+            this.chartCpuUsage.Thickness = 12;
             // 
             // lbl_CpuSpeed_Value
             // 

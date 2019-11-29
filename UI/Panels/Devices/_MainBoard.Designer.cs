@@ -33,11 +33,11 @@
             System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             System.Threading.CancellationTokenSource cancellationTokenSource3 = new System.Threading.CancellationTokenSource();
             this.lbl_Bios_Titre = new System.Windows.Forms.Label();
-            this.MainBoardDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl();
-            this.BiosDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl();
             this.WindowsScoreDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._WindowsScoreDevicePerformanceControl();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
+            this.BiosDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl();
+            this.MainBoardDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             this.SuspendLayout();
@@ -46,28 +46,6 @@
             // 
             resources.ApplyResources(this.lbl_Bios_Titre, "lbl_Bios_Titre");
             this.lbl_Bios_Titre.Name = "lbl_Bios_Titre";
-            // 
-            // MainBoardDeviceDataControl
-            // 
-            this.MainBoardDeviceDataControl.ClassName = "_MainBoardDeviceDataControl";
-            this.MainBoardDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl);
-            this.MainBoardDeviceDataControl.CurrentDevice = null;
-            this.MainBoardDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.MainBoardDeviceDataControl, "MainBoardDeviceDataControl");
-            this.MainBoardDeviceDataControl.Name = "MainBoardDeviceDataControl";
-            this.MainBoardDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.MainBoardDeviceDataControl.TokenSource = cancellationTokenSource1;
-            // 
-            // BiosDeviceDataControl
-            // 
-            this.BiosDeviceDataControl.ClassName = "_BiosDeviceDataControl";
-            this.BiosDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl);
-            this.BiosDeviceDataControl.CurrentDevice = null;
-            this.BiosDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.BiosDeviceDataControl, "BiosDeviceDataControl");
-            this.BiosDeviceDataControl.Name = "BiosDeviceDataControl";
-            this.BiosDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.BiosDeviceDataControl.TokenSource = cancellationTokenSource2;
             // 
             // WindowsScoreDevicePerformanceControl
             // 
@@ -78,7 +56,7 @@
             resources.ApplyResources(this.WindowsScoreDevicePerformanceControl, "WindowsScoreDevicePerformanceControl");
             this.WindowsScoreDevicePerformanceControl.Name = "WindowsScoreDevicePerformanceControl";
             this.WindowsScoreDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.WindowsScoreDevicePerformanceControl.TokenSource = cancellationTokenSource3;
+            this.WindowsScoreDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // pic_Divisor_002
             // 
@@ -93,6 +71,28 @@
             this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pic_Divisor_001.Name = "pic_Divisor_001";
             this.pic_Divisor_001.TabStop = false;
+            // 
+            // BiosDeviceDataControl
+            // 
+            resources.ApplyResources(this.BiosDeviceDataControl, "BiosDeviceDataControl");
+            this.BiosDeviceDataControl.ClassName = "_BiosDeviceDataControl";
+            this.BiosDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._BiosDeviceDataControl);
+            this.BiosDeviceDataControl.CurrentDevice = null;
+            this.BiosDeviceDataControl.CurrentSubDevice = null;
+            this.BiosDeviceDataControl.Name = "BiosDeviceDataControl";
+            this.BiosDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.BiosDeviceDataControl.TokenSource = cancellationTokenSource2;
+            // 
+            // MainBoardDeviceDataControl
+            // 
+            resources.ApplyResources(this.MainBoardDeviceDataControl, "MainBoardDeviceDataControl");
+            this.MainBoardDeviceDataControl.ClassName = "_MainBoardDeviceDataControl";
+            this.MainBoardDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl);
+            this.MainBoardDeviceDataControl.CurrentDevice = null;
+            this.MainBoardDeviceDataControl.CurrentSubDevice = null;
+            this.MainBoardDeviceDataControl.Name = "MainBoardDeviceDataControl";
+            this.MainBoardDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.MainBoardDeviceDataControl.TokenSource = cancellationTokenSource3;
             // 
             // _MainBoard
             // 

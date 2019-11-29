@@ -42,9 +42,13 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_Manufacturer_Value.Text = CurrentSubDevice.Manufacturer;
             lbl_AdapterType_Value.Text = CurrentSubDevice.AdapterType;
             lbl_DeviceID_Value.Text = CurrentSubDevice.DeviceID;
-            lbl_InterfaceID_Value.Text = CurrentSubDevice.InterfaceIndex;
             lbl_Speed_Value.Text = CurrentSubDevice.Speed + " Bps";
             lbl_MACAddress_Value.Text = CurrentSubDevice.MACAddresse;
+            lbl_IPAddress_Value.Text = CurrentSubDevice.Ip_Address;
+            lbl_PrimaryDNS_Value.Text = CurrentSubDevice.PrimaryDNS;
+            lbl_SecondaryDNS_Value.Text = CurrentSubDevice.SencondaryDNS;
+            lbl_SubnetMask_Value.Text = CurrentSubDevice.SubNetMask;
+            lbl_Getway_Value.Text = CurrentSubDevice.DefualtGetway;
         }
     }
 }

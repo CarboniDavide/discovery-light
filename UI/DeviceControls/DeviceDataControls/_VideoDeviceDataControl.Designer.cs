@@ -32,7 +32,6 @@
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_ModalitySupported = new System.Windows.Forms.Label();
             this.lbl_ModalitySupported_Value = new System.Windows.Forms.Label();
-            this.lbl_Name = new System.Windows.Forms.Label();
             this.lbl_Manufacturer = new System.Windows.Forms.Label();
             this.lbl_Adapter = new System.Windows.Forms.Label();
             this.lbl_Memory = new System.Windows.Forms.Label();
@@ -64,12 +63,8 @@
             // lbl_ModalitySupported_Value
             // 
             resources.ApplyResources(this.lbl_ModalitySupported_Value, "lbl_ModalitySupported_Value");
+            this.lbl_ModalitySupported_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_ModalitySupported_Value.Name = "lbl_ModalitySupported_Value";
-            // 
-            // lbl_Name
-            // 
-            resources.ApplyResources(this.lbl_Name, "lbl_Name");
-            this.lbl_Name.Name = "lbl_Name";
             // 
             // lbl_Manufacturer
             // 
@@ -94,26 +89,31 @@
             // lbl_Name_Value
             // 
             resources.ApplyResources(this.lbl_Name_Value, "lbl_Name_Value");
+            this.lbl_Name_Value.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbl_Name_Value.Name = "lbl_Name_Value";
             // 
             // lbl_Manufacturer_Value
             // 
             resources.ApplyResources(this.lbl_Manufacturer_Value, "lbl_Manufacturer_Value");
+            this.lbl_Manufacturer_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Manufacturer_Value.Name = "lbl_Manufacturer_Value";
             // 
             // lbl_Adapter_Value
             // 
             resources.ApplyResources(this.lbl_Adapter_Value, "lbl_Adapter_Value");
+            this.lbl_Adapter_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Adapter_Value.Name = "lbl_Adapter_Value";
             // 
             // lbl_Memory_Value
             // 
             resources.ApplyResources(this.lbl_Memory_Value, "lbl_Memory_Value");
+            this.lbl_Memory_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_Memory_Value.Name = "lbl_Memory_Value";
             // 
             // lbl_HorizontalResolution_Value
             // 
             resources.ApplyResources(this.lbl_HorizontalResolution_Value, "lbl_HorizontalResolution_Value");
+            this.lbl_HorizontalResolution_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_HorizontalResolution_Value.Name = "lbl_HorizontalResolution_Value";
             // 
             // lbl_FreqMin
@@ -124,6 +124,7 @@
             // lbl_FreqMax_Value
             // 
             resources.ApplyResources(this.lbl_FreqMax_Value, "lbl_FreqMax_Value");
+            this.lbl_FreqMax_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_FreqMax_Value.Name = "lbl_FreqMax_Value";
             // 
             // lbl_ColorsNumber
@@ -139,11 +140,13 @@
             // lbl_FreqMin_Value
             // 
             resources.ApplyResources(this.lbl_FreqMin_Value, "lbl_FreqMin_Value");
+            this.lbl_FreqMin_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_FreqMin_Value.Name = "lbl_FreqMin_Value";
             // 
             // lbl_ColorsNumber_Value
             // 
             resources.ApplyResources(this.lbl_ColorsNumber_Value, "lbl_ColorsNumber_Value");
+            this.lbl_ColorsNumber_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_ColorsNumber_Value.Name = "lbl_ColorsNumber_Value";
             // 
             // lbl_FreqNow
@@ -159,11 +162,13 @@
             // lbl_VerticalResolution_Value
             // 
             resources.ApplyResources(this.lbl_VerticalResolution_Value, "lbl_VerticalResolution_Value");
+            this.lbl_VerticalResolution_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_VerticalResolution_Value.Name = "lbl_VerticalResolution_Value";
             // 
             // lbl_FreqNow_Value
             // 
             resources.ApplyResources(this.lbl_FreqNow_Value, "lbl_FreqNow_Value");
+            this.lbl_FreqNow_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_FreqNow_Value.Name = "lbl_FreqNow_Value";
             // 
             // lbl_BitsPixel
@@ -174,6 +179,7 @@
             // lbl_BitsPixel_Value
             // 
             resources.ApplyResources(this.lbl_BitsPixel_Value, "lbl_BitsPixel_Value");
+            this.lbl_BitsPixel_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BitsPixel_Value.Name = "lbl_BitsPixel_Value";
             // 
             // _VideoDeviceDataControl
@@ -203,7 +209,6 @@
             this.Controls.Add(this.lbl_Memory);
             this.Controls.Add(this.lbl_Adapter);
             this.Controls.Add(this.lbl_Manufacturer);
-            this.Controls.Add(this.lbl_Name);
             this.Name = "_VideoDeviceDataControl";
             this.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.TokenSource = cancellationTokenSource1;
@@ -215,7 +220,6 @@
 
         private System.Windows.Forms.Label lbl_ModalitySupported;
         private System.Windows.Forms.Label lbl_ModalitySupported_Value;
-        private System.Windows.Forms.Label lbl_Name;
         private System.Windows.Forms.Label lbl_Manufacturer;
         private System.Windows.Forms.Label lbl_Adapter;
         private System.Windows.Forms.Label lbl_Memory;
