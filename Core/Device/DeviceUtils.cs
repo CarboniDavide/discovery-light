@@ -33,7 +33,12 @@ namespace DiscoveryLight.Core.Device.Utils
         {
             try{
                 if (returnAs == ReturnType.String)
-                    return obj[property_name].ToString();                    // return value as string
+                {
+                    if (obj[property_name].GetType().IsArray)
+                        return obj[property_name];
+                    else
+                        return obj[property_name].ToString();                    // return value as string
+                }
                 else
                     return Convert.ToUInt64(obj[property_name]);             // return value as integer
             }
