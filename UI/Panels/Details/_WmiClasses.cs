@@ -51,6 +51,11 @@ namespace DiscoveryLight.UI.Panels.Details
                 LogHelper.Log(LogTarget.File, e.ToString());
                 nsClass = null;
             }
+            catch (Exception e)
+            {
+                LogHelper.Log(LogTarget.File, e.ToString());
+                nsClass = null;
+            }
 
             if (nsClass == null) {
                 onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
