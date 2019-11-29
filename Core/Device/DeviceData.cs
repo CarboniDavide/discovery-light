@@ -511,6 +511,11 @@ namespace DiscoveryLight.Core.Device.Data
             public String Speed;
             public String MACAddresse;
             public String AdapterType;
+            public String Ip_Address;
+            public String SubNetMask;
+            public String DefualtGetway;
+            public String PrimaryDNS;
+            public String SencondaryDNS;
         }
 
         public override void GetDriveInfo()
@@ -519,6 +524,7 @@ namespace DiscoveryLight.Core.Device.Data
             Collection = DeviceUtils.GetDriveInfo("Win32_NetworkAdapter", "MACAddress", null, DeviceUtils.Operator.NotEgual);
             // initialize array to contains each drive info
             List<_Block> mmBlocks = new List<_Block>();
+            List<String> s = new List<string>();
 
             // get all properties for each installed drive
             foreach (ManagementObject mj in Collection)
@@ -535,6 +541,24 @@ namespace DiscoveryLight.Core.Device.Data
                 t.AdapterType = DeviceUtils.GetProperty("AdapterType", mj, DeviceUtils.ReturnType.String);
 
                 mmBlocks.Add(t);
+            }
+
+            //get extended information
+            // get drive info collection
+            Collection = DeviceUtils.GetDriveInfo("Win32_NetworkAdapterConfiguration", "MACAddress", null, DeviceUtils.Operator.NotEgual);
+            // get all properties for each installed drive
+            foreach (ManagementObject mj in Collection)
+            {
+                Block c = (NETWORK.Block)mmBlocks.Where(d => d.Name == DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String) ).FirstOrDefault();
+
+                c.Ip_Address = DeviceUtils.GetProperty("IpAddress", mj, DeviceUtils.ReturnType.String) == null ? "N/A" : DeviceUtils.GetProperty("IpAddress", mj, DeviceUtils.ReturnType.String)[0];
+                c.DefualtGetway = DeviceUtils.GetProperty("DefaultIPGateway", mj, DeviceUtils.ReturnType.String) == null ? "N/A" : DeviceUtils.GetProperty("DefaultIPGateway", mj, DeviceUtils.ReturnType.String)[0];
+                c.PrimaryDNS = DeviceUtils.GetProperty("DNSServerSearchOrder", mj, DeviceUtils.ReturnType.String) == null ? "N/A" : DeviceUtils.GetProperty("DNSServerSearchOrder", mj, DeviceUtils.ReturnType.String)[0];
+                c.SencondaryDNS = DeviceUtils.GetProperty("DNSServerSearchOrder", mj, DeviceUtils.ReturnType.String) == null ? "N/A" : DeviceUtils.GetProperty("DNSServerSearchOrder", mj, DeviceUtils.ReturnType.String)[1];
+                c.SubNetMask = DeviceUtils.GetProperty("IpSubnet", mj, DeviceUtils.ReturnType.String) == null ? "N/A" : DeviceUtils.GetProperty("IpSubnet", mj, DeviceUtils.ReturnType.String)[0];
+
+                var Index = mmBlocks.FindIndex(d => d.Name == DeviceUtils.GetProperty("Description", mj, DeviceUtils.ReturnType.String));
+                mmBlocks[Index] = c;
             }
 
             // update values for each subdevice if change occured
