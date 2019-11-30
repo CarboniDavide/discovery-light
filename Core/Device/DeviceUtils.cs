@@ -18,56 +18,76 @@ namespace DiscoveryLight.Core.Device.Utils
             NotEgual
         }
 
-        /// <summary>
-        /// Get a property value when property base is a array of values
-        /// </summary>
-        /// <param name="property_name"></param>
-        /// <param name="obj"></param>
-        /// <param name="ArrayAt"></param>
-        /// <returns></returns>
-        public static dynamic GetProperty(string property_name, ManagementObject obj, int ArrayAt)
+        public static class GetProperty
         {
-            dynamic valideValue = GetProperty(property_name, obj);
-            if (!valideValue.GetType().IsArray) return valideValue;
-            return valideValue[ArrayAt];
+            /// <summary>
+            /// Get a property value when property base is a array of values
+            /// </summary>
+            /// <param name="property_name"></param>
+            /// <param name="obj"></param>
+            /// <param name="ArrayAt"></param>
+            /// <returns></returns>
+            public static dynamic AsArray(string property_name, ManagementObject obj, int ArrayAt)
+            {
+                dynamic res = Get(property_name, obj);
+                if (res == null) return "N/A";                                      // return "N/A" for null object
+                return (res.GetType().IsArray) ? res[ArrayAt] : res;                // check for array type: return array items for array data string elesewhere    
+            }
+
+            /// <summary>
+            /// Get a substring for a selected property
+            /// </summary>
+            /// <param name="property_name"></param>
+            /// <param name="obj"></param>
+            /// <param name="StartIndex"></param>
+            /// <param name="Lenght"></param>
+            /// <returns></returns>
+            public static dynamic AsSubString(string property_name, ManagementObject obj, int StartIndex, int Lenght)
+            {
+                String res = Get(property_name, obj);
+                if (res.GetType().IsArray) return "N/A";                           // check for array structure: nothing to do for unknow index
+                return  res == null ? "N/A" : res.Substring(StartIndex, Lenght);
+            }
+
+            /// <summary>
+            /// Return property value or array of values if exists N/A elsewhere
+            /// </summary>
+            /// <param name="property_name"></param>
+            /// <param name="obj"></param>
+            /// <returns></returns>
+            static public dynamic AsString(string property_name, ManagementObject obj)
+            {
+                var res = Get(property_name, obj);
+                if (res == null) return "N/A";
+                return (res.GetType().IsArray) ? "N/A" : res;        // check for array structure: nothing to do for unknow index
+            }
         }
+       
 
         /// <summary>
-        /// Get a substring for a selected property
+        /// Get Property values from a selected Wmi class object
         /// </summary>
-        /// <param name="property_name"></param>
+        /// <param name="property"></param>
         /// <param name="obj"></param>
-        /// <param name="StartIndex"></param>
-        /// <param name="Lenght"></param>
         /// <returns></returns>
-        public static dynamic GetProperty(string property_name, ManagementObject obj, int StartIndex, int Lenght)
+        private static dynamic Get(string property, ManagementObject obj)
         {
-            String valideValue = GetProperty(property_name, obj);
-            if (valideValue == "N/A") return valideValue;
-            return valideValue.Substring(StartIndex, Lenght);
-        }
-
-       /// <summary>
-       /// Return property value or array of values if exists N/A elsewhere
-       /// </summary>
-       /// <param name="property_name"></param>
-       /// <param name="obj"></param>
-       /// <returns></returns>
-        static public dynamic GetProperty(string property_name, ManagementObject obj)
-        {
-            try{
-                if (obj[property_name].GetType().IsArray)
-                    return obj[property_name];
+            try
+            {
+                if (obj[property].GetType().IsArray)
+                    return obj[property];
                 else
-                    return obj[property_name].ToString();                    // return value as string
+                    return obj[property].ToString();                    // return value as string
             }
-            catch (System.Management.ManagementException exception){
+            catch (System.Management.ManagementException exception)
+            {
                 LogHelper.Log(LogTarget.File, exception.ToString());
             }
-            catch (Exception exception){
+            catch (Exception exception)
+            {
                 LogHelper.Log(LogTarget.File, exception.ToString());
             }
-            return "N/A"; // not found 
+            return null; // not found 
         }
 
         /// <summary>
@@ -115,7 +135,7 @@ namespace DiscoveryLight.Core.Device.Utils
                 foreach(ManagementObject mj in collection.Get().Cast<ManagementObject>().ToList()){
                     if ( ( comp == Operator.Egual) && (mj[property].ToString().Equals(value)) )
                         res.Add(mj);
-                    if ( (comp == Operator.NotEgual) && (GetProperty(property, mj) != value) )
+                    if ( (comp == Operator.NotEgual) && (GetProperty.AsString(property, mj) != value) )
                         res.Add(mj);
                 }
                 collection.Dispose();
