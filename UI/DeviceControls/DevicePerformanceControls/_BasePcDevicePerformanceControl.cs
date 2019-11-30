@@ -32,9 +32,9 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_PC)this.CurrentPerformance;
-            chartRAM.FillSize = (int)CurrentPerformance.Per_RamSizeUsed;
-            chartHD.FillSize = (int)(100 - CurrentPerformance.Per_DiskSizeFree);
-            chartCPU.FillSize = (int)CurrentPerformance.Per_CpuUsage;
+            chartRAM.FillSize = Convert.ToInt32(CurrentPerformance.Per_RamSizeUsed);
+            chartHD.FillSize = Convert.ToInt32(100 - Convert.ToInt32(CurrentPerformance.Per_DiskSizeFree));
+            chartCPU.FillSize = Convert.ToInt32(CurrentPerformance.Per_CpuUsage);
         }
     }
 }

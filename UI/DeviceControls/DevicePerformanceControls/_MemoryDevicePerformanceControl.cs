@@ -41,7 +41,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             lbl_PageWrite_Value.Text = CurrentPerformanceCPU.PageWrite.ToString();
             lbl_PageRead_Value.Text = CurrentPerformanceCPU.PageRead.ToString();
             lbl_PagePersec_Value.Text = CurrentPerformanceCPU.PagePerSec.ToString();
-            chartRamUsage.FillSize = (int)(100 - CurrentPerformanceCPU.PerUsage);
+            chartRamUsage.FillSize = Convert.ToInt32(100 - Convert.ToInt32(CurrentPerformanceCPU.PerUsage));
         }
     }
 }

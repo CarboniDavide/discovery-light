@@ -46,22 +46,22 @@ namespace DiscoveryLight.Core.Device.Performance
     /// </summary>
     public class PERFORM_SCORE: DevicePerformance
     {
-        public UInt64? Cpu;
-        public UInt64? D3D;
-        public UInt64? Hd;
-        public UInt64? Graph;
-        public UInt64? Ram;
+        public String Cpu;
+        public String D3D;
+        public String Hd;
+        public String Graph;
+        public String Ram;
 
         public override void GetPerformance()
         {
             // get all properties for each installed drive
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_WinSAT"))
             {
-                this.Cpu = DeviceUtils.GetProperty("CPUScore", mj, DeviceUtils.ReturnType.UInt64);           // cpu 
-                this.D3D = DeviceUtils.GetProperty("D3DScore", mj, DeviceUtils.ReturnType.UInt64);           // d3d 
-                this.Hd = DeviceUtils.GetProperty("DiskScore", mj, DeviceUtils.ReturnType.UInt64);           // storage
-                this.Graph = DeviceUtils.GetProperty("GraphicsScore", mj, DeviceUtils.ReturnType.UInt64);    // graph
-                this.Ram = DeviceUtils.GetProperty("MemoryScore", mj, DeviceUtils.ReturnType.UInt64);        // memory
+                this.Cpu = DeviceUtils.GetProperty("CPUScore", mj);           // cpu 
+                this.D3D = DeviceUtils.GetProperty("D3DScore", mj);           // d3d 
+                this.Hd = DeviceUtils.GetProperty("DiskScore", mj);           // storage
+                this.Graph = DeviceUtils.GetProperty("GraphicsScore", mj);    // graph
+                this.Ram = DeviceUtils.GetProperty("MemoryScore", mj);        // memory
             }
         }
 
@@ -106,12 +106,12 @@ namespace DiscoveryLight.Core.Device.Performance
             this.Cpu = new List<Thread>();
             // create a list of thread for the selected cpu
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Counters_ProcessorInformation")){
-                if (DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String).Substring(0, 1).Equals(this.selectedCpu))
+                if (DeviceUtils.GetProperty("Name", mj, 0, 1).Equals(this.selectedCpu))
                 {
                     Thread t = new Thread();                                                                        // create a new Thread
-                    t.Name = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);                    // get thread name
-                    t.DPCRate = DeviceUtils.GetProperty("DPCRate", mj, DeviceUtils.ReturnType.String);              // get thread dpcreate value 
-                    t.Frequency = DeviceUtils.GetProperty("ProcessorFrequency", mj, DeviceUtils.ReturnType.String); // get speed
+                    t.Name = DeviceUtils.GetProperty("Name", mj);                    // get thread name
+                    t.DPCRate = DeviceUtils.GetProperty("DPCRate", mj);              // get thread dpcreate value 
+                    t.Frequency = DeviceUtils.GetProperty("ProcessorFrequency", mj); // get speed
                     this.Cpu.Add(t);
                 }
             }
@@ -142,8 +142,8 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             // get thread and process loaded
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_System")){
-                this.Threads = DeviceUtils.GetProperty("Threads", mj, DeviceUtils.ReturnType.String);
-                this.Processes = DeviceUtils.GetProperty("Processes", mj, DeviceUtils.ReturnType.String);
+                this.Threads = DeviceUtils.GetProperty("Threads", mj);
+                this.Processes = DeviceUtils.GetProperty("Processes", mj);
             }
         }
 
@@ -160,23 +160,23 @@ namespace DiscoveryLight.Core.Device.Performance
     public class PERFORM_PC: DevicePerformance
     {
 
-        public UInt64? Per_DiskSizeFree;
-        public UInt64? Per_CpuUsage;
-        public UInt64? Per_RamSizeUsed;
+        public String Per_DiskSizeFree;
+        public String Per_CpuUsage;
+        public String Per_RamSizeUsed;
 
         public override void GetPerformance()
         {
             // Storage
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_PerfDisk_LogicalDisk", "Name", "_Total", DeviceUtils.Operator.Egual))
-                this.Per_DiskSizeFree = DeviceUtils.GetProperty("PercentFreeSpace", mj, DeviceUtils.ReturnType.UInt64);
+                this.Per_DiskSizeFree = DeviceUtils.GetProperty("PercentFreeSpace", mj);
 
             // Memory
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_PerfOS_Memory"))
-                this.Per_RamSizeUsed = DeviceUtils.GetProperty("PercentCommittedBytesInUse", mj, DeviceUtils.ReturnType.UInt64);
+                this.Per_RamSizeUsed = DeviceUtils.GetProperty("PercentCommittedBytesInUse", mj);
 
             // Cpu
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_Processor", "Name", "_Total", DeviceUtils.Operator.Egual))
-                this.Per_CpuUsage = DeviceUtils.GetProperty("DPCRate", mj, DeviceUtils.ReturnType.UInt64);
+                this.Per_CpuUsage = DeviceUtils.GetProperty("DPCRate", mj);
         }
 
         public PERFORM_PC(): base("Pc Base Performance") {}
@@ -190,32 +190,32 @@ namespace DiscoveryLight.Core.Device.Performance
     /// </summary>
     public class PERFORM_RAM: DevicePerformance
     {
-        public UInt64? PerUsage;
-        public UInt64? CacheUsage;
-        public UInt64? MaxCacheUsage;
-        public UInt64? Free;
-        public UInt64? MemoryOut;
-        public UInt64? PageIn;
-        public UInt64? PageOut;
-        public UInt64? PagePerSec;
-        public UInt64? PageWrite;
-        public UInt64? PageRead;
+        public String PerUsage;
+        public String CacheUsage;
+        public String MaxCacheUsage;
+        public String Free;
+        public String MemoryOut;
+        public String PageIn;
+        public String PageOut;
+        public String PagePerSec;
+        public String PageWrite;
+        public String PageRead;
 
         public override void GetPerformance()
         {
             // get all memory ram properties from the collection
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_Memory"))
             {
-                this.CacheUsage = DeviceUtils.GetProperty("CacheBytes", mj, DeviceUtils.ReturnType.UInt64);
-                this.MaxCacheUsage = DeviceUtils.GetProperty("CacheBytesPeak", mj, DeviceUtils.ReturnType.UInt64);
-                this.Free = DeviceUtils.GetProperty("AvailableMBytes", mj, DeviceUtils.ReturnType.UInt64);
-                this.MemoryOut = DeviceUtils.GetProperty("CommittedBytes", mj, DeviceUtils.ReturnType.UInt64);
-                this.PageIn = DeviceUtils.GetProperty("PagesInputPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PageOut = DeviceUtils.GetProperty("PagesOutputPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PageWrite = DeviceUtils.GetProperty("PageWritesPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PageRead = DeviceUtils.GetProperty("PageReadsPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PagePerSec = DeviceUtils.GetProperty("PagesPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PerUsage = (DeviceUtils.GetProperty("AvailableBytes", mj, DeviceUtils.ReturnType.UInt64) / (DeviceUtils.GetProperty("CommitLimit", mj, DeviceUtils.ReturnType.UInt64) / 100));
+                this.CacheUsage = DeviceUtils.GetProperty("CacheBytes", mj);
+                this.MaxCacheUsage = DeviceUtils.GetProperty("CacheBytesPeak", mj);
+                this.Free = DeviceUtils.GetProperty("AvailableMBytes", mj);
+                this.MemoryOut = DeviceUtils.GetProperty("CommittedBytes", mj);
+                this.PageIn = DeviceUtils.GetProperty("PagesInputPersec", mj);
+                this.PageOut = DeviceUtils.GetProperty("PagesOutputPersec", mj);
+                this.PageWrite = DeviceUtils.GetProperty("PageWritesPersec", mj);
+                this.PageRead = DeviceUtils.GetProperty("PageReadsPersec", mj);
+                this.PagePerSec = DeviceUtils.GetProperty("PagesPersec", mj);
+                this.PerUsage = (Convert.ToInt64(DeviceUtils.GetProperty("AvailableBytes", mj)) / (Convert.ToInt64(DeviceUtils.GetProperty("CommitLimit", mj)) / 100)).ToString();
             }
         }
 
@@ -232,16 +232,16 @@ namespace DiscoveryLight.Core.Device.Performance
     /// </summary>
     public class PERFORM_DISK: DevicePerformance
     {
-        public UInt64? FreeSpace;
-        public UInt64? WriteBytesPerSec;
-        public UInt64? ReadBytesPerSec;
-        public UInt64? TransferPerSec;
+        public String FreeSpace;
+        public String WriteBytesPerSec;
+        public String ReadBytesPerSec;
+        public String TransferPerSec;
 
-        public UInt64? Percent_FreeSpace;
-        public UInt64? Percent_ReadTime;
-        public UInt64? Percent_WriteTime;
-        public UInt64? Percent_DiskTime;
-        public UInt64? Percent_IdleTime;
+        public String Percent_FreeSpace;
+        public String Percent_ReadTime;
+        public String Percent_WriteTime;
+        public String Percent_DiskTime;
+        public String Percent_IdleTime;
 
         private int? _driveIndex;
         private string _driveName;
@@ -260,7 +260,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfDisk_PhysicalDisk"))
             {
-                String currentDrive = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                String currentDrive = DeviceUtils.GetProperty("Name", mj);
 
                 if (currentDrive.Substring(0, 1).Equals(this.DriveIndex.ToString()))
                     this._driveName = currentDrive.Substring(2, 1) + ":";
@@ -272,19 +272,19 @@ namespace DiscoveryLight.Core.Device.Performance
             if (this.DriveIndex == null) return;
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_PerfDisk_LogicalDisk"))
             {
-                String currentDriveName = DeviceUtils.GetProperty("Name", mj, DeviceUtils.ReturnType.String);
+                String currentDriveName = DeviceUtils.GetProperty("Name", mj);
                 // get only properties from selected drive
                 if (currentDriveName.Equals(this.DriveName))
                 {
-                    this.FreeSpace = DeviceUtils.GetProperty("FreeMegabytes", mj, DeviceUtils.ReturnType.UInt64);
-                    this.WriteBytesPerSec = DeviceUtils.GetProperty("DiskWriteBytesPersec", mj, DeviceUtils.ReturnType.UInt64);
-                    this.ReadBytesPerSec = DeviceUtils.GetProperty("DiskReadBytesPersec", mj, DeviceUtils.ReturnType.UInt64);
-                    this.TransferPerSec = DeviceUtils.GetProperty("DiskTransfersPersec", mj, DeviceUtils.ReturnType.UInt64);
-                    this.Percent_FreeSpace = DeviceUtils.GetProperty("PercentFreeSpace", mj, DeviceUtils.ReturnType.UInt64);
-                    this.Percent_ReadTime = DeviceUtils.GetProperty("PercentDiskReadTime", mj, DeviceUtils.ReturnType.UInt64);
-                    this.Percent_WriteTime = DeviceUtils.GetProperty("PercentDiskWriteTime", mj, DeviceUtils.ReturnType.UInt64);
-                    this.Percent_DiskTime = DeviceUtils.GetProperty("PercentDiskTime", mj, DeviceUtils.ReturnType.UInt64);
-                    this.Percent_IdleTime = DeviceUtils.GetProperty("PercentIdleTime", mj, DeviceUtils.ReturnType.UInt64);
+                    this.FreeSpace = DeviceUtils.GetProperty("FreeMegabytes", mj);
+                    this.WriteBytesPerSec = DeviceUtils.GetProperty("DiskWriteBytesPersec", mj);
+                    this.ReadBytesPerSec = DeviceUtils.GetProperty("DiskReadBytesPersec", mj);
+                    this.TransferPerSec = DeviceUtils.GetProperty("DiskTransfersPersec", mj);
+                    this.Percent_FreeSpace = DeviceUtils.GetProperty("PercentFreeSpace", mj);
+                    this.Percent_ReadTime = DeviceUtils.GetProperty("PercentDiskReadTime", mj);
+                    this.Percent_WriteTime = DeviceUtils.GetProperty("PercentDiskWriteTime", mj);
+                    this.Percent_DiskTime = DeviceUtils.GetProperty("PercentDiskTime", mj);
+                    this.Percent_IdleTime = DeviceUtils.GetProperty("PercentIdleTime", mj);
                 }
             }
         }
@@ -311,17 +311,17 @@ namespace DiscoveryLight.Core.Device.Performance
     /// </summary>
     public class PERFORM_NETWORK: DevicePerformance
     {
-        public UInt64? ByteReceivedPerSec;
-        public UInt64? BytesSentPerSec;
-        public UInt64? BytesTotalPerSec;
-        public UInt64? PacketsReceivedsPerSec;
-        public UInt64? PacketsSentPerSec;
-        public UInt64? PacketsTotalPerSec;
+        public String ByteReceivedPerSec;
+        public String BytesSentPerSec;
+        public String BytesTotalPerSec;
+        public String PacketsReceivedsPerSec;
+        public String PacketsSentPerSec;
+        public String PacketsTotalPerSec;
 
-        public UInt64? PercentBytesReceived;
-        public UInt64? PercentBytesSent;
-        public UInt64? PercentPacketsReceived;
-        public UInt64? PercentPacketsSents;
+        public String PercentBytesReceived;
+        public String PercentBytesSent;
+        public String PercentPacketsReceived;
+        public String PercentPacketsSents;
 
         private string selectedNetwork;
 
@@ -334,42 +334,42 @@ namespace DiscoveryLight.Core.Device.Performance
             // get properties from the selected network adapter
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Tcpip_NetworkAdapter", "Name", this.selectedNetwork, DeviceUtils.Operator.Egual))
             {
-                this.ByteReceivedPerSec = DeviceUtils.GetProperty("BytesReceivedPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.BytesSentPerSec = DeviceUtils.GetProperty("BytesSentPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.BytesTotalPerSec = DeviceUtils.GetProperty("BytesTotalPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PacketsReceivedsPerSec = DeviceUtils.GetProperty("PacketsReceivedPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PacketsSentPerSec = DeviceUtils.GetProperty("PacketsSentPersec", mj, DeviceUtils.ReturnType.UInt64);
-                this.PacketsTotalPerSec = DeviceUtils.GetProperty("PacketsPersec", mj, DeviceUtils.ReturnType.UInt64);
+                this.ByteReceivedPerSec = DeviceUtils.GetProperty("BytesReceivedPersec", mj);
+                this.BytesSentPerSec = DeviceUtils.GetProperty("BytesSentPersec", mj);
+                this.BytesTotalPerSec = DeviceUtils.GetProperty("BytesTotalPersec", mj);
+                this.PacketsReceivedsPerSec = DeviceUtils.GetProperty("PacketsReceivedPersec", mj);
+                this.PacketsSentPerSec = DeviceUtils.GetProperty("PacketsSentPersec", mj);
+                this.PacketsTotalPerSec = DeviceUtils.GetProperty("PacketsPersec", mj);
 
                 // convert values
                 if (BytesTotalPerSec != null)
                 {
-                    Den = (BytesTotalPerSec / 100);
+                    Den = (Convert.ToUInt64(BytesTotalPerSec) / 100);
 
                     if (Den != 0)
                     {
-                        PercentBytesReceived = ByteReceivedPerSec != null ? (ByteReceivedPerSec / (BytesTotalPerSec / 100)) : null;
-                        PercentBytesSent = BytesSentPerSec != null ? (BytesSentPerSec / (BytesTotalPerSec / 100)) : null;
+                        PercentBytesReceived = ByteReceivedPerSec != null ? (Convert.ToUInt64(ByteReceivedPerSec) / (Convert.ToUInt64(BytesTotalPerSec) / 100)).ToString() : null;
+                        PercentBytesSent = BytesSentPerSec != null ? (Convert.ToUInt64(BytesSentPerSec) / (Convert.ToUInt64(BytesTotalPerSec) / 100)).ToString() : null;
                     }
                     else
                     {
-                        PercentBytesReceived = 0;
-                        PercentBytesSent = 0;
+                        PercentBytesReceived = "0";
+                        PercentBytesSent = "0";
                     }
                 }
 
                 if (PacketsTotalPerSec !=  null)
                 {
-                    Den = (PacketsTotalPerSec / 100);
+                    Den = (Convert.ToUInt64(PacketsTotalPerSec) / 100);
                     if (Den != 0)
                     {
-                        PercentPacketsReceived = PacketsReceivedsPerSec != null ? (PacketsReceivedsPerSec / (PacketsTotalPerSec / 100)) : null;
-                        PercentPacketsSents = PacketsSentPerSec != null ? (PacketsSentPerSec / (PacketsTotalPerSec / 100)) : null;
+                        PercentPacketsReceived = PacketsReceivedsPerSec != null ? (Convert.ToUInt64(PacketsReceivedsPerSec) / (Convert.ToUInt64(PacketsTotalPerSec) / 100)).ToString() : null;
+                        PercentPacketsSents = PacketsSentPerSec != null ? (Convert.ToUInt64(PacketsSentPerSec) / (Convert.ToUInt64(PacketsTotalPerSec) / 100)).ToString() : null;
                     }
                     else
                     {
-                        PercentPacketsSents = 0;
-                        PercentPacketsReceived = 0;
+                        PercentPacketsSents = "0";
+                        PercentPacketsReceived = "0";
                     }
                 }
             }
