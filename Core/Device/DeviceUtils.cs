@@ -11,10 +11,6 @@ namespace DiscoveryLight.Core.Device.Utils
     static class DeviceUtils
     {
         static public readonly String PATH = "root\\CIMV2";      // base wmi namespace for each drive data
-        public enum ReturnType
-        {
-            String, UInt64
-        }
 
         public enum Operator
         {
@@ -23,24 +19,47 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Get a property value from a selected wmi class
+        /// Get a property value when property base is a array of values
         /// </summary>
         /// <param name="property_name"></param>
         /// <param name="obj"></param>
-        /// <param name="returnAs"></param>
+        /// <param name="ArrayAt"></param>
         /// <returns></returns>
-        static public dynamic GetProperty(string property_name, ManagementObject obj, ReturnType returnAs)
+        public static dynamic GetProperty(string property_name, ManagementObject obj, int ArrayAt)
+        {
+            dynamic valideValue = GetProperty(property_name, obj);
+            if (!valideValue.GetType().IsArray) return valideValue;
+            return valideValue[ArrayAt];
+        }
+
+        /// <summary>
+        /// Get a substring for a selected property
+        /// </summary>
+        /// <param name="property_name"></param>
+        /// <param name="obj"></param>
+        /// <param name="StartIndex"></param>
+        /// <param name="Lenght"></param>
+        /// <returns></returns>
+        public static dynamic GetProperty(string property_name, ManagementObject obj, int StartIndex, int Lenght)
+        {
+            String valideValue = GetProperty(property_name, obj);
+            if (valideValue == "N/A") return valideValue;
+            return valideValue.Substring(StartIndex, Lenght);
+        }
+
+       /// <summary>
+       /// Return property value or array or values if exists N/A elsewhere
+       /// </summary>
+       /// <param name="property_name"></param>
+       /// <param name="obj"></param>
+       /// <returns></returns>
+        static public dynamic GetProperty(string property_name, ManagementObject obj)
         {
             try{
-                if (returnAs == ReturnType.String)
-                {
-                    if (obj[property_name].GetType().IsArray)
-                        return obj[property_name];
-                    else
-                        return obj[property_name].ToString();                    // return value as string
-                }
+                if (obj[property_name].GetType().IsArray)
+                    return obj[property_name];
                 else
-                    return Convert.ToUInt64(obj[property_name]);             // return value as integer
+                    return obj[property_name].ToString();                    // return value as string
             }
             catch (System.Management.ManagementException exception){
                 LogHelper.Log(LogTarget.File, exception.ToString());
@@ -48,7 +67,7 @@ namespace DiscoveryLight.Core.Device.Utils
             catch (Exception exception){
                 LogHelper.Log(LogTarget.File, exception.ToString());
             }
-            return null; // not found 
+            return "N/A"; // not found 
         }
 
         /// <summary>
@@ -96,7 +115,7 @@ namespace DiscoveryLight.Core.Device.Utils
                 foreach(ManagementObject mj in collection.Get().Cast<ManagementObject>().ToList()){
                     if ( ( comp == Operator.Egual) && (mj[property].ToString().Equals(value)) )
                         res.Add(mj);
-                    if ( (comp == Operator.NotEgual) && (GetProperty(property, mj, ReturnType.String) != value) )
+                    if ( (comp == Operator.NotEgual) && (GetProperty(property, mj) != value) )
                         res.Add(mj);
                 }
                 collection.Dispose();
