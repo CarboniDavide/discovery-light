@@ -48,7 +48,7 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
        /// <summary>
-       /// Return property value or array or values if exists N/A elsewhere
+       /// Return property value or array of values if exists N/A elsewhere
        /// </summary>
        /// <param name="property_name"></param>
        /// <param name="obj"></param>
