@@ -721,7 +721,6 @@
   <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
-    <None Include="Resources\log.txt" />
     <None Include="Resources\Video.png" />
     <None Include="Resources\Sound.png" />
     <None Include="Resources\Performancs.png" />
