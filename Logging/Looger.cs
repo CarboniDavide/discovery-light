@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiscoveryLight.Logging
 {
@@ -20,16 +16,33 @@ namespace DiscoveryLight.Logging
     
     public class FileLogger : LogBase
     {
-        public string filePath = "log.txt";
+        public static string filePath = @"log.txt";
+        private static FileLogger instance = null;
         public override void Log(string message)
         {
             lock (lockObj)
             {
-                using (StreamWriter streamWriter = new StreamWriter(filePath))
+                using (StreamWriter streamWriter = File.AppendText(filePath))
                 {
                     streamWriter.WriteLine(DateTime.Now.ToString("h:mm:ss tt") + " - " + message);
                     streamWriter.Close();
                 }
+            }
+        }
+
+        public static FileLogger Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new FileLogger();
+                    using (StreamWriter streamWriter = new StreamWriter(filePath))
+                    {
+                        streamWriter.Close();
+                    }
+                }
+                return instance;
             }
         }
     }
@@ -55,7 +68,7 @@ namespace DiscoveryLight.Logging
             switch (target)
             {
                 case LogTarget.File:
-                    logger = new FileLogger();
+                    logger = FileLogger.Instance;
                     logger.Log(message);
                     break;
                 case LogTarget.EventLog:
