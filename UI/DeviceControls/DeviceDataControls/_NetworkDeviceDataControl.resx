@@ -126,7 +126,7 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_Tipology.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 34</value>
+    <value>42, 34</value>
   </data>
   <data name="lbl_Tipology.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 25</value>
@@ -160,7 +160,7 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_Manufacturer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 59</value>
+    <value>42, 59</value>
   </data>
   <data name="lbl_Manufacturer.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 25</value>
@@ -193,7 +193,7 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>42, 134</value>
   </data>
   <data name="lbl_Speed.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 25</value>
@@ -226,7 +226,7 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_MACAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 159</value>
+    <value>46, 159</value>
   </data>
   <data name="lbl_MACAddress.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 25</value>
@@ -259,7 +259,7 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_AdapterType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 84</value>
+    <value>42, 84</value>
   </data>
   <data name="lbl_AdapterType.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 25</value>
@@ -292,10 +292,10 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_Manufacturer_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 64</value>
+    <value>219, 64</value>
   </data>
   <data name="lbl_Manufacturer_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_Manufacturer_Value.TabIndex" type="System.Int32, mscorlib">
     <value>228</value>
@@ -322,10 +322,10 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_Tipology_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 38</value>
+    <value>219, 38</value>
   </data>
   <data name="lbl_Tipology_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_Tipology_Value.TabIndex" type="System.Int32, mscorlib">
     <value>229</value>
@@ -352,10 +352,10 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_Speed_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 138</value>
+    <value>219, 138</value>
   </data>
   <data name="lbl_Speed_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_Speed_Value.TabIndex" type="System.Int32, mscorlib">
     <value>232</value>
@@ -382,10 +382,10 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_MACAddress_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 163</value>
+    <value>219, 163</value>
   </data>
   <data name="lbl_MACAddress_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_MACAddress_Value.TabIndex" type="System.Int32, mscorlib">
     <value>233</value>
@@ -412,10 +412,10 @@
     <value>Tahoma, 9.75pt</value>
   </data>
   <data name="lbl_AdapterType_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 89</value>
+    <value>219, 89</value>
   </data>
   <data name="lbl_AdapterType_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_AdapterType_Value.TabIndex" type="System.Int32, mscorlib">
     <value>234</value>
@@ -478,10 +478,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_IPAddress_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 188</value>
+    <value>219, 188</value>
   </data>
   <data name="lbl_IPAddress_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_IPAddress_Value.TabIndex" type="System.Int32, mscorlib">
     <value>238</value>
@@ -511,7 +511,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_IPAddress.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 184</value>
+    <value>46, 184</value>
   </data>
   <data name="lbl_IPAddress.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 25</value>
@@ -547,10 +547,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Getway_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 213</value>
+    <value>219, 213</value>
   </data>
   <data name="lbl_Getway_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_Getway_Value.TabIndex" type="System.Int32, mscorlib">
     <value>240</value>
@@ -580,7 +580,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_Getway.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 209</value>
+    <value>46, 209</value>
   </data>
   <data name="lbl_Getway.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 25</value>
@@ -616,10 +616,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_PrimaryDNS_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 238</value>
+    <value>219, 238</value>
   </data>
   <data name="lbl_PrimaryDNS_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_PrimaryDNS_Value.TabIndex" type="System.Int32, mscorlib">
     <value>242</value>
@@ -649,7 +649,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_PrimaryDNS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 234</value>
+    <value>46, 234</value>
   </data>
   <data name="lbl_PrimaryDNS.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 25</value>
@@ -685,10 +685,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_SecondaryDNS_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 263</value>
+    <value>219, 263</value>
   </data>
   <data name="lbl_SecondaryDNS_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_SecondaryDNS_Value.TabIndex" type="System.Int32, mscorlib">
     <value>244</value>
@@ -718,7 +718,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_SecondaryDNS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 259</value>
+    <value>46, 259</value>
   </data>
   <data name="lbl_SecondaryDNS.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 25</value>
@@ -754,10 +754,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_SubnetMask_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 288</value>
+    <value>218, 288</value>
   </data>
   <data name="lbl_SubnetMask_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_SubnetMask_Value.TabIndex" type="System.Int32, mscorlib">
     <value>246</value>
@@ -787,7 +787,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_SubnetMask.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 284</value>
+    <value>45, 284</value>
   </data>
   <data name="lbl_SubnetMask.Size" type="System.Drawing.Size, System.Drawing">
     <value>167, 25</value>
@@ -823,10 +823,10 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_DeviceID_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 114</value>
+    <value>219, 114</value>
   </data>
   <data name="lbl_DeviceID_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 20</value>
+    <value>238, 20</value>
   </data>
   <data name="lbl_DeviceID_Value.TabIndex" type="System.Int32, mscorlib">
     <value>235</value>
@@ -856,7 +856,7 @@
     <value>NoControl</value>
   </data>
   <data name="lbl_DeviceID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 109</value>
+    <value>42, 109</value>
   </data>
   <data name="lbl_DeviceID.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 25</value>
