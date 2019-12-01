@@ -34,18 +34,19 @@
             // 
             // lst_Details
             // 
-            this.lst_Details.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lst_Details.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lst_Details.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lst_Details.FormattingEnabled = true;
             this.lst_Details.HorizontalScrollbar = true;
-            this.lst_Details.Location = new System.Drawing.Point(5, 5);
+            this.lst_Details.Location = new System.Drawing.Point(0, 0);
+            this.lst_Details.Margin = new System.Windows.Forms.Padding(0);
             this.lst_Details.Name = "lst_Details";
-            this.lst_Details.Size = new System.Drawing.Size(625, 255);
+            this.lst_Details.Size = new System.Drawing.Size(631, 260);
             this.lst_Details.TabIndex = 0;
             // 
             // MessageResult
             // 
+            this.MessageResult.ClassName = "Class Name";
+            this.MessageResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MessageResult.Location = new System.Drawing.Point(0, 0);
             this.MessageResult.Name = "MessageResult";
             this.MessageResult.Size = new System.Drawing.Size(630, 260);
@@ -55,11 +56,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.MessageResult);
             this.Controls.Add(this.lst_Details);
+            this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "_WmiDetails";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
             this.Size = new System.Drawing.Size(630, 260);
             this.ResumeLayout(false);
 

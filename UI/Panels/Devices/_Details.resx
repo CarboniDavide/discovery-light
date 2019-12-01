@@ -198,9 +198,6 @@
   <data name="WmiDetails.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 101</value>
   </data>
-  <data name="WmiDetails.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 0, 5</value>
-  </data>
   <data name="WmiDetails.Size" type="System.Drawing.Size, System.Drawing">
     <value>630, 259</value>
   </data>
