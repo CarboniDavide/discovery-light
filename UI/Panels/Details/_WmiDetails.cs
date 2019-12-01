@@ -106,23 +106,18 @@ namespace DiscoveryLight.UI.Panels.Details
             switch (e.Status)
             {
                 case TaskEventArgs.EventStatus.finish:
-                    MessageResult.Visible= !Convert.ToBoolean(lst_Details.Items.Count);
-                    MessageResult.lbl_ClasseName.Text = Sender["WmiClassName"];
-                    MessageResult.lbl_ClasseName.Visible = true;
-                    MessageResult.lbl_MessageResult.Visible = true;
-                    break;
-                case TaskEventArgs.EventStatus.next:
-                    MessageResult.Visible = !Convert.ToBoolean(lst_Details.Items.Count);
+                    MessageResult.HideControl(Convert.ToBoolean(lst_Details.Items.Count));
+                    MessageResult.HideMessages(Convert.ToBoolean(lst_Details.Items.Count), null);
                     break;
                 case TaskEventArgs.EventStatus.init:
-                    MessageResult.lbl_ClasseName.Visible = true;
-                    MessageResult.lbl_MessageResult.Visible = true;
-                    MessageResult.lbl_ClasseName.Text = Sender["WmiClassName"];
+                    MessageResult.HideControl(Convert.ToBoolean(lst_Details.Items.Count));
                     break;
                 case TaskEventArgs.EventStatus.pause:
-                    MessageResult.Visible = true;
-                    MessageResult.lbl_ClasseName.Visible = false;
-                    MessageResult.lbl_MessageResult.Visible = false;
+                    MessageResult.HideControl(false);
+                    MessageResult.HideMessages(true, Sender["WmiClassName"]);
+                    break;
+                case TaskEventArgs.EventStatus.next:
+                    MessageResult.HideControl(true);
                     break;
             }
         }
