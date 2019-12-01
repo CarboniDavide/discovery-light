@@ -18,6 +18,8 @@ namespace DiscoveryLight.UI.Panels.Details
         public _WmiDetails()
         {
             InitializeComponent();
+            // manage message result
+            OnGetValues += new EventHandler<TaskEventArgs>(ManageMessageResult);
         }
 
         protected override void Set(dynamic list)
@@ -58,7 +60,6 @@ namespace DiscoveryLight.UI.Panels.Details
 
             if (nsClass == null)
             {
-                yield return ("Not Found");
                 onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
             }
             else
@@ -94,9 +95,35 @@ namespace DiscoveryLight.UI.Panels.Details
                     yield return (" ");
                     onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.next, null));
                 }
-                if (count == 0) yield return ("Not Found");
                 onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
                 nsClass.Dispose();
+            }
+        }
+
+        // Manage  footer message box
+        public void ManageMessageResult(object sender, TaskEventArgs e)
+        {
+            switch (e.Status)
+            {
+                case TaskEventArgs.EventStatus.finish:
+                    MessageResult.Visible= !Convert.ToBoolean(lst_Details.Items.Count);
+                    MessageResult.lbl_ClasseName.Text = Sender["WmiClassName"];
+                    MessageResult.lbl_ClasseName.Visible = true;
+                    MessageResult.lbl_MessageResult.Visible = true;
+                    break;
+                case TaskEventArgs.EventStatus.next:
+                    MessageResult.Visible = !Convert.ToBoolean(lst_Details.Items.Count);
+                    break;
+                case TaskEventArgs.EventStatus.init:
+                    MessageResult.lbl_ClasseName.Visible = true;
+                    MessageResult.lbl_MessageResult.Visible = true;
+                    MessageResult.lbl_ClasseName.Text = Sender["WmiClassName"];
+                    break;
+                case TaskEventArgs.EventStatus.pause:
+                    MessageResult.Visible = true;
+                    MessageResult.lbl_ClasseName.Visible = false;
+                    MessageResult.lbl_MessageResult.Visible = false;
+                    break;
             }
         }
     }

@@ -230,6 +230,12 @@
     <Compile Include="UI\Panels\Details\BaseSubPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\Panels\Details\_MessageResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Panels\Details\_MessageResult.Designer.cs">
+      <DependentUpon>_MessageResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Panels\Details\_WmiClasses.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -563,6 +569,18 @@
     <EmbeddedResource Include="UI\Forms\SplachScreen\_SplachScreen.resx">
       <DependentUpon>_SplachScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_MessageResult.de.resx">
+      <DependentUpon>_MessageResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_MessageResult.fr.resx">
+      <DependentUpon>_MessageResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_MessageResult.it.resx">
+      <DependentUpon>_MessageResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Panels\Details\_MessageResult.resx">
+      <DependentUpon>_MessageResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Panels\Details\_WmiClasses.resx">
       <DependentUpon>_WmiClasses.cs</DependentUpon>
     </EmbeddedResource>
@@ -721,6 +739,7 @@
   <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
+    <None Include="Resources\ic_notfound.png" />
     <None Include="Resources\Video.png" />
     <None Include="Resources\Sound.png" />
     <None Include="Resources\Performancs.png" />
