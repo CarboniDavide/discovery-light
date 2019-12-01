@@ -74,9 +74,10 @@ namespace DiscoveryLight.UI.Panels.Slider
             }
             else
             {
-                MoveAction = MoveUp;                                                              // set action to the animation   
+                MoveAction = MoveUp;                                                             // set action to the animation   
                 this.Height = NewPanel.Height * 2;                                               // get space in bottom to host the new panel    
                 this.Location = new Point(this.Location.X, 0);                                   // get a new location
+                this.Controls[0].Location = new Point(this.Location.X, 0);                       // change location to the old panel
                 NewPanel.Location = new Point(CurrentPanel.Location.X, CurrentPanel.Height);     // set panel with the location  
             }
 
