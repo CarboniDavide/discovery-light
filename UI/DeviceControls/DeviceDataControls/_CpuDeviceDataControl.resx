@@ -117,50 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;lbl_Thread.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_L3CacheSize_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_Size.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_L3CacheSize_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
+  <data name="lbl_L1CacheSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 235</value>
   </data>
-  <data name="lbl_L3CacheSize_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 285</value>
-  </data>
-  <data name="lbl_L3CacheSize_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_L3CacheSize_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>40</value>
-  </data>
-  <data name="lbl_L3CacheSize_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_L3CacheSize_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_L3CacheSize_Value.Name" xml:space="preserve">
-    <value>lbl_L3CacheSize_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_L3CacheSize_Value.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_L2CacheSize.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lbl_L3CacheSize_Value.Parent" xml:space="preserve">
+  <data name="lbl_MaxSpeed_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 16</value>
+  </data>
+  <data name="lbl_L3CacheSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 285</value>
+  </data>
+  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision.Name" xml:space="preserve">
+    <value>lbl_Revision</value>
+  </data>
+  <data name="lbl_Producteur.Text" xml:space="preserve">
+    <value>Producer</value>
+  </data>
+  <data name="&gt;&gt;lbl_L2CacheSize.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl_L3CacheSize_Value.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="lbl_Producteur_Value.Text" xml:space="preserve">
+    <value>N/A</value>
   </data>
-  <data name="lbl_L2CacheSize_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="lbl_Core_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 185</value>
   </data>
-  <data name="lbl_L2CacheSize_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
+  <data name="&gt;&gt;lbl_Size.ZOrder" xml:space="preserve">
+    <value>21</value>
   </data>
   <data name="lbl_L2CacheSize_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>201, 260</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur.Name" xml:space="preserve">
+    <value>lbl_Producteur</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_Revision.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
   </data>
   <data name="lbl_L2CacheSize_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 25</value>
@@ -168,697 +183,682 @@
   <data name="lbl_L2CacheSize_Value.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
-  <data name="lbl_L2CacheSize_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_L2CacheSize_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize_Value.Name" xml:space="preserve">
-    <value>lbl_L2CacheSize_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize_Value.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lbl_Revision.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Revision.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Revision.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 135</value>
-  </data>
-  <data name="lbl_Revision.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Revision.TabIndex" type="System.Int32, mscorlib">
-    <value>37</value>
-  </data>
-  <data name="lbl_Revision.Text" xml:space="preserve">
-    <value>Revision</value>
-  </data>
-  <data name="lbl_Revision.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision.Name" xml:space="preserve">
-    <value>lbl_Revision</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lbl_L3CacheSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_L3CacheSize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_L3CacheSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 285</value>
-  </data>
-  <data name="lbl_L3CacheSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_L3CacheSize.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
-  </data>
-  <data name="lbl_L3CacheSize.Text" xml:space="preserve">
-    <value>L3 Cache</value>
-  </data>
-  <data name="lbl_L3CacheSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_L3CacheSize.Name" xml:space="preserve">
-    <value>lbl_L3CacheSize</value>
-  </data>
-  <data name="&gt;&gt;lbl_L3CacheSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_L3CacheSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_L3CacheSize.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbl_Thread_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Thread_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Thread_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 210</value>
-  </data>
-  <data name="lbl_Thread_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Thread_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>35</value>
-  </data>
-  <data name="lbl_Thread_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Thread_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread_Value.Name" xml:space="preserve">
-    <value>lbl_Thread_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread_Value.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lbl_L2CacheSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_L2CacheSize.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_L2CacheSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 260</value>
-  </data>
-  <data name="lbl_L2CacheSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_L2CacheSize.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
-  </data>
-  <data name="lbl_L2CacheSize.Text" xml:space="preserve">
-    <value>L2 Cache</value>
-  </data>
-  <data name="lbl_L2CacheSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize.Name" xml:space="preserve">
-    <value>lbl_L2CacheSize</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_L2CacheSize.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="lbl_Revision_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Revision_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Revision_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 135</value>
-  </data>
-  <data name="lbl_Revision_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Revision_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
-  </data>
-  <data name="lbl_Revision_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Revision_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision_Value.Name" xml:space="preserve">
-    <value>lbl_Revision_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Revision_Value.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="lbl_Producteur_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Producteur_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Producteur_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 110</value>
-  </data>
-  <data name="lbl_Producteur_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Producteur_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>31</value>
-  </data>
-  <data name="lbl_Producteur_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Producteur_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur_Value.Name" xml:space="preserve">
-    <value>lbl_Producteur_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur_Value.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="lbl_Description_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="lbl_Description_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9.75pt</value>
-  </data>
-  <data name="lbl_Description_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 37</value>
-  </data>
-  <data name="lbl_Description_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 25</value>
-  </data>
-  <data name="lbl_Description_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="lbl_Description_Value.Text" xml:space="preserve">
-    <value>Description_Value</value>
-  </data>
-  <data name="lbl_Description_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lbl_Description_Value.Name" xml:space="preserve">
-    <value>lbl_Description_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Description_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Description_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Description_Value.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="lbl_Size_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Size_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Size_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 85</value>
-  </data>
-  <data name="lbl_Size_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Size_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
-  </data>
-  <data name="lbl_Size_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_Size_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="&gt;&gt;lbl_L3CacheSize_Value.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="&gt;&gt;lbl_Size_Value.Name" xml:space="preserve">
     <value>lbl_Size_Value</value>
   </data>
-  <data name="&gt;&gt;lbl_Size_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size_Value.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 9.75pt, style=Bold</value>
-  </data>
-  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 16</value>
-  </data>
-  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 25</value>
-  </data>
-  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>28</value>
-  </data>
-  <data name="lbl_Name_Value.Text" xml:space="preserve">
-    <value>Name_Value</value>
-  </data>
-  <data name="lbl_Name_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
-    <value>lbl_Name_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="lbl_Socket.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Socket.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Socket.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 160</value>
-  </data>
-  <data name="lbl_Socket.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Socket.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="lbl_Socket.Text" xml:space="preserve">
-    <value>Socket</value>
-  </data>
-  <data name="lbl_Socket.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Socket.Name" xml:space="preserve">
-    <value>lbl_Socket</value>
-  </data>
-  <data name="&gt;&gt;lbl_Socket.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Socket.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Socket.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="lbl_Producteur.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Producteur.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Producteur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 110</value>
-  </data>
-  <data name="lbl_Producteur.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Producteur.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="lbl_Producteur.Text" xml:space="preserve">
-    <value>Producer</value>
-  </data>
-  <data name="lbl_Producteur.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur.Name" xml:space="preserve">
-    <value>lbl_Producteur</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Producteur.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="lbl_Size.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Size.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Size.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 85</value>
-  </data>
-  <data name="lbl_Size.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Size.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="lbl_Size.Text" xml:space="preserve">
-    <value>Size</value>
-  </data>
-  <data name="lbl_Size.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.Name" xml:space="preserve">
-    <value>lbl_Size</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Size.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="lbl_Core.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Core.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Core.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 185</value>
-  </data>
-  <data name="lbl_Core.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_Core.TabIndex" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="lbl_Core.Text" xml:space="preserve">
-    <value>Cores</value>
+  <data name="&gt;&gt;lbl_Thread_Value.Name" xml:space="preserve">
+    <value>lbl_Thread_Value</value>
   </data>
   <data name="lbl_Core.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
-  <data name="&gt;&gt;lbl_Core.Name" xml:space="preserve">
-    <value>lbl_Core</value>
+  <data name="lbl_Name_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
   </data>
-  <data name="&gt;&gt;lbl_Core.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_L1CacheSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lbl_Core.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl_Core.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbl_Thread.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Thread.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbl_Revision.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="lbl_Thread.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 210</value>
+  <data name="lbl_Core_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="lbl_Thread.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="lbl_L2CacheSize.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 25</value>
   </data>
-  <data name="lbl_Thread.TabIndex" type="System.Int32, mscorlib">
-    <value>43</value>
+  <data name="&gt;&gt;lbl_MaxSpeed.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="lbl_Thread.Text" xml:space="preserve">
-    <value>Threads</value>
+  <data name="lbl_Size.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 85</value>
   </data>
-  <data name="lbl_Thread.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread.Name" xml:space="preserve">
-    <value>lbl_Thread</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Thread.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lbl_Socket_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_Socket_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_Socket_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 160</value>
+  <data name="lbl_Description_Value.Text" xml:space="preserve">
+    <value>Description_Value</value>
   </data>
   <data name="lbl_Socket_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 25</value>
   </data>
-  <data name="lbl_Socket_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>44</value>
+  <data name="lbl_Size_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
   </data>
-  <data name="lbl_Socket_Value.Text" xml:space="preserve">
-    <value>N/A</value>
+  <data name="&gt;&gt;lbl_L3CacheSize.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
-  <data name="lbl_Socket_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
+  <data name="lbl_Producteur.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="&gt;&gt;lbl_Socket_Value.Name" xml:space="preserve">
-    <value>lbl_Socket_Value</value>
+  <data name="&gt;&gt;lbl_Size_Value.ZOrder" xml:space="preserve">
+    <value>17</value>
   </data>
-  <data name="&gt;&gt;lbl_Socket_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_Socket.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 160</value>
   </data>
-  <data name="&gt;&gt;lbl_Socket_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Socket_Value.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbl_Core_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_Socket.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="lbl_Core_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11.25pt</value>
   </data>
-  <data name="lbl_Core_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 185</value>
+  <data name="lbl_MaxSpeed_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 310</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur_Value.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lbl_Revision.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 135</value>
   </data>
   <data name="lbl_Core_Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>196, 25</value>
   </data>
-  <data name="lbl_Core_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>45</value>
+  <data name="&gt;&gt;lbl_Socket.Name" xml:space="preserve">
+    <value>lbl_Socket</value>
   </data>
-  <data name="lbl_Core_Value.Text" xml:space="preserve">
+  <data name="&gt;&gt;lbl_Size.Name" xml:space="preserve">
+    <value>lbl_Size</value>
+  </data>
+  <data name="&gt;&gt;lbl_L2CacheSize.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbl_Producteur.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Socket.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="lbl_L2CacheSize_Value.Text" xml:space="preserve">
     <value>N/A</value>
   </data>
-  <data name="lbl_Core_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_Core_Value.Name" xml:space="preserve">
-    <value>lbl_Core_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_Core_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Core_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Core_Value.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbl_L1CacheSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="lbl_Producteur_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="lbl_L1CacheSize.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbl_Socket_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_L1CacheSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 235</value>
-  </data>
-  <data name="lbl_L1CacheSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_L1CacheSize.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="lbl_L1CacheSize.Text" xml:space="preserve">
-    <value>L1 Cache</value>
-  </data>
-  <data name="lbl_L1CacheSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize.Name" xml:space="preserve">
-    <value>lbl_L1CacheSize</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbl_L1CacheSize_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_L1CacheSize_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_L1CacheSize_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 235</value>
-  </data>
-  <data name="lbl_L1CacheSize_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_L1CacheSize_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>69</value>
-  </data>
-  <data name="lbl_L1CacheSize_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_L1CacheSize_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize_Value.Name" xml:space="preserve">
-    <value>lbl_L1CacheSize_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_L1CacheSize_Value.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_MaxSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_MaxSpeed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_MaxSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 310</value>
-  </data>
-  <data name="lbl_MaxSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_MaxSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
-  <data name="lbl_MaxSpeed.Text" xml:space="preserve">
-    <value>Max Speed</value>
-  </data>
-  <data name="lbl_MaxSpeed.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_MaxSpeed.Name" xml:space="preserve">
-    <value>lbl_MaxSpeed</value>
-  </data>
-  <data name="&gt;&gt;lbl_MaxSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_MaxSpeed.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_MaxSpeed.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl_MaxSpeed_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="lbl_MaxSpeed_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 11.25pt</value>
-  </data>
-  <data name="lbl_MaxSpeed_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>201, 310</value>
-  </data>
-  <data name="lbl_MaxSpeed_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>196, 25</value>
-  </data>
-  <data name="lbl_MaxSpeed_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="lbl_MaxSpeed_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="lbl_MaxSpeed_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;lbl_MaxSpeed_Value.Name" xml:space="preserve">
-    <value>lbl_MaxSpeed_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_MaxSpeed_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lbl_MaxSpeed_Value.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl_MaxSpeed_Value.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;lbl_L2CacheSize_Value.Name" xml:space="preserve">
+    <value>lbl_L2CacheSize_Value</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
+  <data name="lbl_MaxSpeed_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_L3CacheSize_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Core.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 185</value>
+  </data>
+  <data name="lbl_L3CacheSize_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 360</value>
+  <data name="lbl_L3CacheSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision_Value.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;lbl_L2CacheSize_Value.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbl_MaxSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="lbl_L2CacheSize.Text" xml:space="preserve">
+    <value>L2 Cache</value>
+  </data>
+  <data name="&gt;&gt;lbl_Description_Value.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lbl_Producteur_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_L1CacheSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_L3CacheSize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Thread_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_L3CacheSize_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_MaxSpeed.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_L3CacheSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision_Value.Name" xml:space="preserve">
+    <value>lbl_Revision_Value</value>
+  </data>
+  <data name="lbl_Revision.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_L3CacheSize.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="lbl_L1CacheSize_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_Socket.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_L3CacheSize_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_Thread.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbl_L3CacheSize.Text" xml:space="preserve">
+    <value>L3 Cache</value>
+  </data>
+  <data name="lbl_MaxSpeed_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="lbl_Name_Value.Text" xml:space="preserve">
+    <value>Name_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_MaxSpeed.Name" xml:space="preserve">
+    <value>lbl_MaxSpeed</value>
+  </data>
+  <data name="&gt;&gt;lbl_MaxSpeed_Value.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl_Size_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Producteur_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 110</value>
+  </data>
+  <data name="lbl_Revision_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_Socket_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 160</value>
+  </data>
+  <data name="lbl_Description_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lbl_Core.Name" xml:space="preserve">
+    <value>lbl_Core</value>
+  </data>
+  <data name="lbl_L1CacheSize.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;lbl_Socket.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Core.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbl_Producteur.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 110</value>
+  </data>
+  <data name="lbl_Description_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Thread.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Size_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>_CpuDeviceDataControl</value>
   </data>
+  <data name="lbl_Core_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_L2CacheSize.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="lbl_L3CacheSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Core_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="lbl_Socket.Text" xml:space="preserve">
+    <value>Socket</value>
+  </data>
+  <data name="lbl_L1CacheSize_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="lbl_L3CacheSize_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 285</value>
+  </data>
+  <data name="lbl_Core.Text" xml:space="preserve">
+    <value>Cores</value>
+  </data>
+  <data name="lbl_Size_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 85</value>
+  </data>
+  <data name="lbl_Thread_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="lbl_L2CacheSize_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_L3CacheSize_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Core_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Producteur_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Name" xml:space="preserve">
+    <value>lbl_Name_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Thread.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 210</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Thread.Text" xml:space="preserve">
+    <value>Threads</value>
+  </data>
+  <data name="&gt;&gt;lbl_L3CacheSize_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Size.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;lbl_MaxSpeed_Value.Name" xml:space="preserve">
+    <value>lbl_MaxSpeed_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Socket_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Core_Value.Name" xml:space="preserve">
+    <value>lbl_Core_Value</value>
+  </data>
+  <data name="lbl_Producteur.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Socket_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lbl_MaxSpeed.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Name_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Thread_Value.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lbl_Core.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_L2CacheSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Revision_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Description_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 37</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;lbl_Socket_Value.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lbl_Description_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur_Value.Name" xml:space="preserve">
+    <value>lbl_Producteur_Value</value>
+  </data>
+  <data name="lbl_Thread.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_L2CacheSize.Name" xml:space="preserve">
+    <value>lbl_L2CacheSize</value>
+  </data>
+  <data name="lbl_L2CacheSize.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_Socket.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Size_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_MaxSpeed.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_L1CacheSize_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_L1CacheSize.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_L1CacheSize_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Socket_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="lbl_Description_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_Size.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="lbl_L2CacheSize.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Description_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lbl_Socket_Value.Name" xml:space="preserve">
+    <value>lbl_Socket_Value</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 360</value>
+  </data>
+  <data name="&gt;&gt;lbl_Core.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize_Value.Name" xml:space="preserve">
+    <value>lbl_L1CacheSize_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 25</value>
+  </data>
+  <data name="lbl_Core.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="lbl_Producteur_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Socket_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_Core_Value.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;lbl_Core_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Thread_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_L3CacheSize_Value.Name" xml:space="preserve">
+    <value>lbl_L3CacheSize_Value</value>
+  </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls.DeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="lbl_Size.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_MaxSpeed.Text" xml:space="preserve">
+    <value>Base Speed</value>
+  </data>
+  <data name="lbl_Revision_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;lbl_Size.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_L3CacheSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Description_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_L2CacheSize_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_L1CacheSize_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Thread.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Size.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Revision_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Producteur.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize_Value.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbl_MaxSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_L3CacheSize.Name" xml:space="preserve">
+    <value>lbl_L3CacheSize</value>
+  </data>
+  <data name="lbl_Revision_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Size_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_Size.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_MaxSpeed_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_Revision_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Socket_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_MaxSpeed_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Revision_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 135</value>
+  </data>
+  <data name="lbl_Name_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="lbl_Producteur.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_L2CacheSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 260</value>
+  </data>
+  <data name="lbl_Thread_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Revision.Text" xml:space="preserve">
+    <value>Revision</value>
+  </data>
+  <data name="lbl_Size_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="lbl_Revision.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_MaxSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 310</value>
+  </data>
+  <data name="lbl_L2CacheSize_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="lbl_MaxSpeed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_Thread_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Description_Value.Name" xml:space="preserve">
+    <value>lbl_Description_Value</value>
+  </data>
+  <data name="lbl_Revision.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_Thread_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_Socket.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_MaxSpeed_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="&gt;&gt;lbl_L2CacheSize_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_L1CacheSize_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Socket_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_Producteur_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_L3CacheSize_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Thread.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="lbl_L3CacheSize_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="lbl_Name_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9.75pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;lbl_Thread.Name" xml:space="preserve">
+    <value>lbl_Thread</value>
+  </data>
+  <data name="lbl_MaxSpeed_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Thread_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 210</value>
+  </data>
+  <data name="lbl_Thread.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="lbl_Thread.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Core_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_L1CacheSize.Text" xml:space="preserve">
+    <value>L1 Cache</value>
+  </data>
+  <data name="lbl_Core.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize.Name" xml:space="preserve">
+    <value>lbl_L1CacheSize</value>
+  </data>
+  <data name="lbl_L1CacheSize_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>201, 235</value>
+  </data>
+  <data name="&gt;&gt;lbl_Revision.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbl_Socket.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_Thread_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_Producteur_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Socket.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_L2CacheSize_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 11.25pt</value>
+  </data>
+  <data name="lbl_L1CacheSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_Description_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Core.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="lbl_Thread_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lbl_L3CacheSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_MaxSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 25</value>
+  </data>
+  <data name="&gt;&gt;lbl_L1CacheSize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

@@ -123,13 +123,10 @@
   <data name="lbl_Producteur.Text" xml:space="preserve">
     <value>Produttore</value>
   </data>
-  <data name="lbl_Description.Text" xml:space="preserve">
-    <value>Descrizione</value>
-  </data>
   <data name="lbl_Size.Text" xml:space="preserve">
     <value>Dimmensione</value>
   </data>
   <data name="lbl_MaxSpeed.Text" xml:space="preserve">
-    <value>Velocità massima</value>
+    <value>Velocità di base</value>
   </data>
 </root>

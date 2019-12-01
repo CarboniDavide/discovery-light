@@ -127,6 +127,6 @@
     <value>Taille</value>
   </data>
   <data name="lbl_MaxSpeed.Text" xml:space="preserve">
-    <value>Max Vitesse</value>
+    <value>Vitesse de base</value>
   </data>
 </root>

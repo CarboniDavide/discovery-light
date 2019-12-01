@@ -161,17 +161,8 @@
   <data name="lbl_Description_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 65</value>
   </data>
-  <data name="lbl_Description_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 25</value>
-  </data>
   <data name="lbl_Size_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 90</value>
-  </data>
-  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 16</value>
-  </data>
-  <data name="lbl_Name_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 25</value>
   </data>
   <data name="lbl_Socket.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -190,15 +181,6 @@
   </data>
   <data name="lbl_Producteur.Text" xml:space="preserve">
     <value>Produzent</value>
-  </data>
-  <data name="lbl_Description.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 40</value>
-  </data>
-  <data name="lbl_Description.Size" type="System.Drawing.Size, System.Drawing">
-    <value>403, 25</value>
-  </data>
-  <data name="lbl_Description.Text" xml:space="preserve">
-    <value>Beschreibung</value>
   </data>
   <data name="lbl_Size.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -250,6 +232,9 @@
   </data>
   <data name="lbl_MaxSpeed.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 25</value>
+  </data>
+  <data name="lbl_MaxSpeed.Text" xml:space="preserve">
+    <value>Grundgeschwindigkeit</value>
   </data>
   <data name="lbl_MaxSpeed_Value.Location" type="System.Drawing.Point, System.Drawing">
     <value>175, 315</value>
