@@ -31,11 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Details));
             this.WmiNameSpace = new DiscoveryLight.UI.Panels.Details._WmiNameSpace();
             this.WmiClasses = new DiscoveryLight.UI.Panels.Details._WmiClasses();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.WmiDetails = new DiscoveryLight.UI.Panels.Details._WmiDetails();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // WmiNameSpace
             // 
+            this.WmiNameSpace.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.WmiNameSpace, "WmiNameSpace");
             this.WmiNameSpace.Footer = null;
             this.WmiNameSpace.Name = "WmiNameSpace";
@@ -43,13 +46,22 @@
             // 
             // WmiClasses
             // 
+            this.WmiClasses.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.WmiClasses, "WmiClasses");
             this.WmiClasses.Footer = null;
             this.WmiClasses.Name = "WmiClasses";
             this.WmiClasses.SubPanelContainer = null;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
             // WmiDetails
             // 
+            this.WmiDetails.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             resources.ApplyResources(this.WmiDetails, "WmiDetails");
             this.WmiDetails.Footer = null;
             this.WmiDetails.Name = "WmiDetails";
@@ -61,11 +73,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.WmiDetails);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.WmiClasses);
             this.Controls.Add(this.WmiNameSpace);
             this.Name = "_Details";
             this.PanelIndex = 8;
             this.Load += new System.EventHandler(this._Details_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -74,6 +88,7 @@
 
         public Details._WmiNameSpace WmiNameSpace;
         public Details._WmiClasses WmiClasses;
+        private System.Windows.Forms.PictureBox pictureBox1;
         public Details._WmiDetails WmiDetails;
     }
 }

@@ -38,8 +38,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lst_NameSpaces.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.lst_NameSpaces.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.lst_NameSpaces.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lst_NameSpaces.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lst_NameSpaces.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_NameSpaces.FormattingEnabled = true;
             this.lst_NameSpaces.Location = new System.Drawing.Point(85, 14);

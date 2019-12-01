@@ -38,7 +38,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lst_WmiClassName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.lst_WmiClassName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.lst_WmiClassName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lst_WmiClassName.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lst_WmiClassName.FormattingEnabled = true;
             this.lst_WmiClassName.Location = new System.Drawing.Point(85, 14);
