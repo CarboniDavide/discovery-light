@@ -78,9 +78,14 @@ namespace DiscoveryLight.Core.Device.Performance
     {
         public struct Thread
         {
-            public String DPCRate;
+            public String Usage;
             public String Name;
             public String Frequency;
+            public String PercentofMaximumFrequency;
+            public String ProcessorFrequency;
+            public String TBooster;
+            public String PercentProcessorPerformance;
+
         }
 
         public List<Thread> Cpu=  new List<Thread>();                 // Cpu list of thread
@@ -103,6 +108,12 @@ namespace DiscoveryLight.Core.Device.Performance
         public override void GetPerformance()
         {
             if (this.selectedCpu == null) return;
+            
+            uint Maxsp;
+            using (ManagementObject Mo = new ManagementObject($"Win32_Processor.DeviceID='CPU{this.selectedCpu}'"))
+                Maxsp = (uint)(Mo["MaxClockSpeed"]);
+
+
             this.Cpu=  new List<Thread>();
             // create a list of thread for the selected cpu
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Counters_ProcessorInformation")){
@@ -110,8 +121,11 @@ namespace DiscoveryLight.Core.Device.Performance
                 {
                     Thread t=  new Thread();                                                                        // create a new Thread
                     t.Name=  DeviceUtils.GetProperty.AsString("Name", mj);                    // get thread name
-                    t.DPCRate=  DeviceUtils.GetProperty.AsString("DPCRate", mj);              // get thread dpcreate value 
-                    t.Frequency=  DeviceUtils.GetProperty.AsString("ProcessorFrequency", mj); // get speed
+                    t.Usage=  DeviceUtils.GetProperty.AsString("PercentProcessorTime", mj);              // get thread dpcreate value 
+                    t.PercentofMaximumFrequency = DeviceUtils.GetProperty.AsString("PercentofMaximumFrequency", mj);
+                    t.ProcessorFrequency = DeviceUtils.GetProperty.AsString("ProcessorFrequency", mj);
+                    t.PercentProcessorPerformance = DeviceUtils.GetProperty.AsString("PercentProcessorPerformance", mj);
+                    t.Frequency = Convert.ToUInt16(((double)Maxsp / 100) * Convert.ToUInt16(t.PercentProcessorPerformance)).ToString();
                     this.Cpu.Add(t);
                 }
             }
@@ -175,8 +189,8 @@ namespace DiscoveryLight.Core.Device.Performance
                 this.Per_RamSizeUsed=  DeviceUtils.GetProperty.AsString("PercentCommittedBytesInUse", mj);
 
             // Cpu
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfOS_Processor", "Name", "_Total", DeviceUtils.Operator.Egual))
-                this.Per_CpuUsage=  DeviceUtils.GetProperty.AsString("DPCRate", mj);
+            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Counters_ProcessorInformation", "Name", "_Total", DeviceUtils.Operator.Egual))
+                this.Per_CpuUsage=  DeviceUtils.GetProperty.AsString("PercentProcessorTime", mj);
         }
 
         public PERFORM_PC(): base("Pc Base Performance") {}
