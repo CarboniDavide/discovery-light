@@ -40,6 +40,10 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             chartBytesSent.BarFillSize = Convert.ToInt16(CurrentPerformance.PercentBytesSent);
             chartPacketsReceived.BarFillSize = Convert.ToInt16(CurrentPerformance.PercentPacketsReceived);
             chartPacketsSent.BarFillSize = Convert.ToInt16(CurrentPerformance.PercentPacketsSents);
+            lbl_TotalReceived_Value.Text = ( (double)(Convert.ToInt32(CurrentPerformance.TotalBytesReceived) /100)).ToString();
+            lbl_TotalSent_Value.Text = ((double)(Convert.ToInt32( CurrentPerformance.TotalBytesSent) / 1024)).ToString();
+            pic_Received.BackColor = CurrentPerformance.ByteReceivedPerSec.Equals("0") ? Color.Transparent : System.Drawing.Color.LightGreen;
+            pic_Sent.BackColor = CurrentPerformance.BytesSentPerSec.Equals("0") ? Color.Transparent : System.Drawing.Color.Tomato;
         }
     }
 }

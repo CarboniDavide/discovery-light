@@ -118,50 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_TitleComboBock.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_TitleComboBock.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 12pt</value>
-  </data>
-  <data name="lbl_TitleComboBock.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 326</value>
-  </data>
-  <data name="lbl_TitleComboBock.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 20</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_TitleComboBock.TabIndex" type="System.Int32, mscorlib">
-    <value>212</value>
-  </data>
-  <data name="lbl_TitleComboBock.Text" xml:space="preserve">
-    <value>Device</value>
-  </data>
-  <data name="lbl_TitleComboBock.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;lbl_TitleComboBock.Name" xml:space="preserve">
-    <value>lbl_TitleComboBock</value>
-  </data>
-  <data name="&gt;&gt;lbl_TitleComboBock.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_TitleComboBock.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_TitleComboBock.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 327</value>
+    <value>10, 327</value>
   </data>
   <data name="cmb_Blocks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>394, 21</value>
+    <value>360, 21</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmb_Blocks.TabIndex" type="System.Int32, mscorlib">
     <value>213</value>
   </data>
@@ -175,37 +142,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmb_Blocks.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="NetworkDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>486, 10</value>
-  </data>
-  <data name="NetworkDevicePerformanceControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 338</value>
-  </data>
-  <data name="NetworkDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
-    <value>218</value>
-  </data>
-  <data name="&gt;&gt;NetworkDevicePerformanceControl.Name" xml:space="preserve">
-    <value>NetworkDevicePerformanceControl</value>
-  </data>
-  <data name="&gt;&gt;NetworkDevicePerformanceControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;NetworkDevicePerformanceControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;NetworkDevicePerformanceControl.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
   <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 317</value>
+    <value>10, 317</value>
   </data>
   <data name="pic_Divisor_001.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 1</value>
+    <value>360, 1</value>
   </data>
   <data name="pic_Divisor_001.TabIndex" type="System.Int32, mscorlib">
     <value>216</value>
@@ -220,16 +166,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
   <data name="pic_Divisor_002.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 0</value>
+    <value>381, 40</value>
   </data>
   <data name="pic_Divisor_002.Size" type="System.Drawing.Size, System.Drawing">
-    <value>2, 360</value>
+    <value>2, 330</value>
   </data>
   <data name="pic_Divisor_002.TabIndex" type="System.Int32, mscorlib">
     <value>181</value>
@@ -244,13 +190,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="NetworkDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 3</value>
+    <value>0, 1</value>
   </data>
   <data name="NetworkDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>483, 310</value>
+    <value>630, 310</value>
   </data>
   <data name="NetworkDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
     <value>219</value>
@@ -265,6 +211,27 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;NetworkDeviceDataControl.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="NetworkDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>384, 31</value>
+  </data>
+  <data name="NetworkDevicePerformanceControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 322</value>
+  </data>
+  <data name="NetworkDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
+    <value>220</value>
+  </data>
+  <data name="&gt;&gt;NetworkDevicePerformanceControl.Name" xml:space="preserve">
+    <value>NetworkDevicePerformanceControl</value>
+  </data>
+  <data name="&gt;&gt;NetworkDevicePerformanceControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;NetworkDevicePerformanceControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;NetworkDevicePerformanceControl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

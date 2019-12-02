@@ -118,30 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_PacketsReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 13</value>
-  </data>
-  <data name="lbl_PacketsReceived.Text" xml:space="preserve">
-    <value>Paquets reçues /s</value>
-  </data>
-  <data name="lbl_BytesSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
-  </data>
-  <data name="lbl_BytesSent.Text" xml:space="preserve">
-    <value>Octets envoyés /s</value>
-  </data>
-  <data name="lbl_PacketsSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 13</value>
-  </data>
-  <data name="lbl_PacketsSent.Text" xml:space="preserve">
-    <value>Paquets envoyés /s</value>
-  </data>
-  <data name="lbl_BytesReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 13</value>
-  </data>
-  <data name="lbl_BytesReceived.Text" xml:space="preserve">
-    <value>Octets reçues /s</value>
-  </data>
   <data name="lbl_Titre_Chart_BytesReceived.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 13</value>
   </data>
@@ -165,5 +141,17 @@
   </data>
   <data name="lbl_Titre_Chart_PacketsSent.Text" xml:space="preserve">
     <value>Paquets envoyés</value>
+  </data>
+  <data name="lbl_TotalReceived.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 13</value>
+  </data>
+  <data name="lbl_TotalReceived.Text" xml:space="preserve">
+    <value>MB Reçues</value>
+  </data>
+  <data name="lbl_TotalSent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 13</value>
+  </data>
+  <data name="lbl_TotalSent.Text" xml:space="preserve">
+    <value>MB Envoyés</value>
   </data>
 </root>

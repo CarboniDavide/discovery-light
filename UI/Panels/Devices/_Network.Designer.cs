@@ -31,20 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Network));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
-            this.lbl_TitleComboBock = new System.Windows.Forms.Label();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
-            this.NetworkDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.NetworkDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl();
+            this.NetworkDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lbl_TitleComboBock
-            // 
-            resources.ApplyResources(this.lbl_TitleComboBock, "lbl_TitleComboBock");
-            this.lbl_TitleComboBock.Name = "lbl_TitleComboBock";
             // 
             // cmb_Blocks
             // 
@@ -52,17 +46,6 @@
             this.cmb_Blocks.FormattingEnabled = true;
             this.cmb_Blocks.Name = "cmb_Blocks";
             this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
-            // 
-            // NetworkDevicePerformanceControl
-            // 
-            this.NetworkDevicePerformanceControl.ClassName = "_NetworkDevicePerformanceControl";
-            this.NetworkDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl);
-            this.NetworkDevicePerformanceControl.CurrentPerformance = null;
-            this.NetworkDevicePerformanceControl.CurrentSubDevice = 0;
-            resources.ApplyResources(this.NetworkDevicePerformanceControl, "NetworkDevicePerformanceControl");
-            this.NetworkDevicePerformanceControl.Name = "NetworkDevicePerformanceControl";
-            this.NetworkDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.NetworkDevicePerformanceControl.TokenSource = cancellationTokenSource1;
             // 
             // pic_Divisor_001
             // 
@@ -87,18 +70,28 @@
             resources.ApplyResources(this.NetworkDeviceDataControl, "NetworkDeviceDataControl");
             this.NetworkDeviceDataControl.Name = "NetworkDeviceDataControl";
             this.NetworkDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.NetworkDeviceDataControl.TokenSource = cancellationTokenSource2;
+            this.NetworkDeviceDataControl.TokenSource = cancellationTokenSource1;
+            // 
+            // NetworkDevicePerformanceControl
+            // 
+            this.NetworkDevicePerformanceControl.ClassName = "_NetworkDevicePerformanceControl";
+            this.NetworkDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl);
+            this.NetworkDevicePerformanceControl.CurrentPerformance = null;
+            this.NetworkDevicePerformanceControl.CurrentSubDevice = 0;
+            resources.ApplyResources(this.NetworkDevicePerformanceControl, "NetworkDevicePerformanceControl");
+            this.NetworkDevicePerformanceControl.Name = "NetworkDevicePerformanceControl";
+            this.NetworkDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.NetworkDevicePerformanceControl.TokenSource = cancellationTokenSource2;
             // 
             // _Network
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.NetworkDeviceDataControl);
             this.Controls.Add(this.NetworkDevicePerformanceControl);
             this.Controls.Add(this.pic_Divisor_001);
             this.Controls.Add(this.cmb_Blocks);
-            this.Controls.Add(this.lbl_TitleComboBock);
             this.Controls.Add(this.pic_Divisor_002);
+            this.Controls.Add(this.NetworkDeviceDataControl);
             this.Name = "_Network";
             this.PanelIndex = 7;
             this.Load += new System.EventHandler(this._Network_Load);
@@ -111,10 +104,9 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pic_Divisor_002;
-        private System.Windows.Forms.Label lbl_TitleComboBock;
         private System.Windows.Forms.ComboBox cmb_Blocks;
         private System.Windows.Forms.PictureBox pic_Divisor_001;
-        private DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl NetworkDevicePerformanceControl;
         private DeviceControls.DeviceDataControls._NetworkDeviceDataControl NetworkDeviceDataControl;
+        private DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl NetworkDevicePerformanceControl;
     }
 }

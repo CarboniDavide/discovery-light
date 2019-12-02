@@ -117,305 +117,302 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_PacketsReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_PacketsReceived.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_PacketsReceived.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_PacketsReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 85</value>
-  </data>
-  <data name="lbl_PacketsReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 13</value>
-  </data>
-  <data name="lbl_PacketsReceived.TabIndex" type="System.Int32, mscorlib">
-    <value>182</value>
-  </data>
-  <data name="lbl_PacketsReceived.Text" xml:space="preserve">
-    <value>Packets received /s</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsReceived.Name" xml:space="preserve">
-    <value>lbl_PacketsReceived</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsReceived.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsReceived.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsReceived.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="lbl_BytesSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_BytesSent.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_BytesSent.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_BytesSent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 45</value>
-  </data>
-  <data name="lbl_BytesSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
-  </data>
-  <data name="lbl_BytesSent.TabIndex" type="System.Int32, mscorlib">
-    <value>183</value>
-  </data>
-  <data name="lbl_BytesSent.Text" xml:space="preserve">
-    <value>Bytes sent /s</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesSent.Name" xml:space="preserve">
-    <value>lbl_BytesSent</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesSent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesSent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesSent.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;chartBytesReceived.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="lbl_PacketsSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_PacketsSent.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_PacketsSent.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_PacketsSent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 125</value>
-  </data>
-  <data name="lbl_PacketsSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
-  </data>
-  <data name="lbl_PacketsSent.TabIndex" type="System.Int32, mscorlib">
-    <value>184</value>
-  </data>
-  <data name="lbl_PacketsSent.Text" xml:space="preserve">
-    <value>Packets sent /s</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent.Name" xml:space="preserve">
-    <value>lbl_PacketsSent</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent.Type" xml:space="preserve">
+  <data name="&gt;&gt;lbl_TotalReceived_Value.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="lbl_PacketsReceived_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_PacketsReceived_Value.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_PacketsReceived_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_PacketsReceived_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 100</value>
-  </data>
-  <data name="lbl_PacketsReceived_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
-  </data>
-  <data name="lbl_PacketsReceived_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>185</value>
-  </data>
-  <data name="lbl_PacketsReceived_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsReceived_Value.Name" xml:space="preserve">
-    <value>lbl_PacketsReceived_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsReceived_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsReceived_Value.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_PacketsReceived_Value.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>18</value>
   </data>
-  <data name="lbl_BytesSent_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_BytesSent_Value.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_BytesSent_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_BytesSent_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 60</value>
-  </data>
-  <data name="lbl_BytesSent_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
-  </data>
-  <data name="lbl_BytesSent_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>186</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lbl_PacketsReceived_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
   </data>
   <data name="lbl_BytesSent_Value.Text" xml:space="preserve">
     <value>N/A</value>
   </data>
-  <data name="&gt;&gt;lbl_BytesSent_Value.Name" xml:space="preserve">
-    <value>lbl_BytesSent_Value</value>
+  <data name="&gt;&gt;chartPacketsReceived.Name" xml:space="preserve">
+    <value>chartPacketsReceived</value>
   </data>
-  <data name="&gt;&gt;lbl_BytesSent_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesSent_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesSent_Value.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbl_PacketsSent_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_PacketsSent_Value.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_PacketsSent_Value.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="lbl_Titre_Chart_BytesSent.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_TotalSent.Text" xml:space="preserve">
+    <value>MB Sent</value>
   </data>
   <data name="lbl_PacketsSent_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 140</value>
-  </data>
-  <data name="lbl_PacketsSent_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
-  </data>
-  <data name="lbl_PacketsSent_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>187</value>
-  </data>
-  <data name="lbl_PacketsSent_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent_Value.Name" xml:space="preserve">
-    <value>lbl_PacketsSent_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_PacketsSent_Value.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lbl_BytesReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_BytesReceived.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_BytesReceived.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_BytesReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 5</value>
-  </data>
-  <data name="lbl_BytesReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 13</value>
-  </data>
-  <data name="lbl_BytesReceived.TabIndex" type="System.Int32, mscorlib">
-    <value>188</value>
-  </data>
-  <data name="lbl_BytesReceived.Text" xml:space="preserve">
-    <value>Byte received /s</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived.Name" xml:space="preserve">
-    <value>lbl_BytesReceived</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lbl_BytesReceived_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_BytesReceived_Value.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_BytesReceived_Value.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_BytesReceived_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 20</value>
-  </data>
-  <data name="lbl_BytesReceived_Value.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
-  </data>
-  <data name="lbl_BytesReceived_Value.TabIndex" type="System.Int32, mscorlib">
-    <value>189</value>
-  </data>
-  <data name="lbl_BytesReceived_Value.Text" xml:space="preserve">
-    <value>N/A</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived_Value.Name" xml:space="preserve">
-    <value>lbl_BytesReceived_Value</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived_Value.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived_Value.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_BytesReceived_Value.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="chartBytesReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="chartBytesReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 181</value>
-  </data>
-  <data name="chartBytesReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 24</value>
-  </data>
-  <data name="chartBytesReceived.TabIndex" type="System.Int32, mscorlib">
-    <value>217</value>
-  </data>
-  <data name="&gt;&gt;chartBytesReceived.Name" xml:space="preserve">
-    <value>chartBytesReceived</value>
-  </data>
-  <data name="&gt;&gt;chartBytesReceived.Type" xml:space="preserve">
-    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;chartBytesReceived.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chartBytesReceived.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="chartPacketsSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+    <value>135, 294</value>
   </data>
   <data name="chartPacketsSent.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 309</value>
   </data>
+  <data name="lbl_TotalSent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="chartBytesReceived.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="lbl_TotalSent_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pic_Sep.TabIndex" type="System.Int32, mscorlib">
+    <value>226</value>
+  </data>
+  <data name="&gt;&gt;lbl_PacketsSent_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl_Titre_Chart_BytesSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesSent.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pic_Received.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_TotalSent_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="chartBytesSent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="chartPacketsReceived.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 266</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;pic_Sent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalReceived.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.Name" xml:space="preserve">
+    <value>lbl_Titre_Chart_BytesSent</value>
+  </data>
+  <data name="lbl_TotalReceived.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_TotalReceived.Text" xml:space="preserve">
+    <value>MB Received</value>
+  </data>
+  <data name="chartPacketsReceived.TabIndex" type="System.Int32, mscorlib">
+    <value>220</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsSent.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesSent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 13</value>
+  </data>
+  <data name="lbl_PacketsSent_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsSent.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_TotalReceived_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;chartPacketsReceived.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalReceived.Name" xml:space="preserve">
+    <value>lbl_TotalReceived</value>
+  </data>
+  <data name="lbl_PacketsSent_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="pic_Sep.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pic_Sent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="lbl_TotalReceived.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_BytesSent_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>186</value>
+  </data>
+  <data name="&gt;&gt;lbl_PacketsSent_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_PacketsSent_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>187</value>
+  </data>
+  <data name="lbl_TotalReceived_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lbl_PacketsSent_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;lbl_PacketsSent_Value.Name" xml:space="preserve">
+    <value>lbl_PacketsSent_Value</value>
+  </data>
+  <data name="lbl_TotalSent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 50</value>
+  </data>
+  <data name="&gt;&gt;chartBytesSent.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_PacketsReceived_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="pic_Sent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 18</value>
+  </data>
+  <data name="&gt;&gt;chartPacketsSent.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbl_TotalSent_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="&gt;&gt;chartPacketsSent.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 165</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesReceived_Value.Name" xml:space="preserve">
+    <value>lbl_BytesReceived_Value</value>
+  </data>
+  <data name="lbl_BytesSent_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.Name" xml:space="preserve">
+    <value>lbl_Titre_Chart_PacketsReceived</value>
+  </data>
+  <data name="lbl_TotalReceived_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>232</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_PacketsSent.Name" xml:space="preserve">
+    <value>lbl_Titre_Chart_PacketsSent</value>
+  </data>
+  <data name="lbl_TotalSent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 13</value>
+  </data>
+  <data name="&gt;&gt;chartBytesReceived.Name" xml:space="preserve">
+    <value>chartBytesReceived</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_TotalSent.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl_BytesSent_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="chartPacketsSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 24</value>
+    <value>231, 24</value>
+  </data>
+  <data name="&gt;&gt;pic_Received.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chartBytesReceived.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesReceived_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalReceived.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_TotalSent_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>231</value>
+  </data>
+  <data name="lbl_BytesSent_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;pic_Sep.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsReceived.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pic_Sent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesSent_Value.Name" xml:space="preserve">
+    <value>lbl_BytesSent_Value</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent_Value.Name" xml:space="preserve">
+    <value>lbl_TotalSent_Value</value>
+  </data>
+  <data name="&gt;&gt;chartPacketsSent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_PacketsReceived_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.Text" xml:space="preserve">
+    <value>Byte received/s</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsSent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>_NetworkDevicePerformanceControl</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;pic_Received.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbl_BytesSent_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 208</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalReceived.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="pic_Sep.Size" type="System.Drawing.Size, System.Drawing">
+    <value>225, 1</value>
+  </data>
+  <data name="pic_Received.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="chartPacketsReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_PacketsSent.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="chartBytesReceived.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 181</value>
   </data>
   <data name="chartPacketsSent.TabIndex" type="System.Int32, mscorlib">
     <value>219</value>
@@ -423,208 +420,328 @@
   <data name="&gt;&gt;chartPacketsSent.Name" xml:space="preserve">
     <value>chartPacketsSent</value>
   </data>
-  <data name="&gt;&gt;chartPacketsSent.Type" xml:space="preserve">
-    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="lbl_Titre_Chart_PacketsReceived.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;chartPacketsSent.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lbl_BytesSent_Value.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;lbl_PacketsSent_Value.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chartPacketsSent.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="chartPacketsReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="chartPacketsReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 266</value>
-  </data>
-  <data name="chartPacketsReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 24</value>
-  </data>
-  <data name="chartPacketsReceived.TabIndex" type="System.Int32, mscorlib">
-    <value>220</value>
-  </data>
-  <data name="&gt;&gt;chartPacketsReceived.Name" xml:space="preserve">
-    <value>chartPacketsReceived</value>
-  </data>
-  <data name="&gt;&gt;chartPacketsReceived.Type" xml:space="preserve">
-    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;chartPacketsReceived.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chartPacketsReceived.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="chartBytesSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="chartBytesSent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 224</value>
-  </data>
-  <data name="chartBytesSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 24</value>
-  </data>
-  <data name="chartBytesSent.TabIndex" type="System.Int32, mscorlib">
-    <value>221</value>
-  </data>
-  <data name="&gt;&gt;chartBytesSent.Name" xml:space="preserve">
-    <value>chartBytesSent</value>
-  </data>
-  <data name="&gt;&gt;chartBytesSent.Type" xml:space="preserve">
-    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;chartBytesSent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chartBytesSent.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesReceived.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesReceived.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 165</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 13</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesReceived.TabIndex" type="System.Int32, mscorlib">
-    <value>222</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesReceived.Text" xml:space="preserve">
-    <value>Byte received</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.Name" xml:space="preserve">
-    <value>lbl_Titre_Chart_BytesReceived</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesSent.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesSent.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesSent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 208</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesSent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 13</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesSent.TabIndex" type="System.Int32, mscorlib">
-    <value>223</value>
-  </data>
-  <data name="lbl_Titre_Chart_BytesSent.Text" xml:space="preserve">
-    <value>Bytes sent</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.Name" xml:space="preserve">
-    <value>lbl_Titre_Chart_BytesSent</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsReceived.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsReceived.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsReceived.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 252</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsReceived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 13</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsReceived.TabIndex" type="System.Int32, mscorlib">
-    <value>224</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsReceived.Text" xml:space="preserve">
-    <value>Packets received</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.Name" xml:space="preserve">
-    <value>lbl_Titre_Chart_PacketsReceived</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsSent.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsSent.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_Titre_Chart_PacketsSent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 294</value>
   </data>
   <data name="lbl_Titre_Chart_PacketsSent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 13</value>
+  </data>
+  <data name="pic_Received.TabIndex" type="System.Int32, mscorlib">
+    <value>228</value>
+  </data>
+  <data name="lbl_TotalReceived.TabIndex" type="System.Int32, mscorlib">
+    <value>229</value>
+  </data>
+  <data name="lbl_TotalReceived.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 13</value>
   </data>
-  <data name="lbl_Titre_Chart_PacketsSent.TabIndex" type="System.Int32, mscorlib">
-    <value>225</value>
+  <data name="&gt;&gt;lbl_BytesSent_Value.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="lbl_Titre_Chart_PacketsSent.Text" xml:space="preserve">
-    <value>Packets sent</value>
+  <data name="lbl_TotalReceived.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 72</value>
   </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_PacketsSent.Name" xml:space="preserve">
-    <value>lbl_Titre_Chart_PacketsSent</value>
+  <data name="lbl_Titre_Chart_PacketsReceived.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 13</value>
   </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_PacketsSent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="lbl_TotalSent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent_Value.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbl_PacketsReceived_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 252</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesSent.Text" xml:space="preserve">
+    <value>Bytes sent/s</value>
+  </data>
+  <data name="lbl_BytesSent_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
   </data>
   <data name="&gt;&gt;lbl_Titre_Chart_PacketsSent.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;lbl_Titre_Chart_PacketsSent.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="lbl_Titre_Chart_BytesSent.TabIndex" type="System.Int32, mscorlib">
+    <value>223</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="lbl_TotalReceived_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_PacketsSent_Value.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="pic_Received.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 18</value>
+  </data>
+  <data name="lbl_TotalSent_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_PacketsSent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic_Sep.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pic_Sent.Name" xml:space="preserve">
+    <value>pic_Sent</value>
+  </data>
+  <data name="&gt;&gt;pic_Received.Name" xml:space="preserve">
+    <value>pic_Received</value>
+  </data>
+  <data name="lbl_TotalSent.TabIndex" type="System.Int32, mscorlib">
+    <value>230</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent.Name" xml:space="preserve">
+    <value>lbl_TotalSent</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>189</value>
+  </data>
+  <data name="pic_Sep.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 66</value>
+  </data>
+  <data name="&gt;&gt;pic_Sent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsReceived.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesReceived_Value.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalReceived_Value.Name" xml:space="preserve">
+    <value>lbl_TotalReceived_Value</value>
+  </data>
+  <data name="lbl_TotalReceived_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="&gt;&gt;pic_Sep.Name" xml:space="preserve">
+    <value>pic_Sep</value>
+  </data>
+  <data name="pic_Sent.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="lbl_TotalReceived_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chartBytesSent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 224</value>
+  </data>
+  <data name="pic_Received.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 72</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 338</value>
+    <value>244, 338</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>_NetworkDevicePerformanceControl</value>
+  <data name="lbl_Titre_Chart_PacketsSent.TabIndex" type="System.Int32, mscorlib">
+    <value>225</value>
+  </data>
+  <data name="chartBytesSent.TabIndex" type="System.Int32, mscorlib">
+    <value>221</value>
+  </data>
+  <data name="&gt;&gt;pic_Sent.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsReceived.Text" xml:space="preserve">
+    <value>Packets received/s</value>
+  </data>
+  <data name="pic_Sep.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesReceived.Name" xml:space="preserve">
+    <value>lbl_Titre_Chart_BytesReceived</value>
+  </data>
+  <data name="chartBytesSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="lbl_PacketsReceived_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;lbl_PacketsReceived_Value.Name" xml:space="preserve">
+    <value>lbl_PacketsReceived_Value</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls.DevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
+  <data name="chartPacketsSent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="lbl_BytesReceived_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chartBytesReceived.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left, Right</value>
+  </data>
+  <data name="&gt;&gt;lbl_PacketsReceived_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_PacketsSent_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="&gt;&gt;chartBytesSent.Name" xml:space="preserve">
+    <value>chartBytesSent</value>
+  </data>
+  <data name="&gt;&gt;chartPacketsReceived.Type" xml:space="preserve">
+    <value>WinformComponents.ChartBar, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="lbl_TotalSent_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="lbl_TotalSent_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesSent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 208</value>
+  </data>
+  <data name="lbl_PacketsReceived_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt</value>
+  </data>
+  <data name="lbl_PacketsSent_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesSent_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_BytesSent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chartBytesSent.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="pic_Sent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>109, 43</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalSent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chartBytesReceived.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsSent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 294</value>
+  </data>
+  <data name="lbl_PacketsReceived_Value.TabIndex" type="System.Int32, mscorlib">
+    <value>185</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 13</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.TabIndex" type="System.Int32, mscorlib">
+    <value>222</value>
+  </data>
+  <data name="&gt;&gt;pic_Received.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsSent.Text" xml:space="preserve">
+    <value>Packets sent/s</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsReceived.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 252</value>
+  </data>
+  <data name="&gt;&gt;chartBytesSent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lbl_BytesReceived_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_TotalSent_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 48</value>
+  </data>
+  <data name="&gt;&gt;lbl_Titre_Chart_PacketsReceived.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesReceived.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 165</value>
+  </data>
+  <data name="chartPacketsReceived.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 24</value>
+  </data>
+  <data name="lbl_PacketsReceived_Value.Text" xml:space="preserve">
+    <value>N/A</value>
+  </data>
+  <data name="lbl_TotalReceived_Value.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;chartPacketsReceived.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lbl_TotalReceived.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl_Titre_Chart_BytesSent.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chartBytesReceived.TabIndex" type="System.Int32, mscorlib">
+    <value>217</value>
+  </data>
+  <data name="lbl_BytesSent_Value.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 13</value>
+  </data>
+  <data name="lbl_TotalReceived_Value.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 72</value>
+  </data>
+  <data name="lbl_Titre_Chart_PacketsReceived.TabIndex" type="System.Int32, mscorlib">
+    <value>224</value>
+  </data>
+  <data name="pic_Sent.TabIndex" type="System.Int32, mscorlib">
+    <value>227</value>
+  </data>
+  <data name="&gt;&gt;pic_Sep.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pic_Received.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;lbl_PacketsReceived_Value.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalReceived_Value.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lbl_TotalReceived_Value.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

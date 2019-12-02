@@ -739,6 +739,8 @@
   <ItemGroup>
     <Content Include="Img\Screenshot.PNG" />
     <Content Include="Logo_Green.ico" />
+    <None Include="Resources\Down.png" />
+    <None Include="Resources\Up.png" />
     <None Include="Resources\ic_notfound.png" />
     <None Include="Resources\Video.png" />
     <None Include="Resources\Sound.png" />
