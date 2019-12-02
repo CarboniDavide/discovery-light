@@ -85,7 +85,6 @@ namespace DiscoveryLight.Core.Device.Performance
             public String ProcessorFrequency;
             public String TBooster;
             public String PercentProcessorPerformance;
-
         }
 
         public List<Thread> Cpu=  new List<Thread>();                 // Cpu list of thread
@@ -339,6 +338,10 @@ namespace DiscoveryLight.Core.Device.Performance
         public String PercentPacketsReceived;
         public String PercentPacketsSents;
 
+        public String TotalBytesReceived;
+        public String TotalBytesSent;
+        public String TotalBytes;
+
         private string selectedNetwork;
 
         public string SelectedNetwork { get => selectedNetwork; set => selectedNetwork=  value; }
@@ -389,6 +392,15 @@ namespace DiscoveryLight.Core.Device.Performance
                     }
                 }
             }
+
+            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_Tcpip_NetworkAdapter", "Name", this.selectedNetwork, DeviceUtils.Operator.Egual))
+            {
+                this.TotalBytesReceived = DeviceUtils.GetProperty.AsString("BytesReceivedPersec", mj);
+                this.TotalBytesSent = DeviceUtils.GetProperty.AsString("BytesSentPersec", mj);
+                this.TotalBytes = DeviceUtils.GetProperty.AsString("BytesTotalPersec", mj);
+            }
+
+
         }
         
         public PERFORM_NETWORK(string NetworkName): base("Network Performance")
