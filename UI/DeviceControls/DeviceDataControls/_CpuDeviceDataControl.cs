@@ -48,7 +48,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_Core_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.N_Core, "N/A");
             lbl_Thread_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.N_Thread, "N/A");
             lbl_MaxSpeed_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MaxSpeed, "N/A", "{0:N0}") + " Mhz";
-            lbl_L1CacheSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.L1_Cache, "N/A") + " Kb";
+            lbl_L1CacheSize_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToInt16(x)/4).ToString(), CurrentSubDevice.L1_Cache, "N/A") + " Kb";
             lbl_L2CacheSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.L2_Cache, "N/A") + " Kb";
             lbl_L3CacheSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.L3_Cache, "N/A") + " Kb";
             abort();

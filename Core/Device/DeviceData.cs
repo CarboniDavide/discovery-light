@@ -333,7 +333,7 @@ namespace DiscoveryLight.Core.Device.Data
                 t.N_Core= DeviceUtils.GetProperty.AsString("NumberOfCores", mj);
                 t.N_Thread= DeviceUtils.GetProperty.AsString("NumberOfLogicalProcessors", mj);
                 t.MaxSpeed= DeviceUtils.GetProperty.AsString("MaxClockSpeed", mj);
-                t.L1_Cache=  (Convert.ToInt16(DeviceUtils.GetProperty.AsString("L2CacheSize", mj)) / 4).ToString();
+                t.L1_Cache = DeviceUtils.GetProperty.AsString("L2CacheSize", mj);
                 t.L2_Cache= DeviceUtils.GetProperty.AsString("L2CacheSize", mj);
                 t.L3_Cache= DeviceUtils.GetProperty.AsString("L3CacheSize", mj);
 
