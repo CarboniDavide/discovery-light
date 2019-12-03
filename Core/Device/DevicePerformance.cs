@@ -294,7 +294,7 @@ namespace DiscoveryLight.Core.Device.Performance
             {
                 String currentDriveName=  DeviceUtils.GetProperty.AsString("Name", mj);
                 // get only properties from selected drive
-                if (currentDriveName.Equals(this.DriveName))
+                if (currentDriveName != null && currentDriveName.Equals(this.DriveName))
                 {
                     this.FreeSpace=  DeviceUtils.GetProperty.AsString("FreeMegabytes", mj);
                     this.WriteBytesPerSec=  DeviceUtils.GetProperty.AsString("DiskWriteBytesPersec", mj);
