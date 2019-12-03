@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -37,10 +38,12 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (BIOS)this.CurrentDevice;
-            lbl_BiosManufacturer_Value.Text = CurrentDevice.Manufacturer;
-            lbl_BiosSerialNumber_Value.Text = CurrentDevice.SerialNumber;
-            lbl_BiosVersion_Value.Text = CurrentDevice.Version;
-            lbl_BiosReleaseDate_Value.Text = CurrentDevice.ReleaseData.Substring(0, 4) + " - " + CurrentDevice.ReleaseData.Substring(4, 2) + " - " + CurrentDevice.ReleaseData.Substring(6, 2);
+            lbl_BiosManufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A"); ;
+            lbl_BiosSerialNumber_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SerialNumber, "N/A");
+            lbl_BiosVersion_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Version, "N/A");
+            lbl_BiosReleaseDate_Value.Text = DataConvert.AsDefaultValue(x => x.Substring(0,4), CurrentDevice.ReleaseData, null) 
+                + "-" + DataConvert.AsDefaultValue(x => x.Substring(4,2), CurrentDevice.ReleaseData, null) 
+                + "-" + DataConvert.AsDefaultValue(x => x.Substring(6, 2), CurrentDevice.ReleaseData, null);
             abort();
         }
     }

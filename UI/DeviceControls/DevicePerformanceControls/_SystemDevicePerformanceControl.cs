@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -32,8 +34,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_SYSTEM)this.CurrentPerformance;
-            lbl_Threads_Value.Text = CurrentPerformance.Threads;
-            lbl_Process_Value.Text = CurrentPerformance.Processes;
+            lbl_Threads_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Threads, "N/A", "{0:N0}");
+            lbl_Process_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Processes, "N/A", "{0:N0}");
         }
     }
 }

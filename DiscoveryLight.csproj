@@ -56,6 +56,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Commun\DataConvert.cs" />
     <Compile Include="Core\Device\DevicePerformance.cs" />
     <Compile Include="Core\Device\DeviceData.cs" />
     <Compile Include="Core\Device\DeviceUtils.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="UI\Buttons\PanelLinkButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\Charts\ChartPerform.cs" />
     <Compile Include="UI\DeviceControls\DeviceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

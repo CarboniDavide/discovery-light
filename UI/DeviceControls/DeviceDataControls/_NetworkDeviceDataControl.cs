@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -37,18 +38,18 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentSubDevice = (NETWORK.Block)this.CurrentSubDevice;
-            lbl_Name_Value.Text = CurrentSubDevice.Name;
-            lbl_Tipology_Value.Text = CurrentSubDevice.Type;
-            lbl_Manufacturer_Value.Text = CurrentSubDevice.Manufacturer;
-            lbl_AdapterType_Value.Text = CurrentSubDevice.AdapterType;
-            lbl_DeviceID_Value.Text = CurrentSubDevice.DeviceID;
-            lbl_Speed_Value.Text = CurrentSubDevice.Speed + " Bps";
-            lbl_MACAddress_Value.Text = CurrentSubDevice.MACAddresse;
-            lbl_IPAddress_Value.Text = CurrentSubDevice.Ip_Address;
-            lbl_PrimaryDNS_Value.Text = CurrentSubDevice.PrimaryDNS;
-            lbl_SecondaryDNS_Value.Text = CurrentSubDevice.SencondaryDNS;
-            lbl_SubnetMask_Value.Text = CurrentSubDevice.SubNetMask;
-            lbl_Getway_Value.Text = CurrentSubDevice.DefualtGetway;
+            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name, "N/A");
+            lbl_Tipology_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Type, "N/A");
+            lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
+            lbl_AdapterType_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.AdapterType, "N/A");
+            lbl_DeviceID_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.DeviceID, "N/A");
+            lbl_Speed_Value.Text = DataConvert.AsDefaultValue(x => (Convert.ToDouble(x) / 1000000).ToString(), CurrentSubDevice.Speed, "N/A") +" Mbps";
+            lbl_MACAddress_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MACAddresse, "N/A");
+            lbl_IPAddress_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Ip_Address, "N/A");
+            lbl_PrimaryDNS_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PrimaryDNS, "N/A");
+            lbl_SecondaryDNS_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.SencondaryDNS, "N/A");
+            lbl_SubnetMask_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.SubNetMask, "N/A");
+            lbl_Getway_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.DefualtGetway, "N/A");
         }
     }
 }

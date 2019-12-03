@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -38,9 +39,9 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentSubDevice = (AUDIO.Block)this.CurrentSubDevice;
-            lbl_Name_Value.Text = CurrentSubDevice.Name;
-            lbl_Manufacturer_Value.Text = CurrentSubDevice.Manufacturer;
-            lbl_PowerManagment_Value.Text = CurrentSubDevice.PowerManagmentSupport;
+            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name, "N/A");
+            lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
+            lbl_PowerManagment_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PowerManagmentSupport, "N/A");
         }
     }
 }

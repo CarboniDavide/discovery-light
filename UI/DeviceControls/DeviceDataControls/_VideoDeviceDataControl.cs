@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -38,18 +39,18 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentSubDevice = (VIDEO.Block)this.CurrentSubDevice;
-            lbl_Name_Value.Text = CurrentSubDevice.Name;
-            lbl_Manufacturer_Value.Text = CurrentSubDevice.Manufacturer;
-            lbl_Adapter_Value.Text = CurrentSubDevice.AdpterType;
-            lbl_Memory_Value.Text = (Convert.ToUInt64(CurrentSubDevice.MemorySize) / 1024).ToString() + " MB"; ;
-            lbl_BitsPixel_Value.Text = CurrentSubDevice.NowBitsPerPixel;
-            lbl_HorizontalResolution_Value.Text = CurrentSubDevice.NowHorizResolution + " Pixel";
-            lbl_VerticalResolution_Value.Text = CurrentSubDevice.NowVertResolution + " Pixel";
-            lbl_FreqNow_Value.Text = CurrentSubDevice.NowRefreshRate + " Hz";
-            lbl_FreqMax_Value.Text = CurrentSubDevice.MaxRefreshRate + " Hz";
-            lbl_FreqMin_Value.Text = CurrentSubDevice.MinRefreshRate + " Hz";
-            lbl_ColorsNumber_Value.Text = CurrentSubDevice.NowNumberOfColors;
-            lbl_ModalitySupported_Value.Text = CurrentSubDevice.Mode;
+            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name, "N/A"); ;
+            lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
+            lbl_Adapter_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.AdpterType, "N/A");
+            lbl_Memory_Value.Text = DataConvert.AsDefaultValue(x => (Convert.ToUInt64(x) / 1024).ToString(), CurrentSubDevice.MemorySize, "N/A", "{0:N0}") + " MB";
+            lbl_BitsPixel_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.NowBitsPerPixel, "N/A");
+            lbl_HorizontalResolution_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.NowHorizResolution, "N/A", "{0:N0}") + " Pixel";
+            lbl_VerticalResolution_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.NowVertResolution, "N/A", "{0:N0}") + " Pixel";
+            lbl_FreqNow_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.NowRefreshRate, "N/A") + " Hz";
+            lbl_FreqMax_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MaxRefreshRate, "N/A") + " Hz";
+            lbl_FreqMin_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MinRefreshRate, "N/A") + " Hz";
+            lbl_ColorsNumber_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.NowNumberOfColors, "N/A", "{0:N0}"); ;
+            lbl_ModalitySupported_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Mode, "N/A"); ;
         }
     }
 }

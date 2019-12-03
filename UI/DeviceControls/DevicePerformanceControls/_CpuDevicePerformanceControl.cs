@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -35,12 +37,12 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformanceCPU = (PERFORM_CPU)this.CurrentPerformance;
-            lbl_CpuSpeed_Value.Text = CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Frequency + " Mhz";
-            chartCpuUsage.FillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Usage);
+            lbl_CpuSpeed_Value.Text = DataConvert.AsDefaultValue(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Frequency, "N/A", "{0:N0}") + " Mhz";
+            chartCpuUsage.FillSize = ChartPerform.FillOrDefault( x=> Convert.ToInt16(x), CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + "_Total").First().Usage);
             int i = 0;
             foreach (WinformComponents.ChartBar ctrl in pnl_Threads.Controls.Find(typeof(WinformComponents.ChartBar).ToString(), false))
             {
-                ctrl.BarFillSize = Convert.ToInt16(CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + i).First().Usage);
+                ctrl.BarFillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(x), CurrentPerformanceCPU.Cpu.Where(d => d.Name == CurrentPerformanceCPU.SelectedCpu + "," + i).First().Usage);
                 i++;
             }
         }

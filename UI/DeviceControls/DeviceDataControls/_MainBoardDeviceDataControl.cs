@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -38,12 +39,12 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (MAINBOARD)this.CurrentDevice;
-            lbl_Manufacturer_Value.Text = CurrentDevice.Manufacturer;
-            lbl_Model_Value.Text = CurrentDevice.Model;
-            lbl_Version_Value.Text = CurrentDevice.Version;
-            lbl_PrimaryBus_Value.Text = CurrentDevice.PrimaryBus_Value;
-            lbl_SecondaryBus_Value.Text = CurrentDevice.SecondaryBus_Value;
-            lbl_SlotNumber_Value.Text = CurrentDevice.NumberSlot;
+            lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A");
+            lbl_Model_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Model, "N/A");
+            lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Version, "N/A");
+            lbl_PrimaryBus_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.PrimaryBus_Value, "N/A");
+            lbl_SecondaryBus_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SecondaryBus_Value, "N/A");
+            lbl_SlotNumber_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.NumberSlot, "N/A");
             abort();
         }
     }

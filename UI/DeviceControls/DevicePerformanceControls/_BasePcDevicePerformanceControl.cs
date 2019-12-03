@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -32,9 +33,9 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_PC)this.CurrentPerformance;
-            chartRAM.FillSize = Convert.ToInt32(CurrentPerformance.Per_RamSizeUsed);
-            chartHD.FillSize = Convert.ToInt32(100 - Convert.ToInt32(CurrentPerformance.Per_DiskSizeFree));
-            chartCPU.FillSize = Convert.ToInt32(CurrentPerformance.Per_CpuUsage);
+            chartRAM.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.Per_RamSizeUsed);
+            chartHD.FillSize = ChartPerform.FillOrDefault(x => (100 - Convert.ToInt32(x)), CurrentPerformance.Per_DiskSizeFree);
+            chartCPU.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.Per_CpuUsage);
         }
     }
 }

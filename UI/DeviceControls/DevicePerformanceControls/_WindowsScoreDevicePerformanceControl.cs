@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -33,11 +34,11 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_SCORE)this.CurrentPerformance;
-            chartBar_Cpu.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Cpu) * 10);
-            chartBar_D3D.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.D3D) * 10);
-            chartBar_Hd.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Hd) * 10);
-            chartBar_Graph.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Graph) * 10);
-            chartBar_Ram.BarFillSize = Convert.ToInt16(Convert.ToDouble(CurrentPerformance.Ram) * 10);
+            chartBar_Cpu.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Cpu);
+            chartBar_D3D.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.D3D); ;
+            chartBar_Hd.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Hd);
+            chartBar_Graph.BarFillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Graph);
+            chartBar_Ram.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Ram);
             abort();
         }
     }

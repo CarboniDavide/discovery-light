@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -38,17 +39,17 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (PC)this.CurrentDevice;
-            lbl_Name_Value.Text = CurrentDevice.Name;
-            lbl_Type_Value.Text = CurrentDevice.Type;
-            lbl_Manufaturer_Value.Text = CurrentDevice.Manufacturer;
-            lbl_Model_Value.Text = CurrentDevice.Model;
-            lbl_NumberID_Value.Text = CurrentDevice.IDNumber;
-            lbl_User_Value.Text = CurrentDevice.User;
-            lbl_Domain_Value.Text = CurrentDevice.Domaine;
-            lbl_Version_Value.Text = CurrentDevice.SystemOS_Version;
-            lbl_SystemOS_Value.Text = CurrentDevice.SystemOS;
-            lbl_Producer_Value.Text = CurrentDevice.SystemOS_Brand;
-            lbl_Architectur_Value.Text = CurrentDevice.SystemOS_Architecture;
+            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Name, "N/A");
+            lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Type, "N/A");
+            lbl_Manufaturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A");
+            lbl_Model_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Model, "N/A");
+            lbl_NumberID_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.IDNumber, "N/A");
+            lbl_User_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.User, "N/A");
+            lbl_Domain_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Domaine, "N/A");
+            lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS_Version, "N/A");
+            lbl_SystemOS_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS, "N/A");
+            lbl_Producer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS_Brand, "N/A");
+            lbl_Architectur_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS_Architecture, "N/A");
             abort();
         }
     }
