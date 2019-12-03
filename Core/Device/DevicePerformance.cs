@@ -109,9 +109,9 @@ namespace DiscoveryLight.Core.Device.Performance
             if (this.selectedCpu == null) return;
             
             // get cpu base speed
-            uint Maxsp;
+            uint? Maxsp;
             using (ManagementObject Mo = new ManagementObject($"Win32_Processor.DeviceID='CPU{this.selectedCpu}'"))
-                Maxsp = (uint)(Mo["MaxClockSpeed"]);
+                Maxsp = (uint?)(Mo["MaxClockSpeed"]);
 
 
             this.Cpu=  new List<Thread>();
@@ -126,7 +126,10 @@ namespace DiscoveryLight.Core.Device.Performance
                     t.ProcessorFrequency = DeviceUtils.GetProperty.AsString("ProcessorFrequency", mj);
                     t.PercentProcessorPerformance = DeviceUtils.GetProperty.AsString("PercentProcessorPerformance", mj);
                     // calculate frequency using turbo speed
-                    t.Frequency = Convert.ToUInt16(((double)Maxsp / 100) * Convert.ToUInt16(t.PercentProcessorPerformance)).ToString();
+                    if (Maxsp == null || t.PercentProcessorPerformance == null)                                      // use base frequency for tboost 
+                        t.Frequency = t.ProcessorFrequency;
+                    else
+                        t.Frequency = Convert.ToUInt16(((double)Maxsp / 100) * Convert.ToUInt16(t.PercentProcessorPerformance)).ToString();
                     this.Cpu.Add(t);
                 }
             }
