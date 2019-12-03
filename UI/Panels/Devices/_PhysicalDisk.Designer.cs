@@ -29,17 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_PhysicalDisk));
-            System.Threading.CancellationTokenSource cancellationTokenSource3 = new System.Threading.CancellationTokenSource();
-            System.Threading.CancellationTokenSource cancellationTokenSource4 = new System.Threading.CancellationTokenSource();
-            this.cmb_Blocks = new System.Windows.Forms.ComboBox();
+            System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
+            System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             this.lbl_TilteComboBox = new System.Windows.Forms.Label();
-            this.PhysicalDiskDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl();
-            this.PhysicalDiskDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl();
+            this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
+            this.PhysicalDiskDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl();
+            this.PhysicalDiskDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lbl_TilteComboBox
+            // 
+            resources.ApplyResources(this.lbl_TilteComboBox, "lbl_TilteComboBox");
+            this.lbl_TilteComboBox.Name = "lbl_TilteComboBox";
             // 
             // cmb_Blocks
             // 
@@ -48,10 +53,24 @@
             this.cmb_Blocks.Name = "cmb_Blocks";
             this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             // 
-            // lbl_TilteComboBox
+            // pic_Divisor_001
             // 
-            resources.ApplyResources(this.lbl_TilteComboBox, "lbl_TilteComboBox");
-            this.lbl_TilteComboBox.Name = "lbl_TilteComboBox";
+            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
+            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pic_Divisor_001.Name = "pic_Divisor_001";
+            this.pic_Divisor_001.TabStop = false;
+            // 
+            // PhysicalDiskDeviceDataControl
+            // 
+            this.PhysicalDiskDeviceDataControl.ClassName = "_PhysicalDiskDeviceDataControl";
+            this.PhysicalDiskDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl);
+            this.PhysicalDiskDeviceDataControl.CurrentDevice = null;
+            this.PhysicalDiskDeviceDataControl.CurrentSubDevice = null;
+            this.PhysicalDiskDeviceDataControl.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            resources.ApplyResources(this.PhysicalDiskDeviceDataControl, "PhysicalDiskDeviceDataControl");
+            this.PhysicalDiskDeviceDataControl.Name = "PhysicalDiskDeviceDataControl";
+            this.PhysicalDiskDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.PhysicalDiskDeviceDataControl.TokenSource = cancellationTokenSource1;
             // 
             // PhysicalDiskDevicePerformanceControl
             // 
@@ -62,25 +81,7 @@
             resources.ApplyResources(this.PhysicalDiskDevicePerformanceControl, "PhysicalDiskDevicePerformanceControl");
             this.PhysicalDiskDevicePerformanceControl.Name = "PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource3;
-            // 
-            // PhysicalDiskDeviceDataControl
-            // 
-            this.PhysicalDiskDeviceDataControl.ClassName = "_PhysicalDiskDeviceDataControl";
-            this.PhysicalDiskDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl);
-            this.PhysicalDiskDeviceDataControl.CurrentDevice = null;
-            this.PhysicalDiskDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.PhysicalDiskDeviceDataControl, "PhysicalDiskDeviceDataControl");
-            this.PhysicalDiskDeviceDataControl.Name = "PhysicalDiskDeviceDataControl";
-            this.PhysicalDiskDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.PhysicalDiskDeviceDataControl.TokenSource = cancellationTokenSource4;
-            // 
-            // pic_Divisor_001
-            // 
-            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
-            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pic_Divisor_001.Name = "pic_Divisor_001";
-            this.pic_Divisor_001.TabStop = false;
+            this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource2;
             // 
             // pictureBox1
             // 
@@ -110,11 +111,11 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pic_Divisor_001;
-        private System.Windows.Forms.ComboBox cmb_Blocks;
         private System.Windows.Forms.Label lbl_TilteComboBox;
+        private System.Windows.Forms.ComboBox cmb_Blocks;
+        private System.Windows.Forms.PictureBox pic_Divisor_001;
         private DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl PhysicalDiskDeviceDataControl;
         private DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl PhysicalDiskDevicePerformanceControl;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -118,37 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>76, 331</value>
-  </data>
-  <data name="cmb_Blocks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 21</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cmb_Blocks.TabIndex" type="System.Int32, mscorlib">
-    <value>166</value>
-  </data>
-  <data name="&gt;&gt;cmb_Blocks.Name" xml:space="preserve">
-    <value>cmb_Blocks</value>
-  </data>
-  <data name="&gt;&gt;cmb_Blocks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmb_Blocks.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;cmb_Blocks.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <data name="lbl_TilteComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbl_TilteComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="lbl_TilteComboBox.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="lbl_TilteComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 330</value>
@@ -156,6 +134,7 @@
   <data name="lbl_TilteComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbl_TilteComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>165</value>
   </data>
@@ -177,56 +156,41 @@
   <data name="&gt;&gt;lbl_TilteComboBox.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="PhysicalDiskDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>477, 3</value>
+  <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
   </data>
-  <data name="PhysicalDiskDevicePerformanceControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 357</value>
+  <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>76, 331</value>
   </data>
-  <data name="PhysicalDiskDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
-    <value>171</value>
+  <data name="cmb_Blocks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>345, 21</value>
   </data>
-  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.Name" xml:space="preserve">
-    <value>PhysicalDiskDevicePerformanceControl</value>
+  <data name="cmb_Blocks.TabIndex" type="System.Int32, mscorlib">
+    <value>166</value>
   </data>
-  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;cmb_Blocks.Name" xml:space="preserve">
+    <value>cmb_Blocks</value>
   </data>
-  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cmb_Blocks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmb_Blocks.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="PhysicalDiskDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 4</value>
-  </data>
-  <data name="PhysicalDiskDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>465, 313</value>
-  </data>
-  <data name="PhysicalDiskDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
-    <value>170</value>
-  </data>
-  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.Name" xml:space="preserve">
-    <value>PhysicalDiskDeviceDataControl</value>
-  </data>
-  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;cmb_Blocks.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
+  </data>
+  <data name="pic_Divisor_001.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 323</value>
   </data>
   <data name="pic_Divisor_001.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 1</value>
+    <value>410, 1</value>
   </data>
   <data name="pic_Divisor_001.TabIndex" type="System.Int32, mscorlib">
     <value>169</value>
@@ -243,11 +207,56 @@
   <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="PhysicalDiskDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 4</value>
+  </data>
+  <data name="PhysicalDiskDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>418, 313</value>
+  </data>
+  <data name="PhysicalDiskDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.Name" xml:space="preserve">
+    <value>PhysicalDiskDeviceDataControl</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDeviceDataControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PhysicalDiskDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>441, 0</value>
+  </data>
+  <data name="PhysicalDiskDevicePerformanceControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>189, 357</value>
+  </data>
+  <data name="PhysicalDiskDevicePerformanceControl.TabIndex" type="System.Int32, mscorlib">
+    <value>171</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.Name" xml:space="preserve">
+    <value>PhysicalDiskDevicePerformanceControl</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PhysicalDiskDevicePerformanceControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
+  <data name="pictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>470, 0</value>
+    <value>433, 0</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
     <value>2, 360</value>
