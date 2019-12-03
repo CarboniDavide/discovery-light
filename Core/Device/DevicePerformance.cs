@@ -282,9 +282,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 String currentDrive=  DeviceUtils.GetProperty.AsString("Name", mj);
 
                 if (currentDrive != null && currentDrive.Substring(0, 1).Equals(this.DriveIndex.ToString()))
-                    this._driveName = currentDrive.Substring(2, 1) + ":";
-                else
-                    this._driveName = null;
+                    this._driveName=  currentDrive.Substring(2, 1) + ":";
             }
         }
 
