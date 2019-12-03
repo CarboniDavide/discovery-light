@@ -380,20 +380,29 @@ namespace DiscoveryLight.Core.Device.Performance
                         PercentBytesSent=  "0";
                     }
                 }
-
-                if (PacketsTotalPerSec !=  null)
+                else
                 {
-                    Den=  (Convert.ToUInt64(PacketsTotalPerSec) / 100);
+                    PercentBytesReceived = null;
+                    PercentBytesSent = null;
+                }
+
+                if (PacketsTotalPerSec != null)
+                {
+                    Den = (Convert.ToUInt64(PacketsTotalPerSec) / 100);
                     if (Den != 0)
                     {
-                        PercentPacketsReceived=  PacketsReceivedsPerSec != null ? (Convert.ToUInt64(PacketsReceivedsPerSec) / (Convert.ToUInt64(PacketsTotalPerSec) / 100)).ToString() : null;
-                        PercentPacketsSents=  PacketsSentPerSec != null ? (Convert.ToUInt64(PacketsSentPerSec) / (Convert.ToUInt64(PacketsTotalPerSec) / 100)).ToString() : null;
+                        PercentPacketsReceived = PacketsReceivedsPerSec != null ? (Convert.ToUInt64(PacketsReceivedsPerSec) / (Convert.ToUInt64(PacketsTotalPerSec) / 100)).ToString() : null;
+                        PercentPacketsSents = PacketsSentPerSec != null ? (Convert.ToUInt64(PacketsSentPerSec) / (Convert.ToUInt64(PacketsTotalPerSec) / 100)).ToString() : null;
                     }
                     else
                     {
-                        PercentPacketsSents=  "0";
-                        PercentPacketsReceived=  "0";
+                        PercentPacketsSents = "0";
+                        PercentPacketsReceived = "0";
                     }
+                }
+                else {
+                    PercentPacketsReceived = null;
+                    PercentPacketsSents = null;
                 }
             }
 

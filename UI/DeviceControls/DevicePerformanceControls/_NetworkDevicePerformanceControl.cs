@@ -43,7 +43,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             lbl_TotalReceived_Value.Text= DataConvert.AsDefaultValue(x => (Convert.ToDouble(x) / 1024).ToString(), CurrentPerformance.TotalBytesReceived, "N/A", "{0:N0}");
             lbl_TotalSent_Value.Text = DataConvert.AsDefaultValue(x => (Convert.ToDouble(x) / 1024).ToString(), CurrentPerformance.TotalBytesSent, "N/A", "{0:N0}");
 
-            chartBytesReceived.BarFillSize= ChartPerform.FillOrDefault(Convert.ToInt16(CurrentPerformance.PercentBytesReceived));
+            chartBytesReceived.BarFillSize= ChartPerform.FillOrDefault(x=> Convert.ToInt16(x), CurrentPerformance.PercentBytesReceived);
             chartBytesSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentBytesSent);
             chartPacketsReceived.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsReceived);
             chartPacketsSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsSents);
