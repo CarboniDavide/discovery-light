@@ -30,8 +30,8 @@ namespace DiscoveryLight.Core.Device.Utils
             public static dynamic AsArray(string property_name, ManagementObject obj, int ArrayAt)
             {
                 dynamic res = Get(property_name, obj);
-                if (res == null) return "N/A";                                      // return "N/A" for null object
-                return (res.GetType().IsArray) ? res[ArrayAt] : res;                // check for array type: return array items for array data string elesewhere    
+                if (res == null) return null;                                      // return "N/A" for null object
+                return (res.GetType().IsArray) ? res[ArrayAt] : null;                // check for array type: return array items for array data string elesewhere    
             }
 
             /// <summary>
@@ -45,8 +45,9 @@ namespace DiscoveryLight.Core.Device.Utils
             public static dynamic AsSubString(string property_name, ManagementObject obj, int StartIndex, int Lenght)
             {
                 String res = Get(property_name, obj);
-                if (res.GetType().IsArray) return "N/A";                           // check for array structure: nothing to do for unknow index
-                return  res == null ? "N/A" : res.Substring(StartIndex, Lenght);
+                if (res == null) return null;
+                // check for array structure: nothing to do for unknow index
+                return  res.GetType().IsArray ? null : res.Substring(StartIndex, Lenght);
             }
 
             /// <summary>
@@ -58,8 +59,8 @@ namespace DiscoveryLight.Core.Device.Utils
             static public dynamic AsString(string property_name, ManagementObject obj)
             {
                 var res = Get(property_name, obj);
-                if (res == null) return "N/A";
-                return (res.GetType().IsArray) ? "N/A" : res;        // check for array structure: nothing to do for unknow index
+                if (res == null) return res;
+                return (res.GetType().IsArray) ? null : res;        // check for array structure: nothing to do for unknow index
             }
         }
        
