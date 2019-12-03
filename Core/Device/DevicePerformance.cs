@@ -117,7 +117,9 @@ namespace DiscoveryLight.Core.Device.Performance
             this.Cpu=  new List<Thread>();
             // create a list of thread for the selected cpu
             foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfFormattedData_Counters_ProcessorInformation")){
-                if (DeviceUtils.GetProperty.AsSubString("Name", mj, 0, 1).Equals(this.selectedCpu))
+                string CpuName = DeviceUtils.GetProperty.AsSubString("Name", mj, 0, 1);
+                if (CpuName == null) break;                                                                         // don't do anythings for cpuName null value
+                if (CpuName.Equals(this.selectedCpu))
                 {
                     Thread t=  new Thread();                                                                        // create a new Thread
                     t.Name=  DeviceUtils.GetProperty.AsString("Name", mj);                                          // get thread name
