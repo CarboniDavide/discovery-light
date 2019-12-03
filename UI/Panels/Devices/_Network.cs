@@ -58,7 +58,9 @@ namespace DiscoveryLight.UI.Panels.Devices
             this.NetworkDeviceDataControl.CurrentSubDevice = (NETWORK.Block)this.NetworkDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(name)).FirstOrDefault();
 
             var CurrentPerformance = (PERFORM_NETWORK)this.NetworkDevicePerformanceControl.CurrentPerformance;
-            CurrentPerformance.SelectedNetwork = name;
+            var CurrentDevice = (NETWORK.Block)this.NetworkDeviceDataControl.CurrentSubDevice;
+
+            CurrentPerformance.SelectedNetwork = CurrentDevice.UsedNameinPerformance;
         }
 
         private void InitSubDevicesID()

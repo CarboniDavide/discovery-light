@@ -504,6 +504,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Block: _Block
         {
+            public String UsedNameinPerformance;
             public String InterfaceIndex;
             public String Description;
             public String Type;
@@ -533,6 +534,8 @@ namespace DiscoveryLight.Core.Device.Data
                 t.DeviceID= DeviceUtils.GetProperty.AsString("DeviceID", mj);
                 t.InterfaceIndex= DeviceUtils.GetProperty.AsString("InterfaceIndex", mj);
                 t.Name= DeviceUtils.GetProperty.AsString("Name", mj);
+                t.UsedNameinPerformance = t.Name.Replace("(", "[");
+                t.UsedNameinPerformance = t.UsedNameinPerformance.Replace(")", "]");
                 t.Description= DeviceUtils.GetProperty.AsString("Description", mj);
                 t.Type= DeviceUtils.GetProperty.AsString("NetConnectionID", mj);
                 t.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
@@ -549,7 +552,7 @@ namespace DiscoveryLight.Core.Device.Data
             // get all properties for each installed drive
             foreach (ManagementObject mj in Collection)
             {
-                Block c=  (NETWORK.Block)mmBlocks.Where(d => d.Name ==DeviceUtils.GetProperty.AsString("Description", mj) ).FirstOrDefault();
+                Block c=  (NETWORK.Block)mmBlocks.Where(d => d.DeviceID ==DeviceUtils.GetProperty.AsString("Index", mj) ).FirstOrDefault();
 
                 c.Ip_Address= DeviceUtils.GetProperty.AsArray("IpAddress", mj, 0);
                 c.DefualtGetway= DeviceUtils.GetProperty.AsArray("DefaultIPGateway", mj, 0);
