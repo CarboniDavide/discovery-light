@@ -368,7 +368,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String Voltage;
         }
 
-        public UInt64 Size;
+        public String Size;
         public String Type;
 
         public override void GetDriveInfo()
@@ -405,8 +405,8 @@ namespace DiscoveryLight.Core.Device.Data
 
             foreach (ManagementObject mj in a_collection) // Read data
             {
-                this.Size=  Convert.ToUInt64(DeviceUtils.GetProperty.AsString("MaxCapacity", mj)); // Size
-                this.Type= DeviceUtils.GetProperty.AsString("Caption", mj); // Type
+                this.Size= DeviceUtils.GetProperty.AsString("MaxCapacity", mj); // Size
+                this.Type= DeviceUtils.GetProperty.AsString("Caption", mj);     // Type
             }
         }
 
