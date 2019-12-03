@@ -739,7 +739,11 @@
     <None Include="Resources\LogoEntry.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Img\Screenshot.PNG" />
+    <Content Include="Img\Discovery_000.PNG" />
+    <Content Include="Img\Discovery_001.PNG" />
+    <Content Include="Img\Discovery_002.PNG" />
+    <Content Include="Img\Discovery_003.PNG" />
+    <Content Include="Img\Discovery_004.PNG" />
     <Content Include="Logo_Green.ico" />
     <None Include="Resources\Down.png" />
     <None Include="Resources\Up.png" />
