@@ -552,16 +552,18 @@ namespace DiscoveryLight.Core.Device.Data
             // get all properties for each installed drive
             foreach (ManagementObject mj in Collection)
             {
-                Block c=  (NETWORK.Block)mmBlocks.Where(d => d.DeviceID ==DeviceUtils.GetProperty.AsString("Index", mj) ).FirstOrDefault();
+                Block c=  (NETWORK.Block)mmBlocks.Where(d => d.DeviceID == DeviceUtils.GetProperty.AsString("Index", mj) ).FirstOrDefault();
+                if (c != null)
+                {
+                    c.Ip_Address = DeviceUtils.GetProperty.AsArray("IpAddress", mj, 0);
+                    c.DefualtGetway = DeviceUtils.GetProperty.AsArray("DefaultIPGateway", mj, 0);
+                    c.PrimaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", mj, 0);
+                    c.SencondaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", mj, 1);
+                    c.SubNetMask = DeviceUtils.GetProperty.AsArray("IpSubnet", mj, 0);
 
-                c.Ip_Address= DeviceUtils.GetProperty.AsArray("IpAddress", mj, 0);
-                c.DefualtGetway= DeviceUtils.GetProperty.AsArray("DefaultIPGateway", mj, 0);
-                c.PrimaryDNS= DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", mj, 0);
-                c.SencondaryDNS= DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", mj, 1);
-                c.SubNetMask= DeviceUtils.GetProperty.AsArray("IpSubnet", mj, 0);
-
-                var Index=  mmBlocks.FindIndex(d => d.Name ==DeviceUtils.GetProperty.AsString("Description", mj));
-                mmBlocks[Index]=  c;
+                    var Index = mmBlocks.FindIndex(d => d.Name == DeviceUtils.GetProperty.AsString("Description", mj));
+                    mmBlocks[Index] = c;
+                }
             }
 
             // update values for each subdevice if change occured
