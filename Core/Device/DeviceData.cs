@@ -543,27 +543,17 @@ namespace DiscoveryLight.Core.Device.Data
                 t.MACAddresse= DeviceUtils.GetProperty.AsString("MACAddress", mj);
                 t.AdapterType= DeviceUtils.GetProperty.AsString("AdapterType", mj);
 
-                mmBlocks.Add(t);
-            }
-
-            //get extended information
-            // get drive info collection
-            Collection=  DeviceUtils.GetDriveInfo("Win32_NetworkAdapterConfiguration", "MACAddress", null, DeviceUtils.Operator.NotEgual);
-            // get all properties for each installed drive
-            foreach (ManagementObject mj in Collection)
-            {
-                Block c=  (NETWORK.Block)mmBlocks.Where(d => d.DeviceID == DeviceUtils.GetProperty.AsString("Index", mj) ).FirstOrDefault();
-                if (c != null)
+                //get extended information
+                using (ManagementObject Mo = new ManagementObject($"Win32_NetworkAdapterConfiguration.Index='{t.DeviceID}'"))
                 {
-                    c.Ip_Address = DeviceUtils.GetProperty.AsArray("IpAddress", mj, 0);
-                    c.DefualtGetway = DeviceUtils.GetProperty.AsArray("DefaultIPGateway", mj, 0);
-                    c.PrimaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", mj, 0);
-                    c.SencondaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", mj, 1);
-                    c.SubNetMask = DeviceUtils.GetProperty.AsArray("IpSubnet", mj, 0);
-
-                    var Index = mmBlocks.FindIndex(d => d.Name == DeviceUtils.GetProperty.AsString("Description", mj));
-                    mmBlocks[Index] = c;
+                    t.Ip_Address = DeviceUtils.GetProperty.AsArray("IpAddress", Mo, 0);
+                    t.DefualtGetway = DeviceUtils.GetProperty.AsArray("DefaultIPGateway", Mo, 0);
+                    t.PrimaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", Mo, 0);
+                    t.SencondaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", Mo, 1);
+                    t.SubNetMask = DeviceUtils.GetProperty.AsArray("IpSubnet", Mo, 0);
                 }
+
+                mmBlocks.Add(t);
             }
 
             // update values for each subdevice if change occured
