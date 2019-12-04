@@ -16,11 +16,11 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
     {
         public abstract void InitData(DeviceData Device);
     }
-    public class DeviceDataControl: AbstractDeviceDataControl
+    public class DeviceDataControl : AbstractDeviceDataControl
     {
         private DeviceData currentDevice;               // main device type
         private DeviceData._Block currentSubDevice;     // a child for the current device    
-        
+
         public DeviceData CurrentDevice
         {
             get { return currentDevice; }
@@ -34,17 +34,20 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         public DeviceData._Block CurrentSubDevice
         {
             get { return currentSubDevice; }
-            set { 
-                currentSubDevice = value; 
+            set {
+                currentSubDevice = value;
                 if (value != null) show();  // upadate UI when a new subdevice is selected
-            } 
+            }
         }
 
+        private void updateSubDevice(object sender, EventArgs e){
+            CurrentSubDevice = CurrentDevice.Blocks.Where(x => x.Name.Equals(CurrentSubDevice.Name)).FirstOrDefault();
+        }
         public override void InitData(DeviceData Device)
         {
             CurrentDevice = Device;
             CurrentSubDevice = (CurrentDevice.Blocks.Count != 0) ? CurrentDevice.Blocks.First() : new DeviceData._Block();
-            show();
+            OnUpdateFinish += new EventHandler(updateSubDevice);
         }
 
         public DeviceDataControl(DeviceData Device) 
