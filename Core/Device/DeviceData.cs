@@ -88,14 +88,13 @@ namespace DiscoveryLight.Core.Device.Data
         {
             WprManagementObject mj; ;
             // get pc base informations
-            if ( (mj = new WprManagementObjectSearcher("Win32_ComputerSystem").First()) != null){
-                Name = mj.GetProperty("Name").AsString();
-                Type = mj.GetProperty("SystemType").AsString();
-                Manufacturer = mj.GetProperty("Manufacturer").AsString();
-                Model = mj.GetProperty("Model").AsString();
-                User = mj.GetProperty("UserName").AsString();
-                Domaine = mj.GetProperty("Domain").AsString();
-            }
+            mj = new WprManagementObjectSearcher("Win32_ComputerSystem").First();
+            Name = mj.GetProperty("Name").AsString();
+            Type = mj.GetProperty("SystemType").AsString();
+            Manufacturer = mj.GetProperty("Manufacturer").AsString();
+            Model = mj.GetProperty("Model").AsString();
+            User = mj.GetProperty("UserName").AsString();
+            Domaine = mj.GetProperty("Domain").AsString();
 
             // get os base informations
             mj = new WprManagementObjectSearcher("Win32_OperatingSystem").First();
