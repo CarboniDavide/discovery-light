@@ -23,7 +23,7 @@ namespace DiscoveryLight.Core.Device.Data
 
         private int blockNumber=  0;                             // number of blocks for the same drive( a pc can have one or more cpu, drive audio etc.)
         private List<_Block> blocks=  new List<_Block>();        // List of properties for each block           
-        private List<ManagementObject> collection;               // drive collection - each collection contains one or more block, one to each installed drive type
+        private List<WprManagementObject> collection;               // drive collection - each collection contains one or more block, one to each installed drive type
 
         /// <summary>
         /// Override all blocks values if new changes occurred
@@ -40,7 +40,7 @@ namespace DiscoveryLight.Core.Device.Data
         public string DeviceName { get => deviceName; }
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
-        public List<ManagementObject> Collection { get => collection; set => collection=  value; }
+        public List<WprManagementObject> Collection { get => collection; set => collection=  value; }
         public int BlockNumber { get => blockNumber; set => blockNumber=  value; }
         public List<_Block> Blocks { get => blocks; set => updateInfo(value); }
 
@@ -86,31 +86,27 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override void GetDriveInfo()
         {
+            WprManagementObject mj; ;
             // get pc base informations
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_ComputerSystem"))
-            {
-                this.Name= DeviceUtils.GetProperty.AsString("Name", mj);
-                this.Type= DeviceUtils.GetProperty.AsString("SystemType", mj);
-                this.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                this.Model= DeviceUtils.GetProperty.AsString("Model", mj);
-                this.User= DeviceUtils.GetProperty.AsString("UserName", mj);
-                this.Domaine= DeviceUtils.GetProperty.AsString("Domain", mj);
+            if ( (mj = new WprManagementObjectSearcher("Win32_ComputerSystem").First()) != null){
+                Name = mj.GetProperty("Name").AsString();
+                Type = mj.GetProperty("SystemType").AsString();
+                Manufacturer = mj.GetProperty("Manufacturer").AsString();
+                Model = mj.GetProperty("Model").AsString();
+                User = mj.GetProperty("UserName").AsString();
+                Domaine = mj.GetProperty("Domain").AsString();
             }
 
             // get os base informations
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_OperatingSystem"))
-            {
-                SystemOS= DeviceUtils.GetProperty.AsString("Caption", mj);
-                SystemOS_Brand= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                SystemOS_Version= DeviceUtils.GetProperty.AsString("BuildNumber", mj);
-                SystemOS_Architecture= DeviceUtils.GetProperty.AsString("OSArchitecture", mj);
-            }
+            mj = new WprManagementObjectSearcher("Win32_OperatingSystem").First();
+            SystemOS= mj.GetProperty("Caption").AsString();
+            SystemOS_Brand= mj.GetProperty("Manufacturer").AsString();
+            SystemOS_Version= mj.GetProperty("BuildNumber").AsString();
+            SystemOS_Architecture= mj.GetProperty("OSArchitecture").AsString();
 
             // get pc base product informations
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_ComputerSystemProduct"))
-            {
-                IDNumber= DeviceUtils.GetProperty.AsString("IdentifyingNumber", mj);
-            }
+            mj = new WprManagementObjectSearcher("Win32_ComputerSystemProduct").First();
+            IDNumber= mj.GetProperty("IdentifyingNumber").AsString();
         }
 
         public PC():base("Pc") { }
@@ -132,13 +128,11 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // Get all drive info
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_BIOS"))
-            {
-                this.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                this.SerialNumber= DeviceUtils.GetProperty.AsString("SerialNumber", mj);
-                this.Version= DeviceUtils.GetProperty.AsString("Caption", mj);
-                this.ReleaseData= DeviceUtils.GetProperty.AsString("ReleaseDate", mj);
-            }
+            var mj = new WprManagementObjectSearcher("Win32_BIOS").First();
+            Manufacturer= mj.GetProperty("Manufacturer").AsString();
+            SerialNumber= mj.GetProperty("SerialNumber").AsString();
+            Version= mj.GetProperty("Caption").AsString();
+            ReleaseData= mj.GetProperty("ReleaseDate").AsString();
         }
 
         public BIOS():base("Bios") { }
@@ -164,21 +158,19 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get motherboard chip properties
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_BaseBoard")) // Read data
-            {
-                this.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                this.Model= DeviceUtils.GetProperty.AsString("Product", mj);
-                this.Version= DeviceUtils.GetProperty.AsString("Version", mj);
-            }
+            var mj = new WprManagementObjectSearcher("Win32_BaseBoard").First();
+            Manufacturer= mj.GetProperty("Manufacturer").AsString();
+            Model= mj.GetProperty("Product").AsString();
+            Version= mj.GetProperty("Version").AsString();
+
 
             // get motherboard bus properties
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_MotherboardDevice")) // Read data
-            {
-                this.PrimaryBus_Value= DeviceUtils.GetProperty.AsString("PrimaryBusType", mj);
-                this.SecondaryBus_Value= DeviceUtils.GetProperty.AsString("SecondaryBusType", mj);
-            }
+            mj = new WprManagementObjectSearcher("Win32_MotherboardDevice").First();
+            PrimaryBus_Value= mj.GetProperty("PrimaryBusType").AsString();
+            SecondaryBus_Value= mj.GetProperty("SecondaryBusType").AsString();
 
-            NumberSlot=  DeviceUtils.GetDriveInfo("Win32_SystemSlot").Count.ToString();
+            // get slot number
+            NumberSlot = new WprManagementObjectSearcher("Win32_SystemSlot").All().Count.ToString();
         }
 
         public MAINBOARD():base("Mainboard") { }
@@ -212,27 +204,27 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get drive info collection
-            Collection=  DeviceUtils.GetDriveInfo("Win32_VideoController");
+            Collection=  new WprManagementObjectSearcher("Win32_VideoController").All();
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
 
             // get all properties for each installed drive
-            foreach (ManagementObject mj in Collection) // Read data
+            foreach (WprManagementObject mj in Collection) // Read data
             {
                 var t=  new Block();
-                t.DeviceID= DeviceUtils.GetProperty.AsSubString("DeviceID", mj, 15, 1);
-                t.Name= DeviceUtils.GetProperty.AsString("Name", mj);
-                t.Manufacturer= DeviceUtils.GetProperty.AsString("AdapterCompatibility", mj);
-                t.AdpterType= DeviceUtils.GetProperty.AsString("AdapterDACType", mj);
-                t.MemorySize= DeviceUtils.GetProperty.AsString("AdapterRAM", mj);
-                t.NowBitsPerPixel= DeviceUtils.GetProperty.AsString("CurrentBitsPerPixel", mj);
-                t.NowHorizResolution= DeviceUtils.GetProperty.AsString("CurrentHorizontalResolution", mj);
-                t.NowVertResolution= DeviceUtils.GetProperty.AsString("CurrentVerticalResolution", mj);
-                t.NowRefreshRate= DeviceUtils.GetProperty.AsString("CurrentRefreshRate", mj);
-                t.MaxRefreshRate= DeviceUtils.GetProperty.AsString("MaxRefreshRate", mj);
-                t.MinRefreshRate= DeviceUtils.GetProperty.AsString("MinRefreshRate", mj);
-                t.NowNumberOfColors= DeviceUtils.GetProperty.AsString("CurrentNumberOfColors", mj);
-                t.Mode= DeviceUtils.GetProperty.AsString("VideoModeDescription", mj);
+                t.DeviceID= mj.GetProperty("DeviceID").AsSubString(15, 1);
+                t.Name= mj.GetProperty("Name").AsString();
+                t.Manufacturer= mj.GetProperty("AdapterCompatibility").AsString();
+                t.AdpterType= mj.GetProperty("AdapterDACType").AsString();
+                t.MemorySize= mj.GetProperty("AdapterRAM").AsString();
+                t.NowBitsPerPixel= mj.GetProperty("CurrentBitsPerPixel").AsString();
+                t.NowHorizResolution= mj.GetProperty("CurrentHorizontalResolution").AsString();
+                t.NowVertResolution= mj.GetProperty("CurrentVerticalResolution").AsString();
+                t.NowRefreshRate= mj.GetProperty("CurrentRefreshRate").AsString();
+                t.MaxRefreshRate= mj.GetProperty("MaxRefreshRate").AsString();
+                t.MinRefreshRate= mj.GetProperty("MinRefreshRate").AsString();
+                t.NowNumberOfColors= mj.GetProperty("CurrentNumberOfColors").AsString();
+                t.Mode= mj.GetProperty("VideoModeDescription").AsString();
 
                 mmBlocks.Add(t);
             }
@@ -263,18 +255,18 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get drive info collection
-            Collection=  DeviceUtils.GetDriveInfo("Win32_SoundDevice");
+            Collection=  new WprManagementObjectSearcher("Win32_SoundDevice").All();
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
 
             // get all properties for each installed drive
-            foreach (ManagementObject mj in Collection)
+            foreach (WprManagementObject mj in Collection)
             {
                 var t=  new Block();
-                t.DeviceID= DeviceUtils.GetProperty.AsString("DeviceID", mj);
-                t.Name= DeviceUtils.GetProperty.AsString("Caption", mj);
-                t.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                t.PowerManagmentSupport= DeviceUtils.GetProperty.AsString("PowerManagementSupported", mj);
+                t.DeviceID= mj.GetProperty("DeviceID").AsString();
+                t.Name= mj.GetProperty("Caption").AsString();
+                t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
+                t.PowerManagmentSupport= mj.GetProperty("PowerManagementSupported").AsString();
                 mmBlocks.Add(t);
             }
 
@@ -314,28 +306,28 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get drive info collection
-            Collection=  DeviceUtils.GetDriveInfo("Win32_Processor");
+            Collection=  new WprManagementObjectSearcher("Win32_Processor").All();
             // initialize array to contains each drive info
             Blocks=  new List<_Block>();
 
             // get all properties for each installed drive
-            foreach (ManagementObject mj in Collection) // Read data
+            foreach (WprManagementObject mj in Collection) // Read data
             {
                 var t=  new Block();
-                t.ProcessorID= DeviceUtils.GetProperty.AsString("ProcessorId", mj);
-                t.DeviceID= DeviceUtils.GetProperty.AsSubString("DeviceID", mj, 3, 1);
-                t.Name= DeviceUtils.GetProperty.AsString("Name", mj);
-                t.AddressSize= DeviceUtils.GetProperty.AsString("AddressWidth", mj);
-                t.Description= DeviceUtils.GetProperty.AsString("Description", mj);
-                t.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                t.Revision= DeviceUtils.GetProperty.AsString("Revision", mj);
-                t.Socket= DeviceUtils.GetProperty.AsString("SocketDesignation", mj);
-                t.N_Core= DeviceUtils.GetProperty.AsString("NumberOfCores", mj);
-                t.N_Thread= DeviceUtils.GetProperty.AsString("NumberOfLogicalProcessors", mj);
-                t.MaxSpeed= DeviceUtils.GetProperty.AsString("MaxClockSpeed", mj);
-                t.L1_Cache = DeviceUtils.GetProperty.AsString("L2CacheSize", mj);
-                t.L2_Cache= DeviceUtils.GetProperty.AsString("L2CacheSize", mj);
-                t.L3_Cache= DeviceUtils.GetProperty.AsString("L3CacheSize", mj);
+                t.ProcessorID= mj.GetProperty("ProcessorId").AsString();
+                t.DeviceID= mj.GetProperty("DeviceID").AsSubString(3, 1);
+                t.Name= mj.GetProperty("Name").AsString();
+                t.AddressSize = mj.GetProperty("AddressWidth").AsString();
+                t.Description = mj.GetProperty("Description").AsString();
+                t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
+                t.Revision = mj.GetProperty("Revision").AsString();
+                t.Socket = mj.GetProperty("SocketDesignation").AsString();
+                t.N_Core = mj.GetProperty("NumberOfCores").AsString();
+                t.N_Thread = mj.GetProperty("NumberOfLogicalProcessors").AsString();
+                t.MaxSpeed = mj.GetProperty("MaxClockSpeed").AsString();
+                t.L1_Cache = mj.GetProperty("L2CacheSize").AsString();
+                t.L2_Cache = mj.GetProperty("L2CacheSize").AsString();
+                t.L3_Cache = mj.GetProperty("L3CacheSize").AsString();
 
                 Blocks.Add(t);
             }
@@ -374,25 +366,25 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get drive info collection
-            Collection=  DeviceUtils.GetDriveInfo("Win32_PhysicalMemory");
+            Collection=  new WprManagementObjectSearcher("Win32_PhysicalMemory").All();
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
 
             // get all properties for each installed drive
-            foreach (ManagementObject mj in Collection)
+            foreach (WprManagementObject mj in Collection)
             {
                 var t=  new Block();
-                t.Name= DeviceUtils.GetProperty.AsString("Name", mj);
-                t.DeviceID= DeviceUtils.GetProperty.AsSubString("BankLabel", mj, 5, 1);
-                t.Capacity= DeviceUtils.GetProperty.AsString("Capacity", mj);
-                t.Location= DeviceUtils.GetProperty.AsString("BankLabel", mj);
-                t.Slot= DeviceUtils.GetProperty.AsString("DeviceLocator", mj);
-                t.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                t.PartyNumber= DeviceUtils.GetProperty.AsString("PartNumber", mj);
-                t.SerialNumber= DeviceUtils.GetProperty.AsString("SerialNumber", mj);
-                t.Speed= DeviceUtils.GetProperty.AsString("ConfiguredClockSpeed", mj);
-                t.BusSize= DeviceUtils.GetProperty.AsString("DataWidth", mj);
-                t.Voltage= DeviceUtils.GetProperty.AsString("MinVoltage", mj);
+                t.Name= mj.GetProperty("Name").AsString();
+                t.DeviceID= mj.GetProperty("BankLabel").AsSubString(5, 1);
+                t.Capacity= mj.GetProperty("Capacity").AsString();
+                t.Location= mj.GetProperty("BankLabel").AsString();
+                t.Slot= mj.GetProperty("DeviceLocator").AsString();
+                t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
+                t.PartyNumber= mj.GetProperty("PartNumber").AsString();
+                t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
+                t.Speed= mj.GetProperty("ConfiguredClockSpeed").AsString();
+                t.BusSize= mj.GetProperty("DataWidth").AsString();
+                t.Voltage= mj.GetProperty("MinVoltage").AsString();
 
                 mmBlocks.Add(t);
             }
@@ -401,13 +393,9 @@ namespace DiscoveryLight.Core.Device.Data
             Blocks=  mmBlocks;
 
             // get drive info
-            var a_collection=  DeviceUtils.GetDriveInfo("Win32_PhysicalMemoryArray");
-
-            foreach (ManagementObject mj in a_collection) // Read data
-            {
-                this.Size= DeviceUtils.GetProperty.AsString("MaxCapacity", mj); // Size
-                this.Type= DeviceUtils.GetProperty.AsString("Caption", mj);     // Type
-            }
+            var mjext=  new WprManagementObjectSearcher("Win32_PhysicalMemoryArray").First();
+            this.Size= mjext.GetProperty("MaxCapacity").AsString(); // Size
+            this.Type= mjext.GetProperty("Caption").AsString();     // Type
         }
 
         public RAM(): base("Memory") { }
@@ -446,9 +434,9 @@ namespace DiscoveryLight.Core.Device.Data
         public String FindDriveName(String index)
         {
             // get all properties for each installed drive
-            foreach (ManagementObject mj in DeviceUtils.GetDriveInfo("Win32_PerfRawData_PerfDisk_PhysicalDisk"))
+            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All())
             {
-                String currentDrive= DeviceUtils.GetProperty.AsString("Name", mj);
+                String currentDrive= mj.GetProperty("Name").AsString();
 
                 if (currentDrive.Substring(0, 1).Equals(index))
                     return currentDrive.Substring(2, 1) + ":";
@@ -460,28 +448,28 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get drive info collection
-            Collection=  DeviceUtils.GetDriveInfo("Win32_DiskDrive");
+            Collection= new WprManagementObjectSearcher("Win32_DiskDrive").All();
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
 
             // get all properties for each installed drive
-            foreach (ManagementObject mj in Collection)
+            foreach (WprManagementObject mj in Collection)
             {
                 var t=  new Block();
-                t.DeviceID= DeviceUtils.GetProperty.AsString("Index", mj);
+                t.DeviceID= mj.GetProperty("Index").AsString();
                 t.DriveName=  this.FindDriveName(t.DeviceID);
-                t.Name= DeviceUtils.GetProperty.AsString("Caption", mj);
-                t.MediaType= DeviceUtils.GetProperty.AsString("MediaType", mj);
-                t.Intreface= DeviceUtils.GetProperty.AsString("InterfaceType", mj);
-                t.Size= DeviceUtils.GetProperty.AsString("Size", mj);
-                t.SerialNumber= DeviceUtils.GetProperty.AsString("SerialNumber", mj);
-                t.Cylinders= DeviceUtils.GetProperty.AsString("TotalCylinders", mj);
-                t.Heads= DeviceUtils.GetProperty.AsString("TotalHeads", mj);
-                t.Sectors= DeviceUtils.GetProperty.AsString("TotalSectors", mj);
-                t.Tracks= DeviceUtils.GetProperty.AsString("TotalTracks", mj);
-                t.TracksPerCylinder= DeviceUtils.GetProperty.AsString("TracksPerCylinder", mj);
-                t.BytesPerSector= DeviceUtils.GetProperty.AsString("BytesPerSector", mj);
-                t.FirmwareVersion= DeviceUtils.GetProperty.AsString("FirmwareRevision", mj);
+                t.Name= mj.GetProperty("Caption").AsString();
+                t.MediaType= mj.GetProperty("MediaType").AsString();
+                t.Intreface= mj.GetProperty("InterfaceType").AsString();
+                t.Size= mj.GetProperty("Size").AsString();
+                t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
+                t.Cylinders= mj.GetProperty("TotalCylinders").AsString();
+                t.Heads= mj.GetProperty("TotalHeads").AsString();
+                t.Sectors= mj.GetProperty("TotalSectors").AsString();
+                t.Tracks= mj.GetProperty("TotalTracks").AsString(); ;
+                t.TracksPerCylinder= mj.GetProperty("TracksPerCylinder").AsString();
+                t.BytesPerSector= mj.GetProperty("BytesPerSector").AsString();
+                t.FirmwareVersion= mj.GetProperty("FirmwareRevision").AsString();
 
                 mmBlocks.Add(t);
             }
@@ -522,36 +510,34 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get drive info collection
-            Collection=  DeviceUtils.GetDriveInfo("Win32_NetworkAdapter", "MACAddress", null, DeviceUtils.Operator.NotEgual);
+            Collection=  new WprManagementObjectSearcher("Win32_NetworkAdapter").Find("MACAddress", null, "!=");
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
             List<String> s=  new List<string>();
 
             // get all properties for each installed drive
-            foreach (ManagementObject mj in Collection)
+            foreach (WprManagementObject mj in Collection)
             {
                 var t=  new Block();
-                t.DeviceID= DeviceUtils.GetProperty.AsString("DeviceID", mj);
-                t.InterfaceIndex= DeviceUtils.GetProperty.AsString("InterfaceIndex", mj);
-                t.Name= DeviceUtils.GetProperty.AsString("Name", mj);
+                t.DeviceID= mj.GetProperty("DeviceID").AsString();
+                t.InterfaceIndex= mj.GetProperty("InterfaceIndex").AsString();
+                t.Name= mj.GetProperty("Name").AsString(); ;
                 t.UsedNameinPerformance = t.Name.Replace("(", "[");
                 t.UsedNameinPerformance = t.UsedNameinPerformance.Replace(")", "]");
-                t.Description= DeviceUtils.GetProperty.AsString("Description", mj);
-                t.Type= DeviceUtils.GetProperty.AsString("NetConnectionID", mj);
-                t.Manufacturer= DeviceUtils.GetProperty.AsString("Manufacturer", mj);
-                t.Speed= DeviceUtils.GetProperty.AsString("Speed", mj);
-                t.MACAddresse= DeviceUtils.GetProperty.AsString("MACAddress", mj);
-                t.AdapterType= DeviceUtils.GetProperty.AsString("AdapterType", mj);
+                t.Description= mj.GetProperty("Description").AsString();
+                t.Type= mj.GetProperty("NetConnectionID").AsString();
+                t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
+                t.Speed= mj.GetProperty("Speed").AsString();
+                t.MACAddresse= mj.GetProperty("MACAddress").AsString();
+                t.AdapterType= mj.GetProperty("AdapterType").AsString();
 
                 //get extended information
-                using (ManagementObject Mo = new ManagementObject($"Win32_NetworkAdapterConfiguration.Index='{t.DeviceID}'"))
-                {
-                    t.Ip_Address = DeviceUtils.GetProperty.AsArray("IpAddress", Mo, 0);
-                    t.DefualtGetway = DeviceUtils.GetProperty.AsArray("DefaultIPGateway", Mo, 0);
-                    t.PrimaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", Mo, 0);
-                    t.SencondaryDNS = DeviceUtils.GetProperty.AsArray("DNSServerSearchOrder", Mo, 1);
-                    t.SubNetMask = DeviceUtils.GetProperty.AsArray("IpSubnet", Mo, 0);
-                }
+                var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").Unique("Index", t.DeviceID, "=");
+                t.Ip_Address = mjext.GetProperty("IpAddress").AsArray(0);
+                t.DefualtGetway = mjext.GetProperty("DefaultIPGateway").AsArray(0);
+                t.PrimaryDNS = mjext.GetProperty("DNSServerSearchOrder").AsArray(0);
+                t.SencondaryDNS = mjext.GetProperty("DNSServerSearchOrder").AsArray(1);
+                t.SubNetMask = mjext.GetProperty("IpSubnet").AsArray(0);
 
                 mmBlocks.Add(t);
             }
