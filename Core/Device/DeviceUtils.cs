@@ -9,7 +9,7 @@ using DiscoveryLight.Logging;
 namespace DiscoveryLight.Core.Device.Utils
 {
     /// <summary>
-    /// Manage Property field from ManagementObject
+    /// Manage ManagementObject's property
     /// </summary>
     public class MobProperty
     {
