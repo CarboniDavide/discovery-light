@@ -509,10 +509,9 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetDriveInfo()
         {
             // get drive info collection
-            Collection=  new WprManagementObjectSearcher("Win32_NetworkAdapter").Find("MACAddress", null, "!=");
+            Collection=  new WprManagementObjectSearcher("Win32_NetworkAdapter").All();
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
-            List<String> s=  new List<string>();
 
             // get all properties for each installed drive
             foreach (WprManagementObject mj in Collection)
