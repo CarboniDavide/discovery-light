@@ -8,15 +8,16 @@ using DiscoveryLight.Logging;
 
 namespace DiscoveryLight.Core.Device.Utils
 {
+    /// <summary>
+    /// Manage Property field from ManagementObject
+    /// </summary>
     public class MobProperty
     {
         private dynamic obj;
 
         /// <summary>
-        /// Get a property value when property base is a array of values
+        ///  Get a property value when property base is a array of items
         /// </summary>
-        /// <param name="property_name"></param>
-        /// <param name="obj"></param>
         /// <param name="ArrayAt"></param>
         /// <returns></returns>
         public dynamic AsArray(int ArrayAt)
@@ -26,10 +27,8 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Get a substring for a selected property
+        /// Get a substring from ManagementObject Property
         /// </summary>
-        /// <param name="property_name"></param>
-        /// <param name="obj"></param>
         /// <param name="StartIndex"></param>
         /// <param name="Lenght"></param>
         /// <returns></returns>
@@ -41,10 +40,8 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Return property value or array of values if exists N/A elsewhere
+        /// Return property value as String if exists, null elsewhere
         /// </summary>
-        /// <param name="property_name"></param>
-        /// <param name="obj"></param>
         /// <returns></returns>
         public dynamic AsString()
         {
@@ -58,6 +55,9 @@ namespace DiscoveryLight.Core.Device.Utils
         }
     }
 
+    /// <summary>
+    /// ManagementObject Wrapper
+    /// </summary>
     public class WprManagementObject: IDisposable
     {
         public void Dispose() {
@@ -65,6 +65,11 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         private ManagementObject managementObject;
+
+        /// <summary>
+        /// Determines if ManagmentObject is null
+        /// </summary>
+        public Boolean IsNullObject { get => (managementObject == null);}
 
         public MobProperty GetProperty(string Name)
         {
@@ -83,43 +88,93 @@ namespace DiscoveryLight.Core.Device.Utils
             return new MobProperty(null); // not found 
         }
 
-
+        /// <summary>
+        /// Create a new Wrapper class for the selected ManagementObject
+        /// </summary>
+        /// <param name="ManagementObj"></param>
         public WprManagementObject(ManagementObject ManagementObj)
         {
             managementObject = ManagementObj;
         }
+
+        /// <summary>
+        /// Create a new Wrapper class for a null ManagementObject
+        /// </summary>
+        public WprManagementObject()
+        {
+            managementObject = null;
+        }
     }
 
+    /// <summary>
+    /// ManagementObjectSearcher Wrapper
+    /// </summary>
     public class WprManagementObjectSearcher
     {
         private string driveName;
         private readonly String PATH = "root\\CIMV2";      // base wmi namespace for each drive data
 
+        /// <summary>
+        /// Get a collection of WprManagementObjectSearcher, elsewhere a empty list
+        /// </summary>
+        /// <returns></returns>
         public List<WprManagementObject> All()
         {
             return Get($"Select * from {driveName}");
         }
 
+        /// <summary>
+        /// Get a collection of WprManagementObject that match the condition
+        /// </summary>
+        /// <param name="Property"></param>
+        /// <param name="Value"></param>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
         public List<WprManagementObject> Find(string Property, string Value, string Condition)
         {
             return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
         }
 
+        /// <summary>
+        /// Get the fisrt item in collection of WprManagementObject that match the condition
+        /// </summary>
+        /// <param name="Property"></param>
+        /// <param name="Value"></param>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
         public WprManagementObject First(string Property, string Value, string Condition)
         {
-            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").FirstOrDefault();
+            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").FirstOrDefault() ?? new WprManagementObject();
         }
 
+        /// <summary>
+        /// Get the fisrt item in collection of WprManagementObject
+        /// </summary>
+        /// <returns></returns>
         public WprManagementObject First()
-        {
-            return Get($"Select * from {driveName}").FirstOrDefault();
+        {  
+            return Get($"Select * from {driveName}").FirstOrDefault() ?? new WprManagementObject();
         }
 
+        /// <summary>
+        /// Get the last item in collection of WprManagementObject that match the condition
+        /// </summary>
+        /// <param name="Property"></param>
+        /// <param name="Value"></param>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
         public WprManagementObject Last(string Property, string Value, string Condition)
         {
-            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").LastOrDefault();
+            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").LastOrDefault() ?? new WprManagementObject();
         }
 
+        /// <summary>
+        /// Get a WprManagementObject unique that match the condition
+        /// </summary>
+        /// <param name="Property"></param>
+        /// <param name="Value"></param>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
         public WprManagementObject Unique(string Property, string Value, string Condition)
         {
             return new WprManagementObject(new ManagementObject($"{driveName}.{Property}{Condition}'{Value}'"));
@@ -148,6 +203,10 @@ namespace DiscoveryLight.Core.Device.Utils
             return new List<WprManagementObject>();
         }
 
+        /// <summary>
+        /// Create a new Wrapper for thr ManagemetObjectSearcher for the seleced wmi class name
+        /// </summary>
+        /// <param name="Name"></param>
         public WprManagementObjectSearcher(string Name)
         {
             driveName = Name;
