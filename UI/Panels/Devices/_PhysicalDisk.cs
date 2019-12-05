@@ -52,6 +52,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // change physical disk
+            if (cmb_Blocks.SelectedItem.ToString() == " -  ") return;
             this.PhysicalDiskDeviceDataControl.CurrentSubDevice = (DISK.Block)this.PhysicalDiskDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedItem.ToString().Substring(0,1))).FirstOrDefault();
             var CurrentPerformance = (PERFORM_DISK)this.PhysicalDiskDevicePerformanceControl.CurrentPerformance;
             CurrentPerformance.DriveIndex = Convert.ToInt32(this.PhysicalDiskDeviceDataControl.CurrentSubDevice.DeviceID);

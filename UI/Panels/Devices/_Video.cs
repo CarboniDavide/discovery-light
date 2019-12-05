@@ -27,7 +27,7 @@ namespace DiscoveryLight.UI.Panels.Devices
             int index = 0;
             foreach (VIDEO.Block block in CurrentDevice.Blocks)
             {
-                this.cmb_Blocks.Items.Add(index + "-" + block.Name);      // add a index to each subdevice name
+                this.cmb_Blocks.Items.Add(index + " - " + block.Name);      // add a index to each subdevice name
                 index++;
             }
         }
@@ -35,6 +35,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // get name from selection
+            if (cmb_Blocks.SelectedItem.ToString() == " - ") return;
             int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
             string selected = this.cmb_Blocks.SelectedItem.ToString();
             // remove index to get subdevice name

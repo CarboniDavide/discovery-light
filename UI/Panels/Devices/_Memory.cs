@@ -31,6 +31,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
+            if (cmb_Blocks.SelectedItem.ToString() == null) return;
             this.MemoryDeviceDataControl.CurrentSubDevice = this.MemoryDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).FirstOrDefault();
             this.MemoryDevicePerformanceControl.CurrentSubDevice = Convert.ToInt32(this.MemoryDeviceDataControl.CurrentSubDevice.DeviceID);
         }

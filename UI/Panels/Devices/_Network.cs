@@ -52,6 +52,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             // change network device
             // use only network name
+            if (cmb_Blocks.SelectedItem.ToString() == " - ") return;
             int indexFrom = this.cmb_Blocks.SelectedItem.ToString().IndexOf("-"); 
             string selected = this.cmb_Blocks.SelectedItem.ToString();
             string name = selected.Substring(indexFrom + 2, selected.Length - indexFrom - 2);

@@ -27,7 +27,7 @@ namespace DiscoveryLight.UI.Panels.Devices
             int index = 0; // use number in list
             foreach (AUDIO.Block block in CurrentDevice.Blocks)
             {
-                this.cmb_Blocks.Items.Add(index.ToString() + "-" + block.Name);
+                this.cmb_Blocks.Items.Add(index.ToString() + " - " + block.Name);
                 index++;
             }
         }
@@ -35,6 +35,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // get name from selected
+            if (cmb_Blocks.SelectedItem.ToString() == " - ") return;
             int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
             string selected = this.cmb_Blocks.SelectedItem.ToString();
             string name = selected.Substring( indexSize + 1, selected.Length-indexSize-1);
