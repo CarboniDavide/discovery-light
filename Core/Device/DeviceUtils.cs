@@ -144,7 +144,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject First(string Property, string Value, string Condition)
         {
-            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").FirstOrDefault() ?? new WprManagementObject();
+            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").FirstOrDefault();
         }
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject Last(string Property, string Value, string Condition)
         {
-            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").LastOrDefault() ?? new WprManagementObject();
+            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").LastOrDefault();
         }
 
         /// <summary>
@@ -188,7 +188,8 @@ namespace DiscoveryLight.Core.Device.Utils
                 var collection = new ManagementObjectSearcher(PATH, Query);
                 var res = collection.Get().Cast<ManagementObject>().ToList();
                 collection.Dispose();
-                return res.Select(x => new WprManagementObject(x)).Cast<WprManagementObject>().ToList();
+                var inWrapper = res.Select(x => new WprManagementObject(x)).Cast<WprManagementObject>().ToList();
+                return inWrapper.Count == 0 ? null : inWrapper;
             }
             catch (System.Management.ManagementException exception)
             {
@@ -200,7 +201,7 @@ namespace DiscoveryLight.Core.Device.Utils
             }
 
             // return empty list for any problems
-            return new List<WprManagementObject>();
+            return null;
         }
 
         /// <summary>
