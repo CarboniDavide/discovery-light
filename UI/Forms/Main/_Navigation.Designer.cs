@@ -1,4 +1,4 @@
-﻿using DiscoveryLight.UI.Buttons;
+﻿using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Forms.Main
 {
@@ -34,16 +34,16 @@ namespace DiscoveryLight.UI.Forms.Main
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Navigation));
             this.AnimationLine_Navigation = new WinformComponents.AnimationLine();
             this.toolTip_Description = new System.Windows.Forms.ToolTip(this.components);
-            this.cmd_Connectivite = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_Reseau = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_Disque = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_Video = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_Son = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_MemoireRam = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_Processeur = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_CarteMere = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_Ordinateur = new DiscoveryLight.UI.Buttons.PanelLinkButton();
-            this.cmd_Settings = new DiscoveryLight.UI.Buttons.PanelLinkButton();
+            this.cmd_Connectivite = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_Reseau = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_Disque = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_Video = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_Son = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_MemoireRam = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_Processeur = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_CarteMere = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_Ordinateur = new DiscoveryLight.UI.Components.PanelLinkButton();
+            this.cmd_Settings = new DiscoveryLight.UI.Components.PanelLinkButton();
             this.SuspendLayout();
             // 
             // AnimationLine_Navigation

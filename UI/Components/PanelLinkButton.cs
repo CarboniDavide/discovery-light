@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.UI.Panels.Devices;
 
-namespace DiscoveryLight.UI.Buttons
+namespace DiscoveryLight.UI.Components
 {
     /// <summary>
     /// Extend base button control with new custom fields

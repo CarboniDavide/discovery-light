@@ -92,10 +92,10 @@
     <Compile Include="UI\BaseUserControl\_AbstractBaseUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Buttons\LanguageLinkRadio.cs">
+    <Compile Include="UI\Components\LanguageLinkRadio.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\Buttons\PanelLinkButton.cs">
+    <Compile Include="UI\Components\PanelLinkButton.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\Charts\ChartPerform.cs" />

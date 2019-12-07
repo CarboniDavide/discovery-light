@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Globalization;
 using System.Threading;
-using DiscoveryLight.UI.Buttons;
+using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Panels.UserSettings
 {

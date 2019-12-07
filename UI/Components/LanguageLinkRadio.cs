@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DiscoveryLight.UI.Buttons
+namespace DiscoveryLight.UI.Components
+
 {
     /// <summary>
     /// Extend base radio button with new custom fields

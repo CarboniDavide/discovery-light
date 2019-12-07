@@ -1,4 +1,4 @@
-﻿using DiscoveryLight.UI.Buttons;
+﻿using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Panels.UserSettings
 {
@@ -35,11 +35,11 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             this.lbl_It = new System.Windows.Forms.Label();
             this.lbl_Fr = new System.Windows.Forms.Label();
             this.lbl_Eng = new System.Windows.Forms.Label();
-            this.rdb_It = new DiscoveryLight.UI.Buttons.LanguageLinkRadio();
-            this.rdb_Eng = new DiscoveryLight.UI.Buttons.LanguageLinkRadio();
-            this.rdb_Fr = new DiscoveryLight.UI.Buttons.LanguageLinkRadio();
+            this.rdb_It = new DiscoveryLight.UI.Components.LanguageLinkRadio();
+            this.rdb_Eng = new DiscoveryLight.UI.Components.LanguageLinkRadio();
+            this.rdb_Fr = new DiscoveryLight.UI.Components.LanguageLinkRadio();
             this.lbl_TitleDivers = new System.Windows.Forms.Label();
-            this.rdb_Germ = new DiscoveryLight.UI.Buttons.LanguageLinkRadio();
+            this.rdb_Germ = new DiscoveryLight.UI.Components.LanguageLinkRadio();
             this.lbl_Germ = new System.Windows.Forms.Label();
             this.lbl_Freq_Title = new System.Windows.Forms.Label();
             this.nmr_Freq = new System.Windows.Forms.NumericUpDown();

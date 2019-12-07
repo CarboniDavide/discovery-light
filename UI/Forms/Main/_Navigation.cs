@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using DiscoveryLight.UI.Panels.Devices;
-using DiscoveryLight.UI.Buttons;
+using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Forms.Main
 {
