@@ -55,7 +55,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public override void GetPerformance()
         {
             // get all properties for each installed drive
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_WinSAT").All())
+            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_WinSAT").All() ?? new List<WprManagementObject>())
             {
                 this.Cpu=  mj.GetProperty("CPUScore").AsString();           // cpu 
                 this.D3D=  mj.GetProperty("D3DScore").AsString();           // d3d 
@@ -116,7 +116,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
             this.Cpu=  new List<Thread>();
             // create a list of thread for the selected cpu
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfFormattedData_Counters_ProcessorInformation").All())
+            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfFormattedData_Counters_ProcessorInformation").All() ?? new List<WprManagementObject>() { new WprManagementObject()})
             {
                 string CpuName = mj.GetProperty("Name").AsSubString(0, 1);
                 if (CpuName != null && CpuName.Equals(this.selectedCpu))
@@ -161,7 +161,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public override void GetPerformance()
         {
             // get thread and process loaded
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfOS_System").All()){
+            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfOS_System").All() ?? new List<WprManagementObject> { new WprManagementObject()}){
                 this.Threads=  mj.GetProperty("Threads").AsString();
                 this.Processes=  mj.GetProperty("Processes").AsString();
             }
@@ -187,15 +187,15 @@ namespace DiscoveryLight.Core.Device.Performance
         public override void GetPerformance()
         {
             // Storage
-            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", "_Total", "=");
+            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", "_Total", "=") ?? new WprManagementObject();
             this.Per_DiskSizeFree=  mj.GetProperty("PercentFreeSpace").AsString();
 
             // Memory
-            mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfOS_Memory").First();
+            mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfOS_Memory").First() ?? new WprManagementObject();
             this.Per_RamSizeUsed=  mj.GetProperty("PercentCommittedBytesInUse").AsString();
 
             // Cpu
-            mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_Counters_ProcessorInformation").First("Name", "_Total", "=");
+            mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_Counters_ProcessorInformation").First("Name", "_Total", "=") ?? new WprManagementObject();
             this.Per_CpuUsage=  mj.GetProperty("PercentProcessorTime").AsString();
         }
 
@@ -224,7 +224,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public override void GetPerformance()
         {
             // get all memory ram properties from the collection
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfOS_Memory").All())
+            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfOS_Memory").All() ?? new List<WprManagementObject> { new WprManagementObject()})
             {
                 this.CacheUsage=  mj.GetProperty("CacheBytes").AsString();
                 this.MaxCacheUsage=  mj.GetProperty("CacheBytesPeak").AsString();
@@ -278,7 +278,7 @@ namespace DiscoveryLight.Core.Device.Performance
         /// </summary>
         public void FindDrive()
         {
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All())
+            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All() ?? new List<WprManagementObject>() { new WprManagementObject()})
             {
                 String currentDrive=  mj.GetProperty("Name").AsString();
 
@@ -290,7 +290,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public override void GetPerformance()
         {
             if (this.DriveIndex == null) return;
-            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", this.DriveName, "=");
+            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", this.DriveName, "=") ?? new WprManagementObject();
             FreeSpace=  mj.GetProperty("FreeMegabytes").AsString();
             WriteBytesPerSec=  mj.GetProperty("DiskWriteBytesPersec").AsString();
             ReadBytesPerSec=  mj.GetProperty("DiskReadBytesPersec").AsString();
@@ -349,7 +349,7 @@ namespace DiscoveryLight.Core.Device.Performance
             if (this.selectedNetwork == null) return;
             UInt64? Den;
             // get properties from the selected network adapter
-            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_Tcpip_NetworkAdapter").First("Name", this.selectedNetwork, "=");
+            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_Tcpip_NetworkAdapter").First("Name", this.selectedNetwork, "=") ?? new WprManagementObject();
             ByteReceivedPerSec=  mj.GetProperty("BytesReceivedPersec").AsString();
             BytesSentPerSec=  mj.GetProperty("BytesSentPersec").AsString();
             BytesTotalPerSec=  mj.GetProperty("BytesTotalPersec").AsString();
@@ -398,7 +398,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 PercentPacketsSents = null;
             }
 
-            mj = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", this.selectedNetwork, "=");
+            mj = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", this.selectedNetwork, "=") ?? new WprManagementObject();
             TotalBytesReceived = mj.GetProperty("BytesReceivedPersec").AsString();
             TotalBytesSent = mj.GetProperty("BytesSentPersec").AsString();
             TotalBytes = mj.GetProperty("BytesTotalPersec").AsString();
