@@ -47,11 +47,11 @@
             // 
             // BasePcDevicePerformanceControl
             // 
+            resources.ApplyResources(this.BasePcDevicePerformanceControl, "BasePcDevicePerformanceControl");
             this.BasePcDevicePerformanceControl.ClassName = "_BasePcDevicePerformanceControl";
             this.BasePcDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._BasePcDevicePerformanceControl);
             this.BasePcDevicePerformanceControl.CurrentPerformance = null;
             this.BasePcDevicePerformanceControl.CurrentSubDevice = 0;
-            resources.ApplyResources(this.BasePcDevicePerformanceControl, "BasePcDevicePerformanceControl");
             this.BasePcDevicePerformanceControl.Name = "BasePcDevicePerformanceControl";
             this.BasePcDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.BasePcDevicePerformanceControl.TokenSource = cancellationTokenSource1;
@@ -65,33 +65,33 @@
             // 
             // ComputerSystem
             // 
+            resources.ApplyResources(this.ComputerSystem, "ComputerSystem");
             this.ComputerSystem.ClassName = "_ComputerSystem";
             this.ComputerSystem.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._ComputerSystemDataControl);
             this.ComputerSystem.CurrentDevice = null;
             this.ComputerSystem.CurrentSubDevice = null;
-            resources.ApplyResources(this.ComputerSystem, "ComputerSystem");
             this.ComputerSystem.Name = "ComputerSystem";
             this.ComputerSystem.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.ComputerSystem.TokenSource = cancellationTokenSource2;
             // 
             // OperatingSystem
             // 
+            resources.ApplyResources(this.OperatingSystem, "OperatingSystem");
             this.OperatingSystem.ClassName = "_OperatingSystem";
             this.OperatingSystem.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._OperatingSystemDataControl);
             this.OperatingSystem.CurrentDevice = null;
             this.OperatingSystem.CurrentSubDevice = null;
-            resources.ApplyResources(this.OperatingSystem, "OperatingSystem");
             this.OperatingSystem.Name = "OperatingSystem";
             this.OperatingSystem.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.OperatingSystem.TokenSource = cancellationTokenSource3;
             // 
             // ComputerSystemProduct
             // 
+            resources.ApplyResources(this.ComputerSystemProduct, "ComputerSystemProduct");
             this.ComputerSystemProduct.ClassName = "_ComputerSystemProduct";
             this.ComputerSystemProduct.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._ComputerSystemProductDataControl);
             this.ComputerSystemProduct.CurrentDevice = null;
             this.ComputerSystemProduct.CurrentSubDevice = null;
-            resources.ApplyResources(this.ComputerSystemProduct, "ComputerSystemProduct");
             this.ComputerSystemProduct.Name = "ComputerSystemProduct";
             this.ComputerSystemProduct.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.ComputerSystemProduct.TokenSource = cancellationTokenSource4;

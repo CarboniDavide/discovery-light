@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbl_TilteComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+    <value>None</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbl_TilteComboBox.Font" type="System.Drawing.Font, System.Drawing">
@@ -157,7 +157,7 @@
     <value>4</value>
   </data>
   <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+    <value>None</value>
   </data>
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
     <value>76, 331</value>
@@ -207,6 +207,9 @@
   <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="PhysicalDiskDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="PhysicalDiskDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 4</value>
   </data>
@@ -227,6 +230,9 @@
   </data>
   <data name="&gt;&gt;PhysicalDiskDeviceDataControl.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="PhysicalDiskDevicePerformanceControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="PhysicalDiskDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>441, 0</value>

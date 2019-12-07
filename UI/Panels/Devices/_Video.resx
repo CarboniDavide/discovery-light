@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top</value>
+    <value>None</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
@@ -145,7 +145,7 @@
     <value>2</value>
   </data>
   <data name="lbl_TitleComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top</value>
+    <value>None</value>
   </data>
   <data name="lbl_TitleComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -178,7 +178,7 @@
     <value>3</value>
   </data>
   <data name="pic_Divisor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top</value>
+    <value>None</value>
   </data>
   <data name="pic_Divisor.Location" type="System.Drawing.Point, System.Drawing">
     <value>82, 319</value>
@@ -217,7 +217,7 @@
     <value>VideoDeviceDataControl</value>
   </data>
   <data name="&gt;&gt;VideoDeviceDataControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoControllerDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;VideoDeviceDataControl.Parent" xml:space="preserve">
     <value>$this</value>

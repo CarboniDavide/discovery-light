@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+    <value>None</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
@@ -145,7 +145,7 @@
     <value>5</value>
   </data>
   <data name="lbl_TitleComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+    <value>None</value>
   </data>
   <data name="lbl_TitleComboBox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -199,7 +199,7 @@
     <value>3</value>
   </data>
   <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+    <value>None</value>
   </data>
   <data name="pic_Divisor_002.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 326</value>
@@ -246,8 +246,11 @@
   <data name="&gt;&gt;pic_Divisor_003.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="PhysicalMemoryArrayDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="PhysicalMemoryArrayDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 4</value>
+    <value>0, 8</value>
   </data>
   <data name="PhysicalMemoryArrayDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>447, 74</value>
@@ -267,8 +270,11 @@
   <data name="&gt;&gt;PhysicalMemoryArrayDataControl.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="PhysicalMemoryDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="PhysicalMemoryDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 93</value>
+    <value>0, 96</value>
   </data>
   <data name="PhysicalMemoryDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>447, 228</value>
@@ -289,13 +295,13 @@
     <value>1</value>
   </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+    <value>None</value>
   </data>
   <data name="pic_Divisor_001.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 84</value>
+    <value>20, 89</value>
   </data>
   <data name="pic_Divisor_001.Size" type="System.Drawing.Size, System.Drawing">
     <value>400, 1</value>

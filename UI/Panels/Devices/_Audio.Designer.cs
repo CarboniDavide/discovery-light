@@ -51,11 +51,11 @@
             // 
             // AudioDeviceDataControl
             // 
+            resources.ApplyResources(this.AudioDeviceDataControl, "AudioDeviceDataControl");
             this.AudioDeviceDataControl.ClassName = "_AudioDeviceDataControl";
             this.AudioDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._AudioDeviceDataControl);
             this.AudioDeviceDataControl.CurrentDevice = null;
             this.AudioDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.AudioDeviceDataControl, "AudioDeviceDataControl");
             this.AudioDeviceDataControl.Name = "AudioDeviceDataControl";
             this.AudioDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.AudioDeviceDataControl.TokenSource = cancellationTokenSource1;

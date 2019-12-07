@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmb_Blocks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom</value>
+    <value>None</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
@@ -192,6 +192,9 @@
   <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="NetworkDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
   <data name="NetworkDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 1</value>
   </data>
@@ -212,6 +215,9 @@
   </data>
   <data name="&gt;&gt;NetworkDeviceDataControl.ZOrder" xml:space="preserve">
     <value>4</value>
+  </data>
+  <data name="NetworkDevicePerformanceControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
   </data>
   <data name="NetworkDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>384, 31</value>

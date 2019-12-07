@@ -84,22 +84,22 @@
             // 
             // PhysicalMemoryArrayDataControl
             // 
+            resources.ApplyResources(this.PhysicalMemoryArrayDataControl, "PhysicalMemoryArrayDataControl");
             this.PhysicalMemoryArrayDataControl.ClassName = "_PhysicalMemoryArrayDataControl";
             this.PhysicalMemoryArrayDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryArrayDataControl);
             this.PhysicalMemoryArrayDataControl.CurrentDevice = null;
             this.PhysicalMemoryArrayDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.PhysicalMemoryArrayDataControl, "PhysicalMemoryArrayDataControl");
             this.PhysicalMemoryArrayDataControl.Name = "PhysicalMemoryArrayDataControl";
             this.PhysicalMemoryArrayDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.PhysicalMemoryArrayDataControl.TokenSource = cancellationTokenSource2;
             // 
             // PhysicalMemoryDataControl
             // 
+            resources.ApplyResources(this.PhysicalMemoryDataControl, "PhysicalMemoryDataControl");
             this.PhysicalMemoryDataControl.ClassName = "_PhysicalMemoryDataControl";
             this.PhysicalMemoryDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryDataControl);
             this.PhysicalMemoryDataControl.CurrentDevice = null;
             this.PhysicalMemoryDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.PhysicalMemoryDataControl, "PhysicalMemoryDataControl");
             this.PhysicalMemoryDataControl.Name = "PhysicalMemoryDataControl";
             this.PhysicalMemoryDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.PhysicalMemoryDataControl.TokenSource = cancellationTokenSource3;

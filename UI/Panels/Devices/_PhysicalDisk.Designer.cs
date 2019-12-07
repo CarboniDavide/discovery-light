@@ -62,23 +62,23 @@
             // 
             // PhysicalDiskDeviceDataControl
             // 
+            resources.ApplyResources(this.PhysicalDiskDeviceDataControl, "PhysicalDiskDeviceDataControl");
             this.PhysicalDiskDeviceDataControl.ClassName = "_PhysicalDiskDeviceDataControl";
             this.PhysicalDiskDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl);
             this.PhysicalDiskDeviceDataControl.CurrentDevice = null;
             this.PhysicalDiskDeviceDataControl.CurrentSubDevice = null;
             this.PhysicalDiskDeviceDataControl.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            resources.ApplyResources(this.PhysicalDiskDeviceDataControl, "PhysicalDiskDeviceDataControl");
             this.PhysicalDiskDeviceDataControl.Name = "PhysicalDiskDeviceDataControl";
             this.PhysicalDiskDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.PhysicalDiskDeviceDataControl.TokenSource = cancellationTokenSource1;
             // 
             // PhysicalDiskDevicePerformanceControl
             // 
+            resources.ApplyResources(this.PhysicalDiskDevicePerformanceControl, "PhysicalDiskDevicePerformanceControl");
             this.PhysicalDiskDevicePerformanceControl.ClassName = "_PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl);
             this.PhysicalDiskDevicePerformanceControl.CurrentPerformance = null;
             this.PhysicalDiskDevicePerformanceControl.CurrentSubDevice = 0;
-            resources.ApplyResources(this.PhysicalDiskDevicePerformanceControl, "PhysicalDiskDevicePerformanceControl");
             this.PhysicalDiskDevicePerformanceControl.Name = "PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource2;

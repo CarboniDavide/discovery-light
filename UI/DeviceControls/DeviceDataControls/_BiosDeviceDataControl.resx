@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbl_BiosManufacturer.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lbl_BiosManufacturer.Font" type="System.Drawing.Font, System.Drawing">
@@ -154,7 +154,7 @@
     <value>7</value>
   </data>
   <data name="lbl_BiosManufacturer_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="lbl_BiosManufacturer_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
@@ -187,7 +187,7 @@
     <value>6</value>
   </data>
   <data name="lbl_BiosSerialNumber.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="lbl_BiosSerialNumber.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
@@ -220,7 +220,7 @@
     <value>5</value>
   </data>
   <data name="lbl_BiosVersion.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="lbl_BiosVersion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
@@ -253,7 +253,7 @@
     <value>4</value>
   </data>
   <data name="lbl_BiosReleaseDate.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="lbl_BiosReleaseDate.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
@@ -286,7 +286,7 @@
     <value>3</value>
   </data>
   <data name="lbl_BiosSerialNumber_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="lbl_BiosSerialNumber_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
@@ -319,7 +319,7 @@
     <value>2</value>
   </data>
   <data name="lbl_BiosVersion_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="lbl_BiosVersion_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
@@ -352,7 +352,7 @@
     <value>1</value>
   </data>
   <data name="lbl_BiosReleaseDate_Value.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="lbl_BiosReleaseDate_Value.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 12pt</value>
