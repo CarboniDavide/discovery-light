@@ -144,7 +144,8 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject First(string Property, string Value, string Condition)
         {
-            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").FirstOrDefault();
+            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
+            return res == null ? null : res.FirstOrDefault();
         }
 
         /// <summary>
@@ -165,7 +166,8 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject Last(string Property, string Value, string Condition)
         {
-            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").LastOrDefault();
+            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
+            return res == null ? null : res.LastOrDefault();
         }
 
         /// <summary>
