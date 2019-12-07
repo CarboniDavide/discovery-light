@@ -75,7 +75,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region ComputerSystem
 
     /// <summary>
-    /// Get base pc properties
+    /// Get base Computer System Info
     /// </summary>
     public class ComputerSystem : DeviceData
     {
@@ -106,7 +106,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region OperatingSystem
 
     /// <summary>
-    /// Get base pc properties
+    /// Get base OperatingSystem properties
     /// </summary>
     public class OperatingSystem : DeviceData
     {
@@ -134,7 +134,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region ComputerSystemProduct
 
     /// <summary>
-    /// Get base pc properties
+    /// Get base ComputerSystemProduct properties
     /// </summary>
     public class ComputerSystemProduct : DeviceData
     {
@@ -181,7 +181,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region BaseBoard
 
     /// <summary>
-    /// Get base pc properties
+    /// Get BaseBoard pc properties
     /// </summary>
 
     public class BaseBoard : DeviceData
@@ -207,7 +207,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region MotherboardDevice
 
     /// <summary>
-    /// Get base pc properties
+    /// Get MotherboardDevice pc properties
     /// </summary>
 
     public class MotherboardDevice : DeviceData
@@ -231,7 +231,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region SystemSlot
 
     /// <summary>
-    /// Get base pc properties
+    /// Get base SystemSlot properties
     /// </summary>
 
     public class SystemSlot : DeviceData
@@ -410,7 +410,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region PhysicalMemory
 
     /// <summary>
-    /// Get base ram properties
+    /// Get PhysicalMemory ram properties
     /// </summary>
 
     public class PhysicalMemory : DeviceData
@@ -464,7 +464,7 @@ namespace DiscoveryLight.Core.Device.Data
     #region PhysicalMemoryArray
 
     /// <summary>
-    /// Get base ram properties
+    /// Get base PhysicalMemoryArray properties
     /// </summary>
 
     public class PhysicalMemoryArray : DeviceData
