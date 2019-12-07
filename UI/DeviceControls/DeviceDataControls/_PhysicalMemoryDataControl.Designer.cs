@@ -1,6 +1,6 @@
 ﻿namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    partial class _MemoryDeviceDataControl
+    partial class _PhysicalMemoryDataControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_MemoryDeviceDataControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_PhysicalMemoryDataControl));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_BlockNumberParty_Value = new System.Windows.Forms.Label();
             this.lbl_BlockManufacturer_Value = new System.Windows.Forms.Label();
@@ -42,20 +42,12 @@
             this.lbl_BlockSpeed = new System.Windows.Forms.Label();
             this.lbl_BlockLocation_Value = new System.Windows.Forms.Label();
             this.lbl_BlockSize_Value = new System.Windows.Forms.Label();
-            this.lbl_Type_Value = new System.Windows.Forms.Label();
-            this.lbl_Block_Value = new System.Windows.Forms.Label();
-            this.lbl_Size_Value = new System.Windows.Forms.Label();
             this.lbl_BlockManufacturer = new System.Windows.Forms.Label();
             this.lbl_BlockSize = new System.Windows.Forms.Label();
-            this.lbl_Type = new System.Windows.Forms.Label();
-            this.lbl_Block = new System.Windows.Forms.Label();
-            this.lbl_Size = new System.Windows.Forms.Label();
             this.lbl_BlockVoltage = new System.Windows.Forms.Label();
             this.lbl_BlockVoltage_Value = new System.Windows.Forms.Label();
             this.lbl_BlockSlotPosition = new System.Windows.Forms.Label();
             this.lbl_BlockSlotPosition_Value = new System.Windows.Forms.Label();
-            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_BlockNumberParty_Value
@@ -125,24 +117,6 @@
             this.lbl_BlockSize_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockSize_Value.Name = "lbl_BlockSize_Value";
             // 
-            // lbl_Type_Value
-            // 
-            resources.ApplyResources(this.lbl_Type_Value, "lbl_Type_Value");
-            this.lbl_Type_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbl_Type_Value.Name = "lbl_Type_Value";
-            // 
-            // lbl_Block_Value
-            // 
-            resources.ApplyResources(this.lbl_Block_Value, "lbl_Block_Value");
-            this.lbl_Block_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbl_Block_Value.Name = "lbl_Block_Value";
-            // 
-            // lbl_Size_Value
-            // 
-            resources.ApplyResources(this.lbl_Size_Value, "lbl_Size_Value");
-            this.lbl_Size_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lbl_Size_Value.Name = "lbl_Size_Value";
-            // 
             // lbl_BlockManufacturer
             // 
             resources.ApplyResources(this.lbl_BlockManufacturer, "lbl_BlockManufacturer");
@@ -152,21 +126,6 @@
             // 
             resources.ApplyResources(this.lbl_BlockSize, "lbl_BlockSize");
             this.lbl_BlockSize.Name = "lbl_BlockSize";
-            // 
-            // lbl_Type
-            // 
-            resources.ApplyResources(this.lbl_Type, "lbl_Type");
-            this.lbl_Type.Name = "lbl_Type";
-            // 
-            // lbl_Block
-            // 
-            resources.ApplyResources(this.lbl_Block, "lbl_Block");
-            this.lbl_Block.Name = "lbl_Block";
-            // 
-            // lbl_Size
-            // 
-            resources.ApplyResources(this.lbl_Size, "lbl_Size");
-            this.lbl_Size.Name = "lbl_Size";
             // 
             // lbl_BlockVoltage
             // 
@@ -190,18 +149,10 @@
             this.lbl_BlockSlotPosition_Value.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.lbl_BlockSlotPosition_Value.Name = "lbl_BlockSlotPosition_Value";
             // 
-            // pic_Divisor_001
-            // 
-            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
-            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pic_Divisor_001.Name = "pic_Divisor_001";
-            this.pic_Divisor_001.TabStop = false;
-            // 
-            // _MemoryDeviceDataControl
+            // _PhysicalMemory
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pic_Divisor_001);
             this.Controls.Add(this.lbl_BlockSlotPosition_Value);
             this.Controls.Add(this.lbl_BlockSlotPosition);
             this.Controls.Add(this.lbl_BlockVoltage_Value);
@@ -218,18 +169,11 @@
             this.Controls.Add(this.lbl_BlockSpeed);
             this.Controls.Add(this.lbl_BlockLocation_Value);
             this.Controls.Add(this.lbl_BlockSize_Value);
-            this.Controls.Add(this.lbl_Type_Value);
-            this.Controls.Add(this.lbl_Block_Value);
-            this.Controls.Add(this.lbl_Size_Value);
             this.Controls.Add(this.lbl_BlockManufacturer);
             this.Controls.Add(this.lbl_BlockSize);
-            this.Controls.Add(this.lbl_Type);
-            this.Controls.Add(this.lbl_Block);
-            this.Controls.Add(this.lbl_Size);
-            this.Name = "_MemoryDeviceDataControl";
+            this.Name = "_PhysicalMemory";
             this.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.TokenSource = cancellationTokenSource1;
-            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,18 +192,11 @@
         private System.Windows.Forms.Label lbl_BlockSpeed;
         private System.Windows.Forms.Label lbl_BlockLocation_Value;
         private System.Windows.Forms.Label lbl_BlockSize_Value;
-        private System.Windows.Forms.Label lbl_Type_Value;
-        private System.Windows.Forms.Label lbl_Block_Value;
-        private System.Windows.Forms.Label lbl_Size_Value;
         private System.Windows.Forms.Label lbl_BlockManufacturer;
         private System.Windows.Forms.Label lbl_BlockSize;
-        private System.Windows.Forms.Label lbl_Type;
-        private System.Windows.Forms.Label lbl_Block;
-        private System.Windows.Forms.Label lbl_Size;
         private System.Windows.Forms.Label lbl_BlockVoltage;
         private System.Windows.Forms.Label lbl_BlockVoltage_Value;
         private System.Windows.Forms.Label lbl_BlockSlotPosition;
         private System.Windows.Forms.Label lbl_BlockSlotPosition_Value;
-        private System.Windows.Forms.PictureBox pic_Divisor_001;
     }
 }

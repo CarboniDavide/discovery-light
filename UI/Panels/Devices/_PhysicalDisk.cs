@@ -18,16 +18,16 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.PhysicalDiskDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_DISK)).First());
-            this.PhysicalDiskDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(DISK)).First());
+            this.PhysicalDiskDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiskDrive)).First());
         }
 
         private void ChargeListOfSubDevicesInit()
         {
             // fill list with all physical disk
             List<String> devices = new List<string>();
-            var CurrentDevice = (DISK)this.PhysicalDiskDeviceDataControl.CurrentDevice;
+            var CurrentDevice = (DiskDrive)this.PhysicalDiskDeviceDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
-            foreach (DISK.Block block in CurrentDevice.Blocks)
+            foreach (DiskDrive.Block block in CurrentDevice.Blocks)
                 devices.Add(block.DeviceID + " - " + block.DriveName + " " + block.Name);
 
             // don't update loaded values in comboBox if not new physical disk are founded
@@ -53,7 +53,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             // change physical disk
             if (cmb_Blocks.SelectedItem.ToString() == " -  ") return;
-            this.PhysicalDiskDeviceDataControl.CurrentSubDevice = (DISK.Block)this.PhysicalDiskDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedItem.ToString().Substring(0,1))).FirstOrDefault();
+            this.PhysicalDiskDeviceDataControl.CurrentSubDevice = (DiskDrive.Block)this.PhysicalDiskDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedItem.ToString().Substring(0,1))).FirstOrDefault();
             var CurrentPerformance = (PERFORM_DISK)this.PhysicalDiskDevicePerformanceControl.CurrentPerformance;
             CurrentPerformance.DriveIndex = Convert.ToInt32(this.PhysicalDiskDeviceDataControl.CurrentSubDevice.DeviceID);
         }

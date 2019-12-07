@@ -18,16 +18,16 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.NetworkDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_NETWORK)).First());
-            this.NetworkDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(NETWORK)).First());
+            this.NetworkDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(NetworkAdapter)).First());
         }
 
         private void ChargeListOfSubDevicesInit()
         {
             // load all names for each installed network
             List<String> devices = new List<string>();
-            var CurrentDevice = (NETWORK)this.NetworkDeviceDataControl.CurrentDevice;
+            var CurrentDevice = (NetworkAdapter)this.NetworkDeviceDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
-            foreach (NETWORK.Block block in CurrentDevice.Blocks)
+            foreach (NetworkAdapter.Block block in CurrentDevice.Blocks)
                 devices.Add(block.DeviceID + " - " + block.Name);  // add device name to each networ's name
 
             // don't change comboBox list if no changes are availables
@@ -56,10 +56,10 @@ namespace DiscoveryLight.UI.Panels.Devices
             int indexFrom = this.cmb_Blocks.SelectedItem.ToString().IndexOf("-"); 
             string selected = this.cmb_Blocks.SelectedItem.ToString();
             string name = selected.Substring(indexFrom + 2, selected.Length - indexFrom - 2);
-            this.NetworkDeviceDataControl.CurrentSubDevice = (NETWORK.Block)this.NetworkDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(name)).FirstOrDefault();
+            this.NetworkDeviceDataControl.CurrentSubDevice = (NetworkAdapter.Block)this.NetworkDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(name)).FirstOrDefault();
 
             var CurrentPerformance = (PERFORM_NETWORK)this.NetworkDevicePerformanceControl.CurrentPerformance;
-            var CurrentDevice = (NETWORK.Block)this.NetworkDeviceDataControl.CurrentSubDevice;
+            var CurrentDevice = (NetworkAdapter.Block)this.NetworkDeviceDataControl.CurrentSubDevice;
 
             CurrentPerformance.SelectedNetwork = CurrentDevice.UsedNameinPerformance;
         }

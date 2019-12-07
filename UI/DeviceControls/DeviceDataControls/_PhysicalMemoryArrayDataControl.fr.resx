@@ -117,95 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_Model.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 105</value>
+  <data name="lbl_Block.Text" xml:space="preserve">
+    <value>Blocs</value>
   </data>
-  <data name="lbl_Model.Text" xml:space="preserve">
-    <value>Modèle</value>
-  </data>
-  <data name="lbl_Manufacturer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 80</value>
-  </data>
-  <data name="lbl_Manufacturer.Text" xml:space="preserve">
-    <value>Fabricant</value>
-  </data>
-  <data name="lbl_Type.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 55</value>
-  </data>
-  <data name="lbl_Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 30</value>
-  </data>
-  <data name="lbl_Name.Text" xml:space="preserve">
-    <value>Nom</value>
-  </data>
-  <data name="lbl_SystemOS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 235</value>
-  </data>
-  <data name="lbl_Producer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 260</value>
-  </data>
-  <data name="lbl_Producer.Text" xml:space="preserve">
-    <value>Editeur</value>
-  </data>
-  <data name="lbl_NumberID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 130</value>
-  </data>
-  <data name="lbl_NumberID.Text" xml:space="preserve">
-    <value>Numéro ID</value>
-  </data>
-  <data name="lbl_Domain.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 195</value>
-  </data>
-  <data name="lbl_Version.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 285</value>
-  </data>
-  <data name="lbl_Architectur.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 310</value>
-  </data>
-  <data name="lbl_Architectur.Text" xml:space="preserve">
-    <value>Architecture</value>
-  </data>
-  <data name="lbl_User.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 170</value>
-  </data>
-  <data name="lbl_User.Text" xml:space="preserve">
-    <value>Utilisateur</value>
-  </data>
-  <data name="lbl_Name_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 30</value>
-  </data>
-  <data name="lbl_NumberID_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 130</value>
-  </data>
-  <data name="lbl_User_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 170</value>
-  </data>
-  <data name="lbl_Domain_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 195</value>
-  </data>
-  <data name="lbl_Version_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 285</value>
-  </data>
-  <data name="lbl_Architectur_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 310</value>
-  </data>
-  <data name="lbl_Model_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 105</value>
-  </data>
-  <data name="lbl_Manufaturer_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 80</value>
-  </data>
-  <data name="lbl_Type_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 55</value>
-  </data>
-  <data name="lbl_SystemOS_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 235</value>
-  </data>
-  <data name="lbl_Producer_Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 260</value>
-  </data>
-  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>439, 360</value>
+  <data name="lbl_Size.Text" xml:space="preserve">
+    <value>Taille</value>
   </data>
 </root>

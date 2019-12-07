@@ -142,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cmb_Blocks.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="lbl_TitleComboBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -175,7 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_TitleComboBox.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="MemoryDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>453, 0</value>
@@ -196,7 +196,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MemoryDevicePerformanceControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -220,7 +220,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="pic_Divisor_003.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -244,28 +244,76 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_003.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>7</value>
   </data>
-  <data name="MemoryDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 14</value>
+  <data name="PhysicalMemoryArrayDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 4</value>
   </data>
-  <data name="MemoryDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>444, 320</value>
+  <data name="PhysicalMemoryArrayDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>447, 74</value>
   </data>
-  <data name="MemoryDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+  <data name="PhysicalMemoryArrayDataControl.TabIndex" type="System.Int32, mscorlib">
     <value>220</value>
   </data>
-  <data name="&gt;&gt;MemoryDeviceDataControl.Name" xml:space="preserve">
-    <value>MemoryDeviceDataControl</value>
+  <data name="&gt;&gt;PhysicalMemoryArrayDataControl.Name" xml:space="preserve">
+    <value>PhysicalMemoryArrayDataControl</value>
   </data>
-  <data name="&gt;&gt;MemoryDeviceDataControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;PhysicalMemoryArrayDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryArrayDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;MemoryDeviceDataControl.Parent" xml:space="preserve">
+  <data name="&gt;&gt;PhysicalMemoryArrayDataControl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MemoryDeviceDataControl.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;PhysicalMemoryArrayDataControl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="PhysicalMemoryDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 93</value>
+  </data>
+  <data name="PhysicalMemoryDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>447, 228</value>
+  </data>
+  <data name="PhysicalMemoryDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>221</value>
+  </data>
+  <data name="&gt;&gt;PhysicalMemoryDataControl.Name" xml:space="preserve">
+    <value>PhysicalMemoryDataControl</value>
+  </data>
+  <data name="&gt;&gt;PhysicalMemoryDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;PhysicalMemoryDataControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;PhysicalMemoryDataControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="pic_Divisor_001.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pic_Divisor_001.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 84</value>
+  </data>
+  <data name="pic_Divisor_001.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 1</value>
+  </data>
+  <data name="pic_Divisor_001.TabIndex" type="System.Int32, mscorlib">
+    <value>222</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.Name" xml:space="preserve">
+    <value>pic_Divisor_001</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

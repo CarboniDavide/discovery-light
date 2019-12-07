@@ -18,7 +18,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.WindowsScoreDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_SCORE)).First());
-            this.MainBoardDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(MAINBOARD)).First());
+            this.BaseBoardDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(BaseBoard)).First());
+            this.MotherBoardDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(MotherboardDevice)).First());
             this.BiosDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(BIOS)).First());
         }
     }

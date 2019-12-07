@@ -31,14 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Memory));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
+            System.Threading.CancellationTokenSource cancellationTokenSource3 = new System.Threading.CancellationTokenSource();
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
             this.MemoryDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_003 = new System.Windows.Forms.PictureBox();
-            this.MemoryDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl();
+            this.PhysicalMemoryArrayDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryArrayDataControl();
+            this.PhysicalMemoryDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryDataControl();
+            this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).BeginInit();
             this.SuspendLayout();
             // 
             // cmb_Blocks
@@ -78,32 +82,53 @@
             this.pic_Divisor_003.Name = "pic_Divisor_003";
             this.pic_Divisor_003.TabStop = false;
             // 
-            // MemoryDeviceDataControl
+            // PhysicalMemoryArrayDataControl
             // 
-            this.MemoryDeviceDataControl.ClassName = "_MemoryDeviceDataControl";
-            this.MemoryDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._MemoryDeviceDataControl);
-            this.MemoryDeviceDataControl.CurrentDevice = null;
-            this.MemoryDeviceDataControl.CurrentSubDevice = null;
-            resources.ApplyResources(this.MemoryDeviceDataControl, "MemoryDeviceDataControl");
-            this.MemoryDeviceDataControl.Name = "MemoryDeviceDataControl";
-            this.MemoryDeviceDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
-            this.MemoryDeviceDataControl.TokenSource = cancellationTokenSource2;
+            this.PhysicalMemoryArrayDataControl.ClassName = "_PhysicalMemoryArrayDataControl";
+            this.PhysicalMemoryArrayDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryArrayDataControl);
+            this.PhysicalMemoryArrayDataControl.CurrentDevice = null;
+            this.PhysicalMemoryArrayDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.PhysicalMemoryArrayDataControl, "PhysicalMemoryArrayDataControl");
+            this.PhysicalMemoryArrayDataControl.Name = "PhysicalMemoryArrayDataControl";
+            this.PhysicalMemoryArrayDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.PhysicalMemoryArrayDataControl.TokenSource = cancellationTokenSource2;
+            // 
+            // PhysicalMemoryDataControl
+            // 
+            this.PhysicalMemoryDataControl.ClassName = "_PhysicalMemoryDataControl";
+            this.PhysicalMemoryDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalMemoryDataControl);
+            this.PhysicalMemoryDataControl.CurrentDevice = null;
+            this.PhysicalMemoryDataControl.CurrentSubDevice = null;
+            resources.ApplyResources(this.PhysicalMemoryDataControl, "PhysicalMemoryDataControl");
+            this.PhysicalMemoryDataControl.Name = "PhysicalMemoryDataControl";
+            this.PhysicalMemoryDataControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
+            this.PhysicalMemoryDataControl.TokenSource = cancellationTokenSource3;
+            // 
+            // pic_Divisor_001
+            // 
+            resources.ApplyResources(this.pic_Divisor_001, "pic_Divisor_001");
+            this.pic_Divisor_001.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pic_Divisor_001.Name = "pic_Divisor_001";
+            this.pic_Divisor_001.TabStop = false;
             // 
             // _Memory
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pic_Divisor_001);
+            this.Controls.Add(this.PhysicalMemoryDataControl);
+            this.Controls.Add(this.PhysicalMemoryArrayDataControl);
             this.Controls.Add(this.MemoryDevicePerformanceControl);
             this.Controls.Add(this.pic_Divisor_002);
             this.Controls.Add(this.cmb_Blocks);
             this.Controls.Add(this.lbl_TitleComboBox);
             this.Controls.Add(this.pic_Divisor_003);
-            this.Controls.Add(this.MemoryDeviceDataControl);
             this.Name = "_Memory";
             this.PanelIndex = 3;
             this.Load += new System.EventHandler(this._Memory_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_002)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_003)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor_001)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -115,6 +140,8 @@
         private System.Windows.Forms.Label lbl_TitleComboBox;
         private System.Windows.Forms.PictureBox pic_Divisor_002;
         private DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl MemoryDevicePerformanceControl;
-        private DeviceControls.DeviceDataControls._MemoryDeviceDataControl MemoryDeviceDataControl;
+        private DeviceControls.DeviceDataControls._PhysicalMemoryArrayDataControl PhysicalMemoryArrayDataControl;
+        private DeviceControls.DeviceDataControls._PhysicalMemoryDataControl PhysicalMemoryDataControl;
+        private System.Windows.Forms.PictureBox pic_Divisor_001;
     }
 }

@@ -117,17 +117,47 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\DeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemDataControl.Designer.cs">
+      <DependentUpon>_ComputerSystemDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryArrayDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryArrayDataControl.Designer.cs">
+      <DependentUpon>_PhysicalMemoryArrayDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_SystemSlotDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_SystemSlotDataControl.Designer.cs">
+      <DependentUpon>_SystemSlotDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_MotherBoardDeviceDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_MotherBoardDeviceDataControl.Designer.cs">
+      <DependentUpon>_MotherBoardDeviceDataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_OperatingSystemDataControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_OperatingSystemDataControl.Designer.cs">
+      <DependentUpon>_OperatingSystemDataControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_CpuDeviceDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_CpuDeviceDataControl.Designer.cs">
       <DependentUpon>_CpuDeviceDataControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.cs">
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemProductDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.Designer.cs">
-      <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemProductDataControl.Designer.cs">
+      <DependentUpon>_ComputerSystemProductDataControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_NetworkDeviceDataControl.cs">
       <SubType>UserControl</SubType>
@@ -141,23 +171,23 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalDiskDeviceDataControl.Designer.cs">
       <DependentUpon>_PhysicalDiskDeviceDataControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.cs">
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_BaseBoardDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.Designer.cs">
-      <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_BaseBoardDataControl.Designer.cs">
+      <DependentUpon>_BaseBoardDataControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.cs">
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.Designer.cs">
-      <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryDataControl.Designer.cs">
+      <DependentUpon>_PhysicalMemoryDataControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.cs">
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.Designer.cs">
-      <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
+    <Compile Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.Designer.cs">
+      <DependentUpon>_VideoControllerDataControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\DevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
@@ -361,14 +391,77 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_AudioDeviceDataControl.resx">
       <DependentUpon>_AudioDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.de.resx">
-      <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemDataControl.de.resx">
+      <DependentUpon>_ComputerSystemDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.fr.resx">
-      <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemDataControl.fr.resx">
+      <DependentUpon>_ComputerSystemDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.it.resx">
-      <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemDataControl.it.resx">
+      <DependentUpon>_ComputerSystemDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemDataControl.resx">
+      <DependentUpon>_ComputerSystemDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryArrayDataControl.de.resx">
+      <DependentUpon>_PhysicalMemoryArrayDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryArrayDataControl.fr.resx">
+      <DependentUpon>_PhysicalMemoryArrayDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryArrayDataControl.it.resx">
+      <DependentUpon>_PhysicalMemoryArrayDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryArrayDataControl.resx">
+      <DependentUpon>_PhysicalMemoryArrayDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_SystemSlotDataControl.de.resx">
+      <DependentUpon>_SystemSlotDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_SystemSlotDataControl.fr.resx">
+      <DependentUpon>_SystemSlotDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_SystemSlotDataControl.it.resx">
+      <DependentUpon>_SystemSlotDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_SystemSlotDataControl.resx">
+      <DependentUpon>_SystemSlotDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MotherBoardDeviceDataControl.de.resx">
+      <DependentUpon>_MotherBoardDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MotherBoardDeviceDataControl.fr.resx">
+      <DependentUpon>_MotherBoardDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MotherBoardDeviceDataControl.it.resx">
+      <DependentUpon>_MotherBoardDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MotherBoardDeviceDataControl.resx">
+      <DependentUpon>_MotherBoardDeviceDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_OperatingSystemDataControl.de.resx">
+      <DependentUpon>_OperatingSystemDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_OperatingSystemDataControl.fr.resx">
+      <DependentUpon>_OperatingSystemDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_OperatingSystemDataControl.it.resx">
+      <DependentUpon>_OperatingSystemDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_OperatingSystemDataControl.resx">
+      <DependentUpon>_OperatingSystemDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemProductDataControl.de.resx">
+      <DependentUpon>_ComputerSystemProductDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemProductDataControl.fr.resx">
+      <DependentUpon>_ComputerSystemProductDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemProductDataControl.it.resx">
+      <DependentUpon>_ComputerSystemProductDataControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemProductDataControl.resx">
+      <DependentUpon>_ComputerSystemProductDataControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BiosDeviceDataControl.de.resx">
       <DependentUpon>_BiosDeviceDataControl.cs</DependentUpon>
@@ -394,32 +487,29 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_CpuDeviceDataControl.resx">
       <DependentUpon>_CpuDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BasePcDeviceDataControl.resx">
-      <DependentUpon>_BasePcDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BaseBoardDataControl.de.resx">
+      <DependentUpon>_BaseBoardDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.de.resx">
-      <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BaseBoardDataControl.fr.resx">
+      <DependentUpon>_BaseBoardDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.fr.resx">
-      <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BaseBoardDataControl.it.resx">
+      <DependentUpon>_BaseBoardDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.it.resx">
-      <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_BaseBoardDataControl.resx">
+      <DependentUpon>_BaseBoardDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MainBoardDeviceDataControl.resx">
-      <DependentUpon>_MainBoardDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryDataControl.de.resx">
+      <DependentUpon>_PhysicalMemoryDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.de.resx">
-      <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryDataControl.fr.resx">
+      <DependentUpon>_PhysicalMemoryDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.fr.resx">
-      <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryDataControl.it.resx">
+      <DependentUpon>_PhysicalMemoryDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.it.resx">
-      <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_MemoryDeviceDataControl.resx">
-      <DependentUpon>_MemoryDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalMemoryDataControl.resx">
+      <DependentUpon>_PhysicalMemoryDataControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_NetworkDeviceDataControl.de.resx">
       <DependentUpon>_NetworkDeviceDataControl.cs</DependentUpon>
@@ -445,17 +535,17 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_PhysicalDiskDeviceDataControl.resx">
       <DependentUpon>_PhysicalDiskDeviceDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.de.resx">
-      <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.de.resx">
+      <DependentUpon>_VideoControllerDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.fr.resx">
-      <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.fr.resx">
+      <DependentUpon>_VideoControllerDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.it.resx">
-      <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.it.resx">
+      <DependentUpon>_VideoControllerDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoDeviceDataControl.resx">
-      <DependentUpon>_VideoDeviceDataControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.resx">
+      <DependentUpon>_VideoControllerDataControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.de.resx">
       <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>

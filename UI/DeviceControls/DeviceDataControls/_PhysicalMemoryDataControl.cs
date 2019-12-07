@@ -12,19 +12,19 @@ using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _MemoryDeviceDataControl : DeviceDataControl
+    public partial class _PhysicalMemoryDataControl : DeviceDataControl
     {
-        public _MemoryDeviceDataControl(DeviceData Device) : base(Device)
+        public _PhysicalMemoryDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
         }
 
-        public _MemoryDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        public _PhysicalMemoryDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
 
-        public _MemoryDeviceDataControl() : base()
+        public _PhysicalMemoryDataControl() : base()
         {
             InitializeComponent();
         }
@@ -38,12 +38,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentDevice = (RAM)this.CurrentDevice;
-            lbl_Size_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Size, "N/A", "{0:N0}") + " Kbytes";
-            lbl_Block_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.BlockNumber.ToString(), "N/A");
-            lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Type, "N/A");
-
-            var CurrentSubDevice = (RAM.Block)this.CurrentSubDevice;
+            var CurrentSubDevice = (PhysicalMemory.Block)this.CurrentSubDevice;
             lbl_BlockSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Capacity, "N/A", "{0:N0}") + " Kbytes";
             lbl_BlockSlotPosition_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Slot, "N/A");
             lbl_BlockLocation_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Location, "N/A");

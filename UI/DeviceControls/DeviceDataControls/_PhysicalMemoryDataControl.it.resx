@@ -117,44 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbl_ModalitySupported.Text" xml:space="preserve">
-    <value>Maximale Auflösung</value>
+  <data name="lbl_BlockSerial.Text" xml:space="preserve">
+    <value>Numero seriale</value>
   </data>
-  <data name="lbl_Manufacturer.Text" xml:space="preserve">
-    <value>Hersteller</value>
+  <data name="lbl_BlockNumberParty.Text" xml:space="preserve">
+    <value>Numero identificativo</value>
   </data>
-  <data name="lbl_Adapter.Text" xml:space="preserve">
-    <value>Verbindung</value>
+  <data name="lbl_BlockLocation.Text" xml:space="preserve">
+    <value>Posto</value>
   </data>
-  <data name="lbl_Memory.Text" xml:space="preserve">
-    <value>Erinnerung</value>
+  <data name="lbl_BlockBusSize.Text" xml:space="preserve">
+    <value>Dimmensione del bus</value>
   </data>
-  <data name="lbl_VerticalResolution.Text" xml:space="preserve">
-    <value>Vertikale Auflösung</value>
+  <data name="lbl_BlockSpeed.Text" xml:space="preserve">
+    <value>Velocità</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_Name_Value.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lbl_BlockManufacturer.Text" xml:space="preserve">
+    <value>Produttore</value>
   </data>
-  <data name="lbl_FreqMin.Text" xml:space="preserve">
-    <value>Min Frequenz</value>
+  <data name="lbl_BlockSize.Text" xml:space="preserve">
+    <value>Dimmensione modulo</value>
   </data>
-  <data name="lbl_ColorsNumber.Text" xml:space="preserve">
-    <value>Farben</value>
+  <data name="lbl_Type.Text" xml:space="preserve">
+    <value>Tipo</value>
   </data>
-  <data name="lbl_HorizontalResolution.Text" xml:space="preserve">
-    <value>Horizontale Auflösung</value>
+  <data name="lbl_Block.Text" xml:space="preserve">
+    <value>Moduli</value>
   </data>
-  <data name="lbl_FreqNow.Text" xml:space="preserve">
-    <value>Videofrequenz</value>
+  <data name="lbl_Size.Text" xml:space="preserve">
+    <value>Dimmensione</value>
   </data>
-  <data name="lbl_FreqMax.Text" xml:space="preserve">
-    <value>Maximale Frequenz</value>
-  </data>
-  <data name="lbl_BitsPixel.Text" xml:space="preserve">
-    <value>Bytes pro Pixel</value>
-  </data>
-  <data name="lbl_Name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="lbl_BlockVoltage.Text" xml:space="preserve">
+    <value>Voltaggio minimo</value>
   </data>
 </root>

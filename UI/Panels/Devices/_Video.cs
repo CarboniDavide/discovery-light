@@ -16,16 +16,16 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Video()
         {
             InitializeComponent();
-            this.VideoDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(VIDEO)).First());
+            this.VideoDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(VideoController)).First());
             InitSubDevicesID();
         }
 
         private void ChargeListOfSubDevicesInit()
         {
-            var CurrentDevice = (VIDEO)this.VideoDeviceDataControl.CurrentDevice;
+            var CurrentDevice = (VideoController)this.VideoDeviceDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
             int index = 0;
-            foreach (VIDEO.Block block in CurrentDevice.Blocks)
+            foreach (VideoController.Block block in CurrentDevice.Blocks)
             {
                 this.cmb_Blocks.Items.Add(index + " - " + block.Name);      // add a index to each subdevice name
                 index++;

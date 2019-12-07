@@ -138,33 +138,9 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BasePcDevicePerformanceControl.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>5</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BasePcDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="BasePcDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 0</value>
-  </data>
-  <data name="BasePcDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>416, 360</value>
-  </data>
-  <data name="BasePcDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;BasePcDeviceDataControl.Name" xml:space="preserve">
-    <value>BasePcDeviceDataControl</value>
-  </data>
-  <data name="&gt;&gt;BasePcDeviceDataControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._BasePcDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;BasePcDeviceDataControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BasePcDeviceDataControl.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
   </data>
@@ -187,7 +163,124 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ComputerSystem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 19</value>
+  </data>
+  <data name="ComputerSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 152</value>
+  </data>
+  <data name="ComputerSystem.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystem.Name" xml:space="preserve">
+    <value>ComputerSystem</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystem.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._ComputerSystemDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystem.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystem.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="OperatingSystem.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 232</value>
+  </data>
+  <data name="OperatingSystem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 110</value>
+  </data>
+  <data name="OperatingSystem.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;OperatingSystem.Name" xml:space="preserve">
+    <value>OperatingSystem</value>
+  </data>
+  <data name="&gt;&gt;OperatingSystem.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._OperatingSystemDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;OperatingSystem.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;OperatingSystem.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ComputerSystemProduct.Location" type="System.Drawing.Point, System.Drawing">
+    <value>38, 187</value>
+  </data>
+  <data name="ComputerSystemProduct.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 25</value>
+  </data>
+  <data name="ComputerSystemProduct.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystemProduct.Name" xml:space="preserve">
+    <value>ComputerSystemProduct</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystemProduct.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._ComputerSystemProductDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystemProduct.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ComputerSystemProduct.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="pic_Divisor_002.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pic_Divisor_002.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 179</value>
+  </data>
+  <data name="pic_Divisor_002.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 1</value>
+  </data>
+  <data name="pic_Divisor_002.TabIndex" type="System.Int32, mscorlib">
+    <value>218</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.Name" xml:space="preserve">
+    <value>pic_Divisor_002</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pic_Divisor_003.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom</value>
+  </data>
+  <data name="pic_Divisor_003.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pic_Divisor_003.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 219</value>
+  </data>
+  <data name="pic_Divisor_003.Size" type="System.Drawing.Size, System.Drawing">
+    <value>400, 1</value>
+  </data>
+  <data name="pic_Divisor_003.TabIndex" type="System.Int32, mscorlib">
+    <value>219</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_003.Name" xml:space="preserve">
+    <value>pic_Divisor_003</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_003.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_003.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pic_Divisor_003.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

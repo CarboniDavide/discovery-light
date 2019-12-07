@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Bios_Titre.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="WindowsScoreDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>465, 0</value>
@@ -172,7 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WindowsScoreDevicePerformanceControl.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -196,7 +196,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -220,13 +220,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="BiosDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="BiosDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>39, 224</value>
+    <value>1, 209</value>
   </data>
   <data name="BiosDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>393, 99</value>
@@ -244,30 +244,54 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BiosDeviceDataControl.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
-  <data name="MainBoardDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="BaseBoardDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="MainBoardDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 24</value>
+  <data name="BaseBoardDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 49</value>
   </data>
-  <data name="MainBoardDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 153</value>
+  <data name="BaseBoardDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 80</value>
   </data>
-  <data name="MainBoardDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+  <data name="BaseBoardDataControl.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
   </data>
-  <data name="&gt;&gt;MainBoardDeviceDataControl.Name" xml:space="preserve">
-    <value>MainBoardDeviceDataControl</value>
+  <data name="&gt;&gt;BaseBoardDataControl.Name" xml:space="preserve">
+    <value>BaseBoardDataControl</value>
   </data>
-  <data name="&gt;&gt;MainBoardDeviceDataControl.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._MainBoardDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;BaseBoardDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._BaseBoardDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;MainBoardDeviceDataControl.Parent" xml:space="preserve">
+  <data name="&gt;&gt;BaseBoardDataControl.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;MainBoardDeviceDataControl.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;BaseBoardDataControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MotherBoardDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="MotherBoardDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>53, 124</value>
+  </data>
+  <data name="MotherBoardDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 49</value>
+  </data>
+  <data name="MotherBoardDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;MotherBoardDeviceDataControl.Name" xml:space="preserve">
+    <value>MotherBoardDeviceDataControl</value>
+  </data>
+  <data name="&gt;&gt;MotherBoardDeviceDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._MotherBoardDeviceDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;MotherBoardDeviceDataControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MotherBoardDeviceDataControl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

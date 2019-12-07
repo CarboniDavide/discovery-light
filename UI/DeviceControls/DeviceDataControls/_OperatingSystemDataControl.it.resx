@@ -117,31 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbl_L3CacheSize.Text" xml:space="preserve">
-    <value>L3 Zwischenspeicher</value>
+  <data name="lbl_Model.Text" xml:space="preserve">
+    <value>Modello</value>
   </data>
-  <data name="lbl_L2CacheSize.Text" xml:space="preserve">
-    <value>L2 Zwischenspeicher</value>
+  <data name="lbl_Manufacturer.Text" xml:space="preserve">
+    <value>Produttore</value>
   </data>
-  <data name="lbl_Socket.Text" xml:space="preserve">
-    <value>Steckdose</value>
+  <data name="lbl_Type.Text" xml:space="preserve">
+    <value>Tipo</value>
   </data>
-  <data name="lbl_Producteur.Text" xml:space="preserve">
-    <value>Produzent</value>
+  <data name="lbl_Name.Text" xml:space="preserve">
+    <value>Nome</value>
   </data>
-  <data name="lbl_Size.Text" xml:space="preserve">
-    <value>Größe</value>
+  <data name="lbl_Producer.Text" xml:space="preserve">
+    <value>Produttore</value>
   </data>
-  <data name="lbl_Core.Text" xml:space="preserve">
-    <value>Kerne</value>
+  <data name="lbl_NumberID.Text" xml:space="preserve">
+    <value>Numero ID</value>
   </data>
-  <data name="lbl_Thread.Text" xml:space="preserve">
-    <value>Gewinde</value>
+  <data name="lbl_Domain.Text" xml:space="preserve">
+    <value>Dominio</value>
   </data>
-  <data name="lbl_L1CacheSize.Text" xml:space="preserve">
-    <value>L1 Zwischenspeicher</value>
+  <data name="lbl_Version.Text" xml:space="preserve">
+    <value>Versione</value>
   </data>
-  <data name="lbl_MaxSpeed.Text" xml:space="preserve">
-    <value>Grundgeschwindigkeit</value>
+  <data name="lbl_Architectur.Text" xml:space="preserve">
+    <value>Architettura</value>
+  </data>
+  <data name="lbl_User.Text" xml:space="preserve">
+    <value>Utilizzatore</value>
   </data>
 </root>

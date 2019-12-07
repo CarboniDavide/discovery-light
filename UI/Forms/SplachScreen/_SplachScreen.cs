@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DiscoveryLight;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Performance;
+using OperatingSystem = DiscoveryLight.Core.Device.Data.OperatingSystem;
 
 namespace DiscoveryLight.UI.Forms.SplachScreen
 {
@@ -33,15 +34,20 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
         {
             Program.Devices = new List<DeviceData>();
             Program.Performances = new List<DevicePerformance>();
-            Program.Devices.Add(new CPU());
-            Program.Devices.Add(new DISK());
-            Program.Devices.Add(new NETWORK());
-            Program.Devices.Add(new PC());
-            Program.Devices.Add(new VIDEO());
-            Program.Devices.Add(new AUDIO());
+            Program.Devices.Add(new ComputerSystem());
+            Program.Devices.Add(new OperatingSystem());
+            Program.Devices.Add(new ComputerSystemProduct());
             Program.Devices.Add(new BIOS());
-            Program.Devices.Add(new MAINBOARD());
-            Program.Devices.Add(new RAM());
+            Program.Devices.Add(new BaseBoard());
+            Program.Devices.Add(new MotherboardDevice());
+            Program.Devices.Add(new SystemSlot());
+            Program.Devices.Add(new VideoController());
+            Program.Devices.Add(new SoundDevice());
+            Program.Devices.Add(new Processor());
+            Program.Devices.Add(new PhysicalMemory());
+            Program.Devices.Add(new PhysicalMemoryArray());
+            Program.Devices.Add(new DiskDrive());
+            Program.Devices.Add(new NetworkAdapter());
             Program.Performances.Add(new PERFORM_CPU(null, null));
             Program.Performances.Add(new PERFORM_DISK());
             Program.Performances.Add(new PERFORM_NETWORK(null));

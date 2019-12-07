@@ -12,19 +12,19 @@ using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _VideoDeviceDataControl : DeviceDataControl
+    public partial class _VideoControllerDataControl : DeviceDataControl
     {
-        public _VideoDeviceDataControl(DeviceData Device) : base(Device)
+        public _VideoControllerDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
         }
 
-        public _VideoDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        public _VideoControllerDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
 
-        public _VideoDeviceDataControl() : base()
+        public _VideoControllerDataControl() : base()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentSubDevice = (VIDEO.Block)this.CurrentSubDevice;
+            var CurrentSubDevice = (VideoController.Block)this.CurrentSubDevice;
             lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name, "N/A"); ;
             lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
             lbl_Adapter_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.AdpterType, "N/A");

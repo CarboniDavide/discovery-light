@@ -12,19 +12,19 @@ using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _BasePcDeviceDataControl : DeviceDataControl
+    public partial class _OperatingSystemDataControl : DeviceDataControl
     {
-        public _BasePcDeviceDataControl(DeviceData Device) : base(Device)
+        public _OperatingSystemDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
         }
 
-        public _BasePcDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
+        public _OperatingSystemDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
 
-        public _BasePcDeviceDataControl() : base()
+        public _OperatingSystemDataControl() : base()
         {
             InitializeComponent();
         }
@@ -38,14 +38,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentDevice = (PC)this.CurrentDevice;
-            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Name, "N/A");
-            lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Type, "N/A");
-            lbl_Manufaturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A");
-            lbl_Model_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Model, "N/A");
-            lbl_NumberID_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.IDNumber, "N/A");
-            lbl_User_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.User, "N/A");
-            lbl_Domain_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Domaine, "N/A");
+            var CurrentDevice = (DiscoveryLight.Core.Device.Data.OperatingSystem)this.CurrentDevice;
             lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS_Version, "N/A");
             lbl_SystemOS_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS, "N/A");
             lbl_Producer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS_Brand, "N/A");

@@ -33,7 +33,7 @@
             this.cmb_Blocks = new System.Windows.Forms.ComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
             this.pic_Divisor = new System.Windows.Forms.PictureBox();
-            this.VideoDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl();
+            this.VideoDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoControllerDataControl();
             ((System.ComponentModel.ISupportInitialize)(this.pic_Divisor)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +60,7 @@
             // 
             resources.ApplyResources(this.VideoDeviceDataControl, "VideoDeviceDataControl");
             this.VideoDeviceDataControl.ClassName = "_VideoDeviceDataControl";
-            this.VideoDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoDeviceDataControl);
+            this.VideoDeviceDataControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DeviceDataControls._VideoControllerDataControl);
             this.VideoDeviceDataControl.CurrentDevice = null;
             this.VideoDeviceDataControl.CurrentSubDevice = null;
             this.VideoDeviceDataControl.Name = "VideoDeviceDataControl";
@@ -87,6 +87,6 @@
         private System.Windows.Forms.ComboBox cmb_Blocks;
         private System.Windows.Forms.Label lbl_TitleComboBox;
         private System.Windows.Forms.PictureBox pic_Divisor;
-        private DeviceControls.DeviceDataControls._VideoDeviceDataControl VideoDeviceDataControl;
+        private DeviceControls.DeviceDataControls._VideoControllerDataControl VideoDeviceDataControl;
     }
 }

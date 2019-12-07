@@ -39,17 +39,21 @@
             // chgBar_Devices
             // 
             this.chgBar_Devices.Activated = true;
+            this.chgBar_Devices.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.chgBar_Devices.BarBackColor = System.Drawing.Color.Transparent;
             this.chgBar_Devices.BarFillColor = System.Drawing.SystemColors.Highlight;
             this.chgBar_Devices.BarFillSize = 50;
+            this.chgBar_Devices.ChartText = WinformComponents.ChartBar.ContentType.None;
+            this.chgBar_Devices.CustomText = null;
             this.chgBar_Devices.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.chgBar_Devices.Location = new System.Drawing.Point(0, 411);
-            this.chgBar_Devices.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.chgBar_Devices.Location = new System.Drawing.Point(0, 334);
+            this.chgBar_Devices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chgBar_Devices.Name = "chgBar_Devices";
-            this.chgBar_Devices.Size = new System.Drawing.Size(748, 4);
+            this.chgBar_Devices.Size = new System.Drawing.Size(561, 3);
             this.chgBar_Devices.Style = WinformComponents.ChartBar.STYLE.Horizontal;
             this.chgBar_Devices.TabIndex = 1;
             this.chgBar_Devices.TextColor = System.Drawing.Color.White;
+            this.chgBar_Devices.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // picBox_Components
             // 
@@ -58,10 +62,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.picBox_Components.BackgroundImage = global::DiscoveryLight.Properties.Resources.LogoEntry;
             this.picBox_Components.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picBox_Components.Location = new System.Drawing.Point(16, 10);
-            this.picBox_Components.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBox_Components.Location = new System.Drawing.Point(12, 8);
             this.picBox_Components.Name = "picBox_Components";
-            this.picBox_Components.Size = new System.Drawing.Size(716, 385);
+            this.picBox_Components.Size = new System.Drawing.Size(537, 313);
             this.picBox_Components.TabIndex = 0;
             this.picBox_Components.TabStop = false;
             // 
@@ -75,10 +78,9 @@
             this.lbl_Company.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Company.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.lbl_Company.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbl_Company.Location = new System.Drawing.Point(407, 318);
-            this.lbl_Company.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Company.Location = new System.Drawing.Point(305, 258);
             this.lbl_Company.Name = "lbl_Company";
-            this.lbl_Company.Size = new System.Drawing.Size(110, 16);
+            this.lbl_Company.Size = new System.Drawing.Size(88, 13);
             this.lbl_Company.TabIndex = 3;
             this.lbl_Company.TabStop = true;
             this.lbl_Company.Text = "Carboni Software";
@@ -88,19 +90,20 @@
             // 
             this.lbl_LoadIDeviceInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_LoadIDeviceInfo.Location = new System.Drawing.Point(12, 383);
+            this.lbl_LoadIDeviceInfo.Location = new System.Drawing.Point(9, 311);
+            this.lbl_LoadIDeviceInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_LoadIDeviceInfo.Name = "lbl_LoadIDeviceInfo";
-            this.lbl_LoadIDeviceInfo.Size = new System.Drawing.Size(720, 17);
+            this.lbl_LoadIDeviceInfo.Size = new System.Drawing.Size(540, 14);
             this.lbl_LoadIDeviceInfo.TabIndex = 4;
             this.lbl_LoadIDeviceInfo.Text = "Loading devices";
             this.lbl_LoadIDeviceInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // _SplachScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(748, 415);
+            this.ClientSize = new System.Drawing.Size(561, 337);
             this.Controls.Add(this.lbl_LoadIDeviceInfo);
             this.Controls.Add(this.lbl_Company);
             this.Controls.Add(this.chgBar_Devices);
@@ -108,7 +111,6 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "_SplachScreen";
             this.Text = "Discovery";

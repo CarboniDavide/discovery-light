@@ -117,31 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbl_L3CacheSize.Text" xml:space="preserve">
-    <value>L3 Zwischenspeicher</value>
+  <data name="lbl_ModalitySupported.Text" xml:space="preserve">
+    <value>Maximale Auflösung</value>
   </data>
-  <data name="lbl_L2CacheSize.Text" xml:space="preserve">
-    <value>L2 Zwischenspeicher</value>
+  <data name="lbl_Manufacturer.Text" xml:space="preserve">
+    <value>Hersteller</value>
   </data>
-  <data name="lbl_Socket.Text" xml:space="preserve">
-    <value>Steckdose</value>
+  <data name="lbl_Adapter.Text" xml:space="preserve">
+    <value>Verbindung</value>
   </data>
-  <data name="lbl_Producteur.Text" xml:space="preserve">
-    <value>Produzent</value>
+  <data name="lbl_Memory.Text" xml:space="preserve">
+    <value>Erinnerung</value>
   </data>
-  <data name="lbl_Size.Text" xml:space="preserve">
-    <value>Größe</value>
+  <data name="lbl_VerticalResolution.Text" xml:space="preserve">
+    <value>Vertikale Auflösung</value>
   </data>
-  <data name="lbl_Core.Text" xml:space="preserve">
-    <value>Kerne</value>
+  <data name="lbl_FreqMin.Text" xml:space="preserve">
+    <value>Min Frequenz</value>
   </data>
-  <data name="lbl_Thread.Text" xml:space="preserve">
-    <value>Gewinde</value>
+  <data name="lbl_ColorsNumber.Text" xml:space="preserve">
+    <value>Farben</value>
   </data>
-  <data name="lbl_L1CacheSize.Text" xml:space="preserve">
-    <value>L1 Zwischenspeicher</value>
+  <data name="lbl_HorizontalResolution.Text" xml:space="preserve">
+    <value>Horizontale Auflösung</value>
   </data>
-  <data name="lbl_MaxSpeed.Text" xml:space="preserve">
-    <value>Grundgeschwindigkeit</value>
+  <data name="lbl_FreqNow.Text" xml:space="preserve">
+    <value>Videofrequenz</value>
+  </data>
+  <data name="lbl_FreqMax.Text" xml:space="preserve">
+    <value>Maximale Frequenz</value>
+  </data>
+  <data name="lbl_BitsPixel.Text" xml:space="preserve">
+    <value>Bytes pro Pixel</value>
   </data>
 </root>

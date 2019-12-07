@@ -20,13 +20,13 @@ namespace DiscoveryLight.UI.Panels.Devices
             InitializeComponent();
             this.CpuDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_CPU)).First());
             this.SystemDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_SYSTEM)).First());
-            this.CpuDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(CPU)).First());
+            this.CpuDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(Processor)).First());
         }
         private void ChargeListOfSubDevicesInit()
         {
-            var CurrentDevice = (CPU)this.CpuDeviceDataControl.CurrentDevice;
+            var CurrentDevice = (Processor)this.CpuDeviceDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
-            foreach (CPU.Block block in CurrentDevice.Blocks)
+            foreach (Processor.Block block in CurrentDevice.Blocks)
                 this.cmb_Blocks.Items.Add(block.DeviceID + " - " + block.Name);
         }
 

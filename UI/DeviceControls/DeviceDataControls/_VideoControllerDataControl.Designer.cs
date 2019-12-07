@@ -1,6 +1,6 @@
 ﻿namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    partial class _VideoDeviceDataControl
+    partial class _VideoControllerDataControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_VideoDeviceDataControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_VideoControllerDataControl));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             this.lbl_ModalitySupported = new System.Windows.Forms.Label();
             this.lbl_ModalitySupported_Value = new System.Windows.Forms.Label();

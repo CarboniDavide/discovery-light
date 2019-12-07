@@ -18,22 +18,23 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.MemoryDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_RAM)).First());
-            this.MemoryDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(RAM)).First());
+            this.PhysicalMemoryDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(PhysicalMemory)).First());
+            this.PhysicalMemoryArrayDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(PhysicalMemoryArray)).First());
         }
 
         private void ChargeListOfSubDevicesInit()
         {
-            var CurrentDevice = (RAM)this.MemoryDeviceDataControl.CurrentDevice;
+            var CurrentDevice = (PhysicalMemory)this.PhysicalMemoryDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
-            foreach (RAM.Block block in CurrentDevice.Blocks)
+            foreach (PhysicalMemory.Block block in CurrentDevice.Blocks)
                 this.cmb_Blocks.Items.Add(block.DeviceID);
         }
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             if (cmb_Blocks.SelectedItem.ToString() == null) return;
-            this.MemoryDeviceDataControl.CurrentSubDevice = this.MemoryDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).FirstOrDefault();
-            this.MemoryDevicePerformanceControl.CurrentSubDevice = Convert.ToInt32(this.MemoryDeviceDataControl.CurrentSubDevice.DeviceID);
+            this.PhysicalMemoryDataControl.CurrentSubDevice = this.PhysicalMemoryDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).FirstOrDefault();
+            this.MemoryDevicePerformanceControl.CurrentSubDevice = Convert.ToInt32(this.PhysicalMemoryDataControl.CurrentSubDevice.DeviceID);
         }
 
         private void InitSubDevicesID()

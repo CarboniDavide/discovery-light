@@ -38,7 +38,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show ()
         {
             base.show();
-            var CurrentSubDevice = (AUDIO.Block)this.CurrentSubDevice;
+            var CurrentSubDevice = (SoundDevice.Block)this.CurrentSubDevice;
             lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name, "N/A");
             lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
             lbl_PowerManagment_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PowerManagmentSupport, "N/A");

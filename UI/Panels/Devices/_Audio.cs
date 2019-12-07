@@ -16,16 +16,16 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Audio()
         {
             InitializeComponent();
-            this.AudioDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(AUDIO)).First());
+            this.AudioDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(SoundDevice)).First());
             InitSubDevicesID();
         }
 
         private void ChargeListOfSubDevicesInit()
         {
-            var CurrentDevice = (AUDIO)this.AudioDeviceDataControl.CurrentDevice;
+            var CurrentDevice = (SoundDevice)this.AudioDeviceDataControl.CurrentDevice;
             if (CurrentDevice == null) return;
             int index = 0; // use number in list
-            foreach (AUDIO.Block block in CurrentDevice.Blocks)
+            foreach (SoundDevice.Block block in CurrentDevice.Blocks)
             {
                 this.cmb_Blocks.Items.Add(index.ToString() + " - " + block.Name);
                 index++;

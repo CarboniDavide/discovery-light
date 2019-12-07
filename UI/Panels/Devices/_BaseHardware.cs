@@ -19,7 +19,9 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.BasePcDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_PC)).First());
-            this.BasePcDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(PC)).First());
+            this.ComputerSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiscoveryLight.Core.Device.Data.ComputerSystem)).First());
+            this.ComputerSystemProduct.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiscoveryLight.Core.Device.Data.ComputerSystemProduct)).First());
+            this.OperatingSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiscoveryLight.Core.Device.Data.OperatingSystem)).First());
         }
     }
 }
