@@ -151,7 +151,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbl_Bios_Titre.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="WindowsScoreDevicePerformanceControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>465, 0</value>
@@ -172,7 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;WindowsScoreDevicePerformanceControl.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="pic_Divisor_002.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom</value>
@@ -196,7 +196,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_002.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="pic_Divisor_001.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
@@ -220,13 +220,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pic_Divisor_001.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="BaseBoardDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="BaseBoardDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 49</value>
+    <value>49, 30</value>
   </data>
   <data name="BaseBoardDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>371, 80</value>
@@ -244,13 +244,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;BaseBoardDataControl.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="MotherBoardDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="MotherBoardDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>50, 124</value>
+    <value>50, 105</value>
   </data>
   <data name="MotherBoardDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
     <value>371, 49</value>
@@ -268,19 +268,43 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MotherBoardDeviceDataControl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="SystemSlotDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="SystemSlotDataControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 155</value>
+  </data>
+  <data name="SystemSlotDataControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 29</value>
+  </data>
+  <data name="SystemSlotDataControl.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;SystemSlotDataControl.Name" xml:space="preserve">
+    <value>SystemSlotDataControl</value>
+  </data>
+  <data name="&gt;&gt;SystemSlotDataControl.Type" xml:space="preserve">
+    <value>DiscoveryLight.UI.DeviceControls.DeviceDataControls._SystemSlotDataControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;SystemSlotDataControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SystemSlotDataControl.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="BiosDeviceDataControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="BiosDeviceDataControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 219</value>
+    <value>16, 215</value>
   </data>
   <data name="BiosDeviceDataControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>425, 99</value>
+    <value>428, 99</value>
   </data>
   <data name="BiosDeviceDataControl.TabIndex" type="System.Int32, mscorlib">
-    <value>34</value>
+    <value>36</value>
   </data>
   <data name="&gt;&gt;BiosDeviceDataControl.Name" xml:space="preserve">
     <value>BiosDeviceDataControl</value>
