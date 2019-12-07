@@ -23,7 +23,6 @@ namespace DiscoveryLight.Core.Device.Data
 
         private int blockNumber=  0;                             // number of blocks for the same drive( a pc can have one or more cpu, drive audio etc.)
         private List<_Block> blocks=  new List<_Block>();        // List of properties for each block           
-        private List<WprManagementObject> collection;               // drive collection - each collection contains one or more block, one to each installed drive type
         private Boolean isNull;
 
         /// <summary>
