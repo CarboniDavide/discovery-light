@@ -153,8 +153,9 @@ namespace DiscoveryLight.Core.Device.Utils
         /// </summary>
         /// <returns></returns>
         public WprManagementObject First()
-        {  
-            return Get($"Select * from {driveName}").FirstOrDefault() ?? new WprManagementObject();
+        {
+            var res = Get($"Select * from {driveName}");
+            return res == null ? null : res.FirstOrDefault();
         }
 
         /// <summary>
