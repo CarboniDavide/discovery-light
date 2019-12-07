@@ -471,13 +471,15 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public String Size;
         public String Type;
+        public String MemoryDevices;
 
         public override void GetDriveInfo()
         {
             // get drive info
             var mj = Collection.First();
-            this.Size = mj.GetProperty("MaxCapacity").AsString(); // Size
-            this.Type = mj.GetProperty("Caption").AsString();     // Type
+            this.Size = mj.GetProperty("MaxCapacity").AsString();               // Size
+            this.Type = mj.GetProperty("Caption").AsString();                   // Type
+            this.MemoryDevices = mj.GetProperty("MemoryDevices").AsString();    // Moudule's numbers
         }
 
         public PhysicalMemoryArray() : base("Win32_PhysicalMemoryArray") { }

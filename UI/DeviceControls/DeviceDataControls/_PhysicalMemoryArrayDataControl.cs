@@ -40,7 +40,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             base.show();
             var CurrentDevice = (PhysicalMemoryArray)this.CurrentDevice;
             lbl_Size_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Size, "N/A", "{0:N0}") + " Kbytes";
-            lbl_Block_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.BlockNumber.ToString(), "N/A");
+            lbl_Block_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.MemoryDevices.ToString(), "N/A");
             lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Type, "N/A");
             abort();
         }
