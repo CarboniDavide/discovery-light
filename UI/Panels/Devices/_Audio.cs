@@ -23,7 +23,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChargeListOfSubDevicesInit()
         {
             var CurrentDevice = (SoundDevice)this.AudioDeviceDataControl.CurrentDevice;
-            if (CurrentDevice == null) return;
+            if (CurrentDevice == null || CurrentDevice.IsNull) return;
             int index = 0; // use number in list
             foreach (SoundDevice.Block block in CurrentDevice.Blocks)
             {
@@ -35,7 +35,6 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // get name from selected
-            if (cmb_Blocks.SelectedItem.ToString() == " - ") return;
             int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
             string selected = this.cmb_Blocks.SelectedItem.ToString();
             string name = selected.Substring( indexSize + 1, selected.Length-indexSize-1);
@@ -45,7 +44,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             this.ChargeListOfSubDevicesInit();
-            this.cmb_Blocks.SelectedIndex = 0;
+            this.cmb_Blocks.SelectedIndex = cmb_Blocks.Items.Count == 0 ? -1 : 0;
+            this.cmb_Blocks.Enabled = !(cmb_Blocks.Items.Count == 0);
         }
     }
 }

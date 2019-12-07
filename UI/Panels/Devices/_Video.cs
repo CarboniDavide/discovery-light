@@ -23,7 +23,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChargeListOfSubDevicesInit()
         {
             var CurrentDevice = (VideoController)this.VideoDeviceDataControl.CurrentDevice;
-            if (CurrentDevice == null) return;
+            if (CurrentDevice == null || CurrentDevice.IsNull) return;
             int index = 0;
             foreach (VideoController.Block block in CurrentDevice.Blocks)
             {
@@ -35,7 +35,6 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // get name from selection
-            if (cmb_Blocks.SelectedItem.ToString() == " - ") return;
             int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
             string selected = this.cmb_Blocks.SelectedItem.ToString();
             // remove index to get subdevice name
@@ -47,7 +46,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             this.ChargeListOfSubDevicesInit();      // fill the list of subdevices
-            this.cmb_Blocks.SelectedIndex = 0;      // use the first items as default
+            this.cmb_Blocks.SelectedIndex = cmb_Blocks.Items.Count == 0 ? -1 : 0;
+            this.cmb_Blocks.Enabled = !(cmb_Blocks.Items.Count == 0);
         }
     }
 }

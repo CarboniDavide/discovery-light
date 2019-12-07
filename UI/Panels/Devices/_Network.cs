@@ -26,7 +26,7 @@ namespace DiscoveryLight.UI.Panels.Devices
             // load all names for each installed network
             List<String> devices = new List<string>();
             var CurrentDevice = (NetworkAdapter)this.NetworkDeviceDataControl.CurrentDevice;
-            if (CurrentDevice == null) return;
+            if (CurrentDevice == null || CurrentDevice.IsNull) return;
             foreach (NetworkAdapter.Block block in CurrentDevice.Blocks)
                 devices.Add(block.DeviceID + " - " + block.Name);  // add device name to each networ's name
 
@@ -52,7 +52,6 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             // change network device
             // use only network name
-            if (cmb_Blocks.SelectedItem.ToString() == " - ") return;
             int indexFrom = this.cmb_Blocks.SelectedItem.ToString().IndexOf("-"); 
             string selected = this.cmb_Blocks.SelectedItem.ToString();
             string name = selected.Substring(indexFrom + 2, selected.Length - indexFrom - 2);

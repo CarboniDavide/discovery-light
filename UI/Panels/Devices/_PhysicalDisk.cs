@@ -26,7 +26,7 @@ namespace DiscoveryLight.UI.Panels.Devices
             // fill list with all physical disk
             List<String> devices = new List<string>();
             var CurrentDevice = (DiskDrive)this.PhysicalDiskDeviceDataControl.CurrentDevice;
-            if (CurrentDevice == null) return;
+            if (CurrentDevice == null || CurrentDevice.IsNull) return;
             foreach (DiskDrive.Block block in CurrentDevice.Blocks)
                 devices.Add(block.DeviceID + " - " + block.DriveName + " " + block.Name);
 
@@ -52,7 +52,6 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // change physical disk
-            if (cmb_Blocks.SelectedItem.ToString() == " -  ") return;
             this.PhysicalDiskDeviceDataControl.CurrentSubDevice = (DiskDrive.Block)this.PhysicalDiskDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedItem.ToString().Substring(0,1))).FirstOrDefault();
             var CurrentPerformance = (PERFORM_DISK)this.PhysicalDiskDevicePerformanceControl.CurrentPerformance;
             CurrentPerformance.DriveIndex = Convert.ToInt32(this.PhysicalDiskDeviceDataControl.CurrentSubDevice.DeviceID);

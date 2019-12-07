@@ -25,14 +25,13 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void ChargeListOfSubDevicesInit()
         {
             var CurrentDevice = (Processor)this.CpuDeviceDataControl.CurrentDevice;
-            if (CurrentDevice == null) return;
+            if (CurrentDevice == null || CurrentDevice.IsNull) return;
             foreach (Processor.Block block in CurrentDevice.Blocks)
                 this.cmb_Blocks.Items.Add(block.DeviceID + " - " + block.Name);
         }
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
-            if (cmb_Blocks.SelectedItem.ToString() == " - ") return;
             this.CpuDeviceDataControl.CurrentSubDevice = this.CpuDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).FirstOrDefault();
             this.CpuDevicePerformanceControl.CurrentSubDevice = Convert.ToInt32(this.CpuDeviceDataControl.CurrentSubDevice.DeviceID);
 
@@ -45,7 +44,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         private void InitSubDevicesID()
         {
             this.ChargeListOfSubDevicesInit();
-            this.cmb_Blocks.SelectedIndex = 0;
+            this.cmb_Blocks.SelectedIndex = cmb_Blocks.Items.Count == 0 ? -1 : 0;
+            this.cmb_Blocks.Enabled = !(cmb_Blocks.Items.Count == 0);
         }
 
         private void _CPU_Load(object sender, EventArgs e)
