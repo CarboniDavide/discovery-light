@@ -45,7 +45,7 @@ namespace DiscoveryLight.Core.Device.Data
             get { 
                 var res = new WprManagementObjectSearcher(deviceName).All();
                 isNull = (res == null);
-                return res ?? new List<WprManagementObject>() { new WprManagementObject()};
+                return res ?? new List<WprManagementObject>() { new WprManagementObject() };
             }
         }
         public int BlockNumber { get => blockNumber; set => blockNumber=  value; }
@@ -482,7 +482,7 @@ namespace DiscoveryLight.Core.Device.Data
             this.MemoryDevices = mj.GetProperty("MemoryDevices").AsString();    // Moudule's numbers
         }
 
-        public PhysicalMemoryArray() : base("Win32_PhysicalMemoryArray") { }
+        public PhysicalMemoryArray() : base("Win32_PhysicalMoryArray") { }
     }
 
     #endregion
