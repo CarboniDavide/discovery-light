@@ -9,6 +9,12 @@ using DiscoveryLight.Core.Device.Utils;
 namespace DiscoveryLight.Core.Device.Performance
 {
     #region Interface
+    public interface Convertable
+    {
+        String ConvertDeviceName();
+    }
+
+
     /// <summary>
     /// Device Performance main class.
     /// Device Performance represents a installed device type. Each device can have more childs or subdevices(collection)
@@ -17,14 +23,22 @@ namespace DiscoveryLight.Core.Device.Performance
     /// Device Performance read all performance values for all subdevice for a selected device(drive)
     /// </summary>
     /// 
-    public abstract class DevicePerformance
+    public abstract class DevicePerformance: Convertable
     {
         protected readonly string deviceName;
         protected readonly string className;
         protected readonly Type classType;
+
+        private string currentSelected;
+        private string relatedSelected;
         public string DeviceName { get => deviceName; }
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
+        public string CurrentSelected { get { return currentSelected; } set { currentSelected = value; RelatedSelected = ConvertDeviceName(); } }
+        public string RelatedSelected { get => relatedSelected; set => relatedSelected = value; }
+
+        public virtual String ConvertDeviceName() { return null; }
+
         /// <summary>
         /// Get properties performance for each installed drive
         /// </summary>
@@ -74,7 +88,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get usage for each selected cpu'thread
     /// </summary>
-    public class PERFORM_CPU: DevicePerformance
+    public class PERFORM_CPU: DevicePerformance, Convertable
     {
         public struct Thread
         {
@@ -88,38 +102,29 @@ namespace DiscoveryLight.Core.Device.Performance
         }
 
         public List<Thread> Cpu=  new List<Thread>();                 // Cpu list of thread
-        private string selectedCpu;
-        private string selectedThread;
 
-        public string SelectedCpu
+        public override String ConvertDeviceName()
         {
-            get { return selectedCpu; }
-            set { selectedCpu=  value; this.MakeName(); }
-        }
-        public string SelectedThread {
-            get { return selectedThread; }
-            set { selectedThread=  value; this.MakeName(); }
+            Task.Run(() => { 
+                var mj = new WprManagementObjectSearcher("Win32_Processor").Find("Name", CurrentSelected, "=").First();
+                RelatedSelected = mj.GetProperty("DeviceID").AsSubString(3, 1);
+            });
+            return RelatedSelected;
         }
 
-        public string MakeName() {
-            return (this.selectedCpu != null && this.selectedThread != null) ? this.selectedCpu + "," + this.selectedThread : null;
-        }
         public override void GetPerformance()
         {
-            if (this.selectedCpu == null) return;
-            
             // get cpu base speed
-            uint? Maxsp;
-            using (ManagementObject Mo = new ManagementObject($"Win32_Processor.DeviceID='CPU{this.selectedCpu}'"))
-                Maxsp = (uint?)(Mo["MaxClockSpeed"]);
-
+            string Maxsp;
+            var mjSpeed = new WprManagementObjectSearcher("Win32_Processor").First("DeviceID", $"CPU{RelatedSelected}", "=") ?? new WprManagementObject();
+            Maxsp = mjSpeed.GetProperty("MaxClockSpeed").AsString(); 
 
             this.Cpu=  new List<Thread>();
             // create a list of thread for the selected cpu
             foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfFormattedData_Counters_ProcessorInformation").All() ?? new List<WprManagementObject>() { new WprManagementObject()})
             {
                 string CpuName = mj.GetProperty("Name").AsSubString(0, 1);
-                if (CpuName != null && CpuName.Equals(this.selectedCpu))
+                if (CpuName != null && CpuName.Equals(RelatedSelected))
                 {
                     Thread t=  new Thread();                                                                        // create a new Thread
                     t.Name=  mj.GetProperty("Name").AsString();                                          // get thread name
@@ -131,16 +136,15 @@ namespace DiscoveryLight.Core.Device.Performance
                     if (Maxsp == null || t.PercentProcessorPerformance == null)                                      // use base frequency for tboost 
                         t.Frequency = t.ProcessorFrequency;
                     else
-                        t.Frequency = Convert.ToUInt16(((double)Maxsp / 100) * Convert.ToUInt16(t.PercentProcessorPerformance)).ToString();
+                        t.Frequency = Convert.ToUInt16((Convert.ToDouble(Maxsp) / 100) * Convert.ToUInt16(t.PercentProcessorPerformance)).ToString();
                     this.Cpu.Add(t);
                 }
             }
         }
 
-        public PERFORM_CPU(string cpu, string thread): base("Cpu Performance")
+        public PERFORM_CPU(string cpu): base("Cpu Performance")
         {
-            this.SelectedCpu=  cpu;
-            this.SelectedThread=  thread;
+            this.RelatedSelected=  cpu;
         }
 
         public PERFORM_CPU(): base("Cpu Performance") { }
@@ -250,7 +254,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get local storage performance
     /// </summary>
-    public class PERFORM_DISK: DevicePerformance
+    public class PERFORM_DISK: DevicePerformance, Convertable
     {
         public String FreeSpace;
         public String WriteBytesPerSec;
@@ -263,34 +267,24 @@ namespace DiscoveryLight.Core.Device.Performance
         public String Percent_DiskTime;
         public String Percent_IdleTime;
 
-        private int? _driveIndex;
-        private string _driveName;
-
-        public int? DriveIndex {
-            get { return _driveIndex; }
-            set { _driveIndex=  value; this.FindDrive(); }
-        }
-
-        public string DriveName { get => _driveName; set => _driveName=  value; }
-
-        /// <summary>
-        /// Get the selected physical disk from all collection using index
-        /// </summary>
-        public void FindDrive()
+        public override String ConvertDeviceName()
         {
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All() ?? new List<WprManagementObject>() { new WprManagementObject()})
-            {
-                String currentDrive=  mj.GetProperty("Name").AsString();
-
-                if (currentDrive != null && currentDrive.Substring(0, 1).Equals(this.DriveIndex.ToString()))
-                    this._driveName=  currentDrive.Substring(2, 1) + ":";
-            }
+            Task.Run(()=> { 
+                var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First("Caption", CurrentSelected, "=");
+                foreach (WprManagementObject mjt in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All() ?? new List<WprManagementObject>())
+                {
+                    String currentDrive = mjt.GetProperty("Name").AsString();
+                    var s = mj.GetProperty("Index").AsString();
+                    if (currentDrive != null && currentDrive.Substring(0, 1).Equals(mj.GetProperty("Index").AsString()))
+                        RelatedSelected =  (currentDrive.Substring(2, 1) + ":").ToString();
+                }
+            });
+            return RelatedSelected;
         }
 
         public override void GetPerformance()
         {
-            if (this.DriveIndex == null) return;
-            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", this.DriveName, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", RelatedSelected, "=") ?? new WprManagementObject();
             FreeSpace=  mj.GetProperty("FreeMegabytes").AsString();
             WriteBytesPerSec=  mj.GetProperty("DiskWriteBytesPersec").AsString();
             ReadBytesPerSec=  mj.GetProperty("DiskReadBytesPersec").AsString();
@@ -302,14 +296,9 @@ namespace DiscoveryLight.Core.Device.Performance
             Percent_IdleTime=  mj.GetProperty("PercentIdleTime").AsString();
         }
 
-        public PERFORM_DISK(int index): base("Storage Performance")
+        public PERFORM_DISK(string DriveName): base("Storage Performance")
         {
-            this.DriveIndex=  index;
-        }
-
-        public PERFORM_DISK(string driveName): base("Storage Performance")
-        {
-            this._driveName=  driveName;
+            this.RelatedSelected=  DriveName;
         }
 
         public PERFORM_DISK(): base("Storage Performance") { }
@@ -322,7 +311,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get Network Performance
     /// </summary>
-    public class PERFORM_NETWORK: DevicePerformance
+    public class PERFORM_NETWORK: DevicePerformance, Convertable
     {
         public String ByteReceivedPerSec;
         public String BytesSentPerSec;
@@ -340,16 +329,18 @@ namespace DiscoveryLight.Core.Device.Performance
         public String TotalBytesSent;
         public String TotalBytes;
 
-        private string selectedNetwork;
-
-        public string SelectedNetwork { get => selectedNetwork; set => selectedNetwork=  value; }
+        public override String ConvertDeviceName()
+        {
+            RelatedSelected = CurrentSelected.Replace("(", "[");
+            RelatedSelected = RelatedSelected.Replace(")", "]");
+            return RelatedSelected;
+        }
 
         public override void GetPerformance()
         {
-            if (this.selectedNetwork == null) return;
             UInt64? Den;
             // get properties from the selected network adapter
-            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_Tcpip_NetworkAdapter").First("Name", this.selectedNetwork, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_Tcpip_NetworkAdapter").First("Name", RelatedSelected, "=") ?? new WprManagementObject();
             ByteReceivedPerSec=  mj.GetProperty("BytesReceivedPersec").AsString();
             BytesSentPerSec=  mj.GetProperty("BytesSentPersec").AsString();
             BytesTotalPerSec=  mj.GetProperty("BytesTotalPersec").AsString();
@@ -398,7 +389,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 PercentPacketsSents = null;
             }
 
-            mj = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", this.selectedNetwork, "=") ?? new WprManagementObject();
+            mj = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", RelatedSelected, "=") ?? new WprManagementObject();
             TotalBytesReceived = mj.GetProperty("BytesReceivedPersec").AsString();
             TotalBytesSent = mj.GetProperty("BytesSentPersec").AsString();
             TotalBytes = mj.GetProperty("BytesTotalPersec").AsString();
@@ -406,7 +397,7 @@ namespace DiscoveryLight.Core.Device.Performance
         
         public PERFORM_NETWORK(string NetworkName): base("Network Performance")
         {
-                this.selectedNetwork=  NetworkName;
+                RelatedSelected=  NetworkName;
         }
 
         public PERFORM_NETWORK(): base("Network Performance") { }
