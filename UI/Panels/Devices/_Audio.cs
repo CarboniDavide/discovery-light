@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
@@ -17,35 +18,11 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
             this.AudioDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(SoundDevice)).First());
-            InitSubDevicesID();
         }
 
-        private void ChargeListOfSubDevicesInit()
+        private void _Audio_Load(object sender, EventArgs e)
         {
-            var CurrentDevice = (SoundDevice)this.AudioDeviceDataControl.CurrentDevice;
-            if (CurrentDevice == null || CurrentDevice.IsNull) return;
-            int index = 0; // use number in list
-            foreach (SoundDevice.Block block in CurrentDevice.Blocks)
-            {
-                this.cmb_Blocks.Items.Add(index.ToString() + " - " + block.Name);
-                index++;
-            }
-        }
-
-        private void ChangeSubDevice(object sender, EventArgs e)
-        {
-            // get name from selected
-            int indexSize = this.cmb_Blocks.SelectedIndex.ToString().Length;
-            string selected = this.cmb_Blocks.SelectedItem.ToString();
-            string name = selected.Substring( indexSize + 1, selected.Length-indexSize-1);
-            this.AudioDeviceDataControl.CurrentSubDevice = this.AudioDeviceDataControl.CurrentDevice.Blocks.Where(d => d.Name.Equals(name)).FirstOrDefault();
-        }
-
-        private void InitSubDevicesID()
-        {
-            this.ChargeListOfSubDevicesInit();
-            this.cmb_Blocks.SelectedIndex = cmb_Blocks.Items.Count == 0 ? -1 : 0;
-            this.cmb_Blocks.Enabled = !(cmb_Blocks.Items.Count == 0);
+            cmb_Blocks.Init(AudioDeviceDataControl, null, DataControlComboBox.StringValue.Name, null);
         }
     }
 }

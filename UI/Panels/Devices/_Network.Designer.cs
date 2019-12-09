@@ -1,4 +1,6 @@
-﻿namespace DiscoveryLight.UI.Panels.Devices
+﻿using DiscoveryLight.UI.Components;
+
+namespace DiscoveryLight.UI.Panels.Devices
 {
     partial class _Network
     {
@@ -31,7 +33,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_Network));
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
-            this.cmb_Blocks = new System.Windows.Forms.ComboBox();
+            this.cmb_Blocks = new DataControlComboBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
             this.NetworkDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._NetworkDeviceDataControl();
@@ -45,7 +47,6 @@
             resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
             this.cmb_Blocks.FormattingEnabled = true;
             this.cmb_Blocks.Name = "cmb_Blocks";
-            this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             // 
             // pic_Divisor_001
             // 
@@ -104,7 +105,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pic_Divisor_002;
-        private System.Windows.Forms.ComboBox cmb_Blocks;
+        private DataControlComboBox cmb_Blocks;
         private System.Windows.Forms.PictureBox pic_Divisor_001;
         private DeviceControls.DeviceDataControls._NetworkDeviceDataControl NetworkDeviceDataControl;
         private DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl NetworkDevicePerformanceControl;

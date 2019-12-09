@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Performance;
 using WinformComponents;
+using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
@@ -22,35 +23,14 @@ namespace DiscoveryLight.UI.Panels.Devices
             this.SystemDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_SYSTEM)).First());
             this.CpuDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(Processor)).First());
         }
-        private void ChargeListOfSubDevicesInit()
+        private void ExtendedACtionToRun()
         {
-            var CurrentDevice = (Processor)this.CpuDeviceDataControl.CurrentDevice;
-            if (CurrentDevice == null || CurrentDevice.IsNull) return;
-            foreach (Processor.Block block in CurrentDevice.Blocks)
-                this.cmb_Blocks.Items.Add(block.DeviceID + " - " + block.Name);
-        }
-
-        private void ChangeSubDevice(object sender, EventArgs e)
-        {
-            this.CpuDeviceDataControl.CurrentSubDevice = this.CpuDeviceDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).FirstOrDefault();
-            this.CpuDevicePerformanceControl.CurrentSubDevice = Convert.ToInt32(this.CpuDeviceDataControl.CurrentSubDevice.DeviceID);
-
-            var CurrentPerformanceCPU = (PERFORM_CPU)this.CpuDevicePerformanceControl.CurrentPerformance;
-            CurrentPerformanceCPU.SelectedCpu = CpuDeviceDataControl.CurrentSubDevice.DeviceID;
-            var CurrentDevice = this.CpuDeviceDataControl.CurrentSubDevice;
-            this.CpuDevicePerformanceControl.GraphComponents_Add(CurrentDevice);
-        }
-
-        private void InitSubDevicesID()
-        {
-            this.ChargeListOfSubDevicesInit();
-            this.cmb_Blocks.SelectedIndex = cmb_Blocks.Items.Count == 0 ? -1 : 0;
-            this.cmb_Blocks.Enabled = !(cmb_Blocks.Items.Count == 0);
+            CpuDevicePerformanceControl.GraphComponents_Add(CpuDeviceDataControl.CurrentSubDevice);
         }
 
         private void _CPU_Load(object sender, EventArgs e)
         {
-            InitSubDevicesID();
+            cmb_Blocks.Init(CpuDeviceDataControl, CpuDevicePerformanceControl, DataControlComboBox.StringValue.Name, ExtendedACtionToRun);
         }
     }
 }

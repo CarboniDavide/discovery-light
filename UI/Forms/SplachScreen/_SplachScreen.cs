@@ -48,7 +48,7 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
             Program.Devices.Add(new PhysicalMemoryArray());
             Program.Devices.Add(new DiskDrive());
             Program.Devices.Add(new NetworkAdapter());
-            Program.Performances.Add(new PERFORM_CPU(null, null));
+            Program.Performances.Add(new PERFORM_CPU(null));
             Program.Performances.Add(new PERFORM_DISK());
             Program.Performances.Add(new PERFORM_NETWORK(null));
             Program.Performances.Add(new PERFORM_PC());

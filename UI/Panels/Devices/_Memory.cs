@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
@@ -22,31 +23,9 @@ namespace DiscoveryLight.UI.Panels.Devices
             this.PhysicalMemoryArrayDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(PhysicalMemoryArray)).First());
         }
 
-        private void ChargeListOfSubDevicesInit()
-        {
-            var CurrentDevice = (PhysicalMemory)this.PhysicalMemoryDataControl.CurrentDevice;
-            if (CurrentDevice == null || CurrentDevice.IsNull) return;
-            foreach (PhysicalMemory.Block block in CurrentDevice.Blocks)
-                this.cmb_Blocks.Items.Add(block.DeviceID);
-        }
-
-        private void ChangeSubDevice(object sender, EventArgs e)
-        {
-            if (cmb_Blocks.SelectedItem.ToString() == null) return;
-            this.PhysicalMemoryDataControl.CurrentSubDevice = this.PhysicalMemoryDataControl.CurrentDevice.Blocks.Where(d => d.DeviceID.Equals(this.cmb_Blocks.SelectedIndex.ToString())).FirstOrDefault();
-            this.MemoryDevicePerformanceControl.CurrentSubDevice = Convert.ToInt32(this.PhysicalMemoryDataControl.CurrentSubDevice.DeviceID);
-        }
-
-        private void InitSubDevicesID()
-        {
-            this.ChargeListOfSubDevicesInit();
-            this.cmb_Blocks.SelectedIndex = cmb_Blocks.Items.Count == 0 ? -1 : 0 ;
-            this.cmb_Blocks.Enabled = !(cmb_Blocks.Items.Count == 0);
-        }
-
         private void _Memory_Load(object sender, EventArgs e)
         {
-            InitSubDevicesID();
+            cmb_Blocks.Init(PhysicalMemoryDataControl, null, DataControlComboBox.StringValue.DeviceID, null);
         }
     }
 }

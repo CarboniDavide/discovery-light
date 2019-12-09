@@ -92,6 +92,9 @@
     <Compile Include="UI\BaseUserControl\_AbstractBaseUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="UI\Components\DataControlComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\Components\LanguageLinkRadio.cs">
       <SubType>Component</SubType>
     </Compile>

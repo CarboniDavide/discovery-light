@@ -1,4 +1,6 @@
-﻿namespace DiscoveryLight.UI.Panels.Devices
+﻿using DiscoveryLight.UI.Components;
+
+namespace DiscoveryLight.UI.Panels.Devices
 {
     partial class _PhysicalDisk
     {
@@ -32,7 +34,7 @@
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             this.lbl_TilteComboBox = new System.Windows.Forms.Label();
-            this.cmb_Blocks = new System.Windows.Forms.ComboBox();
+            this.cmb_Blocks = new DataControlComboBox();
             this.pic_Divisor_001 = new System.Windows.Forms.PictureBox();
             this.PhysicalDiskDeviceDataControl = new DiscoveryLight.UI.DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl();
             this.PhysicalDiskDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl();
@@ -51,7 +53,7 @@
             resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
             this.cmb_Blocks.FormattingEnabled = true;
             this.cmb_Blocks.Name = "cmb_Blocks";
-            this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
+            
             // 
             // pic_Divisor_001
             // 
@@ -112,7 +114,7 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_TilteComboBox;
-        private System.Windows.Forms.ComboBox cmb_Blocks;
+        private DataControlComboBox cmb_Blocks;
         private System.Windows.Forms.PictureBox pic_Divisor_001;
         private DeviceControls.DeviceDataControls._PhysicalDiskDeviceDataControl PhysicalDiskDeviceDataControl;
         private DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl PhysicalDiskDevicePerformanceControl;

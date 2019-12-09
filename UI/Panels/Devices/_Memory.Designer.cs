@@ -1,4 +1,6 @@
-﻿namespace DiscoveryLight.UI.Panels.Devices
+﻿using DiscoveryLight.UI.Components;
+
+namespace DiscoveryLight.UI.Panels.Devices
 {
     partial class _Memory
     {
@@ -32,7 +34,7 @@
             System.Threading.CancellationTokenSource cancellationTokenSource1 = new System.Threading.CancellationTokenSource();
             System.Threading.CancellationTokenSource cancellationTokenSource2 = new System.Threading.CancellationTokenSource();
             System.Threading.CancellationTokenSource cancellationTokenSource3 = new System.Threading.CancellationTokenSource();
-            this.cmb_Blocks = new System.Windows.Forms.ComboBox();
+            this.cmb_Blocks = new DiscoveryLight.UI.Components.DataControlComboBox();
             this.lbl_TitleComboBox = new System.Windows.Forms.Label();
             this.MemoryDevicePerformanceControl = new DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl();
             this.pic_Divisor_002 = new System.Windows.Forms.PictureBox();
@@ -47,10 +49,13 @@
             // 
             // cmb_Blocks
             // 
+            this.cmb_Blocks.Action = null;
             resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
+            this.cmb_Blocks.Blocks = null;
+            this.cmb_Blocks.CurrentDeviceControl = null;
             this.cmb_Blocks.FormattingEnabled = true;
             this.cmb_Blocks.Name = "cmb_Blocks";
-            this.cmb_Blocks.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
+            this.cmb_Blocks.RelatedPerformance = null;
             // 
             // lbl_TitleComboBox
             // 
@@ -136,7 +141,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pic_Divisor_003;
-        private System.Windows.Forms.ComboBox cmb_Blocks;
+        private DataControlComboBox cmb_Blocks;
         private System.Windows.Forms.Label lbl_TitleComboBox;
         private System.Windows.Forms.PictureBox pic_Divisor_002;
         private DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl MemoryDevicePerformanceControl;

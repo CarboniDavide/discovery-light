@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="cmb_Blocks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>377, 333</value>
+    <value>374, 333</value>
   </data>
   <data name="cmb_Blocks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 21</value>
+    <value>46, 21</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cmb_Blocks.TabIndex" type="System.Int32, mscorlib">
@@ -136,7 +136,7 @@
     <value>cmb_Blocks</value>
   </data>
   <data name="&gt;&gt;cmb_Blocks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>DiscoveryLight.UI.Components.DataControlComboBox, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;cmb_Blocks.Parent" xml:space="preserve">
     <value>$this</value>
@@ -154,7 +154,7 @@
     <value>20, 334</value>
   </data>
   <data name="lbl_TitleComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>351, 20</value>
+    <value>348, 20</value>
   </data>
   <data name="lbl_TitleComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>72</value>

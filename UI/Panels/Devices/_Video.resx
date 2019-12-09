@@ -136,7 +136,7 @@
     <value>cmb_Blocks</value>
   </data>
   <data name="&gt;&gt;cmb_Blocks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>DiscoveryLight.UI.Components.DataControlComboBox, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;cmb_Blocks.Parent" xml:space="preserve">
     <value>$this</value>
