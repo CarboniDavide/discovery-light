@@ -12,10 +12,23 @@ namespace DiscoveryLight.Core.Device.Performance
 
     public interface PreGetPerformance
     {
+        /// <summary>
+        /// Use Pre load method before execute GetPerfomoramnce
+        /// </summary>
         void PreGetPerformance();
+        /// <summary>
+        /// Run PreGetPerformance before getting device performance
+        /// </summary>
         Boolean IsPreGetPerformance { get; set; }
     }
 
+    public abstract class AbstractDevicePerformance
+    {
+        /// <summary>
+        /// Get all performance for a selected wmi class
+        /// </summary>
+        public abstract void GetPerformance();
+    }
 
     /// <summary>
     /// Device Performance main class.
@@ -25,7 +38,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// Device Performance read all performance values for all subdevice for a selected device(drive)
     /// </summary>
     /// 
-    public abstract class DevicePerformance: PreGetPerformance
+    public class DevicePerformance: AbstractDevicePerformance, PreGetPerformance
     {
         protected readonly string deviceName;
         protected readonly string className;
@@ -41,12 +54,14 @@ namespace DiscoveryLight.Core.Device.Performance
         public string CurrentSelected { get { return currentSelected; } set { currentSelected = value; IsPreGetPerformance = true; } }
         public string RelatedSelected { get => relatedSelected; set => relatedSelected = value; }
 
-        public virtual void PreGetPerformance() {}
+        public virtual void PreGetPerformance() {
+            IsPreGetPerformance = false;
+        }
 
-        /// <summary>
-        /// Get properties performance for each installed drive
-        /// </summary>
-        public abstract void GetPerformance();
+        public override void GetPerformance() {
+            if (IsPreGetPerformance) PreGetPerformance();
+        }
+
         public DevicePerformance(string DeviceName)
         {
             this.deviceName=  DeviceName;
@@ -109,7 +124,7 @@ namespace DiscoveryLight.Core.Device.Performance
         string Maxsp = null;
         public override void PreGetPerformance()
         {
-            IsPreGetPerformance = false;
+            base.PreGetPerformance();
             var mj = new WprManagementObjectSearcher("Win32_Processor").Find("Name", CurrentSelected, "=").First();
             Maxsp = mj.GetProperty("MaxClockSpeed").AsString();
             RelatedSelected = mj.GetProperty("DeviceID").AsSubString(3, 1);
@@ -117,8 +132,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
-            if (IsPreGetPerformance) PreGetPerformance();
-
+            base.GetPerformance();
             this.Cpu=  new List<Thread>();
             // create a list of thread for the selected cpu
             foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfFormattedData_Counters_ProcessorInformation").All() ?? new List<WprManagementObject>() { new WprManagementObject()})
@@ -164,6 +178,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
+            base.GetPerformance();
             // get thread and process loaded
             foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfOS_System").All() ?? new List<WprManagementObject> { new WprManagementObject()}){
                 this.Threads=  mj.GetProperty("Threads").AsString();
@@ -190,6 +205,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
+            base.GetPerformance();
             // Storage
             var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", "_Total", "=") ?? new WprManagementObject();
             this.Per_DiskSizeFree=  mj.GetProperty("PercentFreeSpace").AsString();
@@ -227,6 +243,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
+            base.GetPerformance();
             // get all memory ram properties from the collection
             foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfOS_Memory").All() ?? new List<WprManagementObject> { new WprManagementObject()})
             {
@@ -269,6 +286,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void PreGetPerformance()
         {
+            base.PreGetPerformance();
             var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First("Caption", CurrentSelected, "=");
             foreach (WprManagementObject mjt in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All() ?? new List<WprManagementObject>())
             {
@@ -281,7 +299,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void GetPerformance()
         {
-            if (IsPreGetPerformance) PreGetPerformance();
+            base.GetPerformance();
             var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_PerfDisk_LogicalDisk").First("Name", RelatedSelected, "=") ?? new WprManagementObject();
             FreeSpace=  mj.GetProperty("FreeMegabytes").AsString();
             WriteBytesPerSec=  mj.GetProperty("DiskWriteBytesPersec").AsString();
@@ -329,13 +347,14 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override void PreGetPerformance()
         {
+            base.PreGetPerformance();
             RelatedSelected = CurrentSelected.Replace("(", "[");
             RelatedSelected = RelatedSelected.Replace(")", "]");
         }
 
         public override void GetPerformance()
         {
-            if (IsPreGetPerformance) PreGetPerformance();
+            base.GetPerformance();
             UInt64? Den;
             // get properties from the selected network adapter
             var mj = new WprManagementObjectSearcher("Win32_PerfFormattedData_Tcpip_NetworkAdapter").First("Name", RelatedSelected, "=") ?? new WprManagementObject();
