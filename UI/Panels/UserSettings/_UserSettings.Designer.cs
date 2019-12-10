@@ -140,7 +140,17 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             0,
             0,
             0});
+            this.nmr_Freq.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.nmr_Freq.Name = "nmr_Freq";
+            this.nmr_Freq.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
             this.nmr_Freq.ValueChanged += new System.EventHandler(this.nmr_Freq_ValueChanged);
             // 
             // cmd_Close

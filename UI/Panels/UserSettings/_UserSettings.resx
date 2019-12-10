@@ -262,7 +262,7 @@
     <value>rdb_It</value>
   </data>
   <data name="&gt;&gt;rdb_It.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Buttons.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>DiscoveryLight.UI.Components.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rdb_It.Parent" xml:space="preserve">
     <value>$this</value>
@@ -292,7 +292,7 @@
     <value>rdb_Eng</value>
   </data>
   <data name="&gt;&gt;rdb_Eng.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Buttons.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>DiscoveryLight.UI.Components.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rdb_Eng.Parent" xml:space="preserve">
     <value>$this</value>
@@ -322,7 +322,7 @@
     <value>rdb_Fr</value>
   </data>
   <data name="&gt;&gt;rdb_Fr.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Buttons.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>DiscoveryLight.UI.Components.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rdb_Fr.Parent" xml:space="preserve">
     <value>$this</value>
@@ -382,7 +382,7 @@
     <value>rdb_Germ</value>
   </data>
   <data name="&gt;&gt;rdb_Germ.Type" xml:space="preserve">
-    <value>DiscoveryLight.UI.Buttons.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>DiscoveryLight.UI.Components.LanguageLinkRadio, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;rdb_Germ.Parent" xml:space="preserve">
     <value>$this</value>
