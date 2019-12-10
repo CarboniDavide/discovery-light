@@ -19,6 +19,9 @@ namespace DiscoveryLight.UI.Components
         private Action action;
         private StringValue valueToUse;
 
+        /// <summary>
+        /// Use Name or DeviceId as default for get and set the list
+        /// </summary>
         public enum StringValue
         {
             Name,
@@ -33,7 +36,7 @@ namespace DiscoveryLight.UI.Components
 
         private void ChargeListOfSubDevicesInit()
         {
-            // fill list with all physical disk
+            // fill list with all available devices
             List<String> devices = new List<string>();
             if (CurrentDeviceControl.CurrentDevice == null || CurrentDeviceControl.CurrentDevice.IsNull)
             {
@@ -50,7 +53,7 @@ namespace DiscoveryLight.UI.Components
             // don't update loaded values in comboBox if not new devices are founded
             if (devices.SequenceEqual(this.Items.Cast<String>().ToList())) return;
 
-            // if a device are removed or added then manage changes
+            // manage changes when a device are removed or added
             if (this.Items.Count != 0)
             {
                 string currentSelected = this.SelectedItem.ToString();                   // get current selection
@@ -61,7 +64,7 @@ namespace DiscoveryLight.UI.Components
                 return;
             }
 
-            // for a empty list
+            // default: for a empty list
             this.Items.AddRange(devices.ToArray());
             this.SelectedIndex = 0;
 
@@ -77,7 +80,7 @@ namespace DiscoveryLight.UI.Components
 
         private void InitSubDevicesID()
         {
-            // fill the list with all founded physical disk
+            // fill the list with all founded devices
             this.ChargeListOfSubDevicesInit();
             // run when update occured. Check if a physical disk drive are added or removed
             CurrentDeviceControl.OnUpdateFinish += new EventHandler(OnDeviceUpdateFinish);
@@ -85,7 +88,7 @@ namespace DiscoveryLight.UI.Components
 
         private void OnDeviceUpdateFinish(object sender, EventArgs e)
         {
-            // check if a physical disk as removed or added then update list of selection
+            // check if a device has been removed or added then update list for selection
             this.Invoke((System.Action)(() => { ChargeListOfSubDevicesInit(); }));
             
         }
