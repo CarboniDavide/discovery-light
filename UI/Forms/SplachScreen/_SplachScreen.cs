@@ -64,7 +64,7 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
             foreach (DeviceData device in Program.Devices)
             {
                 lbl_LoadIDeviceInfo.Text = "Loading data for: " + device.ClassName.ToLower();
-                await Task.Run(() => device.GetCollection());     // get device data info
+                await Task.Run(() => device.UpdateCollection());     // get device data info
                 chgBar_Devices.BarFillSize += step;              // updata loading charging bar
             }
         }

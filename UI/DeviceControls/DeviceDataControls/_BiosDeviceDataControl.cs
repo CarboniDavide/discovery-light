@@ -32,12 +32,12 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void update()
         {
             base.update();
-            CurrentDevice.GetCollection();
+            CurrentDevice.UpdateCollection();
         }
         protected override void show()
         {
             base.show();
-            var CurrentDevice = (BIOS)this.CurrentDevice;
+            var CurrentDevice = (BIOS.Device)this.CurrentSubDevice;
             lbl_BiosManufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A"); ;
             lbl_BiosSerialNumber_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SerialNumber, "N/A");
             lbl_BiosVersion_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Version, "N/A");

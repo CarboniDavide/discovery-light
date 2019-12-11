@@ -51,8 +51,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public void GraphComponents_Add()
         {
             Processor cpu = new Processor();
-            cpu.GetCollection();
-            GraphComponents_Add((Processor.Block)cpu.Devices.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
+            cpu.UpdateCollection();
+            GraphComponents_Add((Processor.Device)cpu.Devices.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
         }
 
         // perform cpu threads chart bar dynamically
@@ -64,7 +64,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             int BarSize;
             int TextSize;
             
-            var CurrentSubDevice = (Processor.Block)Device;
+            var CurrentSubDevice = (Processor.Device)Device;
 
             // define height between each chart bar
             Step = pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.N_Thread));

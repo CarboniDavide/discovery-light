@@ -32,13 +32,13 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void update()
         {
             base.update();
-            CurrentDevice.GetCollection();
+            CurrentDevice.UpdateCollection();
         }
 
         protected override void show()
         {
             base.show();
-            var CurrentDevice = (PhysicalMemoryArray)this.CurrentDevice;
+            var CurrentDevice = (PhysicalMemoryArray.Device)this.CurrentSubDevice;
             lbl_Size_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Size, "N/A", "{0:N0}") + " Kbytes";
             lbl_Block_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.MemoryDevices, "N/A");
             lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Type, "N/A");

@@ -32,13 +32,13 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void update()
         {
             base.update();
-            CurrentDevice.GetCollection();
+            CurrentDevice.UpdateCollection();
         }
 
         protected override void show()
         {
             base.show();
-            var CurrentDevice = (DiscoveryLight.Core.Device.Data.OperatingSystem)this.CurrentDevice;
+            var CurrentDevice = (DiscoveryLight.Core.Device.Data.OperatingSystem.Device)this.CurrentSubDevice;
             lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS_Version, "N/A");
             lbl_SystemOS_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS, "N/A");
             lbl_Producer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemOS_Brand, "N/A");
