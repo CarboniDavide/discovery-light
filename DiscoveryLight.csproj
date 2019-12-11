@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\Commun\DataConvert.cs" />
+    <Compile Include="Core\Device\Device.cs" />
     <Compile Include="Core\Device\DevicePerformance.cs" />
     <Compile Include="Core\Device\DeviceData.cs" />
     <Compile Include="Core\Device\DeviceUtils.cs" />
