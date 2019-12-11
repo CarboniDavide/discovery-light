@@ -43,6 +43,6 @@ namespace DiscoveryLight.Core.Device
         /// Get ad device using name or device id
         /// </summary>
         /// <param name="GetBy"></param>
-        public abstract void GetDevice(GetBy GetBy);
+        public abstract _Device GetDevice(GetBy GetBy);
     }
 }
