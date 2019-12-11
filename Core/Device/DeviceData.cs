@@ -15,15 +15,11 @@ namespace DiscoveryLight.Core.Device.Data
     /// So Physical Disk is the main drive, and each of them is a subdevice(block)
     /// </summary>
     /// 
-    public abstract class DeviceData
+    public abstract class DeviceData: AbstractDevice
     {
         protected readonly string deviceName;       
         protected readonly string className;        
         protected readonly Type classType;          
-
-        private int deviceNumer=  0;                             // number of blocks for the same drive( a pc can have one or more cpu, drive audio etc.)
-        private List<_Device> devices=  new List<_Device>();        // List of properties for each block           
-        private Boolean isNull;
 
         public string DeviceName { get => deviceName; }
         public string ClassName { get => className; }
@@ -32,23 +28,14 @@ namespace DiscoveryLight.Core.Device.Data
         {
             get { 
                 var res = new WprManagementObjectSearcher(deviceName).All();
-                isNull = (res == null);
+                IsNull = (res == null);
                 return res ?? new List<WprManagementObject>() { new WprManagementObject() };
             }
         }
-        public int DeviceNumber { get => deviceNumer; set => deviceNumer=  value; }
-        public List<_Device> Devices { get => devices; set => devices = value; }
-        public bool IsNull { get => isNull; set => isNull = value; }
 
-        /// <summary>
-        /// Get all properties for all installed drive
-        /// </summary>
-        public abstract void GetCollection();
-        public class _Device
-        {
-            public String DeviceID;
-            public String Name;
-        }
+        public override void GetCollection() { }
+
+        public override _Device GetDevice(GetBy GetBy) { return null; }
 
         public DeviceData(string deviceName)
         {
