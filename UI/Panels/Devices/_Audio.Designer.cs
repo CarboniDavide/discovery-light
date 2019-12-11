@@ -43,7 +43,7 @@ namespace DiscoveryLight.UI.Panels.Devices
             // 
             this.cmb_Blocks.Action = null;
             resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
-            this.cmb_Blocks.Blocks = null;
+            this.cmb_Blocks.Devices = null;
             this.cmb_Blocks.CurrentDeviceControl = null;
             this.cmb_Blocks.FormattingEnabled = true;
             this.cmb_Blocks.Name = "cmb_Blocks";

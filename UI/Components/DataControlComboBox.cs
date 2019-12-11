@@ -13,7 +13,7 @@ namespace DiscoveryLight.UI.Components
 {
     class DataControlComboBox: ComboBox
     {
-        private List<DeviceData._Device> blocks;
+        private List<DeviceData._Device> devices;
         private DeviceDataControl currentDeviceControl;
         private DevicePerformanceControl relatedPerformance;
         private Action action;
@@ -28,7 +28,7 @@ namespace DiscoveryLight.UI.Components
             DeviceID
         }
 
-        public List<DeviceData._Device> Blocks { get => blocks; set => blocks = value; }
+        public List<DeviceData._Device> Devices { get => devices; set => devices = value; }
         public DeviceDataControl CurrentDeviceControl { get => currentDeviceControl; set => currentDeviceControl = value; }
         public DevicePerformanceControl RelatedPerformance { get => relatedPerformance; set => relatedPerformance = value; }
         public Action Action { get => action; set => action = value; }
@@ -47,8 +47,8 @@ namespace DiscoveryLight.UI.Components
             {
                 this.Enabled = true;
             }
-            foreach (DeviceData._Device block in CurrentDeviceControl.CurrentDevice.Devices)
-                 devices.Add(ValueToUse == StringValue.Name ? block.Name : block.DeviceID);
+            foreach (DeviceData._Device device in CurrentDeviceControl.CurrentDevice.Devices)
+                 devices.Add(ValueToUse == StringValue.Name ? device.Name : device.DeviceID);
 
             // don't update loaded values in comboBox if not new devices are founded
             if (devices.SequenceEqual(this.Items.Cast<String>().ToList())) return;
