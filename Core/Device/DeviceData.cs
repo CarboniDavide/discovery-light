@@ -55,7 +55,7 @@ namespace DiscoveryLight.Core.Device.Data
         /// <summary>
         /// Get all properties for all installed drive
         /// </summary>
-        public abstract void GetDriveInfo();
+        public abstract void GetCollection();
         public class _Block
         {
             public String DeviceID;
@@ -86,7 +86,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String User;
         public String Domaine;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // get pc base informations
             var mj = Collection.First();
@@ -116,7 +116,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String SystemOS_Architecture;
         public String RamSize;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // get os base informations
             var mj = Collection.First();
@@ -140,7 +140,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public String IDNumber;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // get pc base product informations
             var mj = Collection.First();
@@ -163,7 +163,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String Version;
         public String ReleaseData;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // Get all drive info
             var mj = Collection.First();
@@ -190,7 +190,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String Model;
         public String Version;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // get motherboard chip properties
             var mj = Collection.First();
@@ -215,7 +215,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String PrimaryBus_Value;
         public String SecondaryBus_Value;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // get motherboard bus properties
             var mj = Collection.First();
@@ -238,7 +238,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public String NumberSlot;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // get slot number
             var mj = Collection;
@@ -273,7 +273,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String Mode;
         }
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
@@ -322,7 +322,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String PowerManagmentSupport;
         }
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
@@ -371,7 +371,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String L3_Cache;
         }
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // initialize array to contains each drive info
             List<_Block> mmBlocks = new List<_Block>();
@@ -428,7 +428,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String Voltage;
         }
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
@@ -473,7 +473,7 @@ namespace DiscoveryLight.Core.Device.Data
         public String Type;
         public String MemoryDevices;
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // get drive info
             var mj = Collection.First();
@@ -529,7 +529,7 @@ namespace DiscoveryLight.Core.Device.Data
             return null;
         }
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();
@@ -589,7 +589,7 @@ namespace DiscoveryLight.Core.Device.Data
             public String SencondaryDNS;
         }
 
-        public override void GetDriveInfo()
+        public override void GetCollection()
         {
             // initialize array to contains each drive info
             List<_Block> mmBlocks=  new List<_Block>();

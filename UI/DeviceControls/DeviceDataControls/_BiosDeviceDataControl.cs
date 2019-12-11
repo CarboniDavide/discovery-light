@@ -32,7 +32,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void update()
         {
             base.update();
-            CurrentDevice.GetDriveInfo();
+            CurrentDevice.GetCollection();
         }
         protected override void show()
         {

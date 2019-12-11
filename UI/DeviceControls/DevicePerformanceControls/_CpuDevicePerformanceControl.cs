@@ -51,7 +51,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         public void GraphComponents_Add()
         {
             Processor cpu = new Processor();
-            cpu.GetDriveInfo();
+            cpu.GetCollection();
             GraphComponents_Add((Processor.Block)cpu.Blocks.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
         }
 

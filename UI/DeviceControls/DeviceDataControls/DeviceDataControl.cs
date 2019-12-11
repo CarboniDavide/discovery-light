@@ -58,7 +58,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         public DeviceDataControl(DeviceData Device, Boolean GetDriveInfo)
         {
             if (GetDriveInfo)
-                Device.GetDriveInfo();
+                Device.GetCollection();
             InitData(Device);
         }
 
