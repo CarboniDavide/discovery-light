@@ -24,7 +24,7 @@ namespace DiscoveryLight.Core.Device.Data
         public string DeviceName { get => deviceName; }
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
-        public List<WprManagementObject> Collection
+        public List<WprManagementObject> WmiCollection
         {
             get { 
                 var res = new WprManagementObjectSearcher(deviceName).All();
@@ -33,7 +33,15 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public override void GetCollection() { }
+        public override List<_Device> GetCollection() {
+            // initialize array to contains each drive info
+            return new List<_Device>();
+        }
+
+        public override void UpdateCollection()
+        {
+            Devices = GetCollection();
+        }
 
         public override _Device GetDevice(GetBy GetBy) { return null; }
 
@@ -54,23 +62,33 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class ComputerSystem : DeviceData
     {
-        public String Name;
-        public String Type;
-        public String Manufacturer;
-        public String Model;
-        public String User;
-        public String Domaine;
-
-        public override void GetCollection()
+        public class Device : _Device
         {
+            public String Type;
+            public String Manufacturer;
+            public String Model;
+            public String User;
+            public String Domaine;
+        }
+
+
+        public override List<_Device> GetCollection()
+        {
+            var collection = base.GetCollection();
+            
             // get pc base informations
-            var mj = Collection.First();
-            Name = mj.GetProperty("Name").AsString();
-            Type = mj.GetProperty("SystemType").AsString();
-            Manufacturer = mj.GetProperty("Manufacturer").AsString();
-            Model = mj.GetProperty("Model").AsString();
-            User = mj.GetProperty("UserName").AsString();
-            Domaine = mj.GetProperty("Domain").AsString();
+            var mj = WmiCollection.First();
+            var t = new Device();
+            t.Name = mj.GetProperty("Name").AsString();
+            t.Type = mj.GetProperty("SystemType").AsString();
+            t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
+            t.Model = mj.GetProperty("Model").AsString();
+            t.User = mj.GetProperty("UserName").AsString();
+            t.Domaine = mj.GetProperty("Domain").AsString();
+            
+            collection.Add(t);
+            
+            return collection;
         }
 
         public ComputerSystem() : base("Win32_ComputerSystem") { }
@@ -85,20 +103,28 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class OperatingSystem : DeviceData
     {
-        public String SystemOS_Version;
-        public String SystemOS;
-        public String SystemOS_Brand;
-        public String SystemOS_Architecture;
-        public String RamSize;
+        public class Device:_Device{
+            public String SystemOS_Version;
+            public String SystemOS;
+            public String SystemOS_Brand;
+            public String SystemOS_Architecture;
+            public String RamSize;
+        }
 
-        public override void GetCollection()
+        public override List<_Device> GetCollection()
         {
+            var collection = base.GetCollection();
             // get os base informations
-            var mj = Collection.First();
-            SystemOS = mj.GetProperty("Caption").AsString();
-            SystemOS_Brand = mj.GetProperty("Manufacturer").AsString();
-            SystemOS_Version = mj.GetProperty("BuildNumber").AsString();
-            SystemOS_Architecture = mj.GetProperty("OSArchitecture").AsString();
+            var mj = WmiCollection.First();
+            var t = new Device();
+            t.SystemOS = mj.GetProperty("Caption").AsString();
+            t.SystemOS_Brand = mj.GetProperty("Manufacturer").AsString();
+            t.SystemOS_Version = mj.GetProperty("BuildNumber").AsString();
+            t.SystemOS_Architecture = mj.GetProperty("OSArchitecture").AsString();
+            
+            collection.Add(t);
+            
+            return collection;
         }
 
         public OperatingSystem() : base("Win32_OperatingSystem") { }
@@ -113,13 +139,22 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class ComputerSystemProduct : DeviceData
     {
-        public String IDNumber;
-
-        public override void GetCollection()
+        public class Device : _Device
         {
+            public String IDNumber;
+        }
+
+        public override List<_Device> GetCollection()
+        {
+            var collection = base.GetCollection();
             // get pc base product informations
-            var mj = Collection.First();
-            IDNumber= mj.GetProperty("IdentifyingNumber").AsString();
+            var mj = WmiCollection.First();
+            var t = new Device();
+            t.IDNumber= mj.GetProperty("IdentifyingNumber").AsString();
+            
+            collection.Add(t);
+            
+            return collection;
         }
 
         public ComputerSystemProduct():base("Win32_ComputerSystemProduct") { }
@@ -133,19 +168,28 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class BIOS: DeviceData
     {
-        public String Manufacturer;
-        public String SerialNumber;
-        public String Version;
-        public String ReleaseData;
-
-        public override void GetCollection()
+        public class Device : _Device
         {
+            public String Manufacturer;
+            public String SerialNumber;
+            public String Version;
+            public String ReleaseData;
+        }
+
+        public override List<_Device> GetCollection()
+        {
+            var collection = base.GetCollection();
             // Get all drive info
-            var mj = Collection.First();
-            Manufacturer= mj.GetProperty("Manufacturer").AsString();
-            SerialNumber= mj.GetProperty("SerialNumber").AsString();
-            Version= mj.GetProperty("Caption").AsString();
-            ReleaseData= mj.GetProperty("ReleaseDate").AsString();
+            var mj = WmiCollection.First();
+            var t = new Device();
+            t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
+            t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
+            t.Version= mj.GetProperty("Caption").AsString();
+            t.ReleaseData= mj.GetProperty("ReleaseDate").AsString();
+            
+            collection.Add(t);
+            
+            return collection;
         }
 
         public BIOS():base("Win32_BIOS") { }
@@ -161,17 +205,26 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class BaseBoard : DeviceData
     {
-        public String Manufacturer;
-        public String Model;
-        public String Version;
-
-        public override void GetCollection()
+        public class Device : _Device
         {
+            public String Manufacturer;
+            public String Model;
+            public String Version;
+        }
+
+        public override List<_Device> GetCollection()
+        {
+            var collection = base.GetCollection();
             // get motherboard chip properties
-            var mj = Collection.First();
-            Manufacturer= mj.GetProperty("Manufacturer").AsString();
-            Model= mj.GetProperty("Product").AsString();
-            Version= mj.GetProperty("Version").AsString();
+            var mj = WmiCollection.First();
+            var t = new Device();
+            t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
+            t.Model= mj.GetProperty("Product").AsString();
+            t.Version= mj.GetProperty("Version").AsString();
+            
+            collection.Add(t);
+            
+            return collection;
         }
 
         public BaseBoard():base("Win32_BaseBoard") { }
@@ -187,15 +240,24 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class MotherboardDevice : DeviceData
     {
-        public String PrimaryBus_Value;
-        public String SecondaryBus_Value;
-
-        public override void GetCollection()
+        public class Device : _Device
         {
+            public String PrimaryBus_Value;
+            public String SecondaryBus_Value;
+        }
+
+        public override List<_Device> GetCollection()
+        {
+            var collection = base.GetCollection();
             // get motherboard bus properties
-            var mj = Collection.First();
-            PrimaryBus_Value = mj.GetProperty("PrimaryBusType").AsString();
-            SecondaryBus_Value = mj.GetProperty("SecondaryBusType").AsString();
+            var mj = WmiCollection.First();
+            var t = new Device();
+            t.PrimaryBus_Value = mj.GetProperty("PrimaryBusType").AsString();
+            t.SecondaryBus_Value = mj.GetProperty("SecondaryBusType").AsString();
+            
+            collection.Add(t);
+            
+            return collection;
         }
 
         public MotherboardDevice() : base("Win32_MotherboardDevice") { }
@@ -211,13 +273,22 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class SystemSlot : DeviceData
     {
-        public String NumberSlot;
-
-        public override void GetCollection()
+        public class Device : _Device
         {
+            public String NumberSlot;
+        }
+
+        public override List<_Device> GetCollection()
+        {
+            var collection = base.GetCollection();
             // get slot number
-            var mj = Collection;
-            NumberSlot = IsNull ? null : Collection.Count.ToString();
+            var mj = WmiCollection;
+            var t = new Device();
+            t.NumberSlot = IsNull ? null : WmiCollection.Count.ToString();
+            
+            collection.Add(t);
+            
+            return collection;
         }
 
         public SystemSlot() : base("Win32_SystemSlot") { }
@@ -233,7 +304,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class VideoController : DeviceData
     {
-        public class Block: _Device
+        public class Device: _Device
         {
             public String Manufacturer;
             public String AdpterType;
@@ -248,15 +319,14 @@ namespace DiscoveryLight.Core.Device.Data
             public String Mode;
         }
 
-        public override void GetCollection()
+        public override List<_Device> GetCollection()
         {
-            // initialize array to contains each drive info
-            List<_Device> mmBlocks=  new List<_Device>();
+            var collection = base.GetCollection();
 
             // get all properties for each installed drive
-            foreach (WprManagementObject mj in Collection) // Read data
+            foreach (WprManagementObject mj in WmiCollection) // Read data
             {
-                var t=  new Block();
+                var t=  new Device();
                 t.DeviceID= mj.GetProperty("DeviceID").AsSubString(15, 1);
                 t.Name= mj.GetProperty("Name").AsString();
                 t.Manufacturer= mj.GetProperty("AdapterCompatibility").AsString();
@@ -271,11 +341,10 @@ namespace DiscoveryLight.Core.Device.Data
                 t.NowNumberOfColors= mj.GetProperty("CurrentNumberOfColors").AsString();
                 t.Mode= mj.GetProperty("VideoModeDescription").AsString();
 
-                mmBlocks.Add(t);
+                collection.Add(t);
             }
 
-            // update values for each subdevice if change occured
-            Devices=  mmBlocks;
+            return collection;
         }
 
         public VideoController():base("Win32_VideoController") { }
@@ -291,30 +360,29 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class SoundDevice : DeviceData
     {
-        public class Block: _Device
+        public class Device: _Device
         {
             public String Manufacturer;
             public String PowerManagmentSupport;
         }
 
-        public override void GetCollection()
+        public override List<_Device> GetCollection()
         {
-            // initialize array to contains each drive info
-            List<_Device> mmBlocks=  new List<_Device>();
+            var collection = base.GetCollection();
 
             // get all properties for each installed drive
-            foreach (WprManagementObject mj in Collection)
+            foreach (WprManagementObject mj in WmiCollection)
             {
-                var t=  new Block();
+                var t=  new Device();
                 t.DeviceID= mj.GetProperty("DeviceID").AsString();
                 t.Name= mj.GetProperty("Caption").AsString();
                 t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
                 t.PowerManagmentSupport= mj.GetProperty("PowerManagementSupported").AsString();
-                mmBlocks.Add(t);
+                
+                collection.Add(t);
             }
 
-            // update values for each subdevice if change occured
-            Devices=  mmBlocks;
+            return collection;
         }
 
         public SoundDevice(): base("Win32_SoundDevice") { }
@@ -330,7 +398,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class Processor : DeviceData
     {
-        public class Block: _Device
+        public class Device: _Device
         {
             public String ProcessorID;
             public String AddressSize;
@@ -346,15 +414,14 @@ namespace DiscoveryLight.Core.Device.Data
             public String L3_Cache;
         }
 
-        public override void GetCollection()
+        public override List<_Device> GetCollection()
         {
-            // initialize array to contains each drive info
-            List<_Device> mmBlocks = new List<_Device>();
+            var collection = base.GetCollection();
 
             // get all properties for each installed drive
-            foreach (WprManagementObject mj in Collection) // Read data
+            foreach (WprManagementObject mj in WmiCollection) // Read data
             {
-                var t=  new Block();
+                var t=  new Device();
                 t.ProcessorID= mj.GetProperty("ProcessorId").AsString();
                 t.DeviceID= mj.GetProperty("DeviceID").AsSubString(3, 1);
                 t.Name= mj.GetProperty("Name").AsString();
@@ -370,10 +437,10 @@ namespace DiscoveryLight.Core.Device.Data
                 t.L2_Cache = mj.GetProperty("L2CacheSize").AsString();
                 t.L3_Cache = mj.GetProperty("L3CacheSize").AsString();
 
-                mmBlocks.Add(t);
+                collection.Add(t);
             }
-            // update values for each subdevice if change occured
-            Devices = mmBlocks;
+
+            return collection;
         }
 
         public Processor(): base("Win32_Processor") { }
@@ -390,7 +457,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class PhysicalMemory : DeviceData
     {
-        public class Block: _Device
+        public class Device: _Device
         {
             public String Capacity;
             public String Location;
@@ -403,15 +470,14 @@ namespace DiscoveryLight.Core.Device.Data
             public String Voltage;
         }
 
-        public override void GetCollection()
+        public override List<_Device> GetCollection()
         {
-            // initialize array to contains each drive info
-            List<_Device> mmBlocks=  new List<_Device>();
+            var collection = base.GetCollection();
 
             // get all properties for each installed drive
-            foreach (WprManagementObject mj in Collection)
+            foreach (WprManagementObject mj in WmiCollection)
             {
-                var t=  new Block();
+                var t=  new Device();
                 t.Name= mj.GetProperty("Name").AsString();
                 t.DeviceID= mj.GetProperty("BankLabel").AsSubString(5, 1);
                 t.Capacity= mj.GetProperty("Capacity").AsString();
@@ -424,11 +490,10 @@ namespace DiscoveryLight.Core.Device.Data
                 t.BusSize= mj.GetProperty("DataWidth").AsString();
                 t.Voltage= mj.GetProperty("MinVoltage").AsString();
 
-                mmBlocks.Add(t);
+                collection.Add(t);
             }
 
-            // update values for each subdevice if change occured
-            Devices=  mmBlocks;
+            return  collection;
         }
 
         public PhysicalMemory(): base("Win32_PhysicalMemory") { }
@@ -444,17 +509,28 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class PhysicalMemoryArray : DeviceData
     {
-        public String Size;
-        public String Type;
-        public String MemoryDevices;
-
-        public override void GetCollection()
+        public class Device : _Device
         {
+            public String Size;
+            public String Type;
+            public String MemoryDevices;
+        }
+
+        public override List<_Device> GetCollection()
+        {
+            var collection = base.GetCollection();
+
             // get drive info
-            var mj = Collection.First();
-            this.Size = mj.GetProperty("MaxCapacity").AsString();               // Size
-            this.Type = mj.GetProperty("Caption").AsString();                   // Type
-            this.MemoryDevices = mj.GetProperty("MemoryDevices").AsString();    // Moudule's numbers
+            var mj = WmiCollection.First();
+            var t = new Device();
+            
+            t.Size = mj.GetProperty("MaxCapacity").AsString();               // Size
+            t.Type = mj.GetProperty("Caption").AsString();                   // Type
+            t.MemoryDevices = mj.GetProperty("MemoryDevices").AsString();    // Moudule's numbers
+            
+            collection.Add(t);
+
+            return collection;
         }
 
         public PhysicalMemoryArray() : base("Win32_PhysicalMoryArray") { }
@@ -469,7 +545,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class DiskDrive : DeviceData
     {
-        public class Block: _Device
+        public class Device: _Device
         {
             public String DriveName;
             public String MediaType;
@@ -504,15 +580,14 @@ namespace DiscoveryLight.Core.Device.Data
             return null;
         }
 
-        public override void GetCollection()
+        public override List<_Device> GetCollection()
         {
-            // initialize array to contains each drive info
-            List<_Device> mmBlocks=  new List<_Device>();
+            var collection = base.GetCollection();
 
             // get all properties for each installed drive
-            foreach (WprManagementObject mj in Collection)
+            foreach (WprManagementObject mj in WmiCollection)
             {
-                var t=  new Block();
+                var t=  new Device();
                 t.DeviceID= mj.GetProperty("Index").AsString();
                 t.DriveName=  this.FindDriveName(t.DeviceID);
                 t.Name= mj.GetProperty("Caption").AsString();
@@ -528,11 +603,10 @@ namespace DiscoveryLight.Core.Device.Data
                 t.BytesPerSector= mj.GetProperty("BytesPerSector").AsString();
                 t.FirmwareVersion= mj.GetProperty("FirmwareRevision").AsString();
 
-                mmBlocks.Add(t);
+                collection.Add(t);
             }
 
-            // update values for each subdevice if change occured
-            Devices=  mmBlocks;
+            return collection;
         }
 
         public DiskDrive(): base("Win32_DiskDrive") { }
@@ -547,7 +621,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class NetworkAdapter : DeviceData
     {
-        public class Block: _Device
+        public class Device: _Device
         {
             public String UsedNameinPerformance;
             public String InterfaceIndex;
@@ -564,15 +638,14 @@ namespace DiscoveryLight.Core.Device.Data
             public String SencondaryDNS;
         }
 
-        public override void GetCollection()
+        public override List<_Device> GetCollection()
         {
-            // initialize array to contains each drive info
-            List<_Device> mmBlocks=  new List<_Device>();
+            var collection = base.GetCollection();
 
             // get all properties for each installed drive
-            foreach (WprManagementObject mj in Collection)
+            foreach (WprManagementObject mj in WmiCollection)
             {
-                var t=  new Block();
+                var t=  new Device();
                 t.DeviceID= mj.GetProperty("DeviceID").AsString();
                 t.InterfaceIndex= mj.GetProperty("InterfaceIndex").AsString();
                 t.Name= mj.GetProperty("Name").AsString(); ;
@@ -593,11 +666,10 @@ namespace DiscoveryLight.Core.Device.Data
                 t.SencondaryDNS = mjext.GetProperty("DNSServerSearchOrder").AsArray(1);
                 t.SubNetMask = mjext.GetProperty("IpSubnet").AsArray(0);
 
-                mmBlocks.Add(t);
+                collection.Add(t);
             }
 
-            // update values for each subdevice if change occured
-            Devices=  mmBlocks;
+            return collection;
         }
 
         public NetworkAdapter():base("Win32_NetworkAdapter") { }
