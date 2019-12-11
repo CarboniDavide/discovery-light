@@ -19,7 +19,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
     public class DeviceDataControl : AbstractDeviceDataControl
     {
         private DeviceData currentDevice;               // main device type
-        private DeviceData._Block currentSubDevice;     // a child for the current device    
+        private DeviceData._Device currentSubDevice;     // a child for the current device    
 
         public DeviceData CurrentDevice
         {
@@ -28,10 +28,10 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             {
                 if (value == null) return;
                 currentDevice = value;
-                CurrentSubDevice = (CurrentDevice.Blocks.Count != 0) ? CurrentDevice.Blocks.First() : new DeviceData._Block();
+                CurrentSubDevice = (CurrentDevice.Devices.Count != 0) ? CurrentDevice.Devices.First() : new DeviceData._Device();
             }
         }
-        public DeviceData._Block CurrentSubDevice
+        public DeviceData._Device CurrentSubDevice
         {
             get { return currentSubDevice; }
             set {
@@ -41,12 +41,12 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         }
 
         private void updateSubDevice(object sender, EventArgs e){
-            CurrentSubDevice = CurrentDevice.Blocks.Where(x => x.Name.Equals(CurrentSubDevice.Name)).FirstOrDefault();
+            CurrentSubDevice = CurrentDevice.Devices.Where(x => x.Name.Equals(CurrentSubDevice.Name)).FirstOrDefault();
         }
         public override void InitData(DeviceData Device)
         {
             CurrentDevice = Device;
-            CurrentSubDevice = (CurrentDevice.Blocks.Count != 0) ? CurrentDevice.Blocks.First() : new DeviceData._Block();
+            CurrentSubDevice = (CurrentDevice.Devices.Count != 0) ? CurrentDevice.Devices.First() : new DeviceData._Device();
             OnUpdateFinish += new EventHandler(updateSubDevice);
         }
 

@@ -52,11 +52,11 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             Processor cpu = new Processor();
             cpu.GetCollection();
-            GraphComponents_Add((Processor.Block)cpu.Blocks.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
+            GraphComponents_Add((Processor.Block)cpu.Devices.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
         }
 
         // perform cpu threads chart bar dynamically
-        public void GraphComponents_Add(DeviceData._Block Device)
+        public void GraphComponents_Add(DeviceData._Device Device)
         {
             GraphComponents_Clear();
             int BarPosition;

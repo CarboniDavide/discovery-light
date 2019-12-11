@@ -21,20 +21,20 @@ namespace DiscoveryLight.Core.Device.Data
         protected readonly string className;        
         protected readonly Type classType;          
 
-        private int blockNumber=  0;                             // number of blocks for the same drive( a pc can have one or more cpu, drive audio etc.)
-        private List<_Block> blocks=  new List<_Block>();        // List of properties for each block           
+        private int deviceNumer=  0;                             // number of blocks for the same drive( a pc can have one or more cpu, drive audio etc.)
+        private List<_Device> devices=  new List<_Device>();        // List of properties for each block           
         private Boolean isNull;
 
         /// <summary>
         /// Override all blocks values if new changes occurred
         /// </summary>
         /// <param name="newListOfValues"></param>
-        private void updateInfo(List<_Block> newListOfValues)
+        private void updateInfo(List<_Device> newListOfValues)
         {
-            if (newListOfValues.SequenceEqual(Blocks)) return;
-            blocks=  new List<_Block>();
-            blocks=  newListOfValues;
-            blockNumber=  blocks.Count();
+            if (newListOfValues.SequenceEqual(Devices)) return;
+            devices=  new List<_Device>();
+            devices=  newListOfValues;
+            deviceNumer=  devices.Count();
         }
 
         public string DeviceName { get => deviceName; }
@@ -48,15 +48,15 @@ namespace DiscoveryLight.Core.Device.Data
                 return res ?? new List<WprManagementObject>() { new WprManagementObject() };
             }
         }
-        public int BlockNumber { get => blockNumber; set => blockNumber=  value; }
-        public List<_Block> Blocks { get => blocks; set => updateInfo(value); }
+        public int DeviceNumber { get => deviceNumer; set => deviceNumer=  value; }
+        public List<_Device> Devices { get => devices; set => updateInfo(value); }
         public bool IsNull { get => isNull; set => isNull = value; }
 
         /// <summary>
         /// Get all properties for all installed drive
         /// </summary>
         public abstract void GetCollection();
-        public class _Block
+        public class _Device
         {
             public String DeviceID;
             public String Name;
@@ -258,7 +258,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class VideoController : DeviceData
     {
-        public class Block: _Block
+        public class Block: _Device
         {
             public String Manufacturer;
             public String AdpterType;
@@ -276,7 +276,7 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetCollection()
         {
             // initialize array to contains each drive info
-            List<_Block> mmBlocks=  new List<_Block>();
+            List<_Device> mmBlocks=  new List<_Device>();
 
             // get all properties for each installed drive
             foreach (WprManagementObject mj in Collection) // Read data
@@ -300,7 +300,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
 
             // update values for each subdevice if change occured
-            Blocks=  mmBlocks;
+            Devices=  mmBlocks;
         }
 
         public VideoController():base("Win32_VideoController") { }
@@ -316,7 +316,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class SoundDevice : DeviceData
     {
-        public class Block: _Block
+        public class Block: _Device
         {
             public String Manufacturer;
             public String PowerManagmentSupport;
@@ -325,7 +325,7 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetCollection()
         {
             // initialize array to contains each drive info
-            List<_Block> mmBlocks=  new List<_Block>();
+            List<_Device> mmBlocks=  new List<_Device>();
 
             // get all properties for each installed drive
             foreach (WprManagementObject mj in Collection)
@@ -339,7 +339,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
 
             // update values for each subdevice if change occured
-            Blocks=  mmBlocks;
+            Devices=  mmBlocks;
         }
 
         public SoundDevice(): base("Win32_SoundDevice") { }
@@ -355,7 +355,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class Processor : DeviceData
     {
-        public class Block: _Block
+        public class Block: _Device
         {
             public String ProcessorID;
             public String AddressSize;
@@ -374,7 +374,7 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetCollection()
         {
             // initialize array to contains each drive info
-            List<_Block> mmBlocks = new List<_Block>();
+            List<_Device> mmBlocks = new List<_Device>();
 
             // get all properties for each installed drive
             foreach (WprManagementObject mj in Collection) // Read data
@@ -398,7 +398,7 @@ namespace DiscoveryLight.Core.Device.Data
                 mmBlocks.Add(t);
             }
             // update values for each subdevice if change occured
-            Blocks = mmBlocks;
+            Devices = mmBlocks;
         }
 
         public Processor(): base("Win32_Processor") { }
@@ -415,7 +415,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class PhysicalMemory : DeviceData
     {
-        public class Block: _Block
+        public class Block: _Device
         {
             public String Capacity;
             public String Location;
@@ -431,7 +431,7 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetCollection()
         {
             // initialize array to contains each drive info
-            List<_Block> mmBlocks=  new List<_Block>();
+            List<_Device> mmBlocks=  new List<_Device>();
 
             // get all properties for each installed drive
             foreach (WprManagementObject mj in Collection)
@@ -453,7 +453,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
 
             // update values for each subdevice if change occured
-            Blocks=  mmBlocks;
+            Devices=  mmBlocks;
         }
 
         public PhysicalMemory(): base("Win32_PhysicalMemory") { }
@@ -494,7 +494,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class DiskDrive : DeviceData
     {
-        public class Block: _Block
+        public class Block: _Device
         {
             public String DriveName;
             public String MediaType;
@@ -532,7 +532,7 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetCollection()
         {
             // initialize array to contains each drive info
-            List<_Block> mmBlocks=  new List<_Block>();
+            List<_Device> mmBlocks=  new List<_Device>();
 
             // get all properties for each installed drive
             foreach (WprManagementObject mj in Collection)
@@ -557,7 +557,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
 
             // update values for each subdevice if change occured
-            Blocks=  mmBlocks;
+            Devices=  mmBlocks;
         }
 
         public DiskDrive(): base("Win32_DiskDrive") { }
@@ -572,7 +572,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class NetworkAdapter : DeviceData
     {
-        public class Block: _Block
+        public class Block: _Device
         {
             public String UsedNameinPerformance;
             public String InterfaceIndex;
@@ -592,7 +592,7 @@ namespace DiscoveryLight.Core.Device.Data
         public override void GetCollection()
         {
             // initialize array to contains each drive info
-            List<_Block> mmBlocks=  new List<_Block>();
+            List<_Device> mmBlocks=  new List<_Device>();
 
             // get all properties for each installed drive
             foreach (WprManagementObject mj in Collection)
@@ -622,7 +622,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
 
             // update values for each subdevice if change occured
-            Blocks=  mmBlocks;
+            Devices=  mmBlocks;
         }
 
         public NetworkAdapter():base("Win32_NetworkAdapter") { }

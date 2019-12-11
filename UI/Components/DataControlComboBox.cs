@@ -13,7 +13,7 @@ namespace DiscoveryLight.UI.Components
 {
     class DataControlComboBox: ComboBox
     {
-        private List<DeviceData._Block> blocks;
+        private List<DeviceData._Device> blocks;
         private DeviceDataControl currentDeviceControl;
         private DevicePerformanceControl relatedPerformance;
         private Action action;
@@ -28,7 +28,7 @@ namespace DiscoveryLight.UI.Components
             DeviceID
         }
 
-        public List<DeviceData._Block> Blocks { get => blocks; set => blocks = value; }
+        public List<DeviceData._Device> Blocks { get => blocks; set => blocks = value; }
         public DeviceDataControl CurrentDeviceControl { get => currentDeviceControl; set => currentDeviceControl = value; }
         public DevicePerformanceControl RelatedPerformance { get => relatedPerformance; set => relatedPerformance = value; }
         public Action Action { get => action; set => action = value; }
@@ -47,7 +47,7 @@ namespace DiscoveryLight.UI.Components
             {
                 this.Enabled = true;
             }
-            foreach (DeviceData._Block block in CurrentDeviceControl.CurrentDevice.Blocks)
+            foreach (DeviceData._Device block in CurrentDeviceControl.CurrentDevice.Devices)
                  devices.Add(ValueToUse == StringValue.Name ? block.Name : block.DeviceID);
 
             // don't update loaded values in comboBox if not new devices are founded
@@ -73,7 +73,7 @@ namespace DiscoveryLight.UI.Components
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // change device
-            CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.Blocks.Where(d => ValueToUse == StringValue.Name ? d.Name.Equals(this.SelectedItem.ToString()) : d.DeviceID.Equals(this.SelectedItem.ToString())).FirstOrDefault();
+            CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.Devices.Where(d => ValueToUse == StringValue.Name ? d.Name.Equals(this.SelectedItem.ToString()) : d.DeviceID.Equals(this.SelectedItem.ToString())).FirstOrDefault();
             if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = CurrentDeviceControl.CurrentSubDevice.Name;
             if (Action != null) Action.Invoke(); 
         }
