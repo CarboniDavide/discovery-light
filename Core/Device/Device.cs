@@ -13,7 +13,7 @@ namespace DiscoveryLight.Core.Device
         private Boolean isNull;                                     // Check for null collection    
 
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
-        public List<_Device> Devices { get => devices; set => devices = value; }
+        public List<_Device> Devices { get { return devices; } set { devices = value; DeviceNumber = value.Count; } }
         public bool IsNull { get => isNull; set => isNull = value; }
 
         /// <summary>
