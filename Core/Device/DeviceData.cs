@@ -25,18 +25,6 @@ namespace DiscoveryLight.Core.Device.Data
         private List<_Device> devices=  new List<_Device>();        // List of properties for each block           
         private Boolean isNull;
 
-        /// <summary>
-        /// Override all blocks values if new changes occurred
-        /// </summary>
-        /// <param name="newListOfValues"></param>
-        private void updateInfo(List<_Device> newListOfValues)
-        {
-            if (newListOfValues.SequenceEqual(Devices)) return;
-            devices=  new List<_Device>();
-            devices=  newListOfValues;
-            deviceNumer=  devices.Count();
-        }
-
         public string DeviceName { get => deviceName; }
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
@@ -49,7 +37,7 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
         public int DeviceNumber { get => deviceNumer; set => deviceNumer=  value; }
-        public List<_Device> Devices { get => devices; set => updateInfo(value); }
+        public List<_Device> Devices { get => devices; set => devices = value; }
         public bool IsNull { get => isNull; set => isNull = value; }
 
         /// <summary>
