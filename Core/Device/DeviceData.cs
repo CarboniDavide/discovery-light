@@ -18,12 +18,10 @@ namespace DiscoveryLight.Core.Device.Data
     public abstract class DeviceData: AbstractDevice
     {
         protected readonly string deviceName;       
-        protected readonly string className;        
-        protected readonly Type classType;          
+                 
 
         public string DeviceName { get => deviceName; }
-        public string ClassName { get => className; }
-        public Type ClassType { get => classType; }
+        
         public List<WprManagementObject> WmiCollection
         {
             get { 
@@ -48,8 +46,7 @@ namespace DiscoveryLight.Core.Device.Data
         public DeviceData(string deviceName)
         {
             this.deviceName=  deviceName;
-            this.className=  this.GetType().Name;
-            this.classType=  this.GetType();
+            
         }
     }
 

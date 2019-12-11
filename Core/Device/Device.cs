@@ -8,10 +8,14 @@ namespace DiscoveryLight.Core.Device
 {
     public abstract class AbstractDevice
     {
+        protected readonly string className;
+        protected readonly Type classType;
         private int deviceNumber = 0;                               // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
         private List<_Device> devices = new List<_Device>();        // List of properties for each device           
         private Boolean isNull;                                     // Check for null collection    
 
+        public string ClassName { get => className; }
+        public Type ClassType { get => classType; }
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
         public List<_Device> Devices { get { return devices; } set { devices = value; DeviceNumber = value.Count; } }
         public bool IsNull { get => isNull; set => isNull = value; }
@@ -49,5 +53,11 @@ namespace DiscoveryLight.Core.Device
         /// </summary>
         /// <param name="GetBy"></param>
         public abstract _Device GetDevice(GetBy GetBy);
+
+        public AbstractDevice()
+        {
+            this.className = this.GetType().Name;
+            this.classType = this.GetType();
+        }
     }
 }
