@@ -76,19 +76,10 @@ namespace DiscoveryLight.Core.Device.Data
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
-            
-            // get pc base informations
-            var mj = WmiCollection.First();
-            var t = new Device();
-            t.Name = mj.GetProperty("Name").AsString();
-            t.SystemType = mj.GetProperty("SystemType").AsString();
-            t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
-            t.Model = mj.GetProperty("Model").AsString();
-            t.UserName = mj.GetProperty("UserName").AsString();
-            t.Domain = mj.GetProperty("Domain").AsString();
-            
-            collection.Add(t);
-            
+
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
+
             return collection;
         }
 
@@ -113,14 +104,9 @@ namespace DiscoveryLight.Core.Device.Data
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
-            // get os base informations
-            var mj = WmiCollection.First();
-            var t = new Device();
-            t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
-            t.BuildNumber = mj.GetProperty("BuildNumber").AsString();
-            t.OSArchitecture = mj.GetProperty("OSArchitecture").AsString();
-            
-            collection.Add(t);
+
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
             
             return collection;
         }
@@ -139,19 +125,16 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String IDNumber;
+            public String IdentifyingNumber;
         }
 
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
-            // get pc base product informations
-            var mj = WmiCollection.First();
-            var t = new Device();
-            t.IDNumber= mj.GetProperty("IdentifyingNumber").AsString();
-            
-            collection.Add(t);
-            
+
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
+
             return collection;
         }
 
@@ -176,15 +159,10 @@ namespace DiscoveryLight.Core.Device.Data
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
-            // Get all drive info
-            var mj = WmiCollection.First();
-            var t = new Device();
-            t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-            t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
-            t.ReleaseDate = mj.GetProperty("ReleaseDate").AsString();
-            
-            collection.Add(t);
-            
+
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
+
             return collection;
         }
 
@@ -211,15 +189,10 @@ namespace DiscoveryLight.Core.Device.Data
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
-            // get motherboard chip properties
-            var mj = WmiCollection.First();
-            var t = new Device();
-            t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-            t.Product = mj.GetProperty("Product").AsString();
-            t.Version= mj.GetProperty("Version").AsString();
-            
-            collection.Add(t);
-            
+
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
+
             return collection;
         }
 
@@ -245,14 +218,10 @@ namespace DiscoveryLight.Core.Device.Data
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
-            // get motherboard bus properties
-            var mj = WmiCollection.First();
-            var t = new Device();
-            t.PrimaryBusType = mj.GetProperty("PrimaryBusType").AsString();
-            t.SecondaryBusType = mj.GetProperty("SecondaryBusType").AsString();
-            
-            collection.Add(t);
-            
+
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
+
             return collection;
         }
 
@@ -319,26 +288,8 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            // get all properties for each installed drive
-            foreach (WprManagementObject mj in WmiCollection) // Read data
-            {
-                var t=  new Device();
-                t.DeviceID = mj.GetProperty("DeviceID").AsString();
-                t.Name= mj.GetProperty("Name").AsString();
-                t.AdapterCompatibility = mj.GetProperty("AdapterCompatibility").AsString();
-                t.AdapterDACType = mj.GetProperty("AdapterDACType").AsString();
-                t.AdapterRAM = mj.GetProperty("AdapterRAM").AsString();
-                t.CurrentBitsPerPixel = mj.GetProperty("CurrentBitsPerPixel").AsString();
-                t.CurrentHorizontalResolution = mj.GetProperty("CurrentHorizontalResolution").AsString();
-                t.CurrentVerticalResolution = mj.GetProperty("CurrentVerticalResolution").AsString();
-                t.CurrentRefreshRate = mj.GetProperty("CurrentRefreshRate").AsString();
-                t.MaxRefreshRate = mj.GetProperty("MaxRefreshRate").AsString();
-                t.MinRefreshRate= mj.GetProperty("MinRefreshRate").AsString();
-                t.CurrentNumberOfColors = mj.GetProperty("CurrentNumberOfColors").AsString();
-                t.VideoModeDescription = mj.GetProperty("VideoModeDescription").AsString();
-
-                collection.Add(t);
-            }
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
 
             return collection;
         }
@@ -366,15 +317,8 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            // get all properties for each installed drive
             foreach (WprManagementObject mj in WmiCollection)
-            {
-                var t=  new Device();
-                t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-                t.PowerManagementSupported = mj.GetProperty("PowerManagementSupported").AsString();
-                
-                collection.Add(t);
-            }
+                collection.Add(new Device().Serialize(mj));
 
             return collection;
         }
@@ -410,24 +354,8 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            // get all properties for each installed drive
-            foreach (WprManagementObject mj in WmiCollection) // Read data
-            {
-                var t=  new Device();
-                t.ProcessorId = mj.GetProperty("ProcessorId").AsString();
-                t.AddressWidth = mj.GetProperty("AddressWidth").AsString();
-                t.Description = mj.GetProperty("Description").AsString();
-                t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
-                t.Revision = mj.GetProperty("Revision").AsString();
-                t.SocketDesignation = mj.GetProperty("SocketDesignation").AsString();
-                t.NumberOfCores = mj.GetProperty("NumberOfCores").AsString();
-                t.NumberOfLogicalProcessors = mj.GetProperty("NumberOfLogicalProcessors").AsString();
-                t.MaxClockSpeed = mj.GetProperty("MaxClockSpeed").AsString();
-                t.L2CacheSize = mj.GetProperty("L2CacheSize").AsString();
-                t.L3CacheSize = mj.GetProperty("L3CacheSize").AsString();
-
-                collection.Add(t);
-            }
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
 
             return collection;
         }
@@ -463,22 +391,8 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            // get all properties for each installed drive
             foreach (WprManagementObject mj in WmiCollection)
-            {
-                var t=  new Device();
-                t.Capacity= mj.GetProperty("Capacity").AsString();
-                t.BankLabel = mj.GetProperty("BankLabel").AsString();
-                t.DeviceLocator = mj.GetProperty("DeviceLocator").AsString();
-                t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-                t.PartNumber = mj.GetProperty("PartNumber").AsString();
-                t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
-                t.ConfiguredClockSpeed = mj.GetProperty("ConfiguredClockSpeed").AsString();
-                t.DataWidth = mj.GetProperty("DataWidth").AsString();
-                t.MinVoltage = mj.GetProperty("MinVoltage").AsString();
-
-                collection.Add(t);
-            }
+                collection.Add(new Device().Serialize(mj));
 
             return  collection;
         }
@@ -506,19 +420,13 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            // get drive info
-            var mj = WmiCollection.First();
-            var t = new Device();
-            
-            t.MaxCapacity = mj.GetProperty("MaxCapacity").AsString();               // Size
-            t.MemoryDevices = mj.GetProperty("MemoryDevices").AsString();    // Moudule's numbers
-            
-            collection.Add(t);
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
 
             return collection;
         }
 
-        public PhysicalMemoryArray() : base("Win32_PhysicalMoryArray") { PrimaryKey = "Name"; }
+        public PhysicalMemoryArray() : base("Win32_PhysicalMemoryArray") { PrimaryKey = "Name"; }
     }
 
     #endregion
