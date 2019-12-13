@@ -18,7 +18,6 @@ namespace DiscoveryLight.Core.Device.Data
     public abstract class DeviceData: AbstractDevice
     {
         protected readonly string deviceName;
-        private String primaryKey;
 
         public string DeviceName { get => deviceName; }
         
@@ -30,8 +29,6 @@ namespace DiscoveryLight.Core.Device.Data
                 return res ?? new List<WprManagementObject>() { new WprManagementObject() };
             }
         }
-
-        public string PrimaryKey { get => primaryKey; set => primaryKey = value; }
 
         public override List<_Device> GetCollection() {
             // initialize array to contains each drive info

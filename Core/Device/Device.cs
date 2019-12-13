@@ -14,13 +14,15 @@ namespace DiscoveryLight.Core.Device
         protected readonly Type classType;
         private int deviceNumber = 0;                               // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
         private List<_Device> devices = new List<_Device>();        // List of properties for each device           
-        private Boolean isNull;                                     // Check for null collection    
+        private Boolean isNull;
+        private String primaryKey;
 
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
         public List<_Device> Devices { get { return devices; } set { devices = value; DeviceNumber = value.Count; } }
         public bool IsNull { get => isNull; set => isNull = value; }
+        public string PrimaryKey { get => primaryKey; set => primaryKey = value; }
 
         /// <summary>
         /// Base device class. All device have a name and a DeviceId
@@ -86,10 +88,21 @@ namespace DiscoveryLight.Core.Device
         public abstract void UpdateCollection(String Device);
 
         /// <summary>
-        /// Get a selected device form device list
+        /// Get a selected device form device list that primarykex field contien value
         /// </summary>
         /// <param name="Device"></param>
-        public virtual _Device GetDevice(String Device) { return null; }
+        public virtual _Device GetDevice(String Value)
+        {
+
+            foreach (_Device device in Devices)
+            {
+                string Key = (device.GetType().GetField(PrimaryKey).GetValue(device) as MobProperty).AsString();
+                if (Key != null && Key.Equals(Value))
+                    return device;
+            }
+
+            return null;
+        }
 
         /// <summary>
         /// Update a single device from wmi class 
