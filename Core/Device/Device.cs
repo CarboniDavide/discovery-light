@@ -27,10 +27,10 @@ namespace DiscoveryLight.Core.Device
         /// </summary>
         public class _Device
         {
-            public String DeviceID;
-            public String Name;
-            public String Caption;
-            public String Description;
+            public MobProperty DeviceID;
+            public MobProperty Name;
+            public MobProperty Caption;
+            public MobProperty Description;
 
             /// <summary>
             /// Serialize all field with ManagementObject
