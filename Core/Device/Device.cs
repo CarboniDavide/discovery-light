@@ -14,8 +14,8 @@ namespace DiscoveryLight.Core.Device
         protected readonly Type classType;
         private int deviceNumber = 0;                               // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
         private List<_Device> devices = new List<_Device>();        // List of properties for each device           
-        private Boolean isNull;
-        private String primaryKey;
+        private Boolean isNull;                                     // Check for null WprManagementObjec
+        private String primaryKey;                                  // define entry key in _Device for search items
 
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
