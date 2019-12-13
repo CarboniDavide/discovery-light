@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.Core.Device.Utils;
 using DiscoveryLight.UI.DeviceControls.DeviceDataControls;
 using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
@@ -39,10 +40,7 @@ namespace DiscoveryLight.UI.Components
                 this.Enabled = true;
             }
             foreach (DeviceData._Device device in CurrentDeviceControl.CurrentDevice.Devices)
-            {
-                Object rawString = device.GetType().GetField(ValueToUse).GetValue(device);
-                if (rawString != null) devices.Add(rawString.ToString());
-            }
+                devices.Add( (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString());
 
             // don't update loaded values in comboBox if not new devices are founded
             if (devices.SequenceEqual(this.Items.Cast<String>().ToList())) return;
@@ -67,8 +65,16 @@ namespace DiscoveryLight.UI.Components
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // change device
-            CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.Devices.Where(d => d.GetType().GetField(ValueToUse).GetValue(d).ToString().Equals(SelectedItem.ToString())).First();
-            if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = CurrentDeviceControl.CurrentSubDevice.GetType().GetField(ValueToUse).GetValue(CurrentDeviceControl.CurrentSubDevice).ToString();
+            foreach (DeviceData._Device device in CurrentDeviceControl.CurrentDevice.Devices)
+            {
+                string deviceName = (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString();
+                if (deviceName.Equals(this.SelectedItem.ToString()))
+                {
+                    CurrentDeviceControl.CurrentSubDevice = device;
+                    if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = this.SelectedItem.ToString();
+                }
+            }
+            
             if (Action != null) Action.Invoke(); 
         }
 
