@@ -34,7 +34,8 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         }
         public DeviceData._Device CurrentSubDevice
         {
-            get { 
+            get {
+                if (currentSubDevice == null) return currentSubDevice;
                 Object rawKey = currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice);
                 if (rawKey == null) return currentSubDevice;
                 return currentDevice.Devices.Where(d => d.GetType().GetField(currentDevice.PrimaryKey).GetValue(d).ToString().Equals(rawKey.ToString())).FirstOrDefault();
