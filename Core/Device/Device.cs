@@ -55,7 +55,7 @@ namespace DiscoveryLight.Core.Device
             {
                 foreach (FieldInfo field in this.GetType().GetFields())
                     if (Fields.Contains(field.Name))
-                        field.SetValue(this, mj.GetProperty(field.Name));
+                        field.SetValue(this, mj.GetProperty(field.Name).AsString());
 
                 return this;
             }
