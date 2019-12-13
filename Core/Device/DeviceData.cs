@@ -38,6 +38,10 @@ namespace DiscoveryLight.Core.Device.Data
             return new List<_Device>();
         }
 
+        public override _Device GetCollection(String Device){ return new _Device(); }
+
+        public override void UpdateCollection(String Device) { }
+
         public override void UpdateCollection()
         {
             Devices = GetCollection();

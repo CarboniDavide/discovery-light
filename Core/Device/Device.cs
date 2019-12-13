@@ -68,9 +68,22 @@ namespace DiscoveryLight.Core.Device
         public abstract List<_Device> GetCollection();
 
         /// <summary>
+        /// Get a selected Device from collection
+        /// </summary>
+        /// <param name="Device"></param>
+        /// <returns></returns>
+        public abstract _Device GetCollection(String Device);
+
+        /// <summary>
         /// Update collection from wmi class 
         /// </summary>
         public abstract void UpdateCollection();
+
+        /// <summary>
+        /// Update a single device in collection
+        /// </summary>
+        /// <param name="Device"></param>
+        public abstract void UpdateCollection(String Device);
 
         /// <summary>
         /// Get ad device using name or device id
