@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Device.Utils;
 using DiscoveryLight.UI.BaseUserControl;
 
 
@@ -36,9 +37,16 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             get {
                 if (currentSubDevice == null) return currentSubDevice;
-                Object rawKey = currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice);
-                if (rawKey == null) return currentSubDevice;
-                return currentDevice.Devices.Where(d => d.GetType().GetField(currentDevice.PrimaryKey).GetValue(d).ToString().Equals(rawKey.ToString())).FirstOrDefault();
+                // change device
+                foreach (DeviceData._Device device in currentDevice.Devices)
+                {
+                    string Key = (device.GetType().GetField(currentDevice.PrimaryKey).GetValue(device) as MobProperty).AsString();
+                    string currentKey = (currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice) as MobProperty).AsString();
+                    if (Key != null && currentKey != null && Key.Equals(currentKey))
+                        return device;
+                }
+
+                return currentSubDevice;
             }
             set {
                 currentSubDevice = value;
