@@ -39,7 +39,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (SystemSlot.Device)this.CurrentSubDevice;
-            lbl_SlotNumber_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.NumberSlot, "N/A");
+            lbl_SlotNumber_Value.Text = DataConvert.AsDefaultValue(this.CurrentDevice.Devices.Count().ToString(), "N/A"); ;
             abort();
         }
     }
