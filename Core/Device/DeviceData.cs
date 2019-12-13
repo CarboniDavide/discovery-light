@@ -92,7 +92,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public ComputerSystem() : base("Win32_ComputerSystem") { }
+        public ComputerSystem() : base("Win32_ComputerSystem") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -128,7 +128,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public OperatingSystem() : base("Win32_OperatingSystem") { }
+        public OperatingSystem() : base("Win32_OperatingSystem") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -158,7 +158,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public ComputerSystemProduct():base("Win32_ComputerSystemProduct") { }
+        public ComputerSystemProduct():base("Win32_ComputerSystemProduct") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -193,7 +193,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public BIOS():base("Win32_BIOS") { }
+        public BIOS():base("Win32_BIOS") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -228,7 +228,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public BaseBoard():base("Win32_BaseBoard") { }
+        public BaseBoard():base("Win32_BaseBoard") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -261,7 +261,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public MotherboardDevice() : base("Win32_MotherboardDevice") { }
+        public MotherboardDevice() : base("Win32_MotherboardDevice") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -292,7 +292,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public SystemSlot() : base("Win32_SystemSlot") { }
+        public SystemSlot() : base("Win32_SystemSlot") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -328,7 +328,7 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (WprManagementObject mj in WmiCollection) // Read data
             {
                 var t=  new Device();
-                t.DeviceID= mj.GetProperty("DeviceID").AsSubString(15, 1);
+                t.DeviceID = mj.GetProperty("DeviceID").AsString();
                 t.Name= mj.GetProperty("Name").AsString();
                 t.Manufacturer= mj.GetProperty("AdapterCompatibility").AsString();
                 t.AdpterType= mj.GetProperty("AdapterDACType").AsString();
@@ -348,7 +348,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public VideoController():base("Win32_VideoController") { }
+        public VideoController():base("Win32_VideoController") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -386,7 +386,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public SoundDevice(): base("Win32_SoundDevice") { }
+        public SoundDevice(): base("Win32_SoundDevice") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -403,7 +403,6 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public String ProcessorID;
             public String AddressSize;
-            public String Description;
             public String Manufacturer;
             public String Revision;
             public String Socket;
@@ -424,7 +423,8 @@ namespace DiscoveryLight.Core.Device.Data
             {
                 var t=  new Device();
                 t.ProcessorID= mj.GetProperty("ProcessorId").AsString();
-                t.DeviceID= mj.GetProperty("DeviceID").AsSubString(3, 1);
+                t.Caption= mj.GetProperty("Caption").AsString();
+                t.DeviceID = mj.GetProperty("DeviceID").AsString();
                 t.Name= mj.GetProperty("Name").AsString();
                 t.AddressSize = mj.GetProperty("AddressWidth").AsString();
                 t.Description = mj.GetProperty("Description").AsString();
@@ -444,7 +444,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public Processor(): base("Win32_Processor") { }
+        public Processor(): base("Win32_Processor") { PrimaryKey = "Name"; }
 
     }
 
@@ -461,7 +461,7 @@ namespace DiscoveryLight.Core.Device.Data
         public class Device: _Device
         {
             public String Capacity;
-            public String Location;
+            public String BankLabel;
             public String Slot;
             public String Manufacturer;
             public String PartyNumber;
@@ -480,9 +480,9 @@ namespace DiscoveryLight.Core.Device.Data
             {
                 var t=  new Device();
                 t.Name= mj.GetProperty("Name").AsString();
-                t.DeviceID= mj.GetProperty("BankLabel").AsSubString(5, 1);
+                t.DeviceID = mj.GetProperty("DeviceID").AsString();
                 t.Capacity= mj.GetProperty("Capacity").AsString();
-                t.Location= mj.GetProperty("BankLabel").AsString();
+                t.BankLabel = mj.GetProperty("BankLabel").AsString();
                 t.Slot= mj.GetProperty("DeviceLocator").AsString();
                 t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
                 t.PartyNumber= mj.GetProperty("PartNumber").AsString();
@@ -497,7 +497,7 @@ namespace DiscoveryLight.Core.Device.Data
             return  collection;
         }
 
-        public PhysicalMemory(): base("Win32_PhysicalMemory") { }
+        public PhysicalMemory(): base("Win32_PhysicalMemory") { PrimaryKey = "BankLabel"; }
     }
 
     #endregion
@@ -534,7 +534,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public PhysicalMemoryArray() : base("Win32_PhysicalMoryArray") { }
+        public PhysicalMemoryArray() : base("Win32_PhysicalMoryArray") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -548,6 +548,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
+            public String Index;
             public String DriveName;
             public String MediaType;
             public String Intreface;
@@ -562,11 +563,6 @@ namespace DiscoveryLight.Core.Device.Data
             public String FirmwareVersion;
         }
 
-        /// <summary>
-        /// Get drive name using index value
-        /// </summary>
-        /// <param name="index"></param>
-        /// <returns></returns>
         public String FindDriveName(String index)
         {
             // get all properties for each installed drive
@@ -589,9 +585,11 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (WprManagementObject mj in WmiCollection)
             {
                 var t=  new Device();
-                t.DeviceID= mj.GetProperty("Index").AsString();
-                t.DriveName=  this.FindDriveName(t.DeviceID);
-                t.Name= mj.GetProperty("Caption").AsString();
+                t.Index= mj.GetProperty("Index").AsString();
+                t.DeviceID = mj.GetProperty("DeviceID").AsString();
+                t.DriveName=  this.FindDriveName(t.Index);
+                t.Name= mj.GetProperty("Name").AsString();
+                t.Caption = mj.GetProperty("Caption").AsString();
                 t.MediaType= mj.GetProperty("MediaType").AsString();
                 t.Intreface= mj.GetProperty("InterfaceType").AsString();
                 t.Size= mj.GetProperty("Size").AsString();
@@ -610,7 +608,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public DiskDrive(): base("Win32_DiskDrive") { }
+        public DiskDrive(): base("Win32_DiskDrive") { PrimaryKey = "Caption"; }
     }
 
     #endregion
@@ -624,9 +622,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String UsedNameinPerformance;
             public String InterfaceIndex;
-            public String Description;
             public String Type;
             public String Manufacturer;
             public String Speed;
@@ -649,9 +645,8 @@ namespace DiscoveryLight.Core.Device.Data
                 var t=  new Device();
                 t.DeviceID= mj.GetProperty("DeviceID").AsString();
                 t.InterfaceIndex= mj.GetProperty("InterfaceIndex").AsString();
-                t.Name= mj.GetProperty("Name").AsString(); ;
-                t.UsedNameinPerformance = t.Name.Replace("(", "[");
-                t.UsedNameinPerformance = t.UsedNameinPerformance.Replace(")", "]");
+                t.Name= mj.GetProperty("Name").AsString();
+                t.Caption = mj.GetProperty("Caption").AsString();
                 t.Description= mj.GetProperty("Description").AsString();
                 t.Type= mj.GetProperty("NetConnectionID").AsString();
                 t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
@@ -673,7 +668,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public NetworkAdapter():base("Win32_NetworkAdapter") { }
+        public NetworkAdapter():base("Win32_NetworkAdapter") { PrimaryKey = "Name"; }
     }
 
     #endregion
