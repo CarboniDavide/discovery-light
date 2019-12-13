@@ -47,10 +47,6 @@ namespace DiscoveryLight.Core.Device.Data
             Devices = GetCollection();
         }
 
-        public override _Device GetDevice(String GetBy) { return null; }
-
-        public override void UpdateDevice(string DeviceName) { }
-
         public DeviceData(string deviceName)
         {
             this.deviceName=  deviceName;

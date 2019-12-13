@@ -86,15 +86,15 @@ namespace DiscoveryLight.Core.Device
         public abstract void UpdateCollection(String Device);
 
         /// <summary>
-        /// Get ad device using name or device id
+        /// Get a selected device form device list
         /// </summary>
-        /// <param name="GetBy"></param>
-        public abstract _Device GetDevice(String GetBy);
+        /// <param name="Device"></param>
+        public virtual _Device GetDevice(String Device) { return null; }
 
         /// <summary>
         /// Update a single device from wmi class 
         /// </summary>
-        public abstract void UpdateDevice(String DeviceName);
+        public virtual void UpdateDevice(String DeviceName) { }
 
         public AbstractDevice()
         {
