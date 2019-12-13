@@ -455,42 +455,29 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty FirmwareRevision;
         }
 
-        public String FindDriveName(String index)
+        public MobProperty FindDriveName(MobProperty index)
         {
             // get all properties for each installed drive
             foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All())
             {
                 String currentDrive= mj.GetProperty("Name").AsString();
 
-                if (currentDrive.Substring(0, 1).Equals(index))
-                    return currentDrive.Substring(2, 1) + ":";
+                if (currentDrive.Substring(0, 1).Equals(index.AsString()))
+                    return mj.GetProperty("Name");
             }
 
-            return null;
+            return new MobProperty(null);
         }
 
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
 
-            // get all properties for each installed drive
             foreach (WprManagementObject mj in WmiCollection)
             {
-                var t=  new Device();
-                t.Index= mj.GetProperty("Index").AsString();
-                t.DriveName=  this.FindDriveName(t.Index);
-                t.MediaType= mj.GetProperty("MediaType").AsString();
-                t.InterfaceType = mj.GetProperty("InterfaceType").AsString();
-                t.Size= mj.GetProperty("Size").AsString();
-                t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
-                t.TotalCylinders = mj.GetProperty("TotalCylinders").AsString();
-                t.TotalHeads = mj.GetProperty("TotalHeads").AsString();
-                t.TotalSectors = mj.GetProperty("TotalSectors").AsString();
-                t.TotalTracks = mj.GetProperty("TotalTracks").AsString(); ;
-                t.TracksPerCylinder = mj.GetProperty("TracksPerCylinder").AsString();
-                t.BytesPerSector= mj.GetProperty("BytesPerSector").AsString();
-                t.FirmwareRevision = mj.GetProperty("FirmwareRevision").AsString();
-
+                var t = new Device().Serialize(mj) as Device;
+                // add extended intems
+                t.DriveName = this.FindDriveName(t.Index);
                 collection.Add(t);
             }
 
@@ -520,32 +507,20 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty IpAddress;
             public MobProperty IpSubnet;
             public MobProperty DefaultIPGateway;
-            public MobProperty PrimaryDNS;
-            public MobProperty SencondaryDNS;
+            public MobProperty DNSServerSearchOrder;
         }
 
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
 
-            // get all properties for each installed drive
             foreach (WprManagementObject mj in WmiCollection)
             {
-                var t=  new Device();
-                t.InterfaceIndex= mj.GetProperty("InterfaceIndex").AsString();
-                t.NetConnectionID = mj.GetProperty("NetConnectionID").AsString();
-                t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-                t.Speed= mj.GetProperty("Speed").AsString();
-                t.MACAddress = mj.GetProperty("MACAddress").AsString();
-                t.AdapterType= mj.GetProperty("AdapterType").AsString();
+                var t = new Device().Serialize(mj) as Device;
 
-                //get extended information
-                var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").Unique("Index", t.DeviceID, "=");
-                t.IpAddress = mjext.GetProperty("IpAddress").AsArray(0);
-                t.DefaultIPGateway = mjext.GetProperty("DefaultIPGateway").AsArray(0);
-                t.PrimaryDNS = mjext.GetProperty("DNSServerSearchOrder").AsArray(0);
-                t.SencondaryDNS = mjext.GetProperty("DNSServerSearchOrder").AsArray(1);
-                t.IpSubnet = mjext.GetProperty("IpSubnet").AsArray(0);
+                // add extended intems
+                var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").First("Index", t.DeviceID.AsString(), "=");
+                t.Serialize(mjext, new List<string> { "IpAddress", "DefaultIPGateway", "DNSServerSearchOrder", "IpSubnet" });
 
                 collection.Add(t);
             }
