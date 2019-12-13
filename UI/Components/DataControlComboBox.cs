@@ -64,17 +64,8 @@ namespace DiscoveryLight.UI.Components
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
-            // change device
-            foreach (DeviceData._Device device in CurrentDeviceControl.CurrentDevice.Devices)
-            {
-                string deviceName = (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString();
-                if (deviceName.Equals(this.SelectedItem.ToString()))
-                {
-                    CurrentDeviceControl.CurrentSubDevice = device;
-                    if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = this.SelectedItem.ToString();
-                }
-            }
-            
+            CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString());
+            if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = this.SelectedItem.ToString();
             if (Action != null) Action.Invoke(); 
         }
 

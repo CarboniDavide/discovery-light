@@ -38,15 +38,8 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             get {
                 if (currentSubDevice == null) return currentSubDevice;
                 // change device
-                foreach (DeviceData._Device device in currentDevice.Devices)
-                {
-                    string Key = (device.GetType().GetField(currentDevice.PrimaryKey).GetValue(device) as MobProperty).AsString();
-                    string currentKey = (currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice) as MobProperty).AsString();
-                    if (Key != null && currentKey != null && Key.Equals(currentKey))
-                        return device;
-                }
-
-                return currentSubDevice;
+                string currentKey = (currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice) as MobProperty).AsString();
+                return CurrentDevice.GetDevice(currentKey);
             }
             set {
                 currentSubDevice = value;
