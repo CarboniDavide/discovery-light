@@ -67,10 +67,10 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             var CurrentSubDevice = (Processor.Device)Device;
 
             // define height between each chart bar
-            Step = pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.NumberOfLogicalProcessors));
+            Step = pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.NumberOfLogicalProcessors.AsString()));
 
             // define each char bar height
-            BarSize = Convert.ToInt16(pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.NumberOfLogicalProcessors)) / 1.6);
+            BarSize = Convert.ToInt16(pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.NumberOfLogicalProcessors.AsString())) / 1.6);
 
             TextSize = BarSize / 2;
 
@@ -81,7 +81,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             BarPosition = 0;
 
             // make all thread
-            for (int i = 0; i < Convert.ToInt16(CurrentSubDevice.NumberOfLogicalProcessors); i++)
+            for (int i = 0; i < Convert.ToInt16(CurrentSubDevice.NumberOfLogicalProcessors.AsString()); i++)
             {
                 WinformComponents.ChartBar chart = new WinformComponents.ChartBar();
                 Label label = new Label();
