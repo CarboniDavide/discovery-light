@@ -21,21 +21,14 @@ namespace DiscoveryLight.Core.Device
         public bool IsNull { get => isNull; set => isNull = value; }
 
         /// <summary>
-        /// Use Name or DeviceID to manage each device
-        /// </summary>
-        public enum GetBy
-        {
-            Name,
-            DeviceID
-        }
-
-        /// <summary>
         /// Base device class. All device have a name and a DeviceId
         /// </summary>
         public class _Device
         {
             public String DeviceID;
             public String Name;
+            public String Caption;
+            public String Description;
         }
 
         /// <summary>
@@ -52,7 +45,7 @@ namespace DiscoveryLight.Core.Device
         /// Get ad device using name or device id
         /// </summary>
         /// <param name="GetBy"></param>
-        public abstract _Device GetDevice(GetBy GetBy, String Value);
+        public abstract _Device GetDevice(String GetBy);
 
         /// <summary>
         /// Update a single device from wmi class 
