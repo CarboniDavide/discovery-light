@@ -20,7 +20,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// </summary>
         /// <param name="ArrayAt"></param>
         /// <returns></returns>
-        public dynamic AsArray(int ArrayAt)
+        public String AsArray(int ArrayAt)
         {
             if (obj == null) return null;                                      // return "N/A" for null object
             return (obj.GetType().IsArray) ? obj[ArrayAt] : null;                // check for array type: return array items for array data string elesewhere    
@@ -32,7 +32,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <param name="StartIndex"></param>
         /// <param name="Lenght"></param>
         /// <returns></returns>
-        public dynamic AsSubString(int StartIndex, int Lenght)
+        public String AsSubString(int StartIndex, int Lenght)
         {
             if (obj == null) return null;
             // check for array structure: nothing to do for unknow index
@@ -43,7 +43,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Return property value as String if exists, null elsewhere
         /// </summary>
         /// <returns></returns>
-        public dynamic AsString()
+        public String AsString()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : obj.ToString();         // check for array structure: nothing to do for unknow index
