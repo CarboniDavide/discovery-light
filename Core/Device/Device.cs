@@ -40,7 +40,7 @@ namespace DiscoveryLight.Core.Device
             public _Device Serialize(WprManagementObject mj)
             {
                 foreach (FieldInfo field in this.GetType().GetFields())
-                    field.SetValue(this, mj.GetProperty(field.Name));
+                    field.SetValue(this, mj.GetProperty(field.Name).AsString());
 
                 return this;
             }
