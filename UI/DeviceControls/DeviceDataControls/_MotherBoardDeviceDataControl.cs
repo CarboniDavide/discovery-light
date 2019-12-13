@@ -39,8 +39,8 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (MotherboardDevice.Device)this.CurrentSubDevice;
-            lbl_PrimaryBus_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.PrimaryBus_Value, "N/A");
-            lbl_SecondaryBus_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SecondaryBus_Value, "N/A");
+            lbl_PrimaryBus_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.PrimaryBusType, "N/A");
+            lbl_SecondaryBus_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SecondaryBusType, "N/A");
             abort();
         }
     }

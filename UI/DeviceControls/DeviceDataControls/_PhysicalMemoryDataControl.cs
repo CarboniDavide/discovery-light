@@ -40,14 +40,14 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             base.show();
             var CurrentSubDevice = (PhysicalMemory.Device)this.CurrentSubDevice;
             lbl_BlockSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Capacity, "N/A", "{0:N0}") + " Kbytes";
-            lbl_BlockSlotPosition_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Slot, "N/A");
+            lbl_BlockSlotPosition_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.DeviceLocator, "N/A");
             lbl_BlockLocation_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.BankLabel, "N/A");
             lbl_BlockManufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
-            lbl_BlockNumberParty_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PartyNumber, "N/A");
+            lbl_BlockNumberParty_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PartNumber, "N/A");
             lbl_BlockSerial_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.SerialNumber, "N/A");
-            lbl_BlockSpeed_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Speed, "N/A", "{0:N0}") + " Mhz";
-            lbl_BlockBusSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.BusSize, "N/A") + " Bytes";
-            lbl_BlockVoltage_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Voltage, "N/A", "{0:N0}") + " mV";
+            lbl_BlockSpeed_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.ConfiguredClockSpeed, "N/A", "{0:N0}") + " Mhz";
+            lbl_BlockBusSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.DataWidth, "N/A") + " Bytes";
+            lbl_BlockVoltage_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MinVoltage, "N/A", "{0:N0}") + " mV";
             abort();
         }
     }

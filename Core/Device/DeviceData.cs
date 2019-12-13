@@ -65,11 +65,11 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String Type;
+            public String SystemType;
             public String Manufacturer;
             public String Model;
-            public String User;
-            public String Domaine;
+            public String UserName;
+            public String Domain;
         }
 
 
@@ -81,11 +81,11 @@ namespace DiscoveryLight.Core.Device.Data
             var mj = WmiCollection.First();
             var t = new Device();
             t.Name = mj.GetProperty("Name").AsString();
-            t.Type = mj.GetProperty("SystemType").AsString();
+            t.SystemType = mj.GetProperty("SystemType").AsString();
             t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
             t.Model = mj.GetProperty("Model").AsString();
-            t.User = mj.GetProperty("UserName").AsString();
-            t.Domaine = mj.GetProperty("Domain").AsString();
+            t.UserName = mj.GetProperty("UserName").AsString();
+            t.Domain = mj.GetProperty("Domain").AsString();
             
             collection.Add(t);
             
@@ -105,11 +105,9 @@ namespace DiscoveryLight.Core.Device.Data
     public class OperatingSystem : DeviceData
     {
         public class Device:_Device{
-            public String SystemOS_Version;
-            public String SystemOS;
-            public String SystemOS_Brand;
-            public String SystemOS_Architecture;
-            public String RamSize;
+            public String BuildNumber;
+            public String Manufacturer;
+            public String OSArchitecture;
         }
 
         public override List<_Device> GetCollection()
@@ -118,10 +116,9 @@ namespace DiscoveryLight.Core.Device.Data
             // get os base informations
             var mj = WmiCollection.First();
             var t = new Device();
-            t.SystemOS = mj.GetProperty("Caption").AsString();
-            t.SystemOS_Brand = mj.GetProperty("Manufacturer").AsString();
-            t.SystemOS_Version = mj.GetProperty("BuildNumber").AsString();
-            t.SystemOS_Architecture = mj.GetProperty("OSArchitecture").AsString();
+            t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
+            t.BuildNumber = mj.GetProperty("BuildNumber").AsString();
+            t.OSArchitecture = mj.GetProperty("OSArchitecture").AsString();
             
             collection.Add(t);
             
@@ -173,8 +170,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public String Manufacturer;
             public String SerialNumber;
-            public String Version;
-            public String ReleaseData;
+            public String ReleaseDate;
         }
 
         public override List<_Device> GetCollection()
@@ -185,8 +181,7 @@ namespace DiscoveryLight.Core.Device.Data
             var t = new Device();
             t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
             t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
-            t.Version= mj.GetProperty("Caption").AsString();
-            t.ReleaseData= mj.GetProperty("ReleaseDate").AsString();
+            t.ReleaseDate = mj.GetProperty("ReleaseDate").AsString();
             
             collection.Add(t);
             
@@ -209,7 +204,7 @@ namespace DiscoveryLight.Core.Device.Data
         public class Device : _Device
         {
             public String Manufacturer;
-            public String Model;
+            public String Product;
             public String Version;
         }
 
@@ -220,7 +215,7 @@ namespace DiscoveryLight.Core.Device.Data
             var mj = WmiCollection.First();
             var t = new Device();
             t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-            t.Model= mj.GetProperty("Product").AsString();
+            t.Product = mj.GetProperty("Product").AsString();
             t.Version= mj.GetProperty("Version").AsString();
             
             collection.Add(t);
@@ -243,8 +238,8 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String PrimaryBus_Value;
-            public String SecondaryBus_Value;
+            public String PrimaryBusType;
+            public String SecondaryBusType;
         }
 
         public override List<_Device> GetCollection()
@@ -253,8 +248,8 @@ namespace DiscoveryLight.Core.Device.Data
             // get motherboard bus properties
             var mj = WmiCollection.First();
             var t = new Device();
-            t.PrimaryBus_Value = mj.GetProperty("PrimaryBusType").AsString();
-            t.SecondaryBus_Value = mj.GetProperty("SecondaryBusType").AsString();
+            t.PrimaryBusType = mj.GetProperty("PrimaryBusType").AsString();
+            t.SecondaryBusType = mj.GetProperty("SecondaryBusType").AsString();
             
             collection.Add(t);
             
@@ -307,17 +302,17 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String Manufacturer;
-            public String AdpterType;
-            public String MemorySize;
-            public String NowBitsPerPixel;
-            public String NowHorizResolution;
-            public String NowVertResolution;
-            public String NowRefreshRate;
+            public String AdapterCompatibility;
+            public String AdapterDACType;
+            public String AdapterRAM;
+            public String CurrentBitsPerPixel;
+            public String CurrentHorizontalResolution;
+            public String CurrentVerticalResolution;
+            public String CurrentRefreshRate;
             public String MaxRefreshRate;
             public String MinRefreshRate;
-            public String NowNumberOfColors;
-            public String Mode;
+            public String CurrentNumberOfColors;
+            public String VideoModeDescription;
         }
 
         public override List<_Device> GetCollection()
@@ -330,17 +325,17 @@ namespace DiscoveryLight.Core.Device.Data
                 var t=  new Device();
                 t.DeviceID = mj.GetProperty("DeviceID").AsString();
                 t.Name= mj.GetProperty("Name").AsString();
-                t.Manufacturer= mj.GetProperty("AdapterCompatibility").AsString();
-                t.AdpterType= mj.GetProperty("AdapterDACType").AsString();
-                t.MemorySize= mj.GetProperty("AdapterRAM").AsString();
-                t.NowBitsPerPixel= mj.GetProperty("CurrentBitsPerPixel").AsString();
-                t.NowHorizResolution= mj.GetProperty("CurrentHorizontalResolution").AsString();
-                t.NowVertResolution= mj.GetProperty("CurrentVerticalResolution").AsString();
-                t.NowRefreshRate= mj.GetProperty("CurrentRefreshRate").AsString();
-                t.MaxRefreshRate= mj.GetProperty("MaxRefreshRate").AsString();
+                t.AdapterCompatibility = mj.GetProperty("AdapterCompatibility").AsString();
+                t.AdapterDACType = mj.GetProperty("AdapterDACType").AsString();
+                t.AdapterRAM = mj.GetProperty("AdapterRAM").AsString();
+                t.CurrentBitsPerPixel = mj.GetProperty("CurrentBitsPerPixel").AsString();
+                t.CurrentHorizontalResolution = mj.GetProperty("CurrentHorizontalResolution").AsString();
+                t.CurrentVerticalResolution = mj.GetProperty("CurrentVerticalResolution").AsString();
+                t.CurrentRefreshRate = mj.GetProperty("CurrentRefreshRate").AsString();
+                t.MaxRefreshRate = mj.GetProperty("MaxRefreshRate").AsString();
                 t.MinRefreshRate= mj.GetProperty("MinRefreshRate").AsString();
-                t.NowNumberOfColors= mj.GetProperty("CurrentNumberOfColors").AsString();
-                t.Mode= mj.GetProperty("VideoModeDescription").AsString();
+                t.CurrentNumberOfColors = mj.GetProperty("CurrentNumberOfColors").AsString();
+                t.VideoModeDescription = mj.GetProperty("VideoModeDescription").AsString();
 
                 collection.Add(t);
             }
@@ -364,7 +359,7 @@ namespace DiscoveryLight.Core.Device.Data
         public class Device: _Device
         {
             public String Manufacturer;
-            public String PowerManagmentSupport;
+            public String PowerManagementSupported;
         }
 
         public override List<_Device> GetCollection()
@@ -375,10 +370,8 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (WprManagementObject mj in WmiCollection)
             {
                 var t=  new Device();
-                t.DeviceID= mj.GetProperty("DeviceID").AsString();
-                t.Name= mj.GetProperty("Caption").AsString();
                 t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-                t.PowerManagmentSupport= mj.GetProperty("PowerManagementSupported").AsString();
+                t.PowerManagementSupported = mj.GetProperty("PowerManagementSupported").AsString();
                 
                 collection.Add(t);
             }
@@ -386,7 +379,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection;
         }
 
-        public SoundDevice(): base("Win32_SoundDevice") { PrimaryKey = "Name"; }
+        public SoundDevice(): base("Win32_SoundDevice") { PrimaryKey = "Caption"; }
     }
 
     #endregion
@@ -401,17 +394,16 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String ProcessorID;
-            public String AddressSize;
+            public String ProcessorId;
+            public String AddressWidth;
             public String Manufacturer;
             public String Revision;
-            public String Socket;
-            public String N_Core;
-            public String MaxSpeed;
-            public String N_Thread;
-            public String L1_Cache;
-            public String L2_Cache;
-            public String L3_Cache;
+            public String SocketDesignation;
+            public String NumberOfCores;
+            public String MaxClockSpeed;
+            public String NumberOfLogicalProcessors;
+            public String L2CacheSize;
+            public String L3CacheSize;
         }
 
         public override List<_Device> GetCollection()
@@ -422,21 +414,17 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (WprManagementObject mj in WmiCollection) // Read data
             {
                 var t=  new Device();
-                t.ProcessorID= mj.GetProperty("ProcessorId").AsString();
-                t.Caption= mj.GetProperty("Caption").AsString();
-                t.DeviceID = mj.GetProperty("DeviceID").AsString();
-                t.Name= mj.GetProperty("Name").AsString();
-                t.AddressSize = mj.GetProperty("AddressWidth").AsString();
+                t.ProcessorId = mj.GetProperty("ProcessorId").AsString();
+                t.AddressWidth = mj.GetProperty("AddressWidth").AsString();
                 t.Description = mj.GetProperty("Description").AsString();
                 t.Manufacturer = mj.GetProperty("Manufacturer").AsString();
                 t.Revision = mj.GetProperty("Revision").AsString();
-                t.Socket = mj.GetProperty("SocketDesignation").AsString();
-                t.N_Core = mj.GetProperty("NumberOfCores").AsString();
-                t.N_Thread = mj.GetProperty("NumberOfLogicalProcessors").AsString();
-                t.MaxSpeed = mj.GetProperty("MaxClockSpeed").AsString();
-                t.L1_Cache = mj.GetProperty("L2CacheSize").AsString();
-                t.L2_Cache = mj.GetProperty("L2CacheSize").AsString();
-                t.L3_Cache = mj.GetProperty("L3CacheSize").AsString();
+                t.SocketDesignation = mj.GetProperty("SocketDesignation").AsString();
+                t.NumberOfCores = mj.GetProperty("NumberOfCores").AsString();
+                t.NumberOfLogicalProcessors = mj.GetProperty("NumberOfLogicalProcessors").AsString();
+                t.MaxClockSpeed = mj.GetProperty("MaxClockSpeed").AsString();
+                t.L2CacheSize = mj.GetProperty("L2CacheSize").AsString();
+                t.L3CacheSize = mj.GetProperty("L3CacheSize").AsString();
 
                 collection.Add(t);
             }
@@ -462,13 +450,13 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public String Capacity;
             public String BankLabel;
-            public String Slot;
+            public String DeviceLocator;
             public String Manufacturer;
-            public String PartyNumber;
+            public String PartNumber;
             public String SerialNumber;
-            public String Speed;
-            public String BusSize;
-            public String Voltage;
+            public String ConfiguredClockSpeed;
+            public String DataWidth;
+            public String MinVoltage;
         }
 
         public override List<_Device> GetCollection()
@@ -479,17 +467,15 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (WprManagementObject mj in WmiCollection)
             {
                 var t=  new Device();
-                t.Name= mj.GetProperty("Name").AsString();
-                t.DeviceID = mj.GetProperty("DeviceID").AsString();
                 t.Capacity= mj.GetProperty("Capacity").AsString();
                 t.BankLabel = mj.GetProperty("BankLabel").AsString();
-                t.Slot= mj.GetProperty("DeviceLocator").AsString();
+                t.DeviceLocator = mj.GetProperty("DeviceLocator").AsString();
                 t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
-                t.PartyNumber= mj.GetProperty("PartNumber").AsString();
+                t.PartNumber = mj.GetProperty("PartNumber").AsString();
                 t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
-                t.Speed= mj.GetProperty("ConfiguredClockSpeed").AsString();
-                t.BusSize= mj.GetProperty("DataWidth").AsString();
-                t.Voltage= mj.GetProperty("MinVoltage").AsString();
+                t.ConfiguredClockSpeed = mj.GetProperty("ConfiguredClockSpeed").AsString();
+                t.DataWidth = mj.GetProperty("DataWidth").AsString();
+                t.MinVoltage = mj.GetProperty("MinVoltage").AsString();
 
                 collection.Add(t);
             }
@@ -512,8 +498,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String Size;
-            public String Type;
+            public String MaxCapacity;
             public String MemoryDevices;
         }
 
@@ -525,8 +510,7 @@ namespace DiscoveryLight.Core.Device.Data
             var mj = WmiCollection.First();
             var t = new Device();
             
-            t.Size = mj.GetProperty("MaxCapacity").AsString();               // Size
-            t.Type = mj.GetProperty("Caption").AsString();                   // Type
+            t.MaxCapacity = mj.GetProperty("MaxCapacity").AsString();               // Size
             t.MemoryDevices = mj.GetProperty("MemoryDevices").AsString();    // Moudule's numbers
             
             collection.Add(t);
@@ -551,16 +535,16 @@ namespace DiscoveryLight.Core.Device.Data
             public String Index;
             public String DriveName;
             public String MediaType;
-            public String Intreface;
+            public String InterfaceType;
             public String Size;
             public String SerialNumber;
-            public String Cylinders;
-            public String Heads;
-            public String Sectors;
-            public String Tracks;
+            public String TotalCylinders;
+            public String TotalHeads;
+            public String TotalSectors;
+            public String TotalTracks;
             public String TracksPerCylinder;
             public String BytesPerSector;
-            public String FirmwareVersion;
+            public String FirmwareRevision;
         }
 
         public String FindDriveName(String index)
@@ -586,21 +570,18 @@ namespace DiscoveryLight.Core.Device.Data
             {
                 var t=  new Device();
                 t.Index= mj.GetProperty("Index").AsString();
-                t.DeviceID = mj.GetProperty("DeviceID").AsString();
                 t.DriveName=  this.FindDriveName(t.Index);
-                t.Name= mj.GetProperty("Name").AsString();
-                t.Caption = mj.GetProperty("Caption").AsString();
                 t.MediaType= mj.GetProperty("MediaType").AsString();
-                t.Intreface= mj.GetProperty("InterfaceType").AsString();
+                t.InterfaceType = mj.GetProperty("InterfaceType").AsString();
                 t.Size= mj.GetProperty("Size").AsString();
                 t.SerialNumber= mj.GetProperty("SerialNumber").AsString();
-                t.Cylinders= mj.GetProperty("TotalCylinders").AsString();
-                t.Heads= mj.GetProperty("TotalHeads").AsString();
-                t.Sectors= mj.GetProperty("TotalSectors").AsString();
-                t.Tracks= mj.GetProperty("TotalTracks").AsString(); ;
-                t.TracksPerCylinder= mj.GetProperty("TracksPerCylinder").AsString();
+                t.TotalCylinders = mj.GetProperty("TotalCylinders").AsString();
+                t.TotalHeads = mj.GetProperty("TotalHeads").AsString();
+                t.TotalSectors = mj.GetProperty("TotalSectors").AsString();
+                t.TotalTracks = mj.GetProperty("TotalTracks").AsString(); ;
+                t.TracksPerCylinder = mj.GetProperty("TracksPerCylinder").AsString();
                 t.BytesPerSector= mj.GetProperty("BytesPerSector").AsString();
-                t.FirmwareVersion= mj.GetProperty("FirmwareRevision").AsString();
+                t.FirmwareRevision = mj.GetProperty("FirmwareRevision").AsString();
 
                 collection.Add(t);
             }
@@ -623,14 +604,14 @@ namespace DiscoveryLight.Core.Device.Data
         public class Device: _Device
         {
             public String InterfaceIndex;
-            public String Type;
+            public String NetConnectionID;
             public String Manufacturer;
             public String Speed;
-            public String MACAddresse;
+            public String MACAddress;
             public String AdapterType;
-            public String Ip_Address;
-            public String SubNetMask;
-            public String DefualtGetway;
+            public String IpAddress;
+            public String IpSubnet;
+            public String DefaultIPGateway;
             public String PrimaryDNS;
             public String SencondaryDNS;
         }
@@ -643,24 +624,20 @@ namespace DiscoveryLight.Core.Device.Data
             foreach (WprManagementObject mj in WmiCollection)
             {
                 var t=  new Device();
-                t.DeviceID= mj.GetProperty("DeviceID").AsString();
                 t.InterfaceIndex= mj.GetProperty("InterfaceIndex").AsString();
-                t.Name= mj.GetProperty("Name").AsString();
-                t.Caption = mj.GetProperty("Caption").AsString();
-                t.Description= mj.GetProperty("Description").AsString();
-                t.Type= mj.GetProperty("NetConnectionID").AsString();
+                t.NetConnectionID = mj.GetProperty("NetConnectionID").AsString();
                 t.Manufacturer= mj.GetProperty("Manufacturer").AsString();
                 t.Speed= mj.GetProperty("Speed").AsString();
-                t.MACAddresse= mj.GetProperty("MACAddress").AsString();
+                t.MACAddress = mj.GetProperty("MACAddress").AsString();
                 t.AdapterType= mj.GetProperty("AdapterType").AsString();
 
                 //get extended information
                 var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").Unique("Index", t.DeviceID, "=");
-                t.Ip_Address = mjext.GetProperty("IpAddress").AsArray(0);
-                t.DefualtGetway = mjext.GetProperty("DefaultIPGateway").AsArray(0);
+                t.IpAddress = mjext.GetProperty("IpAddress").AsArray(0);
+                t.DefaultIPGateway = mjext.GetProperty("DefaultIPGateway").AsArray(0);
                 t.PrimaryDNS = mjext.GetProperty("DNSServerSearchOrder").AsArray(0);
                 t.SencondaryDNS = mjext.GetProperty("DNSServerSearchOrder").AsArray(1);
-                t.SubNetMask = mjext.GetProperty("IpSubnet").AsArray(0);
+                t.IpSubnet = mjext.GetProperty("IpSubnet").AsArray(0);
 
                 collection.Add(t);
             }
