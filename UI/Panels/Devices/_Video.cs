@@ -22,7 +22,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void _Video_Load(object sender, EventArgs e)
         {
-            cmb_Blocks.Init(VideoDeviceDataControl, null, DataControlComboBox.StringValue.Name, null);
+            cmb_Blocks.Init(VideoDeviceDataControl, null, null);
         }
     }
 }

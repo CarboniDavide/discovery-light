@@ -17,22 +17,13 @@ namespace DiscoveryLight.UI.Components
         private DeviceDataControl currentDeviceControl;
         private DevicePerformanceControl relatedPerformance;
         private Action action;
-        private StringValue valueToUse;
-
-        /// <summary>
-        /// Use Name or DeviceId as default for get and set the list
-        /// </summary>
-        public enum StringValue
-        {
-            Name,
-            DeviceID
-        }
+        private String valueToUse;
 
         public List<DeviceData._Device> Devices { get => devices; set => devices = value; }
         public DeviceDataControl CurrentDeviceControl { get => currentDeviceControl; set => currentDeviceControl = value; }
         public DevicePerformanceControl RelatedPerformance { get => relatedPerformance; set => relatedPerformance = value; }
         public Action Action { get => action; set => action = value; }
-        private StringValue ValueToUse { get => valueToUse; set => valueToUse = value; }
+        private String ValueToUse { get => valueToUse; set => valueToUse = value; }
 
         private void ChargeListOfSubDevicesInit()
         {
@@ -48,7 +39,7 @@ namespace DiscoveryLight.UI.Components
                 this.Enabled = true;
             }
             foreach (DeviceData._Device device in CurrentDeviceControl.CurrentDevice.Devices)
-                 devices.Add(ValueToUse == StringValue.Name ? device.Name : device.DeviceID);
+                 devices.Add( device.GetType().GetField(ValueToUse).GetValue(device).ToString() );
 
             // don't update loaded values in comboBox if not new devices are founded
             if (devices.SequenceEqual(this.Items.Cast<String>().ToList())) return;
@@ -73,8 +64,8 @@ namespace DiscoveryLight.UI.Components
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // change device
-            CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.Devices.Where(d => ValueToUse == StringValue.Name ? d.Name.Equals(this.SelectedItem.ToString()) : d.DeviceID.Equals(this.SelectedItem.ToString())).FirstOrDefault();
-            if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = CurrentDeviceControl.CurrentSubDevice.Name;
+            CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.Devices.Where(d => d.GetType().GetField(ValueToUse).GetValue(d).ToString().Equals(SelectedItem.ToString())).First();
+            if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = CurrentDeviceControl.CurrentSubDevice.GetType().GetField(ValueToUse).GetValue(CurrentDeviceControl.CurrentSubDevice).ToString();
             if (Action != null) Action.Invoke(); 
         }
 
@@ -93,11 +84,11 @@ namespace DiscoveryLight.UI.Components
             
         }
 
-        public void Init(DeviceDataControl DeviceControl, DevicePerformanceControl RelatedPerformance, StringValue ValueToUse, Action ExtendedAction)
+        public void Init(DeviceDataControl DeviceControl, DevicePerformanceControl RelatedPerformance, Action ExtendedAction)
         {
             this.CurrentDeviceControl = DeviceControl;
             this.RelatedPerformance = RelatedPerformance;
-            this.ValueToUse = ValueToUse;
+            this.ValueToUse = CurrentDeviceControl.CurrentDevice.PrimaryKey;
             this.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             this.Action = ExtendedAction;
             this.InitSubDevicesID();

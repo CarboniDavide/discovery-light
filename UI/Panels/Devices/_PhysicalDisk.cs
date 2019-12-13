@@ -24,7 +24,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void _PhysicalDisk_Load(object sender, EventArgs e)
         {
-            cmb_Blocks.Init(PhysicalDiskDeviceDataControl, PhysicalDiskDevicePerformanceControl, Components.DataControlComboBox.StringValue.Name, null);
+            cmb_Blocks.Init(PhysicalDiskDeviceDataControl, PhysicalDiskDevicePerformanceControl, null);
         }
     }
 }

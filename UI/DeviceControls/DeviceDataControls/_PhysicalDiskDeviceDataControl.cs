@@ -39,7 +39,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentSubDevice = (DiskDrive.Device)this.CurrentSubDevice;
-            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name, "N/A");
+            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Caption, "N/A");
             lbl_Tipology_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MediaType, "N/A");
             lbl_ConnectionType_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Intreface, "N/A");
             lbl_Size_Value.Text = DataConvert.AsDefaultValue( x => (Convert.ToUInt64(x) / 1048576).ToString(), CurrentSubDevice.Size, "N/A", "{0:N0}") + " MB";

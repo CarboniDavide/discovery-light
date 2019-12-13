@@ -41,7 +41,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             var CurrentSubDevice = (PhysicalMemory.Device)this.CurrentSubDevice;
             lbl_BlockSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Capacity, "N/A", "{0:N0}") + " Kbytes";
             lbl_BlockSlotPosition_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Slot, "N/A");
-            lbl_BlockLocation_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Location, "N/A");
+            lbl_BlockLocation_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.BankLabel, "N/A");
             lbl_BlockManufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
             lbl_BlockNumberParty_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PartyNumber, "N/A");
             lbl_BlockSerial_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.SerialNumber, "N/A");

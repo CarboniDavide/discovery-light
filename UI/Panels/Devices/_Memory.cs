@@ -25,7 +25,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void _Memory_Load(object sender, EventArgs e)
         {
-            cmb_Blocks.Init(PhysicalMemoryDataControl, null, DataControlComboBox.StringValue.DeviceID, null);
+            cmb_Blocks.Init(PhysicalMemoryDataControl, null, null);
         }
     }
 }

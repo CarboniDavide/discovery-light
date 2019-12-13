@@ -24,7 +24,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void _Network_Load(object sender, EventArgs e)
         {
-            cmb_Blocks.Init(NetworkDeviceDataControl, NetworkDevicePerformanceControl, Components.DataControlComboBox.StringValue.Name, null);
+            cmb_Blocks.Init(NetworkDeviceDataControl, NetworkDevicePerformanceControl, null);
         }
     }
 }

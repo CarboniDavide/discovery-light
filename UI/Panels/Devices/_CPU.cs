@@ -30,7 +30,7 @@ namespace DiscoveryLight.UI.Panels.Devices
 
         private void _CPU_Load(object sender, EventArgs e)
         {
-            cmb_Blocks.Init(CpuDeviceDataControl, CpuDevicePerformanceControl, DataControlComboBox.StringValue.Name, ExtendedACtionToRun);
+            cmb_Blocks.Init(CpuDeviceDataControl, CpuDevicePerformanceControl, ExtendedACtionToRun);
         }
     }
 }
