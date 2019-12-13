@@ -240,19 +240,15 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String NumberSlot;
         }
 
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
-            // get slot number
-            var mj = WmiCollection;
-            var t = new Device();
-            t.NumberSlot = IsNull ? null : WmiCollection.Count.ToString();
-            
-            collection.Add(t);
-            
+
+            foreach (WprManagementObject mj in WmiCollection)
+                collection.Add(new Device().Serialize(mj));
+
             return collection;
         }
 
