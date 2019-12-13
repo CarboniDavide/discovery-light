@@ -65,11 +65,11 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String SystemType;
-            public String Manufacturer;
-            public String Model;
-            public String UserName;
-            public String Domain;
+            public MobProperty SystemType;
+            public MobProperty Manufacturer;
+            public MobProperty Model;
+            public MobProperty UserName;
+            public MobProperty Domain;
         }
 
 
@@ -96,9 +96,9 @@ namespace DiscoveryLight.Core.Device.Data
     public class OperatingSystem : DeviceData
     {
         public class Device:_Device{
-            public String BuildNumber;
-            public String Manufacturer;
-            public String OSArchitecture;
+            public MobProperty BuildNumber;
+            public MobProperty Manufacturer;
+            public MobProperty OSArchitecture;
         }
 
         public override List<_Device> GetCollection()
@@ -125,7 +125,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String IdentifyingNumber;
+            public MobProperty IdentifyingNumber;
         }
 
         public override List<_Device> GetCollection()
@@ -181,9 +181,9 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String Manufacturer;
-            public String Product;
-            public String Version;
+            public MobProperty Manufacturer;
+            public MobProperty Product;
+            public MobProperty Version;
         }
 
         public override List<_Device> GetCollection()
@@ -211,8 +211,8 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String PrimaryBusType;
-            public String SecondaryBusType;
+            public MobProperty PrimaryBusType;
+            public MobProperty SecondaryBusType;
         }
 
         public override List<_Device> GetCollection()
@@ -271,17 +271,17 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String AdapterCompatibility;
-            public String AdapterDACType;
-            public String AdapterRAM;
-            public String CurrentBitsPerPixel;
-            public String CurrentHorizontalResolution;
-            public String CurrentVerticalResolution;
-            public String CurrentRefreshRate;
-            public String MaxRefreshRate;
-            public String MinRefreshRate;
-            public String CurrentNumberOfColors;
-            public String VideoModeDescription;
+            public MobProperty AdapterCompatibility;
+            public MobProperty AdapterDACType;
+            public MobProperty AdapterRAM;
+            public MobProperty CurrentBitsPerPixel;
+            public MobProperty CurrentHorizontalResolution;
+            public MobProperty CurrentVerticalResolution;
+            public MobProperty CurrentRefreshRate;
+            public MobProperty MaxRefreshRate;
+            public MobProperty MinRefreshRate;
+            public MobProperty CurrentNumberOfColors;
+            public MobProperty VideoModeDescription;
         }
 
         public override List<_Device> GetCollection()
@@ -309,8 +309,8 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String Manufacturer;
-            public String PowerManagementSupported;
+            public MobProperty Manufacturer;
+            public MobProperty PowerManagementSupported;
         }
 
         public override List<_Device> GetCollection()
@@ -338,16 +338,16 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String ProcessorId;
-            public String AddressWidth;
-            public String Manufacturer;
-            public String Revision;
-            public String SocketDesignation;
-            public String NumberOfCores;
-            public String MaxClockSpeed;
-            public String NumberOfLogicalProcessors;
-            public String L2CacheSize;
-            public String L3CacheSize;
+            public MobProperty ProcessorId;
+            public MobProperty AddressWidth;
+            public MobProperty Manufacturer;
+            public MobProperty Revision;
+            public MobProperty SocketDesignation;
+            public MobProperty NumberOfCores;
+            public MobProperty MaxClockSpeed;
+            public MobProperty NumberOfLogicalProcessors;
+            public MobProperty L2CacheSize;
+            public MobProperty L3CacheSize;
         }
 
         public override List<_Device> GetCollection()
@@ -376,15 +376,15 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String Capacity;
-            public String BankLabel;
-            public String DeviceLocator;
-            public String Manufacturer;
-            public String PartNumber;
-            public String SerialNumber;
-            public String ConfiguredClockSpeed;
-            public String DataWidth;
-            public String MinVoltage;
+            public MobProperty Capacity;
+            public MobProperty BankLabel;
+            public MobProperty DeviceLocator;
+            public MobProperty Manufacturer;
+            public MobProperty PartNumber;
+            public MobProperty SerialNumber;
+            public MobProperty ConfiguredClockSpeed;
+            public MobProperty DataWidth;
+            public MobProperty MinVoltage;
         }
 
         public override List<_Device> GetCollection()
@@ -412,8 +412,8 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String MaxCapacity;
-            public String MemoryDevices;
+            public MobProperty MaxCapacity;
+            public MobProperty MemoryDevices;
         }
 
         public override List<_Device> GetCollection()
@@ -440,19 +440,19 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String Index;
-            public String DriveName;
-            public String MediaType;
-            public String InterfaceType;
-            public String Size;
-            public String SerialNumber;
-            public String TotalCylinders;
-            public String TotalHeads;
-            public String TotalSectors;
-            public String TotalTracks;
-            public String TracksPerCylinder;
-            public String BytesPerSector;
-            public String FirmwareRevision;
+            public MobProperty Index;
+            public MobProperty DriveName;
+            public MobProperty MediaType;
+            public MobProperty InterfaceType;
+            public MobProperty Size;
+            public MobProperty SerialNumber;
+            public MobProperty TotalCylinders;
+            public MobProperty TotalHeads;
+            public MobProperty TotalSectors;
+            public MobProperty TotalTracks;
+            public MobProperty TracksPerCylinder;
+            public MobProperty BytesPerSector;
+            public MobProperty FirmwareRevision;
         }
 
         public String FindDriveName(String index)
@@ -511,17 +511,17 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device: _Device
         {
-            public String InterfaceIndex;
-            public String NetConnectionID;
-            public String Manufacturer;
-            public String Speed;
-            public String MACAddress;
-            public String AdapterType;
-            public String IpAddress;
-            public String IpSubnet;
-            public String DefaultIPGateway;
-            public String PrimaryDNS;
-            public String SencondaryDNS;
+            public MobProperty InterfaceIndex;
+            public MobProperty NetConnectionID;
+            public MobProperty Manufacturer;
+            public MobProperty Speed;
+            public MobProperty MACAddress;
+            public MobProperty AdapterType;
+            public MobProperty IpAddress;
+            public MobProperty IpSubnet;
+            public MobProperty DefaultIPGateway;
+            public MobProperty PrimaryDNS;
+            public MobProperty SencondaryDNS;
         }
 
         public override List<_Device> GetCollection()
