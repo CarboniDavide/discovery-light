@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.Core.Device
 {
@@ -29,6 +31,35 @@ namespace DiscoveryLight.Core.Device
             public String Name;
             public String Caption;
             public String Description;
+
+            /// <summary>
+            /// Serialize all field with ManagementObject
+            /// </summary>
+            /// <param name="mj"></param>
+            /// <returns></returns>
+            public _Device Serialize(WprManagementObject mj)
+            {
+                foreach (FieldInfo field in this.GetType().GetFields())
+                    field.SetValue(this, mj.GetProperty(field.Name));
+
+                return this;
+            }
+
+            /// <summary>
+            /// Serialize all field with ManagementObject only for the specified fields
+            /// </summary>
+            /// <param name="mj"></param>
+            /// <param name="Fields"></param>
+            /// <returns></returns>
+            public _Device Serialize(WprManagementObject mj, List<String> Fields)
+            {
+                foreach (FieldInfo field in this.GetType().GetFields())
+                    if (Fields.Contains(field.Name))
+                        field.SetValue(this, mj.GetProperty(field.Name));
+
+                return this;
+            }
+
         }
 
         /// <summary>
