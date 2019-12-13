@@ -36,10 +36,12 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         public DeviceData._Device CurrentSubDevice
         {
             get {
-                if (currentSubDevice == null) return currentSubDevice;
-                // change device
+                if (currentSubDevice == null ) return currentSubDevice;
+                //  get the current value form field or the oldest subdevice for null value
                 string currentKey = (currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice) as MobProperty).AsString();
-                return CurrentDevice.GetDevice(currentKey);
+                // get the device using primary key else use the currentSubDevice for null value
+                currentSubDevice = CurrentDevice.GetDevice(currentKey) ?? currentSubDevice;
+                return currentSubDevice;
             }
             set {
                 currentSubDevice = value;
