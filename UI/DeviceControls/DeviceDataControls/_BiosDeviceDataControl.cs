@@ -38,12 +38,12 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (BIOS.Device)this.CurrentSubDevice;
-            lbl_BiosManufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A"); ;
-            lbl_BiosSerialNumber_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SerialNumber, "N/A");
-            lbl_BiosVersion_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Caption, "N/A");
-            lbl_BiosReleaseDate_Value.Text = DataConvert.AsDefaultValue(x => x.Substring(0,4), CurrentDevice.ReleaseDate, null) 
-                + "-" + DataConvert.AsDefaultValue(x => x.Substring(4,2), CurrentDevice.ReleaseDate, null) 
-                + "-" + DataConvert.AsDefaultValue(x => x.Substring(6, 2), CurrentDevice.ReleaseDate, null);
+            lbl_BiosManufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer.AsString(), "N/A"); ;
+            lbl_BiosSerialNumber_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SerialNumber.AsString(), "N/A");
+            lbl_BiosVersion_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Caption.AsString(), "N/A");
+            lbl_BiosReleaseDate_Value.Text = DataConvert.AsDefaultValue(x => x.Substring(0,4), CurrentDevice.ReleaseDate.AsString(), null) 
+                + "-" + DataConvert.AsDefaultValue(x => x.Substring(4,2), CurrentDevice.ReleaseDate.AsString(), null) 
+                + "-" + DataConvert.AsDefaultValue(x => x.Substring(6, 2), CurrentDevice.ReleaseDate.AsString(), null);
             abort();
         }
     }

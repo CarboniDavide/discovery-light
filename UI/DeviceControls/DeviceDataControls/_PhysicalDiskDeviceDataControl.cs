@@ -39,18 +39,18 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentSubDevice = (DiskDrive.Device)this.CurrentSubDevice;
-            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Caption, "N/A");
-            lbl_Tipology_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MediaType, "N/A");
-            lbl_ConnectionType_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.InterfaceType, "N/A");
-            lbl_Size_Value.Text = DataConvert.AsDefaultValue( x => (Convert.ToUInt64(x) / 1048576).ToString(), CurrentSubDevice.Size, "N/A", "{0:N0}") + " MB";
-            lbl_SerialNumber_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.SerialNumber, "N/A");
-            lbl_Cylinders_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalCylinders, "N/A", "{0:N0}");
-            lbl_Heads_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalHeads, "N/A", "{0:N0}");
-            lbl_Sectors_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalSectors, "N/A", "{0:N0}");
-            lbl_Tracks_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalTracks, "N/A", "{0:N0}");
-            lbl_TracksPerCylinder_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TracksPerCylinder, "N/A", "{0:N0}");
-            lbl_BytesPerSector_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.BytesPerSector, "N/A", "{0:N0}");
-            lbl_Firmware_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.FirmwareRevision, "N/A");
+            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Caption.AsString(), "N/A");
+            lbl_Tipology_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MediaType.AsString(), "N/A");
+            lbl_ConnectionType_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.InterfaceType.AsString(), "N/A");
+            lbl_Size_Value.Text = DataConvert.AsDefaultValue( x => (Convert.ToUInt64(x) / 1048576).ToString(), CurrentSubDevice.Size.AsString(), "N/A", "{0:N0}") + " MB";
+            lbl_SerialNumber_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.SerialNumber.AsString(), "N/A");
+            lbl_Cylinders_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalCylinders.AsString(), "N/A", "{0:N0}");
+            lbl_Heads_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalHeads.AsString(), "N/A", "{0:N0}");
+            lbl_Sectors_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalSectors.AsString(), "N/A", "{0:N0}");
+            lbl_Tracks_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TotalTracks.AsString(), "N/A", "{0:N0}");
+            lbl_TracksPerCylinder_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.TracksPerCylinder.AsString(), "N/A", "{0:N0}");
+            lbl_BytesPerSector_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.BytesPerSector.AsString(), "N/A", "{0:N0}");
+            lbl_Firmware_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.FirmwareRevision.AsString(), "N/A");
         }
     }
 }

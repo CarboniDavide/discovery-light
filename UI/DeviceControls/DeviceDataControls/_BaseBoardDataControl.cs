@@ -39,9 +39,9 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (BaseBoard.Device)this.CurrentSubDevice;
-            lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A");
-            lbl_Model_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Product, "N/A");
-            lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Version, "N/A");
+            lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer.AsString(), "N/A");
+            lbl_Model_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Product.AsString(), "N/A");
+            lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Version.AsString(), "N/A");
             abort();
         }
     }

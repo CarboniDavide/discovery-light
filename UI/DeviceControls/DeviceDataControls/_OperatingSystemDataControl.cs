@@ -39,10 +39,10 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (DiscoveryLight.Core.Device.Data.OperatingSystem.Device)this.CurrentSubDevice;
-            lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.BuildNumber, "N/A");
-            lbl_SystemOS_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Caption, "N/A");
-            lbl_Producer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A");
-            lbl_Architectur_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.OSArchitecture, "N/A");
+            lbl_Version_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.BuildNumber.AsString(), "N/A");
+            lbl_SystemOS_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Caption.AsString(), "N/A");
+            lbl_Producer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer.AsString(), "N/A");
+            lbl_Architectur_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.OSArchitecture.AsString(), "N/A");
             abort();
         }
     }

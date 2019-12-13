@@ -151,9 +151,9 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class Device : _Device
         {
-            public String Manufacturer;
-            public String SerialNumber;
-            public String ReleaseDate;
+            public MobProperty Manufacturer;
+            public MobProperty SerialNumber;
+            public MobProperty ReleaseDate;
         }
 
         public override List<_Device> GetCollection()

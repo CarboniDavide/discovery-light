@@ -39,12 +39,12 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (ComputerSystem.Device)this.CurrentSubDevice;
-            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Name, "N/A");
-            lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemType, "N/A");
-            lbl_Manufaturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer, "N/A");
-            lbl_Model_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Model, "N/A");
-            lbl_User_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.UserName, "N/A");
-            lbl_Domain_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Domain, "N/A");
+            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Name.AsString(), "N/A");
+            lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.SystemType.AsString(), "N/A");
+            lbl_Manufaturer_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Manufacturer.AsString(), "N/A");
+            lbl_Model_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Model.AsString(), "N/A");
+            lbl_User_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.UserName.AsString(), "N/A");
+            lbl_Domain_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Domain.AsString(), "N/A");
             abort();
         }
     }

@@ -39,7 +39,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (ComputerSystemProduct.Device)this.CurrentSubDevice;
-            lbl_NumberID_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.IdentifyingNumber, "N/A");
+            lbl_NumberID_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.IdentifyingNumber.AsString(), "N/A");
             abort();
         }
     }
