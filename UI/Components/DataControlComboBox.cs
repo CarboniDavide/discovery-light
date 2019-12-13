@@ -64,6 +64,7 @@ namespace DiscoveryLight.UI.Components
 
         private void ChangeSubDevice(object sender, EventArgs e)
         {
+            // get current device form Devices or oldest subdevice for null value
             CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString()) ?? CurrentDeviceControl.CurrentSubDevice;
             if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = this.SelectedItem.ToString();
             if (Action != null) Action.Invoke(); 
