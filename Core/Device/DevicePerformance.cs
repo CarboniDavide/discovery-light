@@ -22,14 +22,6 @@ namespace DiscoveryLight.Core.Device.Performance
         Boolean IsPreGetPerformance { get; set; }
     }
 
-    public abstract class AbstractDevicePerformance
-    {
-        /// <summary>
-        /// Get all performance for a selected wmi class
-        /// </summary>
-        public abstract void GetPerformance();
-    }
-
     /// <summary>
     /// Device Performance main class.
     /// Device Performance represents a installed device type. Each device can have more childs or subdevices(collection)
@@ -38,35 +30,40 @@ namespace DiscoveryLight.Core.Device.Performance
     /// Device Performance read all performance values for all subdevice for a selected device(drive)
     /// </summary>
     /// 
-    public class DevicePerformance: AbstractDevicePerformance, PreGetPerformance
+    public class DevicePerformance: AbstractDevice, PreGetPerformance
     {
         protected readonly string deviceName;
-        protected readonly string className;
-        protected readonly Type classType;
 
         private string currentSelected;
         private string relatedSelected;
 
         public Boolean IsPreGetPerformance { get; set; }
         public string DeviceName { get => deviceName; }
-        public string ClassName { get => className; }
-        public Type ClassType { get => classType; }
-        public string CurrentSelected { get { return currentSelected; } set { currentSelected = value; IsPreGetPerformance = true; } }
-        public string RelatedSelected { get => relatedSelected; set => relatedSelected = value; }
 
         public virtual void PreGetPerformance() {
             IsPreGetPerformance = false;
         }
 
-        public override void GetPerformance() {
+        public override List<_Device> GetCollection() {
             if (IsPreGetPerformance) PreGetPerformance();
+            return new List<_Device>();
         }
+
+        public override _Device GetCollection(string Device)
+        {
+            return new _Device();
+        }
+
+        public override void UpdateCollection()
+        {
+            Devices = GetCollection();
+        }
+
+        public override void UpdateCollection(string Device) { }
 
         public DevicePerformance(string DeviceName)
         {
             this.deviceName=  DeviceName;
-            this.className=  this.GetType().Name;
-            this.classType=  this.GetType();
         }
     }
 
