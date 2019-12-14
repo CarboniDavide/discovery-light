@@ -45,6 +45,7 @@ namespace DiscoveryLight.UI.Panels.UserSettings
         private void cmd_Apply_Click(object sender, EventArgs e)
         {
             Settings.Settings.Default.Save();                                     // save all changes in global settings  
+            anm_PanelSet.ClosePanel();                                            // close panel 
             if (needRestart) Application.Restart();                               // restart application to use the new selected language  
         }
 
