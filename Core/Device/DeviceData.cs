@@ -17,19 +17,6 @@ namespace DiscoveryLight.Core.Device.Data
     /// 
     public abstract class DeviceData: AbstractDevice
     {
-        protected readonly string deviceName;
-
-        public string DeviceName { get => deviceName; }
-        
-        public List<WprManagementObject> WmiCollection
-        {
-            get { 
-                var res = new WprManagementObjectSearcher(deviceName).All();
-                IsNull = (res == null);
-                return res ?? new List<WprManagementObject>() { new WprManagementObject() };
-            }
-        }
-
         public override List<_Device> GetCollection() {
             // initialize array to contains each drive info
             return new List<_Device>();
@@ -44,11 +31,7 @@ namespace DiscoveryLight.Core.Device.Data
             Devices = GetCollection();
         }
 
-        public DeviceData(string deviceName)
-        {
-            this.deviceName=  deviceName;
-            
-        }
+        public DeviceData(string deviceName) : base(deviceName) { }
     }
 
     #endregion

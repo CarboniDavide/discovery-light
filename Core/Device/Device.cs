@@ -10,6 +10,7 @@ namespace DiscoveryLight.Core.Device
 {
     public abstract class AbstractDevice
     {
+        protected readonly string deviceName;
         protected readonly string className;
         protected readonly Type classType;
         private int deviceNumber = 0;                               // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
@@ -19,6 +20,7 @@ namespace DiscoveryLight.Core.Device
 
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
+        public string DeviceName { get => deviceName; }
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
         public List<_Device> Devices { get { return devices; } set { devices = value; DeviceNumber = value.Count; } }
         public bool IsNull { get => isNull; set => isNull = value; }
@@ -109,10 +111,30 @@ namespace DiscoveryLight.Core.Device
         /// </summary>
         public virtual void UpdateDevice(String DeviceName) { }
 
+        /// <summary>
+        /// Get Collection from WprManagementObject
+        /// </summary>
+        public List<WprManagementObject> WmiCollection
+        {
+            get
+            {
+                var res = new WprManagementObjectSearcher(deviceName).All();
+                IsNull = (res == null);
+                return res ?? new List<WprManagementObject>() { new WprManagementObject() };
+            }
+        }
+
         public AbstractDevice()
         {
             this.className = this.GetType().Name;
             this.classType = this.GetType();
+        }
+
+        public AbstractDevice(String DeviceName)
+        {
+            this.className = this.GetType().Name;
+            this.classType = this.GetType();
+            this.deviceName = DeviceName;
         }
     }
 }
