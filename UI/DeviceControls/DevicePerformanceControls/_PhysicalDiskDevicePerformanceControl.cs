@@ -13,7 +13,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _PhysicalDiskDevicePerformanceControl : DevicePerformanceControl
+    public partial class _PhysicalDiskDevicePerformanceControl : DeviceControl
     {
         public _PhysicalDiskDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {

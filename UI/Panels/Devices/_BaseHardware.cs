@@ -18,13 +18,13 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _BaseHardware()
         {
             InitializeComponent();
-            this.ComputerSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(ComputerSystem)).First());
-            this.ComputerSystemProduct.InitData(Program.Devices.Where(d => d.ClassType == typeof(ComputerSystemProduct)).First());
-            this.OperatingSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(Core.Device.Data.OperatingSystem)).First());
+            this.ComputerSystem.Init(Program.Devices.Where(d => d.ClassType == typeof(ComputerSystem)).First());
+            this.ComputerSystemProduct.Init(Program.Devices.Where(d => d.ClassType == typeof(ComputerSystemProduct)).First());
+            this.OperatingSystem.Init(Program.Devices.Where(d => d.ClassType == typeof(Core.Device.Data.OperatingSystem)).First());
             
-            this._BaseFreeRamDevicePerformance.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_RAM)).First());
-            this._BaseFreeStorageDevicePerformance.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_DISK)).First());
-            this._BaseProcessorUsageDevicePerformance.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_CPU)).First());
+            this._BaseFreeRamDevicePerformance.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_RAM)).First());
+            this._BaseFreeStorageDevicePerformance.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_DISK)).First());
+            this._BaseProcessorUsageDevicePerformance.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_CPU)).First());
 
             // Init SubDevice
             this._BaseFreeRamDevicePerformance.CurrentSubDevice = this._BaseFreeRamDevicePerformance.CurrentDevice.Devices.First();

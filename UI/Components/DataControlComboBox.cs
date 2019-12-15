@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Device.Utils;
+using DiscoveryLight.UI.DeviceControls;
 using DiscoveryLight.UI.DeviceControls.DeviceDataControls;
 using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
@@ -15,14 +16,14 @@ namespace DiscoveryLight.UI.Components
     class DataControlComboBox: ComboBox
     {
         private List<DeviceData._Device> devices;
-        private DeviceDataControl currentDeviceDataControl;
-        private DevicePerformanceControl currentDevicePerformanceControl;
+        private DeviceControl currentDeviceDataControl;
+        private DeviceControl currentDevicePerformanceControl;
         private Action action;
         private String valueToUse;
 
         public List<DeviceData._Device> Devices { get => devices; set => devices = value; }
-        public DeviceDataControl CurrentDeviceDataControl { get => currentDeviceDataControl; set => currentDeviceDataControl = value; }
-        public DevicePerformanceControl CurrentDevicePerformanceControl { get => currentDevicePerformanceControl; set => currentDevicePerformanceControl = value; }
+        public DeviceControl CurrentDeviceDataControl { get => currentDeviceDataControl; set => currentDeviceDataControl = value; }
+        public DeviceControl CurrentDevicePerformanceControl { get => currentDevicePerformanceControl; set => currentDevicePerformanceControl = value; }
         public Action Action { get => action; set => action = value; }
         private String ValueToUse { get => valueToUse; set => valueToUse = value; }
 
@@ -85,7 +86,7 @@ namespace DiscoveryLight.UI.Components
             ChargeListOfSubDevicesInit();
         }
 
-        public void Init(DeviceDataControl DeviceDataControl, DevicePerformanceControl DevicePerformanceControl, Action ExtendedAction)
+        public void Init(DeviceControl DeviceDataControl, DeviceControl DevicePerformanceControl, Action ExtendedAction)
         {
             this.CurrentDeviceDataControl = DeviceDataControl;
             this.CurrentDevicePerformanceControl = DevicePerformanceControl;

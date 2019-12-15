@@ -12,7 +12,7 @@ using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _PhysicalDiskDeviceDataControl : DeviceDataControl
+    public partial class _PhysicalDiskDeviceDataControl : DeviceControl
     {
         public _PhysicalDiskDeviceDataControl(DeviceData Device) : base(Device)
         {

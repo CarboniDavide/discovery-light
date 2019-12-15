@@ -12,7 +12,7 @@ using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _ComputerSystemProductDataControl : DeviceDataControl
+    public partial class _ComputerSystemProductDataControl : DeviceControl
     {
         public _ComputerSystemProductDataControl(DeviceData Device) : base(Device)
         {

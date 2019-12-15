@@ -17,7 +17,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Audio()
         {
             InitializeComponent();
-            this.AudioDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(SoundDevice)).First());
+            this.AudioDeviceDataControl.Init(Program.Devices.Where(d => d.ClassType == typeof(SoundDevice)).First());
         }
 
         private void _Audio_Load(object sender, EventArgs e)

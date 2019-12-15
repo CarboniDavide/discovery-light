@@ -19,9 +19,9 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _CPU()
         {
             InitializeComponent();
-            this.CpuDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_CPU)).First());
-            this.SystemDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_SYSTEM)).First());
-            this.CpuDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(Processor)).First());
+            this.CpuDevicePerformanceControl.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_CPU)).First());
+            this.SystemDevicePerformanceControl.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_SYSTEM)).First());
+            this.CpuDeviceDataControl.Init(Program.Devices.Where(d => d.ClassType == typeof(Processor)).First());
 
             // init subdevice
             this.SystemDevicePerformanceControl.CurrentSubDevice = this.SystemDevicePerformanceControl.CurrentDevice.Devices.First();

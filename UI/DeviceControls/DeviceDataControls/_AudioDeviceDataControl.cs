@@ -12,7 +12,7 @@ using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _AudioDeviceDataControl : DeviceDataControl
+    public partial class _AudioDeviceDataControl : DeviceControl
     {
         public _AudioDeviceDataControl(DeviceData Device) :base(Device)
         {

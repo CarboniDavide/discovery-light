@@ -18,8 +18,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Network()
         {
             InitializeComponent();
-            this.NetworkDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_NETWORK)).First());
-            this.NetworkDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(NetworkAdapter)).First());
+            this.NetworkDevicePerformanceControl.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_NETWORK)).First());
+            this.NetworkDeviceDataControl.Init(Program.Devices.Where(d => d.ClassType == typeof(NetworkAdapter)).First());
         }
 
         private void _Network_Load(object sender, EventArgs e)

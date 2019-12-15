@@ -18,9 +18,9 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Memory()
         {
             InitializeComponent();
-            this.MemoryDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_RAM)).First());
-            this.PhysicalMemoryDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(PhysicalMemory)).First());
-            this.PhysicalMemoryArrayDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(PhysicalMemoryArray)).First());
+            this.MemoryDevicePerformanceControl.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_RAM)).First());
+            this.PhysicalMemoryDataControl.Init(Program.Devices.Where(d => d.ClassType == typeof(PhysicalMemory)).First());
+            this.PhysicalMemoryArrayDataControl.Init(Program.Devices.Where(d => d.ClassType == typeof(PhysicalMemoryArray)).First());
         }
 
         private void _Memory_Load(object sender, EventArgs e)

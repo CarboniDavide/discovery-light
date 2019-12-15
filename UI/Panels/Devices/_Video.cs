@@ -17,7 +17,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _Video()
         {
             InitializeComponent();
-            this.VideoDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(VideoController)).First());
+            this.VideoDeviceDataControl.Init(Program.Devices.Where(d => d.ClassType == typeof(VideoController)).First());
         }
 
         private void _Video_Load(object sender, EventArgs e)

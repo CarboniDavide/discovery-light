@@ -12,7 +12,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _BaseProcessorUsageDevicePerformance : DevicePerformanceControl
+    public partial class _BaseProcessorUsageDevicePerformance : DeviceControl
     {
         public _BaseProcessorUsageDevicePerformance(DevicePerformance Performance) : base(Performance)
         {

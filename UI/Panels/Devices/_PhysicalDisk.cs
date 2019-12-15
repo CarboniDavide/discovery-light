@@ -18,8 +18,8 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _PhysicalDisk()
         {
             InitializeComponent();
-            this.PhysicalDiskDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_DISK)).First());
-            this.PhysicalDiskDeviceDataControl.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiskDrive)).First());
+            this.PhysicalDiskDevicePerformanceControl.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_DISK)).First());
+            this.PhysicalDiskDeviceDataControl.Init(Program.Devices.Where(d => d.ClassType == typeof(DiskDrive)).First());
         }
 
         private void _PhysicalDisk_Load(object sender, EventArgs e)

@@ -119,9 +119,6 @@
     <Compile Include="UI\DeviceControls\DeviceDataControls\_BiosDeviceDataControl.Designer.cs">
       <DependentUpon>_BiosDeviceDataControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\DeviceControls\DeviceDataControls\DeviceDataControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_ComputerSystemDataControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,9 +190,6 @@
     </Compile>
     <Compile Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.Designer.cs">
       <DependentUpon>_VideoControllerDataControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\DeviceControls\DevicePerformanceControls\DevicePerformanceControl.cs">
-      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeStorageDevicePerformance.cs">
       <SubType>UserControl</SubType>

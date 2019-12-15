@@ -1,4 +1,6 @@
-﻿using DiscoveryLight.UI.BaseUserControl;
+﻿using DiscoveryLight.Core.Device;
+using DiscoveryLight.Core.Device.Utils;
+using DiscoveryLight.UI.BaseUserControl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +20,8 @@ namespace DiscoveryLight.UI.DeviceControls
         protected abstract void abort();        // abort to update
         protected abstract void show();         // define action to show results in update
         protected abstract void start();        // load task in background then update and show until abort is requested
+
+        public abstract void Init(AbstractDevice Device);
 
         // event handler associated to each methods. Each of them is raised when a method is called
         public event EventHandler OnStart;
@@ -57,7 +61,7 @@ namespace DiscoveryLight.UI.DeviceControls
         }
     }
 
-    public class DeviceControl: AbstractDeviceControl
+    public partial class DeviceControl: AbstractDeviceControl
     {
         private CancellationTokenSource tokenSource;
         private CancellationToken token;
@@ -128,6 +132,61 @@ namespace DiscoveryLight.UI.DeviceControls
         public DeviceControl() {
             this.className = this.GetType().Name;
             this.classType = this.GetType();
+        }
+    }
+
+    public partial class DeviceControl : AbstractDeviceControl
+    {
+        private AbstractDevice currentDevice;               // main device type
+        private AbstractDevice._Device currentSubDevice;     // a child for the current device    
+
+        public AbstractDevice CurrentDevice
+        {
+            get { return currentDevice; }
+            set
+            {
+                if (value == null) return;
+                currentDevice = value;
+                if (currentDevice.Devices.Count == 0) currentDevice.UpdateCollection();
+                CurrentSubDevice = currentDevice.Devices.First();
+            }
+        }
+        public AbstractDevice._Device CurrentSubDevice
+        {
+            get
+            {
+                // return current sub device if nothing is specified as key or for null value (for VS rendering)
+                if (currentSubDevice == null) return currentSubDevice;
+                // no primary key -> use first as default
+                if (currentDevice.PrimaryKey == null) return currentDevice.Devices.First();
+                //  get the current value form field or the oldest subdevice for null value
+                string currentKey = (currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice) as MobProperty).AsString();
+                // get the device using primary key else use the currentSubDevice for null value
+                currentSubDevice = CurrentDevice.GetDevice(currentKey) ?? currentSubDevice;
+                return currentSubDevice;
+            }
+            set
+            {
+                currentSubDevice = value;
+                if (value != null) show();  // upadate UI when a new subdevice is selected
+            }
+        }
+
+        public override void Init(AbstractDevice Device)
+        {
+            CurrentDevice = Device;
+        }
+
+        public DeviceControl(AbstractDevice Device)
+        {
+            Init(Device);
+        }
+
+        public DeviceControl(AbstractDevice Device, Boolean GetDriveInfo)
+        {
+            if (GetDriveInfo)
+                Device.UpdateCollection();
+            Init(Device);
         }
     }
 }
