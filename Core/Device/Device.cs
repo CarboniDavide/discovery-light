@@ -113,9 +113,16 @@ namespace DiscoveryLight.Core.Device
 
             foreach (_Device device in Devices)
             {
-                string Key = (device.GetType().GetField(PrimaryKey).GetValue(device) as MobProperty).AsString();
-                if (Key != null && Key.Equals(Value))
-                    return device;
+                try
+                {
+                    string Key = (device.GetType().GetField(PrimaryKey).GetValue(device) as MobProperty).AsString();
+                    if (Key != null && Key.Equals(Value))
+                        return device;
+                }
+                catch
+                {
+                    return null;
+                }
             }
 
             return null;
@@ -127,17 +134,42 @@ namespace DiscoveryLight.Core.Device
         /// <param name="Key"></param>
         /// <param name="Value"></param>
         /// <returns></returns>
-        public virtual _Device GetDevice(String Key, String Value)
+        public virtual _Device GetDevice(String Field, String Value)
         {
             foreach (_Device device in Devices)
             {
-                string Key = (device.GetType().GetField(Key).GetValue(device) as MobProperty).AsString();
-                if (Key != null && Key.Equals(Value))
-                    return device;
+                try
+                {
+                    string Key = (device.GetType().GetField(Field).GetValue(device) as MobProperty).AsString();
+                    if (Key != null && Key.Equals(Value))
+                        return device;
+                }
+                catch
+                {
+                    return null;
+                }
             }
 
             return null;
         }
+
+        /// <summary>
+        /// Get a selected device form device list that primarykey field contien value / convert device name if implemented
+        /// </summary>
+        /// <param name="Field"></param>
+        /// <param name="GetRelated"></param>
+        /// <returns></returns>
+        public virtual _Device GetDevice(String Field, Boolean GetRelated) { return null; }
+
+        /// <summary>
+        /// Get a selected device form device list where key field contien value / convert device name if implemented
+        /// </summary>
+        /// <param name="Field"></param>
+        /// <param name="Value"></param>
+        /// <param name="GetRelated"></param>
+        /// <returns></returns>
+        public virtual _Device GetDevice(String Field, String Value, Boolean GetRelated) { return null; }
+
         /// <summary>
         /// Update a single device from wmi class 
         /// </summary>
