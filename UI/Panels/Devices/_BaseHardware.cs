@@ -18,10 +18,18 @@ namespace DiscoveryLight.UI.Panels.Devices
         public _BaseHardware()
         {
             InitializeComponent();
-            this.BasePcDevicePerformanceControl.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_PC)).First());
-            this.ComputerSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiscoveryLight.Core.Device.Data.ComputerSystem)).First());
-            this.ComputerSystemProduct.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiscoveryLight.Core.Device.Data.ComputerSystemProduct)).First());
-            this.OperatingSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(DiscoveryLight.Core.Device.Data.OperatingSystem)).First());
+            this.ComputerSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(ComputerSystem)).First());
+            this.ComputerSystemProduct.InitData(Program.Devices.Where(d => d.ClassType == typeof(ComputerSystemProduct)).First());
+            this.OperatingSystem.InitData(Program.Devices.Where(d => d.ClassType == typeof(Core.Device.Data.OperatingSystem)).First());
+            
+            this._BaseFreeRamDevicePerformance.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_RAM)).First());
+            this._BaseFreeStorageDevicePerformance.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_DISK)).First());
+            this._BaseProcessorUsageDevicePerformance.InitPerformace(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_CPU)).First());
+
+            // Init SubDevice
+            this._BaseFreeRamDevicePerformance.CurrentSubDevice = this._BaseFreeRamDevicePerformance.CurrentDevice.Devices.First();
+            this._BaseFreeStorageDevicePerformance.CurrentSubDevice = this._BaseFreeStorageDevicePerformance.CurrentDevice.GetDevice("Name", "_Total");
+            this._BaseProcessorUsageDevicePerformance.CurrentSubDevice = this._BaseProcessorUsageDevicePerformance.CurrentDevice.GetDevice("Name", "_Total");
         }
     }
 }

@@ -28,22 +28,22 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void update()
         {
             base.update();
-            CurrentPerformance.GetPerformance();
+            CurrentDevice.UpdateCollection();
         }
 
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_DISK)this.CurrentPerformance;
-            chartDiskFree.FillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(100 - Convert.ToInt32(x)), CurrentPerformance.Percent_FreeSpace);
-            lbl_Free_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToInt32(x) / 1024).ToString(), CurrentPerformance.FreeSpace, "N/A", "{0:N0}") + " GB";
-            lbl_Write_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToUInt32(x) / 1024).ToString(), CurrentPerformance.WriteBytesPerSec, "N/A", "{0:N0}") + " KB";
-            lbl_Read_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToUInt32(x) / 1024).ToString(), CurrentPerformance.ReadBytesPerSec, "N/A", "{0:N0}") + " KB";
-            lbl_Transfer_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.TransferPerSec, "N/A", "{0:N0}");
-            chartReadTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.Percent_ReadTime);
-            chartWriteTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.Percent_WriteTime);
-            chartDiskTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.Percent_DiskTime);
-            chartIdleTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.Percent_IdleTime);
+            var CurrentPerformance = (PERFORM_DISK.Device)this.CurrentSubDevice;
+            chartDiskFree.FillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(100 - Convert.ToInt32(x)), CurrentPerformance.PercentFreeSpace.AsString());
+            lbl_Free_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToInt32(x) / 1024).ToString(), CurrentPerformance.FreeMegabytes.AsString(), "N/A", "{0:N0}") + " GB";
+            lbl_Write_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToUInt32(x) / 1024).ToString(), CurrentPerformance.DiskWriteBytesPersec.AsString(), "N/A", "{0:N0}") + " KB";
+            lbl_Read_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToUInt32(x) / 1024).ToString(), CurrentPerformance.DiskReadBytesPersec.AsString(), "N/A", "{0:N0}") + " KB";
+            lbl_Transfer_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.DiskTransfersPersec.AsString(), "N/A", "{0:N0}");
+            chartReadTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentDiskReadTime.AsString());
+            chartWriteTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentDiskWriteTime.AsString());
+            chartDiskTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentDiskTime.AsString());
+            chartIdleTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentIdleTime.AsString());
         }
     }
 }

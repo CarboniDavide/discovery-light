@@ -118,86 +118,20 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_ChartRAM.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
+  <data name="lbl_ChartCPU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lbl_ChartRAM.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_ChartRAM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 94</value>
-  </data>
-  <data name="lbl_ChartRAM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 13</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lbl_ChartRAM.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="lbl_ChartRAM.Text" xml:space="preserve">
-    <value>RAM</value>
-  </data>
-  <data name="lbl_ChartRAM.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartRAM.Name" xml:space="preserve">
-    <value>lbl_ChartRAM</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartRAM.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartRAM.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartRAM.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbl_ChartHD.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
-  <data name="lbl_ChartHD.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 8.25pt</value>
-  </data>
-  <data name="lbl_ChartHD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 217</value>
-  </data>
-  <data name="lbl_ChartHD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 13</value>
-  </data>
-  <data name="lbl_ChartHD.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="lbl_ChartHD.Text" xml:space="preserve">
-    <value>STORAGE</value>
-  </data>
-  <data name="lbl_ChartHD.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartHD.Name" xml:space="preserve">
-    <value>lbl_ChartHD</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartHD.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartHD.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lbl_ChartHD.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl_ChartCPU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Left, Right</value>
-  </data>
   <data name="lbl_ChartCPU.Font" type="System.Drawing.Font, System.Drawing">
     <value>Tahoma, 8.25pt</value>
   </data>
   <data name="lbl_ChartCPU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 338</value>
+    <value>0, 85</value>
   </data>
   <data name="lbl_ChartCPU.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 13</value>
+    <value>82, 13</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lbl_ChartCPU.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
   </data>
@@ -220,10 +154,10 @@
     <value>0</value>
   </data>
   <data name="chartCPU.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+    <value>Top</value>
   </data>
   <data name="chartCPU.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 254</value>
+    <value>0, 0</value>
   </data>
   <data name="chartCPU.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 82</value>
@@ -241,55 +175,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;chartCPU.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="chartHD.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="chartHD.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 132</value>
-  </data>
-  <data name="chartHD.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 82</value>
-  </data>
-  <data name="chartHD.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;chartHD.Name" xml:space="preserve">
-    <value>chartHD</value>
-  </data>
-  <data name="&gt;&gt;chartHD.Type" xml:space="preserve">
-    <value>WinformComponents.ChartCircle, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;chartHD.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chartHD.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="chartRAM.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="chartRAM.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 10</value>
-  </data>
-  <data name="chartRAM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 82</value>
-  </data>
-  <data name="chartRAM.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;chartRAM.Name" xml:space="preserve">
-    <value>chartRAM</value>
-  </data>
-  <data name="&gt;&gt;chartRAM.Type" xml:space="preserve">
-    <value>WinformComponents.ChartCircle, WinformComponents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;chartRAM.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chartRAM.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -298,10 +184,10 @@
     <value>6, 13</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 360</value>
+    <value>82, 106</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>_BasePcDevicePerformanceControl</value>
+    <value>_BaseProcessorUsageDevicePerformance</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>DiscoveryLight.UI.DeviceControls.DevicePerformanceControls.DevicePerformanceControl, DiscoveryLight, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>

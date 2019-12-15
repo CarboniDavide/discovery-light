@@ -197,11 +197,23 @@
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\DevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.cs">
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeStorageDevicePerformance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.Designer.cs">
-      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeStorageDevicePerformance.Designer.cs">
+      <DependentUpon>_BaseFreeStorageDevicePerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeRamDevicePerformance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeRamDevicePerformance.Designer.cs">
+      <DependentUpon>_BaseFreeRamDevicePerformance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BaseProcessorUsageDevicePerformance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\DeviceControls\DevicePerformanceControls\_BaseProcessorUsageDevicePerformance.Designer.cs">
+      <DependentUpon>_BaseProcessorUsageDevicePerformance.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.cs">
       <SubType>UserControl</SubType>
@@ -552,17 +564,41 @@
     <EmbeddedResource Include="UI\DeviceControls\DeviceDataControls\_VideoControllerDataControl.resx">
       <DependentUpon>_VideoControllerDataControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.de.resx">
-      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeStorageDevicePerformance.de.resx">
+      <DependentUpon>_BaseFreeStorageDevicePerformance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.fr.resx">
-      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeStorageDevicePerformance.fr.resx">
+      <DependentUpon>_BaseFreeStorageDevicePerformance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.it.resx">
-      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeStorageDevicePerformance.it.resx">
+      <DependentUpon>_BaseFreeStorageDevicePerformance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BasePcDevicePerformanceControl.resx">
-      <DependentUpon>_BasePcDevicePerformanceControl.cs</DependentUpon>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeStorageDevicePerformance.resx">
+      <DependentUpon>_BaseFreeStorageDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeRamDevicePerformance.de.resx">
+      <DependentUpon>_BaseFreeRamDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeRamDevicePerformance.fr.resx">
+      <DependentUpon>_BaseFreeRamDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeRamDevicePerformance.it.resx">
+      <DependentUpon>_BaseFreeRamDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseFreeRamDevicePerformance.resx">
+      <DependentUpon>_BaseFreeRamDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseProcessorUsageDevicePerformance.de.resx">
+      <DependentUpon>_BaseProcessorUsageDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseProcessorUsageDevicePerformance.fr.resx">
+      <DependentUpon>_BaseProcessorUsageDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseProcessorUsageDevicePerformance.it.resx">
+      <DependentUpon>_BaseProcessorUsageDevicePerformance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_BaseProcessorUsageDevicePerformance.resx">
+      <DependentUpon>_BaseProcessorUsageDevicePerformance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\DeviceControls\DevicePerformanceControls\_CpuDevicePerformanceControl.de.resx">
       <DependentUpon>_CpuDevicePerformanceControl.cs</DependentUpon>

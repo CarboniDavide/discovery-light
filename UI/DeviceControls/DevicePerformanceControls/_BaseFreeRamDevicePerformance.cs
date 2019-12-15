@@ -8,20 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
-using DiscoveryLight.Core.Commun;
 using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _SystemDevicePerformanceControl : DevicePerformanceControl
+    public partial class _BaseFreeRamDevicePerformance : DevicePerformanceControl
     {
-        public _SystemDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
+        public _BaseFreeRamDevicePerformance(DevicePerformance Performance) : base(Performance)
         {
             InitializeComponent();
         }
 
-        public _SystemDevicePerformanceControl() : base() 
-        {
+        public _BaseFreeRamDevicePerformance() : base() {
             InitializeComponent();
         }
 
@@ -30,12 +28,12 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             base.update();
             CurrentDevice.UpdateCollection();
         }
+
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_SYSTEM.Device)this.CurrentSubDevice;
-            lbl_Threads_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Threads.AsString(), "N/A", "{0:N0}");
-            lbl_Process_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Processes.AsString(), "N/A", "{0:N0}");
+            var CurrentPerformance = (PERFORM_RAM.Device)this.CurrentSubDevice;
+            chartRAM.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PerUsage.AsString());
         }
     }
 }

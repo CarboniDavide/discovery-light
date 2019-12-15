@@ -78,8 +78,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             resources.ApplyResources(this.NetworkDevicePerformanceControl, "NetworkDevicePerformanceControl");
             this.NetworkDevicePerformanceControl.ClassName = "_NetworkDevicePerformanceControl";
             this.NetworkDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._NetworkDevicePerformanceControl);
-            this.NetworkDevicePerformanceControl.CurrentPerformance = null;
-            this.NetworkDevicePerformanceControl.CurrentSubDevice = 0;
             this.NetworkDevicePerformanceControl.Name = "NetworkDevicePerformanceControl";
             this.NetworkDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.NetworkDevicePerformanceControl.TokenSource = cancellationTokenSource2;

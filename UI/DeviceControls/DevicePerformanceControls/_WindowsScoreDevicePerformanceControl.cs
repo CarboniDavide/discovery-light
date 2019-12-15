@@ -27,18 +27,18 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void update()
         {
             base.update();
-            CurrentPerformance.GetPerformance();
+            CurrentDevice.UpdateCollection();
         }
 
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_SCORE)this.CurrentPerformance;
-            chartBar_Cpu.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Cpu);
-            chartBar_D3D.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.D3D); ;
-            chartBar_Hd.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Hd);
-            chartBar_Graph.BarFillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Graph);
-            chartBar_Ram.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.Ram);
+            var CurrentPerformance = (PERFORM_SCORE.Device)this.CurrentSubDevice;
+            chartBar_Cpu.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.CPUScore.AsString());
+            chartBar_D3D.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.D3DScore.AsString());
+            chartBar_Hd.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.DiskScore.AsString());
+            chartBar_Graph.BarFillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.GraphicsScore.AsString());
+            chartBar_Ram.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.MemoryScore.AsString());
             abort();
         }
     }

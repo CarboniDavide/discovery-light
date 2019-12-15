@@ -79,8 +79,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             resources.ApplyResources(this.PhysicalDiskDevicePerformanceControl, "PhysicalDiskDevicePerformanceControl");
             this.PhysicalDiskDevicePerformanceControl.ClassName = "_PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._PhysicalDiskDevicePerformanceControl);
-            this.PhysicalDiskDevicePerformanceControl.CurrentPerformance = null;
-            this.PhysicalDiskDevicePerformanceControl.CurrentSubDevice = 0;
             this.PhysicalDiskDevicePerformanceControl.Name = "PhysicalDiskDevicePerformanceControl";
             this.PhysicalDiskDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.PhysicalDiskDevicePerformanceControl.TokenSource = cancellationTokenSource2;

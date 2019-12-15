@@ -53,8 +53,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             resources.ApplyResources(this.CpuDevicePerformanceControl, "CpuDevicePerformanceControl");
             this.CpuDevicePerformanceControl.ClassName = "_CpuDevicePerformanceControl";
             this.CpuDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._CpuDevicePerformanceControl);
-            this.CpuDevicePerformanceControl.CurrentPerformance = null;
-            this.CpuDevicePerformanceControl.CurrentSubDevice = 0;
             this.CpuDevicePerformanceControl.Name = "CpuDevicePerformanceControl";
             this.CpuDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.CpuDevicePerformanceControl.TokenSource = cancellationTokenSource1;
@@ -76,8 +74,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             this.SystemDevicePerformanceControl.BackColor = System.Drawing.Color.Transparent;
             this.SystemDevicePerformanceControl.ClassName = "_SystemDevicePerformanceControl";
             this.SystemDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._SystemDevicePerformanceControl);
-            this.SystemDevicePerformanceControl.CurrentPerformance = null;
-            this.SystemDevicePerformanceControl.CurrentSubDevice = 0;
             this.SystemDevicePerformanceControl.Name = "SystemDevicePerformanceControl";
             this.SystemDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
             this.SystemDevicePerformanceControl.TokenSource = cancellationTokenSource3;

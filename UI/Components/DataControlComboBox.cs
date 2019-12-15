@@ -15,14 +15,14 @@ namespace DiscoveryLight.UI.Components
     class DataControlComboBox: ComboBox
     {
         private List<DeviceData._Device> devices;
-        private DeviceDataControl currentDeviceControl;
-        private DevicePerformanceControl relatedPerformance;
+        private DeviceDataControl currentDeviceDataControl;
+        private DevicePerformanceControl currentDevicePerformanceControl;
         private Action action;
         private String valueToUse;
 
         public List<DeviceData._Device> Devices { get => devices; set => devices = value; }
-        public DeviceDataControl CurrentDeviceControl { get => currentDeviceControl; set => currentDeviceControl = value; }
-        public DevicePerformanceControl RelatedPerformance { get => relatedPerformance; set => relatedPerformance = value; }
+        public DeviceDataControl CurrentDeviceDataControl { get => currentDeviceDataControl; set => currentDeviceDataControl = value; }
+        public DevicePerformanceControl CurrentDevicePerformanceControl { get => currentDevicePerformanceControl; set => currentDevicePerformanceControl = value; }
         public Action Action { get => action; set => action = value; }
         private String ValueToUse { get => valueToUse; set => valueToUse = value; }
 
@@ -30,7 +30,7 @@ namespace DiscoveryLight.UI.Components
         {
             // fill list with all available devices
             List<String> devices = new List<string>();
-            if (CurrentDeviceControl.CurrentDevice == null || CurrentDeviceControl.CurrentDevice.IsNull)
+            if (CurrentDeviceDataControl.CurrentDevice == null || CurrentDeviceDataControl.CurrentDevice.IsNull)
             {
                 this.Enabled = false;
                 return;
@@ -39,7 +39,7 @@ namespace DiscoveryLight.UI.Components
             {
                 this.Enabled = true;
             }
-            foreach (DeviceData._Device device in CurrentDeviceControl.CurrentDevice.Devices)
+            foreach (DeviceData._Device device in CurrentDeviceDataControl.CurrentDevice.Devices)
                 devices.Add( (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString());
 
             // don't update loaded values in comboBox if not new devices are founded
@@ -65,8 +65,9 @@ namespace DiscoveryLight.UI.Components
         private void ChangeSubDevice(object sender, EventArgs e)
         {
             // get current device form Devices or oldest subdevice for null value
-            CurrentDeviceControl.CurrentSubDevice = CurrentDeviceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString()) ?? CurrentDeviceControl.CurrentSubDevice;
-            if (RelatedPerformance != null) RelatedPerformance.CurrentPerformance.CurrentSelected = this.SelectedItem.ToString();
+            CurrentDeviceDataControl.CurrentSubDevice = CurrentDeviceDataControl.CurrentDevice.GetDevice(this.SelectedItem.ToString()) ?? CurrentDeviceDataControl.CurrentSubDevice;
+            if (CurrentDevicePerformanceControl != null)
+                CurrentDevicePerformanceControl.CurrentSubDevice = CurrentDevicePerformanceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString(), true) ?? CurrentDeviceDataControl.CurrentSubDevice;
             if (Action != null) Action.Invoke(); 
         }
 
@@ -75,21 +76,20 @@ namespace DiscoveryLight.UI.Components
             // fill the list with all founded devices
             this.ChargeListOfSubDevicesInit();
             // run when update occured. Check if a physical disk drive are added or removed
-            CurrentDeviceControl.OnUpdateFinish += new EventHandler(OnDeviceUpdateFinish);
+            CurrentDeviceDataControl.OnUpdateFinish += new EventHandler(OnDeviceUpdateFinish);
         }
 
         private void OnDeviceUpdateFinish(object sender, EventArgs e)
         {
             // check if a device has been removed or added then update list for selection
-            this.Invoke((System.Action)(() => { ChargeListOfSubDevicesInit(); }));
-            
+            ChargeListOfSubDevicesInit();
         }
 
-        public void Init(DeviceDataControl DeviceControl, DevicePerformanceControl RelatedPerformance, Action ExtendedAction)
+        public void Init(DeviceDataControl DeviceDataControl, DevicePerformanceControl DevicePerformanceControl, Action ExtendedAction)
         {
-            this.CurrentDeviceControl = DeviceControl;
-            this.RelatedPerformance = RelatedPerformance;
-            this.ValueToUse = CurrentDeviceControl.CurrentDevice.PrimaryKey;
+            this.CurrentDeviceDataControl = DeviceDataControl;
+            this.CurrentDevicePerformanceControl = DevicePerformanceControl;
+            this.ValueToUse = CurrentDeviceDataControl.CurrentDevice.PrimaryKey;
             this.SelectedIndexChanged += new System.EventHandler(this.ChangeSubDevice);
             this.Action = ExtendedAction;
             this.InitSubDevicesID();

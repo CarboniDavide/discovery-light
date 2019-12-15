@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.Core.Device.Utils;
 using DiscoveryLight.UI.BaseUserControl;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
@@ -19,20 +20,47 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 
     public class DevicePerformanceControl: AbstractDevicePerformanceControl
     {
-        private DevicePerformance currentPerformance;  // current main device performance type
-        private int currentSubDevice;                  // a child for the current performance             
+        private DevicePerformance currentDevice;               // main device type
+        private DevicePerformance._Device currentSubDevice;     // a child for the current device    
 
-        public int CurrentSubDevice { get => currentSubDevice; set => currentSubDevice = value; }
-        public DevicePerformance CurrentPerformance { get => currentPerformance; set => currentPerformance = value; }
+        public DevicePerformance CurrentDevice
+        {
+            get { return currentDevice; }
+            set
+            {
+                if (value == null) return;
+                currentDevice = value;
+                if (currentDevice.Devices.Count == 0) currentDevice.UpdateCollection();
+                CurrentSubDevice = currentDevice.Devices.First();
+            }
+        }
+        public DevicePerformance._Device CurrentSubDevice
+        {
+            get
+            {
+                // return current sub device if nothing is specified as key or for null value (for VS rendering)
+                if (currentSubDevice == null) return currentSubDevice;
+                // no primary key -> use first as default
+                if (currentDevice.PrimaryKey == null) return currentDevice.Devices.First();
+                //  get the current value form field or the oldest subdevice for null value
+                string currentKey = (currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice) as MobProperty).AsString();
+                // get the device using primary key else use the currentSubDevice for null value
+                currentSubDevice = CurrentDevice.GetDevice(currentKey) ?? currentSubDevice;
+                return currentSubDevice;
+            }
+            set
+            {
+                currentSubDevice = value;
+                if (value != null) show();  // upadate UI when a new subdevice is selected
+            }
+        }
 
         public override void InitPerformace(DevicePerformance Performance)
         {
-            CurrentPerformance = Performance;
-            currentSubDevice = 0;
+            CurrentDevice = Performance;
         }
 
         public DevicePerformanceControl(DevicePerformance Performance) {
-            if (Performance == null) return;
             InitPerformace(Performance);
         }
 

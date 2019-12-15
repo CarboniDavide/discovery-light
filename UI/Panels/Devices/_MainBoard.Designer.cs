@@ -55,8 +55,6 @@
             // 
             this.WindowsScoreDevicePerformanceControl.ClassName = "_WindowsScoreDevicePerformanceControl";
             this.WindowsScoreDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._WindowsScoreDevicePerformanceControl);
-            this.WindowsScoreDevicePerformanceControl.CurrentPerformance = null;
-            this.WindowsScoreDevicePerformanceControl.CurrentSubDevice = 0;
             resources.ApplyResources(this.WindowsScoreDevicePerformanceControl, "WindowsScoreDevicePerformanceControl");
             this.WindowsScoreDevicePerformanceControl.Name = "WindowsScoreDevicePerformanceControl";
             this.WindowsScoreDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");

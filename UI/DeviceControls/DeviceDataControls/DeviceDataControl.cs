@@ -30,7 +30,8 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             {
                 if (value == null) return;
                 currentDevice = value;
-                CurrentSubDevice = (CurrentDevice.Devices.Count != 0) ? CurrentDevice.Devices.First() : new DeviceData._Device();
+                if (currentDevice.Devices.Count == 0) currentDevice.UpdateCollection();
+                CurrentSubDevice = currentDevice.Devices.First();
             }
         }
         public DeviceData._Device CurrentSubDevice
@@ -52,7 +53,6 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         public override void InitData(DeviceData Device)
         {
             CurrentDevice = Device;
-            CurrentSubDevice = (CurrentDevice.Devices.Count != 0) ? CurrentDevice.Devices.First() : new DeviceData._Device();
         }
 
         public DeviceDataControl(DeviceData Device) 

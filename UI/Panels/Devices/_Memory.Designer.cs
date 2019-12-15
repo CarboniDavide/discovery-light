@@ -51,11 +51,11 @@ namespace DiscoveryLight.UI.Panels.Devices
             // 
             this.cmb_Blocks.Action = null;
             resources.ApplyResources(this.cmb_Blocks, "cmb_Blocks");
-            this.cmb_Blocks.CurrentDeviceControl = null;
+            this.cmb_Blocks.CurrentDeviceDataControl = null;
             this.cmb_Blocks.Devices = null;
             this.cmb_Blocks.FormattingEnabled = true;
             this.cmb_Blocks.Name = "cmb_Blocks";
-            this.cmb_Blocks.RelatedPerformance = null;
+            this.cmb_Blocks.CurrentDevicePerformanceControl = null;
             // 
             // lbl_TitleComboBox
             // 
@@ -66,8 +66,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             // 
             this.MemoryDevicePerformanceControl.ClassName = "_MemoryDevicePerformanceControl";
             this.MemoryDevicePerformanceControl.ClassType = typeof(DiscoveryLight.UI.DeviceControls.DevicePerformanceControls._MemoryDevicePerformanceControl);
-            this.MemoryDevicePerformanceControl.CurrentPerformance = null;
-            this.MemoryDevicePerformanceControl.CurrentSubDevice = 0;
             resources.ApplyResources(this.MemoryDevicePerformanceControl, "MemoryDevicePerformanceControl");
             this.MemoryDevicePerformanceControl.Name = "MemoryDevicePerformanceControl";
             this.MemoryDevicePerformanceControl.Period = System.TimeSpan.Parse("00:00:00.5000000");
