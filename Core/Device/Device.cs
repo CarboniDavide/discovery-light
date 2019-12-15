@@ -64,6 +64,21 @@ namespace DiscoveryLight.Core.Device
                 return this;
             }
 
+            /// <summary>
+            /// Serialize all field with ManagementObject only for the specified fields using a custom field destination
+            /// </summary>
+            /// <param name="mj"></param>
+            /// <param name="ConvertAs"></param>
+            /// <returns></returns>
+            public _Device Serialize(WprManagementObject mj, Dictionary<string, string> ConvertAs)
+            {
+                foreach (FieldInfo field in this.GetType().GetFields())
+                    if (ConvertAs.ContainsKey(field.Name))
+                        field.SetValue(this, mj.GetProperty(ConvertAs[field.Name]));
+
+                return this;
+            }
+
         }
 
         /// <summary>
@@ -90,7 +105,7 @@ namespace DiscoveryLight.Core.Device
         public abstract void UpdateCollection(String Device);
 
         /// <summary>
-        /// Get a selected device form device list that primarykex field contien value
+        /// Get a selected device form device list that primarykey field contien value
         /// </summary>
         /// <param name="Device"></param>
         public virtual _Device GetDevice(String Value)
@@ -106,6 +121,23 @@ namespace DiscoveryLight.Core.Device
             return null;
         }
 
+        /// <summary>
+        /// Get a selected device form device list where key field contien value
+        /// </summary>
+        /// <param name="Key"></param>
+        /// <param name="Value"></param>
+        /// <returns></returns>
+        public virtual _Device GetDevice(String Key, String Value)
+        {
+            foreach (_Device device in Devices)
+            {
+                string Key = (device.GetType().GetField(Key).GetValue(device) as MobProperty).AsString();
+                if (Key != null && Key.Equals(Value))
+                    return device;
+            }
+
+            return null;
+        }
         /// <summary>
         /// Update a single device from wmi class 
         /// </summary>
