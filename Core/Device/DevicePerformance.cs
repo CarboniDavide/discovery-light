@@ -9,11 +9,23 @@ using DiscoveryLight.Core.Device.Utils;
 namespace DiscoveryLight.Core.Device.Performance
 {
     #region Interface
+    public interface IPreUpdate
+    {
+        /// <summary>
+        /// Use Pre load method before update
+        /// </summary>
+        void PreUpdate();
+
+        /// <summary>
+        /// Check if a update has been performed
+        /// </summary>
+        Boolean IsUpdated { get; set; }
+    }
 
     public interface IConvertable
     {
         /// <summary>
-        /// Use Pre load method before execute GetPerfomoramnce
+        /// Convert property before update
         /// </summary>
         String ConvertDeviceName(String DeviceName);
 
@@ -36,20 +48,26 @@ namespace DiscoveryLight.Core.Device.Performance
     /// Device Performance read all performance values for all subdevice for a selected device(drive)
     /// </summary>
     /// 
-    public class DevicePerformance: AbstractDevice, IConvertable
+    public class DevicePerformance: AbstractDevice, IConvertable, IPreUpdate
     {
         public Boolean IsConverted { get; set; }
 
+        public Boolean IsUpdated { get; set; }
+
         public String ValueToConvert { get; set; }
+
+        public virtual void PreUpdate() { }
 
         public virtual String ConvertDeviceName(String DeviceName) { return null; }
 
         public override List<_Device> GetCollection() {
+            PreUpdate();
             return new List<_Device>();
         }
 
         public override _Device GetCollection(string Device)
         {
+            PreUpdate();
             return new _Device();
         }
 
@@ -58,8 +76,8 @@ namespace DiscoveryLight.Core.Device.Performance
             Devices = GetCollection();
         }
 
-        public override void UpdateCollection(string Device) {
-
+        public override void UpdateCollection(string Device) 
+        {
             _Device Selected;
             int index=0;
             foreach (_Device device in Devices){
@@ -121,7 +139,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get usage for each selected cpu'thread
     /// </summary>
-    public class PERFORM_CPU: DevicePerformance, IConvertable
+    public class PERFORM_CPU: DevicePerformance, IConvertable, IPreUpdate
     {
         public class Device: _Device
         {
@@ -135,7 +153,7 @@ namespace DiscoveryLight.Core.Device.Performance
         // List of MaxSpeed for each mounted processors
         List<String> MaxSpeed = new List<String>();
 
-        private void GetMaxSpeed() {
+        public override void PreUpdate() {
             if (MaxSpeed.Count == 0)
                 foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_Processor").All())
                     MaxSpeed.Add(mj.GetProperty("MaxClockSpeed").AsString());
