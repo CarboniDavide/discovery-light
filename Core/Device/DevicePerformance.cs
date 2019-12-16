@@ -58,7 +58,23 @@ namespace DiscoveryLight.Core.Device.Performance
             Devices = GetCollection();
         }
 
-        public override void UpdateCollection(string Device) { }
+        public override void UpdateCollection(string Device) {
+
+            _Device Selected;
+            int index=0;
+            foreach (_Device device in Devices){
+                try{
+                    string Key = (device.GetType().GetField(PrimaryKey).GetValue(device) as MobProperty).AsString();
+                    if (Key != null && Key.Equals(Device))
+                        index = Devices.IndexOf(device); break;
+                }
+                catch{
+                    Selected = null;
+                }
+            }
+
+            Devices[index] = GetCollection(Device);
+        }
 
         public override _Device GetDevice(string DeviceName, bool GetRelated)
         {
@@ -119,11 +135,14 @@ namespace DiscoveryLight.Core.Device.Performance
         // List of MaxSpeed for each mounted processors
         List<String> MaxSpeed = new List<String>();
 
+        private void GetMaxSpeed() {
+            if (MaxSpeed.Count == 0)
+                foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_Processor").All())
+                    MaxSpeed.Add(mj.GetProperty("MaxClockSpeed").AsString());
+        }
+
         public override String ConvertDeviceName(String DeviceName)
         {
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_Processor").All())
-                MaxSpeed.Add(mj.GetProperty("MaxClockSpeed").AsString());
-
             var mjx = new WprManagementObjectSearcher("Win32_Processor").Find("Name", DeviceName, "=").First();
             return mjx.GetProperty("DeviceID").AsSubString(3, 1) + ",_Total";
         }
@@ -308,6 +327,65 @@ namespace DiscoveryLight.Core.Device.Performance
             return DeviceName.Replace("(", "[").Replace(")", "]"); 
         }
 
+
+        public override _Device GetCollection(string Device)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(deviceName).First(PrimaryKey, Device, "=");
+            UInt64? Den;
+            var t = new Device().Serialize(mj) as Device;
+            // convert values
+            if (t.BytesTotalPersec.AsString() != null)
+            {
+                Den = (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100);
+
+                if (Den != 0)
+                {
+                    var percentBytesReceived = t.BytesReceivedPersec.AsString() != null ? (Convert.ToUInt64(t.BytesReceivedPersec.AsString()) / (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100)).ToString() : null;
+                    t.PercentBytesReceived = new MobProperty(percentBytesReceived);
+                    var percentBytesSent = t.BytesSentPersec.AsString() != null ? (Convert.ToUInt64(t.BytesSentPersec.AsString()) / (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100)).ToString() : null;
+                    t.PercentBytesSent = new MobProperty(percentBytesSent);
+                }
+                else
+                {
+                    t.PercentBytesReceived = new MobProperty("0");
+                    t.PercentBytesSent = new MobProperty("0");
+                }
+            }
+            else
+            {
+                t.PercentBytesReceived = new MobProperty(null);
+                t.PercentBytesSent = new MobProperty(null);
+            }
+
+            if (t.PacketsPersec.AsString() != null)
+            {
+                Den = (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100);
+                if (Den != 0)
+                {
+                    var percentPacketsReceived = t.PacketsReceivedPersec.AsString() != null ? (Convert.ToUInt64(t.PacketsReceivedPersec.AsString()) / (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100)).ToString() : null;
+                    t.PercentPacketsReceived = new MobProperty(percentPacketsReceived);
+                    var percentPacketsSents = t.PacketsSentPersec.AsString() != null ? (Convert.ToUInt64(t.PacketsSentPersec.AsString()) / (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100)).ToString() : null;
+                    t.PercentPacketsSents = new MobProperty(percentPacketsSents);
+                }
+                else
+                {
+                    t.PercentPacketsSents = new MobProperty("0");
+                    t.PercentPacketsReceived = new MobProperty("0");
+                }
+            }
+            else
+            {
+                t.PercentPacketsReceived = new MobProperty(null);
+                t.PercentPacketsSents = new MobProperty(null);
+            }
+
+            var mjx = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", t.Name.AsString(), "=") ?? new WprManagementObject();
+            t.Serialize(mjx, new Dictionary<string, string> { { "TotalBytesReceived", "BytesReceivedPersec" }, { "TotalBytesSent", "BytesSentPersec" }, { "TotalBytes", "BytesTotalPersec" } });
+
+            return t;
+        }
 
         public override List<_Device> GetCollection()
         {
