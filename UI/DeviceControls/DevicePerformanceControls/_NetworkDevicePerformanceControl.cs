@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Commun;
 using DiscoveryLight.UI.Charts;
+using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -28,7 +29,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void update()
         {
             base.update();
-            CurrentDevice.UpdateCollection();
+            CurrentDevice.UpdateCollection((CurrentSubDevice.GetType().GetField(CurrentDevice.PrimaryKey).GetValue(CurrentSubDevice) as MobProperty).AsString());
         }
         protected override void show()
         {
