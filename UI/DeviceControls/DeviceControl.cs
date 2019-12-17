@@ -138,7 +138,7 @@ namespace DiscoveryLight.UI.DeviceControls
     public partial class DeviceControl : AbstractDeviceControl
     {
         private AbstractDevice currentDevice;               // main device type
-        private AbstractDevice._Device currentSubDevice;     // a child for the current device    
+        private _Device currentSubDevice;     // a child for the current device    
 
         public AbstractDevice CurrentDevice
         {
@@ -151,7 +151,7 @@ namespace DiscoveryLight.UI.DeviceControls
                 CurrentSubDevice = currentDevice.Devices.First();
             }
         }
-        public AbstractDevice._Device CurrentSubDevice
+        public _Device CurrentSubDevice
         {
             get
             {

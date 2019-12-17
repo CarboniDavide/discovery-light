@@ -8,6 +8,61 @@ using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.Core.Device
 {
+    /// <summary>
+    /// Base device class. All device have a name and a DeviceId
+    /// </summary>
+    public class _Device
+    {
+        public MobProperty DeviceID;
+        public MobProperty Name;
+        public MobProperty Caption;
+        public MobProperty Description;
+
+        /// <summary>
+        /// Serialize all field with ManagementObject
+        /// </summary>
+        /// <param name="mj"></param>
+        /// <returns></returns>
+        public _Device Serialize(WprManagementObject mj)
+        {
+            foreach (FieldInfo field in this.GetType().GetFields())
+                field.SetValue(this, mj.GetProperty(field.Name));
+
+            return this;
+        }
+
+        /// <summary>
+        /// Serialize all field with ManagementObject only for the specified fields
+        /// </summary>
+        /// <param name="mj"></param>
+        /// <param name="Fields"></param>
+        /// <returns></returns>
+        public _Device Serialize(WprManagementObject mj, List<String> Fields)
+        {
+            foreach (FieldInfo field in this.GetType().GetFields())
+                if (Fields.Contains(field.Name))
+                    field.SetValue(this, mj.GetProperty(field.Name));
+
+            return this;
+        }
+
+        /// <summary>
+        /// Serialize all field with ManagementObject only for the specified fields using a custom field destination
+        /// </summary>
+        /// <param name="mj"></param>
+        /// <param name="ConvertAs"></param>
+        /// <returns></returns>
+        public _Device Serialize(WprManagementObject mj, Dictionary<string, string> ConvertAs)
+        {
+            foreach (FieldInfo field in this.GetType().GetFields())
+                if (ConvertAs.ContainsKey(field.Name))
+                    field.SetValue(this, mj.GetProperty(ConvertAs[field.Name]));
+
+            return this;
+        }
+
+    }
+
     public abstract class AbstractDevice
     {
         protected readonly string deviceName;
@@ -25,61 +80,6 @@ namespace DiscoveryLight.Core.Device
         public List<_Device> Devices { get { return devices; } set { devices = value; DeviceNumber = value.Count; } }
         public bool IsNull { get => isNull; set => isNull = value; }
         public string PrimaryKey { get => primaryKey; set => primaryKey = value; }
-
-        /// <summary>
-        /// Base device class. All device have a name and a DeviceId
-        /// </summary>
-        public class _Device
-        {
-            public MobProperty DeviceID;
-            public MobProperty Name;
-            public MobProperty Caption;
-            public MobProperty Description;
-
-            /// <summary>
-            /// Serialize all field with ManagementObject
-            /// </summary>
-            /// <param name="mj"></param>
-            /// <returns></returns>
-            public _Device Serialize(WprManagementObject mj)
-            {
-                foreach (FieldInfo field in this.GetType().GetFields())
-                    field.SetValue(this, mj.GetProperty(field.Name));
-
-                return this;
-            }
-
-            /// <summary>
-            /// Serialize all field with ManagementObject only for the specified fields
-            /// </summary>
-            /// <param name="mj"></param>
-            /// <param name="Fields"></param>
-            /// <returns></returns>
-            public _Device Serialize(WprManagementObject mj, List<String> Fields)
-            {
-                foreach (FieldInfo field in this.GetType().GetFields())
-                    if (Fields.Contains(field.Name))
-                        field.SetValue(this, mj.GetProperty(field.Name));
-
-                return this;
-            }
-
-            /// <summary>
-            /// Serialize all field with ManagementObject only for the specified fields using a custom field destination
-            /// </summary>
-            /// <param name="mj"></param>
-            /// <param name="ConvertAs"></param>
-            /// <returns></returns>
-            public _Device Serialize(WprManagementObject mj, Dictionary<string, string> ConvertAs)
-            {
-                foreach (FieldInfo field in this.GetType().GetFields())
-                    if (ConvertAs.ContainsKey(field.Name))
-                        field.SetValue(this, mj.GetProperty(ConvertAs[field.Name]));
-
-                return this;
-            }
-
-        }
 
         /// <summary>
         /// Get collection from wmi class 

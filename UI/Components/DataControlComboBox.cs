@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DiscoveryLight.Core.Device;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Device.Utils;
@@ -15,13 +16,13 @@ namespace DiscoveryLight.UI.Components
 {
     class DataControlComboBox: ComboBox
     {
-        private List<DeviceData._Device> devices;
+        private List<_Device> devices;
         private DeviceControl currentDeviceDataControl;
         private DeviceControl currentDevicePerformanceControl;
         private Action action;
         private String valueToUse;
 
-        public List<DeviceData._Device> Devices { get => devices; set => devices = value; }
+        public List<_Device> Devices { get => devices; set => devices = value; }
         public DeviceControl CurrentDeviceDataControl { get => currentDeviceDataControl; set => currentDeviceDataControl = value; }
         public DeviceControl CurrentDevicePerformanceControl { get => currentDevicePerformanceControl; set => currentDevicePerformanceControl = value; }
         public Action Action { get => action; set => action = value; }
@@ -40,7 +41,7 @@ namespace DiscoveryLight.UI.Components
             {
                 this.Enabled = true;
             }
-            foreach (DeviceData._Device device in CurrentDeviceDataControl.CurrentDevice.Devices)
+            foreach (_Device device in CurrentDeviceDataControl.CurrentDevice.Devices)
                 devices.Add( (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString());
 
             // don't update loaded values in comboBox if not new devices are founded

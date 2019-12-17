@@ -11,6 +11,7 @@ using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
 using DiscoveryLight.UI.Charts;
+using DiscoveryLight.Core.Device;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -57,7 +58,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         }
 
         // perform cpu threads chart bar dynamically
-        public void GraphComponents_Add(DeviceData._Device Device)
+        public void GraphComponents_Add(_Device Device)
         {
             GraphComponents_Clear();
             int BarPosition;
