@@ -47,7 +47,7 @@
             this.chgBar_Devices.CustomText = null;
             this.chgBar_Devices.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.chgBar_Devices.Location = new System.Drawing.Point(0, 334);
-            this.chgBar_Devices.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chgBar_Devices.Margin = new System.Windows.Forms.Padding(4);
             this.chgBar_Devices.Name = "chgBar_Devices";
             this.chgBar_Devices.Size = new System.Drawing.Size(561, 3);
             this.chgBar_Devices.Style = WinformComponents.ChartBar.STYLE.Horizontal;
@@ -108,7 +108,6 @@
             this.Controls.Add(this.lbl_Company);
             this.Controls.Add(this.chgBar_Devices);
             this.Controls.Add(this.picBox_Components);
-            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;

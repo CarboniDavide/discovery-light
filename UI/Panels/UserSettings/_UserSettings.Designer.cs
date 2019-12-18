@@ -234,7 +234,6 @@ namespace DiscoveryLight.UI.Panels.UserSettings
             this.Controls.Add(this.lbl_It);
             this.Controls.Add(this.lbl_TitleLanguage);
             this.Controls.Add(this.pic_Divisor_001);
-            this.DoubleBuffered = true;
             this.Name = "_UserSettings";
             this.Load += new System.EventHandler(this._UserSettings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nmr_Freq)).EndInit();
