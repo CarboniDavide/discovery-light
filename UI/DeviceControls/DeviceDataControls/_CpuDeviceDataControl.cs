@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _CpuDeviceDataControl : DeviceControl
+    public partial class _CpuDeviceDataControl : DeviceDataControl
     {
         public _CpuDeviceDataControl(DeviceData Device) : base(Device)
-        {
-            InitializeComponent();
-        }
-
-        public _CpuDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
@@ -38,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentSubDevice = (Processor.Device)this.CurrentSubDevice;
+            var CurrentSubDevice = (Processor.SubDevice)this.CurrentSubDevice;
             lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name.AsString(), "N/A");
             lbl_Size_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.AddressWidth.AsString(), "N/A") + " bit";
             lbl_Description_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Description.AsString(), "N/A");

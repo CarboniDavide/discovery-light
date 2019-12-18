@@ -14,7 +14,7 @@ using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _NetworkDevicePerformanceControl : DeviceControl
+    public partial class _NetworkDevicePerformanceControl : DevicePerformanceControl
     {
         public _NetworkDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
@@ -34,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance= (PERFORM_NETWORK.Device)this.CurrentSubDevice;
+            var CurrentPerformance= (PERFORM_NETWORK.SubDevice)this.CurrentSubDevice;
 
             lbl_BytesReceived_Value.Text= DataConvert.AsDefaultValue(CurrentPerformance.BytesReceivedPersec.AsString(), "N/A", "{0:N0}");
             lbl_BytesSent_Value.Text= DataConvert.AsDefaultValue( CurrentPerformance.BytesSentPersec.AsString(), "N/A", "{0:N0}");

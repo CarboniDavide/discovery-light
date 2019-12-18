@@ -12,7 +12,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _BaseFreeStorageDevicePerformance : DeviceControl
+    public partial class _BaseFreeStorageDevicePerformance : DevicePerformanceControl
     {
         public _BaseFreeStorageDevicePerformance(DevicePerformance Performance) : base(Performance)
         {
@@ -32,7 +32,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_DISK.Device)this.CurrentSubDevice;
+            var CurrentPerformance = (PERFORM_DISK.SubDevice)this.CurrentSubDevice;
             chartHD.FillSize = ChartPerform.FillOrDefault(x => (100 - Convert.ToInt32(x)), CurrentPerformance.PercentFreeSpace.AsString());
         }
     }

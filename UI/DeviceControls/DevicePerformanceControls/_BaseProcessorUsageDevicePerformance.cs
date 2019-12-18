@@ -12,7 +12,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _BaseProcessorUsageDevicePerformance : DeviceControl
+    public partial class _BaseProcessorUsageDevicePerformance : DevicePerformanceControl
     {
         public _BaseProcessorUsageDevicePerformance(DevicePerformance Performance) : base(Performance)
         {
@@ -32,7 +32,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_CPU.Device)this.CurrentSubDevice;
+            var CurrentPerformance = (PERFORM_CPU.SubDevice)this.CurrentSubDevice;
             chartCPU.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentProcessorTime.AsString());
         }
     }

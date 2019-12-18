@@ -13,7 +13,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _PhysicalDiskDevicePerformanceControl : DeviceControl
+    public partial class _PhysicalDiskDevicePerformanceControl : DevicePerformanceControl
     {
         public _PhysicalDiskDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
@@ -34,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_DISK.Device)this.CurrentSubDevice;
+            var CurrentPerformance = (PERFORM_DISK.SubDevice)this.CurrentSubDevice;
             chartDiskFree.FillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(100 - Convert.ToInt32(x)), CurrentPerformance.PercentFreeSpace.AsString());
             lbl_Free_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToInt32(x) / 1024).ToString(), CurrentPerformance.FreeMegabytes.AsString(), "N/A", "{0:N0}") + " GB";
             lbl_Write_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToUInt32(x) / 1024).ToString(), CurrentPerformance.DiskWriteBytesPersec.AsString(), "N/A", "{0:N0}") + " KB";

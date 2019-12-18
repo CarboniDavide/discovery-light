@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _PhysicalMemoryArrayDataControl : DeviceControl
+    public partial class _PhysicalMemoryArrayDataControl : DeviceDataControl
     {
         public _PhysicalMemoryArrayDataControl(DeviceData Device) : base(Device)
-        {
-            InitializeComponent();
-        }
-
-        public _PhysicalMemoryArrayDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
@@ -38,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentDevice = (PhysicalMemoryArray.Device)this.CurrentSubDevice;
+            var CurrentDevice = (PhysicalMemoryArray.SubDevice)this.CurrentSubDevice;
             lbl_Size_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.MaxCapacity.AsString(), "N/A", "{0:N0}") + " Kbytes";
             lbl_Block_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.MemoryDevices.AsString(), "N/A");
             lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Caption.AsString(), "N/A");

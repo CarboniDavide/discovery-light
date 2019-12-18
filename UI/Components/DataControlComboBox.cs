@@ -16,15 +16,15 @@ namespace DiscoveryLight.UI.Components
 {
     class DataControlComboBox: ComboBox
     {
-        private List<_Device> devices;
-        private DeviceControl currentDeviceDataControl;
-        private DeviceControl currentDevicePerformanceControl;
+        private List<_SubDevice> devices;
+        private DeviceDataControl currentDeviceDataControl;
+        private DevicePerformanceControl currentDevicePerformanceControl;
         private Action action;
         private String valueToUse;
 
-        public List<_Device> Devices { get => devices; set => devices = value; }
-        public DeviceControl CurrentDeviceDataControl { get => currentDeviceDataControl; set => currentDeviceDataControl = value; }
-        public DeviceControl CurrentDevicePerformanceControl { get => currentDevicePerformanceControl; set => currentDevicePerformanceControl = value; }
+        public List<_SubDevice> Devices { get => devices; set => devices = value; }
+        public DeviceDataControl CurrentDeviceDataControl { get => currentDeviceDataControl; set => currentDeviceDataControl = value; }
+        public DevicePerformanceControl CurrentDevicePerformanceControl { get => currentDevicePerformanceControl; set => currentDevicePerformanceControl = value; }
         public Action Action { get => action; set => action = value; }
         private String ValueToUse { get => valueToUse; set => valueToUse = value; }
 
@@ -41,7 +41,7 @@ namespace DiscoveryLight.UI.Components
             {
                 this.Enabled = true;
             }
-            foreach (_Device device in CurrentDeviceDataControl.CurrentDevice.Devices)
+            foreach (_SubDevice device in CurrentDeviceDataControl.CurrentDevice.Devices)
                 devices.Add( (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString());
 
             // don't update loaded values in comboBox if not new devices are founded
@@ -87,7 +87,7 @@ namespace DiscoveryLight.UI.Components
             ChargeListOfSubDevicesInit();
         }
 
-        public void Init(DeviceControl DeviceDataControl, DeviceControl DevicePerformanceControl, Action ExtendedAction)
+        public void Init(DeviceDataControl DeviceDataControl, DevicePerformanceControl DevicePerformanceControl, Action ExtendedAction)
         {
             this.CurrentDeviceDataControl = DeviceDataControl;
             this.CurrentDevicePerformanceControl = DevicePerformanceControl;

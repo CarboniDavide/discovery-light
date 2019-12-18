@@ -13,7 +13,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _MemoryDevicePerformanceControl : DeviceControl
+    public partial class _MemoryDevicePerformanceControl : DevicePerformanceControl
     {
         public _MemoryDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
@@ -33,7 +33,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_RAM.Device)this.CurrentSubDevice;
+            var CurrentPerformance = (PERFORM_RAM.SubDevice)this.CurrentSubDevice;
             lbl_CacheUsage_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToUInt64(x) / 1048576).ToString(), CurrentPerformance.CacheBytes.AsString(), "N/A", "{0:N0}") + " MB";
             lbl_CacheUsageMax_Value.Text = DataConvert.AsDefaultValue(x => (Convert.ToUInt64(x) / 1048576).ToString(), CurrentPerformance.CacheBytesPeak.AsString(), "N/A", "{0:N0}") + " MB";
             lbl_RamOut_Value.Text = DataConvert.AsDefaultValue( x=> (Convert.ToUInt64(x) / 1048576).ToString(), CurrentPerformance.CommittedBytes.AsString(), "N/A", "{0:N0}") + " MB";

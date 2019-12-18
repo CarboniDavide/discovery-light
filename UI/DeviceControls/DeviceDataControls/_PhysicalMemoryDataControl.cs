@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _PhysicalMemoryDataControl : DeviceControl
+    public partial class _PhysicalMemoryDataControl : DeviceDataControl
     {
         public _PhysicalMemoryDataControl(DeviceData Device) : base(Device)
-        {
-            InitializeComponent();
-        }
-
-        public _PhysicalMemoryDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
@@ -38,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentSubDevice = (PhysicalMemory.Device)this.CurrentSubDevice;
+            var CurrentSubDevice = (PhysicalMemory.SubDevice)this.CurrentSubDevice;
             lbl_BlockSize_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Capacity.AsString(), "N/A", "{0:N0}") + " Kbytes";
             lbl_BlockSlotPosition_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.DeviceLocator.AsString(), "N/A");
             lbl_BlockLocation_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.BankLabel.AsString(), "N/A");

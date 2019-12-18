@@ -9,21 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _SystemSlotDataControl : DeviceControl
+    public partial class _SystemSlotDataControl : DeviceDataControl
     {
         public _SystemSlotDataControl(DeviceData Device) : base(Device)
         {
             InitializeComponent();
         }
-
-        public _SystemSlotDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
-        {
-            InitializeComponent();
-        }
-
+        
         public _SystemSlotDataControl() : base()
         {
             InitializeComponent();
@@ -38,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentDevice = (SystemSlot.Device)this.CurrentSubDevice;
+            var CurrentDevice = (SystemSlot.SubDevice)this.CurrentSubDevice;
             lbl_SlotNumber_Value.Text = DataConvert.AsDefaultValue(this.CurrentDevice.Devices.Count().ToString(), "N/A"); ;
             abort();
         }

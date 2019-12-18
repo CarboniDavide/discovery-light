@@ -13,7 +13,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _SystemDevicePerformanceControl : DeviceControl
+    public partial class _SystemDevicePerformanceControl : DevicePerformanceControl
     {
         public _SystemDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
@@ -33,7 +33,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_SYSTEM.Device)this.CurrentSubDevice;
+            var CurrentPerformance = (PERFORM_SYSTEM.SubDevice)this.CurrentSubDevice;
             lbl_Threads_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Threads.AsString(), "N/A", "{0:N0}");
             lbl_Process_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Processes.AsString(), "N/A", "{0:N0}");
         }

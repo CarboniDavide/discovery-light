@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _PhysicalDiskDeviceDataControl : DeviceControl
+    public partial class _PhysicalDiskDeviceDataControl : DeviceDataControl
     {
         public _PhysicalDiskDeviceDataControl(DeviceData Device) : base(Device)
-        {
-            InitializeComponent();
-        }
-
-        public _PhysicalDiskDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
@@ -38,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show()
         {
             base.show();
-            var CurrentSubDevice = (DiskDrive.Device)this.CurrentSubDevice;
+            var CurrentSubDevice = (DiskDrive.SubDevice)this.CurrentSubDevice;
             lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Caption.AsString(), "N/A");
             lbl_Tipology_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.MediaType.AsString(), "N/A");
             lbl_ConnectionType_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.InterfaceType.AsString(), "N/A");

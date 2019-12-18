@@ -12,7 +12,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _BaseFreeRamDevicePerformance : DeviceControl
+    public partial class _BaseFreeRamDevicePerformance : DevicePerformanceControl
     {
         public _BaseFreeRamDevicePerformance(DevicePerformance Performance) : base(Performance)
         {
@@ -32,7 +32,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_RAM.Device)this.CurrentSubDevice;
+            var CurrentPerformance = (PERFORM_RAM.SubDevice)this.CurrentSubDevice;
             chartRAM.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PerUsage.AsString());
         }
     }

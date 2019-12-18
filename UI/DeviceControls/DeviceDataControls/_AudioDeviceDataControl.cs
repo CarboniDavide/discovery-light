@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
+using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public partial class _AudioDeviceDataControl : DeviceControl
+    public partial class _AudioDeviceDataControl : DeviceDataControl
     {
         public _AudioDeviceDataControl(DeviceData Device) :base(Device)
-        {
-            InitializeComponent();
-        }
-
-        public _AudioDeviceDataControl(DeviceData Device, Boolean GetDriveInfo) : base(Device, GetDriveInfo)
         {
             InitializeComponent();
         }
@@ -38,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         protected override void show ()
         {
             base.show();
-            var CurrentSubDevice = (SoundDevice.Device)this.CurrentSubDevice;
+            var CurrentSubDevice = (SoundDevice.SubDevice)this.CurrentSubDevice;
             lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name.AsString(), "N/A");
             lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer.AsString(), "N/A");
             lbl_PowerManagment_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PowerManagementSupported.AsString(), "N/A");

@@ -15,7 +15,7 @@ using DiscoveryLight.Core.Device;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _CpuDevicePerformanceControl : DeviceControl
+    public partial class _CpuDevicePerformanceControl : DevicePerformanceControl
     {
         public _CpuDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
@@ -37,14 +37,14 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformanceCPU = (PERFORM_CPU.Device)this.CurrentSubDevice;
+            var CurrentPerformanceCPU = (PERFORM_CPU.SubDevice)this.CurrentSubDevice;
             lbl_CpuSpeed_Value.Text = DataConvert.AsDefaultValue(CurrentPerformanceCPU.Frequency.AsString(), "N/A", "{0:N0}") + " Mhz";
             chartCpuUsage.FillSize = ChartPerform.FillOrDefault( x=> Convert.ToInt16(x), CurrentPerformanceCPU.PercentProcessorTime.AsString());
             int i = 0;
             String currentCpu = CurrentSubDevice.Name.AsSubString(0, 1);
             foreach (WinformComponents.ChartBar ctrl in pnl_Threads.Controls.Find(typeof(WinformComponents.ChartBar).ToString(), false))
             {
-                ctrl.BarFillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(x), (CurrentDevice.Devices.Where(d => d.Name.AsString() == currentCpu + "," + i).First() as PERFORM_CPU.Device).PercentProcessorTime.AsString());
+                ctrl.BarFillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(x), (CurrentDevice.Devices.Where(d => d.Name.AsString() == currentCpu + "," + i).First() as PERFORM_CPU.SubDevice).PercentProcessorTime.AsString());
                 i++;
             }
         }
@@ -54,11 +54,11 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             Processor cpu = new Processor();
             cpu.UpdateCollection();
-            GraphComponents_Add((Processor.Device)cpu.Devices.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
+            GraphComponents_Add((Processor.SubDevice)cpu.Devices.Where(b => b.DeviceID.Equals(this.CurrentSubDevice.ToString())).FirstOrDefault());
         }
 
         // perform cpu threads chart bar dynamically
-        public void GraphComponents_Add(_Device Device)
+        public void GraphComponents_Add(_SubDevice Device)
         {
             GraphComponents_Clear();
             int BarPosition;
@@ -66,7 +66,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             int BarSize;
             int TextSize;
             
-            var CurrentSubDevice = (Processor.Device)Device;
+            var CurrentSubDevice = (Processor.SubDevice)Device;
 
             // define height between each chart bar
             Step = pnl_Threads.Height / (Convert.ToInt16(CurrentSubDevice.NumberOfLogicalProcessors.AsString()));

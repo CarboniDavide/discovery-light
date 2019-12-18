@@ -12,7 +12,7 @@ using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
-    public partial class _WindowsScoreDevicePerformanceControl : DeviceControl
+    public partial class _WindowsScoreDevicePerformanceControl : DevicePerformanceControl
     {
         public _WindowsScoreDevicePerformanceControl(DevicePerformance Performance) : base(Performance)
         {
@@ -33,7 +33,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void show()
         {
             base.show();
-            var CurrentPerformance = (PERFORM_SCORE.Device)this.CurrentSubDevice;
+            var CurrentPerformance = (PERFORM_SCORE.SubDevice)this.CurrentSubDevice;
             chartBar_Cpu.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.CPUScore.AsString());
             chartBar_D3D.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.D3DScore.AsString());
             chartBar_Hd.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.DiskScore.AsString());
