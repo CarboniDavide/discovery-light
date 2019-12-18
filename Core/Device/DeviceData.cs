@@ -492,7 +492,9 @@ namespace DiscoveryLight.Core.Device.Data
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj).Extend());
+                // use only connceted interface
+                if (mj.GetProperty("NetConnectionStatus").AsString() != null)
+                    collection.Add(new Device().Serialize(mj).Extend());
 
             return collection;
         }
