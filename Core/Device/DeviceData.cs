@@ -15,22 +15,8 @@ namespace DiscoveryLight.Core.Device.Data
     /// So Physical Disk is the main drive, and each of them is a subdevice(block)
     /// </summary>
     /// 
-    public abstract class DeviceData: AbstractDevice
+    public abstract class DeviceData: _Device
     {
-        public override List<_Device> GetCollection() {
-            // initialize array to contains each drive info
-            return new List<_Device>();
-        }
-
-        public override _Device GetCollection(String Device){ return new _Device(); }
-
-        public override void UpdateCollection(String Device) { }
-
-        public override void UpdateCollection()
-        {
-            Devices = GetCollection();
-        }
-
         public DeviceData(string deviceName) : base(deviceName) { }
     }
 
@@ -43,7 +29,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class ComputerSystem : DeviceData
     {
-        public class Device : _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty SystemType;
             public MobProperty Manufacturer;
@@ -53,12 +39,12 @@ namespace DiscoveryLight.Core.Device.Data
         }
 
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -75,18 +61,18 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class OperatingSystem : DeviceData
     {
-        public class Device:_Device{
+        public class SubDevice : _SubDevice{
             public MobProperty BuildNumber;
             public MobProperty Manufacturer;
             public MobProperty OSArchitecture;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
             
             return collection;
         }
@@ -103,17 +89,17 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class ComputerSystemProduct : DeviceData
     {
-        public class Device : _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty IdentifyingNumber;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -129,19 +115,19 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class BIOS: DeviceData
     {
-        public class Device : _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty Manufacturer;
             public MobProperty SerialNumber;
             public MobProperty ReleaseDate;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -159,19 +145,19 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class BaseBoard : DeviceData
     {
-        public class Device : _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty Manufacturer;
             public MobProperty Product;
             public MobProperty Version;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -189,18 +175,18 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class MotherboardDevice : DeviceData
     {
-        public class Device : _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty PrimaryBusType;
             public MobProperty SecondaryBusType;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -218,16 +204,16 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class SystemSlot : DeviceData
     {
-        public class Device : _Device
+        public class SubDevice : _SubDevice
         {
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -245,7 +231,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class VideoController : DeviceData
     {
-        public class Device: _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty AdapterCompatibility;
             public MobProperty AdapterDACType;
@@ -260,12 +246,12 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty VideoModeDescription;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -283,18 +269,18 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class SoundDevice : DeviceData
     {
-        public class Device: _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty Manufacturer;
             public MobProperty PowerManagementSupported;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -312,7 +298,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class Processor : DeviceData
     {
-        public class Device: _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty ProcessorId;
             public MobProperty AddressWidth;
@@ -326,12 +312,12 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty L3CacheSize;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -350,7 +336,7 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class PhysicalMemory : DeviceData
     {
-        public class Device: _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty Capacity;
             public MobProperty BankLabel;
@@ -363,12 +349,12 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty MinVoltage;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return  collection;
         }
@@ -386,18 +372,18 @@ namespace DiscoveryLight.Core.Device.Data
 
     public class PhysicalMemoryArray : DeviceData
     {
-        public class Device : _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty MaxCapacity;
             public MobProperty MemoryDevices;
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj));
+                collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
         }
@@ -414,7 +400,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class DiskDrive : DeviceData
     {
-        public class Device: _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty Index;
             public MobProperty DriveName;
@@ -430,7 +416,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty BytesPerSector;
             public MobProperty FirmwareRevision;
 
-            public override _Device Extend()
+            public override _SubDevice Extend()
             {
                 foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All())
                 {
@@ -444,12 +430,12 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new Device().Serialize(mj).Extend());
+                collection.Add(new SubDevice().Serialize(mj).Extend());
             
             return collection;
         }
@@ -466,7 +452,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class NetworkAdapter : DeviceData
     {
-        public class Device: _Device
+        public class SubDevice : _SubDevice
         {
             public MobProperty InterfaceIndex;
             public MobProperty NetConnectionID;
@@ -479,7 +465,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty DefaultIPGateway;
             public MobProperty DNSServerSearchOrder;
 
-            public override _Device Extend()
+            public override _SubDevice Extend()
             {
                 var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").First("Index", DeviceID.AsString(), "=");
                 Serialize(mjext, new List<string> { "IpAddress", "DefaultIPGateway", "DNSServerSearchOrder", "IpSubnet" });
@@ -487,14 +473,14 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
-        public override List<_Device> GetCollection()
+        public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
                 // use only connceted interface
                 if (mj.GetProperty("NetConnectionStatus").AsString() != null)
-                    collection.Add(new Device().Serialize(mj).Extend());
+                    collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;
         }
