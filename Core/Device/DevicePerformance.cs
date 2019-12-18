@@ -56,18 +56,20 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public String ValueToConvert { get; set; }
 
-        public virtual void PreUpdate() { }
+        public virtual void PreUpdate() {
+            IsUpdated = true;
+        }
 
         public virtual String ConvertDeviceName(String DeviceName) { return null; }
 
         public override List<_Device> GetCollection() {
-            PreUpdate();
+            if(!IsUpdated) PreUpdate();
             return new List<_Device>();
         }
 
         public override _Device GetCollection(string Device)
         {
-            PreUpdate();
+            if (!IsUpdated) PreUpdate();
             return new _Device();
         }
 
@@ -139,24 +141,38 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get usage for each selected cpu'thread
     /// </summary>
-    public class PERFORM_CPU: DevicePerformance, IConvertable, IPreUpdate
+    public class PERFORM_CPU : DevicePerformance, IConvertable, IPreUpdate
     {
-        public class Device: _Device
+        public class Device : _Device
         {
             public MobProperty PercentProcessorTime;
             public MobProperty Frequency;
             public MobProperty PercentofMaximumFrequency;
             public MobProperty ProcessorFrequency;
             public MobProperty PercentProcessorPerformance;
+            public MobProperty MaxSpeed;
+            public override _Device Extend(WprManagementObject Obj)
+            {
+                MaxSpeed = Obj == null ? null : Obj.GetProperty("MaxClockSpeed");
+
+                if (MaxSpeed == null || PercentProcessorPerformance == null)                         // use base frequency for tboost 
+                    Frequency = ProcessorFrequency;
+                else
+                {
+                    var frequency = Convert.ToInt16((Convert.ToUInt16(MaxSpeed.AsString())) / 100) * Convert.ToUInt16(PercentProcessorPerformance.AsString());
+                    Frequency = new MobProperty(frequency);
+                }
+
+                return this;
+            }
         }
 
-        // List of MaxSpeed for each mounted processors
-        List<String> MaxSpeed = new List<String>();
+        List<WprManagementObject> mjext;
 
-        public override void PreUpdate() {
-            if (MaxSpeed.Count == 0)
-                foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_Processor").All())
-                    MaxSpeed.Add(mj.GetProperty("MaxClockSpeed").AsString());
+        public override void PreUpdate()
+        {
+            base.PreUpdate();
+            mjext = new WprManagementObjectSearcher("Win32_Processor").All();
         }
 
         public override String ConvertDeviceName(String DeviceName)
@@ -170,27 +186,12 @@ namespace DiscoveryLight.Core.Device.Performance
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-            {
-                var t = new Device().Serialize(mj) as Device;
-
-                if (MaxSpeed.Count == 0 || t.PercentProcessorPerformance == null)                         // use base frequency for tboost 
-                    t.Frequency = t.ProcessorFrequency;
-                else
-                {
-                    int currentCpuMAxSpeedIndex;
-                    try{ currentCpuMAxSpeedIndex = Convert.ToInt16(t.Name.AsSubString(0, 1)); }
-                    catch { currentCpuMAxSpeedIndex = 0; }
-                    var frequency = Convert.ToUInt16((Convert.ToDouble(MaxSpeed[currentCpuMAxSpeedIndex]) / 100) * Convert.ToUInt16(t.PercentProcessorPerformance.AsString()));
-                    t.Frequency = new MobProperty(frequency);
-                }
-
-                collection.Add(t);
-            }
+                collection.Add(new Device().Serialize(mj).Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(mj.GetProperty("Name").AsSubString(0, 1))).FirstOrDefault()));
 
             return collection;
         }
 
-        public PERFORM_CPU(): base("Win32_PerfFormattedData_Counters_ProcessorInformation") { PrimaryKey = "Name"; }
+        public PERFORM_CPU() : base("Win32_PerfFormattedData_Counters_ProcessorInformation") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -241,6 +242,13 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty PagesPersec;
             public MobProperty PageWritesPersec;
             public MobProperty PageReadsPersec;
+
+            public override _Device Extend(WprManagementObject Obj)
+            {
+                var pUsage = (Convert.ToInt64(Obj.GetProperty("AvailableBytes").AsString()) / (Convert.ToInt64(Obj.GetProperty("CommitLimit").AsString()) / 100)).ToString();
+                PerUsage = new MobProperty(pUsage);
+                return this;
+            }
         }
 
         public override List<_Device> GetCollection()
@@ -248,12 +256,7 @@ namespace DiscoveryLight.Core.Device.Performance
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-            {
-                var t = new Device().Serialize(mj) as Device;
-                var pUsage = (Convert.ToInt64(mj.GetProperty("AvailableBytes").AsString()) / (Convert.ToInt64(mj.GetProperty("CommitLimit").AsString()) / 100)).ToString();
-                t.PerUsage = new MobProperty(pUsage);
-                collection.Add(t);
-            }
+                collection.Add(new Device().Serialize(mj).Extend(mj));
 
             return collection;
         }
@@ -338,6 +341,62 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty TotalBytesReceived;
             public MobProperty TotalBytesSent;
             public MobProperty TotalBytes;
+
+            public override _Device Extend(WprManagementObject Obj)
+            {
+                UInt64? Den;
+                if (BytesTotalPersec.AsString() != null)
+                {
+                    Den = (Convert.ToUInt64(BytesTotalPersec.AsString()) / 100);
+
+                    if (Den != 0)
+                    {
+                        var percentBytesReceived = BytesReceivedPersec.AsString() != null ? (Convert.ToUInt64(BytesReceivedPersec.AsString()) / (Convert.ToUInt64(BytesTotalPersec.AsString()) / 100)).ToString() : null;
+                        PercentBytesReceived = new MobProperty(percentBytesReceived);
+                        var percentBytesSent = BytesSentPersec.AsString() != null ? (Convert.ToUInt64(BytesSentPersec.AsString()) / (Convert.ToUInt64(BytesTotalPersec.AsString()) / 100)).ToString() : null;
+                        PercentBytesSent = new MobProperty(percentBytesSent);
+                    }
+                    else
+                    {
+                        PercentBytesReceived = new MobProperty("0");
+                        PercentBytesSent = new MobProperty("0");
+                    }
+                }
+                else
+                {
+                    PercentBytesReceived = new MobProperty(null);
+                    PercentBytesSent = new MobProperty(null);
+                }
+
+                if (PacketsPersec.AsString() != null)
+                {
+                    Den = (Convert.ToUInt64(PacketsPersec.AsString()) / 100);
+                    if (Den != 0)
+                    {
+                        var percentPacketsReceived = PacketsReceivedPersec.AsString() != null ? (Convert.ToUInt64(PacketsReceivedPersec.AsString()) / (Convert.ToUInt64(PacketsPersec.AsString()) / 100)).ToString() : null;
+                        PercentPacketsReceived = new MobProperty(percentPacketsReceived);
+                        var percentPacketsSents = PacketsSentPersec.AsString() != null ? (Convert.ToUInt64(PacketsSentPersec.AsString()) / (Convert.ToUInt64(PacketsPersec.AsString()) / 100)).ToString() : null;
+                        PercentPacketsSents = new MobProperty(percentPacketsSents);
+                    }
+                    else
+                    {
+                        PercentPacketsSents = new MobProperty("0");
+                        PercentPacketsReceived = new MobProperty("0");
+                    }
+                }
+                else
+                {
+                    PercentPacketsReceived = new MobProperty(null);
+                    PercentPacketsSents = new MobProperty(null);
+                }
+
+                var mjx = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", Name.AsString(), "=") ?? new WprManagementObject();
+                TotalBytesReceived = mjx.GetProperty("BytesReceivedPersec");
+                TotalBytesSent = mjx.GetProperty("BytesSentPersec");
+                TotalBytes = mjx.GetProperty("BytesTotalPersec");
+
+                return this;
+            }
         }
 
         public override String ConvertDeviceName(String DeviceName)
@@ -345,124 +404,12 @@ namespace DiscoveryLight.Core.Device.Performance
             return DeviceName.Replace("(", "[").Replace(")", "]"); 
         }
 
-
-        public override _Device GetCollection(string Device)
-        {
-            var collection = base.GetCollection();
-
-            var mj = new WprManagementObjectSearcher(deviceName).First(PrimaryKey, Device, "=");
-            UInt64? Den;
-            var t = new Device().Serialize(mj) as Device;
-            // convert values
-            if (t.BytesTotalPersec.AsString() != null)
-            {
-                Den = (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100);
-
-                if (Den != 0)
-                {
-                    var percentBytesReceived = t.BytesReceivedPersec.AsString() != null ? (Convert.ToUInt64(t.BytesReceivedPersec.AsString()) / (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100)).ToString() : null;
-                    t.PercentBytesReceived = new MobProperty(percentBytesReceived);
-                    var percentBytesSent = t.BytesSentPersec.AsString() != null ? (Convert.ToUInt64(t.BytesSentPersec.AsString()) / (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100)).ToString() : null;
-                    t.PercentBytesSent = new MobProperty(percentBytesSent);
-                }
-                else
-                {
-                    t.PercentBytesReceived = new MobProperty("0");
-                    t.PercentBytesSent = new MobProperty("0");
-                }
-            }
-            else
-            {
-                t.PercentBytesReceived = new MobProperty(null);
-                t.PercentBytesSent = new MobProperty(null);
-            }
-
-            if (t.PacketsPersec.AsString() != null)
-            {
-                Den = (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100);
-                if (Den != 0)
-                {
-                    var percentPacketsReceived = t.PacketsReceivedPersec.AsString() != null ? (Convert.ToUInt64(t.PacketsReceivedPersec.AsString()) / (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100)).ToString() : null;
-                    t.PercentPacketsReceived = new MobProperty(percentPacketsReceived);
-                    var percentPacketsSents = t.PacketsSentPersec.AsString() != null ? (Convert.ToUInt64(t.PacketsSentPersec.AsString()) / (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100)).ToString() : null;
-                    t.PercentPacketsSents = new MobProperty(percentPacketsSents);
-                }
-                else
-                {
-                    t.PercentPacketsSents = new MobProperty("0");
-                    t.PercentPacketsReceived = new MobProperty("0");
-                }
-            }
-            else
-            {
-                t.PercentPacketsReceived = new MobProperty(null);
-                t.PercentPacketsSents = new MobProperty(null);
-            }
-
-            var mjx = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", t.Name.AsString(), "=") ?? new WprManagementObject();
-            t.Serialize(mjx, new Dictionary<string, string> { { "TotalBytesReceived", "BytesReceivedPersec" }, { "TotalBytesSent", "BytesSentPersec" }, { "TotalBytes", "BytesTotalPersec" } });
-
-            return t;
-        }
-
         public override List<_Device> GetCollection()
         {
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-            {
-                UInt64? Den;
-                var t = new Device().Serialize(mj) as Device;
-                // convert values
-                if (t.BytesTotalPersec.AsString() != null)
-                {
-                    Den = (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100);
-
-                    if (Den != 0)
-                    {
-                        var percentBytesReceived = t.BytesReceivedPersec.AsString() != null ? (Convert.ToUInt64(t.BytesReceivedPersec.AsString()) / (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100)).ToString() : null;
-                        t.PercentBytesReceived = new MobProperty(percentBytesReceived);
-                        var percentBytesSent = t.BytesSentPersec.AsString() != null ? (Convert.ToUInt64(t.BytesSentPersec.AsString()) / (Convert.ToUInt64(t.BytesTotalPersec.AsString()) / 100)).ToString() : null;
-                        t.PercentBytesSent = new MobProperty(percentBytesSent);
-                    }
-                    else
-                    {
-                        t.PercentBytesReceived = new MobProperty("0");
-                        t.PercentBytesSent = new MobProperty("0");
-                    }
-                }
-                else
-                {
-                    t.PercentBytesReceived = new MobProperty(null);
-                    t.PercentBytesSent = new MobProperty(null);
-                }
-
-                if (t.PacketsPersec.AsString() != null)
-                {
-                    Den = (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100);
-                    if (Den != 0)
-                    {
-                        var percentPacketsReceived = t.PacketsReceivedPersec.AsString() != null ? (Convert.ToUInt64(t.PacketsReceivedPersec.AsString()) / (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100)).ToString() : null;
-                        t.PercentPacketsReceived = new MobProperty(percentPacketsReceived);
-                        var percentPacketsSents = t.PacketsSentPersec.AsString() != null ? (Convert.ToUInt64(t.PacketsSentPersec.AsString()) / (Convert.ToUInt64(t.PacketsPersec.AsString()) / 100)).ToString() : null;
-                        t.PercentPacketsSents = new MobProperty(percentPacketsSents);
-                    }
-                    else
-                    {
-                        t.PercentPacketsSents = new MobProperty("0");
-                        t.PercentPacketsReceived = new MobProperty("0");
-                    }
-                }
-                else
-                {
-                    t.PercentPacketsReceived = new MobProperty(null);
-                    t.PercentPacketsSents = new MobProperty(null);
-                }
-
-                var mjx = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", t.Name.AsString(), "=") ?? new WprManagementObject();
-                t.Serialize(mjx, new Dictionary<string, string> { { "TotalBytesReceived", "BytesReceivedPersec" }, { "TotalBytesSent", "BytesSentPersec" }, { "TotalBytes", "BytesTotalPersec" } });
-                collection.Add(t);
-            }
+                collection.Add(new Device().Serialize(mj));
 
             return collection;
         }

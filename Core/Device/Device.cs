@@ -27,7 +27,6 @@ namespace DiscoveryLight.Core.Device
         {
             foreach (FieldInfo field in this.GetType().GetFields())
                 field.SetValue(this, mj.GetProperty(field.Name));
-
             return this;
         }
 
@@ -42,7 +41,6 @@ namespace DiscoveryLight.Core.Device
             foreach (FieldInfo field in this.GetType().GetFields())
                 if (Fields.Contains(field.Name))
                     field.SetValue(this, mj.GetProperty(field.Name));
-
             return this;
         }
 
@@ -57,10 +55,12 @@ namespace DiscoveryLight.Core.Device
             foreach (FieldInfo field in this.GetType().GetFields())
                 if (ConvertAs.ContainsKey(field.Name))
                     field.SetValue(this, mj.GetProperty(ConvertAs[field.Name]));
-
             return this;
         }
 
+        public virtual _Device Extend(WprManagementObject Obj) { return this; }
+
+        public virtual _Device Extend() { return this; }
     }
 
     public abstract class AbstractDevice

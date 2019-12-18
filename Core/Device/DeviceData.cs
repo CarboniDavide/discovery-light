@@ -429,20 +429,19 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty TracksPerCylinder;
             public MobProperty BytesPerSector;
             public MobProperty FirmwareRevision;
-        }
 
-        public MobProperty FindDriveName(MobProperty index)
-        {
-            // get all properties for each installed drive
-            foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All())
+            public override _Device Extend()
             {
-                String currentDrive= mj.GetProperty("Name").AsString();
+                foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All())
+                {
+                    String currentDrive = mj.GetProperty("Name").AsString();
 
-                if (currentDrive.Substring(0, 1).Equals(index.AsString()))
-                    return mj.GetProperty("Name");
+                    if (currentDrive.Substring(0, 1).Equals(Index.AsString()))
+                        DriveName = mj.GetProperty("Name");
+                }
+
+                return this;
             }
-
-            return new MobProperty(null);
         }
 
         public override List<_Device> GetCollection()
@@ -450,13 +449,8 @@ namespace DiscoveryLight.Core.Device.Data
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-            {
-                var t = new Device().Serialize(mj) as Device;
-                // add extended intems
-                t.DriveName = this.FindDriveName(t.Index);
-                collection.Add(t);
-            }
-
+                collection.Add(new Device().Serialize(mj).Extend());
+            
             return collection;
         }
 
@@ -484,6 +478,13 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty IpSubnet;
             public MobProperty DefaultIPGateway;
             public MobProperty DNSServerSearchOrder;
+
+            public override _Device Extend()
+            {
+                var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").First("Index", DeviceID.AsString(), "=");
+                Serialize(mjext, new List<string> { "IpAddress", "DefaultIPGateway", "DNSServerSearchOrder", "IpSubnet" });
+                return this;
+            }
         }
 
         public override List<_Device> GetCollection()
@@ -491,15 +492,7 @@ namespace DiscoveryLight.Core.Device.Data
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-            {
-                var t = new Device().Serialize(mj) as Device;
-
-                // add extended intems
-                var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").First("Index", t.DeviceID.AsString(), "=");
-                t.Serialize(mjext, new List<string> { "IpAddress", "DefaultIPGateway", "DNSServerSearchOrder", "IpSubnet" });
-
-                collection.Add(t);
-            }
+                collection.Add(new Device().Serialize(mj).Extend());
 
             return collection;
         }

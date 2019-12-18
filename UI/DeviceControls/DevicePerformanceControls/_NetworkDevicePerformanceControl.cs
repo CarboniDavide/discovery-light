@@ -29,7 +29,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void update()
         {
             base.update();
-            CurrentDevice.UpdateCollection((CurrentSubDevice.GetType().GetField(CurrentDevice.PrimaryKey).GetValue(CurrentSubDevice) as MobProperty).AsString());
+            CurrentDevice.UpdateCollection();
         }
         protected override void show()
         {
