@@ -25,11 +25,6 @@ namespace DiscoveryLight.UI.Panels.Devices
             this._BaseFreeRamDevicePerformance.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_RAM)).First());
             this._BaseFreeStorageDevicePerformance.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_DISK)).First());
             this._BaseProcessorUsageDevicePerformance.Init(Program.Performances.Where(d => d.ClassType == typeof(PERFORM_CPU)).First());
-
-            // Init SubDevice
-            this._BaseFreeRamDevicePerformance.CurrentSubDevice = this._BaseFreeRamDevicePerformance.CurrentDevice.Devices.First();
-            this._BaseFreeStorageDevicePerformance.CurrentSubDevice = this._BaseFreeStorageDevicePerformance.CurrentDevice.GetDevice("Name", "_Total");
-            this._BaseProcessorUsageDevicePerformance.CurrentSubDevice = this._BaseProcessorUsageDevicePerformance.CurrentDevice.GetDevice("Name", "_Total");
         }
     }
 }

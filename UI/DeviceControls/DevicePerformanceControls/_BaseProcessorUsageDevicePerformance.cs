@@ -26,7 +26,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         protected override void update()
         {
             base.update();
-            CurrentDevice.UpdateCollection();
+            CurrentDevice.UpdateCollection("Name", "_Total");
         }
 
         protected override void show()

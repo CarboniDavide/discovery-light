@@ -69,7 +69,8 @@ namespace DiscoveryLight.UI.Components
             // get current device form Devices or oldest subdevice for null value
             CurrentDeviceDataControl.CurrentSubDevice = CurrentDeviceDataControl.CurrentDevice.GetDevice(this.SelectedItem.ToString()) ?? CurrentDeviceDataControl.CurrentSubDevice;
             if (CurrentDevicePerformanceControl != null)
-                CurrentDevicePerformanceControl.CurrentSubDevice = CurrentDevicePerformanceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString(), true) ?? CurrentDeviceDataControl.CurrentSubDevice;
+                //CurrentDevicePerformanceControl.CurrentSubDevice = CurrentDevicePerformanceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString(), true) ?? CurrentDeviceDataControl.CurrentSubDevice;
+                currentDevicePerformanceControl.CurrentDevice.DevicetoToRelate = this.SelectedItem.ToString();
             if (Action != null) Action.Invoke(); 
         }
 

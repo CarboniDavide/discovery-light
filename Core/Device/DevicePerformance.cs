@@ -18,7 +18,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// Device Performance read all performance values for all subdevice for a selected device(drive)
     /// </summary>
     /// 
-    public class DevicePerformance: _Device, IConvertable, IPreUpdate
+    public class DevicePerformance: _Device, IRelatable, IPreUpdate
     {
         public DevicePerformance(string DeviceName) : base(DeviceName) { }
     }
@@ -70,7 +70,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get usage for each selected cpu'thread
     /// </summary>
-    public class PERFORM_CPU : DevicePerformance, IConvertable, IPreUpdate
+    public class PERFORM_CPU : DevicePerformance, IRelatable, IPreUpdate
     {
         public class SubDevice : _SubDevice
         {
@@ -104,10 +104,13 @@ namespace DiscoveryLight.Core.Device.Performance
             mjext = new WprManagementObjectSearcher("Win32_Processor").All();
         }
 
-        public override String ConvertDeviceName(String DeviceName)
+        public override String GetRelatedDevice()
         {
-            var mjx = new WprManagementObjectSearcher("Win32_Processor").Find("Name", DeviceName, "=").First();
-            return mjx.GetProperty("DeviceID").AsSubString(3, 1) + ",_Total";
+            DeviceRelated = base.GetRelatedDevice();
+            var mjx = new WprManagementObjectSearcher("Win32_Processor").Find("Name", DevicetoToRelate, "=").First();
+            DeviceRelated = mjx.GetProperty("DeviceID").AsSubString(3, 1);
+
+            return DeviceRelated;
         }
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
@@ -115,7 +118,7 @@ namespace DiscoveryLight.Core.Device.Performance
             var collection = base.GetCollection();
 
             var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj));
+            collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;
         }
@@ -231,7 +234,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get local storage performance
     /// </summary>
-    public class PERFORM_DISK: DevicePerformance, IConvertable
+    public class PERFORM_DISK: DevicePerformance, IRelatable
     {
         public class SubDevice : _SubDevice
         {
@@ -247,18 +250,20 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty PercentIdleTime;
         }
 
-        public override String ConvertDeviceName(String DeviceName)
+        public override String GetRelatedDevice()
         {
-            var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First("Caption", DeviceName, "=");
+            DeviceRelated = base.GetRelatedDevice();
+
+            var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First("Caption", DevicetoToRelate, "=");
             foreach (WprManagementObject mjt in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All() ?? new List<WprManagementObject>())
             {
                 String currentDrive = mjt.GetProperty("Name").AsString();
                 var s = mj.GetProperty("Index").AsString();
                 if (currentDrive != null && currentDrive.Substring(0, 1).Equals(mj.GetProperty("Index").AsString()))
-                    return  (currentDrive.Substring(2, 1) + ":").ToString();
+                    DeviceRelated = (currentDrive.Substring(2, 1) + ":").ToString();
             }
 
-            return null;
+            return DeviceRelated;
         }
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
@@ -292,7 +297,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get Network Performance
     /// </summary>
-    public class PERFORM_NETWORK: DevicePerformance, IConvertable
+    public class PERFORM_NETWORK: DevicePerformance, IRelatable
     {
         public class SubDevice : _SubDevice
         {
@@ -312,7 +317,7 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty TotalBytesSent;
             public MobProperty TotalBytes;
 
-            public override _SubDevice Extend(WprManagementObject Obj)
+            public override _SubDevice Extend()
             {
                 UInt64? Den;
                 if (BytesTotalPersec.AsString() != null)
@@ -369,9 +374,11 @@ namespace DiscoveryLight.Core.Device.Performance
             }
         }
 
-        public override String ConvertDeviceName(String DeviceName)
+        public override String GetRelatedDevice()
         {
-            return DeviceName.Replace("(", "[").Replace(")", "]"); 
+            DeviceRelated = base.GetRelatedDevice();
+            DeviceRelated = DevicetoToRelate.Replace("(", "[").Replace(")", "]");
+            return DeviceRelated;
         }
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
