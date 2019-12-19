@@ -21,22 +21,27 @@ namespace DiscoveryLight.Core.Device
         Boolean IsUpdated { get; set; }
     }
 
-    public interface IConvertable
+    public interface IRelatable
     {
         /// <summary>
         /// Convert property before update
         /// </summary>
-        String ConvertDeviceName(String DeviceName);
+        String GetRelatedDevice();
 
         /// <summary>
         /// Check if a conversion has been performed
         /// </summary>
-        Boolean IsConverted { get; set; }
+        Boolean IsRelated { get; set; }
 
         /// <summary>
         /// Store the value to convert
         /// </summary>
-        String ValueToConvert { get; set; }
+        String DevicetoToRelate { get; set; }
+
+        /// <summary>
+        /// Store the value to convert
+        /// </summary>
+        String DeviceRelated { get; set; }
     }
 
     public abstract class AbstractDevice
@@ -191,30 +196,41 @@ namespace DiscoveryLight.Core.Device
         }
     }
 
-    public class _Device: AbstractDevice, IConvertable, IPreUpdate
+    public class _Device: AbstractDevice, IRelatable, IPreUpdate
     {
-        public Boolean IsConverted { get; set; }
+        private string devicetoToRelate;
+        private Boolean isRelated = true;
+
+        public Boolean IsRelated { get { return isRelated;  } set { isRelated = value; } }
 
         public Boolean IsUpdated { get; set; }
 
-        public String ValueToConvert { get; set; }
+        public String DevicetoToRelate { get { return devicetoToRelate; } set { devicetoToRelate = value;  IsRelated = false; } }
+
+        public String DeviceRelated { get; set; }
 
         public virtual void PreUpdate()
         {
             IsUpdated = true;
         }
 
-        public virtual String ConvertDeviceName(String DeviceName) { return null; }
+        public virtual String GetRelatedDevice() {
+            IsRelated = true;
+            DeviceRelated = null;
+            return DeviceRelated;
+        }
 
         public override List<_SubDevice> GetCollection()
         {
             if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
             return new List<_SubDevice>();
         }
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
             if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
             return new List<_SubDevice>();
         }
 
@@ -230,7 +246,7 @@ namespace DiscoveryLight.Core.Device
 
         public override void UpdateCollection(String FieldName, String Value)
         {
-            Devices = GetCollection(DeviceName, Value);
+            Devices = GetCollection(FieldName, Value);
         }
 
         public override void UpdateCollection(String Value)
@@ -240,7 +256,7 @@ namespace DiscoveryLight.Core.Device
 
         public override _SubDevice GetDevice(string DeviceName, bool GetRelated)
         {
-            return base.GetDevice(GetRelated ? ConvertDeviceName(DeviceName) : DeviceName);
+            return base.GetDevice(GetRelated ? GetRelatedDevice() : DeviceName);
         }
 
         public _Device(String DeviceName): base(DeviceName) { }
