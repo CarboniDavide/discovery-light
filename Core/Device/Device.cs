@@ -67,7 +67,14 @@ namespace DiscoveryLight.Core.Device
         /// </summary>
         /// <param name="Device"></param>
         /// <returns></returns>
-        public abstract _SubDevice GetCollection(String Device);
+        public abstract List<_SubDevice> GetCollection(String FieldName, String Value);
+
+        /// <summary>
+        /// Get a single sub device using primary key as default
+        /// </summary>
+        /// <param name="Value"></param>
+        /// <returns></returns>
+        public abstract List<_SubDevice> GetCollection(String Value);
 
         /// <summary>
         /// Update collection from wmi class 
@@ -75,10 +82,16 @@ namespace DiscoveryLight.Core.Device
         public abstract void UpdateCollection();
 
         /// <summary>
-        /// Update a single device in collection
+        /// Update a single sub device using field name and it value
         /// </summary>
         /// <param name="Device"></param>
-        public abstract void UpdateCollection(String Device);
+        public abstract void UpdateCollection(String FieldName, String Value);
+
+        /// <summary>
+        /// Update a single sub device using primary key as default field
+        /// </summary>
+        /// <param name="Value"></param>
+        public abstract void UpdateCollection(String Value);
 
         /// <summary>
         /// Get a selected device form device list that primarykey field contien value
@@ -199,10 +212,15 @@ namespace DiscoveryLight.Core.Device
             return new List<_SubDevice>();
         }
 
-        public override _SubDevice GetCollection(string Device)
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
             if (!IsUpdated) PreUpdate();
-            return new _SubDevice();
+            return new List<_SubDevice>();
+        }
+
+        public override List<_SubDevice> GetCollection(String Value)
+        {
+            return GetCollection(PrimaryKey, Value);
         }
 
         public override void UpdateCollection()
@@ -210,25 +228,14 @@ namespace DiscoveryLight.Core.Device
             Devices = GetCollection();
         }
 
-        public override void UpdateCollection(string Device)
+        public override void UpdateCollection(String FieldName, String Value)
         {
-            _SubDevice Selected;
-            int index = 0;
-            foreach (_SubDevice device in Devices)
-            {
-                try
-                {
-                    string Key = (device.GetType().GetField(PrimaryKey).GetValue(device) as MobProperty).AsString();
-                    if (Key != null && Key.Equals(Device))
-                        index = Devices.IndexOf(device); break;
-                }
-                catch
-                {
-                    Selected = null;
-                }
-            }
+            Devices = GetCollection(DeviceName, Value);
+        }
 
-            Devices[index] = GetCollection(Device);
+        public override void UpdateCollection(String Value)
+        {
+            Devices = GetCollection(PrimaryKey, Value);
         }
 
         public override _SubDevice GetDevice(string DeviceName, bool GetRelated)

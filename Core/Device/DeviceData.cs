@@ -38,6 +38,15 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Domain;
         }
 
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
+        }
 
         public override List<_SubDevice> GetCollection()
         {
@@ -67,6 +76,17 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty OSArchitecture;
         }
 
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
+        }
+
         public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
@@ -92,6 +112,16 @@ namespace DiscoveryLight.Core.Device.Data
         public class SubDevice : _SubDevice
         {
             public MobProperty IdentifyingNumber;
+        }
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
         }
 
         public override List<_SubDevice> GetCollection()
@@ -122,6 +152,15 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty ReleaseDate;
         }
 
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
+        }
         public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
@@ -150,6 +189,16 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Manufacturer;
             public MobProperty Product;
             public MobProperty Version;
+        }
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
         }
 
         public override List<_SubDevice> GetCollection()
@@ -181,6 +230,16 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty SecondaryBusType;
         }
 
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
+        }
+
         public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
@@ -206,6 +265,16 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class SubDevice : _SubDevice
         {
+        }
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
         }
 
         public override List<_SubDevice> GetCollection()
@@ -246,6 +315,16 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty VideoModeDescription;
         }
 
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
+        }
+
         public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
@@ -273,6 +352,16 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public MobProperty Manufacturer;
             public MobProperty PowerManagementSupported;
+        }
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
         }
 
         public override List<_SubDevice> GetCollection()
@@ -312,6 +401,16 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty L3CacheSize;
         }
 
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
+        }
+
         public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
@@ -349,6 +448,16 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty MinVoltage;
         }
 
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
+        }
+
         public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
@@ -376,6 +485,16 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public MobProperty MaxCapacity;
             public MobProperty MemoryDevices;
+        }
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj));
+
+            return collection;
         }
 
         public override List<_SubDevice> GetCollection()
@@ -430,6 +549,16 @@ namespace DiscoveryLight.Core.Device.Data
             }
         }
 
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj).Extend());
+
+            return collection;
+        }
+
         public override List<_SubDevice> GetCollection()
         {
             var collection = base.GetCollection();
@@ -471,6 +600,16 @@ namespace DiscoveryLight.Core.Device.Data
                 Serialize(mjext, new List<string> { "IpAddress", "DefaultIPGateway", "DNSServerSearchOrder", "IpSubnet" });
                 return this;
             }
+        }
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            var collection = base.GetCollection();
+
+            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            collection.Add(new SubDevice().Serialize(mj).Extend());
+
+            return collection;
         }
 
         public override List<_SubDevice> GetCollection()
