@@ -80,7 +80,7 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty ProcessorFrequency;
             public MobProperty PercentProcessorPerformance;
             public MobProperty MaxSpeed;
-            public override _SubDevice Extend(WprManagementObject Obj)
+            public override _SubDevice Extend(dynamic Obj)
             {
                 MaxSpeed = Obj == null ? null : Obj.GetProperty("MaxClockSpeed");
 
@@ -118,7 +118,7 @@ namespace DiscoveryLight.Core.Device.Performance
             var collection = base.GetCollection();
 
             var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj).Extend());
+            collection.Add(new SubDevice().Serialize(mj).Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(mj.GetProperty("Name").AsSubString(0, 1))).FirstOrDefault()));
 
             return collection;
         }

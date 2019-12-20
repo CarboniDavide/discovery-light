@@ -309,7 +309,7 @@ namespace DiscoveryLight.Core.Device
             return this;
         }
 
-        public virtual _SubDevice Extend(WprManagementObject Obj) { return this; }
+        public virtual _SubDevice Extend(dynamic Obj) { return this; }
 
         public virtual _SubDevice Extend() { return this; }
     }
