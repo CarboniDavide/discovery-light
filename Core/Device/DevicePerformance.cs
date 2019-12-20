@@ -263,7 +263,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return collection;
         }
 
-        public PERFORM_RAM(): base("Win32_PerfRawData_PerfOS_emory") {}
+        public PERFORM_RAM(): base("Win32_PerfRawData_PerfOS_Memory") {}
 
     }
 
