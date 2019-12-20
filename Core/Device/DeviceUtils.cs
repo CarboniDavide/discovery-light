@@ -14,6 +14,7 @@ namespace DiscoveryLight.Core.Device.Utils
     public class MobProperty
     {
         private dynamic obj;
+        public Boolean IsNull { get => (obj == null); }
 
         /// <summary>
         ///  Get a property value when property base is a array of items
