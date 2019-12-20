@@ -194,11 +194,12 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty PagesPersec;
             public MobProperty PageWritesPersec;
             public MobProperty PageReadsPersec;
+            public MobProperty CommitLimit;
+            public MobProperty AvailableBytes;
 
-            public override _SubDevice Extend(WprManagementObject Obj)
+            public override _SubDevice Extend()
             {
-                var pUsage = (Convert.ToInt64(Obj.GetProperty("AvailableBytes").AsString()) / (Convert.ToInt64(Obj.GetProperty("CommitLimit").AsString()) / 100)).ToString();
-                PerUsage = new MobProperty(pUsage);
+                PerUsage = (CommitLimit.IsNull || AvailableBytes.IsNull) ? new MobProperty(null) : new MobProperty((Convert.ToInt64(AvailableBytes.AsString()) / (Convert.ToInt64(CommitLimit.AsString()) / 100)).ToString());
                 return this;
             }
         }
@@ -208,7 +209,7 @@ namespace DiscoveryLight.Core.Device.Performance
             var collection = base.GetCollection();
 
             var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj).Extend(mj));
+            collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;
         }
@@ -218,12 +219,12 @@ namespace DiscoveryLight.Core.Device.Performance
             var collection = base.GetCollection();
 
             foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new SubDevice().Serialize(mj).Extend(mj));
+                collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;
         }
 
-        public PERFORM_RAM(): base("Win32_PerfRawData_PerfOS_Memory") {}
+        public PERFORM_RAM(): base("Win32_PerfRawData_PerfOS_emory") {}
 
     }
 
