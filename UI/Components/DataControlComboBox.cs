@@ -70,7 +70,7 @@ namespace DiscoveryLight.UI.Components
             CurrentDeviceDataControl.CurrentSubDevice = CurrentDeviceDataControl.CurrentDevice.GetDevice(this.SelectedItem.ToString()) ?? CurrentDeviceDataControl.CurrentSubDevice;
             if (CurrentDevicePerformanceControl != null)
                 //CurrentDevicePerformanceControl.CurrentSubDevice = CurrentDevicePerformanceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString(), true) ?? CurrentDeviceDataControl.CurrentSubDevice;
-                currentDevicePerformanceControl.CurrentDevice.DevicetoToRelate = this.SelectedItem.ToString();
+                (currentDevicePerformanceControl.CurrentDevice as DevicePerformance).DevicetoToRelate = this.SelectedItem.ToString();
             if (Action != null) Action.Invoke(); 
         }
 

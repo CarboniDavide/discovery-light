@@ -196,68 +196,19 @@ namespace DiscoveryLight.Core.Device
         }
     }
 
-    public class _Device: AbstractDevice, IRelatable, IPreUpdate
+    public class _Device: AbstractDevice
     {
-        private string devicetoToRelate;
-        private Boolean isRelated = true;
+        public override List<_SubDevice> GetCollection() { return new List<_SubDevice>(); }
 
-        public Boolean IsRelated { get { return isRelated;  } set { isRelated = value; } }
+        public override List<_SubDevice> GetCollection(String FieldName, String Value) { return new List<_SubDevice>(); }
 
-        public Boolean IsUpdated { get; set; }
+        public override List<_SubDevice> GetCollection(String Value) { return GetCollection(PrimaryKey, Value); }
 
-        public String DevicetoToRelate { get { return devicetoToRelate; } set { devicetoToRelate = value;  IsRelated = false; } }
+        public override void UpdateCollection() { Devices = GetCollection(); }
 
-        public String DeviceRelated { get; set; }
+        public override void UpdateCollection(String FieldName, String Value) { Devices = GetCollection(FieldName, Value); }
 
-        public virtual void PreUpdate()
-        {
-            IsUpdated = true;
-        }
-
-        public virtual String GetRelatedDevice() {
-            IsRelated = true;
-            DeviceRelated = null;
-            return DeviceRelated;
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            if (!IsUpdated) PreUpdate();
-            if (!IsRelated) GetRelatedDevice();
-            return new List<_SubDevice>();
-        }
-
-        public override List<_SubDevice> GetCollection(String FieldName, String Value)
-        {
-            if (!IsUpdated) PreUpdate();
-            if (!IsRelated) GetRelatedDevice();
-            return new List<_SubDevice>();
-        }
-
-        public override List<_SubDevice> GetCollection(String Value)
-        {
-            return GetCollection(PrimaryKey, Value);
-        }
-
-        public override void UpdateCollection()
-        {
-            Devices = GetCollection();
-        }
-
-        public override void UpdateCollection(String FieldName, String Value)
-        {
-            Devices = GetCollection(FieldName, Value);
-        }
-
-        public override void UpdateCollection(String Value)
-        {
-            Devices = GetCollection(PrimaryKey, Value);
-        }
-
-        public override _SubDevice GetDevice(string DeviceName, bool GetRelated)
-        {
-            return base.GetDevice(GetRelated ? GetRelatedDevice() : DeviceName);
-        }
+        public override void UpdateCollection(String Value) { Devices = GetCollection(PrimaryKey, Value); }
 
         public _Device(String DeviceName): base(DeviceName) { }
     }
@@ -309,8 +260,17 @@ namespace DiscoveryLight.Core.Device
             return this;
         }
 
+        /// <summary>
+        /// Extend sub device field that are not available in WprManagementObject
+        /// </summary>
+        /// <param name="Obj"></param>
+        /// <returns></returns>
         public virtual _SubDevice Extend(dynamic Obj) { return this; }
 
+        /// <summary>
+        /// Extend sub device field that are not available in WprManagementObject
+        /// </summary>
+        /// <returns></returns>
         public virtual _SubDevice Extend() { return this; }
     }
 }

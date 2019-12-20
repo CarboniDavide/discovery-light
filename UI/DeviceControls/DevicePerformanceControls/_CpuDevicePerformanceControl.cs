@@ -38,7 +38,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             
-            String currentCpu = CurrentDevice.DeviceRelated;
+            String currentCpu = (CurrentDevice as DevicePerformance).DeviceRelated;
             var s = 
 
             lbl_CpuSpeed_Value.Text = DataConvert.AsDefaultValue( (CurrentDevice.Devices.Where(d => d.Name.AsString().Equals(currentCpu +",_Total")).First() as PERFORM_CPU.SubDevice).Frequency.AsString(), "N/A", "{0:N0}") + " Mhz";

@@ -20,6 +20,45 @@ namespace DiscoveryLight.Core.Device.Performance
     /// 
     public class DevicePerformance: _Device, IRelatable, IPreUpdate
     {
+        private string devicetoToRelate;
+        private Boolean isRelated = true;
+
+        public Boolean IsRelated { get { return isRelated; } set { isRelated = value; } }
+
+        public Boolean IsUpdated { get; set; }
+
+        public String DevicetoToRelate { get { return devicetoToRelate; } set { devicetoToRelate = value; IsRelated = false; } }
+
+        public String DeviceRelated { get; set; }
+
+        public virtual void PreUpdate()
+        {
+            IsUpdated = true;
+        }
+
+        public virtual String GetRelatedDevice()
+        {
+            IsRelated = true;
+            DeviceRelated = null;
+            return DeviceRelated;
+        }
+
+        public override List<_SubDevice> GetCollection()
+        {
+            if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
+            return new List<_SubDevice>();
+        }
+
+        public override List<_SubDevice> GetCollection(String FieldName, String Value)
+        {
+            if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
+            return new List<_SubDevice>();
+        }
+
+        public override _SubDevice GetDevice(string DeviceName, bool GetRelated) { return base.GetDevice(GetRelated ? GetRelatedDevice() : DeviceName); }
+
         public DevicePerformance(string DeviceName) : base(DeviceName) { }
     }
 
