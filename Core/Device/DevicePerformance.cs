@@ -294,7 +294,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             DeviceRelated = base.GetRelatedDevice();
 
-            var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First(x => x.GetProperty("Caption").AsString().Equals(DevicetoToRelate));
+            var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First(x => x.GetProperty("Caption").AsString().Equals(DevicetoToRelate)) ?? new WprManagementObject();
             foreach (WprManagementObject mjt in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All() ?? new List<WprManagementObject>())
             {
                 String currentDrive = mjt.GetProperty("Name").AsString();
