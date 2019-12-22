@@ -120,20 +120,15 @@ namespace DiscoveryLight.Core.Device.Utils
             return Get($"Select * from {driveName}");
         }
 
+
         /// <summary>
-        /// Get a collection of WprManagementObject that match the condition
+        /// Get the fisrt items in collection of WprManagementObject
         /// </summary>
-        /// <param name="Property"></param>
-        /// <param name="Value"></param>
-        /// <param name="Condition"></param>
         /// <returns></returns>
-        public List<WprManagementObject> Find(Func<WprManagementObject, Boolean> Condition)
+        public WprManagementObject First()
         {
-            List<WprManagementObject> res = new List<WprManagementObject>();
-
-            res = Get($"Select * from {driveName}").Where(Condition).ToList();
-
-            return res.Count == 0 ? null : res;
+            var res = Get($"Select * from {driveName}");
+            return res == null ? null : res.FirstOrDefault();
         }
 
         /// <summary>
@@ -143,21 +138,35 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <param name="Value"></param>
         /// <param name="Condition"></param>
         /// <returns></returns>
+        public WprManagementObject First(string Property, string Value, string Condition)
+        {
+            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
+            return res == null ? null : res.FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Get the fisrt item in collection of WprManagementObject that match the lambda condition
+        /// </summary>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
         public WprManagementObject First(Func<WprManagementObject, Boolean> Condition)
         {
             List<WprManagementObject> res = Get($"Select * from {driveName}");
 
             return res == null ? null : res.Where(Condition).FirstOrDefault();
         }
-
+         
         /// <summary>
-        /// Get the fisrt item in collection of WprManagementObject
+        /// Get the last item in collection of WprManagementObject that match the condition
         /// </summary>
+        /// <param name="Property"></param>
+        /// <param name="Value"></param>
+        /// <param name="Condition"></param>
         /// <returns></returns>
-        public WprManagementObject First()
+        public WprManagementObject Last(string Property, string Value, string Condition)
         {
-            var res = Get($"Select * from {driveName}");
-            return res == null ? null : res.FirstOrDefault();
+            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
+            return res == null ? null : res.LastOrDefault();
         }
 
         /// <summary>
@@ -172,6 +181,30 @@ namespace DiscoveryLight.Core.Device.Utils
             List<WprManagementObject> res = Get($"Select * from {driveName}");
 
             return res == null ? null : res.Where(Condition).LastOrDefault();
+        }
+
+        /// <summary>
+        /// Get a collection of WprManagementObject that match the lambda condition
+        /// </summary>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
+        public List<WprManagementObject> Find(string Property, string Value, string Condition)
+        {
+            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
+        }
+
+        /// <summary>
+        /// Get a collection of WprManagementObject that match the lambda condition
+        /// </summary>
+        /// <param name="Condition"></param>
+        /// <returns></returns>
+        public List<WprManagementObject> Find(Func<WprManagementObject, Boolean> Condition)
+        {
+            List<WprManagementObject> res = new List<WprManagementObject>();
+
+            res = Get($"Select * from {driveName}").Where(Condition).ToList();
+
+            return res.Count == 0 ? null : res;
         }
 
         /// <summary>
