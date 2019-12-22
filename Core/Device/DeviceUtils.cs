@@ -21,7 +21,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// </summary>
         /// <param name="ArrayAt"></param>
         /// <returns></returns>
-        public String AsArray(int ArrayAt)
+        public string AsArray(int ArrayAt)
         {
             if (obj == null) return null;                                      // return "N/A" for null object
             return (obj.GetType().IsArray) ? obj[ArrayAt] : null;                // check for array type: return array items for array data string elesewhere    
@@ -33,7 +33,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <param name="StartIndex"></param>
         /// <param name="Lenght"></param>
         /// <returns></returns>
-        public String AsSubString(int StartIndex, int Lenght)
+        public string AsSubString(int StartIndex, int Lenght)
         {
             if (obj == null) return null;
             // check for array structure: nothing to do for unknow index
@@ -44,7 +44,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Return property value as String if exists, null elsewhere
         /// </summary>
         /// <returns></returns>
-        public String AsString()
+        public string AsString()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : obj.ToString();         // check for array structure: nothing to do for unknow index
@@ -109,7 +109,7 @@ namespace DiscoveryLight.Core.Device.Utils
     public class WprManagementObjectSearcher
     {
         private string driveName;
-        private readonly String PATH = "root\\CIMV2";      // base wmi namespace for each drive data
+        private readonly string PATH = "root\\CIMV2";      // base wmi namespace for each drive data
 
         /// <summary>
         /// Get a WprManagementObjectSearcher collection, elsewhere a empty list
@@ -176,7 +176,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <param name="Value"></param>
         /// <param name="Condition"></param>
         /// <returns></returns>
-        public WprManagementObject Last(Func<WprManagementObject, Boolean> Condition)
+        public WprManagementObject Last(Func<WprManagementObject, bool> Condition)
         {
             List<WprManagementObject> res = Get($"Select * from {driveName}");
 
@@ -198,7 +198,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// </summary>
         /// <param name="Condition"></param>
         /// <returns></returns>
-        public List<WprManagementObject> Find(Func<WprManagementObject, Boolean> Condition)
+        public List<WprManagementObject> Find(Func<WprManagementObject, bool> Condition)
         {
             List<WprManagementObject> res = new List<WprManagementObject>();
 
