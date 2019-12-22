@@ -20,8 +20,8 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             {
                 if (value == null) return;
                 currentDevice = value;
-                if (currentDevice.Devices.Count == 0) currentDevice.UpdateCollection();
-                CurrentSubDevice = currentDevice.Devices.First();
+                if (currentDevice.SubDevices.Count == 0) currentDevice.UpdateCollection();
+                CurrentSubDevice = currentDevice.SubDevices.First();
             }
         }
         public _SubDevice CurrentSubDevice
@@ -31,7 +31,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
                 // return current sub device if nothing is specified as key or for null value (for VS rendering)
                 if (currentSubDevice == null) return currentSubDevice;
                 // no primary key -> use first as default
-                if (currentDevice.PrimaryKey == null) return currentDevice.Devices.First();
+                if (currentDevice.PrimaryKey == null) return currentDevice.SubDevices.First();
                 //  get the current value form field or the oldest subdevice for null value
                 string currentKey = (currentSubDevice.GetType().GetField(currentDevice.PrimaryKey).GetValue(currentSubDevice) as MobProperty).AsString();
                 // get the device using primary key else use the currentSubDevice for null value

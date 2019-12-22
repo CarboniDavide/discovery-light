@@ -14,7 +14,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         private _SubDevice currentSubDevice;     // a child for the current device 
 
         public _Device CurrentDevice { get => currentDevice; set => currentDevice = value; }
-        public _SubDevice CurrentSubDevice { get => CurrentDevice.Devices.First(); set => currentSubDevice = value; }
+        public _SubDevice CurrentSubDevice { get => CurrentDevice.SubDevices.First(); set => currentSubDevice = value; }
 
         public void Init(_Device Device)
         {

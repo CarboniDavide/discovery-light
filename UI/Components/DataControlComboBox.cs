@@ -41,7 +41,7 @@ namespace DiscoveryLight.UI.Components
             {
                 this.Enabled = true;
             }
-            foreach (_SubDevice device in CurrentDeviceDataControl.CurrentDevice.Devices)
+            foreach (_SubDevice device in CurrentDeviceDataControl.CurrentDevice.SubDevices)
                 devices.Add( (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString());
 
             // don't update loaded values in comboBox if not new devices are founded

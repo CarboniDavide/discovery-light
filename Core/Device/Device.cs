@@ -49,16 +49,16 @@ namespace DiscoveryLight.Core.Device
         protected readonly string deviceName;
         protected readonly string className;
         protected readonly Type classType;
-        private int deviceNumber = 0;                               // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
-        private List<_SubDevice> devices = new List<_SubDevice>();        // List of properties for each device           
-        private Boolean isNull;                                     // Check for null WprManagementObjec
-        private String primaryKey;                                  // define entry key in _Device for search items
+        private int deviceNumber = 0;                                       // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
+        private List<_SubDevice> subDevices = new List<_SubDevice>();       // List of properties for each device           
+        private Boolean isNull;                                             // Check for null WprManagementObjec
+        private String primaryKey;                                          // define entry key in _Device for search items
 
         public string ClassName { get => className; }
         public Type ClassType { get => classType; }
         public string DeviceName { get => deviceName; }
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
-        public List<_SubDevice> Devices { get { return devices; } set { devices = value; DeviceNumber = value.Count; } }
+        public List<_SubDevice> SubDevices { get { return subDevices; } set { subDevices = value; DeviceNumber = value.Count; } }
         public bool IsNull { get => isNull; set => isNull = value; }
         public string PrimaryKey { get => primaryKey; set => primaryKey = value; }
 
@@ -105,7 +105,7 @@ namespace DiscoveryLight.Core.Device
         public virtual _SubDevice GetDevice(String Value)
         {
 
-            foreach (_SubDevice device in Devices)
+            foreach (_SubDevice device in SubDevices)
             {
                 try
                 {
@@ -130,7 +130,7 @@ namespace DiscoveryLight.Core.Device
         /// <returns></returns>
         public virtual _SubDevice GetDevice(String Field, String Value)
         {
-            foreach (_SubDevice device in Devices)
+            foreach (_SubDevice device in SubDevices)
             {
                 try
                 {
@@ -204,11 +204,11 @@ namespace DiscoveryLight.Core.Device
 
         public override List<_SubDevice> GetCollection(String Value) { return GetCollection(PrimaryKey, Value); }
 
-        public override void UpdateCollection() { Devices = GetCollection(); }
+        public override void UpdateCollection() { SubDevices = GetCollection(); }
 
-        public override void UpdateCollection(String FieldName, String Value) { Devices = GetCollection(FieldName, Value); }
+        public override void UpdateCollection(String FieldName, String Value) { SubDevices = GetCollection(FieldName, Value); }
 
-        public override void UpdateCollection(String Value) { Devices = GetCollection(PrimaryKey, Value); }
+        public override void UpdateCollection(String Value) { SubDevices = GetCollection(PrimaryKey, Value); }
 
         public _Device(String DeviceName): base(DeviceName) { }
     }
