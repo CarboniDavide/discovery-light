@@ -112,7 +112,7 @@ namespace DiscoveryLight.Core.Device.Utils
         private readonly String PATH = "root\\CIMV2";      // base wmi namespace for each drive data
 
         /// <summary>
-        /// Get a collection of WprManagementObjectSearcher, elsewhere a empty list
+        /// Get a WprManagementObjectSearcher collection, elsewhere a empty list
         /// </summary>
         /// <returns></returns>
         public List<WprManagementObject> All()
@@ -122,7 +122,7 @@ namespace DiscoveryLight.Core.Device.Utils
 
 
         /// <summary>
-        /// Get the fisrt items in collection of WprManagementObject
+        /// Get the fisrt WprManagementObject item
         /// </summary>
         /// <returns></returns>
         public WprManagementObject First()
@@ -132,7 +132,7 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Get the fisrt item in collection of WprManagementObject that match the condition
+        /// Get the fisrt WprManagementObject item using a satandard WMI Query eg: select * from Win32_DiskDrive where Property = 'Value' 
         /// </summary>
         /// <param name="Property"></param>
         /// <param name="Value"></param>
@@ -145,7 +145,7 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Get the fisrt item in collection of WprManagementObject that match the lambda condition
+        /// Get the fisrt WprManagementObject item that match the lambda condition
         /// </summary>
         /// <param name="Condition"></param>
         /// <returns></returns>
@@ -155,9 +155,9 @@ namespace DiscoveryLight.Core.Device.Utils
 
             return res == null ? null : res.Where(Condition).FirstOrDefault();
         }
-         
+
         /// <summary>
-        /// Get the last item in collection of WprManagementObject that match the condition
+        /// Get the last WprManagementObject item using a satandard WMI Query eg: select * from Win32_DiskDrive where Property = 'Value'
         /// </summary>
         /// <param name="Property"></param>
         /// <param name="Value"></param>
@@ -170,7 +170,7 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Get the last item in collection of WprManagementObject that match the condition
+        /// Get the last WprManagementObject item that match the lambda condition
         /// </summary>
         /// <param name="Property"></param>
         /// <param name="Value"></param>
@@ -184,7 +184,7 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Get a collection of WprManagementObject that match the lambda condition
+        /// Get a WprManagementObject collection using a satandard WMI Query eg: select * from Win32_DiskDrive where Property = 'Value'
         /// </summary>
         /// <param name="Condition"></param>
         /// <returns></returns>
@@ -194,7 +194,7 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
-        /// Get a collection of WprManagementObject that match the lambda condition
+        /// Get a WprManagementObject collection that match the lambda condition
         /// </summary>
         /// <param name="Condition"></param>
         /// <returns></returns>
