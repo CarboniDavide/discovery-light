@@ -42,7 +42,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -81,7 +81,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -118,7 +118,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(DeviceName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -156,7 +156,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -195,7 +195,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -234,7 +234,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -271,7 +271,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -319,7 +319,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -358,7 +358,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -405,7 +405,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -452,7 +452,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -491,7 +491,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -553,7 +553,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;
@@ -596,7 +596,7 @@ namespace DiscoveryLight.Core.Device.Data
 
             public override _SubDevice Extend()
             {
-                var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").First("Index", DeviceID.AsString(), "=");
+                var mjext = new WprManagementObjectSearcher("Win32_NetworkAdapterConfiguration").First(x => x.GetProperty("Index").AsString().Equals(DeviceID.AsString()));
                 Serialize(mjext, new List<string> { "IpAddress", "DefaultIPGateway", "DNSServerSearchOrder", "IpSubnet" });
                 return this;
             }
@@ -606,7 +606,7 @@ namespace DiscoveryLight.Core.Device.Data
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;

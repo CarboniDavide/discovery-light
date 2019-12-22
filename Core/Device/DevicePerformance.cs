@@ -84,7 +84,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -146,7 +146,7 @@ namespace DiscoveryLight.Core.Device.Performance
         public override String GetRelatedDevice()
         {
             DeviceRelated = base.GetRelatedDevice();
-            var mjx = new WprManagementObjectSearcher("Win32_Processor").Find("Name", DevicetoToRelate, "=").First();
+            var mjx = new WprManagementObjectSearcher("Win32_Processor").Find(x => x.GetProperty("Name").AsString().Equals(DevicetoToRelate)).First();
             DeviceRelated = mjx.GetProperty("DeviceID").AsSubString(3, 1);
 
             return DeviceRelated;
@@ -156,7 +156,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj).Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(mj.GetProperty("Name").AsSubString(0, 1))).FirstOrDefault()));
 
             return collection;
@@ -194,7 +194,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -247,7 +247,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;
@@ -294,7 +294,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             DeviceRelated = base.GetRelatedDevice();
 
-            var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First("Caption", DevicetoToRelate, "=");
+            var mj = new WprManagementObjectSearcher("Win32_DiskDrive").First(x => x.GetProperty("Caption").AsString().Equals(DevicetoToRelate));
             foreach (WprManagementObject mjt in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All() ?? new List<WprManagementObject>())
             {
                 String currentDrive = mjt.GetProperty("Name").AsString();
@@ -310,7 +310,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj));
 
             return collection;
@@ -405,7 +405,7 @@ namespace DiscoveryLight.Core.Device.Performance
                     PercentPacketsSents = new MobProperty(null);
                 }
 
-                var mjx = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First("Name", Name.AsString(), "=") ?? new WprManagementObject();
+                var mjx = new WprManagementObjectSearcher("Win32_PerfRawData_Tcpip_NetworkAdapter").First(x => x.GetProperty("Name").AsString().Equals(Name.AsString())) ?? new WprManagementObject();
                 TotalBytesReceived = mjx.GetProperty("BytesReceivedPersec");
                 TotalBytesSent = mjx.GetProperty("BytesSentPersec");
                 TotalBytes = mjx.GetProperty("BytesTotalPersec");
@@ -425,7 +425,7 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             var collection = base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(FieldName, Value, "=") ?? new WprManagementObject();
+            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
             collection.Add(new SubDevice().Serialize(mj).Extend());
 
             return collection;

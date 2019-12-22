@@ -127,9 +127,13 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <param name="Value"></param>
         /// <param name="Condition"></param>
         /// <returns></returns>
-        public List<WprManagementObject> Find(string Property, string Value, string Condition)
+        public List<WprManagementObject> Find(Func<WprManagementObject, Boolean> Condition)
         {
-            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
+            List<WprManagementObject> res = new List<WprManagementObject>();
+
+            res = Get($"Select * from {driveName}").Where(Condition).ToList();
+
+            return res.Count == 0 ? null : res;
         }
 
         /// <summary>
@@ -139,10 +143,11 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <param name="Value"></param>
         /// <param name="Condition"></param>
         /// <returns></returns>
-        public WprManagementObject First(string Property, string Value, string Condition)
+        public WprManagementObject First(Func<WprManagementObject, Boolean> Condition)
         {
-            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
-            return res == null ? null : res.FirstOrDefault();
+            List<WprManagementObject> res = Get($"Select * from {driveName}");
+
+            return res == null ? null : res.Where(Condition).FirstOrDefault();
         }
 
         /// <summary>
@@ -162,10 +167,11 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <param name="Value"></param>
         /// <param name="Condition"></param>
         /// <returns></returns>
-        public WprManagementObject Last(string Property, string Value, string Condition)
+        public WprManagementObject Last(Func<WprManagementObject, Boolean> Condition)
         {
-            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
-            return res == null ? null : res.LastOrDefault();
+            List<WprManagementObject> res = Get($"Select * from {driveName}");
+
+            return res == null ? null : res.Where(Condition).LastOrDefault();
         }
 
         /// <summary>
