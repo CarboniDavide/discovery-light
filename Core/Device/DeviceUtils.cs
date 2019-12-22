@@ -182,14 +182,13 @@ namespace DiscoveryLight.Core.Device.Utils
 
         private List<WprManagementObject> Get(string Query)
         {
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(PATH, Query);
+            List<WprManagementObject> wprCollection = new List<WprManagementObject>();
+
             try
             {
-                // get all drive informaton from a selected one
-                var collection = new ManagementObjectSearcher(PATH, Query);
-                var res = collection.Get().Cast<ManagementObject>().ToList();
-                collection.Dispose();
-                var inWrapper = res.Select(x => new WprManagementObject(x)).Cast<WprManagementObject>().ToList();
-                return inWrapper.Count == 0 ? null : inWrapper;
+                var collection = searcher.Get().Cast<ManagementObject>().ToList();
+                wprCollection = collection.Select(x => new WprManagementObject(x)).ToList();
             }
             catch (System.Management.ManagementException exception)
             {
@@ -200,8 +199,11 @@ namespace DiscoveryLight.Core.Device.Utils
                 LogHelper.Log(LogTarget.File, exception.ToString());
             }
 
-            // return empty list for any problems
-            return null;
+            //release unmanaged resources
+            searcher.Dispose();
+            
+            // return collection or null value for empty list
+            return wprCollection.Count == 0 ? null: wprCollection;
         }
 
         /// <summary>
