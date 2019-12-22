@@ -59,12 +59,8 @@ namespace DiscoveryLight.Core.Device.Utils
     /// <summary>
     /// ManagementObject Wrapper
     /// </summary>
-    public class WprManagementObject: IDisposable
+    public class WprManagementObject
     {
-        public void Dispose() {
-            this.Dispose();
-        }
-
         private ManagementObject managementObject;
 
         /// <summary>
