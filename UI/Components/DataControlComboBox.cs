@@ -32,7 +32,7 @@ namespace DiscoveryLight.UI.Components
         {
             // fill list with all available devices
             List<String> devices = new List<string>();
-            if (CurrentDeviceDataControl.CurrentDevice == null || CurrentDeviceDataControl.CurrentDevice.IsNull)
+            if (CurrentDeviceDataControl.CurrentDevice == null || CurrentDeviceDataControl.CurrentDevice.IsEmpty)
             {
                 this.Enabled = false;
                 return;

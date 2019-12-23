@@ -51,7 +51,7 @@ namespace DiscoveryLight.Core.Device
         protected readonly Type classType;
         private int deviceNumber = 0;                                       // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
         private List<_SubDevice> subDevices = new List<_SubDevice>();       // List of properties for each device           
-        private Boolean isNull;                                             // Check for null WprManagementObjec
+        private Boolean isEmpty;                                             // Check for null WprManagementObjec
         private String primaryKey;                                          // define entry key in _Device for search items
 
         public string ClassName { get => className; }
@@ -59,7 +59,7 @@ namespace DiscoveryLight.Core.Device
         public string DeviceName { get => deviceName; }
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
         public List<_SubDevice> SubDevices { get { return subDevices; } set { subDevices = value; DeviceNumber = value.Count; } }
-        public bool IsNull { get => isNull; set => isNull = value; }
+        public bool IsEmpty { get => isEmpty; set => isEmpty = value; }
         public string PrimaryKey { get => primaryKey; set => primaryKey = value; }
 
         /// <summary>
@@ -179,7 +179,7 @@ namespace DiscoveryLight.Core.Device
             get
             {
                 var res = new WprManagementObjectSearcher(deviceName).All();
-                IsNull = (res == null);
+                IsEmpty = (res == null);
                 return res ?? new List<WprManagementObject>() { new WprManagementObject() };
             }
         }
