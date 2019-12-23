@@ -54,7 +54,13 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             if (!IsUpdated) PreUpdate();
             if (!IsRelated) GetRelatedDevice();
-            return new List<_SubDevice>();
+            return base.GetCollection();
+        }
+
+        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) {
+            if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
+            return base.GetCollection();
         }
 
         public override _SubDevice GetDevice(string DeviceName, bool GetRelated) { return base.GetDevice(GetRelated ? GetRelatedDevice() : DeviceName); }
