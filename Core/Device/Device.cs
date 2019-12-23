@@ -82,6 +82,13 @@ namespace DiscoveryLight.Core.Device
         public abstract List<_SubDevice> GetCollection(String Value);
 
         /// <summary>
+        /// Get wpr collection that match the condition (lambda expression)
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public abstract List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition);
+
+        /// <summary>
         /// Update collection from wmi class 
         /// </summary>
         public abstract void UpdateCollection();
@@ -97,6 +104,13 @@ namespace DiscoveryLight.Core.Device
         /// </summary>
         /// <param name="Value"></param>
         public abstract void UpdateCollection(String Value);
+
+        /// <summary>
+        /// Update a collection that mach the lambda condition
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public abstract void UpdateCollection(Func<_SubDevice, Boolean> condition);
 
         /// <summary>
         /// Get a selected device form device list that primarykey field contien value
@@ -214,11 +228,15 @@ namespace DiscoveryLight.Core.Device
 
         public override List<_SubDevice> GetCollection(String Value) { return GetCollection(PrimaryKey, Value); }
 
+        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) { return GetCollection().Where(condition).ToList(); }
+
         public override void UpdateCollection() { SubDevices = GetCollection(); }
 
         public override void UpdateCollection(String FieldName, String Value) { SubDevices = GetCollection(FieldName, Value); }
 
         public override void UpdateCollection(String Value) { SubDevices = GetCollection(PrimaryKey, Value); }
+
+        public override void UpdateCollection(Func<_SubDevice, Boolean> condition) { SubDevices = GetCollection(condition); }
 
         public _Device(String DeviceName): base(DeviceName) { }
     }
