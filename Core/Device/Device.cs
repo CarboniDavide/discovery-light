@@ -228,7 +228,7 @@ namespace DiscoveryLight.Core.Device
 
         public override List<_SubDevice> GetCollection(String Value) { return GetCollection(PrimaryKey, Value); }
 
-        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) { return GetCollection().Where(condition).ToList(); }
+        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) { return new List<_SubDevice>();  }
 
         public override void UpdateCollection() { SubDevices = GetCollection(); }
 
