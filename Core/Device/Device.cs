@@ -172,28 +172,6 @@ namespace DiscoveryLight.Core.Device
         }
 
         /// <summary>
-        /// Get a selected device form device list that primarykey field contien value / convert device name if implemented
-        /// </summary>
-        /// <param name="Field"></param>
-        /// <param name="GetRelated"></param>
-        /// <returns></returns>
-        public virtual _SubDevice GetDevice(String Field, Boolean GetRelated) { return null; }
-
-        /// <summary>
-        /// Get a selected device form device list where key field contien value / convert device name if implemented
-        /// </summary>
-        /// <param name="Field"></param>
-        /// <param name="Value"></param>
-        /// <param name="GetRelated"></param>
-        /// <returns></returns>
-        public virtual _SubDevice GetDevice(String Field, String Value, Boolean GetRelated) { return null; }
-
-        /// <summary>
-        /// Update a single device from wmi class 
-        /// </summary>
-        public virtual void UpdateDevice(String DeviceName) { }
-
-        /// <summary>
         /// Get Collection from WprManagementObject
         /// </summary>
         public List<WprManagementObject> WmiCollection

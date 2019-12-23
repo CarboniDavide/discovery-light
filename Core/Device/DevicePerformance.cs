@@ -63,8 +63,6 @@ namespace DiscoveryLight.Core.Device.Performance
             return base.GetCollection();
         }
 
-        public override _SubDevice GetDevice(string DeviceName, bool GetRelated) { return base.GetDevice(GetRelated ? GetRelatedDevice() : DeviceName); }
-
         public DevicePerformance(string DeviceName) : base(DeviceName) { }
     }
 
