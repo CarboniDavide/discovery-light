@@ -148,6 +148,16 @@ namespace DiscoveryLight.Core.Device
         }
 
         /// <summary>
+        /// Get a sub device using lambda expression
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public virtual _SubDevice GetDevice(Func<_SubDevice, Boolean> condition)
+        {
+            return SubDevices.Where(condition).FirstOrDefault();
+        }
+
+        /// <summary>
         /// Get a selected device form device list that primarykey field contien value / convert device name if implemented
         /// </summary>
         /// <param name="Field"></param>
