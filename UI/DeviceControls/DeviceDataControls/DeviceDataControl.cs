@@ -1,4 +1,5 @@
 ﻿using DiscoveryLight.Core.Device;
+using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Utils;
 using System;
 using System.Collections.Generic;
@@ -20,8 +21,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             {
                 if (value == null) return;
                 currentDevice = value;
-                if (currentDevice.SubDevices.Count == 0) currentDevice.UpdateCollection();
-                CurrentSubDevice = currentDevice.SubDevices.First();
+                CurrentSubDevice = currentDevice.SubDevices.FirstOrDefault();
             }
         }
         public _SubDevice CurrentSubDevice
@@ -42,6 +42,16 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             {
                 currentSubDevice = value;
                 if (value != null) show();  // upadate UI when a new subdevice is selected
+            }
+        }
+
+        protected override void validate()
+        {
+            base.validate();
+            if (CurrentDevice.IsEmpty)
+            {
+                _SubDevice obj = Activator.CreateInstance(Type.GetType(CurrentDevice.ClassType.FullName + "+SubDevice")) as _SubDevice;
+                currentSubDevice = obj.Serialize();
             }
         }
 

@@ -17,6 +17,7 @@ namespace DiscoveryLight.UI.DeviceControls
     public abstract class AbstractDeviceControl : _BaseUserControl
     {
         protected abstract void update();       // define action to run periodically
+        protected abstract void validate();     // check all updates values
         protected abstract void abort();        // abort to update
         protected abstract void show();         // define action to show results in update
         protected abstract void start();        // load task in background then update and show until abort is requested
@@ -26,6 +27,8 @@ namespace DiscoveryLight.UI.DeviceControls
         public event EventHandler OnAbort;
         public event EventHandler OnUpdateStart;
         public event EventHandler OnUpdateFinish;
+        public event EventHandler OnValidateStart;
+        public event EventHandler OnValidateFinish;
         public event EventHandler OnShow;
 
         protected virtual void onUpdateStart(EventArgs e)
@@ -36,7 +39,18 @@ namespace DiscoveryLight.UI.DeviceControls
 
         protected virtual void onUpdateFinish(EventArgs e)
         {
-            EventHandler handler = OnUpdateFinish;
+            EventHandler handler = OnValidateStart;
+            handler?.Invoke(this, e);
+        }
+
+        protected virtual void onValidateStart(EventArgs e)
+        {
+            EventHandler handler = OnUpdateStart;
+            handler?.Invoke(this, e);
+        }
+        protected virtual void onValidateFinish(EventArgs e)
+        {
+            EventHandler handler = OnValidateFinish;
             handler?.Invoke(this, e);
         }
 
@@ -91,6 +105,8 @@ namespace DiscoveryLight.UI.DeviceControls
                 {
                     await Task.Run(() => update());
                     onUpdateFinish(EventArgs.Empty);
+                    await Task.Run(() => validate());
+                    onValidateFinish(EventArgs.Empty);
                     show();
                 }
             }
@@ -109,11 +125,17 @@ namespace DiscoveryLight.UI.DeviceControls
             if (token != null && tokenSource != null)               // stop the task
                 tokenSource.Cancel();
         }
+
         protected override void update() {
-            onUpdateStart(EventArgs.Empty);           // raise the associated event
+            onUpdateStart(EventArgs.Empty);             // raise the associated event
         }
+
+        protected override void validate() {
+            onValidateStart(EventArgs.Empty);           // raise the associated event
+        }
+
         protected override void show() {
-            onShow(EventArgs.Empty);     // raise the associated event
+            onShow(EventArgs.Empty);                    // raise the associated event
         }
 
         public override void onLoad(object sender, EventArgs e)
