@@ -127,8 +127,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject First()
         {
-            var res = Get($"Select * from {driveName}");
-            return res == null ? null : res.FirstOrDefault();
+            return Get($"Select * from {driveName}").FirstOrDefault();
         }
 
         /// <summary>
@@ -140,8 +139,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject First(string Property, string Value, string Condition)
         {
-            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
-            return res == null ? null : res.FirstOrDefault();
+            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").FirstOrDefault();
         }
 
         /// <summary>
@@ -151,9 +149,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject First(Func<WprManagementObject, Boolean> Condition)
         {
-            List<WprManagementObject> res = Get($"Select * from {driveName}");
-
-            return res == null ? null : res.Where(Condition).FirstOrDefault();
+            return Get($"Select * from {driveName}").FirstOrDefault();
         }
 
         /// <summary>
@@ -165,8 +161,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject Last(string Property, string Value, string Condition)
         {
-            var res = Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'");
-            return res == null ? null : res.LastOrDefault();
+            return Get($"Select * from {driveName} Where {Property} {Condition} '{Value}'").LastOrDefault();
         }
 
         /// <summary>
@@ -178,9 +173,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject Last(Func<WprManagementObject, bool> Condition)
         {
-            List<WprManagementObject> res = Get($"Select * from {driveName}");
-
-            return res == null ? null : res.Where(Condition).LastOrDefault();
+            return Get($"Select * from {driveName}").Where(Condition).LastOrDefault(); ;
         }
 
         /// <summary>
@@ -200,11 +193,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public List<WprManagementObject> Find(Func<WprManagementObject, bool> Condition)
         {
-            List<WprManagementObject> res = new List<WprManagementObject>();
-
-            res = Get($"Select * from {driveName}").Where(Condition).ToList();
-
-            return res.Count == 0 ? null : res;
+            return Get($"Select * from {driveName}").Where(Condition).ToList();
         }
 
         /// <summary>
@@ -240,9 +229,9 @@ namespace DiscoveryLight.Core.Device.Utils
 
             //release unmanaged resources
             searcher.Dispose();
-            
+
             // return collection or null value for empty list
-            return wprCollection.Count == 0 ? null: wprCollection;
+            return wprCollection;
         }
 
         /// <summary>
