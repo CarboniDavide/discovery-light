@@ -52,14 +52,10 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            if (!IsUpdated) PreUpdate();
-            if (!IsRelated) GetRelatedDevice();
             return base.GetCollection();
         }
 
         public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) {
-            if (!IsUpdated) PreUpdate();
-            if (!IsRelated) GetRelatedDevice();
             return base.GetCollection();
         }
 
@@ -86,22 +82,14 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            var collection = base.GetCollection();
-
-            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj));
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            var collection = base.GetCollection();
-
-            foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new SubDevice().Serialize(mj));
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public PERFORM_SCORE(): base("Win32_WinSAT") { }
@@ -123,8 +111,10 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty ProcessorFrequency;
             public MobProperty PercentProcessorPerformance;
             public MobProperty MaxSpeed;
-            public override _SubDevice Extend(dynamic Obj)
+            public override _SubDevice Extend(dynamic wprObj)
             {
+                WprManagementObject Obj = wprObj as WprManagementObject;
+
                 MaxSpeed = Obj == null ? null : Obj.GetProperty("MaxClockSpeed");
 
                 if (MaxSpeed == null || PercentProcessorPerformance == null)                         // use base frequency for tboost 
@@ -158,22 +148,23 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            var collection = base.GetCollection();
+            base.GetCollection();
 
-            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj).Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(mj.GetProperty("Name").AsSubString(0, 1))).FirstOrDefault()));
-
-            return collection;
+            return WmiCollection.Find(FieldName, Value, "=")
+                .Select(x => new SubDevice()
+                        .Serialize(x)
+                        .Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(x.GetProperty("Name").AsSubString(0,1))).FirstOrDefault()))
+                .ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            var collection = base.GetCollection();
-
-            foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new SubDevice().Serialize(mj).Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(mj.GetProperty("Name").AsSubString(0, 1))).FirstOrDefault()));
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.All()
+                .Select(x => new SubDevice()
+                        .Serialize(x)
+                        .Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3,1).Equals(x.GetProperty("Name").AsSubString(0,1))).FirstOrDefault() ))
+                .ToList();
         }
 
         public PERFORM_CPU() : base("Win32_PerfFormattedData_Counters_ProcessorInformation") { PrimaryKey = "Name"; }
@@ -196,22 +187,14 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            var collection = base.GetCollection();
-
-            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj));
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            var collection = base.GetCollection();
-
-            foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new SubDevice().Serialize(mj));
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public PERFORM_SYSTEM(): base("Win32_PerfRawData_PerfOS_System") {}
@@ -249,22 +232,14 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            var collection = base.GetCollection();
-
-            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj).Extend());
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x).Extend()).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            var collection = base.GetCollection();
-
-            foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new SubDevice().Serialize(mj).Extend());
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
         }
 
         public PERFORM_RAM(): base("Win32_PerfRawData_PerfOS_Memory") {}
@@ -313,23 +288,15 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            var collection = base.GetCollection();
-
-            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj));
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.Find(x => x.GetProperty(FieldName).AsString().Equals(Value)).Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
 
         public override List<_SubDevice> GetCollection()
         {
-            var collection = base.GetCollection();
-
-            foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new SubDevice().Serialize(mj));
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public PERFORM_DISK(): base("Win32_PerfFormattedData_PerfDisk_LogicalDisk") { PrimaryKey = "Name"; }
@@ -428,22 +395,14 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            var collection = base.GetCollection();
-
-            var mj = new WprManagementObjectSearcher(DeviceName).First(x => x.GetProperty(FieldName).AsString().Equals(Value)) ?? new WprManagementObject();
-            collection.Add(new SubDevice().Serialize(mj).Extend());
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x).Extend()).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            var collection = base.GetCollection();
-
-            foreach (WprManagementObject mj in WmiCollection)
-                collection.Add(new SubDevice().Serialize(mj).Extend());
-
-            return collection;
+            base.GetCollection();
+            return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
         }
         
         public PERFORM_NETWORK(): base("Win32_PerfFormattedData_Tcpip_NetworkAdapter") { PrimaryKey = "Name"; }

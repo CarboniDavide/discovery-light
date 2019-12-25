@@ -59,7 +59,7 @@ namespace DiscoveryLight.Core.Device
         public string DeviceName { get => deviceName; }
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
         public List<_SubDevice> SubDevices { get { return subDevices; } set { subDevices = value; DeviceNumber = value.Count; } }
-        public bool IsEmpty { get => isEmpty; set => isEmpty = value; }
+        public bool IsEmpty { get { return subDevices.Count == 0; } set { isEmpty = value; } }
         public string PrimaryKey { get => primaryKey; set => primaryKey = value; }
 
         /// <summary>
@@ -174,13 +174,11 @@ namespace DiscoveryLight.Core.Device
         /// <summary>
         /// Get Collection from WprManagementObject
         /// </summary>
-        public List<WprManagementObject> WmiCollection
+        public WprManagementObjectSearcher WmiCollection
         {
             get
             {
-                var res = new WprManagementObjectSearcher(deviceName).All();
-                IsEmpty = (res == null);
-                return res ?? new List<WprManagementObject>() { new WprManagementObject() };
+                return new WprManagementObjectSearcher(deviceName);
             }
         }
 
@@ -225,6 +223,18 @@ namespace DiscoveryLight.Core.Device
         public MobProperty Name;
         public MobProperty Caption;
         public MobProperty Description;
+
+        /// <summary>
+        /// Serialize all field with ManagementObject
+        /// </summary>
+        /// <param name="mj"></param>
+        /// <returns></returns>
+        public _SubDevice Serialize()
+        {
+            foreach (FieldInfo field in this.GetType().GetFields())
+                field.SetValue(this, new MobProperty(null));
+            return this;
+        }
 
         /// <summary>
         /// Serialize all field with ManagementObject
