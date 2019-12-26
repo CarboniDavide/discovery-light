@@ -31,10 +31,50 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as Int16
         /// </summary>
         /// <returns></returns>
-        public int? AsInt()
+        public int? AsInt16()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToInt16(obj);
+        }
+
+        /// <summary>
+        /// Get ManagementObject property as Int32
+        /// </summary>
+        /// <returns></returns>
+        public int? AsInt32()
+        {
+            if (obj == null) return obj;
+            return (obj.GetType().IsArray) ? null : Convert.ToInt32(obj);
+        }
+
+        /// <summary>
+        /// Get ManagementObject property as Int16
+        /// </summary>
+        /// <returns></returns>
+        public int? AsInt64()
+        {
+            if (obj == null) return obj;
+            return (obj.GetType().IsArray) ? null : Convert.ToInt64(obj);
+        }
+
+        /// <summary>
+        /// Get ManagementObject property as Double
+        /// </summary>
+        /// <returns></returns>
+        public int? AsDouble()
+        {
+            if (obj == null) return obj;
+            return (obj.GetType().IsArray) ? null : Convert.ToDouble(obj);
+        }
+
+        /// <summary>
+        /// Get ManagementObject property as Decimal
+        /// </summary>
+        /// <returns></returns>
+        public int? AsDecimal()
+        {
+            if (obj == null) return obj;
+            return (obj.GetType().IsArray) ? null : Convert.ToDecimal(obj);
         }
 
         /// <summary>
