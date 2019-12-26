@@ -149,7 +149,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public WprManagementObject First(Func<WprManagementObject, Boolean> Condition)
         {
-            return Get($"Select * from {driveName}").FirstOrDefault();
+            return Get($"Select * from {driveName}").Where(Condition).FirstOrDefault();
         }
 
         /// <summary>
