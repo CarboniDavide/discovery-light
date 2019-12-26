@@ -104,9 +104,9 @@ namespace DiscoveryLight.UI.DeviceControls
 
                 if (!token.IsCancellationRequested)
                 {
-                    await Task.Run(() => update());
+                    await Task.Run(() => update(), token);
                     onUpdateFinish(EventArgs.Empty);
-                    await Task.Run(() => validate());
+                    await Task.Run(() => validate(), token);
                     onValidateFinish(EventArgs.Empty);
                     show();
                 }
