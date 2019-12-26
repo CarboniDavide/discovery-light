@@ -31,7 +31,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as Int16
         /// </summary>
         /// <returns></returns>
-        public int? AsInt16()
+        public Int16? AsInt16()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToInt16(obj);
@@ -41,7 +41,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as Int32
         /// </summary>
         /// <returns></returns>
-        public int? AsInt32()
+        public Int32? AsInt32()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToInt32(obj);
@@ -51,7 +51,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as Int16
         /// </summary>
         /// <returns></returns>
-        public int? AsInt64()
+        public Int64? AsInt64()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToInt64(obj);
@@ -61,7 +61,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as UInt16
         /// </summary>
         /// <returns></returns>
-        public int? AsUInt16()
+        public UInt16? AsUInt16()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToUInt16(obj);
@@ -71,7 +71,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as UInt32
         /// </summary>
         /// <returns></returns>
-        public int? AsUInt32()
+        public UInt32? AsUInt32()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToUInt32(obj);
@@ -81,7 +81,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as UInt64
         /// </summary>
         /// <returns></returns>
-        public int? AsUInt64()
+        public UInt64? AsUInt64()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToUInt64(obj);
