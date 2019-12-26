@@ -39,15 +39,16 @@ namespace DiscoveryLight.UI.DeviceControls
 
         protected virtual void onUpdateFinish(EventArgs e)
         {
-            EventHandler handler = OnValidateStart;
+            EventHandler handler = OnUpdateFinish;
             handler?.Invoke(this, e);
         }
 
         protected virtual void onValidateStart(EventArgs e)
         {
-            EventHandler handler = OnUpdateStart;
+            EventHandler handler = OnValidateStart;
             handler?.Invoke(this, e);
         }
+        
         protected virtual void onValidateFinish(EventArgs e)
         {
             EventHandler handler = OnValidateFinish;
