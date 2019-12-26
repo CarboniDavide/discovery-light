@@ -113,15 +113,16 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty MaxSpeed;
             public override _SubDevice Extend(dynamic wprObj)
             {
-                WprManagementObject Obj = wprObj as WprManagementObject;
+                List<WprManagementObject> obj = wprObj as List<WprManagementObject>;
+                WprManagementObject current = obj.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(Name.AsSubString(0, 1))).FirstOrDefault();
 
-                MaxSpeed = Obj == null ? null : Obj.GetProperty("MaxClockSpeed");
+                MaxSpeed = current == null ? null : current.GetProperty("MaxClockSpeed");
 
                 if (MaxSpeed == null || PercentProcessorPerformance == null)                         // use base frequency for tboost 
                     Frequency = ProcessorFrequency;
                 else
                 {
-                    var frequency = Convert.ToInt16((Convert.ToUInt16(MaxSpeed.AsString())) / 100) * Convert.ToUInt16(PercentProcessorPerformance.AsString());
+                    int? frequency = (MaxSpeed.AsInt() / 100) * PercentProcessorPerformance.AsInt();
                     Frequency = new MobProperty(frequency);
                 }
 
@@ -149,22 +150,34 @@ namespace DiscoveryLight.Core.Device.Performance
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
             base.GetCollection();
-
-            return WmiCollection.Find(FieldName, Value, "=")
-                .Select(x => new SubDevice()
-                        .Serialize(x)
-                        .Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3, 1).Equals(x.GetProperty("Name").AsSubString(0,1))).FirstOrDefault()))
-                .ToList();
+            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x).Extend(mjext)).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            base.GetCollection();
-            return WmiCollection.All()
-                .Select(x => new SubDevice()
-                        .Serialize(x)
-                        .Extend(mjext.Where(d => d.GetProperty("DeviceID").AsSubString(3,1).Equals(x.GetProperty("Name").AsSubString(0,1))).FirstOrDefault() ))
-                .ToList();
+            return GetCollectionWithPerformance(base.GetCollection());
+        }
+
+        private List<_SubDevice> GetCollectionBase(List<_SubDevice> collection)
+        {
+            return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend(mjext)).ToList();
+        }
+
+        private List<_SubDevice> GetCollectionWithPerformance(List<_SubDevice> collection)
+        {
+            foreach (WprManagementObject mj in WmiCollection.All())
+            {
+                var t = new SubDevice();
+                t.Name = mj.GetProperty("Name");
+                t.PercentProcessorTime = mj.GetProperty("PercentProcessorTime");
+                t.PercentofMaximumFrequency = mj.GetProperty("PercentofMaximumFrequency");
+                t.ProcessorFrequency = mj.GetProperty("ProcessorFrequency");
+                t.PercentProcessorPerformance = mj.GetProperty("PercentProcessorPerformance");
+                t.Extend(mjext);
+                collection.Add(t);
+            }
+
+            return collection;
         }
 
         public PERFORM_CPU() : base("Win32_PerfFormattedData_Counters_ProcessorInformation") { PrimaryKey = "Name"; }
