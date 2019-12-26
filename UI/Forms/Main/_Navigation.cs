@@ -1,8 +1,7 @@
-﻿using System;
+﻿using DiscoveryLight.UI.Components;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
-using DiscoveryLight.UI.Panels.Devices;
-using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Forms.Main
 {
@@ -19,7 +18,8 @@ namespace DiscoveryLight.UI.Forms.Main
             Point currentPointToMOve = (sender as Button).Location;                        // get current button position
             if (requestedPanelName == "Settings")                                          // settings panel use not panel container 
                 FormsCollection.Main.UserSettings.anm_PanelSet.OpenPanel();
-            else { 
+            else
+            {
                 FormsCollection.Main.PanelContainer.LoadPanel(requestedPanelName);         // load panel directly in PanelContainer
                 FormsCollection.Main.UserSettings.anm_PanelSet.ClosePanel();               // close panel  
             }

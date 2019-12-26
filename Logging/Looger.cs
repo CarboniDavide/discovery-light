@@ -13,7 +13,7 @@ namespace DiscoveryLight.Logging
         protected readonly object lockObj = new object();
         public abstract void Log(string message);
     }
-    
+
     public class FileLogger : LogBase
     {
         public static string filePath = @"log.txt";

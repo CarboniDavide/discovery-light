@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DiscoveryLight.UI.Panels.Devices;
 
 namespace DiscoveryLight.UI.Components
 {
@@ -25,7 +19,8 @@ namespace DiscoveryLight.UI.Components
         public ToolTip ToolDescription
         {
             get { return toolDescription; }
-            set { 
+            set
+            {
                 toolDescription = value;
                 toolDescription.SetToolTip(this, Device);
             }

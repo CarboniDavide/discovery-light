@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DiscoveryLight.Core.Device;
-using DiscoveryLight.Core.Device.Data;
+﻿using DiscoveryLight.Core.Device;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Device.Utils;
-using DiscoveryLight.UI.DeviceControls;
 using DiscoveryLight.UI.DeviceControls.DeviceDataControls;
 using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Components
 {
-    class DataControlComboBox: ComboBox
+    class DataControlComboBox : ComboBox
     {
         private List<_SubDevice> devices;
         private DeviceDataControl currentDeviceDataControl;
@@ -42,7 +38,7 @@ namespace DiscoveryLight.UI.Components
                 this.Enabled = true;
             }
             foreach (_SubDevice device in CurrentDeviceDataControl.CurrentDevice.SubDevices)
-                devices.Add( (device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString());
+                devices.Add((device.GetType().GetField(ValueToUse).GetValue(device) as MobProperty).AsString());
 
             // don't update loaded values in comboBox if not new devices are founded
             if (devices.SequenceEqual(this.Items.Cast<String>().ToList())) return;
@@ -71,7 +67,7 @@ namespace DiscoveryLight.UI.Components
             if (CurrentDevicePerformanceControl != null)
                 //CurrentDevicePerformanceControl.CurrentSubDevice = CurrentDevicePerformanceControl.CurrentDevice.GetDevice(this.SelectedItem.ToString(), true) ?? CurrentDeviceDataControl.CurrentSubDevice;
                 (currentDevicePerformanceControl.CurrentDevice as DevicePerformance).DevicetoToRelate = this.SelectedItem.ToString();
-            if (Action != null) Action.Invoke(); 
+            if (Action != null) Action.Invoke();
         }
 
         private void InitSubDevicesID()

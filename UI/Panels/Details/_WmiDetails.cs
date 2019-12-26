@@ -1,15 +1,7 @@
-﻿using System;
+﻿using DiscoveryLight.Logging;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Management;
-using DiscoveryLight.Logging;
-using DiscoveryLight.UI.Forms.Main;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
@@ -51,7 +43,7 @@ namespace DiscoveryLight.UI.Panels.Details
                 LogHelper.Log(LogTarget.File, e.ToString());
                 nsClass = null;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 LogHelper.Log(LogTarget.File, e.ToString());
                 nsClass = null;
@@ -67,7 +59,7 @@ namespace DiscoveryLight.UI.Panels.Details
                 int count = 0;
                 onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.init, collection.Count));
                 onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.start, null));
-                
+
                 foreach (ManagementObject wmiObject in collection)                          // read all subdrive info
                 {
 

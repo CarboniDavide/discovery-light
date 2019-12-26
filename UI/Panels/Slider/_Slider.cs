@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DiscoveryLight.UI.Forms.Main;
 using DiscoveryLight.UI.Panels.Devices;
-using DiscoveryLight.UI.Forms.Main;
+using System;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Slider
 {
@@ -67,7 +63,7 @@ namespace DiscoveryLight.UI.Panels.Slider
             if (this.NewPanel.PanelIndex > this.CurrentPanel.PanelIndex)   // set the new panel in the top
             {
                 MoveAction = MoveDown;                                                   // set action to the animation
-                this.Height = NewPanel.Height *2;                                        // get space in top to host the new panel  
+                this.Height = NewPanel.Height * 2;                                        // get space in top to host the new panel  
                 this.Location = new Point(this.Location.X, -NewPanel.Height);            // get a new location
                 this.Controls[0].Location = new Point(this.Location.X, NewPanel.Height); // change location to the old panel   
                 NewPanel.Location = new Point(CurrentPanel.Location.X, 0);               // set panel with the location       
@@ -89,7 +85,7 @@ namespace DiscoveryLight.UI.Panels.Slider
         /// </summary>
         public void Start()
         {
-            MoveAction.Invoke();         
+            MoveAction.Invoke();
         }
 
         /// <summary>
@@ -128,7 +124,7 @@ namespace DiscoveryLight.UI.Panels.Slider
         private void _Slider_Load(object sender, EventArgs e)
         {
             this.MoveOBject.OnFinishMoving += OnFinish;
-            
+
             this.ControlAdded += new ControlEventHandler(SetMainTitle);
         }
     }

@@ -1,10 +1,8 @@
-﻿using System;
+﻿using DiscoveryLight.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Management;
-using DiscoveryLight.Logging;
 
 namespace DiscoveryLight.Core.Device.Utils
 {
@@ -33,8 +31,8 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public string AsArray(int ArrayAt)
         {
-            if (obj == null) return null;                                     
-            return (obj.GetType().IsArray) ? obj[ArrayAt] : null;                 
+            if (obj == null) return null;
+            return (obj.GetType().IsArray) ? obj[ArrayAt] : null;
         }
 
         /// <summary>
@@ -166,7 +164,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <summary>
         /// Determines if ManagmentObject is null
         /// </summary>
-        public Boolean IsNullObject { get => (managementObject == null);}
+        public Boolean IsNullObject { get => (managementObject == null); }
 
         public MobProperty GetProperty(string Name)
         {

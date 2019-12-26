@@ -1,15 +1,12 @@
-﻿using System;
+﻿using DiscoveryLight.Core.Device.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Management;
-using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.Core.Device.Performance
 {
     #region Interface
-    
+
     /// <summary>
     /// Device Performance main class.
     /// Device Performance represents a installed device type. Each device can have more childs or subdevices(collection)
@@ -18,7 +15,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// Device Performance read all performance values for all subdevice for a selected device(drive)
     /// </summary>
     /// 
-    public class DevicePerformance: _Device, IRelatable, IPreUpdate
+    public class DevicePerformance : _Device, IRelatable, IPreUpdate
     {
         private string devicetoToRelate;
         private Boolean isRelated = true;
@@ -55,7 +52,8 @@ namespace DiscoveryLight.Core.Device.Performance
             return base.GetCollection();
         }
 
-        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) {
+        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition)
+        {
             return base.GetCollection();
         }
 
@@ -69,7 +67,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get score performance
     /// </summary>
-    public class PERFORM_SCORE: DevicePerformance
+    public class PERFORM_SCORE : DevicePerformance
     {
         public class SubDevice : _SubDevice
         {
@@ -92,7 +90,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public PERFORM_SCORE(): base("Win32_WinSAT") { }
+        public PERFORM_SCORE() : base("Win32_WinSAT") { }
     }
     #endregion
 
@@ -187,10 +185,10 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get Threads and Process number that are running in background
     /// </summary>
-    public class PERFORM_SYSTEM: DevicePerformance
+    public class PERFORM_SYSTEM : DevicePerformance
     {
-        public class SubDevice : _SubDevice 
-        { 
+        public class SubDevice : _SubDevice
+        {
             public MobProperty Threads;
             public MobProperty Processes;
         }
@@ -207,7 +205,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public PERFORM_SYSTEM(): base("Win32_PerfRawData_PerfOS_System") {}
+        public PERFORM_SYSTEM() : base("Win32_PerfRawData_PerfOS_System") { }
     }
 
     #endregion
@@ -216,7 +214,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get Memory Ram performance
     /// </summary>
-    public class PERFORM_RAM: DevicePerformance
+    public class PERFORM_RAM : DevicePerformance
     {
         public class SubDevice : _SubDevice
         {
@@ -252,7 +250,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
         }
 
-        public PERFORM_RAM(): base("Win32_PerfRawData_PerfOS_Memory") {}
+        public PERFORM_RAM() : base("Win32_PerfRawData_PerfOS_Memory") { }
 
     }
 
@@ -263,7 +261,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get local storage performance
     /// </summary>
-    public class PERFORM_DISK: DevicePerformance, IRelatable
+    public class PERFORM_DISK : DevicePerformance, IRelatable
     {
         public class SubDevice : _SubDevice
         {
@@ -309,7 +307,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public PERFORM_DISK(): base("Win32_PerfFormattedData_PerfDisk_LogicalDisk") { PrimaryKey = "Name"; }
+        public PERFORM_DISK() : base("Win32_PerfFormattedData_PerfDisk_LogicalDisk") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -319,7 +317,7 @@ namespace DiscoveryLight.Core.Device.Performance
     /// <summary>
     /// Get Network Performance
     /// </summary>
-    public class PERFORM_NETWORK: DevicePerformance, IRelatable
+    public class PERFORM_NETWORK : DevicePerformance, IRelatable
     {
         public class SubDevice : _SubDevice
         {
@@ -414,8 +412,8 @@ namespace DiscoveryLight.Core.Device.Performance
             base.GetCollection();
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
         }
-        
-        public PERFORM_NETWORK(): base("Win32_PerfFormattedData_Tcpip_NetworkAdapter") { PrimaryKey = "Name"; }
+
+        public PERFORM_NETWORK() : base("Win32_PerfFormattedData_Tcpip_NetworkAdapter") { PrimaryKey = "Name"; }
 
     }
 

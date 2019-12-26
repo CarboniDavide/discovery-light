@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DiscoveryLight.UI.Components;
+using System;
 using System.Windows.Forms;
-using System.Globalization;
-using System.Threading;
-using DiscoveryLight.UI.Components;
 
 namespace DiscoveryLight.UI.Panels.UserSettings
 {
@@ -36,12 +27,12 @@ namespace DiscoveryLight.UI.Panels.UserSettings
         private void ChangeLanguage(object sender, EventArgs e)
         {
             String lang = (sender as LanguageLinkRadio).Language.ToString();      // get selected language
-            newLAnguage = lang;                                                                     
+            newLAnguage = lang;
             Settings.Settings.Default.UserLanguage = lang;                        // update global settings              
             needRestart = (oldLAnguage != newLAnguage);                           // inform that a new restart is required  
             lbl_InfoRestart.Visible = needRestart;                                // show a message to inform user that application will be restarted              
         }
-       
+
         private void cmd_Apply_Click(object sender, EventArgs e)
         {
             Settings.Settings.Default.Save();                                     // save all changes in global settings  

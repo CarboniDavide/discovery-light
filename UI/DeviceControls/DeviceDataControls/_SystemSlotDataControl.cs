@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DiscoveryLight.Core.Commun;
 using DiscoveryLight.Core.Device.Data;
-using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 using DiscoveryLight.Core.Device.Utils;
+using System.Linq;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -20,7 +11,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             InitializeComponent();
         }
-        
+
         public _SystemSlotDataControl() : base()
         {
             InitializeComponent();

@@ -1,21 +1,13 @@
-﻿using System;
+﻿using DiscoveryLight.Logging;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Management;
-using DiscoveryLight.Logging;
-using DiscoveryLight.UI.Panels.Devices;
 
 namespace DiscoveryLight.UI.Panels.Details
 {
     public partial class _WmiClasses : BaseSubPanel
     {
-        
+
         public _WmiClasses()
         {
             InitializeComponent();
@@ -57,7 +49,8 @@ namespace DiscoveryLight.UI.Panels.Details
                 nsClass = null;
             }
 
-            if (nsClass == null) {
+            if (nsClass == null)
+            {
                 onGetValues(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
             }
             else
@@ -76,7 +69,7 @@ namespace DiscoveryLight.UI.Panels.Details
                 nsClass.Dispose();
             }
         }
-       
+
         public void OnChangeIndex(object sender, EventArgs e)
         {
             if (lst_WmiClassName.SelectedItem.Equals("-- Select --")) return;

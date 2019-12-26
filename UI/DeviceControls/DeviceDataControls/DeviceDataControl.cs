@@ -1,15 +1,11 @@
 ﻿using DiscoveryLight.Core.Device;
-using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Device.Utils;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
-    public class DeviceDataControl: DeviceControl, IInitializable
+    public class DeviceDataControl : DeviceControl, IInitializable
     {
         private _Device currentDevice;               // main device type
         private _SubDevice currentSubDevice;     // a child for the current device 

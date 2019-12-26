@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
@@ -44,7 +40,7 @@ namespace DiscoveryLight.UI.Panels.Devices
                     return new _BaseHardware();
             }
         }
-        
+
         /// <summary>
         /// Get type using assembly and namespace
         /// </summary>

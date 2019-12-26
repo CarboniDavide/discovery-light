@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DiscoveryLight.Core.Commun;
 using DiscoveryLight.Core.Device.Data;
-using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -44,7 +34,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_Core_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.NumberOfCores, "N/A");
             lbl_Thread_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.NumberOfLogicalProcessors, "N/A");
             lbl_MaxSpeed_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.MaxClockSpeed, "N/A", "{0:N0}") + " Mhz";
-            lbl_L1CacheSize_Value.Text = MobPropertyDataConvert.AsDefaultValue(x=> x.AsInt16() / 4, CurrentSubDevice.L2CacheSize, "N/A") + " Kb";
+            lbl_L1CacheSize_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsInt16() / 4, CurrentSubDevice.L2CacheSize, "N/A") + " Kb";
             lbl_L2CacheSize_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.L2CacheSize, "N/A") + " Kb";
             lbl_L3CacheSize_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.L3CacheSize, "N/A") + " Kb";
             abort();

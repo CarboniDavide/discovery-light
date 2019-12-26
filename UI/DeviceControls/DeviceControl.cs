@@ -1,10 +1,6 @@
 ﻿using DiscoveryLight.Core.Device;
-using DiscoveryLight.Core.Device.Utils;
 using DiscoveryLight.UI.BaseUserControl;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -48,7 +44,7 @@ namespace DiscoveryLight.UI.DeviceControls
             EventHandler handler = OnValidateStart;
             handler?.Invoke(this, e);
         }
-        
+
         protected virtual void onValidateFinish(EventArgs e)
         {
             EventHandler handler = OnValidateFinish;
@@ -74,7 +70,7 @@ namespace DiscoveryLight.UI.DeviceControls
         }
     }
 
-    public class DeviceControl: AbstractDeviceControl
+    public class DeviceControl : AbstractDeviceControl
     {
         private CancellationTokenSource tokenSource;
         private CancellationToken token;
@@ -89,7 +85,7 @@ namespace DiscoveryLight.UI.DeviceControls
         public TimeSpan Period { get => period; set => period = value; }
 
         private void setToken()
-        {   
+        {
             // create a new token for the next task
             tokenSource = new CancellationTokenSource();
             token = tokenSource.Token;
@@ -127,15 +123,18 @@ namespace DiscoveryLight.UI.DeviceControls
                 tokenSource.Cancel();
         }
 
-        protected override void update() {
+        protected override void update()
+        {
             onUpdateStart(EventArgs.Empty);             // raise the associated event
         }
 
-        protected override void validate() {
+        protected override void validate()
+        {
             onValidateStart(EventArgs.Empty);           // raise the associated event
         }
 
-        protected override void show() {
+        protected override void show()
+        {
             onShow(EventArgs.Empty);                    // raise the associated event
         }
 
@@ -150,7 +149,8 @@ namespace DiscoveryLight.UI.DeviceControls
             GC.SuppressFinalize(this);  // finalize and close
         }
 
-        public DeviceControl() {
+        public DeviceControl()
+        {
             this.className = this.GetType().Name;
             this.classType = this.GetType();
         }

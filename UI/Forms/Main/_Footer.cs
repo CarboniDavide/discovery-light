@@ -1,16 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DiscoveryLight.UI.BaseUserControl;
+using System;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DiscoveryLight.UI.Panels.Slider;
-using DiscoveryLight.UI.Panels.Devices;
-using static DiscoveryLight.UI.Panels.Details._AbstractUIRendering;
-using DiscoveryLight.UI.BaseUserControl;
 
 namespace DiscoveryLight.UI.Forms.Main
 {
@@ -31,24 +21,30 @@ namespace DiscoveryLight.UI.Forms.Main
         private double chartBarSize;
 
         [Localizable(true)]
-        public string WaitMessage {
+        public string WaitMessage
+        {
             get { return waitMessage; }
-            set { 
+            set
+            {
                 waitMessage = value;
                 CurrentTitle = value;
             }
         }
         [Localizable(true)]
-        public string LoadMessage {
-            get { return loadMessage; } 
-            set { 
-                loadMessage = value; 
+        public string LoadMessage
+        {
+            get { return loadMessage; }
+            set
+            {
+                loadMessage = value;
                 CurrentTitle = value;
             }
         }
-        public string CurrentTitle {
+        public string CurrentTitle
+        {
             get { return currentTitle; }
-            set { 
+            set
+            {
                 currentTitle = value;
                 ChartBar.CustomText = value;
             }
@@ -56,16 +52,19 @@ namespace DiscoveryLight.UI.Forms.Main
         public string MainTitle
         {
             get { return mainTitle; }
-            set { 
+            set
+            {
                 mainTitle = value;
-               CurrentTitle = value;
+                CurrentTitle = value;
             }
         }
         public double ChartBarStep { get => chartBarStep; set => chartBarStep = value; }
-        public double ChartBarSize {
+        public double ChartBarSize
+        {
             get { return chartBarSize; }
-            set { 
-                chartBarSize = value; 
+            set
+            {
+                chartBarSize = value;
                 ChartBar.BarFillSize = (int)chartBarSize;
             }
         }
@@ -91,7 +90,8 @@ namespace DiscoveryLight.UI.Forms.Main
         public void InitChartBar(Decimal? QuantityDivider)
         {
             ChartBarSize = 0;
-            if (QuantityDivider == null || QuantityDivider == 0) {
+            if (QuantityDivider == null || QuantityDivider == 0)
+            {
                 ChartBar.BarFillSize = 0;
                 return;
             };

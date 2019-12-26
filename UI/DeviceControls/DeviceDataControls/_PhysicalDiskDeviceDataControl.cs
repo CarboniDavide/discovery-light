@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DiscoveryLight.Core.Commun;
 using DiscoveryLight.Core.Device.Data;
-using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -38,7 +28,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_Name_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.Caption, "N/A");
             lbl_Tipology_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.MediaType, "N/A");
             lbl_ConnectionType_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.InterfaceType, "N/A");
-            lbl_Size_Value.Text = MobPropertyDataConvert.AsDefaultValue( x => x.AsUInt64() / 1048576, CurrentSubDevice.Size, "N/A", "{0:N0}") + " MB";
+            lbl_Size_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt64() / 1048576, CurrentSubDevice.Size, "N/A", "{0:N0}") + " MB";
             lbl_SerialNumber_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.SerialNumber, "N/A");
             lbl_Cylinders_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.TotalCylinders, "N/A", "{0:N0}");
             lbl_Heads_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.TotalHeads, "N/A", "{0:N0}");

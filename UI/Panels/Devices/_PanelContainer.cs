@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Devices
 {
@@ -23,7 +15,7 @@ namespace DiscoveryLight.UI.Panels.Devices
         {
             InitializeComponent();
         }
-        
+
         public void LoadPanel(string name)
         {
             // get a new instance for a requested panel and use slider to perform ui

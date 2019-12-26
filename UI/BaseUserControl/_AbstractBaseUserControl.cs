@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.BaseUserControl
@@ -16,7 +12,7 @@ namespace DiscoveryLight.UI.BaseUserControl
         public abstract void onDispose(object sender, EventArgs e);
     }
 
-    public class _BaseUserControl:_AbstractBaseUserControl
+    public class _BaseUserControl : _AbstractBaseUserControl
     {
         public override void onDispose(object sender, EventArgs e) { }
 

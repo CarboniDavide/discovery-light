@@ -1,15 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using DiscoveryLight.Core.Commun;
 using DiscoveryLight.Core.Device.Data;
-using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -39,7 +29,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             lbl_Manufacturer_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
             lbl_AdapterType_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.AdapterType, "N/A");
             lbl_DeviceID_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.DeviceID, "N/A");
-            lbl_Speed_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsDouble() / 1000000, CurrentSubDevice.Speed, "N/A") +" Mbps";
+            lbl_Speed_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsDouble() / 1000000, CurrentSubDevice.Speed, "N/A") + " Mbps";
             lbl_MACAddress_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.MACAddress, "N/A");
             lbl_IPAddress_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsArray(0), CurrentSubDevice.IpAddress, "N/A");
             lbl_PrimaryDNS_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsArray(0), CurrentSubDevice.DNSServerSearchOrder, "N/A");

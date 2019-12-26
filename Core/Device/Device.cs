@@ -1,10 +1,8 @@
-﻿using System;
+﻿using DiscoveryLight.Core.Device.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.Core.Device
 {
@@ -196,7 +194,7 @@ namespace DiscoveryLight.Core.Device
         }
     }
 
-    public class _Device: AbstractDevice
+    public class _Device : AbstractDevice
     {
         public override List<_SubDevice> GetCollection() { return new List<_SubDevice>(); }
 
@@ -204,7 +202,7 @@ namespace DiscoveryLight.Core.Device
 
         public override List<_SubDevice> GetCollection(String Value) { return GetCollection(PrimaryKey, Value); }
 
-        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) { return new List<_SubDevice>();  }
+        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) { return new List<_SubDevice>(); }
 
         public override void UpdateCollection() { SubDevices = GetCollection(); }
 
@@ -214,7 +212,7 @@ namespace DiscoveryLight.Core.Device
 
         public override void UpdateCollection(Func<_SubDevice, Boolean> condition) { SubDevices = GetCollection(condition); }
 
-        public _Device(String DeviceName): base(DeviceName) { }
+        public _Device(String DeviceName) : base(DeviceName) { }
     }
 
     public class _SubDevice

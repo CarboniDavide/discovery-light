@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Details
@@ -19,7 +12,7 @@ namespace DiscoveryLight.UI.Panels.Details
 
         public void HideMessages(Boolean hide, String className)
         {
-            lbl_ClasseName.Visible= !hide;
+            lbl_ClasseName.Visible = !hide;
             lbl_MessageResult.Visible = !hide;
             if (className == null) return;
             lbl_ClasseName.Text = className;
@@ -27,12 +20,12 @@ namespace DiscoveryLight.UI.Panels.Details
 
         public void HideImages(Boolean hide)
         {
-            pic_ImageResult.Visible= !hide;
+            pic_ImageResult.Visible = !hide;
         }
 
         public void HideControl(Boolean hide)
         {
-            this.Visible= !hide;
+            this.Visible = !hide;
         }
 
         public String ClassName

@@ -1,9 +1,5 @@
 ﻿using DiscoveryLight.Core.Device.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiscoveryLight.Core.Commun
 {
@@ -42,7 +38,7 @@ namespace DiscoveryLight.Core.Commun
             return (Value == null || Value.IsNull) ? Default : Lambda.Invoke(Value).ToString();
         }
 
-       
+
 
         /// <summary>
         /// Return a lambda value for param "Value" with the specified string format, "Default" string elsewhere

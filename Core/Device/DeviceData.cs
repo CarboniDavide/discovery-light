@@ -1,8 +1,7 @@
-﻿using System;
+﻿using DiscoveryLight.Core.Device.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Management;
-using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.Core.Device.Data
 {
@@ -15,7 +14,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// So Physical Disk is the main drive, and each of them is a subdevice(block)
     /// </summary>
     /// 
-    public abstract class DeviceData: _Device
+    public abstract class DeviceData : _Device
     {
         public DeviceData(string deviceName) : base(deviceName) { }
     }
@@ -55,7 +54,8 @@ namespace DiscoveryLight.Core.Device.Data
     /// </summary>
     public class OperatingSystem : DeviceData
     {
-        public class SubDevice : _SubDevice{
+        public class SubDevice : _SubDevice
+        {
             public MobProperty BuildNumber;
             public MobProperty Manufacturer;
             public MobProperty OSArchitecture;
@@ -88,7 +88,7 @@ namespace DiscoveryLight.Core.Device.Data
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public ComputerSystemProduct():base("Win32_ComputerSystemProduct") { PrimaryKey = "Name"; }
+        public ComputerSystemProduct() : base("Win32_ComputerSystemProduct") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -97,7 +97,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// <summary>
     /// Get base Bios properties
     /// </summary>
-    public class BIOS: DeviceData
+    public class BIOS : DeviceData
     {
         public class SubDevice : _SubDevice
         {
@@ -111,7 +111,7 @@ namespace DiscoveryLight.Core.Device.Data
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public BIOS():base("Win32_BIOS") { PrimaryKey = "Name"; }
+        public BIOS() : base("Win32_BIOS") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -136,7 +136,7 @@ namespace DiscoveryLight.Core.Device.Data
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public BaseBoard():base("Win32_BaseBoard") { PrimaryKey = "Name"; }
+        public BaseBoard() : base("Win32_BaseBoard") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -213,7 +213,7 @@ namespace DiscoveryLight.Core.Device.Data
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public VideoController():base("Win32_VideoController") { PrimaryKey = "Name"; }
+        public VideoController() : base("Win32_VideoController") { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -231,13 +231,13 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Manufacturer;
             public MobProperty PowerManagementSupported;
         }
-        
+
         public override List<_SubDevice> GetCollection()
         {
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public SoundDevice(): base("Win32_SoundDevice") { PrimaryKey = "Caption"; }
+        public SoundDevice() : base("Win32_SoundDevice") { PrimaryKey = "Caption"; }
     }
 
     #endregion
@@ -269,7 +269,7 @@ namespace DiscoveryLight.Core.Device.Data
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public Processor(): base("Win32_Processor") { PrimaryKey = "Name"; }
+        public Processor() : base("Win32_Processor") { PrimaryKey = "Name"; }
 
     }
 
@@ -301,7 +301,7 @@ namespace DiscoveryLight.Core.Device.Data
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
-        public PhysicalMemory(): base("Win32_PhysicalMemory") { PrimaryKey = "BankLabel"; }
+        public PhysicalMemory() : base("Win32_PhysicalMemory") { PrimaryKey = "BankLabel"; }
     }
 
     #endregion
@@ -372,7 +372,7 @@ namespace DiscoveryLight.Core.Device.Data
             return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
         }
 
-        public DiskDrive(): base("Win32_DiskDrive") { PrimaryKey = "Caption"; }
+        public DiskDrive() : base("Win32_DiskDrive") { PrimaryKey = "Caption"; }
     }
 
     #endregion
@@ -413,7 +413,7 @@ namespace DiscoveryLight.Core.Device.Data
                 .ToList();
         }
 
-        public NetworkAdapter():base("Win32_NetworkAdapter") { PrimaryKey = "Name"; }
+        public NetworkAdapter() : base("Win32_NetworkAdapter") { PrimaryKey = "Name"; }
     }
 
     #endregion

@@ -1,15 +1,8 @@
-﻿using System;
+﻿using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Device.Performance;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DiscoveryLight;
-using DiscoveryLight.Core.Device.Data;
-using DiscoveryLight.Core.Device.Performance;
 using OperatingSystem = DiscoveryLight.Core.Device.Data.OperatingSystem;
 
 namespace DiscoveryLight.UI.Forms.SplachScreen

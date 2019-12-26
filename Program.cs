@@ -1,15 +1,15 @@
-﻿using System;
+﻿using DiscoveryLight.Core.Device.Data;
+using DiscoveryLight.Core.Device.Performance;
+using DiscoveryLight.UI.Forms;
+using DiscoveryLight.UI.Forms.Main;
+using DiscoveryLight.UI.Forms.SplachScreen;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using DiscoveryLight.UI.Forms;
-using DiscoveryLight.UI.Forms.SplachScreen;
-using DiscoveryLight.UI.Forms.Main;
-using DiscoveryLight.Core.Device.Data;
-using DiscoveryLight.Core.Device.Performance;
 
 namespace DiscoveryLight
 {
-    
+
     static class Program
     {
         static public List<DeviceData> Devices;

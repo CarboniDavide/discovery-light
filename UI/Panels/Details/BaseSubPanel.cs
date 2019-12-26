@@ -4,9 +4,7 @@ using DiscoveryLight.UI.Panels.Devices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DiscoveryLight.UI.Panels.Details
@@ -17,7 +15,7 @@ namespace DiscoveryLight.UI.Panels.Details
         {
             public EventStatus Status { get; private set; }
             public Decimal? FillSize { get; private set; }
-            public enum EventStatus                                 
+            public enum EventStatus
             {
                 start,
                 next,
@@ -27,7 +25,7 @@ namespace DiscoveryLight.UI.Panels.Details
                 empty
             }
 
-            public TaskEventArgs(EventStatus status, Decimal? fillSize )
+            public TaskEventArgs(EventStatus status, Decimal? fillSize)
             {
                 this.Status = status;
                 this.FillSize = fillSize;
@@ -115,18 +113,18 @@ namespace DiscoveryLight.UI.Panels.Details
         }
     }
 
-    public class BaseSubPanel: _AbstractUIRendering
+    public class BaseSubPanel : _AbstractUIRendering
     {
         static private Dictionary<string, string> sender = new Dictionary<string, string>()
         {
             {"NameSpace","" },
             {"WmiClassName",""}
         };
-        
+
         private _Footer _footer;
         private Thread t;
         private _Details subPanelContainer;
-        
+
         public _Details SubPanelContainer { get => subPanelContainer; set => subPanelContainer = value; }
         public _Footer Footer { get => _footer; set => _footer = value; }
         public static Dictionary<string, string> Sender { get => sender; set => sender = value; }
@@ -144,19 +142,20 @@ namespace DiscoveryLight.UI.Panels.Details
         protected override void Set(dynamic list)
         {
             onSetThread(new TaskEventArgs(TaskEventArgs.EventStatus.start, null));
-            this.Invoke((System.Action)(() => {listPrepare(list); }));
+            this.Invoke((System.Action)(() => { listPrepare(list); }));
             foreach (String s in Get())
             {
                 // get each values in collection to add in list
                 this.Invoke((System.Action)(() => { list.Items.Add(s); }));
                 onSetThread(new TaskEventArgs(TaskEventArgs.EventStatus.next, null));
             }
-               
-            onSetThread(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null)); 
+
+            onSetThread(new TaskEventArgs(TaskEventArgs.EventStatus.finish, null));
         }
 
-        protected override IEnumerable<String> Get() {
-            return null; 
+        protected override IEnumerable<String> Get()
+        {
+            return null;
         }
 
         public override void Abort()
