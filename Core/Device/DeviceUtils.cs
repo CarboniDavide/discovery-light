@@ -16,6 +16,16 @@ namespace DiscoveryLight.Core.Device.Utils
         private dynamic obj;
         public Boolean IsNull { get => (obj == null); }
 
+
+        /// <summary>
+        /// Get property value
+        /// </summary>
+        /// <returns></returns>
+        public dynamic Get()
+        {
+            return obj;
+        }
+
         /// <summary>
         ///  Get a property value when property base is a array of items
         /// </summary>
@@ -23,8 +33,8 @@ namespace DiscoveryLight.Core.Device.Utils
         /// <returns></returns>
         public string AsArray(int ArrayAt)
         {
-            if (obj == null) return null;                                      // return "N/A" for null object
-            return (obj.GetType().IsArray) ? obj[ArrayAt] : null;                // check for array type: return array items for array data string elesewhere    
+            if (obj == null) return null;                                     
+            return (obj.GetType().IsArray) ? obj[ArrayAt] : null;                 
         }
 
         /// <summary>
