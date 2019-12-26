@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
 using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
+using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
 {
@@ -35,7 +36,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (SystemSlot.SubDevice)this.CurrentSubDevice;
-            lbl_SlotNumber_Value.Text = DataConvert.AsDefaultValue(this.CurrentDevice.SubDevices.Count().ToString(), "N/A"); ;
+            lbl_SlotNumber_Value.Text = MobPropertyDataConvert.AsDefaultValue(new MobProperty(this.CurrentDevice.SubDevices.Count().ToString()), "N/A"); ;
             abort();
         }
     }

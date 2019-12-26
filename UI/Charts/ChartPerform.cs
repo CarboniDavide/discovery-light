@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiscoveryLight.Core.Device.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,22 +17,9 @@ namespace DiscoveryLight.UI.Charts
         /// <param name="Value"></param>
         /// <param name="Default"></param>
         /// <returns></returns>
-        public static int? FillOrDefault(String Value)
+        public static int? FillOrDefault(MobProperty Value)
         {
-            if (Value == null) return null;
-            return Convert.ToInt32(Value);
-        }
-
-        /// <summary>
-        /// Return passed "Value", null elsewhere
-        /// </summary>
-        /// <param name="Value"></param>
-        /// <param name="Default"></param>
-        /// <returns></returns>
-        public static int? FillOrDefault(int? Value)
-        {
-            if (Value == null) return null;
-            return Value;
+            return (Value == null || Value.IsNull) ? null : Value.AsInt32();
         }
 
         /// <summary>
@@ -40,23 +28,10 @@ namespace DiscoveryLight.UI.Charts
         /// <param name="Value"></param>
         /// <param name="Default"></param>
         /// <returns></returns>
-        public static int? FillOrDefault(Func<String, int?> Lambda, String Value)
+        public static Int32? FillOrDefault(Func<MobProperty, dynamic> Lambda, MobProperty Value)
         {
-            if (Value == null) return null;
+            if (Value == null || Value.IsNull) return null;
             return Convert.ToInt32(Lambda.Invoke(Value));
         }
-
-        /// <summary>
-        /// Return lambda value for param "Value", null elsewhere
-        /// </summary>
-        /// <param name="Value"></param>
-        /// <param name="Default"></param>
-        /// <returns></returns>
-        public static int? FillOrDefault(Func<int?, int?> Lambda, int? Value)
-        {
-            if (Value == null) return null;
-            return Lambda.Invoke(Value);
-        }
-
     }
 }

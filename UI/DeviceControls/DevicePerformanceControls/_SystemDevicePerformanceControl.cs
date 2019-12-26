@@ -34,8 +34,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_SYSTEM.SubDevice)this.CurrentSubDevice;
-            lbl_Threads_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Threads.AsString(), "N/A", "{0:N0}");
-            lbl_Process_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.Processes.AsString(), "N/A", "{0:N0}");
+            lbl_Threads_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.Threads, "N/A", "{0:N0}");
+            lbl_Process_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.Processes, "N/A", "{0:N0}");
         }
     }
 }

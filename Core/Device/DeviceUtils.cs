@@ -111,7 +111,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as Double
         /// </summary>
         /// <returns></returns>
-        public int? AsDouble()
+        public Double? AsDouble()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToDouble(obj);
@@ -121,7 +121,7 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as Decimal
         /// </summary>
         /// <returns></returns>
-        public int? AsDecimal()
+        public Decimal? AsDecimal()
         {
             if (obj == null) return obj;
             return (obj.GetType().IsArray) ? null : Convert.ToDecimal(obj);

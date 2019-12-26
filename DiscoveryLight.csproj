@@ -52,7 +52,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WinformComponents">
-      <HintPath>..\winform-components\bin\Debug\WinformComponents.dll</HintPath>
+      <HintPath>..\WinformComponents\bin\Debug\WinformComponents.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

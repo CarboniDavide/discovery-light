@@ -36,21 +36,21 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             base.show();
             var CurrentPerformance= (PERFORM_NETWORK.SubDevice)this.CurrentSubDevice;
 
-            lbl_BytesReceived_Value.Text= DataConvert.AsDefaultValue(CurrentPerformance.BytesReceivedPersec.AsString(), "N/A", "{0:N0}");
-            lbl_BytesSent_Value.Text= DataConvert.AsDefaultValue( CurrentPerformance.BytesSentPersec.AsString(), "N/A", "{0:N0}");
-            lbl_PacketsReceived_Value.Text= DataConvert.AsDefaultValue(CurrentPerformance.PacketsReceivedPersec.AsString(), "N/A", "{0:N0}");
-            lbl_PacketsSent_Value.Text= DataConvert.AsDefaultValue(CurrentPerformance.PacketsSentPersec.AsString(), "N/A", "{0:N0}");
+            lbl_BytesReceived_Value.Text= MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.BytesReceivedPersec, "N/A", "{0:N0}");
+            lbl_BytesSent_Value.Text= MobPropertyDataConvert.AsDefaultValue( CurrentPerformance.BytesSentPersec, "N/A", "{0:N0}");
+            lbl_PacketsReceived_Value.Text= MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PacketsReceivedPersec, "N/A", "{0:N0}");
+            lbl_PacketsSent_Value.Text= MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PacketsSentPersec, "N/A", "{0:N0}");
 
-            lbl_TotalReceived_Value.Text= DataConvert.AsDefaultValue(x => (Convert.ToDouble(x) / 1024).ToString(), CurrentPerformance.TotalBytesReceived.AsString(), "N/A", "{0:N0}");
-            lbl_TotalSent_Value.Text = DataConvert.AsDefaultValue(x => (Convert.ToDouble(x) / 1024).ToString(), CurrentPerformance.TotalBytesSent.AsString(), "N/A", "{0:N0}");
+            lbl_TotalReceived_Value.Text= MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.TotalBytesReceived, "N/A", "{0:N0}");
+            lbl_TotalSent_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.TotalBytesSent, "N/A", "{0:N0}");
 
-            chartBytesReceived.BarFillSize= ChartPerform.FillOrDefault(x=> Convert.ToInt16(x), CurrentPerformance.PercentBytesReceived.AsString());
-            chartBytesSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentBytesSent.AsString());
-            chartPacketsReceived.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsReceived.AsString());
-            chartPacketsSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsSents.AsString());
+            chartBytesReceived.BarFillSize= ChartPerform.FillOrDefault(x=> x.AsInt16(), CurrentPerformance.PercentBytesReceived);
+            chartBytesSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentBytesSent);
+            chartPacketsReceived.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsReceived);
+            chartPacketsSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsSents);
 
-            pic_Received.BackColor = DataConvert.AsDefaultValue(CurrentPerformance.BytesReceivedPersec.AsString(), "0").Equals("0") ? Color.Transparent : Color.LightGreen;
-            pic_Sent.BackColor = DataConvert.AsDefaultValue(CurrentPerformance.BytesSentPersec.AsString(), "0").Equals("0") ? Color.Transparent : Color.Tomato;
+            pic_Received.BackColor = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.BytesReceivedPersec, "0").Equals("0") ? Color.Transparent : Color.LightGreen;
+            pic_Sent.BackColor = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.BytesSentPersec, "0").Equals("0") ? Color.Transparent : Color.Tomato;
         }
     }
 }

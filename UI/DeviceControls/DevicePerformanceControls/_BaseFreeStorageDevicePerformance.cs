@@ -33,7 +33,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_DISK.SubDevice)this.CurrentSubDevice;
-            chartHD.FillSize = ChartPerform.FillOrDefault(x => (100 - Convert.ToInt32(x)), CurrentPerformance.PercentFreeSpace.AsString());
+            chartHD.FillSize = ChartPerform.FillOrDefault(x => 100 - x.AsInt32(), CurrentPerformance.PercentFreeSpace);
         }
     }
 }

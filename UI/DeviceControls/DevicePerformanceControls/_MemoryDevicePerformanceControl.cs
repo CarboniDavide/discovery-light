@@ -34,16 +34,16 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_RAM.SubDevice)this.CurrentSubDevice;
-            lbl_CacheUsage_Value.Text = DataConvert.AsDefaultValue(x=> (Convert.ToUInt64(x) / 1048576).ToString(), CurrentPerformance.CacheBytes.AsString(), "N/A", "{0:N0}") + " MB";
-            lbl_CacheUsageMax_Value.Text = DataConvert.AsDefaultValue(x => (Convert.ToUInt64(x) / 1048576).ToString(), CurrentPerformance.CacheBytesPeak.AsString(), "N/A", "{0:N0}") + " MB";
-            lbl_RamOut_Value.Text = DataConvert.AsDefaultValue( x=> (Convert.ToUInt64(x) / 1048576).ToString(), CurrentPerformance.CommittedBytes.AsString(), "N/A", "{0:N0}") + " MB";
-            lbl_Free_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.AvailableMBytes.AsString(), "N/A", "{0:N0}") + " MB";
-            lbl_PageIn_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.PagesInputPersec.AsString(), "N/A", "{0:N0}");
-            lbl_PageOut_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.PagesOutputPersec.AsString(), "N/A", "{0:N0}");
-            lbl_PageWrite_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.PageWritesPersec.AsString(), "N/A", "{0:N0}");
-            lbl_PageRead_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.PageReadsPersec.AsString(), "N/A", "{0:N0}");
-            lbl_PagePersec_Value.Text = DataConvert.AsDefaultValue(CurrentPerformance.PagesPersec.AsString(), "N/A", "{0:N0}");
-            chartRamUsage.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PerUsage.AsString());
+            lbl_CacheUsage_Value.Text = MobPropertyDataConvert.AsDefaultValue(x=> x.AsUInt64() / 1048576, CurrentPerformance.CacheBytes, "N/A", "{0:N0}") + " MB";
+            lbl_CacheUsageMax_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt64() / 1048576, CurrentPerformance.CacheBytesPeak, "N/A", "{0:N0}") + " MB";
+            lbl_RamOut_Value.Text = MobPropertyDataConvert.AsDefaultValue( x=> x.AsUInt64() / 1048576, CurrentPerformance.CommittedBytes, "N/A", "{0:N0}") + " MB";
+            lbl_Free_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.AvailableMBytes, "N/A", "{0:N0}") + " MB";
+            lbl_PageIn_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PagesInputPersec, "N/A", "{0:N0}");
+            lbl_PageOut_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PagesOutputPersec, "N/A", "{0:N0}");
+            lbl_PageWrite_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PageWritesPersec, "N/A", "{0:N0}");
+            lbl_PageRead_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PageReadsPersec, "N/A", "{0:N0}");
+            lbl_PagePersec_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PagesPersec, "N/A", "{0:N0}");
+            chartRamUsage.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PerUsage);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_CPU.SubDevice)this.CurrentSubDevice;
-            chartCPU.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentProcessorTime.AsString());
+            chartCPU.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentProcessorTime);
         }
     }
 }

@@ -35,7 +35,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (ComputerSystemProduct.SubDevice)this.CurrentSubDevice;
-            lbl_NumberID_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.IdentifyingNumber.AsString(), "N/A");
+            lbl_NumberID_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentDevice.IdentifyingNumber, "N/A");
             abort();
         }
     }

@@ -34,11 +34,11 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_SCORE.SubDevice)this.CurrentSubDevice;
-            chartBar_Cpu.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.CPUScore.AsString());
-            chartBar_D3D.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.D3DScore.AsString());
-            chartBar_Hd.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.DiskScore.AsString());
-            chartBar_Graph.BarFillSize = ChartPerform.FillOrDefault(x=> Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.GraphicsScore.AsString());
-            chartBar_Ram.BarFillSize = ChartPerform.FillOrDefault(x => Convert.ToInt16(Convert.ToDouble(x) * 10), CurrentPerformance.MemoryScore.AsString());
+            chartBar_Cpu.BarFillSize = ChartPerform.FillOrDefault(x => x.AsDecimal() * 10, CurrentPerformance.CPUScore);
+            chartBar_D3D.BarFillSize = ChartPerform.FillOrDefault(x => x.AsDecimal() * 10, CurrentPerformance.D3DScore);
+            chartBar_Hd.BarFillSize = ChartPerform.FillOrDefault(x => x.AsDecimal() * 10, CurrentPerformance.DiskScore);
+            chartBar_Graph.BarFillSize = ChartPerform.FillOrDefault(x=> x.AsDecimal() * 10, CurrentPerformance.GraphicsScore);
+            chartBar_Ram.BarFillSize = ChartPerform.FillOrDefault(x => x.AsDecimal() * 10, CurrentPerformance.MemoryScore);
             abort();
         }
     }

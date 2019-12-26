@@ -35,9 +35,9 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentDevice = (PhysicalMemoryArray.SubDevice)this.CurrentSubDevice;
-            lbl_Size_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.MaxCapacity.AsString(), "N/A", "{0:N0}") + " Kbytes";
-            lbl_Block_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.MemoryDevices.AsString(), "N/A");
-            lbl_Type_Value.Text = DataConvert.AsDefaultValue(CurrentDevice.Caption.AsString(), "N/A");
+            lbl_Size_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentDevice.MaxCapacity, "N/A", "{0:N0}") + " Kbytes";
+            lbl_Block_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentDevice.MemoryDevices, "N/A");
+            lbl_Type_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentDevice.Caption, "N/A");
             abort();
         }
     }

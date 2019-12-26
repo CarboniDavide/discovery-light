@@ -35,9 +35,9 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
         {
             base.show();
             var CurrentSubDevice = (SoundDevice.SubDevice)this.CurrentSubDevice;
-            lbl_Name_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Name.AsString(), "N/A");
-            lbl_Manufacturer_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer.AsString(), "N/A");
-            lbl_PowerManagment_Value.Text = DataConvert.AsDefaultValue(CurrentSubDevice.PowerManagementSupported.AsString(), "N/A");
+            lbl_Name_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.Name, "N/A");
+            lbl_Manufacturer_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.Manufacturer, "N/A");
+            lbl_PowerManagment_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentSubDevice.PowerManagementSupported, "N/A");
         }
     }
 }
