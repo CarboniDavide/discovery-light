@@ -225,11 +225,11 @@ namespace DiscoveryLight.Core.Device
         public MobProperty Description;
 
         /// <summary>
-        /// Serialize all field with ManagementObject
+        /// Initialize all field with a empty MobProperty
         /// </summary>
         /// <param name="mj"></param>
         /// <returns></returns>
-        public _SubDevice Serialize()
+        public _SubDevice Initialize()
         {
             foreach (FieldInfo field in this.GetType().GetFields())
                 field.SetValue(this, new MobProperty(null));

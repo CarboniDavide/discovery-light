@@ -51,7 +51,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             if (CurrentDevice.IsEmpty)
             {
                 _SubDevice obj = Activator.CreateInstance(Type.GetType(CurrentDevice.ClassType.FullName + "+SubDevice")) as _SubDevice;
-                currentSubDevice = obj.Serialize();
+                currentSubDevice = obj.Initialize();
             }
         }
 
