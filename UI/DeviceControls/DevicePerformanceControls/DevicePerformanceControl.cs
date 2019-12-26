@@ -22,7 +22,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             if (CurrentDevice.IsEmpty)
             {
                 _SubDevice obj = Activator.CreateInstance(Type.GetType(CurrentDevice.ClassType.FullName + "+SubDevice")) as _SubDevice;
-                currentSubDevice = obj.Serialize();
+                CurrentDevice.SubDevices.Add(obj.Serialize());
             }
         }
 
