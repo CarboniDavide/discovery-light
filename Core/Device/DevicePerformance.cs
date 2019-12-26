@@ -121,10 +121,7 @@ namespace DiscoveryLight.Core.Device.Performance
                 if (MaxSpeed == null || PercentProcessorPerformance == null)                         // use base frequency for tboost 
                     Frequency = ProcessorFrequency;
                 else
-                {
-                    int? frequency = (MaxSpeed.AsInt() / 100) * PercentProcessorPerformance.AsInt();
-                    Frequency = new MobProperty(frequency);
-                }
+                    Frequency = new MobProperty((MaxSpeed.AsInt() / 100) * PercentProcessorPerformance.AsInt());
 
                 return this;
             }
@@ -238,7 +235,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
             public override _SubDevice Extend()
             {
-                PerUsage = (CommitLimit.IsNull || AvailableBytes.IsNull) ? new MobProperty(null) : new MobProperty((Convert.ToInt64(AvailableBytes.AsString()) / (Convert.ToInt64(CommitLimit.AsString()) / 100)).ToString());
+                PerUsage = (CommitLimit.IsNull || AvailableBytes.IsNull) ? new MobProperty(null) : new MobProperty(AvailableBytes.AsUInt64() / (CommitLimit.AsUInt64() / 100));
                 return this;
             }
         }
@@ -347,13 +344,13 @@ namespace DiscoveryLight.Core.Device.Performance
                 UInt64? Den;
                 if (BytesTotalPersec.AsString() != null)
                 {
-                    Den = (Convert.ToUInt64(BytesTotalPersec.AsString()) / 100);
+                    Den = BytesTotalPersec.AsUInt64() / 100;
 
                     if (Den != 0)
                     {
-                        var percentBytesReceived = BytesReceivedPersec.AsString() != null ? (Convert.ToUInt64(BytesReceivedPersec.AsString()) / (Convert.ToUInt64(BytesTotalPersec.AsString()) / 100)).ToString() : null;
+                        UInt64? percentBytesReceived = BytesReceivedPersec.AsString() != null ? BytesReceivedPersec.AsUInt64() / Den : null;
                         PercentBytesReceived = new MobProperty(percentBytesReceived);
-                        var percentBytesSent = BytesSentPersec.AsString() != null ? (Convert.ToUInt64(BytesSentPersec.AsString()) / (Convert.ToUInt64(BytesTotalPersec.AsString()) / 100)).ToString() : null;
+                        UInt64? percentBytesSent = BytesSentPersec.AsString() != null ? BytesSentPersec.AsUInt64() / Den : null;
                         PercentBytesSent = new MobProperty(percentBytesSent);
                     }
                     else
@@ -370,12 +367,12 @@ namespace DiscoveryLight.Core.Device.Performance
 
                 if (PacketsPersec.AsString() != null)
                 {
-                    Den = (Convert.ToUInt64(PacketsPersec.AsString()) / 100);
+                    Den = PacketsPersec.AsUInt64() / 100;
                     if (Den != 0)
                     {
-                        var percentPacketsReceived = PacketsReceivedPersec.AsString() != null ? (Convert.ToUInt64(PacketsReceivedPersec.AsString()) / (Convert.ToUInt64(PacketsPersec.AsString()) / 100)).ToString() : null;
+                        UInt64? percentPacketsReceived = PacketsReceivedPersec.AsString() != null ? PacketsReceivedPersec.AsUInt64() / Den : null;
                         PercentPacketsReceived = new MobProperty(percentPacketsReceived);
-                        var percentPacketsSents = PacketsSentPersec.AsString() != null ? (Convert.ToUInt64(PacketsSentPersec.AsString()) / (Convert.ToUInt64(PacketsPersec.AsString()) / 100)).ToString() : null;
+                        UInt64? percentPacketsSents = PacketsSentPersec.AsString() != null ? PacketsSentPersec.AsUInt64() / Den : null;
                         PercentPacketsSents = new MobProperty(percentPacketsSents);
                     }
                     else
