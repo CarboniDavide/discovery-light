@@ -31,6 +31,16 @@ namespace DiscoveryLight.Core.Device.Utils
         /// Get ManagementObject property as Int16
         /// </summary>
         /// <returns></returns>
+        public int? AsInt()
+        {
+            if (obj == null) return obj;
+            return (obj.GetType().IsArray) ? null : (int?)obj;
+        }
+
+        /// <summary>
+        /// Get ManagementObject property as Int16
+        /// </summary>
+        /// <returns></returns>
         public Int16? AsInt16()
         {
             if (obj == null) return obj;
