@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Device.Data;
 using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.Charts;
 using DiscoveryLight.Core.Device;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
@@ -41,11 +40,11 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             String currentCpu = (CurrentDevice as DevicePerformance).DeviceRelated;
 
             lbl_CpuSpeed_Value.Text = MobPropertyDataConvert.AsDefaultValue( (CurrentDevice.SubDevices.Where(d => d.Name.AsString().Equals(currentCpu +",_Total")).First() as PERFORM_CPU.SubDevice).Frequency, "N/A", "{0:N0}") + " Mhz";
-            chartCpuUsage.FillSize = ChartPerform.FillOrDefault( x=> x.AsInt16(), (CurrentDevice.SubDevices.Where(d => d.Name.AsString().Equals(currentCpu + ",_Total")).First() as PERFORM_CPU.SubDevice).PercentProcessorTime);
+            chartCpuUsage.FillSize = MobPropertyChartConvert.FillOrDefault( x=> x.AsInt16(), (CurrentDevice.SubDevices.Where(d => d.Name.AsString().Equals(currentCpu + ",_Total")).First() as PERFORM_CPU.SubDevice).PercentProcessorTime);
             int i = 0;
             foreach (WinformComponents.ChartBar ctrl in pnl_Threads.Controls.Find(typeof(WinformComponents.ChartBar).ToString(), false))
             {
-                ctrl.BarFillSize = ChartPerform.FillOrDefault(x=> x.AsInt16() , (CurrentDevice.SubDevices.Where(d => d.Name.AsString() == currentCpu + "," + i).First() as PERFORM_CPU.SubDevice).PercentProcessorTime);
+                ctrl.BarFillSize = MobPropertyChartConvert.FillOrDefault(x=> x.AsInt16() , (CurrentDevice.SubDevices.Where(d => d.Name.AsString() == currentCpu + "," + i).First() as PERFORM_CPU.SubDevice).PercentProcessorTime);
                 i++;
             }
         }

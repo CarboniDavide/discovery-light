@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.Charts;
 using DiscoveryLight.Core.Device.Utils;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
@@ -44,10 +43,10 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             lbl_TotalReceived_Value.Text= MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.TotalBytesReceived, "N/A", "{0:N0}");
             lbl_TotalSent_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.TotalBytesSent, "N/A", "{0:N0}");
 
-            chartBytesReceived.BarFillSize= ChartPerform.FillOrDefault(x=> x.AsInt16(), CurrentPerformance.PercentBytesReceived);
-            chartBytesSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentBytesSent);
-            chartPacketsReceived.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsReceived);
-            chartPacketsSent.BarFillSize= ChartPerform.FillOrDefault(CurrentPerformance.PercentPacketsSents);
+            chartBytesReceived.BarFillSize= MobPropertyChartConvert.FillOrDefault(x=> x.AsInt16(), CurrentPerformance.PercentBytesReceived);
+            chartBytesSent.BarFillSize= MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentBytesSent);
+            chartPacketsReceived.BarFillSize= MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentPacketsReceived);
+            chartPacketsSent.BarFillSize= MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentPacketsSents);
 
             pic_Received.BackColor = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.BytesReceivedPersec, "0").Equals("0") ? Color.Transparent : Color.LightGreen;
             pic_Sent.BackColor = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.BytesSentPersec, "0").Equals("0") ? Color.Transparent : Color.Tomato;

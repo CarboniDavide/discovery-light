@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -40,11 +39,11 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             lbl_Write_Value.Text = MobPropertyDataConvert.AsDefaultValue(x=> x.AsUInt32() / 1024, CurrentPerformance.DiskWriteBytesPersec, "N/A", "{0:N0}") + " KB";
             lbl_Read_Value.Text = MobPropertyDataConvert.AsDefaultValue(x=> x.AsUInt32() / 1024, CurrentPerformance.DiskReadBytesPersec, "N/A", "{0:N0}") + " KB";
             lbl_Transfer_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.DiskTransfersPersec, "N/A", "{0:N0}");
-            chartReadTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentDiskReadTime);
-            chartWriteTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentDiskWriteTime);
-            chartDiskTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentDiskTime);
-            chartIdleTime.BarFillSize = ChartPerform.FillOrDefault(CurrentPerformance.PercentIdleTime);
-            chartDiskFree.FillSize = ChartPerform.FillOrDefault(x => 100 - x.AsInt32(), CurrentPerformance.PercentFreeSpace);
+            chartReadTime.BarFillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentDiskReadTime);
+            chartWriteTime.BarFillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentDiskWriteTime);
+            chartDiskTime.BarFillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentDiskTime);
+            chartIdleTime.BarFillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentIdleTime);
+            chartDiskFree.FillSize = MobPropertyChartConvert.FillOrDefault(x => 100 - x.AsInt32(), CurrentPerformance.PercentFreeSpace);
         }
     }
 }

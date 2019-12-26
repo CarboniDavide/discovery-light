@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Commun;
-using DiscoveryLight.UI.Charts;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -43,7 +42,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             lbl_PageWrite_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PageWritesPersec, "N/A", "{0:N0}");
             lbl_PageRead_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PageReadsPersec, "N/A", "{0:N0}");
             lbl_PagePersec_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PagesPersec, "N/A", "{0:N0}");
-            chartRamUsage.FillSize = ChartPerform.FillOrDefault(CurrentPerformance.PerUsage);
+            chartRamUsage.FillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PerUsage);
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DiscoveryLight.Core.Device.Performance;
-using DiscoveryLight.UI.Charts;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
 {
@@ -33,7 +33,7 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
         {
             base.show();
             var CurrentPerformance = (PERFORM_DISK.SubDevice)this.CurrentSubDevice;
-            chartHD.FillSize = ChartPerform.FillOrDefault(x => 100 - x.AsInt32(), CurrentPerformance.PercentFreeSpace);
+            chartHD.FillSize = MobPropertyChartConvert.FillOrDefault(x => 100 - x.AsInt32(), CurrentPerformance.PercentFreeSpace);
         }
     }
 }
