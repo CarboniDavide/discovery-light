@@ -28,6 +28,16 @@ namespace DiscoveryLight.Core.Device.Utils
         }
 
         /// <summary>
+        /// Get ManagementObject property as Int16
+        /// </summary>
+        /// <returns></returns>
+        public int? AsInt()
+        {
+            if (obj == null) return obj;
+            return (obj.GetType().IsArray) ? null : Convert.ToInt16(obj);
+        }
+
+        /// <summary>
         /// Get a substring from ManagementObject Property
         /// </summary>
         /// <param name="StartIndex"></param>
