@@ -285,7 +285,6 @@ namespace DiscoveryLight.Core.Device.Data
         public class SubDevice : _SubDevice
         {
             public MobProperty Index;
-            public MobProperty DriveName;
             public MobProperty MediaType;
             public MobProperty InterfaceType;
             public MobProperty Size;
@@ -297,25 +296,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty TracksPerCylinder;
             public MobProperty BytesPerSector;
             public MobProperty FirmwareRevision;
-
-            public override _SubDevice Extend()
-            {
-                foreach (WprManagementObject mj in new WprManagementObjectSearcher("Win32_PerfRawData_PerfDisk_PhysicalDisk").All())
-                {
-                    String currentDrive = mj.GetProperty("Name").AsString();
-
-                    if (currentDrive.Substring(0, 1).Equals(Index.AsString()))
-                        DriveName = mj.GetProperty("Name");
-                }
-
-                return this;
-            }
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            var collection = base.GetCollection();
-            return collection.Select(x => x.Extend()).ToList();
         }
 
         public DiskDrive() : base("Win32_DiskDrive", typeof(SubDevice), "Caption") { }
