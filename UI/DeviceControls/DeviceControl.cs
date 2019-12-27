@@ -13,7 +13,7 @@ namespace DiscoveryLight.UI.DeviceControls
     public abstract class AbstractDeviceControl : _BaseUserControl
     {
         protected abstract void update();       // define action to run periodically
-        protected abstract void validate();     // check all updates values
+        protected abstract void validate();     // check all updates values and create a empty collection for empty collection
         protected abstract void abort();        // abort to update
         protected abstract void show();         // define action to show results in update
         protected abstract void start();        // load task in background then update and show until abort is requested
