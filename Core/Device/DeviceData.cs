@@ -37,11 +37,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Domain;
         }
 
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public ComputerSystem() : base("Win32_ComputerSystem") { PrimaryKey = "Name"; }
     }
 
@@ -61,11 +56,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty OSArchitecture;
         }
 
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public OperatingSystem() : base("Win32_OperatingSystem") { PrimaryKey = "Name"; }
     }
 
@@ -81,11 +71,6 @@ namespace DiscoveryLight.Core.Device.Data
         public class SubDevice : _SubDevice
         {
             public MobProperty IdentifyingNumber;
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public ComputerSystemProduct() : base("Win32_ComputerSystemProduct") { PrimaryKey = "Name"; }
@@ -104,11 +89,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Manufacturer;
             public MobProperty SerialNumber;
             public MobProperty ReleaseDate;
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public BIOS() : base("Win32_BIOS") { PrimaryKey = "Name"; }
@@ -131,11 +111,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Version;
         }
 
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public BaseBoard() : base("Win32_BaseBoard") { PrimaryKey = "Name"; }
     }
 
@@ -155,11 +130,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty SecondaryBusType;
         }
 
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public MotherboardDevice() : base("Win32_MotherboardDevice") { PrimaryKey = "Name"; }
     }
 
@@ -174,11 +144,6 @@ namespace DiscoveryLight.Core.Device.Data
     public class SystemSlot : DeviceData
     {
         public class SubDevice : _SubDevice { }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
 
         public SystemSlot() : base("Win32_SystemSlot") { PrimaryKey = "Name"; }
     }
@@ -208,11 +173,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty VideoModeDescription;
         }
 
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public VideoController() : base("Win32_VideoController") { PrimaryKey = "Name"; }
     }
 
@@ -230,11 +190,6 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public MobProperty Manufacturer;
             public MobProperty PowerManagementSupported;
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public SoundDevice() : base("Win32_SoundDevice") { PrimaryKey = "Caption"; }
@@ -264,11 +219,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty L3CacheSize;
         }
 
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public Processor() : base("Win32_Processor") { PrimaryKey = "Name"; }
 
     }
@@ -296,11 +246,6 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty MinVoltage;
         }
 
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public PhysicalMemory() : base("Win32_PhysicalMemory") { PrimaryKey = "BankLabel"; }
     }
 
@@ -318,11 +263,6 @@ namespace DiscoveryLight.Core.Device.Data
         {
             public MobProperty MaxCapacity;
             public MobProperty MemoryDevices;
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public PhysicalMemoryArray() : base("Win32_PhysicalMemoryArray") { PrimaryKey = "Name"; }
@@ -369,7 +309,8 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override List<_SubDevice> GetCollection()
         {
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
+            var collection = base.GetCollection();
+            return collection.Select(x => x.Extend()).ToList();
         }
 
         public DiskDrive() : base("Win32_DiskDrive") { PrimaryKey = "Caption"; }

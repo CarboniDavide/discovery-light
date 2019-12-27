@@ -87,6 +87,13 @@ namespace DiscoveryLight.Core.Device
         public abstract List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition);
 
         /// <summary>
+        /// get a wpr collection that match the condition
+        /// </summary>
+        /// <param name="condtion"></param>
+        /// <returns></returns>
+        public abstract List<_SubDevice> GetCollection(Func<WprManagementObject, Boolean> condtion);
+
+        /// <summary>
         /// Update collection from wmi class 
         /// </summary>
         public abstract void UpdateCollection();
@@ -109,6 +116,13 @@ namespace DiscoveryLight.Core.Device
         /// <param name="condition"></param>
         /// <returns></returns>
         public abstract void UpdateCollection(Func<_SubDevice, Boolean> condition);
+
+        /// <summary>
+        /// Update a collection that mach the lambda condition
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        public abstract void UpdateCollection(Func<WprManagementObject, Boolean> condition);
 
         /// <summary>
         /// Get a selected device form device list that primarykey field contien value
@@ -196,13 +210,36 @@ namespace DiscoveryLight.Core.Device
 
     public class _Device : AbstractDevice
     {
-        public override List<_SubDevice> GetCollection() { return new List<_SubDevice>(); }
+        public override List<_SubDevice> GetCollection() {
+            return WmiCollection.All()
+                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .ToList();
+        }
 
-        public override List<_SubDevice> GetCollection(String FieldName, String Value) { return new List<_SubDevice>(); }
+        public override List<_SubDevice> GetCollection(String FieldName, String Value) {
+            return WmiCollection.Find(FieldName, Value, "=")
+                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .ToList();
+        }
 
-        public override List<_SubDevice> GetCollection(String Value) { return GetCollection(PrimaryKey, Value); }
+        public override List<_SubDevice> GetCollection(String Value) {
+            return GetCollection(PrimaryKey, Value);
+        }
 
-        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) { return new List<_SubDevice>(); }
+        public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) {
+            return WmiCollection.All()
+                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .Where(condition)
+                .ToList();
+        }
+
+        public override List<_SubDevice> GetCollection(Func<WprManagementObject, Boolean> condition)
+        {
+            return WmiCollection.All()
+                .Where(condition)
+                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .ToList();
+        }
 
         public override void UpdateCollection() { SubDevices = GetCollection(); }
 
@@ -211,6 +248,8 @@ namespace DiscoveryLight.Core.Device
         public override void UpdateCollection(String Value) { SubDevices = GetCollection(PrimaryKey, Value); }
 
         public override void UpdateCollection(Func<_SubDevice, Boolean> condition) { SubDevices = GetCollection(condition); }
+
+        public override void UpdateCollection(Func<WprManagementObject, Boolean> condition) { SubDevices = GetCollection(condition); }
 
         public _Device(String DeviceName) : base(DeviceName) { }
     }

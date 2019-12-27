@@ -44,17 +44,28 @@ namespace DiscoveryLight.Core.Device.Performance
         {
             if (!IsUpdated) PreUpdate();
             if (!IsRelated) GetRelatedDevice();
-            return new List<_SubDevice>();
+            return base.GetCollection();
         }
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            return base.GetCollection();
+            if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
+            return base.GetCollection(FieldName, Value);
         }
 
         public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition)
         {
-            return base.GetCollection();
+            if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
+            return base.GetCollection(condition);
+        }
+
+        public override List<_SubDevice> GetCollection(Func<WprManagementObject, Boolean> condition)
+        {
+            if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
+            return base.GetCollection(condition);
         }
 
         public DevicePerformance(string DeviceName) : base(DeviceName) { }
@@ -76,18 +87,6 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty DiskScore;
             public MobProperty GraphicsScore;
             public MobProperty MemoryScore;
-        }
-
-        public override List<_SubDevice> GetCollection(String FieldName, String Value)
-        {
-            base.GetCollection();
-            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            base.GetCollection();
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public PERFORM_SCORE() : base("Win32_WinSAT") { }
@@ -144,13 +143,15 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            base.GetCollection();
-            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x).Extend(mjext)).ToList();
+            List<_SubDevice> collection = base.GetCollection();
+            return collection.Select(x => x.Extend(mjext)).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            return GetCollectionWithPerformance(base.GetCollection());
+            if (!IsUpdated) PreUpdate();
+            if (!IsRelated) GetRelatedDevice();
+            return GetCollectionWithPerformance(new List<_SubDevice>());
         }
 
         private List<_SubDevice> GetCollectionBase(List<_SubDevice> collection)
@@ -193,18 +194,6 @@ namespace DiscoveryLight.Core.Device.Performance
             public MobProperty Processes;
         }
 
-        public override List<_SubDevice> GetCollection(String FieldName, String Value)
-        {
-            base.GetCollection();
-            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
-        public override List<_SubDevice> GetCollection()
-        {
-            base.GetCollection();
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
         public PERFORM_SYSTEM() : base("Win32_PerfRawData_PerfOS_System") { }
     }
 
@@ -240,14 +229,14 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            base.GetCollection();
-            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x).Extend()).ToList();
+            List<_SubDevice> collection = base.GetCollection(FieldName, Value);
+            return collection.Select(x => x.Extend()).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            base.GetCollection();
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
+            List<_SubDevice> collection = base.GetCollection();
+            return collection.Select(x => x.Extend()).ToList();
         }
 
         public PERFORM_RAM() : base("Win32_PerfRawData_PerfOS_Memory") { }
@@ -292,19 +281,6 @@ namespace DiscoveryLight.Core.Device.Performance
             }
 
             return DeviceRelated;
-        }
-
-        public override List<_SubDevice> GetCollection(String FieldName, String Value)
-        {
-            base.GetCollection();
-            return WmiCollection.Find(x => x.GetProperty(FieldName).AsString().Equals(Value)).Select(x => new SubDevice().Serialize(x)).ToList();
-        }
-
-
-        public override List<_SubDevice> GetCollection()
-        {
-            base.GetCollection();
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x)).ToList();
         }
 
         public PERFORM_DISK() : base("Win32_PerfFormattedData_PerfDisk_LogicalDisk") { PrimaryKey = "Name"; }
@@ -403,14 +379,14 @@ namespace DiscoveryLight.Core.Device.Performance
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value)
         {
-            base.GetCollection();
-            return WmiCollection.Find(FieldName, Value, "=").Select(x => new SubDevice().Serialize(x).Extend()).ToList();
+            List<_SubDevice> collection = base.GetCollection(FieldName, Value);
+            return collection.Select(x => x.Extend()).ToList();
         }
 
         public override List<_SubDevice> GetCollection()
         {
-            base.GetCollection();
-            return WmiCollection.All().Select(x => new SubDevice().Serialize(x).Extend()).ToList();
+            List<_SubDevice> collection = base.GetCollection();
+            return collection.Select(x => x.Extend()).ToList();
         }
 
         public PERFORM_NETWORK() : base("Win32_PerfFormattedData_Tcpip_NetworkAdapter") { PrimaryKey = "Name"; }
