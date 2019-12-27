@@ -6,6 +6,25 @@ using System.Threading.Tasks;
 
 namespace DiscoveryLight.UI.DeviceControls
 {
+    public class DeviceControlEventArgs : EventArgs                       // Task Event Args
+    {
+        public EventStatus Status { get; private set; }
+        public enum EventStatus
+        {
+            start,
+            next,
+            pause,
+            finish,
+            init,
+            empty
+        }
+
+        public DeviceControlEventArgs(EventStatus status)
+        {
+            this.Status = status;
+        }
+    }
+
     /// <summary>
     /// Extended user control. Define the main class for each custom device control.
     /// Class define four base core methods: update, start, show e abort. Each af them provide a rendering engine in background mode.
@@ -21,45 +40,31 @@ namespace DiscoveryLight.UI.DeviceControls
         // event handler associated to each methods. Each of them is raised when a method is called
         public event EventHandler OnStart;
         public event EventHandler OnAbort;
-        public event EventHandler OnUpdateStart;
-        public event EventHandler OnUpdateFinish;
-        public event EventHandler OnValidateStart;
-        public event EventHandler OnValidateFinish;
-        public event EventHandler OnShow;
+        public event EventHandler<DeviceControlEventArgs> OnUpdate;
+        public event EventHandler<DeviceControlEventArgs> OnValidate;
+        public event EventHandler<DeviceControlEventArgs> OnShow;
 
-        protected virtual void onUpdateStart(EventArgs e)
+        protected virtual void onUpdate(DeviceControlEventArgs e)
         {
-            EventHandler handler = OnUpdateStart;
+            EventHandler<DeviceControlEventArgs> handler = OnUpdate;
             handler?.Invoke(this, e);
         }
 
-        protected virtual void onUpdateFinish(EventArgs e)
+        protected virtual void onValidate(DeviceControlEventArgs e)
         {
-            EventHandler handler = OnUpdateFinish;
+            EventHandler<DeviceControlEventArgs> handler = OnValidate;
             handler?.Invoke(this, e);
         }
 
-        protected virtual void onValidateStart(EventArgs e)
+        protected virtual void onShow(DeviceControlEventArgs e)
         {
-            EventHandler handler = OnValidateStart;
-            handler?.Invoke(this, e);
-        }
-
-        protected virtual void onValidateFinish(EventArgs e)
-        {
-            EventHandler handler = OnValidateFinish;
+            EventHandler<DeviceControlEventArgs> handler = OnShow;
             handler?.Invoke(this, e);
         }
 
         protected virtual void onStart(EventArgs e)
         {
             EventHandler handler = OnStart;
-            handler?.Invoke(this, e);
-        }
-
-        protected virtual void onShow(EventArgs e)
-        {
-            EventHandler handler = OnShow;
             handler?.Invoke(this, e);
         }
 
@@ -101,10 +106,11 @@ namespace DiscoveryLight.UI.DeviceControls
                 if (!token.IsCancellationRequested)
                 {
                     await Task.Run(() => update(), token);
-                    onUpdateFinish(EventArgs.Empty);
+                    onUpdate(new DeviceControlEventArgs(DeviceControlEventArgs.EventStatus.finish));
                     await Task.Run(() => validate(), token);
-                    onValidateFinish(EventArgs.Empty);
-                    show();
+                    onValidate(new DeviceControlEventArgs(DeviceControlEventArgs.EventStatus.finish));
+                    await Task.Run(() => this.Invoke((System.Action)(() => show())), token); 
+                    onShow(new DeviceControlEventArgs(DeviceControlEventArgs.EventStatus.finish));
                 }
             }
         }
@@ -125,17 +131,17 @@ namespace DiscoveryLight.UI.DeviceControls
 
         protected override void update()
         {
-            onUpdateStart(EventArgs.Empty);             // raise the associated event
+            onUpdate(new DeviceControlEventArgs(DeviceControlEventArgs.EventStatus.start));             // raise the associated event
         }
 
         protected override void validate()
         {
-            onValidateStart(EventArgs.Empty);           // raise the associated event
+            onValidate(new DeviceControlEventArgs(DeviceControlEventArgs.EventStatus.start));           // raise the associated event
         }
 
         protected override void show()
         {
-            onShow(EventArgs.Empty);                    // raise the associated event
+            onShow(new DeviceControlEventArgs(DeviceControlEventArgs.EventStatus.start));               // raise the associated event
         }
 
         public override void onLoad(object sender, EventArgs e)

@@ -1,6 +1,7 @@
 ﻿using DiscoveryLight.Core.Device;
 using DiscoveryLight.Core.Device.Performance;
 using DiscoveryLight.Core.Device.Utils;
+using DiscoveryLight.UI.DeviceControls;
 using DiscoveryLight.UI.DeviceControls.DeviceDataControls;
 using DiscoveryLight.UI.DeviceControls.DevicePerformanceControls;
 using System;
@@ -75,13 +76,14 @@ namespace DiscoveryLight.UI.Components
             // fill the list with all founded devices
             this.ChargeListOfSubDevicesInit();
             // run when update occured. Check if a physical disk drive are added or removed
-            CurrentDeviceDataControl.OnUpdateFinish += new EventHandler(OnDeviceUpdateFinish);
+            CurrentDeviceDataControl.OnUpdate += new EventHandler<DeviceControlEventArgs>(OnDeviceUpdateFinish);
         }
 
-        private void OnDeviceUpdateFinish(object sender, EventArgs e)
+        private void OnDeviceUpdateFinish(object sender, DeviceControlEventArgs e)
         {
             // check if a device has been removed or added then update list for selection
-            ChargeListOfSubDevicesInit();
+            if (e.Status == DeviceControlEventArgs.EventStatus.finish)
+                ChargeListOfSubDevicesInit();
         }
 
         public void Init(DeviceDataControl DeviceDataControl, DevicePerformanceControl DevicePerformanceControl, Action ExtendedAction)
