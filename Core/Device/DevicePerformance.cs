@@ -69,6 +69,10 @@ namespace DiscoveryLight.Core.Device.Performance
         }
 
         public DevicePerformance(string deviceName, Type subDeviceType) : base(deviceName, subDeviceType) { }
+
+        public DevicePerformance(string deviceName, Type subDeviceType, String primaryKey) : base(deviceName, subDeviceType) {
+            PrimaryKey = primaryKey;
+        }
     }
 
     #endregion
@@ -176,7 +180,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return collection;
         }
 
-        public PERFORM_CPU() : base("Win32_PerfFormattedData_Counters_ProcessorInformation", typeof(SubDevice)) { PrimaryKey = "Name"; }
+        public PERFORM_CPU() : base("Win32_PerfFormattedData_Counters_ProcessorInformation", typeof(SubDevice), "Name") { }
     }
 
     #endregion
@@ -283,7 +287,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return DeviceRelated;
         }
 
-        public PERFORM_DISK() : base("Win32_PerfFormattedData_PerfDisk_LogicalDisk", typeof(SubDevice)) { PrimaryKey = "Name"; }
+        public PERFORM_DISK() : base("Win32_PerfFormattedData_PerfDisk_LogicalDisk", typeof(SubDevice), "Name") { }
     }
 
     #endregion
@@ -389,7 +393,7 @@ namespace DiscoveryLight.Core.Device.Performance
             return collection.Select(x => x.Extend()).ToList();
         }
 
-        public PERFORM_NETWORK() : base("Win32_PerfFormattedData_Tcpip_NetworkAdapter", typeof(SubDevice)) { PrimaryKey = "Name"; }
+        public PERFORM_NETWORK() : base("Win32_PerfFormattedData_Tcpip_NetworkAdapter", typeof(SubDevice), "Name") { }
 
     }
 
