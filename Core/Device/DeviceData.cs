@@ -16,7 +16,7 @@ namespace DiscoveryLight.Core.Device.Data
     /// 
     public abstract class DeviceData : _Device
     {
-        public DeviceData(string deviceName) : base(deviceName) { }
+        public DeviceData(string deviceName, Type subDeviceType) : base(deviceName, subDeviceType) { }
     }
 
     #endregion
@@ -37,7 +37,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Domain;
         }
 
-        public ComputerSystem() : base("Win32_ComputerSystem") { PrimaryKey = "Name"; }
+        public ComputerSystem() : base("Win32_ComputerSystem", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -56,7 +56,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty OSArchitecture;
         }
 
-        public OperatingSystem() : base("Win32_OperatingSystem") { PrimaryKey = "Name"; }
+        public OperatingSystem() : base("Win32_OperatingSystem", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -73,7 +73,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty IdentifyingNumber;
         }
 
-        public ComputerSystemProduct() : base("Win32_ComputerSystemProduct") { PrimaryKey = "Name"; }
+        public ComputerSystemProduct() : base("Win32_ComputerSystemProduct", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -91,7 +91,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty ReleaseDate;
         }
 
-        public BIOS() : base("Win32_BIOS") { PrimaryKey = "Name"; }
+        public BIOS() : base("Win32_BIOS", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -111,7 +111,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty Version;
         }
 
-        public BaseBoard() : base("Win32_BaseBoard") { PrimaryKey = "Name"; }
+        public BaseBoard() : base("Win32_BaseBoard", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -130,7 +130,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty SecondaryBusType;
         }
 
-        public MotherboardDevice() : base("Win32_MotherboardDevice") { PrimaryKey = "Name"; }
+        public MotherboardDevice() : base("Win32_MotherboardDevice", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -145,7 +145,7 @@ namespace DiscoveryLight.Core.Device.Data
     {
         public class SubDevice : _SubDevice { }
 
-        public SystemSlot() : base("Win32_SystemSlot") { PrimaryKey = "Name"; }
+        public SystemSlot() : base("Win32_SystemSlot", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -173,7 +173,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty VideoModeDescription;
         }
 
-        public VideoController() : base("Win32_VideoController") { PrimaryKey = "Name"; }
+        public VideoController() : base("Win32_VideoController", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -192,7 +192,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty PowerManagementSupported;
         }
 
-        public SoundDevice() : base("Win32_SoundDevice") { PrimaryKey = "Caption"; }
+        public SoundDevice() : base("Win32_SoundDevice", typeof(SubDevice)) { PrimaryKey = "Caption"; }
     }
 
     #endregion
@@ -219,7 +219,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty L3CacheSize;
         }
 
-        public Processor() : base("Win32_Processor") { PrimaryKey = "Name"; }
+        public Processor() : base("Win32_Processor", typeof(SubDevice)) { PrimaryKey = "Name"; }
 
     }
 
@@ -246,7 +246,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty MinVoltage;
         }
 
-        public PhysicalMemory() : base("Win32_PhysicalMemory") { PrimaryKey = "BankLabel"; }
+        public PhysicalMemory() : base("Win32_PhysicalMemory", typeof(SubDevice)) { PrimaryKey = "BankLabel"; }
     }
 
     #endregion
@@ -265,7 +265,7 @@ namespace DiscoveryLight.Core.Device.Data
             public MobProperty MemoryDevices;
         }
 
-        public PhysicalMemoryArray() : base("Win32_PhysicalMemoryArray") { PrimaryKey = "Name"; }
+        public PhysicalMemoryArray() : base("Win32_PhysicalMemoryArray", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion
@@ -313,7 +313,7 @@ namespace DiscoveryLight.Core.Device.Data
             return collection.Select(x => x.Extend()).ToList();
         }
 
-        public DiskDrive() : base("Win32_DiskDrive") { PrimaryKey = "Caption"; }
+        public DiskDrive() : base("Win32_DiskDrive", typeof(SubDevice)) { PrimaryKey = "Caption"; }
     }
 
     #endregion
@@ -354,7 +354,7 @@ namespace DiscoveryLight.Core.Device.Data
                 .ToList();
         }
 
-        public NetworkAdapter() : base("Win32_NetworkAdapter") { PrimaryKey = "Name"; }
+        public NetworkAdapter() : base("Win32_NetworkAdapter", typeof(SubDevice)) { PrimaryKey = "Name"; }
     }
 
     #endregion

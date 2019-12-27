@@ -45,15 +45,21 @@ namespace DiscoveryLight.Core.Device
     public abstract class AbstractDevice
     {
         protected readonly string deviceName;
-        protected readonly string className;
-        protected readonly Type classType;
+        protected readonly string deviceClassName;
+        protected readonly Type deviceClassType;
+        protected readonly string subDeviceClassName;
+        protected readonly Type subDeviceClassType;
+
+
         private int deviceNumber = 0;                                       // number of device for the same drive( a pc can have one or more cpu, drive audio etc.)
         private List<_SubDevice> subDevices = new List<_SubDevice>();       // List of properties for each device           
         private Boolean isEmpty;                                             // Check for null WprManagementObjec
         private String primaryKey;                                          // define entry key in _Device for search items
 
-        public string ClassName { get => className; }
-        public Type ClassType { get => classType; }
+        public string ClassName { get => deviceClassName; }
+        public Type ClassType { get => deviceClassType; }
+        public string SubDeviceClassName { get => subDeviceClassName; }
+        public Type SubDeviceClassType { get => subDeviceClassType; }
         public string DeviceName { get => deviceName; }
         public int DeviceNumber { get => deviceNumber; set => deviceNumber = value; }
         public List<_SubDevice> SubDevices { get { return subDevices; } set { subDevices = value; DeviceNumber = value.Count; } }
@@ -194,16 +200,20 @@ namespace DiscoveryLight.Core.Device
             }
         }
 
-        public AbstractDevice()
+        public AbstractDevice(Type SubDevice)
         {
-            this.className = this.GetType().Name;
-            this.classType = this.GetType();
+            this.deviceClassName = this.GetType().Name;
+            this.deviceClassType = this.GetType();
+            this.subDeviceClassName = SubDevice.GetType().Name;
+            this.subDeviceClassType = SubDevice;
         }
 
-        public AbstractDevice(String DeviceName)
+        public AbstractDevice(String DeviceName, Type SubDevice)
         {
-            this.className = this.GetType().Name;
-            this.classType = this.GetType();
+            this.deviceClassName = this.GetType().Name;
+            this.deviceClassType = this.GetType();
+            this.subDeviceClassName = SubDevice.GetType().Name;
+            this.subDeviceClassType = SubDevice;
             this.deviceName = DeviceName;
         }
     }
@@ -212,13 +222,13 @@ namespace DiscoveryLight.Core.Device
     {
         public override List<_SubDevice> GetCollection() {
             return WmiCollection.All()
-                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .Select(x => (Activator.CreateInstance(subDeviceClassType) as _SubDevice).Serialize(x))
                 .ToList();
         }
 
         public override List<_SubDevice> GetCollection(String FieldName, String Value) {
             return WmiCollection.Find(FieldName, Value, "=")
-                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .Select(x => (Activator.CreateInstance(subDeviceClassType) as _SubDevice).Serialize(x))
                 .ToList();
         }
 
@@ -228,7 +238,7 @@ namespace DiscoveryLight.Core.Device
 
         public override List<_SubDevice> GetCollection(Func<_SubDevice, Boolean> condition) {
             return WmiCollection.All()
-                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .Select(x => (Activator.CreateInstance(subDeviceClassType) as _SubDevice).Serialize(x))
                 .Where(condition)
                 .ToList();
         }
@@ -237,7 +247,7 @@ namespace DiscoveryLight.Core.Device
         {
             return WmiCollection.All()
                 .Where(condition)
-                .Select(x => (Activator.CreateInstance(Type.GetType(ClassType.FullName + "+SubDevice")) as _SubDevice).Serialize(x))
+                .Select(x => (Activator.CreateInstance(subDeviceClassType) as _SubDevice).Serialize(x))
                 .ToList();
         }
 
@@ -251,7 +261,7 @@ namespace DiscoveryLight.Core.Device
 
         public override void UpdateCollection(Func<WprManagementObject, Boolean> condition) { SubDevices = GetCollection(condition); }
 
-        public _Device(String DeviceName) : base(DeviceName) { }
+        public _Device(String DeviceName, Type SubDeviceType) : base(DeviceName, SubDeviceType) { }
     }
 
     public class _SubDevice

@@ -46,7 +46,7 @@ namespace DiscoveryLight.UI.DeviceControls.DeviceDataControls
             base.validate();
             if (CurrentDevice.IsEmpty)
             {
-                _SubDevice obj = Activator.CreateInstance(Type.GetType(CurrentDevice.ClassType.FullName + "+SubDevice")) as _SubDevice;
+                _SubDevice obj = Activator.CreateInstance(CurrentDevice.SubDeviceClassType) as _SubDevice;
                 currentSubDevice = obj.Initialize();
             }
         }
