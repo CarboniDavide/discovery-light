@@ -24,7 +24,7 @@ namespace DiscoveryLight.Core.Commun
         /// <returns></returns>
         public static String AsDefaultValue(MobProperty Value, String Default, String Format)
         {
-            return (Value == null || Value.IsNull) ? Default : string.Format(Format, Convert.ToDouble(Value.Get()));
+            return (Value == null || Value.IsNull) ? Default : string.Format(Format, Value.AsDouble());
         }
 
         /// <summary>
