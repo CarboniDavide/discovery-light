@@ -333,10 +333,8 @@ namespace DiscoveryLight.Core.Device.Data
 
         public override List<_SubDevice> GetCollection()
         {
-            return WmiCollection.All()
-                .Where(x => x.GetProperty("NetConnectionStatus").AsString() != null)
-                .Select(x => new SubDevice().Serialize(x).Extend())
-                .ToList();
+            List<_SubDevice> collection = base.GetCollection(x => x.GetProperty("NetConnectionStatus").AsString() != null);
+            return collection.Select(x => x.Extend()).ToList();
         }
 
         public NetworkAdapter() : base("Win32_NetworkAdapter", typeof(SubDevice), "Name") { }
