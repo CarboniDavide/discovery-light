@@ -226,7 +226,7 @@ namespace DiscoveryLight.Core.Device.Performance
 
             public override _SubDevice Extend()
             {
-                PerUsage = (CommitLimit.IsNull || AvailableBytes.IsNull) ? new MobProperty(null) : new MobProperty(AvailableBytes.AsUInt64() / (CommitLimit.AsUInt64() / 100));
+                PerUsage = (CommitLimit.IsNull || AvailableBytes.IsNull) ? new MobProperty(null) : new MobProperty(CommittedBytes.AsUInt64() / (CommitLimit.AsUInt64() / 100));
                 return this;
             }
         }
