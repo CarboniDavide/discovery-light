@@ -22,11 +22,13 @@ namespace DiscoveryLight.Logging
         {
             lock (lockObj)
             {
-                using (StreamWriter streamWriter = File.AppendText(filePath))
+                try
                 {
+                    StreamWriter streamWriter = File.AppendText(filePath);
                     streamWriter.WriteLine(DateTime.Now.ToString("h:mm:ss tt") + " - " + message);
                     streamWriter.Close();
                 }
+                catch { }
             }
         }
 
@@ -37,10 +39,12 @@ namespace DiscoveryLight.Logging
                 if (instance == null)
                 {
                     instance = new FileLogger();
-                    using (StreamWriter streamWriter = new StreamWriter(filePath))
+                    try
                     {
+                        StreamWriter streamWriter = new StreamWriter(filePath);
                         streamWriter.Close();
                     }
+                    catch { }
                 }
                 return instance;
             }
