@@ -27,9 +27,9 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             base.show();
             var CurrentPerformance = (PERFORM_DISK.SubDevice)this.CurrentSubDevice;
 
-            lbl_Free_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.FreeMegabytes, "N/A", "{0:N0}") + " GB";
-            lbl_Write_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.DiskWriteBytesPersec, "N/A", "{0:N0}") + " KB";
-            lbl_Read_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.DiskReadBytesPersec, "N/A", "{0:N0}") + " KB";
+            lbl_Free_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt64() / 1024, CurrentPerformance.FreeMegabytes, "N/A", "{0:N0}") + " GB";
+            lbl_Write_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt64() / 1024, CurrentPerformance.DiskWriteBytesPersec, "N/A", "{0:N0}") + " KB";
+            lbl_Read_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt64() / 1024, CurrentPerformance.DiskReadBytesPersec, "N/A", "{0:N0}") + " KB";
             lbl_Transfer_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.DiskTransfersPersec, "N/A", "{0:N0}");
             chartReadTime.BarFillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentDiskReadTime);
             chartWriteTime.BarFillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentDiskWriteTime);

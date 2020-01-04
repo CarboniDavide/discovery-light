@@ -31,8 +31,8 @@ namespace DiscoveryLight.UI.DeviceControls.DevicePerformanceControls
             lbl_PacketsReceived_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PacketsReceivedPersec, "N/A", "{0:N0}");
             lbl_PacketsSent_Value.Text = MobPropertyDataConvert.AsDefaultValue(CurrentPerformance.PacketsSentPersec, "N/A", "{0:N0}");
 
-            lbl_TotalReceived_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.TotalBytesReceived, "N/A", "{0:N0}");
-            lbl_TotalSent_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt32() / 1024, CurrentPerformance.TotalBytesSent, "N/A", "{0:N0}");
+            lbl_TotalReceived_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt64() / 1024, CurrentPerformance.TotalBytesReceived, "N/A", "{0:N0}");
+            lbl_TotalSent_Value.Text = MobPropertyDataConvert.AsDefaultValue(x => x.AsUInt64() / 1024, CurrentPerformance.TotalBytesSent, "N/A", "{0:N0}");
 
             chartBytesReceived.BarFillSize = MobPropertyChartConvert.FillOrDefault(x => x.AsInt16(), CurrentPerformance.PercentBytesReceived);
             chartBytesSent.BarFillSize = MobPropertyChartConvert.FillOrDefault(CurrentPerformance.PercentBytesSent);
