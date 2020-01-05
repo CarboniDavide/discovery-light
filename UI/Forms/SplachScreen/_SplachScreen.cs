@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OperatingSystem = DiscoveryLight.Core.Device.Data.OperatingSystem;
+using DiscoveryLight.Core.Commun;
 
 namespace DiscoveryLight.UI.Forms.SplachScreen
 {
@@ -11,8 +12,19 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
     {
         public _SplachScreen()
         {
-            InitializeComponent();     // load all device device data and performance
-            this.Start();
+            InitializeComponent();          // load all device device data and performance
+            this.checkVersion();            // check for requireed framework
+            this.Start();                   // start to load all devices
+        }
+
+        private void checkVersion()
+        {
+            NetFramework net = new NetFramework();
+            if (net.IsRequiredInstalled)
+            {
+                MessageBox.Show("Discovery Require " + net.RequiredVersionFull, "Framerwork Version Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Environment.Exit(0);
+            }
         }
 
         private async void Start()
