@@ -20,9 +20,9 @@ namespace DiscoveryLight.UI.Forms.SplachScreen
         private void checkVersion()
         {
             NetFramework net = new NetFramework();
-            if (net.IsRequiredInstalled)
+            if (!net.IsRequiredInstalled)
             {
-                MessageBox.Show("Discovery Require " + net.RequiredVersionFull, "Framerwork Version Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Discovery Require " + net.RequiredVersionFull, "Discovery Version Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 System.Environment.Exit(0);
             }
         }
